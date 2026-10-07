@@ -38,7 +38,7 @@ import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/d
 const PAGE_CSS = `
   .rpp-afh-eyebrow.rpp-afh-eyebrow {
     font-size: 20px !important;
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important;
     font-weight: 700 !important;
     letter-spacing: 0.22em !important;
     text-transform: uppercase !important;
@@ -105,7 +105,7 @@ const PAGE_CSS = `
     opacity: 1 !important;
   }
   .rpp-afh-marketplace h2.rpp-afh-marketplace-heading {
-    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     font-size: clamp(28px, 4vw, 40px) !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
@@ -236,7 +236,7 @@ const PAGE_CSS = `
        the rule's length off on phones, since the rule is derived from that
        ratio. 0.132em equals the original 14px at 106px type. */
     gap: 0.132em;
-    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     /* Derived by rendering DM Sans and matching the artwork, not estimated.
        Artwork "F" cap height is 75px in a 1999px frame -> 106px type = 5.30vw.
        Letter gaps measure 31px and the word gap 69px, so letter-spacing and
@@ -273,7 +273,7 @@ const PAGE_CSS = `
     white-space: nowrap;
   }
   .rpp-afh-hero-sub {
-    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     /* Same derivation: cap height 14px -> 19px type = 0.95vw, letter gap 13px,
        word gap 32px. */
     font-size: clamp(11px, 0.95vw, 19px) !important;
@@ -466,7 +466,7 @@ const PAGE_CSS = `
     padding: 0 !important;
   }
   .rpp-afh-lane-row p {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important;
     font-size: 18px !important;
     line-height: 1.6 !important;
     color: #1c1917 !important;
@@ -546,7 +546,7 @@ const PAGE_CSS = `
   }
   .rpp-afh-dest-body { padding: 18px 20px 20px; }
   .rpp-afh-dest-card h3 {
-    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     font-size: 21px !important;
     font-weight: 700 !important;
     line-height: 1.3 !important;
@@ -554,7 +554,7 @@ const PAGE_CSS = `
     margin: 0 0 8px !important;
   }
   .rpp-afh-dest-card p {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important;
     font-size: 17px !important;
     line-height: 1.6 !important;
     color: #1c1917 !important;
@@ -700,7 +700,7 @@ const AFHClub = () => {
               className="rpp-afh-paths-heading"
               style={{
                 fontSize: "clamp(30px, 3.6vw, 44px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
                 lineHeight: 1.15,
                 margin: "0 0 26px",
@@ -713,7 +713,7 @@ const AFHClub = () => {
               className="rpp-afh-paths-intro"
               style={{
                 fontSize: "clamp(19px, 2vw, 23px)",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 lineHeight: 1.8,
                 maxWidth: 760,
                 margin: "0 auto 64px",
@@ -802,7 +802,7 @@ const AFHClub = () => {
           {/* Start-here links (Sept 29, 2026): the pillar guide and glossary are English-only pages. */}
           <p
             className="rpp-afh-starthere"
-            style={{ maxWidth: 1000, margin: "28px auto 0", textAlign: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 19, lineHeight: 1.7, color: "#342e28" }}
+            style={{ maxWidth: 1000, margin: "28px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 19, lineHeight: 1.7, color: "#342e28" }}
           >
             <strong>{t("afhClubPage.startHere.lead")}</strong> {t("afhClubPage.startHere.start")}{" "}
             <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
@@ -835,7 +835,7 @@ const AFHClub = () => {
             <h2
               style={{
                 fontSize: "clamp(28px, 3.2vw, 40px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
                 lineHeight: 1.2,
                 margin: "0 0 18px",
@@ -847,7 +847,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(18px, 1.9vw, 21px)",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 lineHeight: 1.8,
                 maxWidth: 720,
                 margin: "0 auto 48px",
@@ -906,7 +906,7 @@ const AFHClub = () => {
                   <div
                     style={{
                       flexShrink: 0,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 30,
                       fontWeight: 700,
                       color: "#b13a44",
@@ -922,7 +922,7 @@ const AFHClub = () => {
                     <h3
                       style={{
                         fontSize: "clamp(21px, 2.1vw, 26px)",
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontWeight: 700,
                         lineHeight: 1.3,
                         margin: "0 0 6px",
@@ -933,7 +933,7 @@ const AFHClub = () => {
                     <p
                       style={{
                         fontSize: 17,
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         fontWeight: 600,
                         lineHeight: 1.6,
                         margin: "0 0 10px",
@@ -944,7 +944,7 @@ const AFHClub = () => {
                     <p
                       style={{
                         fontSize: 18,
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         lineHeight: 1.7,
                         margin: 0,
                       }}
@@ -970,7 +970,7 @@ const AFHClub = () => {
                   borderRadius: 999,
                   background: "#3f3a35",
                   color: "#fff",
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: 18,
                   fontWeight: 700,
                   textDecoration: "none",
@@ -1026,7 +1026,7 @@ const AFHClub = () => {
             <h2
               style={{
                 fontSize: "clamp(26px, 3vw, 36px)",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 700,
                 color: "#1c1917",
                 marginBottom: 16,
@@ -1037,7 +1037,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: 18,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 color: "#1c1917",
                 maxWidth: 600,
                 margin: "0 auto 32px",
@@ -1053,7 +1053,7 @@ const AFHClub = () => {
                   display: "inline-block",
                   background: "#302b26",
                   color: "#fff",
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: "0.08em",
@@ -1070,7 +1070,7 @@ const AFHClub = () => {
                   display: "inline-block",
                   background: "transparent",
                   color: "#1c1917",
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: "0.08em",
@@ -1114,7 +1114,7 @@ const AFHClub = () => {
                   display: "inline-block",
                   background: "#f7f4ef",
                   color: "#1c1917",
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
                   fontSize: 15,
                   padding: "8px 16px",
@@ -1134,7 +1134,7 @@ const AFHClub = () => {
           <h2
             style={{
               fontSize: "clamp(28px, 3vw, 38px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               marginBottom: 48,
@@ -1194,7 +1194,7 @@ const AFHClub = () => {
                       color: "#280a0c",
                       margin: "0 0 8px",
                       lineHeight: 1.3,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     }}
                   >
                     {cat.title}
@@ -1205,7 +1205,7 @@ const AFHClub = () => {
                       color: "#1c1917",
                       margin: "0 0 12px",
                       lineHeight: 1.65,
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 400,
                     }}
                   >
@@ -1244,7 +1244,7 @@ const AFHClub = () => {
             <h2
               style={{
                 fontSize: "clamp(30px, 3.5vw, 42px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#280a0c",
                 lineHeight: 1.2,
@@ -1256,7 +1256,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 400,
                 color: "#1c1917",
                 lineHeight: 1.85,
@@ -1268,7 +1268,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 400,
                 color: "#1c1917",
                 lineHeight: 1.85,
@@ -1280,7 +1280,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 400,
                 color: "#1c1917",
                 lineHeight: 1.85,

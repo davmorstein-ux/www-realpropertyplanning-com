@@ -148,7 +148,7 @@ const Executors = () => (
                 >
                   <div
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 34,
                       fontWeight: 800,
                       letterSpacing: "0.04em",
@@ -161,7 +161,7 @@ const Executors = () => (
                   </div>
                   <div
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontSize: 14,
                       letterSpacing: "0.03em",
                       textTransform: "uppercase",
@@ -178,7 +178,7 @@ const Executors = () => (
                 <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
                   <p
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 19,
                       color: "#8B0000",
                       lineHeight: 1.6,
@@ -223,7 +223,7 @@ const Executors = () => (
                             display: "flex",
                             alignItems: "flex-start",
                             gap: 9,
-                            fontFamily: "'DM Sans', system-ui, sans-serif",
+                            fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                             fontSize: 18,
                             color: "#8B0000",
                             lineHeight: 1.5,
@@ -251,7 +251,7 @@ const Executors = () => (
                       boxShadow: "0 3px 0 0 #400f13, 0 5px 12px rgba(27,58,107,0.35)",
                       borderRadius: 8,
                       padding: "13px 16px",
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontSize: 15,
                       fontWeight: 700,
                       letterSpacing: "0.06em",

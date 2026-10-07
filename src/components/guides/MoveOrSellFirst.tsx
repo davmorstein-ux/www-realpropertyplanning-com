@@ -18,12 +18,12 @@ const CSS = `
 .mos-sec { padding: 3.75rem 0; }
 .mos-sec.alt { background: #faf8f4; }
 .mos-in { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
-.mos-h2.mos-h2 { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(28px, 3vw, 38px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.75rem !important; text-align: center; line-height: 1.2; }
+.mos-h2.mos-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(28px, 3vw, 38px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.75rem !important; text-align: center; line-height: 1.2; }
 .mos-lead.mos-lead { font-size: 18px !important; line-height: 1.65 !important; color: #1f2933 !important; max-width: 760px; margin: 0 auto 2rem !important; text-align: center; }
 .mos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 @media (max-width: 760px) { .mos-grid { grid-template-columns: 1fr; } }
 .mos-card { background: #fff; border: 1px solid #e3d9cc; border-top: 5px solid var(--c); border-radius: 12px; padding: 1.4rem 1.5rem; }
-.mos-card h3.mos-h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 22px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.8rem !important; }
+.mos-card h3.mos-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 22px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.8rem !important; }
 /* Each reason is its own framed tile so the points don't run together
    (owner, Oct 4, 2026). */
 .mos-card ul { margin: 0; padding: 0; list-style: none !important; display: grid; gap: 0.7rem; }
@@ -31,11 +31,11 @@ const CSS = `
   background: color-mix(in srgb, var(--c) 6%, #ffffff); border: 1px solid color-mix(in srgb, var(--c) 28%, #ffffff);
   border-left: 4px solid var(--c); border-radius: 8px; }
 .mos-both { margin-top: 1.5rem; background: #fff; border: 1px solid #e3d9cc; border-radius: 12px; padding: 1.4rem 1.5rem; }
-.mos-both h3.mos-h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 20px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.7rem !important; }
+.mos-both h3.mos-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 20px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.7rem !important; }
 .mos-both p { font-size: 17px; line-height: 1.6; color: #1f2933; margin: 0 0 0.7rem; }
 .mos-list { display: grid; gap: 0.9rem; }
 .mos-opt { background: #fff; border: 1px solid #e3d9cc; border-left: 5px solid #1f4058; border-radius: 10px; padding: 1.1rem 1.35rem; }
-.mos-opt h3.mos-h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 19px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.35rem !important; }
+.mos-opt h3.mos-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 19px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.35rem !important; }
 .mos-opt p { font-size: 17px; line-height: 1.6; color: #1f2933; margin: 0; }
 .mos-ex { margin-top: 1.5rem; background: #fff; border: 2px solid #c9a24a; border-radius: 14px; padding: 1.5rem 1.6rem; }
 .mos-ex p { font-size: 17.5px; line-height: 1.65; color: #1c1917; margin: 0 0 0.7rem; }

@@ -109,17 +109,17 @@ const CSS = `
 .afhd .afhd-hero { display: grid; gap: 24px; align-items: center; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 860px) { .afhd .afhd-hero { grid-template-columns: minmax(0, 1fr) 230px; } }
 .afhd .afhd-cover { width: 100%; max-width: 300px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(10,42,77,0.25); }
-.afhd p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.afhd p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhd .afhd-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
-.afhd h1.afhd-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 16px !important; text-wrap: balance; }
-.afhd h2.afhd-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 12px !important; text-wrap: balance; }
+.afhd h1.afhd-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 16px !important; text-wrap: balance; }
+.afhd h2.afhd-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 12px !important; text-wrap: balance; }
 .afhd .afhd-figs { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 24px 0 8px; }
 @media (min-width: 820px) { .afhd .afhd-figs { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .afhd .afhd-fig { background: #f3f6f4; border: 1px solid #d5e0da; border-radius: 10px; padding: 14px 16px; }
-.afhd .afhd-fig .afhd-fig-n { font-family: 'DM Sans', sans-serif !important; font-size: clamp(26px, 3.4vw, 34px) !important; font-weight: 700 !important; color: #192A19; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.afhd .afhd-fig .afhd-fig-l { font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; color: #2b2825; line-height: 1.35; margin-top: 6px; }
+.afhd .afhd-fig .afhd-fig-n { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: clamp(26px, 3.4vw, 34px) !important; font-weight: 700 !important; color: #192A19; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.afhd .afhd-fig .afhd-fig-l { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 15px !important; color: #2b2825; line-height: 1.35; margin-top: 6px; }
 .afhd .afhd-tablewrap { overflow-x: auto; margin: 8px 0 12px; border: 1px solid #e2ddd5; border-radius: 10px; }
-.afhd table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #1c1917; font-variant-numeric: tabular-nums; }
+.afhd table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; font-variant-numeric: tabular-nums; }
 .afhd th { text-align: left; font-weight: 700; background: #f3f6f4; padding: 10px 12px; border-bottom: 1px solid #d5e0da; white-space: nowrap; }
 .afhd td { padding: 9px 12px; border-bottom: 1px solid #eee9e1; vertical-align: middle; }
 .afhd tr:last-child td { border-bottom: 0; }
@@ -203,7 +203,7 @@ const AFHWashingtonData = () => {
         <Section bg="#ffffff">
           <div className="afhd-narrow">
             <h2 className="afhd-h2">Five things the numbers show</h2>
-            <ol style={{ margin: "0 0 0 22px", padding: 0, fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.7, color: "#1c1917" }}>
+            <ol style={{ margin: "0 0 0 22px", padding: 0, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.7, color: "#1c1917" }}>
               <li style={{ marginBottom: 10 }}>
                 <strong>Six beds is the standard.</strong> {p(sixBed?.share ?? 0)} of homes are licensed for six. Only{" "}
                 {n(sevenEight)} ({p(share(sevenEight, S.homes))}) hold seven or eight beds, which a home can apply for only after

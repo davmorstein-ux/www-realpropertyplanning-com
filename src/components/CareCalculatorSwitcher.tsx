@@ -94,26 +94,26 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
         }
 
         .rpp-calcswitch-name.rpp-calcswitch-name {
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 19px !important;
           font-weight: 700;
           color: var(--cc-color, #1B3A6B) !important;
           line-height: 1.25;
         }
         .rpp-calcswitch-price.rpp-calcswitch-price {
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 22px !important;
           font-weight: 700;
           color: #272421 !important;
           line-height: 1.2;
         }
         .rpp-calcswitch-per.rpp-calcswitch-per {
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 15px !important;
           font-weight: 600;
         }
         .rpp-calcswitch-blurb.rpp-calcswitch-blurb {
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 16px !important;
           font-weight: 400;
           color: #4a4540 !important;

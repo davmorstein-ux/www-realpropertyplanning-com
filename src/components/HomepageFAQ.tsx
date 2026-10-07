@@ -65,7 +65,7 @@ const PageFAQ = ({
         </p>
         <h2
           style={{
-            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontSize: "clamp(30px, 3.2vw, 42px)",
             fontWeight: 700,
             color: NAVY,
@@ -102,7 +102,7 @@ const PageFAQ = ({
                   >
                     <span
                       style={{
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: "22px",
                         fontWeight: 700,
                         color: NAVY,
@@ -126,7 +126,7 @@ const PageFAQ = ({
                     <div hidden={!isOpen}
                       style={{
                         paddingBottom: "1rem",
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: "18px",
                         color: "#413b36",
                         lineHeight: 1.7,
@@ -167,7 +167,7 @@ const PageFAQ = ({
                 >
                   <span
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: "24px",
                       fontWeight: 700,
                       color: NAVY,
@@ -194,7 +194,7 @@ const PageFAQ = ({
                       padding: "0 1.5rem 1.4rem",
                       borderTop: "1px solid #e7d1d3",
                       paddingTop: "1rem",
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: "18px",
                       color: "#413b36",
                       lineHeight: 1.7,

@@ -202,29 +202,29 @@ export function CalcFoot({ children, actions }: { children: ReactNode; actions?:
 }
 
 export const CK_CSS = `
-.ck.ck { background: #ffffff; border: 1px solid #d3dfe8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,40,58,0.08); margin: 0 auto; width: 100%; box-sizing: border-box; font-family: 'DM Sans', system-ui, sans-serif; color: #14283a; }
+.ck.ck { background: #ffffff; border: 1px solid #d3dfe8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,40,58,0.08); margin: 0 auto; width: 100%; box-sizing: border-box; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; color: #14283a; }
 .ck .ck-head { display: flex; align-items: center; gap: 18px; background: var(--deep); padding: 22px 26px; }
 .ck .ck-head svg { flex: 0 0 auto; }
 .ck .ck-headtext { min-width: 0; }
 .ck .ck-eyebrow.ck-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #F0CB7A !important; margin: 0 0 4px !important; }
-.ck h2.ck-title.ck-title { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 34px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 !important; text-wrap: balance; }
+.ck h2.ck-title.ck-title { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 34px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 !important; text-wrap: balance; }
 .ck .ck-sub.ck-sub { font-size: 16px !important; color: rgba(255,255,255,0.88) !important; margin-top: 6px !important; line-height: 1.4 !important; }
 .ck .ck-body { padding: 22px 26px 20px; }
 .ck .ck-group.ck-group { padding: 0 0 18px !important; margin: 0 0 18px !important; border-bottom: 1px solid #e6ebef; }
 .ck .ck-grouphead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 12px; }
-.ck h3.ck-grouptitle.ck-grouptitle { font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--deep) !important; margin: 0 !important; }
+.ck h3.ck-grouptitle.ck-grouptitle { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--deep) !important; margin: 0 !important; }
 .ck .ck-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 18px; }
 .ck .ck-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 18px; }
 .ck .ck-field { min-width: 0; }
-.ck label.ck-label.ck-label { display: block; font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 6px !important; letter-spacing: 0 !important; text-transform: none !important; }
+.ck label.ck-label.ck-label { display: block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 15px !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 6px !important; letter-spacing: 0 !important; text-transform: none !important; }
 .ck .ck-control { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
 .ck .ck-control > input.ck-input, .ck .ck-control > select.ck-input { flex: 1 1 140px; width: auto; }
-.ck input.ck-input.ck-input, .ck select.ck-input.ck-input { width: 100%; min-height: 48px; box-sizing: border-box; padding: 10px 14px !important; font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; font-weight: 500 !important; color: #14283a !important; background: #ffffff !important; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; font-variant-numeric: tabular-nums; }
+.ck input.ck-input.ck-input, .ck select.ck-input.ck-input { width: 100%; min-height: 48px; box-sizing: border-box; padding: 10px 14px !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; font-weight: 500 !important; color: #14283a !important; background: #ffffff !important; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; font-variant-numeric: tabular-nums; }
 .ck input.ck-input.ck-input:focus, .ck select.ck-input.ck-input:focus { outline: none; border-color: var(--c) !important; box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
 .ck .ck-suffix.ck-suffix { flex: 0 0 auto; font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .ck .ck-hint.ck-hint { font-size: 14px !important; line-height: 1.45 !important; color: #2b3640 !important; margin-top: 6px !important; }
 .ck .ck-seg { display: inline-flex; flex: 0 0 auto; border: 1px solid #c9d7e2; border-radius: 10px; overflow: hidden; }
-.ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #eef3f7 !important; color: #1f2933 !important; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
+.ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #eef3f7 !important; color: #1f2933 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
 .ck button.ck-segopt.ck-segopt.ck-on { background: var(--deep) !important; color: #ffffff !important; }
 .ck button.ck-segopt.ck-segopt:focus-visible { outline: 3px solid ${CK_GOLD}; outline-offset: -3px; }
 .ck .ck-hero { background: var(--tint); border-radius: 14px; padding: 20px 18px 18px; text-align: center; margin: 4px 0 14px; }
@@ -253,7 +253,7 @@ export const CK_CSS = `
 .ck .ck-source.ck-source { flex: 1 1 340px; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; }
 .ck .ck-source a { color: #1f2933 !important; font-size: 14px !important; text-decoration: underline; text-underline-offset: 2px; }
 .ck .ck-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-.ck .ck-actions a, .ck .ck-actions button { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
+.ck .ck-actions a, .ck .ck-actions button { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
 @media (max-width: 640px) {
   .ck .ck-head { padding: 18px 16px; gap: 12px; }
   .ck .ck-head svg { width: 42px; height: 42px; }

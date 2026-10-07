@@ -61,13 +61,13 @@ const schema = {
 const CSS = `
 .prg { background: #ffffff; }
 .prg .prg-wrap { max-width: 880px; margin: 0 auto; }
-.prg p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.prg p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .prg .prg-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: ${A} !important; margin: 0 0 12px !important; }
-.prg h1.prg-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 16px !important; text-wrap: balance; }
-.prg h2.prg-letter { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 30px !important; line-height: 1 !important; font-weight: 700 !important; color: ${A} !important; margin: 0 0 8px !important; padding-bottom: 8px; border-bottom: 2px solid #d3dfe8; scroll-margin-top: 180px; }
-.prg h2.prg-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; }
+.prg h1.prg-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 16px !important; text-wrap: balance; }
+.prg h2.prg-letter { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 30px !important; line-height: 1 !important; font-weight: 700 !important; color: ${A} !important; margin: 0 0 8px !important; padding-bottom: 8px; border-bottom: 2px solid #d3dfe8; scroll-margin-top: 180px; }
+.prg h2.prg-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; }
 .prg .prg-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 0; }
-.prg .prg-jump a, .prg .prg-jump span { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 17px !important; font-weight: 700; text-decoration: none !important; }
+.prg .prg-jump a, .prg .prg-jump span { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; border-radius: 6px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px !important; font-weight: 700; text-decoration: none !important; }
 .prg .prg-jump a { background: #ffffff; color: ${A} !important; border: 1px solid #b7cbd9; }
 @media (hover: hover) { .prg .prg-jump a:hover { background: ${A}; color: #ffffff !important; } }
 .prg .prg-jump a:focus-visible { background: ${A}; color: #ffffff !important; }
@@ -76,16 +76,16 @@ const CSS = `
 .prg .prg-term { padding: 18px 0; border-bottom: 1px solid #eee9e1; scroll-margin-top: 180px; }
 .prg .prg-term:last-child { border-bottom: 0; }
 .prg .prg-term:target { background: #eef3f7; box-shadow: -12px 0 0 #eef3f7, 12px 0 0 #eef3f7; }
-.prg dt { font-family: 'DM Sans', sans-serif; font-size: 21px; font-weight: 700; color: #14283a; line-height: 1.3; }
+.prg dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 21px; font-weight: 700; color: #14283a; line-height: 1.3; }
 .prg dt .prg-aka { display: block; font-size: 16px; font-weight: 500; color: #4a443e; margin-top: 2px; }
 .prg dd { margin: 8px 0 0; }
 .prg dd p.prg-def { margin: 0 0 8px !important; }
-.prg .prg-meta { font-family: 'DM Sans', sans-serif; font-size: 15px !important; color: #3f3a35; line-height: 1.6; }
+.prg .prg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #3f3a35; line-height: 1.6; }
 .prg a.prg-link, .prg .prg-meta a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .prg .prg-cats { display: grid; gap: 18px 28px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .prg .prg-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.prg .prg-cat h3 { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 6px !important; }
-.prg .prg-cat ul { margin: 0; padding: 0; list-style: none; font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; }
+.prg .prg-cat h3 { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 6px !important; }
+.prg .prg-cat ul { margin: 0; padding: 0; list-style: none; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.7; }
 .prg .prg-cat li { display: inline; }
 .prg .prg-cat a.prg-link { font-weight: 500 !important; font-size: 16px !important; }
 .prg .prg-cat li:not(:last-child)::after { content: " · "; color: #8a837a; }

@@ -24,7 +24,7 @@ export const TEAL = "#0f766e";
 export const TEAL_DARK = "#0b5b55";
 export const NAVY = "#1B3A6B";
 export const INK = "#141210";
-const FONT = "'DM Sans', system-ui, sans-serif";
+const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 
 export const gs = {
   h2: { fontSize: 28, fontWeight: 700, color: NAVY, margin: "40px 0 12px", lineHeight: 1.25, fontFamily: FONT } as React.CSSProperties,

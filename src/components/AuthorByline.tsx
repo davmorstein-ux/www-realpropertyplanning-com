@@ -34,7 +34,7 @@ export default function AuthorByline({ reviewed, context }: { reviewed?: string;
         border: "1px solid #d9dede",
         borderRadius: 12,
         background: "#fafaf8",
-        fontFamily: "'DM Sans', system-ui, sans-serif",
+        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
         color: "#342e28",
         lineHeight: 1.7,
       }}

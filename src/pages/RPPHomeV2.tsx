@@ -94,7 +94,7 @@ const RPPHomeV2 = () => {
             />
             <p
               style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontSize: "clamp(28px, 3.6vw, 42px)",
                 fontWeight: 800,
                 color: "#272421",
@@ -134,7 +134,7 @@ const RPPHomeV2 = () => {
             <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
               <h2
                 style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: "3rem",
                   fontWeight: 600,
                   color: "#6f2a30",
@@ -174,7 +174,7 @@ const RPPHomeV2 = () => {
                     >
                       <span
                         style={{
-                          fontFamily: "'DM Sans', system-ui, sans-serif",
+                          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                           fontSize: 20,
                           fontWeight: 700,
                           color: "#ffffff",
@@ -228,7 +228,7 @@ const RPPHomeV2 = () => {
                   <div>
                     <p
                       style={{
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: 36,
                         fontWeight: 800,
                         color: "#1a5c58",
@@ -239,7 +239,7 @@ const RPPHomeV2 = () => {
                     </p>
                     <p
                       style={{
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: 16,
                         fontWeight: 500,
                         color: "#443e38",
@@ -253,7 +253,7 @@ const RPPHomeV2 = () => {
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <span
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 15,
                       fontWeight: 700,
                       color: "#ffffff",

@@ -217,14 +217,14 @@ const Privacy = () => {
         <style dangerouslySetInnerHTML={{ __html: `
           .rpp-privacy.rpp-privacy p,
           .rpp-privacy.rpp-privacy li {
-            font-family: "DM Sans", system-ui, sans-serif !important;
+            font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
             font-size: 18px !important;
             line-height: 1.65 !important;
             color: #272421 !important;
             margin: 0 0 16px !important;
           }
           .rpp-privacy.rpp-privacy h2 {
-            font-family: 'DM Sans', system-ui, sans-serif !important;
+            font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
             font-size: 26px !important;
             font-weight: 600 !important;
             color: #272421 !important;

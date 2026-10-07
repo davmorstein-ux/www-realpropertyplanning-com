@@ -222,7 +222,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           max-width: 640px;
         }
         .rpp-news-heading.rpp-news-heading {
-          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 24px !important;
           font-weight: 600 !important;
           line-height: 1.25 !important;
@@ -230,7 +230,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           margin: 0 0 10px !important;
         }
         .rpp-news-body.rpp-news-body {
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 17px !important;
           line-height: 1.55 !important;
           color: #1c1917 !important;
@@ -241,7 +241,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
            it most, and several screen readers do not announce it at all. */
         .rpp-news-label.rpp-news-label {
           display: block !important;
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 15px !important;
           font-weight: 700 !important;
           color: #272421 !important;
@@ -252,7 +252,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           flex: 1 1 260px;
           min-height: 48px;
           padding: 12px 14px !important;
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 17px !important;
           color: #272421 !important;
           background: #ffffff !important;
@@ -278,7 +278,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
         .rpp-news-submit.rpp-news-submit {
           min-height: 48px;
           padding: 12px 22px !important;
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 16px !important;
           font-weight: 700 !important;
           color: #ffffff !important;
@@ -295,7 +295,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
         }
         .rpp-news-submit.rpp-news-submit:disabled { opacity: 0.65; cursor: default !important; }
         .rpp-news-fine.rpp-news-fine {
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 14px !important;
           color: #1c1917 !important;
           margin: 12px 0 0 !important;
@@ -305,14 +305,14 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
            role=alert and tied to the input with aria-describedby, so it
            survives both colour blindness and screen readers. */
         .rpp-news-error.rpp-news-error {
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 15px !important;
           font-weight: 700 !important;
           color: #8a1f1f !important;
           margin: 10px 0 0 !important;
         }
         .rpp-news-done.rpp-news-done {
-          font-family: "DM Sans", system-ui, sans-serif !important;
+          font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
           font-size: 17px !important;
           line-height: 1.55 !important;
           color: #272421 !important;

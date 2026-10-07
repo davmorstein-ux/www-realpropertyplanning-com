@@ -101,8 +101,8 @@ export default {
            disagree with the headings beneath them: HeroBandTitle.tsx, the
            h1 and --compact band rules in index.css, and the #rpp-tagline rule
            in index.css that the homepage depends on. */
-        serif: ["DM Sans", "system-ui", "-apple-system", "sans-serif"],
-        sans: ["DM Sans", "system-ui", "-apple-system", "sans-serif"],
+        serif: ["DM Sans", "DM Sans Fallback", "system-ui", "-apple-system", "sans-serif"],
+        sans: ["DM Sans", "DM Sans Fallback", "system-ui", "-apple-system", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

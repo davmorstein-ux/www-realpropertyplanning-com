@@ -155,7 +155,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -168,7 +168,7 @@ const AFHCostsFees = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -180,7 +180,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -205,7 +205,7 @@ const AFHCostsFees = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -232,7 +232,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -245,7 +245,7 @@ const AFHCostsFees = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -257,7 +257,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 28px",
@@ -288,14 +288,14 @@ const AFHCostsFees = () => (
                   }}
                 >
                   <h3
-                    style={{ fontSize: 17, fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: 0 }}
+                    style={{ fontSize: 17, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: 0 }}
                   >
                     {item.category}
                   </h3>
                   <span
                     style={{
                       fontSize: 17,
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
                       color: "#481216",
                       whiteSpace: "nowrap",
@@ -307,7 +307,7 @@ const AFHCostsFees = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     color: "#1c1917",
                     lineHeight: 1.7,
                     margin: "0 0 4px",
@@ -318,7 +318,7 @@ const AFHCostsFees = () => (
                 <p
                   style={{
                     fontSize: 15,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     fontWeight: 600,
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
@@ -340,7 +340,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -353,7 +353,7 @@ const AFHCostsFees = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -365,7 +365,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -381,7 +381,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -404,7 +404,7 @@ const AFHCostsFees = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 color: "#1a0a0a",
                 lineHeight: 1.75,
                 margin: 0,
@@ -424,7 +424,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -437,7 +437,7 @@ const AFHCostsFees = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -449,7 +449,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 24px",
@@ -479,7 +479,7 @@ const AFHCostsFees = () => (
                   <p
                     style={{
                       fontSize: 18,
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
                       color: "#280a0c",
                       margin: "0 0 4px",
@@ -490,7 +490,7 @@ const AFHCostsFees = () => (
                   <p
                     style={{
                       fontSize: 16,
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       color: "#1c1917",
                       lineHeight: 1.65,
                       margin: 0,
@@ -502,7 +502,7 @@ const AFHCostsFees = () => (
                 <span
                   style={{
                     fontSize: 18,
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#481216",
                     whiteSpace: "nowrap",
@@ -516,7 +516,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -539,7 +539,7 @@ const AFHCostsFees = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -558,7 +558,7 @@ const AFHCostsFees = () => (
       <section style={{ background: "#edf0f3", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
-            style={{ fontSize: 22, fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: "0 0 8px" }}
+            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: "0 0 8px" }}
           >
             Key Resources
           </h2>
@@ -598,7 +598,7 @@ const AFHCostsFees = () => (
                 rel="noopener noreferrer"
                 style={{
                   fontSize: 17,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
                   color: "#9e2c35",
                   textDecoration: "underline",

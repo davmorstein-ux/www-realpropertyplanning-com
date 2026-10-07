@@ -200,7 +200,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                   <span
                     style={{
                       fontSize: "14px",
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
                       letterSpacing: "0.2em",
                       textTransform: "uppercase",
@@ -295,7 +295,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           aria-live="polite"
           style={{
             display: "none",
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
             fontSize: 16,
             fontWeight: 700,
             color: "#481216",

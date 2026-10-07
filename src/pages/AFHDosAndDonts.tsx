@@ -935,11 +935,11 @@ const CSS = `
 /* index.css zeroes the first section's top padding sitewide; add the gap inside instead. */
 .afhdd section.afhdd-herosec > .afhdd-wrap { padding-top: 36px; }
 .afhdd .afhdd-wrap { max-width: 800px; margin: 0 auto; }
-.afhdd p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.75 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.afhdd p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.75 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhdd .afhdd-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.2em !important; text-transform: uppercase; color: #7f2028 !important; margin: 0 0 12px !important; }
-.afhdd h1.afhdd-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #280a0c !important; margin: 0 0 18px !important; text-wrap: balance; }
-.afhdd h2.afhdd-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 32px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #280a0c !important; margin: 0 0 16px !important; text-wrap: balance; }
-.afhdd h3.afhdd-h3 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(19px, 2.4vw, 22px) !important; line-height: 1.3 !important; font-weight: 700 !important; color: #1c1917 !important; margin: 0 0 10px !important; }
+.afhdd h1.afhdd-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #280a0c !important; margin: 0 0 18px !important; text-wrap: balance; }
+.afhdd h2.afhdd-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 32px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #280a0c !important; margin: 0 0 16px !important; text-wrap: balance; }
+.afhdd h3.afhdd-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(19px, 2.4vw, 22px) !important; line-height: 1.3 !important; font-weight: 700 !important; color: #1c1917 !important; margin: 0 0 10px !important; }
 .afhdd .afhdd-lede { font-size: 20px !important; }
 .afhdd .afhdd-three { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); margin: 8px 0 20px; }
 @media (min-width: 720px) { .afhdd .afhdd-three { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -949,21 +949,21 @@ const CSS = `
 .afhdd .afhdd-note p { font-size: 16px !important; margin: 0 !important; }
 .afhdd .afhdd-toc { list-style: none !important; margin: 0 !important; padding: 0 !important; display: grid; gap: 6px 24px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 720px) { .afhdd .afhdd-toc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.afhdd .afhdd-toc li { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.5; margin: 0 !important; }
+.afhdd .afhdd-toc li { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px; line-height: 1.5; margin: 0 !important; }
 .afhdd .afhdd-toc a { color: #1c1917 !important; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
 .afhdd section.afhdd-topic { scroll-margin-top: 90px; }
 .afhdd .afhdd-pair { display: grid; gap: 14px; }
 .afhdd .afhdd-point { background: #ffffff; border: 1px solid #ddd6cc; border-radius: 10px; padding: 18px 20px 8px; }
 .afhdd .afhdd-point.is-do { border-left: 6px solid #1d6b43; }
 .afhdd .afhdd-point.is-dont { border-left: 6px solid #a3262f; }
-.afhdd .afhdd-verb { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin: 0 0 10px; color: #ffffff; }
+.afhdd .afhdd-verb { display: inline-block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin: 0 0 10px; color: #ffffff; }
 .afhdd .is-do .afhdd-verb { background: #1d6b43; }
 .afhdd .is-dont .afhdd-verb { background: #a3262f; }
 .afhdd .afhdd-kind { font-size: 14px !important; font-weight: 600 !important; color: #4a443e !important; margin: 4px 0 14px !important; letter-spacing: 0.02em; }
 .afhdd ul.afhdd-ul, .afhdd ol.afhdd-ol { margin: 0 0 14px !important; padding-left: 24px !important; }
 .afhdd ul.afhdd-ul { list-style: disc !important; }
 .afhdd ol.afhdd-ol { list-style: decimal !important; }
-.afhdd ul.afhdd-ul li, .afhdd ol.afhdd-ol li { font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 6px !important; }
+.afhdd ul.afhdd-ul li, .afhdd ol.afhdd-ol li { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 6px !important; }
 .afhdd a.afhdd-link { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhdd .afhdd-check { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 720px) { .afhdd .afhdd-check { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

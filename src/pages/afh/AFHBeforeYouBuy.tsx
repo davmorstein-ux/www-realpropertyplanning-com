@@ -40,29 +40,29 @@ const schema = {
 const CSS = `
 .byb { background: #ffffff; }
 .byb .byb-wrap { max-width: 960px; margin: 0 auto; }
-.byb p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.65 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.byb p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.65 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .byb .byb-eyebrow.byb-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: ${G} !important; margin: 0 0 12px !important; }
-.byb h1.byb-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 44px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 18px !important; text-wrap: balance; }
-.byb h2.byb-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 8px !important; text-wrap: balance; }
+.byb h1.byb-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 44px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 18px !important; text-wrap: balance; }
+.byb h2.byb-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 8px !important; text-wrap: balance; }
 .byb .byb-answer { background: #ffffff; border: 1px solid #c9dbd5; border-left: 5px solid ${G}; border-radius: 10px; padding: 18px 22px; }
 .byb .byb-answer p { font-size: 19px !important; margin: 0 !important; }
 .byb .byb-answer .byb-label.byb-label { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: ${G} !important; margin: 0 0 6px !important; }
 .byb .byb-layers { display: grid; gap: 14px; margin-top: 20px; }
 .byb .byb-layer { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; background: #ffffff; border: 1px solid #d5e2dd; border-radius: 12px; padding: 18px 20px; }
-.byb .byb-num { width: 44px; height: 44px; border-radius: 50%; background: ${G}; color: #ffffff; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 20px !important; font-weight: 700 !important; }
-.byb h3.byb-h3 { font-family: 'DM Sans', sans-serif !important; font-size: 21px !important; font-weight: 700 !important; color: #14283a !important; margin: 8px 0 8px !important; line-height: 1.25 !important; }
+.byb .byb-num { width: 44px; height: 44px; border-radius: 50%; background: ${G}; color: #ffffff; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 20px !important; font-weight: 700 !important; }
+.byb h3.byb-h3 { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 21px !important; font-weight: 700 !important; color: #14283a !important; margin: 8px 0 8px !important; line-height: 1.25 !important; }
 .byb ul.byb-qs { margin: 0 0 10px !important; padding: 0 0 0 20px !important; list-style: disc !important; }
-.byb ul.byb-qs li { display: list-item !important; list-style: disc !important; font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; line-height: 1.55 !important; color: #1c1917 !important; margin-bottom: 6px; }
+.byb ul.byb-qs li { display: list-item !important; list-style: disc !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; line-height: 1.55 !important; color: #1c1917 !important; margin-bottom: 6px; }
 .byb a.byb-link { color: ${G} !important; font-weight: 700 !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: 16px !important; }
 .byb a.byb-cite { display: inline-flex; margin-left: 10px; padding: 2px 10px; border-radius: 999px; border: 1px solid #c9dbd5; background: #f2f7f5; color: #14283a !important; font-size: 14px !important; font-weight: 600 !important; text-decoration: none !important; }
 .byb .byb-tablewrap { overflow-x: auto; margin-top: 18px; border: 1px solid #d5e2dd; border-radius: 12px; background: #ffffff; }
 .byb table.byb-table { width: 100%; border-collapse: collapse; min-width: 640px; }
-.byb .byb-table th { text-align: left; padding: 12px 14px; background: ${G}; color: #ffffff !important; font-family: 'DM Sans', sans-serif; font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0.04em; }
-.byb .byb-table td { padding: 12px 14px; border-top: 1px solid #e3ece8; vertical-align: top; font-family: 'DM Sans', sans-serif; font-size: 17px !important; line-height: 1.5 !important; color: #1c1917 !important; }
+.byb .byb-table th { text-align: left; padding: 12px 14px; background: ${G}; color: #ffffff !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0.04em; }
+.byb .byb-table td { padding: 12px 14px; border-top: 1px solid #e3ece8; vertical-align: top; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px !important; line-height: 1.5 !important; color: #1c1917 !important; }
 .byb .byb-table td.byb-claim { font-weight: 700 !important; color: #14283a !important; width: 30%; }
 .byb .byb-table td.byb-where { white-space: nowrap; }
 .byb .byb-note { background: #f2f7f5; border: 1px solid #c9dbd5; border-radius: 12px; padding: 18px 22px; }
-.byb a.byb-dl { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 10px 20px; border-radius: 10px; background: ${G}; color: #ffffff !important; font-family: 'DM Sans', sans-serif; font-size: 17px !important; font-weight: 700 !important; text-decoration: none !important; }
+.byb a.byb-dl { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 10px 20px; border-radius: 10px; background: ${G}; color: #ffffff !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px !important; font-weight: 700 !important; text-decoration: none !important; }
 @media (hover: hover) { .byb a.byb-dl:hover { background: #073f35; } }
 @media (max-width: 640px) {
   .byb .byb-layer { grid-template-columns: 1fr; gap: 6px; padding: 16px; }

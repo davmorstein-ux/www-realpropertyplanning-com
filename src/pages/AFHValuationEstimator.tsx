@@ -113,9 +113,9 @@ const AFHValuationEstimator = () => {
               <BackToCalculators accent={C} />
             </div>
             <ArticleCover src="/afh-valuation-estimator-cover-v3.webp" alt="Cover art: AFH Valuation Estimator" width={1024} height={1365} />
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: C, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>For sellers</p>
-            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
-            <p style={{ fontSize: 18, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 600, margin: 0 }}>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: C, marginBottom: 10, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>For sellers</p>
+            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
+            <p style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 600, margin: 0 }}>
               Know what your AFH is worth before you list. Estimate business and property value using income capitalization.
             </p>
           </div>

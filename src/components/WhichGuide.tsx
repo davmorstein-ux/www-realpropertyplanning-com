@@ -66,9 +66,9 @@ export const WHICH_GUIDE: Record<string, { heading: string; entries: Entry[] }> 
 const CSS = `
 .wg { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
 .wg-box { background: #fff; border: 1px solid #e3d9cc; border-radius: 12px; padding: 1.2rem 1.4rem; }
-.wg-h.wg-h { font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b1b22 !important; margin: 0 0 0.75rem !important; }
+.wg-h.wg-h { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 14px !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b1b22 !important; margin: 0 0 0.75rem !important; }
 .wg-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
-.wg-list li { font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5; color: #1f2933; padding-left: 0.9rem; border-left: 3px solid #e3d9cc; }
+.wg-list li { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px; line-height: 1.5; color: #1f2933; padding-left: 0.9rem; border-left: 3px solid #e3d9cc; }
 .wg-list li.cur { border-left-color: #1f4058; }
 .wg-list a { color: #9e1f2b; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .wg-here { font-weight: 700; color: #1f4058; }

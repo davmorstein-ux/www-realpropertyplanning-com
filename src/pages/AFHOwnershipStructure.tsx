@@ -97,7 +97,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -110,7 +110,7 @@ const AFHOwnershipStructure = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -122,7 +122,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -150,7 +150,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -163,7 +163,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -175,7 +175,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -189,7 +189,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 24px",
@@ -212,7 +212,7 @@ const AFHOwnershipStructure = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -231,7 +231,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -244,7 +244,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -268,7 +268,7 @@ const AFHOwnershipStructure = () => (
                 <h3
                   style={{
                     fontSize: 17,
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: "0 0 10px",
@@ -279,7 +279,7 @@ const AFHOwnershipStructure = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     color: "#1c1917",
                     lineHeight: 1.75,
                     margin: 0,
@@ -299,7 +299,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -312,7 +312,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -324,7 +324,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -344,7 +344,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -357,7 +357,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -369,7 +369,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -379,7 +379,7 @@ const AFHOwnershipStructure = () => (
             or an entity such as an LLC, corporation or partnership. A license is not transferable (WAC 388-76-10010), so a buyer of an
             existing home applies for a new license, and the ownership structure decides who that applicant is.
           </p>
-          <ul style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#1c1917", lineHeight: 1.85, margin: "0 0 20px", paddingLeft: 22 }}>
+          <ul style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", lineHeight: 1.85, margin: "0 0 20px", paddingLeft: 22 }}>
             <li>
               <strong>An entity must name an entity representative</strong> who meets the training and qualification
               requirements only an individual can meet (experience, training, background checks). One person can be
@@ -407,7 +407,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -425,7 +425,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -438,7 +438,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -450,7 +450,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 28px",
@@ -484,7 +484,7 @@ const AFHOwnershipStructure = () => (
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
                     fontSize: 18,
                   }}
@@ -495,7 +495,7 @@ const AFHOwnershipStructure = () => (
                   <h3
                     style={{
                       fontSize: 17,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
                       color: "#280a0c",
                       margin: "0 0 6px",
@@ -506,7 +506,7 @@ const AFHOwnershipStructure = () => (
                   <p
                     style={{
                       fontSize: 17,
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       color: "#1c1917",
                       lineHeight: 1.75,
                       margin: 0,
@@ -527,7 +527,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -540,7 +540,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -552,7 +552,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -572,7 +572,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -585,7 +585,7 @@ const AFHOwnershipStructure = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 34px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#e8e2d9",
               lineHeight: 1.2,
@@ -598,7 +598,7 @@ const AFHOwnershipStructure = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#e8e2d9",
               lineHeight: 1.85,
               margin: "0 0 32px",
@@ -614,7 +614,7 @@ const AFHOwnershipStructure = () => (
               style={{
                 display: "inline-block",
                 fontSize: 16,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
@@ -634,7 +634,7 @@ const AFHOwnershipStructure = () => (
               style={{
                 display: "inline-block",
                 fontSize: 16,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",

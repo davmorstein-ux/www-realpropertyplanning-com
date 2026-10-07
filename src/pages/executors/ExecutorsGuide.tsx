@@ -13,8 +13,8 @@ const crimson = "#8B0000";
 const cream = "#FAF8F4";
 const bodyGray = "#1c1917";
 const lightBorder = "rgba(0,0,0,0.08)";
-const raleway = "'DM Sans', system-ui, sans-serif";
-const georgia = "'DM Sans', system-ui, sans-serif";
+const raleway = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
+const georgia = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 
 const sectionHeading: React.CSSProperties = {
   fontFamily: raleway,

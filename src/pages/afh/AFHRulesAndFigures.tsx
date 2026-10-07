@@ -122,24 +122,24 @@ const CSS = `
 .afhp .afhp-hero { display: grid; gap: 28px; align-items: start; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 900px) { .afhp .afhp-hero { grid-template-columns: minmax(0, 1fr) 250px; } }
 .afhp .afhp-cover { width: 100%; max-width: 300px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(10,42,77,0.25); justify-self: center; }
-.afhp p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.afhp p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhp .afhp-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
-.afhp h1.afhp-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 18px !important; text-wrap: balance; }
-.afhp h2.afhp-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 180px; }
-.afhp h3.afhp-h3 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 21px !important; line-height: 1.3 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 6px !important; }
+.afhp h1.afhp-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 18px !important; text-wrap: balance; }
+.afhp h2.afhp-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 180px; }
+.afhp h3.afhp-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 21px !important; line-height: 1.3 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 6px !important; }
 .afhp .afhp-answer { background: #ffffff; border: 1px solid #d5e0da; border-left: 5px solid #0a5648; border-radius: 10px; padding: 18px 22px; margin: 4px 0 0; }
 .afhp .afhp-answer p { font-size: 19px !important; margin: 0 !important; }
 .afhp .afhp-answer .afhp-answer-label { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 6px !important; }
 .afhp .afhp-figs { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 22px 0 8px; }
 @media (min-width: 820px) { .afhp .afhp-figs { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .afhp .afhp-fig { background: #f3f6f4; border: 1px solid #d5e0da; border-radius: 10px; padding: 14px 16px; }
-.afhp .afhp-fig .afhp-fig-n { font-family: 'DM Sans', sans-serif !important; font-size: clamp(26px, 3.4vw, 34px) !important; font-weight: 700 !important; color: #192A19; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.afhp .afhp-fig .afhp-fig-l { font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; color: #2b2825; line-height: 1.35; margin-top: 6px; }
-.afhp ul.afhp-list { list-style: disc !important; margin: 0 0 0 22px; padding: 0; font-family: 'DM Sans', sans-serif; font-size: 18px; line-height: 1.7; color: #1c1917; }
+.afhp .afhp-fig .afhp-fig-n { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: clamp(26px, 3.4vw, 34px) !important; font-weight: 700 !important; color: #192A19; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.afhp .afhp-fig .afhp-fig-l { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 15px !important; color: #2b2825; line-height: 1.35; margin-top: 6px; }
+.afhp ul.afhp-list { list-style: disc !important; margin: 0 0 0 22px; padding: 0; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.7; color: #1c1917; }
 .afhp ul.afhp-list li { display: list-item !important; list-style: disc !important; margin-bottom: 8px; }
 .afhp ul.afhp-list li::marker { color: #0a5648; }
 .afhp .afhp-tablewrap { overflow-x: auto; border: 1px solid #e2ddd5; border-radius: 10px; background: #ffffff; }
-.afhp table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #1c1917; }
+.afhp table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; }
 .afhp th { text-align: left; font-weight: 700; background: #f3f6f4; padding: 10px 14px; border-bottom: 1px solid #d5e0da; }
 .afhp td { padding: 11px 14px; border-bottom: 1px solid #eee9e1; vertical-align: top; line-height: 1.5; }
 .afhp tr:last-child td { border-bottom: 0; }
@@ -147,13 +147,13 @@ const CSS = `
 .afhp td.afhp-src { white-space: nowrap; font-size: 15px; }
 .afhp a.afhp-link, .afhp td a, .afhp .afhp-small a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhp .afhp-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
-.afhp .afhp-jump a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #b9cdc3; color: #0a5648 !important; font-family: 'DM Sans', sans-serif; font-size: 16px !important; font-weight: 600; text-decoration: none !important; }
+.afhp .afhp-jump a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #b9cdc3; color: #0a5648 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; font-weight: 600; text-decoration: none !important; }
 .afhp .afhp-jump a:hover, .afhp .afhp-jump a:focus-visible { background: #0a5648; color: #ffffff !important; }
 .afhp .afhp-paths { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 820px) { .afhp .afhp-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .afhp .afhp-path { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid #0a5648; border-radius: 10px; padding: 20px 22px; scroll-margin-top: 180px; }
 .afhp .afhp-path .afhp-who { font-size: 16px !important; color: #4a443e !important; margin: 0 0 12px !important; }
-.afhp ol.afhp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', sans-serif; }
+.afhp ol.afhp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; }
 .afhp ol.afhp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #3f3a35; }
 .afhp ol.afhp-steps li::marker { color: #0a5648; font-weight: 700; }
 .afhp ol.afhp-steps a { display: inline; color: #1B3A6B !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
@@ -162,18 +162,18 @@ const CSS = `
 .afhp .afhp-more { font-size: 16px !important; margin-top: 4px !important; }
 .afhp dl.afhp-terms { display: grid; gap: 14px 28px; grid-template-columns: minmax(0, 1fr); margin: 0 0 16px; }
 @media (min-width: 760px) { .afhp dl.afhp-terms { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.afhp dl.afhp-terms dt { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; color: #192A19; }
+.afhp dl.afhp-terms dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700; font-size: 18px; color: #192A19; }
 .afhp dl.afhp-terms dt span { font-weight: 500; color: #4a443e; font-size: 15px; }
-.afhp dl.afhp-terms dd { margin: 4px 0 0; font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
+.afhp dl.afhp-terms dd { margin: 4px 0 0; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
 .afhp ul.afhp-recent { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid #e2ddd5; }
-.afhp ul.afhp-recent li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid #e2ddd5; font-family: 'DM Sans', sans-serif; font-size: 17px; }
+.afhp ul.afhp-recent li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid #e2ddd5; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px; }
 .afhp ul.afhp-recent li span { color: #4a443e; font-size: 15px; }
 .afhp .afhp-small { font-size: 15px !important; color: #3f3a35 !important; }
-.afhp .afhp-trail { font-family: 'DM Sans', sans-serif; font-size: 15px; color: #3f4a54; margin: 0 0 14px; }
+.afhp .afhp-trail { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #3f4a54; margin: 0 0 14px; }
 .afhp .afhp-trail a { color: #1B3A6B !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhp details.afhp-fold { background: #ffffff; border: 1px solid #d5ddd9; border-radius: 12px; scroll-margin-top: 180px; }
 .afhp details.afhp-fold + details.afhp-fold { margin-top: 10px; }
-.afhp details.afhp-fold > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 18px; position: relative; font-family: 'DM Sans', sans-serif; font-size: 19px; font-weight: 700; color: #192A19; }
+.afhp details.afhp-fold > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 18px; position: relative; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 19px; font-weight: 700; color: #192A19; }
 .afhp details.afhp-fold > summary::-webkit-details-marker { display: none; }
 .afhp details.afhp-fold > summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 400; color: #0a5648; }
 .afhp details.afhp-fold[open] > summary::after { content: "–"; }

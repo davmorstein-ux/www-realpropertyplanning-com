@@ -13,7 +13,7 @@ h4 {
      Cormorant Garamond — the single biggest reason pages looked
      typographically inconsistent, since components that set their own
      fontFamily escaped it and everything else did not. */
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.2 !important;
   margin-bottom: 0.4rem !important;
@@ -23,7 +23,7 @@ p,
 li,
 td,
 span {
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif;
   font-weight: 400;
 }
 body {
@@ -36,14 +36,14 @@ p {
 button,
 .btn,
 a[class*="btn"] {
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif;
   font-weight: 600;
 }
 label,
 .label,
 .caption,
 small {
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif;
   font-weight: 500;
 }
 
@@ -362,7 +362,7 @@ main,
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: "DM Sans", sans-serif;
+    font-family: "DM Sans", "DM Sans Fallback", sans-serif;
     font-size: 18px;
     font-weight: 420;
     line-height: 1.75;
@@ -426,7 +426,7 @@ main,
   h4,
   h5,
   h6 {
-    font-family: "DM Sans", serif;
+    font-family: "DM Sans", "DM Sans Fallback", serif;
     line-height: 1.25;
     letter-spacing: -0.015em;
     color: hsl(220 40% 12%);
@@ -461,7 +461,7 @@ main,
       line-height: 1.1 !important;
       letter-spacing: 0.04em !important;
       color: #272421 !important;
-      font-family: "DM Sans", "Gill Sans", sans-serif !important;
+      font-family: "DM Sans", "DM Sans Fallback", "Gill Sans", sans-serif !important;
       margin: 0 !important;
       text-align: center !important;
       text-shadow:
@@ -592,11 +592,11 @@ main,
 
 @layer utilities {
   .font-serif {
-    font-family: "DM Sans", serif;
+    font-family: "DM Sans", "DM Sans Fallback", serif;
   }
 
   .font-sans {
-    font-family: "DM Sans", sans-serif;
+    font-family: "DM Sans", "DM Sans Fallback", sans-serif;
   }
 }
 
@@ -606,7 +606,7 @@ main,
 }
 .homepage-faq-trigger {
   color: #463f37 !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
   font-size: 16px !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
@@ -776,7 +776,7 @@ main,
   box-sizing: border-box !important;
   background: none !important;
   color: hsl(var(--navy)) !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
   font-size: 16px !important;
   font-weight: 900 !important;
   line-height: 1.3 !important;
@@ -818,7 +818,7 @@ a:hover .gold-cta::after,
   box-sizing: border-box;
   background: none;
   color: hsl(var(--navy));
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif;
   font-size: 16px;
   font-weight: 900;
   line-height: 1.3;
@@ -2220,27 +2220,27 @@ button:not([data-nav-button]),
 /* Exempt RolesAndResponsibilities tile typography from global overrides */
 .r2-pill {
   font-size: 13px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .r2-title {
   font-size: 26px !important;
-  font-family: "DM Sans", serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", serif !important;
 }
 .r2-label {
   font-size: 10px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .r2-tagline {
   font-size: 14px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .r2-eyebrow {
   font-size: 13px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .r2-h2 {
   font-size: 40px !important;
-  font-family: "DM Sans", serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", serif !important;
 }
 
 /* Exempt all tile section pill/title/label typography from global overrides */
@@ -2258,44 +2258,44 @@ button:not([data-nav-button]),
 }
 .r2-label {
   font-size: 13px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .p1label {
   font-size: 13px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .p3label {
   font-size: 13px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .r2-pill {
   font-size: 13px !important;
 }
 .hn-question {
   font-size: 38px !important;
-  font-family: "DM Sans", serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", serif !important;
   color: #8b1a1a !important;
 }
 .hn-title {
   font-size: 28px !important;
-  font-family: "DM Sans", serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", serif !important;
   color: #8b1a1a !important;
 }
 .hn-eyebrow {
   font-size: 16px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .hn-sub {
   font-size: 18px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 .hn-h2 {
   font-size: 44px !important;
-  font-family: "DM Sans", serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", serif !important;
 }
 .hn-item {
   font-size: 16px !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 
 .hn-list {
@@ -3044,7 +3044,7 @@ main h2.coc-card-title .coc-card-title-accent {
   }
 }
 main .coc-divider-label {
-  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
   font-size: 22px !important;
   font-weight: 800 !important;
   color: #0047ab !important; /* cobalt blue */
@@ -3513,7 +3513,7 @@ span.rpp-hero-band-text {
   margin: 0 !important;
   padding: 0 !important;
   opacity: 1 !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 
 /* Hero blue band title used as the page's actual H1 — needs to read as a
@@ -3533,7 +3533,7 @@ h1.rpp-hero-band-text {
   margin: 0 !important;
   padding: 0 !important;
   opacity: 1 !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 
 /* AFH carousel — mobile centering */
@@ -3575,7 +3575,7 @@ h1.rpp-hero-band-text {
 .calc-hero-text {
   color: #ffffff !important;
   opacity: 1 !important;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
 }
 
 .calc-hero-subtitle {
@@ -3860,7 +3860,7 @@ main #rpp-tagline .rpp-tagline-line-v2 {
      a photograph of a real entryway, it read as a caption pasted on a photo
      and the monospace grid made the line both long and cramped. The
      paragraphs above explaining the Courier choice are kept as history. */
-  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
   font-style: normal !important;
   font-weight: 700 !important;
   letter-spacing: -0.01em !important;
@@ -4186,7 +4186,7 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
 /* Funnel heading — match the DM Sans used on the four choice tiles
    instead of inheriting the serif heading stack. */
 .rpp-funnel-heading.rpp-funnel-heading {
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-weight: 800 !important;
   font-style: normal !important;
   letter-spacing: -0.01em !important;
@@ -4817,7 +4817,7 @@ html body a.article-resource-btn.article-resource-btn.article-resource-btn {
      The "Back to ..." return buttons deliberately stay maroon. */
   background-color: #302b26 !important;
   color: #ffffff !important;
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-size: 17px !important;
   font-weight: 700 !important;
   letter-spacing: 0.01em !important;
@@ -4956,7 +4956,7 @@ section:has(> [data-sonner-toaster]) {
    Sans, the one place the review permits caps.
    ============================================================ */
 h1.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-weight: 500 !important;
   font-size: clamp(32px, 4.5vw, 46px) !important;
   line-height: 1.12 !important;
@@ -4970,7 +4970,7 @@ h1.rpp-hero-band-text.rpp-hero-band-text {
    elsewhere (AFH Club's is in the hero artwork) pass as="h2" and land here,
    so the band matches the rest of the site without a second H1 on the page. */
 h2.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-weight: 500 !important;
   font-size: clamp(32px, 4.5vw, 46px) !important;
   line-height: 1.12 !important;
@@ -4991,7 +4991,7 @@ h2.rpp-hero-band-text.rpp-hero-band-text {
 
 div.rpp-hero-band-text.rpp-hero-band-text,
 span.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-weight: 700 !important;
   font-size: 15px !important;
   line-height: 1.2 !important;
@@ -5401,7 +5401,7 @@ main section:has(> h1.rpp-hero-band-text) {
 }
 
 h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-weight: 500 !important;
   font-size: clamp(24px, 3vw, 28px) !important;
   line-height: 1.1 !important;
@@ -5644,7 +5644,7 @@ main .rpp-hero-cta {
   margin: 0 auto;
 }
 main .rpp-hero-cta .rpp-hero-cta-lead {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
   font-size: clamp(16px, 1.3vw, 19px);
   line-height: 1.45 !important;
   color: #3a3531;
@@ -5664,7 +5664,7 @@ main .rpp-hero-cta a.rpp-hero-cta-primary {
   border-radius: 999px;
   background: #1B3A6B;
   color: #fff !important;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -5673,13 +5673,13 @@ main .rpp-hero-cta a.rpp-hero-cta-primary {
 }
 @media (hover: hover) { main .rpp-hero-cta a.rpp-hero-cta-primary:hover { background: #142c52; } }
 main .rpp-funnel-sub {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
   font-size: clamp(17px, 1.3vw, 20px);
   color: #1B3A6B;
   margin: 0.5rem 0 0 !important;
 }
 main .rpp-hero-cta a.rpp-hero-cta-secondary {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #1B3A6B !important;

@@ -131,7 +131,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
       style={{
         minHeight: "100vh",
         backgroundColor: GRAY_BG,
-        fontFamily: "'DM Sans', system-ui, sans-serif",
+        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
       }}
     >
       <SEOHead

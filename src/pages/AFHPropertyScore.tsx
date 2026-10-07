@@ -48,7 +48,7 @@ const PLUM_DARK = shade(AFH_TOOL_COLOR, 0.38);
 const TINT = shade(AFH_TOOL_COLOR, -0.9);
 const SOFT = shade(AFH_TOOL_COLOR, -0.94);
 const INK = "#141210";
-const FONT = "'DM Sans', system-ui, sans-serif";
+const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 const FLAG_COLOR: Record<FlagLevel, { fg: string; bg: string; dot: string }> = {
   green: { fg: "#14532d", bg: "#f0fdf4", dot: "#16a34a" },
   yellow: { fg: "#713f12", bg: "#fefce8", dot: "#ca8a04" },

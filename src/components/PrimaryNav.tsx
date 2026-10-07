@@ -198,7 +198,7 @@ const PrimaryNav = () => {
           background: none;
           border: none;
           border-bottom: 1px solid transparent;
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           /* Tightened from 13px/0.08em. The header is now a single row, so the
              five labels share the space left by the logo, search field and
              menu button. This recovers roughly 60px across the row, which is
@@ -285,7 +285,7 @@ const PrimaryNav = () => {
 
         .rpp-pn-menu-heading {
           padding: 10px 18px 8px;
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 12px;
           font-weight: 800;
           letter-spacing: 0.13em;
@@ -299,7 +299,7 @@ const PrimaryNav = () => {
           display: block !important;
           width: 100%;
           padding: 13px 18px !important;
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 16px !important;
           font-weight: 600;
           color: #272421 !important;

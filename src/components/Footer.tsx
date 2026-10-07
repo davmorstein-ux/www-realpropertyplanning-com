@@ -12,7 +12,7 @@ const Footer = () => {
         .rpp-footer-link {
           color: rgba(255,255,255,0.72) !important;
           text-decoration: none !important;
-          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 16px !important;
           line-height: 1.4 !important;
           transition: color 0.15s ease !important;
@@ -28,7 +28,7 @@ const Footer = () => {
            at roughly 5.9:1. Applied to all four headings so the columns and
            the contact block stay identical. */
         .rpp-footer-col-heading {
-          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 15px !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
@@ -61,7 +61,7 @@ const Footer = () => {
            was also why these sat on a different vertical rhythm to the
            link columns. */
         .rpp-footer-nap {
-          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 16px !important;
           line-height: 1.4 !important;
           color: rgba(255,255,255,0.72) !important;
@@ -76,7 +76,7 @@ const Footer = () => {
            smallest and faintest text in the block. Now matches the links,
            held slightly back by opacity rather than by size. */
         .rpp-footer-tagline {
-          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 16px !important;
           line-height: 1.4 !important;
           color: rgba(255,255,255,0.72) !important;
@@ -88,7 +88,7 @@ const Footer = () => {
            any reasonable minimum size. 13px at 0.62 reaches about 4.6:1 and
            still reads as fine print. */
         .rpp-footer-disclaimer {
-          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 13px !important;
           color: rgba(255,255,255,0.82) !important;
           line-height: 1.6 !important;

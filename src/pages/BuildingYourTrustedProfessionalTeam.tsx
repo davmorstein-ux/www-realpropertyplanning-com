@@ -206,7 +206,7 @@ const Section = ({
                   <h3
                     className="rpp-m2-title"
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 18,
                       fontWeight: 700,
                       color: color,
@@ -238,7 +238,7 @@ const Section = ({
 
                     gap: 6,
 
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
 
                     fontSize: 13,
 
@@ -386,7 +386,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                         <div style={{ padding: "16px 20px 0" }}>
                           <h3
                             style={{
-                              fontFamily: "'DM Sans', system-ui, sans-serif",
+                              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                               fontSize: 18,
                               fontWeight: 700,
                               color: "#721d24",
@@ -408,7 +408,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                               alignItems: "center",
                               justifyContent: "center",
                               gap: 6,
-                              fontFamily: "'DM Sans', sans-serif",
+                              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                               fontSize: 13,
                               fontWeight: 700,
                               color: "#fff",

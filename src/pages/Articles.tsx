@@ -17,7 +17,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 /* Shared style for the Read / Listen links at the foot of each card. */
 const actionLinkStyle: CSSProperties = {
   fontSize: 12,
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
@@ -152,7 +152,7 @@ const Articles = () => {
             maxWidth: 900,
             margin: "0 auto",
             padding: "56px 24px 80px",
-            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
           }}
         >
           <h2
@@ -229,7 +229,7 @@ const Articles = () => {
                       color: "#280a0c",
                       margin: "0 0 4px",
                       lineHeight: 1.3,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     }}
                   >
                     <Link to={article.href} style={{ color: "inherit", textDecoration: "none" }}>
@@ -242,7 +242,7 @@ const Articles = () => {
                       color: "#1c1917",
                       margin: "0 0 12px",
                       lineHeight: 1.6,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     }}
                   >
                     {article.description}

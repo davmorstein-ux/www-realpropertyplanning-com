@@ -81,7 +81,7 @@ const articleSchema = {
 
 const bodyText: React.CSSProperties = {
   fontSize: 18,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   color: "#342e28",
   lineHeight: 1.85,
   margin: "0 0 16px",
@@ -89,7 +89,7 @@ const bodyText: React.CSSProperties = {
 
 const h2Style: React.CSSProperties = {
   fontSize: "clamp(24px, 3.2vw, 32px)",
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   color: "#292521",
   lineHeight: 1.2,
@@ -133,7 +133,7 @@ const AFHWhatIsAnAFH = () => {
             <p
               style={{
                 fontSize: 15,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
@@ -146,7 +146,7 @@ const AFHWhatIsAnAFH = () => {
             <h1
               style={{
                 fontSize: "clamp(32px, 5vw, 50px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#292521",
                 lineHeight: 1.15,
@@ -266,7 +266,7 @@ const AFHWhatIsAnAFH = () => {
               small-home category. Where a state has no separate small-home license, the row says so.
             </p>
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'DM Sans', sans-serif" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}>
                 <thead>
                   <tr style={{ textAlign: "left", background: "#edf0f3" }}>
                     <th style={{ ...cell, borderTop: "none", fontWeight: 700 }}>State</th>
@@ -314,7 +314,7 @@ const AFHWhatIsAnAFH = () => {
                 <h3
                   style={{
                     fontSize: 20,
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#292521",
                     margin: "0 0 8px",

@@ -239,7 +239,7 @@ export default function ProviderHoverPanel({
                       />
                       {hasTwoPeople && (
                         <span
-                          style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
+                          style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
                         >
                           {name}
                         </span>
@@ -261,7 +261,7 @@ export default function ProviderHoverPanel({
                         decoding="async"
                       />
                       <span
-                        style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
+                        style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
                       >
                         {name2}
                       </span>
@@ -272,7 +272,7 @@ export default function ProviderHoverPanel({
                 <div style={{ flex: 1 }}>
                   <div
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 18,
                       fontWeight: 700,
                       color: "#fff",
@@ -284,7 +284,7 @@ export default function ProviderHoverPanel({
                   {name2 && (
                     <div
                       style={{
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: 18,
                         fontWeight: 700,
                         color: "#fff",
@@ -297,7 +297,7 @@ export default function ProviderHoverPanel({
                   {title && (
                     <div
                       style={{
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         fontSize: 11,
                         letterSpacing: "0.12em",
                         color: "#e0828a",
@@ -310,7 +310,7 @@ export default function ProviderHoverPanel({
                   {company && (
                     <div
                       style={{
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         fontSize: 11,
                         color: "rgba(255,255,255,0.65)",
                         marginTop: 2,
@@ -376,7 +376,7 @@ export default function ProviderHoverPanel({
                       <p
                         key={i}
                         style={{
-                          fontFamily: "'DM Sans', system-ui, sans-serif",
+                          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                           fontSize: 14,
                           color: "#1c1917",
                           lineHeight: 1.6,
@@ -401,7 +401,7 @@ export default function ProviderHoverPanel({
                   >
                     <div
                       style={{
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         fontSize: 10,
                         fontWeight: 700,
                         letterSpacing: "0.18em",
@@ -412,7 +412,7 @@ export default function ProviderHoverPanel({
                     >
                       Specialties
                     </div>
-                    <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#1c1917", lineHeight: 1.6 }}>
+                    <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 13, color: "#1c1917", lineHeight: 1.6 }}>
                       {specialty}
                     </div>
                   </div>

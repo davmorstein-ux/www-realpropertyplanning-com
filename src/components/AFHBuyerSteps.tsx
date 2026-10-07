@@ -33,7 +33,7 @@ const AFHBuyerSteps = ({ current, compact = false }: { current?: number; compact
       })}
     </ol>
     <style dangerouslySetInnerHTML={{ __html: `
-      .rpp-afhsteps { font-family: 'DM Sans', system-ui, sans-serif; margin: 0 auto; max-width: 1100px; }
+      .rpp-afhsteps { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; margin: 0 auto; max-width: 1100px; }
       .rpp-afhsteps .rpp-afhsteps-title { font-size: clamp(18px, 1.6vw, 22px); font-weight: 700; color: #272421; text-align: center; margin: 0 0 1rem !important; }
       .rpp-afhsteps ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
       @media (min-width: 700px) { .rpp-afhsteps ol { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

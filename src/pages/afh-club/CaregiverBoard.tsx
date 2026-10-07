@@ -35,9 +35,9 @@ const DOH_SEARCH = "https://doh.wa.gov/licenses-permits-and-certificates/provide
 const CSS = `
 .cgb { background: #faf8f4; }
 .cgb .cgb-wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
-.cgb p, .cgb li { font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px !important; line-height: 1.65 !important; color: #1c1917 !important; }
-.cgb h2.cgb-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; line-height: 1.2 !important; }
-.cgb h3.cgb-h3 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; color: ${GREEN} !important; margin: 0 0 6px !important; line-height: 1.25 !important; }
+.cgb p, .cgb li { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 18px !important; line-height: 1.65 !important; color: #1c1917 !important; }
+.cgb h2.cgb-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; line-height: 1.2 !important; }
+.cgb h3.cgb-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; color: ${GREEN} !important; margin: 0 0 6px !important; line-height: 1.25 !important; }
 .cgb .cgb-sec { padding: 40px 0; }
 .cgb .cgb-sec.alt { background: #ffffff; border-top: 1px solid #e3ddd3; border-bottom: 1px solid #e3ddd3; }
 .cgb .cgb-steps { margin: 0 0 0 22px !important; padding: 0 !important; }
@@ -46,24 +46,24 @@ const CSS = `
 .cgb .cgb-note p { margin: 0 !important; }
 .cgb .cgb-choose { display: grid; gap: 14px; grid-template-columns: 1fr; margin-top: 8px; }
 @media (min-width: 700px) { .cgb .cgb-choose { grid-template-columns: 1fr 1fr; } }
-.cgb button.cgb-pick { font-family: 'DM Sans', system-ui, sans-serif; text-align: left; background: #fff; border: 2px solid ${GREEN}; border-radius: 12px; padding: 18px 20px; min-height: 58px; cursor: pointer; color: #14283a; }
+.cgb button.cgb-pick { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; text-align: left; background: #fff; border: 2px solid ${GREEN}; border-radius: 12px; padding: 18px 20px; min-height: 58px; cursor: pointer; color: #14283a; }
 .cgb button.cgb-pick[aria-expanded="true"] { background: ${GREEN}; color: #fff; }
 .cgb button.cgb-pick strong { display: block; font-size: 20px !important; }
 .cgb button.cgb-pick span { display: block; font-size: 16px !important; font-weight: 400; margin-top: 4px; }
 .cgb .cgb-form { background: #fff; border: 1px solid #d9d2c6; border-radius: 12px; padding: 22px 20px; margin-top: 18px; display: grid; gap: 18px; }
 .cgb .cgb-field { display: grid; gap: 6px; }
-.cgb .cgb-q { font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px !important; font-weight: 700; color: #14283a; }
+.cgb .cgb-q { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 700; color: #14283a; }
 .cgb .cgb-hint { font-size: 15px !important; color: #3f3a35 !important; margin: 0 !important; }
-.cgb input.cgb-in, .cgb select.cgb-in, .cgb textarea.cgb-in { font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px !important; padding: 12px 14px; border: 1px solid #9a9183; border-radius: 8px; background: #fff; color: #1c1917; width: 100%; min-height: 48px; box-sizing: border-box; }
+.cgb input.cgb-in, .cgb select.cgb-in, .cgb textarea.cgb-in { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; padding: 12px 14px; border: 1px solid #9a9183; border-radius: 8px; background: #fff; color: #1c1917; width: 100%; min-height: 48px; box-sizing: border-box; }
 .cgb textarea.cgb-in { min-height: 96px; }
 .cgb fieldset.cgb-set { border: 0; margin: 0; padding: 0; display: grid; gap: 6px; }
 .cgb fieldset.cgb-set legend { padding: 0; margin-bottom: 4px; }
 .cgb .cgb-opts { display: flex; flex-wrap: wrap; gap: 8px; }
-.cgb label.cgb-opt { font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px !important; font-weight: 500 !important; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #c9c1b4; border-radius: 999px; padding: 8px 14px; min-height: 44px; background: #fff; cursor: pointer; color: #1c1917; }
+.cgb label.cgb-opt { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; font-weight: 500 !important; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #c9c1b4; border-radius: 999px; padding: 8px 14px; min-height: 44px; background: #fff; cursor: pointer; color: #1c1917; }
 .cgb label.cgb-opt input { width: 18px; height: 18px; accent-color: ${GREEN}; }
 .cgb .cgb-two { display: grid; gap: 18px; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .cgb .cgb-two { grid-template-columns: 1fr 1fr; } }
-.cgb button.cgb-send { font-family: 'DM Sans', system-ui, sans-serif; background: ${GREEN}; color: #fff; border: 0; border-radius: 10px; padding: 14px 22px; min-height: 54px; font-weight: 700; cursor: pointer; justify-self: start; }
+.cgb button.cgb-send { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; background: ${GREEN}; color: #fff; border: 0; border-radius: 10px; padding: 14px 22px; min-height: 54px; font-weight: 700; cursor: pointer; justify-self: start; }
 .cgb button.cgb-send:disabled { opacity: 0.55; cursor: not-allowed; }
 .cgb .cgb-done { background: #eef7f1; border: 1px solid #b9dcc6; border-radius: 10px; padding: 14px 18px; }
 .cgb .cgb-err { background: #fdf0ef; border: 1px solid #e6b8b3; border-radius: 10px; padding: 14px 18px; }
@@ -71,7 +71,7 @@ const CSS = `
 .cgb .cgb-post { background: #fff; border: 1px solid #d9d2c6; border-radius: 12px; padding: 18px 20px; }
 .cgb .cgb-post p { margin: 0 0 6px !important; font-size: 17px !important; }
 .cgb .cgb-meta { font-size: 15px !important; color: #3f3a35 !important; }
-.cgb button.cgb-contact { font-family: 'DM Sans', system-ui, sans-serif; background: #fff; color: ${GREEN}; border: 2px solid ${GREEN}; border-radius: 10px; padding: 10px 18px; min-height: 48px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+.cgb button.cgb-contact { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; background: #fff; color: ${GREEN}; border: 2px solid ${GREEN}; border-radius: 10px; padding: 10px 18px; min-height: 48px; font-weight: 700; cursor: pointer; margin-top: 8px; }
 .cgb .cgb-empty { background: #fff; border: 1px dashed #b9b1a4; border-radius: 12px; padding: 18px 20px; }
 .cgb a.cgb-link { color: ${GREEN} !important; font-weight: 700; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .cgb .cgb-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

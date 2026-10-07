@@ -116,7 +116,7 @@ const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
      they do not follow each other. HeroBandTitle.tsx (here), the h1 and
      --compact band rules in index.css, and the #rpp-tagline rule in index.css
      that the homepage depends on. Change all of them or none of them. */
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   /* 500, calibrated for DM Sans at this size.
 
      History so it is not re-litigated: serif 600 -> DM Sans 700, which

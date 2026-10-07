@@ -359,7 +359,7 @@ const FeaturedProfessionals = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -372,7 +372,7 @@ const FeaturedProfessionals = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: 0,
@@ -393,7 +393,7 @@ const FeaturedProfessionals = () => (
             <h2
               style={{
                 fontSize: "clamp(22px, 3vw, 30px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#292521",
                 margin: "0 0 28px",
@@ -460,7 +460,7 @@ const FeaturedProfessionals = () => (
                       <div style={{ minWidth: 0 }}>
                         <p
                           style={{
-                            fontFamily: "'DM Sans', sans-serif",
+                            fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                             fontWeight: 700,
                             fontSize: 16,
                             color: "#292521",
@@ -469,7 +469,7 @@ const FeaturedProfessionals = () => (
                         >
                           {pro.name}
                         </p>
-                        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                        <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
                           {pro.role}
                         </p>
                       </div>
@@ -489,7 +489,7 @@ const FeaturedProfessionals = () => (
                         <div style={{ minWidth: 0 }}>
                           <p
                             style={{
-                              fontFamily: "'DM Sans', sans-serif",
+                              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                               fontWeight: 700,
                               fontSize: 16,
                               color: "#292521",
@@ -498,7 +498,7 @@ const FeaturedProfessionals = () => (
                           >
                             {pro.name2}
                           </p>
-                          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                          <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
                             {pro.role2}
                           </p>
                         </div>
@@ -507,7 +507,7 @@ const FeaturedProfessionals = () => (
                   </div>
                   <p
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontSize: 14,
                       fontWeight: 600,
                       color: "#1c1917",
@@ -518,7 +518,7 @@ const FeaturedProfessionals = () => (
                   </p>
                   <p
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontSize: 14,
                       color: "#1c1917",
                       lineHeight: 1.6,
@@ -529,7 +529,7 @@ const FeaturedProfessionals = () => (
                   </p>
                   <p
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontSize: 14,
                       fontWeight: 700,
                       color: "#7f1d1d",

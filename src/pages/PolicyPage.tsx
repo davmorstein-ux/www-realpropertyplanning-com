@@ -13,16 +13,16 @@ import { POLICY_PAGES, policyPageByPath } from "@/data/policyPages";
  * crawlers by vite.config.ts.
  */
 const CSS = `
-.rpp-policy p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.75 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
-.rpp-policy h2.rpp-policy-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(22px, 3vw, 28px) !important; line-height: 1.25 !important; font-weight: 700 !important; color: #1B3A6B !important; margin: 0 0 12px !important; text-wrap: balance; }
+.rpp-policy p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.75 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.rpp-policy h2.rpp-policy-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(22px, 3vw, 28px) !important; line-height: 1.25 !important; font-weight: 700 !important; color: #1B3A6B !important; margin: 0 0 12px !important; text-wrap: balance; }
 .rpp-policy ul.rpp-policy-ul { list-style: disc !important; padding-left: 24px !important; margin: 0 0 14px !important; }
-.rpp-policy ul.rpp-policy-ul li { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 6px !important; }
+.rpp-policy ul.rpp-policy-ul li { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 6px !important; }
 .rpp-policy .rpp-policy-meta { font-size: 16px !important; color: #3f3a35 !important; }
 .rpp-policy .rpp-policy-nav { background: #f7f4ef; border: 1px solid #e2dad0; border-radius: 12px; padding: 20px 22px; }
 .rpp-policy .rpp-policy-nav ul { list-style: none !important; margin: 0 !important; padding: 0 !important; display: grid; gap: 8px 24px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 640px) { .rpp-policy .rpp-policy-nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.rpp-policy .rpp-policy-nav a { font-family: 'DM Sans', sans-serif; font-size: 17px; color: #1B3A6B !important; text-decoration: underline; text-underline-offset: 3px; }
-.rpp-policy .rpp-policy-nav span[aria-current] { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 700; color: #1c1917; }
+.rpp-policy .rpp-policy-nav a { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px; color: #1B3A6B !important; text-decoration: underline; text-underline-offset: 3px; }
+.rpp-policy .rpp-policy-nav span[aria-current] { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px; font-weight: 700; color: #1c1917; }
 `;
 
 const PolicyPage = () => {

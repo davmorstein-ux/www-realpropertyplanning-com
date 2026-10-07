@@ -181,7 +181,7 @@ const AFHResources = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -194,7 +194,7 @@ const AFHResources = () => (
           </p>
           <p
             className="rpp-afhres-start"
-            style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#342e28", lineHeight: 1.7, margin: "16px 0 0" }}
+            style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#342e28", lineHeight: 1.7, margin: "16px 0 0" }}
           >
             <strong>New here?</strong> Start with{" "}
             <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
@@ -360,7 +360,7 @@ const AFHResources = () => (
         <h2
           style={{
             fontSize: "clamp(24px, 3.5vw, 36px)",
-            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontWeight: 700,
             color: "#280a0c",
             lineHeight: 1.2,
@@ -409,7 +409,7 @@ const AFHResources = () => (
                 <h3
                   style={{
                     fontSize: 20,
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: "0 0 8px",
@@ -420,7 +420,7 @@ const AFHResources = () => (
                 <p
                   style={{
                     fontSize: 16,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     color: "#5a5a5a",
                     lineHeight: 1.6,
                     margin: "0 0 10px",

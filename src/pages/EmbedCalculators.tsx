@@ -26,7 +26,7 @@ import {
 
 const NAVY = "#1B3A6B";
 const INK = "#141210";
-const FONT = "'DM Sans', system-ui, sans-serif";
+const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 
 const CSS = `
 .rpp-emb { font-family: ${FONT}; color: ${INK}; }

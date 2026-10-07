@@ -144,7 +144,7 @@ const AFHRealEstateBroker = () => (
           <p
             style={{
               fontSize: "clamp(18px, 2vw, 20px)",
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
               color: "#1c1917",
               lineHeight: 1.85,
@@ -176,7 +176,7 @@ const AFHRealEstateBroker = () => (
               <p
                 style={{
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
@@ -189,7 +189,7 @@ const AFHRealEstateBroker = () => (
               <h2
                 style={{
                   fontSize: "clamp(24px, 3.5vw, 36px)",
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontWeight: 700,
                   color: "#280a0c",
                   lineHeight: 1.2,
@@ -229,7 +229,7 @@ const AFHRealEstateBroker = () => (
                 <p
                   style={{
                     fontSize: 16,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     color: "#1c1917",
                     lineHeight: 1.8,
                     margin: 0,
@@ -250,7 +250,7 @@ const AFHRealEstateBroker = () => (
                 style={{
                   marginTop: 16,
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   color: "#1c1917",
                   lineHeight: 1.7,
                 }}
@@ -270,7 +270,7 @@ const AFHRealEstateBroker = () => (
               <p
                 style={{
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
@@ -283,7 +283,7 @@ const AFHRealEstateBroker = () => (
               <h3
                 style={{
                   fontSize: "clamp(22px, 2.5vw, 30px)",
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontWeight: 700,
                   color: "#280a0c",
                   lineHeight: 1.2,
@@ -324,7 +324,7 @@ const AFHRealEstateBroker = () => (
                     <h4
                       style={{
                         fontSize: 18,
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontWeight: 700,
                         color: "#280a0c",
                         margin: "0 0 8px",
@@ -335,7 +335,7 @@ const AFHRealEstateBroker = () => (
                     <p
                       style={{
                         fontSize: 16,
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         color: "#1c1917",
                         lineHeight: 1.8,
                         margin: 0,
@@ -357,7 +357,7 @@ const AFHRealEstateBroker = () => (
             <p
               style={{
                 fontSize: 14,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
@@ -370,7 +370,7 @@ const AFHRealEstateBroker = () => (
             <h2
               style={{
                 fontSize: "clamp(28px, 3.5vw, 40px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#280a0c",
                 margin: "0 0 16px",
@@ -399,8 +399,8 @@ const AFHRealEstateBroker = () => (
                   </svg>
                 ))}
               </div>
-              <span style={{ fontSize: 20, fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
-              <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#1c1917" }}>
+              <span style={{ fontSize: 20, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
+              <span style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917" }}>
                 · 16 Reviews on Zillow
               </span>
             </div>
@@ -425,7 +425,7 @@ const AFHRealEstateBroker = () => (
                 <p
                   style={{
                     fontSize: 14,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     color: "#1c1917",
                     margin: 0,
                     fontWeight: 500,
@@ -436,7 +436,7 @@ const AFHRealEstateBroker = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: 0,
@@ -448,7 +448,7 @@ const AFHRealEstateBroker = () => (
                 <p
                   style={{
                     fontSize: 16,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     color: "#1c1917",
                     lineHeight: 1.8,
                     margin: 0,
@@ -462,7 +462,7 @@ const AFHRealEstateBroker = () => (
                       key={badge}
                       style={{
                         fontSize: 11,
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         fontWeight: 600,
                         letterSpacing: "0.08em",
                         background: "#edf2ff",
@@ -489,7 +489,7 @@ const AFHRealEstateBroker = () => (
                 alignItems: "center",
                 gap: 10,
                 fontSize: 14,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",

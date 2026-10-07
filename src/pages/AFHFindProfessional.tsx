@@ -262,7 +262,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -275,7 +275,7 @@ const AFHFindProfessional = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -287,7 +287,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -303,7 +303,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
               color: "#1c1917",
               lineHeight: 1.8,
@@ -328,7 +328,7 @@ const AFHFindProfessional = () => (
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
         /* Wordmark banner. main h2 is forced to 36px sitewide, hence the specificity. */
-        .rpp-afhpro h2.rpp-afhpro-banner { display: flex !important; width: fit-content; max-width: 100%; flex-wrap: wrap; align-items: center; column-gap: 0.45em; row-gap: 0.15em; background: #192A19; color: #F3F0EA !important; border-radius: 10px; padding: 12px 22px !important; margin: 0 0 18px !important; font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.6vw, 40px) !important; font-weight: 300 !important; line-height: 1.1 !important; }
+        .rpp-afhpro h2.rpp-afhpro-banner { display: flex !important; width: fit-content; max-width: 100%; flex-wrap: wrap; align-items: center; column-gap: 0.45em; row-gap: 0.15em; background: #192A19; color: #F3F0EA !important; border-radius: 10px; padding: 12px 22px !important; margin: 0 0 18px !important; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.6vw, 40px) !important; font-weight: 300 !important; line-height: 1.1 !important; }
         .rpp-afhpro .rpp-afhpro-banner-wm { display: inline-flex; align-items: center; gap: 0.08em; letter-spacing: 0.18em; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-banner-glyph { height: 1.02em; width: auto; flex-shrink: 0; display: block; }
         .rpp-afhpro .rpp-afhpro-banner-fp { letter-spacing: 0.04em; white-space: nowrap; }
@@ -346,7 +346,7 @@ const AFHFindProfessional = () => (
         @media (min-width: 768px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (min-width: 960px) { .rpp-afhpro-grid { gap: 16px; } }
         /* Fixed-height slots: the same row of every card lines up across the grid. */
-        .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
+        .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; min-width: 0; line-height: 1.25; }
         .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
         /* Two fixed lines (David, Sept 25): every profession label is set as two lines in
            src/data/afhProfessionals.ts (professionLines), e.g. "Water Damage" / "Restoration",
@@ -356,7 +356,7 @@ const AFHFindProfessional = () => (
            crammed into a 15px line (owner: "odd color, thin, hard to read", Sept 30, 2026).
            The size, weight and color now sit on the spans themselves, with !important. */
         .rpp-afhpro .rpp-afhpro-card-profession { height: 36px; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px !important; }
-        .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 18px; font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; line-height: 18px !important; font-weight: 700 !important; color: #1c1917 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 18px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 13px !important; line-height: 18px !important; font-weight: 700 !important; color: #1c1917 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         /* At two columns (480-767px) each label has ~200px: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
         @media (min-width: 480px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 3px solid ${AFH_HEADSHOT_RING}; box-sizing: border-box; margin-bottom: 8px !important; }
@@ -391,7 +391,7 @@ const AFHFindProfessional = () => (
             </span>{" "}
             <span aria-hidden="true" className="rpp-afhpro-banner-fp">Featured Professionals</span>
           </h2>
-          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917", maxWidth: 720 }}>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", maxWidth: 720 }}>
             Independent professionals who can help your adult family home succeed.
           </p>
           <div className="rpp-afhpro-grid">
@@ -402,7 +402,7 @@ const AFHFindProfessional = () => (
           {/* Caregiver board (Oct 5, 2026): staff are not listed as featured
               professionals, so the board is pointed to under the grid instead. */}
           <div style={{ height: 32 }} aria-hidden="true" />
-          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917", maxWidth: 720 }}>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", maxWidth: 720 }}>
             Looking for caregivers, or for adult family home work? Post or browse on the free{" "}
             <Link to="/afh-club/caregivers" style={{ color: "#0a5648", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
               AFH Caregiver Job Board
@@ -415,10 +415,10 @@ const AFHFindProfessional = () => (
       {/* The guide: what to look for in each kind of professional. Narrated by the audio below. */}
       <section className="rpp-afhpro" style={{ background: "#edf0f3", padding: "56px 24px 0" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
+          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
             What to look for in each kind of professional
           </h2>
-          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917" }}>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917" }}>
             Whoever you hire, these are the questions that separate someone who knows adult family homes from someone who does not.
           </p>
         </div>
@@ -452,7 +452,7 @@ const AFHFindProfessional = () => (
                     <h2
                       style={{
                         fontSize: "clamp(20px, 2.5vw, 26px)",
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontWeight: 700,
                         color: "#280a0c",
                         margin: "0 0 14px",
@@ -463,7 +463,7 @@ const AFHFindProfessional = () => (
                     <p
                       style={{
                         fontSize: 18,
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         color: "#1c1917",
                         lineHeight: 1.8,
                         margin: "0 0 20px",
@@ -474,7 +474,7 @@ const AFHFindProfessional = () => (
                     <p
                       style={{
                         fontSize: 15,
-                        fontFamily: "'DM Sans', sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
@@ -500,7 +500,7 @@ const AFHFindProfessional = () => (
                           <p
                             style={{
                               fontSize: 16,
-                              fontFamily: "'DM Sans', sans-serif",
+                              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                               color: "#1c1917",
                               lineHeight: 1.65,
                               margin: 0,
@@ -517,7 +517,7 @@ const AFHFindProfessional = () => (
                           to={cat.link.href}
                           style={{
                             fontSize: 16,
-                            fontFamily: "'DM Sans', sans-serif",
+                            fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
@@ -536,7 +536,7 @@ const AFHFindProfessional = () => (
                           rel="noopener noreferrer"
                           style={{
                             fontSize: 16,
-                            fontFamily: "'DM Sans', sans-serif",
+                            fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
@@ -563,7 +563,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -576,7 +576,7 @@ const AFHFindProfessional = () => (
           <h2
             style={{
               fontSize: "clamp(22px, 3.5vw, 32px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -589,7 +589,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 28px",
@@ -604,7 +604,7 @@ const AFHFindProfessional = () => (
             style={{
               display: "inline-block",
               fontSize: 16,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",

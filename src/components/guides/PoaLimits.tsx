@@ -37,7 +37,7 @@ const CSS = `
 .pl-sec { padding: 3.5rem 0; }
 .pl-sec.alt { background: #faf8f4; }
 .pl-in { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
-.pl-h2.pl-h2 { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(28px, 3vw, 38px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.9rem !important; line-height: 1.2; }
+.pl-h2.pl-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(28px, 3vw, 38px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.9rem !important; line-height: 1.2; }
 .pl-in p { font-size: 18px; line-height: 1.65; color: #1f2933; margin: 0 0 1rem; }
 .pl-tiles { list-style: none; margin: 1.25rem 0; padding: 0; display: grid; gap: 0.75rem; }
 .pl-tiles li { background: #fff; border: 1px solid #e3d9cc; border-left: 4px solid #1f4058; border-radius: 8px; padding: 0.9rem 1.15rem; font-size: 17px; line-height: 1.6; color: #1f2933; }

@@ -13,7 +13,7 @@ import WhichGuide from "@/components/WhichGuide";
 
 const label = {
   fontSize: 15,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
@@ -23,7 +23,7 @@ const label = {
 
 const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   color: "#280a0c",
   lineHeight: 1.2,
@@ -32,7 +32,7 @@ const h2 = {
 
 const body = {
   fontSize: 18,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   color: "#1c1917",
   lineHeight: 1.85,
   margin: "0 0 20px",
@@ -40,7 +40,7 @@ const body = {
 
 const li = {
   fontSize: 18,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   color: "#1c1917",
   lineHeight: 1.75,
   marginBottom: 10,
@@ -99,7 +99,7 @@ const AFHWaboGuide = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -278,7 +278,7 @@ const AFHWaboGuide = () => (
             The local city or county building official performs the inspection, and DSHS handles licensing. Knowing
             the difference can save time, money, and frustration.
           </p>
-          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#1c1917", margin: "20px 0 0" }}>
+          <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: "20px 0 0" }}>
             Ready for the technical details?{" "}
             <Link to="/afh-club/wabo-technical-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
               WABO Checklist & Technical Requirements →

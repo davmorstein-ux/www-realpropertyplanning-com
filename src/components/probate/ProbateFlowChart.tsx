@@ -16,7 +16,7 @@ const A = FLOW_ACCENT;
 const INK = "#14283a";
 
 export const FLOW_CHART_CSS = `
-.pfc { font-family: 'DM Sans', system-ui, sans-serif; color: ${INK}; }
+.pfc { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; color: ${INK}; }
 .pfc .pfc-node { border-radius: 12px; padding: 14px 18px; text-align: center; }
 .pfc .pfc-start { background: ${INK}; color: #ffffff; max-width: 420px; margin: 0 auto; }
 .pfc .pfc-start b { display: block; font-size: 19px; font-weight: 700; }

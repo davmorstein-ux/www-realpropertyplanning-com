@@ -38,7 +38,7 @@ export default function BackToPreviousPage({ fallback, variant = "bottom" }: Pro
         <Link
           to={href}
           className="rpp-prevpage-link"
-          style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}
+          style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 600, color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}
         >
           ❮ Back to {label}
         </Link>
@@ -57,7 +57,7 @@ export default function BackToPreviousPage({ fallback, variant = "bottom" }: Pro
           justifyContent: "center",
           gap: 10,
           maxWidth: "100%",
-          fontFamily: "'DM Sans', system-ui, sans-serif",
+          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
           fontSize: 18,
           fontWeight: 900,
           letterSpacing: "0.12em",

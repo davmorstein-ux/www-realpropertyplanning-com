@@ -51,7 +51,7 @@ const DisclaimerSection = () => {
            cannot shrink this label — 0.875rem IS 14px, so that max() always
            returns exactly 14px rather than acting as the floor it looks like. */
         .rpp-disclaimer-eyebrow.rpp-disclaimer-eyebrow {
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 13px !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;

@@ -81,6 +81,14 @@
       @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-ext-opsz-normal-v5.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
       @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-opsz-italic-v5.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
       @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-ext-opsz-italic-v5.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+      /* Stand-in while DM Sans downloads (Oct 7, 2026). Arial, or a font with
+         Arial's measurements, resized to DM Sans's width and line height, so
+         text does not move when the real font arrives (PageSpeed scores that
+         movement as layout shift). Every DM Sans stack on the site lists
+         'DM Sans Fallback' second. Figures computed from the two fonts with
+         fontTools: average width 106% of Arial; ascent 992 and descent 310
+         per 1000, divided by that 1.06. */
+      @font-face { font-family: 'DM Sans Fallback'; src: local('Arial'), local('ArialMT'), local('Helvetica'), local('Liberation Sans'), local('Arimo'); size-adjust: 106%; ascent-override: 93.6%; descent-override: 29.2%; line-gap-override: 0%; }
     </style>
 
     <!-- Organization + WebSite only (Sept 27, 2026). Not LocalBusiness: the hub provides no services. Keep in step with hubOrganizationSchema in src/lib/schema.ts. -->

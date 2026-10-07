@@ -13,7 +13,7 @@ import WhichGuide from "@/components/WhichGuide";
 
 const label = {
   fontSize: 15,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
@@ -23,7 +23,7 @@ const label = {
 
 const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   color: "#280a0c",
   lineHeight: 1.2,
@@ -32,7 +32,7 @@ const h2 = {
 
 const h3 = {
   fontSize: "clamp(19px, 2.5vw, 24px)",
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   color: "#292521",
   lineHeight: 1.3,
@@ -41,7 +41,7 @@ const h3 = {
 
 const body = {
   fontSize: 18,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   color: "#1c1917",
   lineHeight: 1.85,
   margin: "0 0 20px",
@@ -100,7 +100,7 @@ const AFHWaboTechnicalGuide = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -115,7 +115,7 @@ const AFHWaboTechnicalGuide = () => (
             technical side of the process — what the checklist covers, who performs the inspection, what usually
             causes delays, and why passing the checklist is only one part of the larger licensing process.
           </p>
-          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#1c1917", margin: 0 }}>
+          <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: 0 }}>
             New to WABO? Start with{" "}
             <Link to="/afh-club/wabo-inspection-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
               What Is WABO? A Simple Overview →

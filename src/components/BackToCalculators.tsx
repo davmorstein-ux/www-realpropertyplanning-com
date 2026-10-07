@@ -32,7 +32,7 @@ const BackToCalculators = ({ accent }: { accent: string }) => (
       boxShadow: `0 0 0 1px ${accent}55, 0 3px 10px rgba(0,0,0,.25)`,
     }}
   >
-    <span aria-hidden="true" style={{ color: accent, fontSize: 26, lineHeight: 1, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+    <span aria-hidden="true" style={{ color: accent, fontSize: 26, lineHeight: 1, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
       ←
     </span>
     Back to Calculators

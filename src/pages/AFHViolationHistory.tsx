@@ -12,7 +12,7 @@ import NextQuestions from "@/components/NextQuestions";
 
 const label = {
   fontSize: 15,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
@@ -22,7 +22,7 @@ const label = {
 
 const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   color: "#280a0c",
   lineHeight: 1.2,
@@ -31,7 +31,7 @@ const h2 = {
 
 const h3 = {
   fontSize: "clamp(19px, 2.5vw, 24px)",
-  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
   color: "#292521",
   lineHeight: 1.3,
@@ -40,7 +40,7 @@ const h3 = {
 
 const body = {
   fontSize: 18,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   color: "#1c1917",
   lineHeight: 1.85,
   margin: "0 0 20px",
@@ -48,7 +48,7 @@ const body = {
 
 const li = {
   fontSize: 18,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
   color: "#1c1917",
   lineHeight: 1.75,
   marginBottom: 10,
@@ -107,7 +107,7 @@ const AFHViolationHistory = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -389,7 +389,7 @@ const AFHViolationHistory = () => (
           <p style={{ ...body, margin: 0, fontWeight: 600 }}>
             Use records to guide better questions, not as a standalone decision tool.
           </p>
-          <p style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif", color: "#7a6a6c", lineHeight: 1.7, fontStyle: "italic", margin: "24px 0 0" }}>
+          <p style={{ fontSize: 14, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#7a6a6c", lineHeight: 1.7, fontStyle: "italic", margin: "24px 0 0" }}>
             This article is for general educational purposes and is not legal, medical, licensing, or real estate
             advice.
           </p>

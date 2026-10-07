@@ -30,7 +30,7 @@ import { CARE_CALCULATORS } from "@/lib/careCalculators";
 const NAVY = "#1B3A6B";
 const PLUM = "#4c2a78";
 const INK = "#141210";
-const FONT = "'DM Sans', system-ui, sans-serif";
+const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 
 const PAGE_CSS = `
   .rpp-calcs h1.rpp-calcs-h1 { font-size: clamp(30px, 4.2vw, 44px) !important; line-height: 1.15 !important; margin: 0 0 12px !important; }

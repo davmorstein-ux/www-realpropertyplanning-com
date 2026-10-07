@@ -195,7 +195,7 @@ const CountyDirectory = () => {
                   {countyGroups.length > 1 && (
                     <h2
                       style={{
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: "36px",
                         fontWeight: 800,
                         color: GREEN,
@@ -243,7 +243,7 @@ const CountyDirectory = () => {
                             style={{
                               margin: 0,
                               flex: "1 1 200px",
-                              fontFamily: "'DM Sans', system-ui, sans-serif",
+                              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                               fontSize: "21px",
                               fontWeight: 600,
                               color: "#111827",

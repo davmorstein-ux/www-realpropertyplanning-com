@@ -36,8 +36,8 @@ const AFHSiteMap = () => (
       <section style={{ padding: "40px 16px 24px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <style dangerouslySetInnerHTML={{ __html: `
-            .smap-intro p.smap-lead { font-family: 'DM Sans', sans-serif !important; font-size: 19px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 12px !important; max-width: 820px; }
-            .smap-intro p.smap-note { font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; line-height: 1.55 !important; color: #1c1917 !important; margin: 0 0 28px !important; max-width: 820px; }
+            .smap-intro p.smap-lead { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 19px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 12px !important; max-width: 820px; }
+            .smap-intro p.smap-note { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; line-height: 1.55 !important; color: #1c1917 !important; margin: 0 0 28px !important; max-width: 820px; }
           ` }} />
           <div className="smap-intro">
             <p className="smap-lead">

@@ -15,7 +15,7 @@ const SiteSearchBar = lazy(() => import("./SiteSearchBar"));
 import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 
-const NAV_FONT = { fontFamily: "'DM Sans', system-ui, sans-serif" };
+const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
 
 /* Contact was removed from the top nav — it now lives on the About page and in
    the WaterfallNav quick-links strip. The CALL button covers urgent contact.
@@ -127,7 +127,7 @@ const Header = () => {
       .rpp-top-link {
         color: #272421;
         text-decoration: none;
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 13px;
         font-weight: 600;
         letter-spacing: 0.08em;
@@ -645,10 +645,11 @@ const Header = () => {
         )}
       </header>
       {/* Holds the fixed mobile header's place in the flow. Height comes from the
-          measured --header-height; 70px is the real mobile height with search
-          closed, used only for the first paint before measurement. */}
+          measured --header-height; 65px is the real mobile height with search
+          closed (measured Oct 7, 2026 at 360-768px), used only for the first
+          paint before measurement, so the page does not shift when it lands. */}
       {isMobile && (
-        <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 70px)", flexShrink: 0 }} />
+        <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 65px)", flexShrink: 0 }} />
       )}
       {/* AFH Club quick links: renders only on AFH Club pages (owner, Oct 1, 2026). */}
       <AFHClubQuickLinks />

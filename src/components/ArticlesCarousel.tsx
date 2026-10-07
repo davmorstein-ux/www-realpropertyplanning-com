@@ -120,14 +120,14 @@ export default function ArticlesCarousel() {
   const CARD_W = 304;
 
   return (
-    <section ref={sectionRef} style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "'DM Sans', system-ui, sans-serif", minHeight: 640 }}>
+    <section ref={sectionRef} style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", minHeight: 640 }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
           style={{
             display: "block",
             fontSize: 11,
-            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
@@ -227,7 +227,7 @@ export default function ArticlesCarousel() {
                 <span
                   style={{
                     fontSize: 11,
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     fontWeight: 600,
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",

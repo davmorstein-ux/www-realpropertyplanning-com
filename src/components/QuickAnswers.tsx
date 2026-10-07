@@ -10,10 +10,10 @@ import { CARE_TYPES, COST_SOURCE_LINE, formatCurrency } from "@/lib/careTypes";
 const CSS = `
 .qa-wrap { background: #faf8f4; border-top: 1px solid #e7dfd3; border-bottom: 1px solid #e7dfd3; }
 .qa-inner { max-width: 880px; margin: 0 auto; padding: 2.75rem 1.5rem 3rem; }
-.qa-eyebrow.qa-eyebrow { font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px !important; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b1b22 !important; margin: 0 0 0.4rem !important; }
-.qa-title.qa-title { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(26px, 2.6vw, 34px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 1.5rem !important; line-height: 1.2; }
+.qa-eyebrow.qa-eyebrow { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 14px !important; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b1b22 !important; margin: 0 0 0.4rem !important; }
+.qa-title.qa-title { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(26px, 2.6vw, 34px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 1.5rem !important; line-height: 1.2; }
 .qa-item { background: #fff; border: 1px solid #e3d9cc; border-left: 4px solid #1f4058; border-radius: 10px; padding: 1.15rem 1.35rem 1.1rem; margin: 0 0 0.9rem; }
-.qa-q.qa-q { font-family: 'DM Sans', system-ui, sans-serif; font-size: 20px !important; font-weight: 700; color: #1c1917 !important; line-height: 1.3; margin: 0 0 0.45rem !important; }
+.qa-q.qa-q { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 20px !important; font-weight: 700; color: #1c1917 !important; line-height: 1.3; margin: 0 0 0.45rem !important; }
 .qa-a.qa-a { font-size: 17px !important; line-height: 1.65 !important; color: #1f2933 !important; margin: 0 !important; }
 .qa-meta.qa-meta { font-size: 14.5px !important; color: #3d4a55 !important; margin: 0.55rem 0 0 !important; display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
 .qa-meta a { color: #9e1f2b !important; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

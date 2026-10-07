@@ -227,7 +227,7 @@ const RPPHomeV3 = () => {
                      .rpp-tagline-line-v2` with !important, which BEATS this
                      inline style. Changing this line alone does nothing —
                      change both or neither. */
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -262,7 +262,7 @@ const RPPHomeV3 = () => {
                      .rpp-tagline-line-v2` with !important, which BEATS this
                      inline style. Changing this line alone does nothing —
                      change both or neither. */
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -310,7 +310,7 @@ const RPPHomeV3 = () => {
               <h2
                 className="rpp-funnel-heading"
                 style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: "2.25rem",
                   fontWeight: 500,
                   color: "#272421",
@@ -396,7 +396,7 @@ const RPPHomeV3 = () => {
                           <span
                             className="rpp-funnel-cta"
                             style={{
-                              fontFamily: "'DM Sans', system-ui, sans-serif",
+                              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                               fontSize: 20,
                               fontWeight: 700,
                               color: "#ffffff",
@@ -574,7 +574,7 @@ const RPPHomeV3 = () => {
     text-align: center !important;
     max-width: none !important;
     margin: 0.75rem auto 0 !important;
-    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     font-size: clamp(20px, 1.7vw, 26px) !important;
     font-weight: 500 !important;
     color: #1B3A6B !important;
@@ -612,7 +612,7 @@ const RPPHomeV3 = () => {
                 align-items: center;
               }
               .rpp-coc-rangelabel {
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 16px !important;
                 font-weight: 700;
                 color: #25597e;
@@ -620,7 +620,7 @@ const RPPHomeV3 = () => {
                 margin-bottom: 2px;
               }
               .rpp-coc-range {
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 30px;
                 font-weight: 700;
                 color: #7f1d1d;
@@ -628,7 +628,7 @@ const RPPHomeV3 = () => {
                 white-space: nowrap;
               }
               .rpp-coc-rangeper {
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 16px;
                 font-weight: 600;
               }
@@ -654,7 +654,7 @@ const RPPHomeV3 = () => {
                  4.5:1 on white — the label always sits beside the figure, so
                  colour reinforces rather than carries the meaning. */
               .rpp-coc-opt-name {
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 17px !important;
                 font-weight: 700;
                 color: var(--opt-color, #25597e) !important;
@@ -664,7 +664,7 @@ const RPPHomeV3 = () => {
                  read as one row. They were charcoal so the figures formed a
                  comparable column; matching them was the explicit choice. */
               .rpp-coc-opt-figure {
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 18px !important;
                 font-weight: 700;
                 color: var(--opt-color, #272421) !important;
@@ -693,7 +693,7 @@ const RPPHomeV3 = () => {
                 gap: 8px;
                 background: #0047ab !important;
                 color: #ffffff !important;
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 19px !important;
                 font-weight: 700 !important;
                 letter-spacing: 0.01em;
@@ -746,7 +746,7 @@ const RPPHomeV3 = () => {
               .rpp-coc-pause {
                 min-height: 44px;
                 padding: 6px 16px;
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 15px !important;
                 font-weight: 700;
                 color: #7f1d1d;
@@ -801,7 +801,7 @@ const RPPHomeV3 = () => {
                     <h3
                       className="coc-heading"
                       style={{
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         margin: 0,
                         lineHeight: 1.1,
                       }}

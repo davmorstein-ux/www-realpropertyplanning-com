@@ -268,7 +268,7 @@ const LOOKUP_CSS = `
 .ck button.ck-clear.ck-clear { flex: 0 0 auto; width: 48px !important; min-height: 48px; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; background: #eef3f7 !important; color: #14283a !important; font-size: 22px !important; cursor: pointer !important; }
 .ck ul.ck-matches { list-style: none !important; margin: 8px 0 0 !important; padding: 0 !important; border: 1px solid #c9d7e2; border-radius: 10px; overflow: hidden; }
 .ck ul.ck-matches li { display: block !important; }
-.ck button.ck-match.ck-match { display: block; width: 100%; text-align: left; min-height: 46px; padding: 10px 14px !important; background: #ffffff !important; border: 0 !important; border-bottom: 1px solid #eef1f4 !important; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 500 !important; color: #14283a !important; cursor: pointer !important; }
+.ck button.ck-match.ck-match { display: block; width: 100%; text-align: left; min-height: 46px; padding: 10px 14px !important; background: #ffffff !important; border: 0 !important; border-bottom: 1px solid #eef1f4 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 500 !important; color: #14283a !important; cursor: pointer !important; }
 .ck button.ck-match.ck-matchcounty { background: #f6f8fa !important; font-weight: 700 !important; }
 @media (hover: hover) { .ck button.ck-match.ck-match:hover { background: var(--tint) !important; } }
 .ck p.ck-body-text.ck-body-text { font-size: 15px !important; line-height: 1.6 !important; color: #1f2933 !important; margin: 0 0 12px !important; }
@@ -276,7 +276,7 @@ const LOOKUP_CSS = `
 .ck details.ck-fold { border: 1px solid #e1e7ec; border-radius: 12px; padding: 0 14px; margin: 0 0 10px; }
 .ck details.ck-fold > summary { cursor: pointer; padding: 12px 0; font-size: 16px; font-weight: 700; color: var(--deep); }
 .ck .ck-tablewrap { overflow-x: auto; margin: 0 0 10px; }
-.ck table.ck-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 15px; color: #14283a; }
+.ck table.ck-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #14283a; }
 .ck table.ck-table th { text-align: left; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #2b3640; padding: 6px 8px; border-bottom: 1px solid #dfe5ea; }
 .ck table.ck-table td { padding: 8px; border-bottom: 1px solid #eef1f4; vertical-align: top; }
 .ck table.ck-table td.ck-num { white-space: nowrap; font-weight: 700; color: var(--deep); font-variant-numeric: tabular-nums; }

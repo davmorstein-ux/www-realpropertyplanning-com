@@ -2,7 +2,7 @@ import React from "react";
 
 const styles = `
   .p1wrap * { box-sizing: border-box; margin: 0; padding: 0; }
-  .p1section { font-family: 'DM Sans', sans-serif; padding: 0 40px 64px; }
+  .p1section { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; padding: 0 40px 64px; }
   .p1grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .p1tile { width: 100%; cursor: pointer; text-decoration: none; display: block; border-radius: 16px; }
   .p1card { width: 100%; height: 380px; background: #FFFFFF; border-radius: 16px; border: 2px solid #c3525c; box-shadow: 0 2px 8px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(201,168,76,0.35); display: flex; flex-direction: column; position: relative; overflow: hidden; }
@@ -11,8 +11,8 @@ const styles = `
   .p1img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
   .p1body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .p1pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #8a3a42; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .p1title { font-family: 'DM Sans', serif; font-weight: 700; font-size: 22px; color: #3f1216; line-height: 1.15; margin-bottom: 4px; }
-  .p1tagline { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 14px; color: #4e3f41; line-height: 1.5; }
+  .p1title { font-family: 'DM Sans', 'DM Sans Fallback', serif; font-weight: 700; font-size: 22px; color: #3f1216; line-height: 1.15; margin-bottom: 4px; }
+  .p1tagline { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 500; font-size: 14px; color: #4e3f41; line-height: 1.5; }
   .p1footer { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(201,168,76,0.35); background: #FFFFFF; gap: 8px; justify-content: space-between; }
   .p1label { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #6b1a21; line-height: 1.4; flex: 1; }
   .p1arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #6b1a21; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
@@ -21,11 +21,11 @@ const styles = `
   .p1tile:hover .p1arrow svg { stroke: #fff; }
   .p1bar { max-width: 1300px; margin: 36px auto 0; background: #6b1a21; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .p1bar-text { font-size: 14px; color: #e8c8cb; line-height: 1.6; }
-  .p1bar-btn { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b35f66; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
+  .p1bar-btn { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b35f66; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
   .p1bar-btn:hover { background: #d07e85; }
   .p1heading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
-  .p1eyebrow { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #8a3a42; display: block; margin-bottom: 10px; }
-  .p1h2 { font-family: 'DM Sans', serif; font-size: 40px; font-weight: 700; color: #3f1216; line-height: 1.15; margin: 0; }
+  .p1eyebrow { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #8a3a42; display: block; margin-bottom: 10px; }
+  .p1h2 { font-family: 'DM Sans', 'DM Sans Fallback', serif; font-size: 40px; font-weight: 700; color: #3f1216; line-height: 1.15; margin: 0; }
 `;
 
 const P1Tile = ({ pill, title, tagline, imgSrc, href }) => (

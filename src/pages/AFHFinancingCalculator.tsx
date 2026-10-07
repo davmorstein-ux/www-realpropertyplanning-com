@@ -249,13 +249,13 @@ const AFHFinancingCalculator = () => {
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={TEAL} />
             </div>
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL, marginBottom: 10, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
               For sellers &amp; buyers
             </p>
-            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>
+            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>
               AFH Occupancy &amp; Financing Calculator
             </h1>
-            <p style={{ fontSize: 18, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 680, margin: 0 }}>
+            <p style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 680, margin: 0 }}>
               At this price, with this many residents, can a buyer get the loan? A lender divides the home's net operating income by
               the annual loan payment and wants at least <strong>1.25×</strong>. Below that, the loan is declined or reduced and the
               buyer has to offer less. New to this? Start with{" "}
@@ -449,7 +449,7 @@ const AFHFinancingCalculator = () => {
               />
               <div className="fin-scale"><span>$500,000</span><span>$3,000,000</span></div>
             </div>
-            <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Coverage ratio at each purchase price for each occupancy, against the lender requirement" style={{ display: "block", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Coverage ratio at each purchase price for each occupancy, against the lender requirement" style={{ display: "block", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
               <text x={W - PR} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="end" fill="#9b1c1c">- - -  Lender requirement {dscr.toFixed(2)}×</text>
               {[0, 0.5, 1, 1.5, 2, 2.5, 3].filter((v) => v <= yMax).map((v) => (
                 <g key={v}>
@@ -570,7 +570,7 @@ const AFHFinancingCalculator = () => {
           .ck .fin-warn { background: #fef2f2; border: 1px solid #e3a1a1; border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; font-size: 16px; line-height: 1.5; color: #7f1d1d; }
           .ck .fin-warn ul { margin: 6px 0 0; padding-left: 20px; }
           .ck .fin-tablewrap { overflow-x: auto; border: 1px solid #e1e7ec; border-radius: 12px; }
-          .ck table.fin-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 16px; color: ${INK}; }
+          .ck table.fin-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: ${INK}; }
           .ck table.fin-table th, .ck table.fin-table td { padding: 10px 12px; border-bottom: 1px solid #eef1f4; text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
           .ck table.fin-table thead th { background: #f6f8fa; font-size: 14px; font-weight: 700; }
           .ck table.fin-table tbody th { text-align: left; font-weight: 600; white-space: normal; min-width: 180px; }

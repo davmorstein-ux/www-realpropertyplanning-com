@@ -36,7 +36,7 @@ const HomepagePopularResources = () => {
     <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
       <style dangerouslySetInnerHTML={{ __html: `
       .rpp-pr-eyebrow {
-        font-family: 'DM Sans', system-ui, sans-serif !important;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
         font-size: 21px !important;
         font-weight: 700 !important;
         letter-spacing: 0.14em !important;
@@ -46,7 +46,7 @@ const HomepagePopularResources = () => {
         display: block !important;
       }
       .rpp-pr-heading {
-        font-family: 'DM Sans', system-ui, sans-serif !important;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
         font-size: clamp(32px, 3vw, 48px) !important;
         font-weight: 700 !important;
         color: #272421 !important;
@@ -95,7 +95,7 @@ const HomepagePopularResources = () => {
         flex-shrink: 0 !important;
       }
       .rpp-pr-card-text {
-        font-family: 'DM Sans', system-ui, sans-serif !important;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
         font-size: 20px !important;
         font-weight: 700 !important;
         color: #272421 !important;
@@ -108,7 +108,7 @@ const HomepagePopularResources = () => {
         display: inline-flex !important;
         align-items: center !important;
         gap: 8px !important;
-        font-family: 'DM Sans', system-ui, sans-serif !important;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
         font-size: 14px !important;
         font-weight: 700 !important;
         letter-spacing: 0.08em !important;
@@ -202,7 +202,7 @@ const HomepagePopularResources = () => {
         display: inline-flex !important;
         align-items: center !important;
         gap: 10px !important;
-        font-family: 'DM Sans', system-ui, sans-serif !important;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
         font-size: 16px !important;
         font-weight: 700 !important;
         color: #1c1917 !important;
@@ -260,7 +260,7 @@ const HomepagePopularResources = () => {
         border-color: #0a5648;
       }
       .rpp-afh-strip-label.rpp-afh-strip-label {
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 17px;
         font-weight: 700;
         letter-spacing: 0.06em;
@@ -275,7 +275,7 @@ const HomepagePopularResources = () => {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 18px;
         font-weight: 700;
         color: #ffffff;

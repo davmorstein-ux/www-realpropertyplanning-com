@@ -54,13 +54,13 @@ const schema = {
 const CSS = `
 .afhg { background: #ffffff; }
 .afhg .afhg-wrap { max-width: 880px; margin: 0 auto; }
-.afhg p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.afhg p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhg .afhg-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
-.afhg h1.afhg-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 16px !important; text-wrap: balance; }
-.afhg h2.afhg-letter { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 30px !important; line-height: 1 !important; font-weight: 700 !important; color: #0a5648 !important; margin: 0 0 8px !important; padding-bottom: 8px; border-bottom: 2px solid #d5e0da; scroll-margin-top: 180px; }
-.afhg h2.afhg-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 14px !important; }
+.afhg h1.afhg-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 16px !important; text-wrap: balance; }
+.afhg h2.afhg-letter { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 30px !important; line-height: 1 !important; font-weight: 700 !important; color: #0a5648 !important; margin: 0 0 8px !important; padding-bottom: 8px; border-bottom: 2px solid #d5e0da; scroll-margin-top: 180px; }
+.afhg h2.afhg-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 14px !important; }
 .afhg .afhg-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 0; }
-.afhg .afhg-jump a, .afhg .afhg-jump span { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 38px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 17px !important; font-weight: 700; text-decoration: none !important; }
+.afhg .afhg-jump a, .afhg .afhg-jump span { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 38px; border-radius: 6px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px !important; font-weight: 700; text-decoration: none !important; }
 .afhg .afhg-jump a { background: #ffffff; color: #0a5648 !important; border: 1px solid #b9cdc3; }
 .afhg .afhg-jump a:hover, .afhg .afhg-jump a:focus-visible { background: #0a5648; color: #ffffff !important; }
 .afhg .afhg-jump span { color: #a8a29a; border: 1px solid transparent; }
@@ -68,16 +68,16 @@ const CSS = `
 .afhg .afhg-term { padding: 18px 0; border-bottom: 1px solid #eee9e1; scroll-margin-top: 180px; }
 .afhg .afhg-term:last-child { border-bottom: 0; }
 .afhg .afhg-term:target { background: #f3f6f4; box-shadow: -12px 0 0 #f3f6f4, 12px 0 0 #f3f6f4; }
-.afhg dt { font-family: 'DM Sans', sans-serif; font-size: 21px; font-weight: 700; color: #192A19; line-height: 1.3; }
+.afhg dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 21px; font-weight: 700; color: #192A19; line-height: 1.3; }
 .afhg dt .afhg-aka { display: block; font-size: 16px; font-weight: 500; color: #4a443e; margin-top: 2px; }
 .afhg dd { margin: 8px 0 0; }
 .afhg dd p.afhg-def { margin: 0 0 8px !important; }
-.afhg .afhg-meta { font-family: 'DM Sans', sans-serif; font-size: 15px !important; color: #3f3a35; line-height: 1.6; }
+.afhg .afhg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #3f3a35; line-height: 1.6; }
 .afhg a.afhg-link, .afhg .afhg-meta a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhg .afhg-cats { display: grid; gap: 18px 28px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .afhg .afhg-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.afhg .afhg-cat h3 { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 6px !important; }
-.afhg .afhg-cat ul { margin: 0; padding: 0; list-style: none; font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; }
+.afhg .afhg-cat h3 { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 6px !important; }
+.afhg .afhg-cat ul { margin: 0; padding: 0; list-style: none; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.7; }
 .afhg .afhg-cat li { display: inline; }
 .afhg .afhg-cat a.afhg-link { font-weight: 500 !important; font-size: 16px !important; }
 .afhg .afhg-cat li:not(:last-child)::after { content: " · "; color: #8a837a; }

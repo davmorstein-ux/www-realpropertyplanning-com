@@ -63,7 +63,7 @@ const AboutTheHub = () => {
         }
 
         .rpp-abouthub-lead.rpp-abouthub-lead {
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: clamp(19px, 1.5vw, 24px) !important;
           font-weight: 400;
           color: #272421;
@@ -101,7 +101,7 @@ const AboutTheHub = () => {
         .rpp-abouthub-list.rpp-abouthub-list li {
           position: relative;
           padding-left: 1.75rem;
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: clamp(17px, 1.3vw, 20px) !important;
           font-weight: 500;
           color: #272421;
@@ -150,7 +150,7 @@ const AboutTheHub = () => {
           margin: 1.35rem 0 0;
           padding-top: 1.15rem;
           border-top: 1px solid #e4ddd1;
-          font-family: 'DM Sans', system-ui, sans-serif;
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: clamp(17px, 1.3vw, 20px) !important;
           font-weight: 600;
           color: #272421;
@@ -198,7 +198,7 @@ const AboutTheHub = () => {
         .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:active { background: #dbe6f7 !important; }
         .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:focus-visible { outline: 3px solid #9db3d6; outline-offset: 3px; }
         .rpp-abouthub-stats.rpp-abouthub-stats > span { line-height: 1.4 !important; }
-        .rpp-abouthub-card .rpp-abouthub-why { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.55 !important; color: #3a3531; margin: 1.1rem 0 0 !important; padding-top: 1rem; border-top: 1px solid #e6e0d6; }
+        .rpp-abouthub-card .rpp-abouthub-why { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.55 !important; color: #3a3531; margin: 1.1rem 0 0 !important; padding-top: 1rem; border-top: 1px solid #e6e0d6; }
         .rpp-abouthub-stats.rpp-abouthub-stats strong {
           font-weight: 700;
           color: #1B3A6B;

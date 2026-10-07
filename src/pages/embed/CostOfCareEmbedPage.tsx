@@ -19,9 +19,9 @@ import { EMBED_DEFAULT_SLUG, EMBED_HEIGHT_MESSAGE, SITE_ORIGIN, creditPath } fro
 const CSS = `
 html, body { background: transparent !important; }
 body::before { display: none !important; }
-.rpe { font-family: 'DM Sans', system-ui, sans-serif; padding: 4px 4px 8px; max-width: 780px; margin: 0 auto; box-sizing: border-box; }
+.rpe { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; padding: 4px 4px 8px; max-width: 780px; margin: 0 auto; box-sizing: border-box; }
 .rpe .rpe-pick { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 14px; }
-.rpe button.rpe-pill.rpe-pill { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 16px !important; font-weight: 600 !important; line-height: 1.2 !important; padding: 10px 14px !important; min-height: 44px; border-radius: 999px !important; border: 2px solid var(--pc) !important; background: #ffffff !important; color: var(--pc) !important; cursor: pointer !important; }
+.rpe button.rpe-pill.rpe-pill { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 16px !important; font-weight: 600 !important; line-height: 1.2 !important; padding: 10px 14px !important; min-height: 44px; border-radius: 999px !important; border: 2px solid var(--pc) !important; background: #ffffff !important; color: var(--pc) !important; cursor: pointer !important; }
 .rpe button.rpe-pill.rpe-pill[aria-pressed="true"] { background: var(--pc) !important; color: #ffffff !important; }
 .rpe button.rpe-pill.rpe-pill:focus-visible { outline: 3px solid #14283a; outline-offset: 2px; }
 .rpe .rpe-credit.rpe-credit { text-align: center; font-size: 15px !important; color: #1f2933 !important; margin: 12px 0 0 !important; line-height: 1.4 !important; }

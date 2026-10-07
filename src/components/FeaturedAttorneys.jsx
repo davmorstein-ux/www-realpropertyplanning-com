@@ -15,7 +15,7 @@ const FeaturedAttorneys = () => (
     <div className="container px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <span className="block mb-2 text-[13px] font-bold tracking-[0.18em] uppercase text-gold" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <span className="block mb-2 text-[13px] font-bold tracking-[0.18em] uppercase text-gold" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}>
             Washington State
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-navy font-sans" style={{ color: "#3f1216" }}>
@@ -44,14 +44,14 @@ const FeaturedAttorneys = () => (
                     <div className="rpp-m2-pad relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                       <span
                         className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase"
-                        style={{ color: "#8a3a42", fontFamily: "'DM Sans', sans-serif" }}
+                        style={{ color: "#8a3a42", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}
                       >
                         {s.pill}
                       </span>
                       <h3 className="rpp-m2-title font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
                         {s.title}
                       </h3>
-                      <p className="rpp-m2-text text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif", color: "#5c474a" }}>
+                      <p className="rpp-m2-text text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#5c474a" }}>
                         {s.tagline}
                       </p>
                       <span className="gold-cta mt-auto">

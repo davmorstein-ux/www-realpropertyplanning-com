@@ -48,9 +48,9 @@ const HowToFinanceAnAFH = () => {
   const chosen = situation === null ? null : SITUATIONS[situation];
   const laneFor = (id: LaneId) => LANES.find((l) => l.id === id)!;
 
-  const h2: React.CSSProperties = { fontSize: 28, fontWeight: 700, color: NAVY, margin: "40px 0 12px", lineHeight: 1.25, fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const h3: React.CSSProperties = { fontSize: 22, fontWeight: 700, color: TEAL_DARK, margin: "24px 0 8px", lineHeight: 1.3, fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const p: React.CSSProperties = { fontSize: 19, lineHeight: 1.7, color: INK, margin: "0 0 16px", fontFamily: "'DM Sans', system-ui, sans-serif" };
+  const h2: React.CSSProperties = { fontSize: 28, fontWeight: 700, color: NAVY, margin: "40px 0 12px", lineHeight: 1.25, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
+  const h3: React.CSSProperties = { fontSize: 22, fontWeight: 700, color: TEAL_DARK, margin: "24px 0 8px", lineHeight: 1.3, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
+  const p: React.CSSProperties = { fontSize: 19, lineHeight: 1.7, color: INK, margin: "0 0 16px", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
   const li: React.CSSProperties = { fontSize: 18, lineHeight: 1.6, color: INK, marginBottom: 6 };
   const card: React.CSSProperties = { background: "#fff", border: `2px solid ${TEAL}`, borderRadius: 14, padding: "1.5rem 1.4rem", boxShadow: "0 4px 24px rgba(0,0,0,0.08)" };
 
@@ -66,8 +66,8 @@ const HowToFinanceAnAFH = () => {
         <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <ArticleCover src="/afh-how-to-finance-cover.webp" alt="Cover art: How to Finance an Adult Family Home" width={1024} height={1365} />
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>For buyers, sellers &amp; new operators</p>
-            <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington</h1>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>For buyers, sellers &amp; new operators</p>
+            <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington</h1>
             <p style={{ ...p, maxWidth: 720, margin: 0 }}>Residential mortgage, SBA 7(a), SBA 504, or a commercial loan — which one fits depends on one question: are you buying a house, or a business that comes with a house?</p>
           </div>
         </div>
@@ -97,7 +97,7 @@ const HowToFinanceAnAFH = () => {
                       textAlign: "left",
                       fontSize: 18,
                       fontWeight: 700,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       padding: "14px 16px",
                       borderRadius: 10,
                       border: `2px solid ${situation === i ? TEAL : "#b7ccc8"}`,

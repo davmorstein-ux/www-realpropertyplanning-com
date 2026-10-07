@@ -103,7 +103,7 @@ const CostOfCareDetail = () => {
                 min-width: 0;
               }
               .rpp-calcpage-railhead {
-                font-family: 'DM Sans', system-ui, sans-serif;
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 26px !important;
                 font-weight: 700;
                 color: #272421;

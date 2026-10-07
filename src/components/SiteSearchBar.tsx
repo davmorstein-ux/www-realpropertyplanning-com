@@ -92,7 +92,7 @@ const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
             border: "none",
             outline: "none",
             fontSize: 17,
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
             color: "#272421",
             background: "transparent",
             minWidth: 0,
@@ -118,7 +118,7 @@ const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
             <div
               style={{
                 padding: "18px 16px",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontSize: 16,
                 color: "#5c474a",
               }}
@@ -144,7 +144,7 @@ const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
             >
               <div
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontSize: 16,
                   fontWeight: 600,
                   color: "#272421",

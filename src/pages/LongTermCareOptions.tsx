@@ -74,7 +74,7 @@ const LongTermCareOptions = () => {
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: "0.18em",
@@ -87,7 +87,7 @@ const LongTermCareOptions = () => {
             </p>
             <h1
               style={{
-                fontFamily: "'DM Sans', serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', serif",
                 fontSize: "clamp(28px, 5vw, 44px)",
                 fontWeight: 800,
                 lineHeight: 1.15,
@@ -99,7 +99,7 @@ const LongTermCareOptions = () => {
             </h1>
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontSize: 19,
                 fontWeight: 500,
                 lineHeight: 1.75,
@@ -116,7 +116,7 @@ const LongTermCareOptions = () => {
             </p>
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontSize: 18,
                 lineHeight: 1.8,
                 color: "hsl(220 25% 22%)",
@@ -136,7 +136,7 @@ const LongTermCareOptions = () => {
           <h2
             style={{
               fontSize: "clamp(24px, 3vw, 34px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               marginBottom: 8,
@@ -202,7 +202,7 @@ const LongTermCareOptions = () => {
                       color: "#280a0c",
                       margin: "0 0 12px",
                       lineHeight: 1.3,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     }}
                   >
                     {topic.title}

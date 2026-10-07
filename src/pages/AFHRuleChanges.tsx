@@ -80,11 +80,11 @@ const CSS = `
 .afhr { background: #ffffff; }
 .afhr .afhr-wrap { max-width: 960px; margin: 0 auto; }
 .afhr .afhr-narrow { max-width: 760px; }
-.afhr p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
+.afhr p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhr .afhr-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0b5c8a !important; margin: 0 0 12px !important; }
-.afhr h1.afhr-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.4vw, 44px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 18px !important; text-wrap: balance; }
-.afhr h2.afhr-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 110px; }
-.afhr h3.afhr-h3 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 20px !important; line-height: 1.3 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 8px !important; }
+.afhr h1.afhr-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.4vw, 44px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 18px !important; text-wrap: balance; }
+.afhr h2.afhr-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 110px; }
+.afhr h3.afhr-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 20px !important; line-height: 1.3 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 8px !important; }
 .afhr .afhr-hero { display: grid; gap: 28px; align-items: start; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 900px) { .afhr .afhr-hero { grid-template-columns: minmax(0, 1fr) 250px; } }
 .afhr .afhr-cover { width: 100%; max-width: 300px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(10,22,40,0.35); justify-self: center; }
@@ -92,14 +92,14 @@ const CSS = `
 .afhr .afhr-answer p { font-size: 18px !important; margin: 0 0 10px !important; }
 .afhr .afhr-answer p:last-child { margin: 0 !important; }
 .afhr .afhr-label { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #0b5c8a !important; margin: 0 0 6px !important; }
-.afhr ul.afhr-list, .afhr ol.afhr-list { margin: 0 0 14px 22px; padding: 0; font-family: 'DM Sans', sans-serif; font-size: 18px; line-height: 1.7; color: #1c1917; }
+.afhr ul.afhr-list, .afhr ol.afhr-list { margin: 0 0 14px 22px; padding: 0; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.7; color: #1c1917; }
 .afhr ul.afhr-list { list-style: disc !important; }
 .afhr ol.afhr-list { list-style: decimal !important; }
 .afhr .afhr-list li { display: list-item !important; margin-bottom: 8px; font-size: 18px !important; }
 .afhr a.afhr-link, .afhr .afhr-small a, .afhr td a, .afhr .afhr-card a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhr .afhr-small { font-size: 15px !important; color: #3f3a35 !important; }
 .afhr .afhr-tablewrap { overflow-x: auto; border: 1px solid #e2ddd5; border-radius: 10px; background: #ffffff; }
-.afhr table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #1c1917; }
+.afhr table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; }
 .afhr th { text-align: left; font-weight: 700; background: #eef3f7; padding: 10px 14px; border-bottom: 1px solid #cfdbe6; }
 .afhr td { padding: 11px 14px; border-bottom: 1px solid #eee9e1; vertical-align: top; line-height: 1.5; }
 .afhr tr:last-child td { border-bottom: 0; }
@@ -109,12 +109,12 @@ const CSS = `
 .afhr .afhr-kind { background: #ffffff; border: 1px solid #ddd6cc; border-radius: 10px; padding: 16px 18px; }
 .afhr .afhr-kind p { font-size: 16px !important; margin: 0 !important; }
 .afhr .afhr-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
-.afhr .afhr-filters button { padding: 8px 14px; border-radius: 999px; border: 1px solid #b7c9d8; background: #ffffff; color: #0b5c8a; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; }
+.afhr .afhr-filters button { padding: 8px 14px; border-radius: 999px; border: 1px solid #b7c9d8; background: #ffffff; color: #0b5c8a; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; }
 .afhr .afhr-filters button[aria-pressed="true"] { background: #0b5c8a; border-color: #0b5c8a; color: #ffffff; }
 .afhr .afhr-cards { display: grid; gap: 14px; }
 .afhr .afhr-card { background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #0b5c8a; border-radius: 10px; padding: 18px 20px; scroll-margin-top: 110px; }
 .afhr .afhr-card.afhr-ended { border-left-color: #a39a8f; background: #faf8f4; }
-.afhr .afhr-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0 0 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; }
+.afhr .afhr-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0 0 8px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 14px; }
 .afhr .afhr-chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #eef3f7; color: #0f1b2b; font-weight: 600; }
 .afhr .afhr-chip.afhr-date { background: #0b5c8a; color: #ffffff; }
 .afhr .afhr-chip.afhr-ended-chip { background: #e7e1d8; color: #4a443e; }
@@ -125,7 +125,7 @@ const CSS = `
 .afhr .afhr-ba .afhr-now { background: #eef5fa; }
 .afhr .afhr-ba p { font-size: 16px !important; line-height: 1.55 !important; margin: 0 !important; }
 .afhr .afhr-ba .afhr-balabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; margin: 0 0 4px !important; color: #4a443e !important; }
-.afhr dl.afhr-dl { margin: 0; display: grid; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
+.afhr dl.afhr-dl { margin: 0; display: grid; gap: 6px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
 .afhr dl.afhr-dl div { display: grid; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 640px) { .afhr dl.afhr-dl div { grid-template-columns: 150px minmax(0, 1fr); gap: 10px; } }
 .afhr dl.afhr-dl dt { font-weight: 700; color: #0f1b2b; }

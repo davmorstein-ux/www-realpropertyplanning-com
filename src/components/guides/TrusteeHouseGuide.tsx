@@ -38,7 +38,7 @@ const CSS = `
 .tg-sec { padding: 3.5rem 0; }
 .tg-sec.alt { background: #faf8f4; }
 .tg-in { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
-.tg-h2.tg-h2 { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(28px, 3vw, 38px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.9rem !important; line-height: 1.2; }
+.tg-h2.tg-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(28px, 3vw, 38px) !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.9rem !important; line-height: 1.2; }
 .tg-in p { font-size: 18px; line-height: 1.65; color: #1f2933; margin: 0 0 1rem; }
 .tg-steps { list-style: none; counter-reset: s; margin: 1.25rem 0; padding: 0; display: grid; gap: 0.85rem; }
 .tg-steps li { counter-increment: s; position: relative; background: #fff; border: 1px solid #e3d9cc; border-radius: 10px; padding: 1rem 1.25rem 1rem 3.4rem; font-size: 17px; line-height: 1.6; color: #1f2933; }

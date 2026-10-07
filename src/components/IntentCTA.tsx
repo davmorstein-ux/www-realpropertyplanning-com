@@ -49,10 +49,10 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
         padding: "2.5rem 1.5rem",
       }}
     >
-      <div style={{ maxWidth: 780, margin: "0 auto", textAlign: "center", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+      <div style={{ maxWidth: 780, margin: "0 auto", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
         <h2
           style={{
-            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontSize: "clamp(22px, 2.4vw, 30px)",
             fontWeight: 700,
             color: dark ? "#fff" : "#272421",

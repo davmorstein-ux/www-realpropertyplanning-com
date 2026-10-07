@@ -34,8 +34,8 @@ const CSS = `
 .afhq .afhq-in::-webkit-scrollbar { display: none; }
 .afhq a.afhq-brand { flex: 0 0 auto; display: inline-flex !important; align-items: center; gap: 8px; height: auto !important; margin-right: 6px; padding: 0 16px 0 0 !important; border-right: 1px solid rgba(243,240,234,0.35); text-decoration: none !important; }
 .afhq a.afhq-brand img { height: 26px; width: auto; display: block; }
-.afhq a.afhq-brand span { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; font-weight: 400 !important; letter-spacing: 0.18em; color: ${CREAM} !important; white-space: nowrap; }
-.afhq a.afhq-link { flex: 0 0 auto; display: inline-flex !important; align-items: center; height: 36px !important; margin: 8px 0; padding: 0 10px !important; border-radius: 999px; font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 600 !important; color: ${CREAM} !important; text-decoration: none !important; white-space: nowrap; }
+.afhq a.afhq-brand span { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; font-weight: 400 !important; letter-spacing: 0.18em; color: ${CREAM} !important; white-space: nowrap; }
+.afhq a.afhq-link { flex: 0 0 auto; display: inline-flex !important; align-items: center; height: 36px !important; margin: 8px 0; padding: 0 10px !important; border-radius: 999px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 15px !important; font-weight: 600 !important; color: ${CREAM} !important; text-decoration: none !important; white-space: nowrap; }
 .afhq a.afhq-link[aria-current="page"] { background: ${CREAM}; color: ${GREEN} !important; font-weight: 700 !important; }
 .afhq span.afhq-sep { flex: 0 0 auto; margin: 0 4px; font-size: 18px !important; font-weight: 300 !important; line-height: 1; color: rgba(243,240,234,0.5) !important; user-select: none; }
 @media (hover: hover) { .afhq a.afhq-link:not([aria-current="page"]):hover { background: rgba(243,240,234,0.14); } }

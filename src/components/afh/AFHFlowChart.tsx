@@ -11,7 +11,7 @@ export const AFH_FLOW_CHART_CSS = `
 .pfc .pfc-five { display: grid; grid-template-columns: minmax(0, 1fr); position: relative; }
 .pfc .pfc-five > .pfc-col + .pfc-col { margin-top: 8px; }
 .pfc .pfc-sub { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
-.pfc p.pfc-then { text-align: center !important; font-family: 'DM Sans', sans-serif !important; font-size: 14px !important; line-height: 1.4 !important; color: #3f4a54 !important; margin: 8px 0 0 !important; font-weight: 500 !important; }
+.pfc p.pfc-then { text-align: center !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 14px !important; line-height: 1.4 !important; color: #3f4a54 !important; margin: 8px 0 0 !important; font-weight: 500 !important; }
 .pfc p.pfc-then a { color: #0a5648 !important; font-size: 14px !important; font-weight: 700 !important; text-decoration: underline !important; text-underline-offset: 3px; white-space: nowrap; }
 @media (min-width: 900px) {
   .pfc .pfc-five { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; padding-top: 26px; }

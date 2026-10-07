@@ -12,9 +12,9 @@ export const GREEN = "#0a5648";
 export const MKT_CSS = `
 .mkt { background: #faf8f4; }
 .mkt .mkt-wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
-.mkt p, .mkt li { font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px !important; line-height: 1.65 !important; color: #1c1917 !important; }
-.mkt h2.mkt-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; line-height: 1.2 !important; }
-.mkt h3.mkt-h3 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; color: ${GREEN} !important; margin: 18px 0 8px !important; line-height: 1.25 !important; }
+.mkt p, .mkt li { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 18px !important; line-height: 1.65 !important; color: #1c1917 !important; }
+.mkt h2.mkt-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; line-height: 1.2 !important; }
+.mkt h3.mkt-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; color: ${GREEN} !important; margin: 18px 0 8px !important; line-height: 1.25 !important; }
 .mkt .mkt-sec { padding: 40px 0; }
 .mkt .mkt-sec.alt { background: #fff; border-top: 1px solid #e3ddd3; border-bottom: 1px solid #e3ddd3; }
 .mkt .mkt-lede { background: #fff; border: 1px solid #d9d2c6; border-left: 5px solid ${GREEN}; border-radius: 10px; padding: 18px 22px; }
@@ -22,10 +22,10 @@ export const MKT_CSS = `
 .mkt .mkt-figs { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 6px 0 18px; }
 @media (min-width: 760px) { .mkt .mkt-figs { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .mkt .mkt-fig { background: #fff; border: 1px solid #d9d2c6; border-radius: 10px; padding: 14px 16px; }
-.mkt .mkt-fig-n { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(24px, 3.4vw, 32px); font-weight: 700; color: #14283a; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.mkt .mkt-fig-l { font-family: 'DM Sans', system-ui, sans-serif; font-size: 15px; color: #2b2825; line-height: 1.35; margin-top: 6px; }
+.mkt .mkt-fig-n { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(24px, 3.4vw, 32px); font-weight: 700; color: #14283a; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.mkt .mkt-fig-l { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 15px; color: #2b2825; line-height: 1.35; margin-top: 6px; }
 .mkt .mkt-tablebox { overflow-x: auto; margin: 6px 0 14px; }
-.mkt table.mkt-table { border-collapse: collapse; width: 100%; min-width: 420px; font-family: 'DM Sans', system-ui, sans-serif; font-variant-numeric: tabular-nums; background: #fff; }
+.mkt table.mkt-table { border-collapse: collapse; width: 100%; min-width: 420px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-variant-numeric: tabular-nums; background: #fff; }
 .mkt table.mkt-table th, .mkt table.mkt-table td { border-bottom: 1px solid #e3ddd3; padding: 10px 12px; text-align: left; font-size: 16px !important; color: #1c1917; }
 .mkt table.mkt-table th { background: #f1f6f4; font-weight: 700; color: #14283a; }
 .mkt table.mkt-table td.n, .mkt table.mkt-table th.n { text-align: right; }

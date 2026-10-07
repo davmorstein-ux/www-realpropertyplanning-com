@@ -327,12 +327,12 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
-        .coc2.coc2 { background: #ffffff; border: 1px solid #d3dfe8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto; width: 100%; box-sizing: border-box; font-family: 'DM Sans', system-ui, sans-serif; color: #14283a; }
+        .coc2.coc2 { background: #ffffff; border: 1px solid #d3dfe8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto; width: 100%; box-sizing: border-box; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; color: #14283a; }
         .coc2 .coc2-head { display: flex; align-items: center; gap: 18px; background: var(--deep); padding: 22px 26px; }
         .coc2 .coc2-head svg { flex: 0 0 auto; }
         .coc2 .coc2-headtext { min-width: 0; }
         .coc2 .coc2-eyebrow.coc2-eyebrow { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em !important; text-transform: uppercase; color: ${GOLD_ICON} !important; margin: 0 0 4px !important; }
-        .coc2 h2.coc2-title.coc2-title { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 34px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 !important; text-wrap: balance; }
+        .coc2 h2.coc2-title.coc2-title { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 34px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 !important; text-wrap: balance; }
         .coc2 .coc2-sub.coc2-sub { font-size: 16px !important; color: rgba(255,255,255,0.88) !important; margin-top: 6px !important; line-height: 1.35 !important; }
         .coc2 .coc2-body { padding: 24px 26px 20px; }
         .coc2 .coc2-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; }
@@ -374,7 +374,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         .coc2 p.coc2-source.coc2-source { flex: 1 1 340px; margin: 0 !important; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; }
         .coc2 p.coc2-source a { color: #1f2933 !important; font-size: 14px !important; font-weight: 400 !important; text-decoration: underline; text-underline-offset: 2px; }
         .coc2 .coc2-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-        .coc2 button.coc2-print.coc2-print, .coc2 a.coc2-open.coc2-open { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
+        .coc2 button.coc2-print.coc2-print, .coc2 a.coc2-open.coc2-open { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
         @media (max-width: 560px) {
           .coc2 .coc2-head { padding: 18px 16px; gap: 12px; }
           .coc2 .coc2-head svg { width: 42px; height: 42px; }

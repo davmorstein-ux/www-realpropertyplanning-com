@@ -7,7 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 import { GUIDE_LIBRARY, GUIDE_COUNT } from "@/data/guideLibrary";
 
-const NAV_FONT = { fontFamily: "'DM Sans', system-ui, sans-serif" };
+const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
 const GOLD = "#7f2028";
 
 /**
@@ -23,11 +23,11 @@ const LIBRARY_CSS = `
   /* index.css overrides inline margins and link styles with !important, so the
      few new elements on this page are styled here with enough weight to win. */
   .rpp-lib-jump { display: flex; flex-wrap: wrap; gap: 10px 10px; justify-content: center; max-width: 980px; margin: 0 auto; padding: 0; list-style: none; }
-  .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip { display: inline-block; padding: 9px 14px; border: 1px solid #c9a9ac; border-radius: 999px; background: #fff; color: #280a0c !important; font-family: 'DM Sans', system-ui, sans-serif; font-size: 15.5px !important; font-weight: 600 !important; line-height: 1.3; text-decoration: none !important; }
+  .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip { display: inline-block; padding: 9px 14px; border: 1px solid #c9a9ac; border-radius: 999px; background: #fff; color: #280a0c !important; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 15.5px !important; font-weight: 600 !important; line-height: 1.3; text-decoration: none !important; }
   @media (hover: hover) { .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip:hover { border-color: #7f2028; background: #fbf3f4; } }
   .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip:focus-visible { outline: 3px solid #d9b3b7; outline-offset: 2px; }
-  .rpp-lib-count.rpp-lib-count { font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px !important; line-height: 1.6 !important; color: #280a0c; text-align: center; max-width: 760px; margin: 0 auto 22px !important; }
-  a.rpp-lib-landing.rpp-lib-landing { display: inline-block; margin: 14px 0 4px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 16.5px !important; font-weight: 700 !important; color: #7f2028 !important; text-decoration: underline !important; text-underline-offset: 4px; }
+  .rpp-lib-count.rpp-lib-count { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 18px !important; line-height: 1.6 !important; color: #280a0c; text-align: center; max-width: 760px; margin: 0 auto 22px !important; }
+  a.rpp-lib-landing.rpp-lib-landing { display: inline-block; margin: 14px 0 4px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16.5px !important; font-weight: 700 !important; color: #7f2028 !important; text-decoration: underline !important; text-underline-offset: 4px; }
   section[id] { scroll-margin-top: calc(var(--header-height, 120px) + 12px); }
 `;
 
@@ -54,7 +54,7 @@ const GuidesAndResources = () => {
 
         {/* Looking for a professional? CTA */}
         <div style={{ background: "#f7f4ef", padding: "28px 24px", textAlign: "center" }}>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 17, color: "#280a0c", margin: 0 }}>
+          <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#280a0c", margin: 0 }}>
             Looking for a professional instead of a guide?{" "}
             <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
               Browse our Find a Professional directory →
@@ -91,7 +91,7 @@ const GuidesAndResources = () => {
               <div style={{ marginBottom: 8, paddingBottom: 16, borderBottom: `2px solid ${GOLD}` }}>
                 <h2
                   style={{
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontSize: "clamp(20px, 2.5vw, 28px)",
                     fontWeight: 700,
                     color: "#280a0c",
@@ -136,7 +136,7 @@ const GuidesAndResources = () => {
                     <div
                       style={{
                         flex: 1,
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: 16,
                         fontWeight: 700,
                         color: "#280a0c",

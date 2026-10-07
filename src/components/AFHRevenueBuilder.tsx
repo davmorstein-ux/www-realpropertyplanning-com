@@ -93,7 +93,7 @@ const AFHRevenueBuilder = ({
     color: "#272421",
     fontSize: 16,
     padding: "9px 12px",
-    fontFamily: "'DM Sans', system-ui, sans-serif",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
     boxSizing: "border-box",
     display: "block",
   };
@@ -249,7 +249,7 @@ const AFHRevenueBuilder = ({
           border: "none",
           fontSize: 19,
           cursor: totalBeds === 0 || overCap ? "not-allowed" : "pointer",
-          fontFamily: "'DM Sans', system-ui, sans-serif",
+          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
         }}
       >
         Use this revenue in the calculator

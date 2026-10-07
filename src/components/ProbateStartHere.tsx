@@ -16,7 +16,7 @@ const CSS = `
 #main-content > .psh-band + *,
 #main-content > .psh-band + * > section { margin-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
 .psh-band { background: #eef3f7; border-bottom: 1px solid #d3dfe8; }
-.psh-band .psh-in { max-width: 1100px; margin: 0 auto; padding: 11px 16px; font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #1c1917; text-align: center; }
+.psh-band .psh-in { max-width: 1100px; margin: 0 auto; padding: 11px 16px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.55; color: #1c1917; text-align: center; }
 .psh-band .psh-in strong { color: #14283a; font-weight: 700; }
 .psh-band .psh-short { display: none; }
 @media (max-width: 700px) {

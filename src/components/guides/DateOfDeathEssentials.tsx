@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const CSS = `
 .dod-sec { padding: 3.25rem 0; background: #fff; }
 .dod-in { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
-.dod-h2.dod-h2 { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(26px, 3vw, 34px) !important; font-weight: 700; color: #1c1917 !important; margin: 2rem 0 0.8rem !important; line-height: 1.2; }
+.dod-h2.dod-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: clamp(26px, 3vw, 34px) !important; font-weight: 700; color: #1c1917 !important; margin: 2rem 0 0.8rem !important; line-height: 1.2; }
 .dod-h2.first { margin-top: 0 !important; }
 .dod-in p { font-size: 18px; line-height: 1.65; color: #1f2933; margin: 0 0 1rem; }
 .dod-list { list-style: none; margin: 1rem 0 1.25rem; padding: 0; display: grid; gap: 0.7rem; }

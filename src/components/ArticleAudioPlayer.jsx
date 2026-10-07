@@ -202,7 +202,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
   };
 
   const pillLabelStyle = {
-    fontFamily: "'DM Sans', system-ui, sans-serif",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
     fontWeight: "700",
     fontSize: "15px",
     color: COLORS.ivory,
@@ -227,7 +227,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
     boxShadow: "0 4px 24px rgba(0,0,0,0.22)",
     border: `1px solid ${COLORS.bgLight}`,
     maxWidth: "680px",
-    fontFamily: "'DM Sans', system-ui, sans-serif",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   };
 
   const headerStyle = {
@@ -242,7 +242,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
   };
 
   const titleStyle = {
-    fontFamily: "'DM Sans', system-ui, sans-serif",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
     fontWeight: "800",
     fontSize: "13px",
     letterSpacing: "0.12em",

@@ -15,7 +15,7 @@ export default function BackToArticles() {
           alignItems: "center",
           justifyContent: "center",
           gap: 10,
-          fontFamily: "'DM Sans', system-ui, sans-serif",
+          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
           fontSize: 18,
           fontWeight: 900,
           letterSpacing: "0.22em",
