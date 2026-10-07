@@ -81,6 +81,8 @@ function titleCase(s) {
     .toLowerCase()
     .replace(/\b([a-z])/g, (m) => m.toUpperCase())
     .replace(/\b(\d+)(St|Nd|Rd|Th)\b/g, (_, n, suf) => n + suf.toLowerCase())
+    // Street directions stay in capitals: "228th St SE", not "St Se" (Oct 7, 2026).
+    .replace(/\b(Ne|Nw|Se|Sw)\b/g, (d) => d.toUpperCase())
     .replace(/\s+/g, " ")
     .trim();
 }

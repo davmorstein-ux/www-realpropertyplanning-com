@@ -27,5 +27,28 @@ const app = (
     <App />
   </HelmetProvider>
 );
-if (rootEl.hasAttribute("data-prerendered")) hydrateRoot(rootEl, app);
-else createRoot(rootEl).render(app);
+/* A prerendered city directory page holds its whole list of homes. Load that
+   city's data before hydrating, so React's first render matches the HTML and
+   the page does not jump (Oct 7, 2026; see peekCity in src/data/afh/directory.ts
+   and src/lib/cityDataRoute.ts). The page stays on screen meanwhile. Checked
+   with a pattern first so other pages never load the directory code. */
+const start = async () => {
+  if (!rootEl.hasAttribute("data-prerendered")) {
+    createRoot(rootEl).render(app);
+    return;
+  }
+  if (/^\/afh-club\/homes\/[a-z0-9-]+(\/[a-z0-9-]+)?\/?$/.test(window.location.pathname)) {
+    try {
+      const [{ cityDataSlug }, { loadCity }] = await Promise.all([
+        import("./lib/cityDataRoute"),
+        import("./data/afh/directory"),
+      ]);
+      const slug = cityDataSlug(window.location.pathname);
+      if (slug) await loadCity(slug);
+    } catch {
+      /* Hydrate anyway; the page loads its data itself. */
+    }
+  }
+  hydrateRoot(rootEl, app);
+};
+start();

@@ -191,6 +191,14 @@ export const getCityIndexEntry = (citySlug: string): AFHCityIndexEntry | null =>
   countyIndex.find((c) => c.citySlug === citySlug) ?? null;
 
 /**
+ * One city's facilities if they are already loaded, else null. Used for the
+ * first render of a city page: the build loads the city before rendering the
+ * page to HTML, and main.tsx loads it before hydrating, so both render the full
+ * list and the page does not jump when it becomes interactive (Oct 7, 2026).
+ */
+export const peekCity = (citySlug: string): AFHFacility[] | null => cache.get(citySlug) ?? null;
+
+/**
  * Load one city's facilities. Resolves to an empty array for an unknown city so
  * callers can render a "not found" state rather than handling a rejection.
  */

@@ -2738,7 +2738,17 @@ const routeMetadataPlugin = {
       return;
     }
 
-    const rendered = await renderPagesForCrawlers(Object.keys(ROUTE_METADATA));
+    /* City directory pages (/afh-club/homes/<city> and its filter pages) are
+       rendered in full too (Oct 7, 2026), with the city's data loaded first
+       (src/entry-server.tsx), so phones see the whole page at once instead of
+       a text summary that React then replaced, which made the page jump
+       (layout shift ~0.1). Facility pages (slug ends in the license number)
+       and county pages keep the summary. */
+    const directoryRoutes = buildAfhDirectoryRoutes(path.resolve(__dirname, "src/data/afh"));
+    const cityPageRoutes = directoryRoutes
+      .map((r) => r.route)
+      .filter((r) => /^\/afh-club\/homes\/[a-z0-9-]+(\/[a-z0-9-]+)?$/.test(r) && !r.startsWith("/afh-club/homes/county/") && !/-\d{6}$/.test(r));
+    const rendered = await renderPagesForCrawlers([...Object.keys(ROUTE_METADATA), ...cityPageRoutes]);
 
     const rootHtml = injectRouteAwareShell(
       applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true, ssr: rendered.get("/") })
@@ -2759,17 +2769,18 @@ const routeMetadataPlugin = {
        prerendered from the data (see src/data/afh/prerender.ts). Written in
        batches: ~4,500 routes, and writing them all concurrently exhausts file
        handles on some CI runners. */
-    const directoryRoutes = buildAfhDirectoryRoutes(path.resolve(__dirname, "src/data/afh"));
     const BATCH = 200;
     for (let i = 0; i < directoryRoutes.length; i += BATCH) {
       await Promise.all(
         directoryRoutes.slice(i, i + BATCH).map(async ({ route, title, description, body }) => {
-          const routeHtml = applyMetadata(
-            baseHtml,
-            route,
-            { title, description },
-            { injectSsg: false }
-          ).replace('<div id="root"></div>', `<div id="root"><div style="max-width:800px;margin:0 auto;padding:16px 20px 0;font-family:system-ui,sans-serif">${ssgAfhQuickLinks()}</div>${body}</div>`);
+          const base = applyMetadata(baseHtml, route, { title, description }, { injectSsg: false });
+          const ssr = rendered.get(route);
+          const page = ssr ? withRenderedPage(body, ssr) : null;
+          const routeHtml = page
+            ? base
+                .replace('<div id="root"></div>', () => `<div id="root" data-prerendered>${page.body}</div>`)
+                .replace("</head>", () => `${page.jsonLd}\n  </head>`)
+            : base.replace('<div id="root"></div>', () => `<div id="root"><div style="max-width:800px;margin:0 auto;padding:16px 20px 0;font-family:system-ui,sans-serif">${ssgAfhQuickLinks()}</div>${body}</div>`);
           await writeRouteHtml(distDir, route, routeHtml);
         })
       );

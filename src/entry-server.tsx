@@ -19,9 +19,19 @@ import { renderToPipeableStream } from "react-dom/server";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import App from "./App";
 import "./i18n/config";
+import { cityDataSlug } from "./lib/cityDataRoute";
+import { loadCity } from "./data/afh/directory";
 
 /** The page body plus any JSON-LD the page adds through react-helmet-async. */
-export function render(url: string): Promise<{ html: string; jsonLd: string[] }> {
+export async function render(url: string): Promise<{ html: string; jsonLd: string[] }> {
+  /* City directory pages render their list from the city's data file. Load it
+     first, so the HTML holds the whole list (see peekCity in directory.ts). */
+  const citySlug = cityDataSlug(url);
+  if (citySlug) await loadCity(citySlug);
+  return renderPage(url);
+}
+
+function renderPage(url: string): Promise<{ html: string; jsonLd: string[] }> {
   const helmetContext: { helmet?: HelmetServerState } = {};
   return new Promise((resolve, reject) => {
     let failed: unknown = null;
