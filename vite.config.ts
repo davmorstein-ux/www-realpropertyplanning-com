@@ -2477,6 +2477,27 @@ const visibleWords = (html: string) =>
 
 /** The rendered page for #root, and the JSON-LD to put in <head> (kept out of
  * #root so the browser can hydrate the page exactly). null = keep the summary. */
+/** A preload for the page's high-priority image (the homepage hero),
+ * so the browser requests it from <head> instead of waiting to reach the <img>
+ * in the body (Oct 7, 2026). Empty when the page has none. */
+const heroPreload = (html: string) => {
+  const img = html.match(/<img\b[^>]*fetchpriority="high"[^>]*>/i)?.[0];
+  if (!img) return "";
+  const attr = (n: string) => img.match(new RegExp(`\\s${n}="([^"]*)"`, "i"))?.[1];
+  const src = attr("src");
+  if (!src) return "";
+  const set = attr("srcset");
+  const sizes = attr("sizes");
+  /* Added by a tiny script rather than a plain <link>, and only on "/": the host
+     also serves the homepage file (index.html) for addresses that have no file
+     of their own, and those pages should not download the homepage photo. The
+     script runs while <head> is read, so the request still starts early. Only
+     the homepage has a high-priority image today; if another page gets one,
+     widen the path check. */
+  const js = (v?: string) => JSON.stringify(v ?? "");
+  return `<script>(function(){var p=location.pathname;if(p!=="/"&&p!=="/index.html")return;var l=document.createElement("link");l.rel="preload";l.as="image";l.href=${js(src)};${set ? `l.setAttribute("imagesrcset",${js(set)});` : ""}${sizes ? `l.setAttribute("imagesizes",${js(sizes)});` : ""}l.setAttribute("fetchpriority","high");document.head.appendChild(l);})();</script>`;
+};
+
 const withRenderedPage = (ssgContent: string, page: RenderedPage) => {
   // A page that renders thinner than its summary (a redirect, an empty shell) keeps the summary.
   if (visibleWords(page.html) < visibleWords(ssgContent)) return null;
@@ -2486,7 +2507,7 @@ const withRenderedPage = (ssgContent: string, page: RenderedPage) => {
   // Tagged so main.tsx can remove them at startup: in the browser, Helmet renders the
   // page's own JSON-LD, and a second copy would duplicate it (e.g. two FAQPage blocks).
   const tagged = [...keep, ...extra].map((sc) => sc.replace("<script", "<script data-prerender-ld"));
-  return { body: page.html, jsonLd: tagged.join("\n  ") };
+  return { body: page.html, jsonLd: tagged.join("\n  "), preload: heroPreload(page.html) };
 };
 
 const renderPagesForCrawlers = async (routes: string[]): Promise<Map<string, RenderedPage>> => {
@@ -2605,6 +2626,9 @@ const applyMetadata = (
     if (page) {
       out = out.replace('<div id="root"></div>', () => `<div id="root" data-prerendered>${page.body}</div>`);
       if (page.jsonLd) out = out.replace("</head>", () => `${page.jsonLd}\n  </head>`);
+      // First thing in <head>, ahead of the stylesheet: an inline script placed
+      // after a stylesheet waits for it to download before running.
+      if (page.preload) out = out.replace('<meta charset="UTF-8" />', (m) => `${m}\n    ${page.preload}`);
     } else if (ssgContent) {
       out = out.replace('<div id="root"></div>', () => `<div id="root">${ssgContent}</div>`);
     }
@@ -2780,6 +2804,7 @@ const routeMetadataPlugin = {
             ? base
                 .replace('<div id="root"></div>', () => `<div id="root" data-prerendered>${page.body}</div>`)
                 .replace("</head>", () => `${page.jsonLd}\n  </head>`)
+                .replace('<meta charset="UTF-8" />', (m) => (page.preload ? `${m}\n    ${page.preload}` : m))
             : base.replace('<div id="root"></div>', () => `<div id="root"><div style="max-width:800px;margin:0 auto;padding:16px 20px 0;font-family:system-ui,sans-serif">${ssgAfhQuickLinks()}</div>${body}</div>`);
           await writeRouteHtml(distDir, route, routeHtml);
         })

@@ -8,6 +8,9 @@ import Header from "@/components/Header";
    go missing. */
 import heroDesktop from "@/assets/hero/rpp-hero-2030.webp";
 import heroMobile from "@/assets/hero/rpp-hero-2030-mobile.webp";
+/* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
+   "900w", so phones downloaded more than they needed. */
+import heroMobile900 from "@/assets/hero/rpp-hero-2030-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -116,7 +119,7 @@ const RPPHomeV3 = () => {
                beneath the image instead of sitting on it.
                102 KB and 76 KB. */
             src={heroDesktop}
-            srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
+            srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroDesktop} 1920w`}
             sizes="100vw"
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
@@ -153,7 +156,10 @@ const RPPHomeV3 = () => {
                hero never actually received high priority. Lowercase is the
                attribute the browser reads. */
             fetchPriority="high"
-            decoding="async"
+            /* No decoding="async" (Oct 7, 2026): this is the largest thing on the
+               first screen, and async decoding let the browser paint without it
+               and show it a frame or more later. The build also adds a preload
+               for it in <head> (heroPreload in vite.config.ts). */
           />
           {/* Logo + tagline overlay — normal flow, so this content's own
               height determines the hero's height on every screen size.
