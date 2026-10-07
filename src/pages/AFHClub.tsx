@@ -65,7 +65,10 @@ const PAGE_CSS = `
   .rpp-afh-choose h2.rpp-afh-choose-heading.rpp-afh-choose-heading { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3vw, 32px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #1c1917 !important; text-align: center; margin: 0 0 16px !important; }
   .rpp-afh-choose ul.rpp-afh-choose-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: 1fr; }
   @media (min-width: 820px) { .rpp-afh-choose ul.rpp-afh-choose-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; } }
-  .rpp-afh-choose li.rpp-afh-choose-item { display: flex; flex-direction: column; gap: 6px; }
+  /* Each choice fills its grid row so the three green boxes are the same
+     height and the small links beneath them line up (owner, Oct 7, 2026). */
+  .rpp-afh-choose li.rpp-afh-choose-item { display: flex; flex-direction: column; gap: 6px; height: 100%; }
+  .rpp-afh-choose li.rpp-afh-choose-item > a.rpp-afh-choose-main { flex: 1 1 auto; }
   .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { position: relative; display: block; background: #0a5648; color: #fff !important; border-radius: 12px; padding: 16px 48px 16px 18px; text-decoration: none !important; min-height: 64px; box-shadow: 0 6px 16px -10px rgba(10,86,72,.7); }
   @media (hover: hover) { .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main:hover { background: #084539; } }
   .rpp-afh-choose a.rpp-afh-choose-main:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
