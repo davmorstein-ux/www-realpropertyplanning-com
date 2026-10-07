@@ -10,6 +10,8 @@ import exaelPhoto from "@/assets/providers/exael-zuniga-invision-marketing-heads
 import invisionLogo from "@/assets/providers/invision-marketing-logo.webp";
 import rachaelScottPhoto from "@/assets/providers/rachael-scott-ballpark-realty-headshot.webp";
 import ballparkRealtyLogo from "@/assets/providers/ballpark-realty-logo.webp";
+import sethRadduePhoto from "@/assets/providers/seth-raddue-tristar-finance-headshot.webp";
+import tristarLogo from "@/assets/providers/tristar-finance-home-loans-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -211,6 +213,27 @@ export const RACHAEL_SCOTT: AFHProfessional = {
   bio: "",
 };
 
+/* Added Oct 7, 2026 at the owner's request, from Seth's email signature:
+   name, title, company, NMLS numbers, phone, email, website, headshot and logo.
+   His signature lists four numbers (206-240-8514, 425-455-8497, 425-458-4763,
+   888-909-9024); the first is shown. No bio or specialty claim: none supplied. */
+export const SETH_RADDUE: AFHProfessional = {
+  id: "seth-raddue",
+  name: "Seth C. Raddue",
+  title: "President & CEO, Mortgage Loan Originator",
+  company: "TriStar Finance, Inc.",
+  photo: sethRadduePhoto,
+  photoAlt: "Photo of Seth C. Raddue, President and CEO of TriStar Finance",
+  logo: tristarLogo,
+  logoAlt: "TriStar Finance Home Loans logo",
+  license: "NMLS #90509 · Company NMLS #43583",
+  phone: "(206) 240-8514",
+  email: "sethr@tristarfinance.com",
+  website: "https://www.tristarfinance.com",
+  specialty: "Mortgage lending — TriStar Finance, Inc.",
+  bio: "",
+};
+
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
@@ -281,6 +304,17 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     professionLines: ["Website Design", "& Marketing"],
     why: "Families, case managers and hospital discharge planners look a home up online before they call. A clear website with accurate photos, the home's specialties and current contact details, and a listing that shows up in local search, is how an adult family home fills an empty bed without paying a placement fee.",
     people: [EXAEL_ZUNIGA],
+  },
+  {
+    id: "mortgage-lending",
+    label: "Mortgage lending",
+    profession: "AFH Mortgage Lender",
+    professionLines: ["AFH Mortgage", "Lender"],
+    why: "Buying the house an adult family home runs in is usually a residential mortgage when the buyer will live there, and a commercial or income-based loan when they will not. The lender has to decide whether to count the home's care income, and how. A loan officer who has financed adult family homes knows which programs fit and what the underwriter will ask for.",
+    /* On hold (owner, Oct 7, 2026) until Seth supplies a sharper headshot; the
+       record above is ready. Put SETH_RADDUE back here to show him. An empty
+       group is not rendered. */
+    people: [],
   },
   {
     id: "sba-lending",

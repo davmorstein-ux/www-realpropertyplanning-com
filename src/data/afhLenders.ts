@@ -112,7 +112,8 @@ export const LENDERS: Lender[] = [
     lane: "residential",
     location: "Kirkland",
     contacts: [
-      { name: "Seth Raddue", role: "President / CEO", phone: "206-240-4499", nmls: "90509" },
+      // Phone corrected Oct 7, 2026 from Seth's own email signature (was 206-240-4499).
+      { name: "Seth Raddue", role: "President / CEO", phone: "206-240-8514", nmls: "90509" },
       { name: "Blake Brown", role: "Mortgage Loan Originator", phone: "425-999-4499", nmls: "2296942" },
     ],
     publishedTerms: "An adult family home financing program alongside FHA, VA, jumbo, rehab, bank-statement, Non-QM, DSCR and bridge programs.",
