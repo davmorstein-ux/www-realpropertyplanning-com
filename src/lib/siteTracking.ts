@@ -15,13 +15,17 @@
  *   calculator_used      first real interaction (typing, choosing, pressing a
  *                        button) on a calculator page, once per calculator per
  *                        visit: calculator_path.
+ *   ask_question         the "Ask a question" box: the question (trimmed, emails
+ *                        and phone numbers removed), whether there was an answer,
+ *                        the answer's page, and the page asked from.
  *   sign_up              newsletter or "notify me" signup confirmed: method
  *                        "newsletter" and the form's source tag (called from
  *                        NewsletterSignup.tsx via trackSignup).
  *
  * WHAT IS NEVER COLLECTED: the visitor's name, email, phone number, what they type
- * into a calculator, or any message text. Only which kind of action happened and on
- * which page. Documented on src/pages/Privacy.tsx; keep the two in step.
+ * into a calculator, or contact-form message text. The one typed text collected is
+ * a question asked in the Ask box (ask_question), trimmed, with emails and phone
+ * numbers removed. Documented on src/pages/Privacy.tsx; keep the two in step.
  *
  * WHAT THE NUMBERS MEAN: a phone tap opened a dialler; it does not prove a call.
  * Report "phone taps", not "calls".
@@ -110,6 +114,28 @@ export const initSiteTracking = (): void => {
   document.addEventListener("input", (e) => onCalculatorInteraction(e.target), true);
   document.addEventListener("change", (e) => onCalculatorInteraction(e.target), true);
 };
+
+/**
+ * "Ask a question" box (AskBox.tsx): what was asked and whether the site had an
+ * answer. The question is trimmed to 100 characters (GA4's limit for a value)
+ * after removing anything that looks like an email address or phone number, so
+ * the owner sees what people ask without collecting contact details.
+ */
+export const scrubQuestion = (q: string): string =>
+  q
+    .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, "[email]")
+    .replace(/\+?\(?\d[\d\s().-]{6,}\d/g, "[number]")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 100);
+
+export const trackAsk = (question: string, answerPath: string | null): void =>
+  send("ask_question", {
+    question: scrubQuestion(question),
+    answered: answerPath ? "yes" : "no",
+    answer_path: answerPath ?? "none",
+    page_path: typeof window === "undefined" ? "" : path(),
+  });
 
 /** Newsletter / "notify me" signup confirmed by the server. */
 export const trackSignup = (source: string): void => send("sign_up", { method: "newsletter", signup_source: source || "unspecified" });

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import AskBox from "@/components/AskBox";
 /* Imported as module assets rather than referenced from public/. The same
    files sat in public/ and returned 404 in production despite being committed
    and valid — newly added binaries were not making it into the deployed
@@ -790,6 +791,11 @@ const RPPHomeV3 = () => {
               }
 
             ` }} />
+
+            {/* ── Ask a question (Oct 8, 2026): answers from the guides themselves ── */}
+            <div style={{ margin: "0 0 2.5rem" }}>
+              <AskBox />
+            </div>
 
             {/* ── Trust bar: the numbers, once, in one row ─────────── */}
             <div style={{ margin: "0 calc(50% - 50vw) 2rem", width: "100vw" }}>

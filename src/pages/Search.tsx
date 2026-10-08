@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import AskBox from "@/components/AskBox";
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -46,6 +47,12 @@ const Search = () => {
             >
               Search Real Property Planning
             </h1>
+            {/* Ask a question first (Oct 8, 2026): answers from the guides themselves.
+                The Google site search below stays for keyword searches. */}
+            <div style={{ marginBottom: 40 }}>
+              <AskBox />
+            </div>
+            <p style={{ textAlign: "center", fontSize: 18, color: "#2b2825", margin: "0 0 12px" }}>Or search every page with Google:</p>
             <form onSubmit={handleSearch} role="search" style={{ maxWidth: "700px", width: "100%", margin: "0 auto" }}>
               <div
                 className="flex items-center gap-2 rounded-full border-2 border-border bg-card pl-5 pr-2 py-2 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 transition-all"

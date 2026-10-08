@@ -1,4 +1,5 @@
 import HandbookDownload from "@/components/afh/HandbookDownload";
+import AskBox from "@/components/AskBox";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import { Link } from "react-router-dom";
 import { AFH_CITY_PAGES } from "@/data/afhCityPages";
@@ -769,6 +770,16 @@ const AFHClub = () => {
             so a buyer landing here never saw it). Same component, same six steps. */}
         <section className="rpp-afh-buypath" style={{ background: "#ffffff", padding: "36px 20px 40px", borderBottom: "1px solid #e3ddd3" }}>
           <AFHBuyerSteps title="Buying your first adult family home? Start here, in this order." />
+        </section>
+
+        {/* Ask a question (Oct 8, 2026). */}
+        <section style={{ background: "#f7f4ef", padding: "36px 20px 40px", borderBottom: "1px solid #e3ddd3" }}>
+          <AskBox
+            title="Ask an AFH question"
+            accent="#0a5648"
+            contactReason="afh-question"
+            examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]}
+          />
         </section>
 
         {/* Welcome band removed. It sat directly beneath a hero that already

@@ -30,6 +30,9 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *                           interaction with a calculator: its path), sign_up
  *                           (newsletter or alert signup confirmed: form tag).
  *                           Never a number, address, typed value or message.
+ *   Ask-box questions       AskBox.tsx / siteTracking.ts (Oct 8, 2026) — ask_question:
+ *                           the typed question (100 chars, emails and phone numbers
+ *                           removed), answered yes/no, answer page, page path.
  *   Referral UTM tags       providerTracking.ts — outbound provider website
  *                           links carry utm_source=realpropertyplanning.com so
  *                           the professional can see the referral in their own
@@ -139,6 +142,14 @@ const Privacy = () => {
                 tools people find useful enough to act on. It records the kind of action only:
                 never the number or address involved, anything you type into a calculator, or
                 your email address.
+              </p>
+              <p>
+                <strong>Questions you ask.</strong> When you use the "Ask a question" box, the question
+                you type (its first 100 characters, with anything that looks like an email address or
+                phone number removed), whether our guides had an answer, and the page you asked from
+                are recorded in Google Analytics. We read them to see what visitors want to know and
+                which guides to write next. Please don't type names, health details or account numbers
+                into the box.
               </p>
               <p>
                 <strong>Contact form.</strong> When a message you send through the contact form goes
