@@ -940,6 +940,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     sections: [
       `By capacity — ${AFH_STATS.bedSizes.map((b: { beds: number; homes: number; share: number }) => `${b.beds} beds: ${afhN(b.homes)} homes (${b.share}%)`).join("; ")}.`,
       `Specialty designations (training-based, not quality ratings) — dementia ${AFH_STATS.shares.dementia}%, mental health ${AFH_STATS.shares.mentalHealth}%, developmental disabilities ${AFH_STATS.shares.developmentalDisabilities}% of homes.`,
+      "Medicaid contract versus Medicaid income — A Medicaid contract is permission, not income. It means DSHS will pay the home if a Medicaid resident lives there. It does not show how many Medicaid residents a home has today, which care classifications they are in, or what the home is actually paid. A buyer confirms those from the home's DSHS payment records and resident census, never from the locator.",
       `Specialty contracts — Expanded Community Services (ECS) ${AFH_STATS.shares.ecs}%, Specialized Behavior Support (SBS) ${AFH_STATS.shares.sbs}% of homes statewide; they belong to the owner and do not transfer in a sale.`,
       `By county — ${[...AFH_STATS.counties].filter((c: { homes: number }) => c.homes > 0).map((c: { county: string; homes: number; beds: number }) => `${c.county} ${afhN(c.homes)} homes, ${afhN(c.beds)} beds`).join("; ")}.`,
       "Method — counts of records in the DSHS Adult Family Home Locator for all 39 counties; see /research-methodology. Download: /data/washington-afh-by-county.csv",

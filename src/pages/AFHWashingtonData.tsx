@@ -76,7 +76,7 @@ const FAQS = [
   },
   {
     question: "What share of adult family homes accept Medicaid?",
-    answer: `${p(stats.shares.medicaid)} of licensed homes (${n(S.medicaid)}) hold a DSHS Medicaid contract, according to the DSHS locator.`,
+    answer: `${p(stats.shares.medicaid)} of licensed homes (${n(S.medicaid)}) hold the base DSHS Medicaid contract, according to the DSHS locator. The contract lets a home bill DSHS for Medicaid residents; it does not show how many Medicaid residents a home has today or what it is paid.`,
   },
   {
     question: "Which counties have the most adult family homes?",
@@ -197,6 +197,12 @@ const AFHWashingtonData = () => {
               <a className="afhd-link" href={CSV} download>Download the county table (CSV)</a> ·{" "}
               <Link className="afhd-link" to="/research-methodology">How the data is gathered</Link>
             </p>
+            <div className="afhd-note" style={{ marginTop: 16 }}>
+              <p>
+                <strong>Buying a home? A contract is not income.</strong> It means DSHS will pay the home if a Medicaid resident lives there. It does not show how many Medicaid residents a home has today, which care classifications they are in, or what the home is actually paid. A buyer confirms those from the home's DSHS payment records and resident census, never from the locator.{" "}
+                <Link className="afhd-link" to="/afh-club/care-classifications-a-through-e">How classifications set the rate</Link>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -215,8 +221,9 @@ const AFHWashingtonData = () => {
                 {emptyCounties.length > 0 && ` ${emptyCounties.length} counties have none: ${emptyCounties.join(", ")}.`}
               </li>
               <li style={{ marginBottom: 10 }}>
-                <strong>Almost every home takes Medicaid.</strong> {p(stats.shares.medicaid)} hold the base DSHS contract, so a
-                home's Medicaid census, and the state's daily rates, drive most of the market.
+                <strong>Almost every home can take Medicaid.</strong> {p(stats.shares.medicaid)} hold the base DSHS contract, so
+                Medicaid residents and the state's daily rates drive most of the market. Holding the contract says nothing about how
+                many Medicaid residents a particular home has right now.
               </li>
               <li style={{ marginBottom: 10 }}>
                 <strong>Dementia and mental health designations are near-universal</strong> ({p(stats.shares.dementia)} and{" "}

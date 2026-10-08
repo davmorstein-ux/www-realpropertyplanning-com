@@ -187,6 +187,9 @@ const AFHRevenueBuilder = ({
               <div className="rb-note" style={{ color: "#1f2933", fontSize: 16, fontWeight: 500 }}>
                 {money(monthly(med.minDaily))} – {money(monthly(med.maxDaily))} · DSHS {AFH_RATE_REGION_LABELS[region]} rate, lightest to heaviest care
               </div>
+              <div className="rb-note" style={{ color: "#1f2933", fontSize: 16, fontWeight: 500, marginTop: 4 }}>
+                Count only beds with a Medicaid resident today, from the home's payment records. A Medicaid contract alone is not income.
+              </div>
             </td>
             <td style={{ padding: "8px 6px" }}>
               <input
