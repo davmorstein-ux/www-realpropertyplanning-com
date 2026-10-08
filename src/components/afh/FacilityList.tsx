@@ -55,7 +55,7 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
           ? facility.specialties.map((s) => SPECIALTY_LABELS[s]).join(" · ")
           : "No specialty designations on file"}
         {" — "}
-        {facility.acceptsMedicaid ? "accepts Medicaid" : "private pay only"}
+        {facility.acceptsMedicaid ? "accepts Medicaid" : facility.contracts.length ? "no Medicaid contract" : "private pay only"}
       </p>
 
       <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#4b5563" }}>

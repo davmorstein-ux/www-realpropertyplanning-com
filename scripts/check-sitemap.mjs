@@ -53,6 +53,7 @@ const INTENTIONALLY_EXCLUDED = {
   "/sitemap": "human-readable sitemap page; the XML is the crawlable one",
   "/afh-club/site-map": "human-readable AFH Club site map; same reason as /sitemap",
   "/embed/cost-of-care": "noindex calculator page that other websites frame; the share page is /calculators/embed",
+  "/search": "site search results page; noindex, so it stays out of the sitemap (Oct 8, 2026 audit)",
 };
 
 if (!existsSync(APP) || !existsSync(SITEMAP)) {
@@ -83,7 +84,8 @@ if (existsSync(REDIRECTS_FILE)) {
   }
 }
 
-const dynamic = [...allRoutes].filter((p) => p.includes(":"));
+// Splat routes ("/helping-an-aging-parent/*") count as dynamic too: any path under them resolves.
+const dynamic = [...allRoutes].filter((p) => p.includes(":") || (p.endsWith("/*") && p !== "*"));
 const staticRoutes = [...allRoutes].filter(
   (p) => !p.includes(":") && !p.includes("*") && !redirects.has(p)
 );
@@ -97,7 +99,7 @@ const sitemapSet = new Set(sitemapUrls);
    pattern — the county and adult family home pages are generated from data and
    have no literal route of their own. */
 const dynamicPatterns = dynamic.map(
-  (d) => new RegExp("^" + d.replace(/:[^/]+/g, "[^/]+").replace(/\//g, "\\/") + "$")
+  (d) => new RegExp("^" + d.replace(/\/\*$/, "/__SPLAT__").replace(/:[^/]+/g, "[^/]+").replace(/\//g, "\\/").replace("__SPLAT__", ".+") + "$")
 );
 const matchesDynamic = (p) => dynamicPatterns.some((rx) => rx.test(p));
 

@@ -141,6 +141,7 @@ const Articles = () => {
       <BreadcrumbSchema items={[{ name: "Articles", url: "/articles" }]} />
       <Header />
       <main id="main-content">
+        <h1 className="sr-only">Articles &amp; Insights</h1>
         {/* Carousel */}
         <ArticlesCarousel />
 

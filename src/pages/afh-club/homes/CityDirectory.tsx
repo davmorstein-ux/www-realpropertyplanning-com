@@ -246,6 +246,8 @@ const CityDirectory = () => {
                 <option value="">All {cityEntry.facilityCount} homes</option>
                 {AFH_FILTERS.map((f) => {
                   const count = facilities ? facilities.filter(f.matches).length : null;
+                  // No empty filters: a "(0)" page is never prerendered (Oct 8, 2026 audit).
+                  if (count === 0 && filter?.slug !== f.slug) return null;
                   return (
                     <option key={f.slug} value={f.slug}>
                       {CHIP_LABELS[f.slug] ?? f.label}
@@ -267,6 +269,7 @@ const CityDirectory = () => {
                 {AFH_FILTERS.map((f) => {
                   const active = filter?.slug === f.slug;
                   const count = facilities ? facilities.filter(f.matches).length : null;
+                  if (count === 0 && !active) return null;
                   return (
                     <li key={f.slug}>
                       <Link

@@ -55,9 +55,10 @@ const WillsTrustsOtherOptions = () => {
               Estate Planning · Washington State
             </p>
 
-            <h1 style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', serif", fontSize: "clamp(28px, 5vw, 44px)", fontWeight: 800, lineHeight: 1.15, color: "hsl(220 40% 12%)", marginBottom: 8 }}>
+            {/* One H1 per page (the hero band); this subtitle is a level-2 heading. */}
+            <div role="heading" aria-level={2} style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', serif", fontSize: "clamp(28px, 5vw, 44px)", fontWeight: 800, lineHeight: 1.15, color: "hsl(220 40% 12%)", marginBottom: 8 }}>
               How to Pass Real Estate to Your Children:
-            </h1>
+            </div>
             <h2 style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', serif", fontSize: "clamp(22px, 4vw, 34px)", fontWeight: 700, lineHeight: 1.2, color: "#7a1a1a", marginBottom: 28 }}>
               Wills, Trusts, and Other Options
             </h2>

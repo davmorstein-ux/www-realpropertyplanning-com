@@ -6,7 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { CONTRACT_LABELS, SPECIALTY_LABELS, type AFHFacility } from "@/data/afh/types";
-import { getCityIndexEntry, loadFacility } from "@/data/afh/directory";
+import { getCityIndexEntry, loadCity } from "@/data/afh/directory";
 import { listingsForFacility } from "@/data/afhAddressMatch";
 import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "@/data/afhListings";
 import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "@/data/afh/inspectionRecord";
@@ -55,12 +55,17 @@ const FacilityDetail = () => {
   const { citySlug = "", segment: facilitySlug = "" } = useParams();
   const cityEntry = getCityIndexEntry(citySlug);
   const [facility, setFacility] = useState<AFHFacility | null | undefined>(undefined);
+  const [sameName, setSameName] = useState(false);
 
   useEffect(() => {
     let active = true;
     setFacility(undefined);
-    loadFacility(citySlug, facilitySlug).then((f) => {
-      if (active) setFacility(f);
+    loadCity(citySlug).then((list) => {
+      if (!active) return;
+      const f = list.find((x) => x.slug === facilitySlug) ?? null;
+      // Same-name homes in one city get the street in the title (mirrors prerender.ts).
+      setSameName(!!f && list.filter((x) => x.displayName === f.displayName).length > 1);
+      setFacility(f);
     });
     return () => {
       active = false;
@@ -125,7 +130,7 @@ const FacilityDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${facility.displayName} — Adult Family Home in ${a.city}, WA | Real Property Planning`}
+        title={`${facility.displayName}${sameName ? `, ${a.street}` : ""} — Adult Family Home in ${a.city}, WA | Real Property Planning`}
         description={`DSHS licensing record for ${facility.displayName}, an adult family home at ${a.street}, ${a.city}, Washington. License ${facility.licenseNumber}, licensed for ${facility.licensedBeds} residents.`}
         canonical={`https://realpropertyplanning.com${path}`}
         schemaJson={{
@@ -199,7 +204,7 @@ const FacilityDetail = () => {
                   />
                   <Row
                     label="Medicaid"
-                    value={facility.acceptsMedicaid ? "Accepted" : "Not accepted — private pay only"}
+                    value={facility.acceptsMedicaid ? "Accepted" : facility.contracts.length ? "Not accepted (no Medicaid contract)" : "Not accepted — private pay only"}
                   />
                   {facility.contactName && (
                     <Row label="Provider contact" value={facility.contactName} />

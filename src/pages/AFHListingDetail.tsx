@@ -66,7 +66,7 @@ const AFHListingDetail = () => {
         : "Adult family home";
   const citySlug = cityPageByCity(listing.city)?.slug;
   const canonical = `https://realpropertyplanning.com/afh-club/listings/${slug}`;
-  const title = `${typeNoun} ${STATUS_HEADLINE[listing.marketStatus]}: ${heading} | AFH Club`;
+  const title = `${typeNoun} ${STATUS_HEADLINE[listing.marketStatus]}: ${heading}${isUndisclosed ? ` (${AFH_SOURCE_LABELS[listing.source]} #${listing.mlsNum})` : ""} | AFH Club`;
   const description = `${heading} — ${afhClassification(listing)}, ${listing.beds} bedrooms, ${listing.sqft} sq ft, ${
     listing.marketStatus === "sold" && listing.soldPrice ? `sold for ${listing.soldPrice}` : `listed at ${listing.price}`
   }. ${AFH_SOURCE_LABELS[listing.source]} #${listing.mlsNum}. Status ${AFH_MARKET_STATUS_LABELS[listing.marketStatus].toLowerCase()}, verified ${formatVerifiedDate(listing.lastVerified)}.`;

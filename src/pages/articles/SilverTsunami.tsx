@@ -56,9 +56,10 @@ const SilverTsunami = () => {
               </div>
               <ArticleCover src="/The_Silver_Tsunami.webp" alt="Cover art: The Silver Tsunami" width={1086} height={1448} />
 
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-0 mb-3">
+              {/* One H1 per page (the hero band); this subtitle is a level-2 heading. */}
+              <div role="heading" aria-level={2} className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-0 mb-3">
                 The Silver Tsunami Is Here
-              </h1>
+              </div>
               <h3 className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 italic">
                 America's aging population is reshaping housing, care, and the future of our communities — ready or not
               </h3>

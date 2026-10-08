@@ -284,3 +284,15 @@ export const REDIRECTS: SiteRedirect[] = [
   /* /senior-living/assisted-living-communities merged into /senior-living/assisted-living Oct 4, 2026 (the care-type page set keeps one assisted living page; its cost calculator moved over; Question Map step 8). */
   { from: "/senior-living/assisted-living-communities", to: "/senior-living/assisted-living" },
 ];
+
+/** Where a path finally lands after redirects. Link to this, never to a retired
+ *  address: a link that redirects wastes a crawl hop (Oct 8, 2026 audit). */
+export const currentPath = (p: string): string => {
+  let out = p;
+  for (let i = 0; i < 5; i++) {
+    const hit = REDIRECTS.find((r) => r.from === out);
+    if (!hit) break;
+    out = hit.to;
+  }
+  return out;
+};

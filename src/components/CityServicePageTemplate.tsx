@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { currentPath } from "@/data/redirects";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -94,7 +95,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
               <span className="text-muted-foreground/40">·</span>
               <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{city.county}</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to={`/services/${service.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{service.shortName} Overview</Link>
+              <Link to={currentPath(`/services/${service.slug}`)} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{service.shortName} Overview</Link>
             </div>
           </div>
         </div>

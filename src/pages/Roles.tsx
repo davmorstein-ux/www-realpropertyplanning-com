@@ -14,6 +14,7 @@ const Roles = () => (
     <BreadcrumbSchema items={[{ name: "Roles & Responsibilities", url: "/roles" }]} />
     <Header />
     <main className="flex-1">
+      <h1 className="sr-only">Roles & Responsibilities</h1>
       <RolesAndResponsibilities />
     </main>
     <DisclaimerSection />

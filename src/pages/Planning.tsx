@@ -14,6 +14,7 @@ const Planning = () => (
     <BreadcrumbSchema items={[{ name: "Planning & Next Steps", url: "/planning" }]} />
     <Header />
     <main className="flex-1">
+      <h1 className="sr-only">Planning & Next Steps</h1>
       <PlanningAndNextSteps />
     </main>
     <DisclaimerSection />

@@ -26,7 +26,7 @@ const teamTiles = [
 
 const ProfessionalTeam = () => (
   <EstateSubPageLayout
-    seoTitle="Building Your Professional Team | Real Property Planning"
+    seoTitle="Your Estate Administration Team: Who You Need and Why | Real Property Planning"
     seoDescription="Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team."
     canonicalPath="/estate-probate-inherited-property/professional-team"
     breadcrumbName="Building Your Professional Team"

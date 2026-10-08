@@ -1,4 +1,5 @@
 import { COUNTY_OFFICIAL_RESOURCES } from "@/data/countyOfficialResources";
+import { currentPath } from "@/data/redirects";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
@@ -168,7 +169,6 @@ const NEIGHBORING_COUNTIES: Record<string, { slug: string; name: string }[]> = {
     { slug: "snohomish-county", name: "Snohomish County" },
   ],
   "jefferson-county": [
-    { slug: "clallam-county", name: "Clallam County" },
     { slug: "mason-county", name: "Mason County" },
     { slug: "kitsap-county", name: "Kitsap County" },
   ],
@@ -472,7 +472,7 @@ const CountyPageTemplate = ({
                 {services.slice(0, 6).map((service) => (
                   <Link
                     key={service.slug}
-                    to={`/services/${service.slug}`}
+                    to={currentPath(`/services/${service.slug}`)}
                     className="text-accent hover:text-gold underline underline-offset-4"
                   >
                     {service.shortName}
@@ -543,29 +543,7 @@ const CountyPageTemplate = ({
               )}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2.5">
                 {cities.map((cityName) => {
-                  const cityData = countyData?.cities.find((c) => c.name === cityName);
-                  if (cityData) {
-                    return (
-                      <Link
-                        key={cityName}
-                        to={`/cities/${cityData.slug}`}
-                        className="flex items-center gap-2 hover:text-gold transition-colors"
-                      >
-                        <img
-                          src={mappin3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-4 h-4 object-contain shrink-0"
-                          loading="lazy"
-                          sizes="100vw"
-                          decoding="async"
-                          width={1024}
-                          height={1024}
-                        />
-                        <span className="text-foreground hover:text-gold transition-colors text-sm">{cityName}</span>
-                      </Link>
-                    );
-                  }
+                  // City pages were retired (/cities/* redirects to /counties), so names are plain text (Oct 8, 2026 audit).
                   return (
                     <div key={cityName} className="flex items-center gap-2">
                       <img
@@ -579,7 +557,7 @@ const CountyPageTemplate = ({
                         width={1024}
                         height={1024}
                       />
-                      <span className="text-muted-foreground text-sm">{cityName}</span>
+                      <span className="text-foreground text-sm">{cityName}</span>
                     </div>
                   );
                 })}
@@ -657,12 +635,7 @@ const CountyPageTemplate = ({
                     {countyData.cities.map((c, i) => (
                       <span key={c.slug}>
                         {i > 0 && <span className="text-muted-foreground/40 mr-2">·</span>}
-                        <Link
-                          to={`/cities/${c.slug}`}
-                          className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
-                        >
-                          {c.name}
-                        </Link>
+                        <span className="text-foreground text-sm">{c.name}</span>
                       </span>
                     ))}
                   </div>

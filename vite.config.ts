@@ -25,11 +25,12 @@ import AGING_PARENT_ROUTES from "./src/data/agingParentRoutes.json";
 import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
 import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
 import { FIFTY_FIVE, FP_PRERENDER_SECTIONS, FP_FAQS } from "./src/data/fiftyFivePlus";
-import { CARE_CALCULATORS } from "./src/lib/careCalculators";
+import { CARE_CALCULATORS, careTypeFor } from "./src/lib/careCalculators";
 import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
+import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
 import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
 import { AFH_FLOW_PAGES, AFH_FLOW_CHART_TEXT, AFH_RULES_PATH, afhFlowPrerenderSections } from "./src/data/afhFlow";
@@ -1111,6 +1112,18 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Add the Cost of Care Calculator to Your Website",
     intro: "Placement advisors, elder law and estate planning offices, home care agencies, adult family homes, senior centers and churches can put the free Washington cost of care calculator on their own websites. Choose all six care types or just one, preview it, and copy one piece of code into a page. No sign-up, no ads, and nothing is collected from the people who use it. The adult family home version includes DSHS Medicaid rates and licensed homes by Washington city and county.",
   },
+  /* The six cost-of-care calculator pages (one dynamic route, /cost-of-care-calculator/:careSlug).
+     Missing until the Oct 8, 2026 audit, so crawlers were served the homepage here.
+     Title and description match CostOfCareDetail.tsx. */
+  ...Object.fromEntries(CARE_CALCULATORS.map((o) => {
+    const care = careTypeFor(o);
+    return [`/cost-of-care-calculator/${o.slug}`, {
+      title: `${care.label} Cost Calculator — Washington State | Real Property Planning`,
+      description: `What ${o.shortLabel.toLowerCase()} costs each month in Washington State, how it compares with the national median, and what it is likely to cost in future years.`,
+      h1: care.label,
+      intro: `${o.blurb} This calculator shows the typical monthly cost of ${o.shortLabel.toLowerCase()} in Washington State, how it compares with the national median, and what it is likely to cost in future years.`,
+    }];
+  })),
   /* The framed calculator pages other websites embed (Oct 6, 2026): noindex,
      no header or footer (src/pages/embed/CostOfCareEmbedPage.tsx). */
   [EMBED_BASE]: {
@@ -1543,7 +1556,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "From cleanout to repairs to occupancy concerns — what to handle before an estate home goes to market, and how to make smart decisions about what's worth doing.",
   },
   "/estate-probate-inherited-property/professional-team": {
-    title: "Building Your Professional Team | Real Property Planning",
+    title: "Your Estate Administration Team: Who You Need and Why | Real Property Planning",
     description: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
     h1: "Building Your Professional Team",
     intro: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
@@ -1893,6 +1906,49 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "AFH Valuation Estimator | Real Property Planning",
     description: "Estimate the value of an operating Adult Family Home business in Washington State based on income, capacity, occupancy, and licensing status.",
     h1: "AFH Valuation Estimator",
+  },
+  // Oct 8, 2026 technical audit: these five routes had no entry here, so crawlers were
+  // served the homepage (homepage title and canonical) at their URLs. Every <Route> in
+  // App.tsx needs a prerendered page; the build now warns when one is missing.
+  "/afh-club/how-to-finance-an-afh": {
+    title: "How to Finance an Adult Family Home in Washington | Residential, SBA 7(a), 504 and Commercial | AFH Club",
+    description: "How buyers finance a Washington adult family home: owner-occupied residential mortgages, SBA 7(a) business acquisition loans, SBA 504, and portfolio lending — what each requires, what the lender checks, current SBA rate ceilings, and lenders that work with AFHs.",
+    h1: "How to Finance an Adult Family Home in Washington",
+    quickAnswerQ: "How do you finance an adult family home in Washington?",
+    quickAnswerA: "It depends on what you are buying. A house you will live in and run yourself can often use an owner-occupied residential mortgage. A licensed operating business with its real estate is usually financed with an SBA 7(a) loan, which can include the business, working capital and closing costs. SBA 504 gives a lower fixed rate on the real estate only, and portfolio or commercial loans suit investors who need more flexibility at the cost of a larger down payment.",
+    intro: "Residential mortgage, SBA 7(a), SBA 504, or a commercial loan — which one fits depends on one question: are you buying a house, or a business that comes with a house?",
+    sections: [
+      ...AFH_FINANCING_LANES.map((l) => `${l.title} — ${l.who} ${l.summary} Typical: ${l.typical.join("; ")}. Trade-offs: ${l.tradeoffs.join("; ")}.`),
+      "Lenders — the page lists lenders that publish adult family home programs; each listing shows whether its program has been confirmed by phone, and published terms carry an as-of date. Real Property Planning receives no compensation from any lender.",
+      "Run the numbers — the Occupancy & Financing Calculator (/afh-club/afh-financing-calculator) tests whether the home's income covers the loan at a given price and occupancy.",
+    ],
+  },
+  "/afh-club/afh-financing-calculator": {
+    title: "Adult Family Home Occupancy & Financing Calculator | Can a buyer get the loan? | AFH Club",
+    description: "See whether a buyer can finance an adult family home at a given price and occupancy. Models net operating income, SBA debt service, and lender coverage (DSCR) by number of residents, with a price-sensitivity chart.",
+    h1: "AFH Occupancy & Financing Calculator",
+    intro: "Lender coverage by price and occupancy, for an owner-operator or an investor. Enter what each licensed bed earns, the home's expenses, the price and the loan terms; the calculator shows whether the income covers the debt payments at each level of occupancy, and the most a lender would likely finance.",
+    sections: [
+      "What a lender checks — the debt service coverage ratio (DSCR): net operating income divided by the annual loan payments. Lenders commonly look for at least 1.25, meaning the home earns $1.25 for every $1.00 of debt payments.",
+      "How it works — income is entered per licensed bed (blank means empty), so occupancy is tested resident by resident. The property price is the subject of the test; the business (license, contracts, residents) can be financed in cash, in the same loan, or on seller terms with its own rate and term, because any business loan is paid from the same income.",
+      "Results — a plain yes or no on lender approval at each occupancy, the highest price a lender would likely finance, and a chart of coverage across a range of prices. Count only beds with a resident today, confirmed from the home's records; a Medicaid contract alone is not income.",
+      "Related — How to Finance an Adult Family Home in Washington (/afh-club/how-to-finance-an-afh), the AFH ROI Calculator (/afh-club/afh-roi-calculator) and the AFH Valuation Estimator (/afh-club/afh-valuation-estimator).",
+    ],
+  },
+  "/privacy": {
+    title: "Privacy Policy | Real Property Planning",
+    description: "How Real Property Planning handles information collected through this website, including contact forms, analytics, and third-party services.",
+    h1: "Privacy Policy",
+  },
+  "/bookkeeping-services": {
+    title: "Bookkeeping Services in Washington State | Real Property Planning",
+    description: "Connect with independent bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions.",
+    h1: "Bookkeeping Services in Washington State",
+  },
+  "/legal-plans-identity-protection": {
+    title: "Legal Plans & Identity Protection in Washington State | Real Property Planning",
+    description: "How legal service plans cover attorney-prepared wills, will reviews, document review, and identity theft monitoring — where a plan is enough, where a Washington estate planning attorney is needed, and what to ask before enrolling.",
+    h1: "Legal Plans & Identity Protection",
   },
   "/afh-club/listings": {
     title: "{{live}} Adult Family Homes for Sale in Washington State ({{cities}} cities) | AFH Club",
@@ -2943,6 +2999,20 @@ const routeMetadataPlugin = {
        Built from the same data the pages use; the public MCP server fetches the
        JSON from the live site. See src/lib/aiData.ts (and its NWMLS note). */
     await writeAiData(distDir);
+
+    /* Prerender coverage (Oct 8, 2026 audit): a <Route> in App.tsx with no page
+       written here is served the homepage HTML (homepage title and canonical) to
+       crawlers, so Google files it as a copy of the homepage. Warn loudly. */
+    {
+      const app = await readFile(path.resolve(__dirname, "src/App.tsx"), "utf8");
+      const statics = [...app.matchAll(/<Route path="([^"]+)"/g)].map((m) => m[1]).filter((r) => !/[:*]/.test(r) && r !== "/");
+      const missing: string[] = [];
+      for (const r of statics) {
+        try { await stat(path.join(distDir, r.replace(/^\//, ""), "index.html")); } catch { missing.push(r); }
+      }
+      if (missing.length) console.warn(`\n⚠ route-metadata-prerender: ${missing.length} route(s) have NO prerendered page and will show crawlers the homepage. Add them to ROUTE_METADATA: ${missing.join(", ")}\n`);
+      else console.log(`route-metadata-prerender: all ${statics.length} static routes have a prerendered page`);
+    }
   },
 };
 

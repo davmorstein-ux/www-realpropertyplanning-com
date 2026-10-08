@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { currentPath } from "@/data/redirects";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -236,7 +237,7 @@ const Counties = () => {
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  to={`/services/${service.slug}`}
+                  to={currentPath(`/services/${service.slug}`)}
                   className="card-3d group p-6"
                 >
                   <h3 className="font-serif text-lg text-foreground font-medium mb-2 group-hover:text-gold transition-colors">

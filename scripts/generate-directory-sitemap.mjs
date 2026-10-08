@@ -36,7 +36,7 @@ const FILTERS = [
   ["specialized-behavior-support", (f) => f.contracts.includes("specializedBehaviorSupport")],
   ["developmental-disabilities", (f) => f.specialties.includes("developmentalDisabilities")],
   ["expanded-community-services", (f) => f.contracts.includes("expandedCommunityServices")],
-  ["private-pay", (f) => !f.acceptsMedicaid],
+  ["private-pay", (f) => f.contracts.length === 0],
   ["more-than-six-beds", (f) => f.licensedBeds > 6],
 ];
 

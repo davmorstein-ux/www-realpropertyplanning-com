@@ -98,7 +98,7 @@ const FILTERS: Array<{ slug: string; label: string; explanation: string; matches
     slug: "private-pay",
     label: "that are private pay only",
     explanation: "These homes hold no DSHS contract and cannot accept Medicaid. Residents pay privately.",
-    matches: (f) => !f.acceptsMedicaid,
+    matches: (f) => f.contracts.length === 0,
   },
   {
     slug: "more-than-six-beds",
@@ -201,7 +201,7 @@ const facilityRow = (f: Facility) => {
       f.address.zip,
     )} — licensed for ${f.licensedBeds}</p>` +
     `<p style="margin:4px 0 0;color:#4b5563">${esc(spec)} — ${
-      f.acceptsMedicaid ? "accepts Medicaid" : "private pay only"
+      f.acceptsMedicaid ? "accepts Medicaid" : f.contracts.length ? "no Medicaid contract" : "private pay only"
     }</p>` +
     `<p style="margin:4px 0 0;color:#4b5563;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)} · <a href="${attr(dshsReportsUrl(f.licenseNumber))}" rel="noopener" style="color:#1a365d">DSHS inspection record</a>${f.hasReports ? " (documents posted)" : " (none posted when checked)"}</p>` +
     `</li>`
@@ -306,13 +306,16 @@ function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (
   return { route, title, description, body: parts.join("") };
 }
 
-function buildFacilityPage(entry: CityIndexEntry, f: Facility): PrerenderedRoute {
+function buildFacilityPage(entry: CityIndexEntry, f: Facility, cityHomes: Facility[] = []): PrerenderedRoute {
   const citySlug = f.address.citySlug;
   const route = `/afh-club/homes/${citySlug}/${f.slug}`;
   const url = `${SITE}${route}`;
   const ad = f.address;
 
-  const title = `${f.displayName} — Adult Family Home in ${ad.city}, WA | Real Property Planning`;
+  // Two homes with the same name in one city get the street in the title, so no two
+  // pages share a title (Oct 8, 2026 audit). Mirrored in FacilityDetail.tsx.
+  const sameName = cityHomes.filter((x) => x.displayName === f.displayName).length > 1;
+  const title = `${f.displayName}${sameName ? `, ${ad.street}` : ""} — Adult Family Home in ${ad.city}, WA | Real Property Planning`;
   const description = `DSHS licensing record for ${f.displayName}, an adult family home at ${ad.street}, ${ad.city}, Washington. License ${f.licenseNumber}, licensed for ${f.licensedBeds} residents.`;
 
   const rows: Array<[string, string]> = [
@@ -323,7 +326,7 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility): PrerenderedRoute
       f.specialties.length ? f.specialties.map((s) => SPECIALTY_LABELS[s] ?? s).join(", ") : "None on file",
     ],
     ["DSHS contracts", f.contracts.length ? f.contracts.map((c) => CONTRACT_LABELS[c] ?? c).join(", ") : "No contract"],
-    ["Medicaid", f.acceptsMedicaid ? "Accepted" : "Not accepted — private pay only"],
+    ["Medicaid", f.acceptsMedicaid ? "Accepted" : f.contracts.length ? "Not accepted (no Medicaid contract)" : "Not accepted — private pay only"],
     ...(f.contactName ? ([["Provider contact", f.contactName]] as Array<[string, string]>) : []),
     ...(f.phone ? ([["Phone", f.phone]] as Array<[string, string]>) : []),
     ["Address", `${ad.street}, ${ad.city}, WA ${ad.zip}`],
@@ -338,7 +341,7 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility): PrerenderedRoute
         f.licensedBeds,
         "resident",
         "residents",
-      )}. It ${f.acceptsMedicaid ? "accepts Medicaid" : "is private pay only"}${
+      )}. It ${f.acceptsMedicaid ? "accepts Medicaid" : f.contracts.length ? "has no Medicaid contract" : "is private pay only"}${
         f.specialties.length
           ? ` and carries the ${f.specialties.map((s) => SPECIALTY_LABELS[s] ?? s).join(", ")} specialty ${plural(
               f.specialties.length,
@@ -672,7 +675,7 @@ export function buildAfhDirectoryRoutes(dataDir: string): PrerenderedRoute[] {
     for (const filter of FILTERS) {
       if (facilities.some(filter.matches)) out.push(buildCityPage(entry, facilities, filter));
     }
-    for (const f of facilities) out.push(buildFacilityPage(entry, f));
+    for (const f of facilities) out.push(buildFacilityPage(entry, f, facilities));
   }
 
   let checked: CountyChecked[] = [];

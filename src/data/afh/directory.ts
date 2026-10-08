@@ -83,7 +83,7 @@ export const AFH_FILTERS: AFHFilter[] = [
     label: "that are private pay only",
     explanation:
       "These homes hold no DSHS contract and cannot accept Medicaid. Residents pay privately. They are a small share of the market and are worth identifying early, because a home that cannot accept Medicaid becomes a problem if a resident later spends down their assets.",
-    matches: (f) => !f.acceptsMedicaid,
+    matches: (f) => f.contracts.length === 0,
   },
   {
     slug: "more-than-six-beds",

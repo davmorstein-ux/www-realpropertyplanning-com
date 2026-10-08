@@ -595,7 +595,9 @@ export function buildAfhListingRoutes(cityRoutes: Record<string, string>, facili
     const route = listingRoute(l);
     const canonical = `${SITE_URL}${route}`;
     const heading = listingHeading(l);
-    const title = `${typeNoun(l)} ${STATUS_HEADLINE[l.marketStatus]}: ${heading} | AFH Club`;
+    // Undisclosed-address listings in one city would share a title; add the MLS number (Oct 8, 2026 audit). Mirrored in AFHListingDetail.tsx.
+    const titleTail = /^Undisclosed address/.test(heading) ? ` (${AFH_SOURCE_LABELS[l.source]} #${l.mlsNum})` : "";
+    const title = `${typeNoun(l)} ${STATUS_HEADLINE[l.marketStatus]}: ${heading}${titleTail} | AFH Club`;
     const description = `${heading} — ${afhClassification(l)}, ${l.beds} bedrooms, ${l.sqft} sq ft, ${l.marketStatus === "sold" && l.soldPrice ? `sold for ${l.soldPrice}` : `listed at ${l.price}`}. ${AFH_SOURCE_LABELS[l.source]} #${l.mlsNum}. Status ${AFH_MARKET_STATUS_LABELS[l.marketStatus].toLowerCase()}, verified ${formatVerifiedDate(l.lastVerified)}.`;
     const cityRoute = cityRoutes[l.city.toLowerCase()];
     const typeRoute = `/afh-club/listings/${AFH_TYPE_LABELS[l.listingType].slug}`;
