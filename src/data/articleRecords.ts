@@ -152,6 +152,22 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       DSHS_RCS_DOOR_ANSWER,
     ],
   },
+  "/guides/sell-parents-house-dementia-washington": {
+    published: "2026-10-08",
+    reviewed: "2026-10-08",
+    changes: [],
+    sources: [
+      { label: "RCW 11.125.040: a power of attorney ends at incapacity unless it says otherwise", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.125.040" },
+      { label: "RCW 11.125.270: an agent's authority over real property", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.125.270" },
+      { label: "RCW 11.125.240: acts that need express authority, including gifts", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.125.240" },
+      { label: "RCW 11.125.140: an agent's duties", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.125.140" },
+      { label: "RCW 11.125.200: accepting a notarized power of attorney", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.125.200" },
+      { label: "RCW 11.130.435: court authorization to sell the primary dwelling in a conservatorship", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.130.435" },
+      { label: "RCW 26.16.030: both spouses join to sell community real property", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=26.16.030" },
+      { label: "26 U.S.C. § 121: exclusion of gain from sale of a principal residence, including (d)(7)", href: "https://www.law.cornell.edu/uscode/text/26/121" },
+      { label: "26 U.S.C. § 1014: basis of property acquired from a decedent", href: "https://www.law.cornell.edu/uscode/text/26/1014" },
+    ],
+  },
   "/long-term-care/medicaid-and-the-family-home": {
     published: "2026-10-04",
     reviewed: "2026-10-04",

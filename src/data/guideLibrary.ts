@@ -133,6 +133,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "How Out-of-State Families Can Handle a Washington Property Sale", href: "/guides/out-of-state-families" },
       { title: "How Senior Transition Sales Differ From Ordinary Home Sales", href: "/guides/senior-transition-differences" },
       { title: "How to Sell a Parent's House to Pay for Senior Living", href: "/sell-house-fund-senior-living" },
+      { title: "Can You Sell a Parent's House If They Have Dementia?", href: "/guides/sell-parents-house-dementia-washington" },
       { title: "Understanding Senior Transitions", href: "/understanding-senior-transitions" },
     ],
   },

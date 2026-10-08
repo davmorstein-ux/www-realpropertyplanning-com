@@ -29,6 +29,7 @@ import { CARE_CALCULATORS, careTypeFor } from "./src/lib/careCalculators";
 import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
+import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -1676,6 +1677,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "How to Choose Between Care Settings: A Guide for Washington Families",
     description: "A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State — matched to actual care needs and budget.",
     h1: "How to Choose Between Care Settings: A Guide for Washington Families",
+  },
+  [SELL_PARENTS_HOUSE_DEMENTIA.PATH]: {
+    title: `${SELL_PARENTS_HOUSE_DEMENTIA.TITLE} (Washington) | Real Property Planning`,
+    description: SELL_PARENTS_HOUSE_DEMENTIA.DESCRIPTION,
+    h1: SELL_PARENTS_HOUSE_DEMENTIA.TITLE,
+    quickAnswerQ: "Can we sell my parent's house in Washington if they have dementia?",
+    quickAnswerA: SELL_PARENTS_HOUSE_DEMENTIA.SHORT_ANSWER,
+    intro: "For Washington families whose parent has dementia: who can sign to sell the house, in the order to check — the parent, an agent under a durable power of attorney, a successor trustee, or a court-appointed conservator — plus the spouse's signature, and what a sale means for Medicaid and taxes. General information, not legal or tax advice.",
+    sections: SPHD_PRERENDER_SECTIONS,
+    faq: SPHD_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: SELL_PARENTS_HOUSE_DEMENTIA.PUBLISHED, dateModified: SELL_PARENTS_HOUSE_DEMENTIA.REVIEWED },
   },
   [MEDICAID_AND_THE_HOME.PATH]: {
     title: `${MEDICAID_AND_THE_HOME.TITLE} | Real Property Planning`,

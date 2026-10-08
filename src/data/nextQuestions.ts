@@ -17,6 +17,11 @@ export interface NextQuestion {
 }
 
 const Q = {
+  dementiaSale: {
+    title: "Can we sell the house if a parent has dementia?",
+    description: "Who can sign for a parent with dementia: the parent, a durable power of attorney, a trustee, or a conservator.",
+    href: "/guides/sell-parents-house-dementia-washington",
+  },
   houseForCare: {
     title: "Should we sell the house to pay for care?",
     description: "How a parent's home is sold to fund senior living in Washington, step by step, and what it means for taxes and Medicaid.",
@@ -218,8 +223,9 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/long-term-care/hospital-discharge-planning": [Q.rehab, Q.careSettings, Q.findAfh, Q.houseForCare, Q.medicaid],
   "/long-term-care/short-term-nursing-home-stays": [Q.discharge, Q.careSettings, Q.medicaid, Q.houseForCare, Q.careCost],
   "/long-term-care/medicaid-and-long-term-care": [Q.medicaidHome, Q.houseForCare, Q.giftingRisks, Q.afhCost, Q.poa],
-  "/long-term-care/medicaid-and-the-family-home": [Q.houseForCare, Q.poa, Q.giftingRisks, Q.afhCost],
-  "/sell-house-fund-senior-living": [Q.poa, Q.medicaid, Q.reverseMortgage, Q.downsizing, Q.careCost],
+  "/long-term-care/medicaid-and-the-family-home": [Q.houseForCare, Q.dementiaSale, Q.poa, Q.giftingRisks, Q.afhCost],
+  "/guides/sell-parents-house-dementia-washington": [Q.medicaidHome, Q.houseForCare, Q.giftingRisks, Q.careCost],
+  "/sell-house-fund-senior-living": [Q.poa, Q.dementiaSale, Q.medicaid, Q.reverseMortgage, Q.downsizing, Q.careCost],
   "/long-term-care/how-to-choose-care-settings": [Q.careCost, Q.findAfh, Q.chooseAfh, Q.afhCost, Q.medicaid],
   "/long-term-care/nurse-delegation": [Q.careSettings, Q.findAfh, Q.chooseAfh, Q.afhCost],
   "/afh-club/violation-history-lookup": [Q.chooseAfh, Q.findAfh, Q.afhCost, Q.medicaid],
