@@ -4,7 +4,7 @@
   "state": {
     "homes": 6069,
     "beds": 35306,
-    "medicaid": 5803,
+    "medicaid": 5802,
     "dementia": 5971,
     "mentalHealth": 5935,
     "developmentalDisabilities": 3684,
@@ -313,7 +313,7 @@
       "slug": "king",
       "homes": 1819,
       "beds": 10637,
-      "medicaid": 1666,
+      "medicaid": 1665,
       "dementia": 1790,
       "mentalHealth": 1780,
       "developmentalDisabilities": 963,

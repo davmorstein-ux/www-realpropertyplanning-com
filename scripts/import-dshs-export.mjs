@@ -237,7 +237,10 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
       licensedBeds: beds,
       specialties,
       contracts,
-      acceptsMedicaid: contracts.length > 0,
+      // Medicaid means the base DSHS adult family home contract. WA Cares Fund
+      // contracts are the state's long-term care insurance, not Medicaid, so a home
+      // holding only those is not counted (Oct 2026 audit: 5,803 vs 5,802).
+      acceptsMedicaid: contracts.includes("adultFamilyHome"),
       hasReports: /^y/i.test(get(C.hasReports)),
       retrievedAt,
     });

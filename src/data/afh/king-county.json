@@ -23870,7 +23870,7 @@
       "waCaresFundRespite",
       "wcfAfhSow"
     ],
-    "acceptsMedicaid": true,
+    "acceptsMedicaid": false,
     "hasReports": true,
     "retrievedAt": "2026-09-14"
   },
