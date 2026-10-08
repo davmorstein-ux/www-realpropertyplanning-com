@@ -20,8 +20,9 @@ const STATS = [
 
 const HomepageTrustBar = () => (
   <section aria-labelledby="rpp-trustbar-h" className="rpp-trustbar">
-    {/* Heading over the pills (owner, Oct 8, 2026): say what the row is. */}
-    <h2 id="rpp-trustbar-h" className="rpp-trustbar-h">What this hub includes</h2>
+    {/* Heading over the pills (owner, Oct 8, 2026): say what the row is. Brick red
+        (#B0352A, the hero's door and rule colour) because the page was mostly blue. */}
+    <h2 id="rpp-trustbar-h" className="rpp-trustbar-h">What this hub includes:</h2>
     <ul>
       {STATS.map((s) => (
         <li key={s.href}>
@@ -39,7 +40,7 @@ const HomepageTrustBar = () => (
       .rpp-trustbar { background: transparent; border-top: 1px solid #e6e0d6; border-bottom: 1px solid #e6e0d6; padding: 1rem 1.5rem; }
       .rpp-trustbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
       .rpp-trustbar li { margin: 0; }
-      .rpp-trustbar h2.rpp-trustbar-h.rpp-trustbar-h { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 20px !important; font-weight: 700 !important; line-height: 1.3 !important; color: #1B3A6B !important; text-align: center; margin: 0 0 12px !important; }
+      .rpp-trustbar h2.rpp-trustbar-h.rpp-trustbar-h { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 24px !important; font-weight: 700 !important; line-height: 1.3 !important; color: #B0352A !important; text-align: center; margin: 0 0 12px !important; }
       .rpp-trustbar a { display: inline-flex; align-items: baseline; gap: 6px; white-space: nowrap; padding: 9px 16px; border: 1.5px solid #1B3A6B; border-radius: 999px; background: #fff; color: #1B3A6B !important; text-decoration: none !important; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 15px; font-weight: 600; transition: background 0.15s, color 0.15s; }
       .rpp-trustbar strong { font-size: 18px; font-weight: 700; }
       .rpp-trustbar .rpp-trustbar-arrow { margin-left: 2px; }
