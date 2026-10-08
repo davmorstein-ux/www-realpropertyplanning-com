@@ -1,5 +1,6 @@
 
 import { useId, useState, useEffect, useRef } from "react";
+import { trackSignup } from "@/lib/siteTracking";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -198,6 +199,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
       });
       setStatus("done");
       setEmail("");
+      trackSignup(tag);
     } catch {
       /* Never surface the raw error — meaningless to the reader, and it can
          leak provider detail. */

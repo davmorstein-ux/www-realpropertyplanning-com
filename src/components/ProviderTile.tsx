@@ -565,6 +565,7 @@ export default function ProviderTile({
         {phone && (
           <a
             href={`tel:${phone.replace(/\D/g, "")}`}
+            data-provider-tracked=""
             onClick={(e) => {
               e.stopPropagation();
               trackProviderClick({ provider: name, company, kind: "phone" });
@@ -577,6 +578,7 @@ export default function ProviderTile({
         {phone2 && (
           <a
             href={`tel:${phone2.replace(/\D/g, "")}`}
+            data-provider-tracked=""
             onClick={(e) => {
               e.stopPropagation();
               trackProviderClick({ provider: name2 || name, company, kind: "phone" });
@@ -589,6 +591,7 @@ export default function ProviderTile({
         {email && (
           <a
             href={emailHref || `mailto:${email}`}
+            data-provider-tracked=""
             onClick={(e) => {
               e.stopPropagation();
               trackProviderClick({ provider: name, company, kind: "email" });
@@ -601,6 +604,7 @@ export default function ProviderTile({
         {email2 && (
           <a
             href={`mailto:${email2}`}
+            data-provider-tracked=""
             onClick={(e) => {
               e.stopPropagation();
               trackProviderClick({ provider: name2 || name, company, kind: "email" });

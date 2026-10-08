@@ -4,6 +4,10 @@ import App from "./App.tsx";
 import "./index.css";
 import "./i18n/config";
 import { recoverFromChunkError } from "./lib/chunkRecovery";
+import { initSiteTracking } from "./lib/siteTracking";
+
+/* Phone/email taps, contact-button clicks, calculator use: see src/lib/siteTracking.ts. */
+initSiteTracking();
 
 /* After a new deploy, an old tab can still reference code files that no longer
    exist. Reload to the fresh build every time this happens (guarded against a

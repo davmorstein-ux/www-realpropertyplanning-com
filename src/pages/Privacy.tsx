@@ -22,6 +22,14 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *                           contact message is sent: topic code, which inbox
  *                           (general / broker / appraiser) and the page the
  *                           visitor came from. No name, email, phone or text.
+ *   Site action events      siteTracking.ts (Oct 8, 2026) — contact_click
+ *                           (any phone/email link: kind, whether it reaches the
+ *                           featured professional / site inbox / someone else,
+ *                           page path), contact_cta_click (link to the contact
+ *                           page: page path, topic code), calculator_used (first
+ *                           interaction with a calculator: its path), sign_up
+ *                           (newsletter or alert signup confirmed: form tag).
+ *                           Never a number, address, typed value or message.
  *   Referral UTM tags       providerTracking.ts — outbound provider website
  *                           links carry utm_source=realpropertyplanning.com so
  *                           the professional can see the referral in their own
@@ -122,6 +130,15 @@ const Privacy = () => {
                 click, not you — no name, no phone number, and nothing about what you go on to
                 say to them. Links to a professional's own website also carry a tag identifying this
                 site as the source, so they can see the referral in their own analytics.
+              </p>
+              <p>
+                <strong>Which pages lead somewhere.</strong> We also record when a phone number or
+                email link anywhere on the site is tapped, when a link to the contact page is
+                followed, when a calculator is first used, and when a newsletter or alert signup
+                goes through, along with the page it happened on. This tells us which guides and
+                tools people find useful enough to act on. It records the kind of action only:
+                never the number or address involved, anything you type into a calculator, or
+                your email address.
               </p>
               <p>
                 <strong>Contact form.</strong> When a message you send through the contact form goes

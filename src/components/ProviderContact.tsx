@@ -36,6 +36,7 @@ const ProviderContact = ({
       {phone && (
         <a
           href={`tel:${stripPhone(phone)}`}
+          data-provider-tracked={providerName ? "" : undefined}
           onClick={(e) => {
             e.stopPropagation();
             if (providerName) {
@@ -51,6 +52,7 @@ const ProviderContact = ({
       {email && (
         <a
           href={`mailto:${email}`}
+          data-provider-tracked={providerName ? "" : undefined}
           onClick={(e) => {
             e.stopPropagation();
             if (providerName) {
