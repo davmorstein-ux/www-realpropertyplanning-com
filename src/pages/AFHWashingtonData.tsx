@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -41,6 +42,39 @@ const RETRIEVED =
       : `${fmtDate(stats.retrievedFrom)} to ${fmtDate(stats.retrievedTo)}`;
 
 const sixBed = stats.bedSizes.find((b) => b.beds === 6);
+
+/* Shareable summary and suggested citation (Oct 8, 2026; Oct 7 outside audit:
+   "give other publishers a short summary and a suggested attribution"). Both
+   are built from stats.json, so they update with each DSHS refresh. */
+const PAGE_URL = "https://realpropertyplanning.com/afh-club/washington-afh-data";
+const SUMMARY = `Washington had ${n(S.homes)} licensed adult family homes with ${n(S.beds)} licensed beds (DSHS Adult Family Home Locator, retrieved ${RETRIEVED}). ${p(sixBed?.share ?? 0)} are licensed for six residents, and ${p(stats.shares.medicaid)} hold the base DSHS Medicaid contract.`;
+const CITATION = `Real Property Planning, "Washington Adult Family Homes by the Numbers," compiled from the DSHS Adult Family Home Locator (retrieved ${RETRIEVED}), ${PAGE_URL}`;
+
+const CopyBlock = ({ label, text }: { label: string; text: string }) => {
+  const [done, setDone] = useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setDone(true);
+      window.setTimeout(() => setDone(false), 2500);
+    } catch {
+      /* clipboard blocked: the text is on screen to select by hand */
+    }
+  };
+  return (
+    <div style={{ marginTop: 16 }}>
+      <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 16, fontWeight: 700, color: "#192A19", marginBottom: 6 }}>{label}</div>
+      <div style={{ background: "#ffffff", border: "1px solid #d5e0da", borderRadius: 8, padding: "12px 14px", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 17, lineHeight: 1.55, color: "#1c1917", userSelect: "all" }}>{text}</div>
+      <button
+        type="button"
+        onClick={copy}
+        style={{ marginTop: 8, minHeight: 44, padding: "8px 18px", borderRadius: 8, border: "1.5px solid #0a5648", background: done ? "#0a5648" : "#ffffff", color: done ? "#ffffff" : "#0a5648", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 16, fontWeight: 700, cursor: "pointer" }}
+      >
+        {done ? "Copied" : `Copy ${label.toLowerCase()}`}
+      </button>
+    </div>
+  );
+};
 const sevenEight = stats.bedSizes.filter((b) => b.beds >= 7).reduce((s, b) => s + b.homes, 0);
 const underSix = stats.bedSizes.filter((b) => b.beds < 6).reduce((s, b) => s + b.homes, 0);
 const byHomes = [...stats.counties].filter((c) => c.homes > 0).sort((a, b) => b.homes - a.homes);
@@ -376,6 +410,18 @@ const AFHWashingtonData = () => {
               <Link className="afhd-link" to="/afh-club/homes">directory of every licensed adult family home</Link>, or see{" "}
               <Link className="afhd-link" to="/afh-club/listings">adult family homes for sale</Link>.
             </p>
+          </div>
+        </Section>
+
+        <Section bg="#ffffff">
+          <div className="afhd-narrow" id="cite">
+            <h2 className="afhd-h2">Using these figures</h2>
+            <p>
+              Reporters, attorneys, lenders and other publishers are welcome to quote these figures. Please name the source and link to
+              this page, so readers can see the date and the method.
+            </p>
+            <CopyBlock label="Summary" text={SUMMARY} />
+            <CopyBlock label="Citation" text={CITATION} />
           </div>
         </Section>
 

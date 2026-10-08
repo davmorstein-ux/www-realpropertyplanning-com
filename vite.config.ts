@@ -946,6 +946,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       `Specialty contracts — Expanded Community Services (ECS) ${AFH_STATS.shares.ecs}%, Specialized Behavior Support (SBS) ${AFH_STATS.shares.sbs}% of homes statewide; they belong to the owner and do not transfer in a sale.`,
       `By county — ${[...AFH_STATS.counties].filter((c: { homes: number }) => c.homes > 0).map((c: { county: string; homes: number; beds: number }) => `${c.county} ${afhN(c.homes)} homes, ${afhN(c.beds)} beds`).join("; ")}.`,
       "Method — counts of records in the DSHS Adult Family Home Locator for all 39 counties; see /research-methodology. Download: /data/washington-afh-by-county.csv",
+      `Using these figures — you may quote them with a link to this page. Suggested citation: Real Property Planning, "Washington Adult Family Homes by the Numbers," compiled from the DSHS Adult Family Home Locator (retrieved ${AFH_STATS.retrievedFrom} to ${AFH_STATS.retrievedTo}), https://realpropertyplanning.com/afh-club/washington-afh-data`,
     ],
   },
   "/afh-club/washington-adult-family-home-guide": {

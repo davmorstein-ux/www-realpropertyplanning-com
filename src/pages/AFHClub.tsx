@@ -1,4 +1,5 @@
 import HandbookDownload from "@/components/afh/HandbookDownload";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import { Link } from "react-router-dom";
 import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import Header from "@/components/Header";
@@ -761,6 +762,13 @@ const AFHClub = () => {
               ))}
             </p>
           </div>
+        </section>
+
+        {/* Buyer path (Oct 8, 2026; Oct 7 outside audit: "add a Start Here: Buying
+            Your First AFH pathway" — it existed only on the tools and buying pages,
+            so a buyer landing here never saw it). Same component, same six steps. */}
+        <section className="rpp-afh-buypath" style={{ background: "#ffffff", padding: "36px 20px 40px", borderBottom: "1px solid #e3ddd3" }}>
+          <AFHBuyerSteps title="Buying your first adult family home? Start here, in this order." />
         </section>
 
         {/* Welcome band removed. It sat directly beneath a hero that already

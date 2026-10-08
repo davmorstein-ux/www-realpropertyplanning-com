@@ -1,4 +1,5 @@
 import FlowBranchPage from "@/components/flow/FlowBranchPage";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import AFHFlowChart, { AFH_FLOW_CHART_CSS } from "@/components/afh/AFHFlowChart";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import CTASection from "@/components/CTASection";
@@ -25,7 +26,7 @@ export default function AFHFlowPage({ slug }: { slug: string }) {
         glossary={{ label: "AFH glossary", href: "/afh-club/glossary" }}
         accent={AFH_GREEN}
         heroBg="#edf0f3"
-        extra={slug === "opening" ? <WhichGuide group="afhOpening" /> : undefined}
+        extra={slug === "opening" ? <WhichGuide group="afhOpening" /> : slug === "buying" ? <AFHBuyerSteps title="The tools for each step, in order" /> : undefined}
         disclaimer="General information, not legal or tax advice."
         after={
           <>
