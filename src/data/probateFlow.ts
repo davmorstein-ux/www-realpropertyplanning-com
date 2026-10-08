@@ -14,6 +14,9 @@
  *   everyone → selling .............. /washington-probate-guide/selling-the-house
  *   always one tap away ............. /washington-probate-guide/deadlines-and-key-rules, /probate-glossary
  *
+ * Wording rule (Oct 7, 2026 audit): no categorical "no probate" — each no-probate box
+ * says what must be true (deed in the trust; survivorship wording; living beneficiary).
+ *
  * Keep each branch page SHORT: a two-sentence summary, at most six steps, at most
  * three "watch out for" items. Detail belongs in the linked guides, not here.
  * Used by the pages and by vite.config.ts (prerender), so no React, no "@/".
@@ -75,16 +78,16 @@ export const FLOW_PAGES: FlowPage[] = [
     path: path("house-in-a-trust"),
     box: "In a living trust",
     title: "The House Is in a Living Trust",
-    description: "When a Washington house is in a living trust, the successor trustee handles it and no probate is needed for the house. The steps, in order.",
+    description: "When a Washington house was deeded into a living trust before the death, the successor trustee handles it and probate is generally not needed for the house. How to check, and the steps in order.",
     trail: ["How was the house owned?", "In a living trust"],
     summary: [
-      "No probate is needed for the house. The successor trustee named in the trust takes over and can sell it, usually by giving the title company a certification of trust.",
+      "If the house was deeded into the trust before the death, it generally does not go through probate. The successor trustee named in the trust takes over and can sell it, usually by giving the title company a certification of trust.",
       "The trustee still owes the beneficiaries a fair price and good records, so value and timing matter as much as in probate.",
     ],
     steps: stepsOf("trustee"),
     watch: [
+      { lead: "Check that the house is actually in the trust.", text: "Signing a trust does not move the house into it; the recorded deed must name the trustee. A house left in the person's own name usually goes through probate first, even when a will sends everything to the trust. If the deed is unclear, a probate attorney can confirm the path." },
       { lead: "Show authority with a certification of trust.", text: "Title companies accept a short certification instead of the whole trust document.", cite: { label: "RCW 11.98.075", href: rcw("11.98.075") } },
-      PROPERTY_TAX,
       ESTATE_RECOVERY,
     ],
     next: { label: "Selling the house", href: SELLING_PATH },
@@ -94,10 +97,10 @@ export const FLOW_PAGES: FlowPage[] = [
     path: path("no-probate-needed"),
     box: "Joint owner or transfer on death deed",
     title: "The House Passed Without Probate",
-    description: "A Washington house held in joint tenancy with right of survivorship, or with a transfer on death deed recorded before the death, passes without probate. What the new owner does next.",
+    description: "A Washington house held in joint tenancy with right of survivorship, or with a transfer on death deed recorded before the death, generally passes without probate. What to check, and what the new owner does next.",
     trail: ["How was the house owned?", "Joint owner or transfer on death deed"],
     summary: [
-      "A house held in joint tenancy with right of survivorship belongs to the surviving owner. A house with a transfer on death deed recorded before the death goes to the beneficiary named in the deed. Neither goes through probate.",
+      "A house held in joint tenancy with right of survivorship belongs to the surviving owner. A house with a transfer on death deed recorded before the death goes to the beneficiary named in the deed. Either way, the house generally passes without probate, as long as the deed says so and the person it passes to is still living.",
       "The new owner usually records proof of the death with the county so the title shows them as owner. A title company can say exactly what it needs before a sale or refinance.",
     ],
     steps: [
@@ -107,9 +110,9 @@ export const FLOW_PAGES: FlowPage[] = [
       { label: "Property Taxes After a Death", href: "/guides/property-taxes-after-death-washington", note: "Who pays, and the October payment that comes with no new bill." },
     ],
     watch: [
+      { lead: "Read the deed's exact wording.", text: "Joint ownership passes to the survivor only if the deed says right of survivorship. Tenants in common, a beneficiary who died first, or owners who died together can send the house back through probate. If the deed is unclear, a probate attorney can confirm the path." },
       { lead: "The deed must have been recorded before the death.", text: "A transfer on death deed signed but not recorded with the county auditor in time does not work.", cite: { label: "RCW 64.80.060", href: rcw("64.80.060") } },
       ESTATE_RECOVERY,
-      PROPERTY_TAX,
     ],
     next: { label: "Selling the house", href: SELLING_PATH },
   },
@@ -121,7 +124,7 @@ export const FLOW_PAGES: FlowPage[] = [
     description: "For a Washington house in the person's name alone: the executor's steps, in order, from getting court authority to deciding what to do with the house.",
     trail: ["How was the house owned?", "In their name alone", "Probate", "Executor"],
     summary: [
-      "A house in the person's name alone usually goes through probate, because the small estate affidavit cannot transfer real estate. You have no authority over the house until the superior court appoints you and issues letters.",
+      "A house in the person's name alone usually goes through probate, because the small estate affidavit cannot transfer real estate. One common exception: a married couple's community property agreement may pass the house to the surviving spouse without a full probate. Otherwise, you have no authority over the house until the superior court appoints you and issues letters.",
       "Most Washington estates then get nonintervention powers, which let you sell the house without a court order.",
     ],
     steps: stepsOf("executor"),
@@ -186,9 +189,9 @@ export const flowPrerenderSections = (p: FlowPage): string[] => [
 /** The flow chart itself, in words, for the prerender. */
 export const FLOW_CHART_TEXT: string[] = [
   "Start: someone died and there is a house in Washington. First question: how was the house owned?",
-  `In a living trust: no probate for the house; the successor trustee handles it (${path("house-in-a-trust")}).`,
-  `Joint owner with right of survivorship, or a transfer on death deed recorded before the death: no probate for the house (${path("no-probate-needed")}).`,
-  `In the person's name alone, or not sure: probate is usually needed. What is your role? The executor or personal representative (${path("executor")}), or an heir or beneficiary (${path("heir")}).`,
+  `In a living trust: if the deed was in the trust's name before the death, generally no probate for the house; the successor trustee handles it (${path("house-in-a-trust")}).`,
+  `Joint owner with right of survivorship, or a transfer on death deed recorded before the death: generally no probate for the house, as long as the deed says so and the person it passes to is living (${path("no-probate-needed")}).`,
+  `In the person's name alone, or not sure: probate is usually needed (one exception is a married couple's community property agreement). What is your role? The executor or personal representative (${path("executor")}), or an heir or beneficiary (${path("heir")}).`,
   `Every path ends at selling the house, if it will be sold (${SELLING_PATH}).`,
   `Always available: deadlines and key rules (${DEADLINES_PATH}) and the probate glossary (/probate-glossary).`,
 ];

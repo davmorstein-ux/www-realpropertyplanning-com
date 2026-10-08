@@ -89,12 +89,12 @@ export default function ProbateFlowChart({ current }: { current?: string }) {
       <div className="pfc-branches">
         <div className="pfc-col">
           <div className="pfc-stub" aria-hidden="true" />
-          {box("house-in-a-trust", "No probate. The successor trustee handles it.", current)}
+          {box("house-in-a-trust", "Usually no probate, if the deed is in the trust's name.", current)}
           <div className="pfc-down" aria-hidden="true" />
         </div>
         <div className="pfc-col">
           <div className="pfc-stub" aria-hidden="true" />
-          {box("no-probate-needed", "No probate. The house passes on its own.", current)}
+          {box("no-probate-needed", "Usually no probate, if the deed says so.", current)}
           <div className="pfc-down" aria-hidden="true" />
         </div>
         <div className="pfc-col">

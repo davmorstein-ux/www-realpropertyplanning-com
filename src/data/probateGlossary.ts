@@ -278,7 +278,7 @@ export const PROBATE_GLOSSARY: ProbateGlossaryTerm[] = [
     term: "Successor trustee",
     category: "People and roles",
     definition:
-      "The person who takes over a trust when the person who created it dies or can no longer serve. For a house held in the trust, the successor trustee, not a personal representative, has authority to sell, and no probate is needed for that house.",
+      "The person who takes over a trust when the person who created it dies or can no longer serve. For a house held in the trust, the successor trustee, not a personal representative, has authority to sell, and probate is generally not needed for that house as long as the deed was in the trust's name.",
     guide: G.trustees,
   },
   {
