@@ -200,8 +200,12 @@ const CSS = `
 .rpp-ask button.rpp-ask-send { min-height: 52px; padding: 10px 24px; font-size: 18px; font-weight: 700; color: #fff; background: var(--ask); border: 0; border-radius: 10px; cursor: pointer; }
 .rpp-ask button.rpp-ask-send:disabled { opacity: 0.55; cursor: default; }
 @media (max-width: 520px) { .rpp-ask button.rpp-ask-send { width: 100%; } .rpp-ask.rpp-ask { padding: 18px 16px; } }
-.rpp-ask .rpp-ask-examples { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
-.rpp-ask .rpp-ask-try { font-size: 16px; font-weight: 700; color: #2b2825; }
+/* "Try:" sits in its own column and the example pills stack in the next one,
+   so every pill starts at the same left edge (owner, Oct 8, 2026). */
+.rpp-ask .rpp-ask-examples { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; row-gap: 8px; align-items: center; margin-top: 12px; }
+.rpp-ask .rpp-ask-try { grid-column: 1; grid-row: 1; font-size: 16px; font-weight: 700; color: #2b2825; }
+.rpp-ask button.rpp-ask-example { grid-column: 2; justify-self: start; max-width: 100%; }
+@media (max-width: 520px) { .rpp-ask button.rpp-ask-example.rpp-ask-example { border-radius: 16px; padding: 10px 14px; } .rpp-ask .rpp-ask-examples { grid-template-columns: minmax(0, 1fr); } .rpp-ask .rpp-ask-try, .rpp-ask button.rpp-ask-example { grid-column: 1; grid-row: auto; } }
 .rpp-ask button.rpp-ask-example { font-size: 15px; line-height: 1.3; text-align: left; padding: 8px 12px; border: 1px solid #d9d3c8; border-radius: 999px; background: #faf8f4; color: #1c1917; cursor: pointer; min-height: 40px; }
 @media (hover: hover) { .rpp-ask button.rpp-ask-example:hover { border-color: var(--ask); } }
 .rpp-ask .rpp-ask-result:focus { outline: none; }
