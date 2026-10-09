@@ -3,6 +3,7 @@ import type { AFHListing } from "@/data/afhListings";
 import { afhClassification, AFH_SOURCE_LABELS, AFH_MARKET_STATUS_LABELS, formatVerifiedDate, listingSlug } from "@/data/afhListings";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { financingRouteFor } from "@/data/afhLenders";
 
 const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
@@ -183,7 +184,9 @@ const PhotoPanel = ({
   </div>
 );
 
-export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing; index: number; total: number }) => (
+export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing; index: number; total: number }) => {
+  const financing = financingRouteFor(listing);
+  return (
   <div
     className="afh-listing-row"
     style={{
@@ -315,6 +318,15 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         <p style={{ margin: 0, fontSize: "13px", color: SLATE, lineHeight: 1.6 }}>{listing.businessNotes}</p>
       )}
 
+      {financing && (
+        <p style={{ margin: 0, fontSize: "16px", color: SLATE, lineHeight: 1.5 }}>
+          How buyers finance this:{" "}
+          <Link to={financing.href} style={{ color: "#0a5648", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
+            {financing.label} →
+          </Link>
+        </p>
+      )}
+
       <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
 
       {/* CTAs */}
@@ -402,7 +414,8 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
       </div>
     </div>
   </div>
-);
+  );
+};
 
 export const AFHListingsDisclaimer = ({ sources = ["nwmls"] }: { sources?: AFHListing["source"][] }) => (
   <div

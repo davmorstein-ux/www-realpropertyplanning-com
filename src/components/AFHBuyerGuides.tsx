@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { AFHListing } from "@/data/afhListings";
 import { guidesForListing, GUIDES_FOR_BROWSING } from "@/data/afhBuyerGuides";
+import { PAY_FOR_IT } from "@/data/afhLenders";
 
 /**
  * "Before you buy" guide links for the AFH for-sale pages.
@@ -16,6 +17,24 @@ import { guidesForListing, GUIDES_FOR_BROWSING } from "@/data/afhBuyerGuides";
 const AFHBuyerGuides = ({ listing }: { listing?: Pick<AFHListing, "listingType" | "afhStatus"> }) => {
   const set = listing ? guidesForListing(listing) : GUIDES_FOR_BROWSING;
   return (
+    <>
+    {/* Browsing pages (index, city): financing first, in its own box. */}
+    {!listing && (
+      <div className="max-w-3xl mb-10" style={{ background: "#e6f2f0", border: "2px solid #0a5648", borderRadius: 14, padding: "1.4rem 1.3rem" }}>
+        <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-3">{PAY_FOR_IT.heading}</h2>
+        <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-4">{PAY_FOR_IT.intro}</p>
+        <ul className="list-none p-0 m-0 flex flex-col">
+          {PAY_FOR_IT.links.map((g) => (
+            <li key={g.href} className="py-3 border-t" style={{ borderColor: "#0a564833" }}>
+              <Link to={g.href} className="underline underline-offset-4 font-semibold text-[18px] md:text-[19px]" style={{ color: "#0a5648" }}>
+                {g.title}
+              </Link>
+              <p className="text-foreground text-[17px] leading-relaxed mt-1 mb-0">{g.why}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
     <div className="max-w-3xl">
       <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">From the AFH Club library</p>
       <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-3">{set.heading}</h2>
@@ -36,6 +55,7 @@ const AFHBuyerGuides = ({ listing }: { listing?: Pick<AFHListing, "listingType" 
         </Link>
       </p>
     </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import AFHStepsBar from "@/components/AFHStepsBar";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -117,6 +118,23 @@ const AFHFinancingCalculator = () => {
       setBedRates((prev) => prev.map((v) => (v > 0 ? typical : 0)));
     }
   };
+  /* Starting values from a listing (Oct 9, 2026): ?price=1600000&beds=6&market=snohomish,
+     sent by the "Can you get a loan at this price?" button on listing pages.
+     Read once on arrival; everything stays editable. Unknown values are ignored. */
+  const [params] = useSearchParams();
+  const [fromListing, setFromListing] = useState(false);
+  useEffect(() => {
+    const p = Number(params.get("price"));
+    if (Number.isFinite(p) && p >= 50_000 && p <= 50_000_000) {
+      setPriceProperty(Math.round(p));
+      setFromListing(true);
+    }
+    const b = Number(params.get("beds"));
+    if (Number.isInteger(b) && b >= 1 && b <= 8) setBeds(b);
+    const m = params.get("market");
+    if (m && privatePayBandByMarket(m)) pickMarket(m);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const setBedRate = (i: number, v: number) => setBedRates((prev) => prev.map((x, k) => (k === i ? Math.max(0, v) : x)));
 
   // Today's census from the per-bed boxes
@@ -330,7 +348,7 @@ const AFHFinancingCalculator = () => {
 
             <CalcSection title="Price and financing">
               <div className="ck-grid">
-                {field("f-price", "Property price ($)", priceProperty, setPriceProperty, { step: 5000, note: "The house. This is the price the calculator tests." })}
+                {field("f-price", "Property price ($)", priceProperty, setPriceProperty, { step: 5000, note: fromListing ? "Started from the listing's asking price. The house. This is the price the calculator tests." : "The house. This is the price the calculator tests." })}
                 {field("f-down", "Buyer down payment (%)", down, setDown, { step: 1, min: 0, max: 100, note: "SBA 7(a): typically 10%. Conventional on a house: 20–25%." })}
                 {field("f-rate", "Loan interest rate (%)", loanRate, setLoanRate, { step: 0.05, note: "SBA 7(a) is Prime plus a spread; conventional on the house alone is lower." })}
                 {field("f-term", "Loan term (years)", term, setTerm, { min: 1, max: 30 })}

@@ -29,6 +29,7 @@ import {
 import { AFH_CITY_PAGES, cityPageByCity } from "./afhCityPages";
 import { facilityForListing, type FacilityLike } from "./afhAddressMatch";
 import { buyerGuidesHtml, guidesForListing, GUIDES_FOR_BROWSING } from "./afhBuyerGuides";
+import { financingRouteFor, payForItHtml } from "./afhLenders";
 import { FEATURED_BROKER, FEATURED_APPRAISER } from "./featuredProfessionals";
 
 const SITE_URL = "https://realpropertyplanning.com";
@@ -255,6 +256,8 @@ const listingCard = (l: AFHListing): string => {
     );
   }
   if (l.businessNotes) p.push(`<p style="margin:0 0 6px;color:#444;line-height:1.6">${esc(l.businessNotes)}</p>`);
+  const fin = financingRouteFor(l);
+  if (fin) p.push(`<p style="margin:0 0 6px;color:#444">How buyers finance this: <a href="${fin.href}" style="color:#0a5648;font-weight:700">${esc(fin.label)}</a></p>`);
   const who = l.broker ? `${l.broker}, ${l.brokerage}` : l.brokerage;
   p.push(`<p style="margin:0 0 6px;color:#555;font-size:0.9rem">Listed by ${esc(who)}</p>`);
   if (l.source !== "nwmls" && l.sourceUrl) {
@@ -484,6 +487,7 @@ export function renderAfhInventory(
   }
   html.push(`</section>`);
   /* Guides for buyers: index, type views, city pages and the sold page alike. */
+  html.push(payForItHtml(esc));
   html.push(buyerGuidesHtml(GUIDES_FOR_BROWSING, esc));
 
   const jsonLd: Record<string, unknown>[] = [];
@@ -654,6 +658,8 @@ export function buildAfhListingRoutes(cityRoutes: Record<string, string>, facili
     }
     b.push(`<h2 style="font-size:1.3rem;margin:0 0 8px">What is — and is not — being sold</h2>`);
     b.push(`<p style="color:#444;line-height:1.7;margin:0 0 24px">${esc(whatIsBeingSold(l))}</p>`);
+    const finD = financingRouteFor(l);
+    if (finD) b.push(`<p style="color:#444;line-height:1.7;margin:-12px 0 24px">How buyers finance this: <a href="${finD.href}" style="color:#0a5648;font-weight:700">${esc(finD.label)}</a> · <a href="/afh-club/afh-financing-calculator" style="color:#0a5648">Occupancy &amp; Financing Calculator</a></p>`);
     if (l.source !== "nwmls" && l.sourceUrl) {
       b.push(`<p style="margin:0 0 24px"><a href="${esc(l.sourceUrl)}" rel="nofollow noopener" style="color:#1a365d">View the original listing at ${AFH_SOURCE_LABELS[l.source]}</a></p>`);
     }

@@ -22,6 +22,7 @@ import { cityPageByCity } from "@/data/afhCityPages";
 import { cityExists, loadCity } from "@/data/afh/directory";
 import type { AFHFacility } from "@/data/afh/types";
 import { facilityForListing } from "@/data/afhAddressMatch";
+import { financingRouteFor, priceNumber } from "@/data/afhLenders";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 
@@ -160,6 +161,7 @@ const AFHListingDetail = () => {
                   county={cityPageByCity(listing.city)?.county ?? facility?.address.county ?? "King"}
                   beds={facility?.licensedBeds ?? null}
                   lead={listing.marketStatus === "sold" ? "both" : "buyer"}
+                  price={priceNumber(listing.price)}
                   heading="Run the numbers on this home"
                 />
               </div>
@@ -168,6 +170,14 @@ const AFHListingDetail = () => {
                   What is — and is not — being sold
                 </h2>
                 <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed">{whatIsBeingSold(listing)}</p>
+                {financingRouteFor(listing) && (
+                  <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mt-3">
+                    How buyers finance this:{" "}
+                    <Link to={financingRouteFor(listing)!.href} className="text-accent underline underline-offset-4 font-semibold">
+                      {financingRouteFor(listing)!.label} →
+                    </Link>
+                  </p>
+                )}
               </div>
               <AFHBuyerGuides listing={listing} />
               <div className="max-w-3xl">

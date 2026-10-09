@@ -200,3 +200,77 @@ export const SBA_RATE_BOX = {
     { band: "Over $350,000", spread: 3.0 },
   ],
 };
+
+/* ------------------------------------------------------------------------- */
+/**
+ * Which financing lane a listing points its reader to (Oct 9, 2026, owner's
+ * request to put financing next to the price on the listings pages). Used by
+ * the listing card, the crawler HTML (afhInventoryPrerender.ts) and the
+ * listing detail page, so all three always agree.
+ *
+ *   business sale                                   -> SBA 7(a)
+ *   licensed home sold WITH the business            -> SBA 7(a)
+ *   any other property (no business, former, ready,
+ *   potential, business listed separately)          -> residential or commercial
+ *   lease, or anything no longer on the market      -> nothing to finance
+ */
+export interface FinancingRoute {
+  /** Short loan name shown after "How buyers finance this:" */
+  label: string;
+  href: string;
+}
+
+export const FINANCE_GUIDE_PATH = "/afh-club/how-to-finance-an-afh";
+
+export function financingRouteFor(l: {
+  listingType: "realEstate" | "business" | "lease";
+  afhStatus: string;
+  businessIncluded: string;
+  marketStatus: string;
+}): FinancingRoute | null {
+  if (l.listingType === "lease") return null;
+  if (l.marketStatus !== "active" && l.marketStatus !== "pending") return null;
+  const licensed = l.afhStatus === "operating" || l.afhStatus === "licensedNotOperating";
+  if (l.listingType === "business" || (licensed && l.businessIncluded === "yes")) {
+    return { label: "usually an SBA 7(a) loan", href: `${FINANCE_GUIDE_PATH}#lane-sba7a` };
+  }
+  return { label: "a residential or commercial loan", href: `${FINANCE_GUIDE_PATH}#lane-residential` };
+}
+
+/** "$1,600,000" -> 1600000; "Upon request" -> null. */
+export function priceNumber(price: string | undefined): number | null {
+  if (!price) return null;
+  const digits = price.replace(/[^0-9]/g, "");
+  if (!digits) return null;
+  const n = Number(digits);
+  return n >= 50_000 && n <= 50_000_000 ? n : null;
+}
+
+/* ------------------------------------------------------------------------- */
+/**
+ * "How buyers pay for an AFH": the short financing box shown after the
+ * listings on the for-sale index and city pages (Oct 9, 2026). One copy, used
+ * by the React component (AFHBuyerGuides, browsing variant) and the build-time
+ * prerender, so crawlers read the same links people see. Placed AFTER the
+ * listings on purpose: on a phone the homes already start ~3,000px down.
+ */
+export const PAY_FOR_IT = {
+  heading: "How buyers pay for an adult family home",
+  intro:
+    "Which loan fits depends on what is being sold: a house alone, or a licensed business that comes with the house. Lenders also differ in how they count the home's income, which decides how much it can borrow.",
+  links: [
+    { href: FINANCE_GUIDE_PATH, title: "How to Finance an Adult Family Home", why: "Residential, SBA 7(a), SBA 504 or commercial: which loan fits which sale, and lenders that work with AFHs." },
+    { href: "/afh-club/dscr-loans-adult-family-homes", title: "Can You Get a DSCR Loan for an AFH?", why: "Gross income or income after expenses: the same home measured both ways." },
+    { href: "/afh-club/afh-financing-calculator", title: "Occupancy & Financing Calculator", why: "Test whether a home's income covers the loan at a given price and number of residents." },
+  ],
+};
+
+export function payForItHtml(esc: (s: string) => string): string {
+  const items = PAY_FOR_IT.links
+    .map(
+      (g) =>
+        `<li style="margin:0 0 10px;line-height:1.6"><a href="${g.href}" style="color:#1a365d;font-weight:700">${esc(g.title)}</a><br><span style="color:#444">${esc(g.why)}</span></li>`
+    )
+    .join("");
+  return `<section style="margin:32px 0 0"><h2 style="font-size:1.3rem;margin:0 0 8px">${esc(PAY_FOR_IT.heading)}</h2><p style="color:#444;line-height:1.7;margin:0 0 12px">${esc(PAY_FOR_IT.intro)}</p><ul style="padding-left:20px;margin:0">${items}</ul></section>`;
+}

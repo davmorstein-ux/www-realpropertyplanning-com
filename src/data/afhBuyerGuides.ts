@@ -154,7 +154,8 @@ export function guidesForListing(l: Pick<AFHListing, "listingType" | "afhStatus"
 export const GUIDES_FOR_BROWSING: BuyerGuideSet = {
   heading: "Guides for AFH buyers",
   intro: "Written for people buying, selling, or operating an adult family home in Washington.",
-  guides: [G.score, G.labels, G.fieldGuide, G.finance, G.dscr, G.buySell],
+  // Financing guides are not repeated here: the "How buyers pay" box (PAY_FOR_IT in afhLenders.ts) sits just above.
+  guides: [G.score, G.labels, G.fieldGuide, G.buySell],
 };
 
 /** Same links as static HTML, for the build-time prerender that crawlers read. */

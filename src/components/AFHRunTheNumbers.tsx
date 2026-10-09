@@ -26,6 +26,8 @@ interface Props {
   beds?: number | null;
   /** Which calculator to lead with. */
   lead?: "buyer" | "seller" | "both";
+  /** Asking price in dollars, when known. Buyer view: the financing button opens the calculator at this price. */
+  price?: number | null;
   /** Override the heading for the page it sits on. */
   heading?: string;
   /** Accent colour; defaults to AFH Club hunter green. */
@@ -72,7 +74,7 @@ const Btn = ({ to, accent, children }: { to: string; accent: string; children: R
   </Link>
 );
 
-const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent = GREEN }: Props) => {
+const AFHRunTheNumbers = ({ city, county, beds, price, lead = "both", heading, accent = GREEN }: Props) => {
   const band = privatePayBandForPlace(city, county);
   const region = rateRegionForCounty(county);
   const med = medicaidRange(region);
@@ -80,6 +82,10 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent =
   if (band.confirmed) qs.set("market", band.market);
   if (beds && beds >= 1 && beds <= 8) qs.set("beds", String(beds));
   const q = qs.toString() ? `?${qs.toString()}` : "";
+  // Financing calculator: same market and beds, plus the asking price when known.
+  const fq = new URLSearchParams(qs);
+  if (price) fq.set("price", String(price));
+  const finQ = fq.toString() ? `?${fq.toString()}` : "";
   const place = city ?? `${county} County`;
 
   return (
@@ -123,6 +129,7 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent =
 
       <div style={{ display: "grid", gap: 12 }}>
         {lead !== "seller" && <Btn accent={accent} to={`/afh-club/afh-roi-calculator${q}`}>Buying? See your return</Btn>}
+        {lead === "buyer" && <Btn accent={accent} to={`/afh-club/afh-financing-calculator${finQ}`}>{price ? "Can you get a loan at this price?" : "Can you get the loan?"}</Btn>}
         {lead !== "buyer" && <Btn accent={accent} to={`/afh-club/afh-valuation-estimator${q}`}>Selling? See what it's worth</Btn>}
         {lead !== "buyer" && <Btn accent={accent} to="/afh-club/afh-financing-calculator">Can a buyer get the loan at your price?</Btn>}
       </div>
