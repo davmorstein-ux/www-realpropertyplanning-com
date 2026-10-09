@@ -311,10 +311,9 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     profession: "AFH Mortgage Lender",
     professionLines: ["AFH Mortgage", "Lender"],
     why: "Buying the house an adult family home runs in is usually a residential mortgage when the buyer will live there, and a commercial or income-based loan when they will not. The lender has to decide whether to count the home's care income, and how. A loan officer who has financed adult family homes knows which programs fit and what the underwriter will ask for.",
-    /* On hold (owner, Oct 7, 2026) until Seth supplies a sharper headshot; the
-       record above is ready. Put SETH_RADDUE back here to show him. An empty
-       group is not rendered. */
-    people: [],
+    /* Shown from Oct 9, 2026, when Seth supplied a studio headshot (cropped out
+       of its decorative frame to the standard 480px square). */
+    people: [SETH_RADDUE],
   },
   {
     id: "sba-lending",
