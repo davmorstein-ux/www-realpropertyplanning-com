@@ -88,6 +88,7 @@ export const AFH_FLOW_PAGES: FlowPage[] = [
       { label: "Is It Really an Adult Family Home?", href: "/afh-club/afh-property-classifications", note: "Operating, former, AFH-ready or just marketing." },
       { label: "How to Look Up DSHS Violations", href: "/afh-club/violation-history-lookup", note: "Checking a home's inspection and enforcement record." },
       { label: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh", note: "Loan types for the real estate and the business." },
+      { label: "DSCR Loans for Adult Family Homes", href: "/afh-club/dscr-loans-adult-family-homes", note: "How lenders count an AFH's income, gross or after expenses." },
       { label: "Buying as an Individual or Through an LLC", href: "/afh-club/ownership-structure", note: "Decide before you apply; changing later is another change of ownership." },
       { label: "AFH Listings", href: "/afh-club/listings", note: "Homes, businesses and leases for sale in Washington." },
     ],

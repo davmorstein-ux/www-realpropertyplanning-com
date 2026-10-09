@@ -30,6 +30,7 @@ import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
+import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -1936,6 +1937,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Run the numbers — the Occupancy & Financing Calculator (/afh-club/afh-financing-calculator) tests whether the home's income covers the loan at a given price and occupancy.",
     ],
   },
+  [DSCR_LOANS.PATH]: {
+    title: DSCR_LOANS.SEO_TITLE,
+    description: DSCR_LOANS.DESCRIPTION,
+    h1: DSCR_LOANS.TITLE,
+    quickAnswerQ: "Can you use a DSCR loan to buy an adult family home?",
+    quickAnswerA: DSCR_LOANS.SHORT_ANSWER,
+    intro: "How DSCR loans work for a Washington adult family home, and why the income a lender counts matters more than the name of the loan.",
+    sections: dscrPrerenderSections(),
+    faq: DSCR_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: DSCR_LOANS.PUBLISHED, dateModified: DSCR_LOANS.REVIEWED },
+  },
   "/afh-club/afh-financing-calculator": {
     title: "Adult Family Home Occupancy & Financing Calculator | Can a buyer get the loan? | AFH Club",
     description: "See whether a buyer can finance an adult family home at a given price and occupancy. Models net operating income, SBA debt service, and lender coverage (DSCR) by number of residents, with a price-sensitivity chart.",
@@ -1945,7 +1957,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "What a lender checks — the debt service coverage ratio (DSCR): net operating income divided by the annual loan payments. Lenders commonly look for at least 1.25, meaning the home earns $1.25 for every $1.00 of debt payments.",
       "How it works — income is entered per licensed bed (blank means empty), so occupancy is tested resident by resident. The property price is the subject of the test; the business (license, contracts, residents) can be financed in cash, in the same loan, or on seller terms with its own rate and term, because any business loan is paid from the same income.",
       "Results — a plain yes or no on lender approval at each occupancy, the highest price a lender would likely finance, and a chart of coverage across a range of prices. Count only beds with a resident today, confirmed from the home's records; a Medicaid contract alone is not income.",
-      "Related — How to Finance an Adult Family Home in Washington (/afh-club/how-to-finance-an-afh), the AFH ROI Calculator (/afh-club/afh-roi-calculator) and the AFH Valuation Estimator (/afh-club/afh-valuation-estimator).",
+      "Related — How to Finance an Adult Family Home in Washington (/afh-club/how-to-finance-an-afh), DSCR Loans for Adult Family Homes (/afh-club/dscr-loans-adult-family-homes), the AFH ROI Calculator (/afh-club/afh-roi-calculator) and the AFH Valuation Estimator (/afh-club/afh-valuation-estimator).",
     ],
   },
   "/privacy": {

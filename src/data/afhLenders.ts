@@ -74,6 +74,12 @@ export interface Lender {
   note?: string;
   /** ISO date David last confirmed the program by phone; null = not yet confirmed. */
   verified: string | null;
+  /**
+   * Set only for lenders whose own published information bears on DSCR-style or
+   * income-qualified AFH loans. Lenders with this field are listed on
+   * /afh-club/dscr-loans-adult-family-homes, and the text says why. Oct 9, 2026.
+   */
+  dscrNote?: string;
 }
 
 export const LENDERS: Lender[] = [
@@ -120,6 +126,7 @@ export const LENDERS: Lender[] = [
     termsAsOf: "2026-09-18",
     bestFit: "Owner-occupied AFHs, unusual borrower profiles, renovation situations, and files needing alternatives to standard conventional underwriting.",
     verified: null,
+    dscrNote: "Publishes both a DSCR program and an adult family home financing program.",
   },
   {
     name: "Live Oak Bank",
@@ -130,6 +137,7 @@ export const LENDERS: Lender[] = [
     termsAsOf: "2026-09-18",
     bestFit: "Buying an existing AFH business with its real estate; expansion; startup or construction; refinance.",
     verified: null,
+    dscrNote: "An SBA lender with a dedicated senior care team. SBA loans test income after expenses, not gross income.",
   },
   {
     name: "Byline Bank",
@@ -176,6 +184,7 @@ export const LENDERS: Lender[] = [
     bestFit: "Investor purchases and refinances; buyers who do not fit residential owner-occupied or SBA underwriting.",
     note: "Published as an investor product; confirm any owner-occupied use with the bank.",
     verified: null,
+    dscrNote: "Publishes an adult family home loan program for investors. Its income test is not published.",
   },
 ];
 

@@ -63,6 +63,11 @@ const G = {
     title: "How to Finance an Adult Family Home",
     why: "Residential, SBA 7(a), SBA 504 or commercial: which loan fits what is being sold.",
   },
+  dscr: {
+    href: "/afh-club/dscr-loans-adult-family-homes",
+    title: "Can You Get a DSCR Loan for an AFH?",
+    why: "Gross income or income after expenses: how lenders count an AFH's income, and why it changes the answer.",
+  },
   buySell: {
     href: "/afh-club/buying-selling",
     title: "Buying or Selling an AFH",
@@ -117,7 +122,7 @@ export function guidesForListing(l: Pick<AFHListing, "listingType" | "afhStatus"
     return {
       heading: "Before you buy an AFH business",
       intro: "With a business sale, the income is what you are paying for. These guides explain where that income comes from and how much of it a new owner keeps.",
-      guides: [G.fieldGuide, G.care, G.cbhs, G.finance, G.buySell],
+      guides: [G.fieldGuide, G.care, G.cbhs, G.finance, G.dscr, G.buySell],
     };
   }
 
@@ -133,7 +138,7 @@ export function guidesForListing(l: Pick<AFHListing, "listingType" | "afhStatus"
     return {
       heading: "Before you buy an operating AFH",
       intro: "An operating home is a building and an income stream. These guides cover how to verify both.",
-      guides: [G.labels, G.fieldGuide, G.care, G.finance, G.violations],
+      guides: [G.labels, G.fieldGuide, G.care, G.finance, G.dscr, G.violations],
     };
   }
 
@@ -149,7 +154,7 @@ export function guidesForListing(l: Pick<AFHListing, "listingType" | "afhStatus"
 export const GUIDES_FOR_BROWSING: BuyerGuideSet = {
   heading: "Guides for AFH buyers",
   intro: "Written for people buying, selling, or operating an adult family home in Washington.",
-  guides: [G.score, G.labels, G.fieldGuide, G.finance, G.buySell],
+  guides: [G.score, G.labels, G.fieldGuide, G.finance, G.dscr, G.buySell],
 };
 
 /** Same links as static HTML, for the build-time prerender that crawlers read. */

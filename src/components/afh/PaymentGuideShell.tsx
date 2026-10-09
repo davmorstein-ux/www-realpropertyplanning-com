@@ -76,7 +76,8 @@ interface ShellProps {
   children: React.ReactNode;
 }
 
-export const Table = ({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) => (
+/** `wrapFirst`: let the first column wrap (for tables whose first column is a sentence, not a short label). */
+export const Table = ({ head, rows, wrapFirst = false }: { head: string[]; rows: React.ReactNode[][]; wrapFirst?: boolean }) => (
   <div style={{ overflowX: "auto", margin: "16px 0 24px", borderRadius: 10, border: "1px solid #e5e0d6", background: "#fff" }}>
     <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 460 }}>
       <thead>
@@ -84,7 +85,7 @@ export const Table = ({ head, rows }: { head: string[]; rows: React.ReactNode[][
       </thead>
       <tbody>
         {rows.map((r, i) => (
-          <tr key={i}>{r.map((c, j) => <td key={j} style={{ ...gs.td, fontWeight: j === 0 ? 700 : 400, whiteSpace: j === 0 ? "nowrap" : "normal" }}>{c}</td>)}</tr>
+          <tr key={i}>{r.map((c, j) => <td key={j} style={{ ...gs.td, fontWeight: j === 0 ? 700 : 400, whiteSpace: j === 0 && !wrapFirst ? "nowrap" : "normal" }}>{c}</td>)}</tr>
         ))}
       </tbody>
     </table>

@@ -277,6 +277,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Is It Really an Adult Family Home? Reading AFH Listings", href: "/afh-club/afh-property-classifications" },
           { title: "How to Look Up DSHS Violations & Inspection Reports", href: "/afh-club/violation-history-lookup" },
           { title: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh" },
+          { title: "DSCR Loans for Adult Family Homes", href: "/afh-club/dscr-loans-adult-family-homes" },
           { title: "Buying as an Individual or Through an LLC", href: "/afh-club/ownership-structure" },
           { title: "Selling Your AFH Business at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
           { title: "Thinking of Selling Your AFH?", href: "/afh-submit" },

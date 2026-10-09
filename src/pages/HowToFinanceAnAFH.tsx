@@ -8,6 +8,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { LANES, LENDERS, SBA_RATE_BOX, type LaneId } from "@/data/afhLenders";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import ArticleCover from "@/components/ArticleCover";
+import LenderCard from "@/components/afh/LenderCard";
 
 /**
  * How to Finance an Adult Family Home in Washington (Sept 2026).
@@ -39,6 +40,7 @@ const FAQS = [
   { question: "Why do most AFH buyers use an SBA loan instead of a regular mortgage?", answer: "Because an adult family home is a house that runs a licensed business, and that puts it in a gap: most residential programs treat the care business as commercial use and will not count its revenue, while commercial lenders want 25–35% down and will not finance the business portion at all. The SBA guarantee lets a bank accept about 10% down, a 25-year term, and a loan that includes the business. The price is a higher, variable rate." },
   { question: "Can I get a regular home mortgage on an adult family home?", answer: "Sometimes. A handful of Puget Sound lenders write owner-occupied residential mortgages on licensed AFHs for buyers who will live in the home and can qualify on their own income and credit. It is the cheapest money available and the lowest down payment, but it finances the house, not the business, and not every lender will do it." },
   { question: "What is the difference between SBA 7(a) and SBA 504?", answer: "7(a) is the general-purpose loan: one lender, about 10% down, up to 25 years, and it can include the business, working capital and closing costs. 504 pairs a bank with a Certified Development Company to finance owner-occupied real estate at a lower fixed rate, but it cannot finance the business portion." },
+  { question: "Can I use a DSCR loan to buy an adult family home?", answer: "Sometimes. Many rental-property DSCR programs exclude care homes, but some lenders offer DSCR-style loans on adult family homes, and they differ in how they count income: gross resident income, income after expenses, or rent. Ask which before comparing offers. Our guide to DSCR loans for adult family homes (/afh-club/dscr-loans-adult-family-homes) walks through the difference with one home measured three ways." },
   { question: "What does the lender check before approving an AFH loan?", answer: "Whether the home's income covers the loan payment. The lender takes last year's net operating income — after operating costs and, for a buyer who will hire staff, the wages to replace the owners' own hours — and divides it by the annual debt service. Most want at least 1.25 times. Occupancy on the tax returns moves this more than anything else." },
   { question: "Does Real Property Planning recommend these lenders or get paid by them?", answer: `No. The list is informational and unpaid. Each lender is included because it publishes information showing it understands adult family homes; entries marked 'confirmed' are ones ${FEATURED_BROKER.name} has spoken with about their current AFH lending. RPP does not guarantee financing or terms, and a buyer's actual loan depends on the lender and the file.` },
 ];
@@ -141,29 +143,7 @@ const HowToFinanceAnAFH = () => {
                   <div style={{ marginTop: 20 }}>
                     <div style={{ fontSize: 17, fontWeight: 700, color: INK, marginBottom: 10, borderTop: `1px solid ${TEAL}55`, paddingTop: 14 }}>Lenders that publish AFH lending in this lane</div>
                     <div style={{ display: "grid", gap: 12 }}>
-                      {LENDERS.filter((l) => l.lane === lane.id).map((l) => (
-                        <div key={l.name} style={{ background: "#faf8f4", border: "1px solid #dccdce", borderRadius: 10, padding: "14px 16px" }}>
-                          <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, alignItems: "baseline" }}>
-                            <div style={{ fontSize: 20, fontWeight: 700, color: NAVY }}>{l.name} <span style={{ fontSize: 16, fontWeight: 600, color: "#3b3733" }}>· {l.location}</span></div>
-                            <div style={{ fontSize: 15, fontWeight: 700, color: l.verified ? "#15803d" : "#7a4a00", background: l.verified ? "#dcfce7" : "#fef3c7", borderRadius: 999, padding: "3px 10px" }}>
-                              {l.verified ? `Confirmed ${fmtDate(l.verified)}` : "From published information — not yet confirmed"}
-                            </div>
-                          </div>
-                          {l.publishedTerms && <div style={{ fontSize: 17, lineHeight: 1.55, color: INK, marginTop: 8 }}>{l.publishedTerms} <span style={{ color: "#3b3733" }}>(lender's published terms as of {fmtDate(l.termsAsOf)})</span></div>}
-                          <div style={{ fontSize: 17, lineHeight: 1.55, color: INK, marginTop: 6 }}><strong>Best fit:</strong> {l.bestFit}</div>
-                          {l.note && <div style={{ fontSize: 16, color: "#7a4a00", marginTop: 6 }}>{l.note}</div>}
-                          {(l.contacts.length > 0 || l.phone) && (
-                            <div style={{ fontSize: 17, color: INK, marginTop: 8, lineHeight: 1.6 }}>
-                              {l.contacts.map((c) => (
-                                <div key={c.name}>
-                                  <strong>{c.name}</strong>{c.role ? `, ${c.role}` : ""}{c.phone ? ` · ${c.phone}` : ""}{c.nmls ? ` · NMLS ${c.nmls}` : ""}
-                                </div>
-                              ))}
-                              {l.phone && <div>{l.phone}</div>}
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                      {LENDERS.filter((l) => l.lane === lane.id).map((l) => <LenderCard key={l.name} lender={l} />)}
                     </div>
                   </div>
                 )}
@@ -202,6 +182,7 @@ const HowToFinanceAnAFH = () => {
             <p style={p}>Whichever lane, the lender's central question is the same: <strong>will the home's income cover the loan payment?</strong> They take last year's net operating income — after operating costs and, for a buyer who will hire staff, the wages needed to replace the hours the current owners work — and divide it by the annual loan payment. Most want at least <strong>1.25×</strong>: income one and a quarter times the payment.</p>
             <p style={p}>Three things about that test surprise newcomers. It uses <strong>last year's tax returns</strong>, not projections. It counts <strong>every</strong> loan payment on the deal — house, business, seller note — because they are all paid from the same income. And it treats an <strong>owner-operator</strong> who will work in the home very differently from an <strong>investor</strong> who will hire staff; the same home supports a much higher price for the first.</p>
             <p style={p}>Occupancy moves this test more than anything else. Each additional resident adds a full year of rate while adding little to costs. Two residents can be the difference between a lender declining and approving at full price. <Link to="/afh-club/afh-financing-calculator" style={{ color: TEAL, fontWeight: 700 }}>Our Occupancy &amp; Financing Calculator</Link> shows this for any home.</p>
+            <p style={p}>Some lenders, including DSCR programs, count income differently: gross resident income rather than income after expenses, averaged over two years. The same home can pass one test easily and only just pass the other. <Link to="/afh-club/dscr-loans-adult-family-homes" style={{ color: TEAL, fontWeight: 700 }}>DSCR loans for adult family homes</Link> explains the difference and what to ask.</p>
 
             {/* Checklists */}
             <div className="fin-two" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 8 }}>
