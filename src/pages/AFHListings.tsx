@@ -1,4 +1,5 @@
 import React from "react";
+import AFHStepsBar from "@/components/AFHStepsBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -151,6 +152,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
           document flow. No compensating top padding is needed here — adding it
           produced a large empty band above the page heading. */}
       <main id="main-content" style={{ paddingTop: "0" }}>
+        <AFHStepsBar current={1} />
         {/* ── HEADER ── */}
         {/* NOTE: this div is #main-content > *:first-child, which index.css
             forces to padding-top: 0 / padding-bottom: 0 with !important.

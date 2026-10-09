@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import AFHStepsBar from "@/components/AFHStepsBar";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -9,7 +10,6 @@ import PageFAQ from "@/components/PageFAQ";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import { countyIndex } from "@/data/afh/directory";
 import IntentCTA from "@/components/IntentCTA";
-import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
 import { AFH_TOOL_COLOR, CK_ICONS, CK_GOLD_ICON } from "@/components/calc/CalcKit";
 import { shade } from "@/lib/careCostMath";
@@ -232,6 +232,7 @@ const AFHPropertyScore = () => {
       <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
       <Header />
       <main>
+        <AFHStepsBar current={2} />
         <div className="aps-noprint" style={{ background: "#faf8f4", padding: "40px 24px 36px", borderBottom: `3px solid ${PLUM}` }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 22 }}><BackToCalculators accent={PLUM} /></div>
@@ -245,7 +246,7 @@ const AFHPropertyScore = () => {
         </div>
 
         <div className="aps-root" style={{ background: "#faf8f4", padding: "2rem 1rem 3rem" }}>
-          <div ref={topRef} style={{ scrollMarginTop: "calc(var(--header-height, 120px) + 12px)" }} />
+          <div ref={topRef} style={{ scrollMarginTop: "calc(var(--header-height, 120px) + var(--afh-stepsbar-h, 0px) + 12px)" }} />
 
           {/* ---------------- INTRO ---------------- */}
           {view === "intro" && (
@@ -493,9 +494,6 @@ const AFHPropertyScore = () => {
           <PageFAQ faqs={FAQS} heading="AFH Property Score: Common Questions" eyebrow="Frequently Asked Questions" id="afh-property-score" />
           <BackToAFHClub />
         </div>
-        <section style={{ padding: "1.25rem 1.5rem 0" }}>
-          <AFHBuyerSteps current={2} compact />
-        </section>
         <IntentCTA
           heading="Want a second opinion on this property?"
           body="Send the address and what the score flagged, and be pointed to what to investigate before making an offer — licensing fit, layout, and the condition items that change value."

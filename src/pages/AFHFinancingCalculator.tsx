@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import AFHStepsBar from "@/components/AFHStepsBar";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +11,6 @@ import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPriv
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcFoot, AFH_TOOL_COLOR, CK_GOLD } from "@/components/calc/CalcKit";
 import IntentCTA from "@/components/IntentCTA";
-import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 
 /**
  * AFH Occupancy & Financing Calculator (Sept 2026).
@@ -244,6 +244,7 @@ const AFHFinancingCalculator = () => {
       />
       <Header />
       <main>
+        <AFHStepsBar current={5} />
         <div style={{ background: "#faf8f4", padding: "48px 24px 36px", borderBottom: `3px solid ${TEAL}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
@@ -588,9 +589,6 @@ const AFHFinancingCalculator = () => {
         ` }} />
         <PageFAQ faqs={FAQS} heading="Financing an Adult Family Home: Common Questions" eyebrow="Frequently Asked Questions" id="afh-financing" />
         <BackToAFHClub />
-        <section style={{ padding: "1.25rem 1.5rem 0" }}>
-          <AFHBuyerSteps current={5} compact />
-        </section>
         <IntentCTA
           heading="Testing whether the loan will carry?"
           body="Occupancy assumptions, SBA terms, and the CHOW timeline decide whether a purchase works. Ask how lenders will read this home before you go to them."

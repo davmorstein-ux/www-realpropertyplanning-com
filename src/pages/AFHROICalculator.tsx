@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AFHStepsBar from "@/components/AFHStepsBar";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -8,7 +9,6 @@ import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
-import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
 import { CalcShell, CalcSection, CalcField, CalcSegment, CalcHero, CalcStats, CalcBars, CalcWaiting, CalcFoot, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
@@ -92,6 +92,7 @@ const AFHROICalculator = () => {
       />
       <Header />
       <main>
+        <AFHStepsBar current={3} />
         <div style={{ background: "#faf8f4", padding: "48px 24px 36px", borderBottom: `3px solid ${C}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
@@ -215,9 +216,6 @@ const AFHROICalculator = () => {
         </div>
 
         <BackToAFHClub />
-        <section style={{ padding: "1.25rem 1.5rem 0" }}>
-          <AFHBuyerSteps current={3} compact />
-        </section>
         <IntentCTA
           heading="Considering an AFH purchase?"
           body="The numbers here are only as good as the census and rates behind them. Ask how to separate the real estate value from the business opportunity before you commit."
