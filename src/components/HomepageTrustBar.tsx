@@ -37,7 +37,7 @@ const HomepageTrustBar = () => (
     <style dangerouslySetInnerHTML={{ __html: `
       /* Quiet, but obviously clickable (David, Sept 23): each figure is a
          bordered pill with an arrow, on a cream hairline row. */
-      .rpp-trustbar { background: transparent; border-top: 1px solid #e6e0d6; border-bottom: 1px solid #e6e0d6; padding: 1rem 1.5rem; }
+      .rpp-trustbar { background: transparent; padding: 1rem 1.5rem; } /* hairlines removed in the calm pass, Oct 8 2026: space separates sections */
       .rpp-trustbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
       .rpp-trustbar li { margin: 0; }
       .rpp-trustbar h2.rpp-trustbar-h.rpp-trustbar-h { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 24px !important; font-weight: 700 !important; line-height: 1.3 !important; color: #B0352A !important; text-align: center; margin: 0 0 12px !important; }

@@ -596,12 +596,13 @@ const RPPHomeV3 = () => {
               .rpp-coc-card.rpp-coc-card {
                 display: block;
                 background: #ffffff;
-                border: 3px solid #7f1d1d;
-                border-radius: 12px;
+                /* Calm pass (owner, Oct 8, 2026): hairline border, no dark red
+                   frame, no shadow. The filled button below still marks it as
+                   clickable. */
+                border: 1px solid #e2dbcf;
+                border-radius: 14px;
                 padding: 1.35rem 1.6rem;
-                /* Same lift as the funnel tiles above, so this card belongs
-                   to the same visual system instead of sitting flat. */
-                box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+                box-shadow: none;
               }
               /* The whole card is a link, so a global anchor rule underlines
                  every descendant. Strip it explicitly, everywhere. */
@@ -622,7 +623,7 @@ const RPPHomeV3 = () => {
                 font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 16px !important;
                 font-weight: 700;
-                color: #25597e;
+                color: #B0352A;
                 line-height: 1.3;
                 margin-bottom: 2px;
               }
@@ -630,7 +631,7 @@ const RPPHomeV3 = () => {
                 font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 30px;
                 font-weight: 700;
-                color: #7f1d1d;
+                color: #B0352A;
                 line-height: 1.15;
                 white-space: nowrap;
               }
@@ -664,7 +665,8 @@ const RPPHomeV3 = () => {
                 font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 17px !important;
                 font-weight: 700;
-                color: var(--opt-color, #25597e) !important;
+                /* Calm pass (Oct 8, 2026): one colour for all six, not six hues. */
+                color: #272421 !important;
                 line-height: 1.35;
               }
               /* Figure carries the option's colour too, so name and number
@@ -674,7 +676,7 @@ const RPPHomeV3 = () => {
                 font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 18px !important;
                 font-weight: 700;
-                color: var(--opt-color, #272421) !important;
+                color: #272421 !important;
                 line-height: 1.35;
                 white-space: nowrap;
               }
@@ -793,7 +795,7 @@ const RPPHomeV3 = () => {
             ` }} />
 
             {/* ── Ask a question (Oct 8, 2026): answers from the guides themselves ── */}
-            <div style={{ margin: "0 0 2.5rem" }}>
+            <div style={{ margin: "0 0 4.5rem" }}>
               <AskBox />
             </div>
 
@@ -819,7 +821,7 @@ const RPPHomeV3 = () => {
                       }}
                     >
                       <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
-                      <span style={{ color: "#7f1d1d" }}>{t("costOfCare.headingPart2")}</span>
+                      <span style={{ color: "#14283a" }}>{t("costOfCare.headingPart2")}</span>
                     </h3>
 
                     {/* The range sits with the heading rather than in its own

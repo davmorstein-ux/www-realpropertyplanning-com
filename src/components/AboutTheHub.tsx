@@ -51,15 +51,18 @@ import { Link } from "react-router-dom";
  */
 const AboutTheHub = () => {
   return (
-    <div style={{ margin: "2.25rem 0 2.5rem" }}>
+    <div style={{ margin: "3.5rem 0 3.5rem" }}>
       <style dangerouslySetInnerHTML={{ __html: `
+        /* Oct 8, 2026 (owner, after comparing Rocket Mortgage's homepage): no
+           framed card. The section sits on a full-width soft band; the band is
+           drawn with a spread shadow clipped to the sides, so the text keeps the
+           page's column width. */
         .rpp-abouthub-card.rpp-abouthub-card {
           display: block;
-          background: #ffffff;
-          border: 3px solid #d6cdbf;
-          border-radius: 12px;
-          padding: 1.6rem 1.8rem 1.5rem;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+          background: #f1ede5;
+          box-shadow: 0 0 0 100vmax #f1ede5;
+          clip-path: inset(0 -100vmax);
+          padding: 2.75rem 0;
         }
 
         .rpp-abouthub-lead.rpp-abouthub-lead {
@@ -217,6 +220,21 @@ const AboutTheHub = () => {
             margin: 1rem 0 1.1rem;
           }
         }
+
+        /* CALM PASS (Oct 8, 2026): bolder lead, and the three points as flat,
+           NOT clickable panels with a small label (no shadow, arrow or hover,
+           so they never pass for buttons beside the guide cards below). */
+        .rpp-abouthub-lead.rpp-abouthub-lead.rpp-abouthub-lead { font-size: clamp(22px, 2.2vw, 28px) !important; font-weight: 600 !important; color: #14283a !important; line-height: 1.35 !important; }
+        .rpp-abouthub-name.rpp-abouthub-name.rpp-abouthub-name { color: #B0352A !important; font-weight: 700 !important; }
+        .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 0.5rem; }
+        .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list li { padding: 18px 20px; background: #ffffff; border: 1px solid #e2dbcf; border-radius: 12px; font-size: 19px !important; font-weight: 600; color: #14283a; line-height: 1.4; }
+        .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list li::before { content: none; display: none; }
+        .rpp-abouthub-list .rpp-abouthub-tag.rpp-abouthub-tag { display: block; font-size: 14px !important; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B0352A !important; margin-bottom: 6px; }
+        .rpp-abouthub-card .rpp-abouthub-why.rpp-abouthub-why { font-size: 18px; color: #2b2825; border-top-color: #d9d1c3; margin-top: 1.5rem !important; }
+        @media (max-width: 760px) {
+          .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list { grid-template-columns: 1fr; }
+          .rpp-abouthub-card.rpp-abouthub-card { padding: 2rem 0; }
+        }
       ` }} />
 
       <div className="rpp-abouthub-card rpp-abouthub-card">
@@ -228,9 +246,9 @@ const AboutTheHub = () => {
         <hr className="rpp-abouthub-rule rpp-abouthub-rule" />
 
         <ul className="rpp-abouthub-list rpp-abouthub-list">
-          <li>A free, independent resource for Washington families</li>
-          <li>Plain-language answers on real estate, housing, and planning</li>
-          <li>A directory of attorneys, fiduciaries, and care professionals</li>
+          <li><span className="rpp-abouthub-tag rpp-abouthub-tag">Free &amp; independent</span>A free, independent resource for Washington families</li>
+          <li><span className="rpp-abouthub-tag rpp-abouthub-tag">Plain answers</span>Plain-language answers on real estate, housing, and planning</li>
+          <li><span className="rpp-abouthub-tag rpp-abouthub-tag">Who to call</span>A directory of attorneys, fiduciaries, and care professionals</li>
         </ul>
 
         {/* Why it exists — the bridge a visitor otherwise never gets (Sept 24

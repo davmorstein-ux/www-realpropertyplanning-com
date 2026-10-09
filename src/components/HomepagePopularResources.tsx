@@ -7,25 +7,25 @@ const resources = [
     title: "Executor's 10-Step Checklist",
     href: "/resources/washington-executors-10-step-checklist",
     icon: ClipboardCheck,
-    accent: "#8A4214",
+    accent: "#1B3A6B",
   },
   {
     title: "How Probate Real Estate Works",
     href: "/guides/how-probate-real-estate-works",
     icon: Scale,
-    accent: "#246044",
+    accent: "#1B3A6B",
   },
   {
     title: "Senior Housing & Care Options",
     href: "/understanding-housing-care-options",
     icon: HeartHandshake,
-    accent: "#25597e",
+    accent: "#1B3A6B",
   },
   {
     title: "What to Do With an Inherited House",
     href: "/guides/inherited-house-washington",
     icon: KeyRound,
-    accent: "#662D56",
+    accent: "#1B3A6B",
   },
 ];
 
@@ -120,47 +120,35 @@ const HomepagePopularResources = () => {
         text-decoration: none !important;
       }
 
-      /* 3D RESOURCE TILES (Oct 4, 2026, owner's 3D mock-ups), built in CSS so
-         the titles stay live text. A thick frame in the accent colour with a
-         light-to-dark sheen (gradient border on a cream panel), a two-layer
-         drop shadow, a raised icon disc and a bevelled button. Lifts on hover.
+      /* CALM TILES (owner, Oct 8, 2026, after comparing Rocket Mortgage's
+         homepage: "simple, open, professional"). Replaces the Oct 4 3D frames:
+         one navy accent on all four cards, white card with a hairline border,
+         and a solid navy "Read guide" button so the cards still read as links
+         (the owner's check on the first mock-up, where plain text links didn't).
          The doubled class beats the flat .rpp-pr-card rules above. */
       .rpp-pr-3d.rpp-pr-3d {
-        border: 7px solid transparent !important;
-        border-radius: 18px !important;
-        background:
-          linear-gradient(#faf7f1, #f3eee5) padding-box,
-          linear-gradient(160deg,
-            color-mix(in srgb, var(--pr-accent) 62%, #ffffff) 0%,
-            var(--pr-accent) 38%,
-            color-mix(in srgb, var(--pr-accent) 70%, #000000) 100%) border-box !important;
-        box-shadow:
-          inset 0 2px 0 rgba(255,255,255,0.9),
-          inset 0 0 0 1px rgba(0,0,0,0.10),
-          0 2px 3px rgba(0,0,0,0.12),
-          0 14px 26px -8px rgba(0,0,0,0.32) !important;
+        border: 1px solid #e2dbcf !important;
+        border-radius: 14px !important;
+        background: #ffffff !important;
+        box-shadow: none !important;
         padding: 1.75rem 1.25rem 1.5rem !important;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease !important;
       }
       .rpp-pr-3d.rpp-pr-3d:hover, .rpp-pr-3d.rpp-pr-3d:focus-visible {
-        transform: translateY(-4px) !important;
-        box-shadow:
-          inset 0 2px 0 rgba(255,255,255,0.9),
-          inset 0 0 0 1px rgba(0,0,0,0.10),
-          0 4px 6px rgba(0,0,0,0.14),
-          0 22px 36px -10px rgba(0,0,0,0.40) !important;
+        transform: translateY(-2px) !important;
+        border-color: #1B3A6B !important;
+        box-shadow: 0 10px 24px -14px rgba(27, 58, 107, 0.55) !important;
       }
       .rpp-pr-3d.rpp-pr-3d::before { display: none !important; }
       .rpp-pr-3d .rpp-pr-card-icon.rpp-pr-card-icon {
         width: 64px !important;
         height: 64px !important;
-        background: color-mix(in srgb, var(--pr-accent) 14%, #ffffff) !important;
-        box-shadow:
-          inset 0 2px 0 rgba(255,255,255,0.9),
-          inset 0 -2px 0 rgba(0,0,0,0.08),
-          0 3px 6px rgba(0,0,0,0.16) !important;
+        background: #eef2f7 !important;
+        color: #1B3A6B !important;
+        box-shadow: none !important;
       }
       .rpp-pr-3d .rpp-pr-card-text.rpp-pr-card-text {
-        color: color-mix(in srgb, var(--pr-accent) 55%, #000000) !important;
+        color: #14283a !important;
         font-size: 21px !important;
       }
       .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta {
@@ -169,31 +157,25 @@ const HomepagePopularResources = () => {
         font-size: 15px !important;
         padding: 12px 16px !important;
         border-radius: 10px !important;
-        background-image: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(0,0,0,0.14)) !important;
-        box-shadow:
-          inset 0 1px 0 rgba(255,255,255,0.35),
-          inset 0 -2px 0 rgba(0,0,0,0.25),
-          0 2px 4px rgba(0,0,0,0.22) !important;
-        text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+        background: #1B3A6B !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         white-space: nowrap !important;
+        gap: 12px !important;
       }
       .rpp-pr-3d .rpp-pr-card-icon svg { width: 32px !important; height: 32px !important; }
-      /* Circled arrow, matching the "What brings you here" tiles (owner,
-         Oct 4, 2026). Replaces the sitewide ::after arrow on these buttons. */
-      .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta { gap: 12px !important; }
       .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta::after { content: none !important; display: none !important; }
       .rpp-pr-3d .rpp-pr-arrow.rpp-pr-arrow {
         flex: 0 0 30px !important; width: 30px !important; height: 30px !important; min-width: 30px !important;
         padding: 0 !important; margin: 0 !important; box-sizing: border-box;
         border-radius: 999px; border: 2px solid #ffffff; color: #ffffff;
         display: inline-flex; align-items: center; justify-content: center;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.25);
         transition: background-color 0.18s ease, color 0.18s ease;
       }
       .rpp-pr-3d:hover .rpp-pr-arrow.rpp-pr-arrow, .rpp-pr-3d:focus-visible .rpp-pr-arrow.rpp-pr-arrow {
-        background-color: #ffffff; color: var(--pr-accent);
+        background-color: #ffffff; color: #1B3A6B;
       }
 
       /* Browse all — a solid button, so it reads as the primary next step
