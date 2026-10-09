@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
  * on; omit it for the overview on the calculators and buying pages.
  */
 export const AFH_BUYER_STEPS = [
-  { n: 1, label: "Find a property", href: "/afh-club/listings", hint: "Current listings and what has sold" },
-  { n: 2, label: "Score the property", href: "/afh-club/afh-property-score", hint: "Layout, licensing fit, condition" },
-  { n: 3, label: "Estimate revenue", href: "/afh-club/afh-roi-calculator", hint: "Census, rates, and operating margin" },
-  { n: 4, label: "Estimate value", href: "/afh-club/afh-valuation-estimator", hint: "Real estate and business, separately" },
-  { n: 5, label: "Test the financing", href: "/afh-club/afh-financing-calculator", hint: "Occupancy needed to carry the loan" },
-  { n: 6, label: "Get connected", href: "/contact?reason=afh-buy-sell", hint: "Talk it through before you make an offer" },
+  { n: 1, label: "Find a property", href: "/afh-club/listings", hint: "Current listings and what has sold", icon: "/afh-step-find.webp" },
+  { n: 2, label: "Score the property", href: "/afh-club/afh-property-score", hint: "Layout, licensing fit, condition", icon: "/afh-step-score.webp" },
+  { n: 3, label: "Estimate revenue", href: "/afh-club/afh-roi-calculator", hint: "Census, rates, and operating margin", icon: "/afh-step-revenue.webp" },
+  { n: 4, label: "Estimate value", href: "/afh-club/afh-valuation-estimator", hint: "Real estate and business, separately", icon: "/afh-step-value.webp" },
+  { n: 5, label: "Test the financing", href: "/afh-club/afh-financing-calculator", hint: "Occupancy needed to carry the loan", icon: "/afh-step-financing.webp" },
+  { n: 6, label: "Get connected", href: "/contact?reason=afh-buy-sell", hint: "Talk it through before you make an offer", icon: "/afh-step-connect.webp" },
 ] as const;
 
 /* Oct 8, 2026: AFH Club hunter green replaces the retired maroon (#0a5648), and the
@@ -27,6 +27,7 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
         return (
           <li key={s.n} className={isCurrent ? "is-current" : undefined} aria-current={isCurrent ? "step" : undefined}>
             <Link to={s.href} className="bg-transparent">
+              {!compact && <img className="rpp-afhsteps-ico" src={s.icon} alt="" width={120} height={120} loading="lazy" decoding="async" />}
               <span className="rpp-afhsteps-n">{s.n}</span>
               <span className="rpp-afhsteps-label">{s.label}</span>
               {!compact && <span className="rpp-afhsteps-hint">{s.hint}</span>}
@@ -40,6 +41,10 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
       /* Some pages lay out nav as a flex row; this one is always a block with the title on top (Oct 8, 2026). */
       nav.rpp-afhsteps.rpp-afhsteps { display: block !important; width: 100%; }
       .rpp-afhsteps * { overflow-wrap: normal; word-break: normal; }
+      /* Step icons (owner's art, Oct 8, 2026), full band only, not the compact bar.
+         Files are public/afh-step-<step>.webp, 240px square, trimmed and centred so
+         all six sit at the same scale; any replacement needs the same treatment. */
+      .rpp-afhsteps img.rpp-afhsteps-ico { display: block; width: 84px; height: 84px; object-fit: contain; margin: 0 auto 4px; }
       .rpp-afhsteps p.rpp-afhsteps-title { display: block; width: 100%; max-width: none !important; text-align: center !important; }
       /* index.css squeezes link line-height to 16px; give the box text room. */
       .rpp-afhsteps ol > li > a { line-height: 1.3 !important; }
@@ -63,8 +68,10 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
       @media (max-width: 599px) {
         .rpp-afhsteps:not(.rpp-afhsteps-compact) ol { grid-template-columns: 1fr; gap: 8px; }
         .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { display: grid !important; grid-template-columns: 32px 1fr; column-gap: 12px; row-gap: 2px; align-items: center; text-align: left; padding: 12px 14px !important; }
-        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-n { grid-row: 1 / span 2; }
-        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-label, .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-hint { grid-column: 2; text-align: left; }
+        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-n { grid-row: 1 / span 2; grid-column: 2; }
+        .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { grid-template-columns: 56px 32px 1fr !important; }
+        .rpp-afhsteps img.rpp-afhsteps-ico { width: 56px; height: 56px; margin: 0; grid-row: 1 / span 2; grid-column: 1; }
+        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-label, .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-hint { grid-column: 3; text-align: left; }
       }
       .rpp-afhsteps-compact ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
       @media (min-width: 700px) { .rpp-afhsteps-compact ol { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
