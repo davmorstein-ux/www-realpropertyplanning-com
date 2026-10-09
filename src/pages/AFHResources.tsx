@@ -87,6 +87,12 @@ const TOPICS = [
     description: "Residential, SBA 7(a), SBA 504, or commercial — which loan fits, what the lender checks, and lenders that work with adult family homes.",
   },
   {
+    title: "Can You Get a DSCR Loan for an AFH?",
+    href: "/afh-club/dscr-loans-adult-family-homes",
+    img: "/afh-dscr-loans-cover.webp",
+    description: "How lenders count an adult family home's income, gross or after expenses, why it changes the answer, and what to ask before you borrow.",
+  },
+  {
     title: "Which Tier? The AFH Payment Field Guide",
     href: "/afh-club/afh-payment-field-guide",
     img: "/afh-field-guide-cover-v2.webp",
@@ -297,6 +303,12 @@ const AFHResources = () => (
             href: "/afh-club/how-to-finance-an-afh",
             img: "/afh-how-to-finance-cover.webp",
             placeholder: "#2f4f4a",
+          },
+          {
+            title: "Can You Get a DSCR Loan for an AFH?",
+            href: "/afh-club/dscr-loans-adult-family-homes",
+            img: "/afh-dscr-loans-cover.webp",
+            placeholder: "#1b2a4a",
           },
           {
             title: "Which Tier? The AFH Payment Field Guide",

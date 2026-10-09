@@ -47,9 +47,8 @@ export const DSCR_LOANS = {
     "Sometimes. A DSCR loan qualifies a purchase mainly on the income the home produces rather than the buyer's paycheck, and some lenders offer it on adult family homes. Many ordinary rental-property DSCR programs exclude care homes. Lenders that do lend also count an AFH's income in different ways: some use gross resident income averaged over two years, while SBA and commercial lenders use income after expenses. The same home can pass one test easily and only just pass the other, so ask which income a lender counts before comparing offers.",
   PUBLISHED: "2026-10-09",
   REVIEWED: "2026-10-09",
-  /** Cover art. Until David supplies afh-dscr-loans-cover.webp, the How to Finance cover stands in on cards. */
-  COVER: null as string | null,
-  CARD_IMAGE_FALLBACK: "/afh-how-to-finance-cover.webp",
+  /** Cover art (David's, Oct 9, 2026; bottom captions replaced by Claude with neutral wording at his request). 1086x1448. */
+  COVER: "/afh-dscr-loans-cover.webp" as string | null,
 } as const;
 
 /* ------------------------------------------------------------------------- */
