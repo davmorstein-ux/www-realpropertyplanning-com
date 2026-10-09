@@ -89,7 +89,7 @@ const TOPICS = [
   {
     title: "Can You Get a DSCR Loan for an AFH?",
     href: "/afh-club/dscr-loans-adult-family-homes",
-    img: "/afh-dscr-loans-cover.webp",
+    img: "/afh-dscr-loans-cover-v2.webp",
     description: "How lenders count an adult family home's income, gross or after expenses, why it changes the answer, and what to ask before you borrow.",
   },
   {
@@ -307,7 +307,7 @@ const AFHResources = () => (
           {
             title: "Can You Get a DSCR Loan for an AFH?",
             href: "/afh-club/dscr-loans-adult-family-homes",
-            img: "/afh-dscr-loans-cover.webp",
+            img: "/afh-dscr-loans-cover-v2.webp",
             placeholder: "#1b2a4a",
           },
           {
