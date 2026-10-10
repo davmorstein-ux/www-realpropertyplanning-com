@@ -11,6 +11,8 @@ import invisionLogo from "@/assets/providers/invision-marketing-logo.webp";
 import rachaelScottPhoto from "@/assets/providers/rachael-scott-ballpark-realty-headshot.webp";
 import ballparkRealtyLogo from "@/assets/providers/ballpark-realty-logo.webp";
 import sethRadduePhoto from "@/assets/providers/seth-raddue-tristar-finance-headshot.webp";
+import fengquanSongPhoto from "@/assets/providers/fengquan-song-aura-living-care-headshot.webp";
+import auraLivingCareLogo from "@/assets/providers/aura-living-care-logo.webp";
 import tristarLogo from "@/assets/providers/tristar-finance-home-loans-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
@@ -234,6 +236,28 @@ export const SETH_RADDUE: AFHProfessional = {
   bio: "",
 };
 
+/* Added to this directory Oct 9, 2026 at the owner's request. Details are
+   the ones already published on /afh-club/management-companies since June 2026
+   (phone, email, website, Seattle); headshot recropped from that page's photo.
+   That page still carries its own copy of these details. */
+export const FENGQUAN_SONG: AFHProfessional = {
+  id: "fengquan-song",
+  name: "Fengquan Song",
+  title: "Owner",
+  company: "Aura Living Care",
+  photo: fengquanSongPhoto,
+  photoAlt: "Photo of Fengquan Song, owner of Aura Living Care",
+  logo: auraLivingCareLogo,
+  logoAlt: "Aura Living Care logo",
+  phone: "(214) 205-4091",
+  email: "aura@auralivingcare.com",
+  website: "https://auralivingcare.com",
+  specialty: "Adult family home management — Aura Living Care, Seattle",
+  bio: "",
+  morePath: "/afh-club/management-companies",
+  moreLabel: "AFH management companies",
+};
+
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
@@ -316,6 +340,14 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     people: [SETH_RADDUE],
   },
   {
+    id: "afh-management",
+    label: "AFH management",
+    profession: "AFH Management",
+    professionLines: ["AFH", "Management"],
+    why: "An owner who does not live in the home, or who owns more than one, often hires a management company to handle staffing, scheduling, DSHS compliance and day-to-day operations. For a buyer, a manager with a track record can be the difference between an investment that runs and one that needs the owner every day.",
+    people: [FENGQUAN_SONG],
+  },
+  {
     id: "sba-lending",
     label: "SBA lending",
     profession: "SBA Loan Specialist",
@@ -336,12 +368,14 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
 /**
  * Order. Sept 27, 2026 (after an outside audit noted the featured broker always
  * came first): groups A to Z by label, people A to Z by last name.
- * Oct 9, 2026, owner's decision: three groups lead, in this order: the AFH real
- * estate broker, the AFH mortgage lender (Seth C. Raddue, TriStar Finance), then
- * the business broker (Rachael Scott, Ballpark Realty). Every other group
- * follows A to Z. Applied here so every page that reads these lists agrees.
+ * Oct 9, 2026, owner's decision: five groups lead, in this order. First row
+ * (three across on desktop): the AFH real estate broker, the AFH mortgage
+ * lender (Seth C. Raddue, TriStar Finance), AFH management (Fengquan Song,
+ * Aura Living Care). Second row starts with the business broker (Rachael
+ * Scott, Ballpark Realty), then insurance (Kaylin Cottingham-Wilson). Every
+ * other group follows A to Z. Applied here so every page that reads these lists agrees.
  */
-const LEAD_GROUPS = ["real-estate", "mortgage-lending", "business-brokerage"];
+const LEAD_GROUPS = ["real-estate", "mortgage-lending", "afh-management", "business-brokerage", "business-insurance"];
 const groupRank = (g: AFHProfessionalGroup) => {
   const i = LEAD_GROUPS.indexOf(g.id);
   return i === -1 ? LEAD_GROUPS.length : i;
