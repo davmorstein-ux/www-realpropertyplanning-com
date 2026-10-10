@@ -132,7 +132,7 @@ const AFHManagementCompanies = () => {
             </p>
             <p style={gs.p}>
               <strong>Where it goes:</strong> licensed homes email the form and attachments to RCSBOA@dshs.wa.gov, as the form itself directs.{" "}
-              <a href="https://www.dshs.wa.gov/sites/default/files/forms/word/27-226.docx" target="_blank" rel="noopener noreferrer" style={gs.link}>Download form DSHS 27-226</a>.
+              <a href="https://www.dshs.wa.gov/media/24326/download?inline" target="_blank" rel="noopener noreferrer" style={gs.link}>Open form DSHS 27-226</a>.
             </p>
 
             <h2 style={gs.h2}>Still to confirm with DSHS</h2>

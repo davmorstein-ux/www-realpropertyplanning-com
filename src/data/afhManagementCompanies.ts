@@ -81,7 +81,7 @@ export const AFH_MGMT_SOURCES: { cite: string; title: string; href: string }[] =
   { cite: "WAC 388-76-10040", title: "Qualified person must live in or be on-site", href: WAC("388-76-10040") },
   { cite: "WAC 388-76-10130", title: "Qualifications — provider, entity representative, and resident manager", href: WAC("388-76-10130") },
   { cite: "WAC 388-76-10037", title: "Multiple adult family homes — additional homes", href: WAC("388-76-10037") },
-  { cite: "Form DSHS 27-226", title: "Management Agreement: Attestation Information and Attachments", href: "https://www.dshs.wa.gov/sites/default/files/forms/word/27-226.docx" },
+  { cite: "Form DSHS 27-226", title: "Management Agreement: Attestation Information and Attachments", href: "https://www.dshs.wa.gov/media/24326/download?inline" },
 ];
 
 /** The two jobs people both call "manager". */
