@@ -50,6 +50,40 @@ const FitEmail = ({ email }: { email: string }) => {
   );
 };
 
+/* The license line (Oct 10, 2026): one line that steps down from its normal size to no smaller
+   than 10px, the same way FitEmail does, because "NMLS #90509 · Company NMLS #43583" wrapped onto
+   a hidden second line in cards narrower than ~260px. */
+const FitLine = ({ text }: { text: string }) => {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    const box = el?.parentElement;
+    if (!el || !box) return;
+    // index.css forces spans inside cards to display:block and to wrap, so override with !important.
+    el.style.setProperty("display", "inline-block", "important");
+    el.style.setProperty("white-space", "nowrap", "important");
+    el.style.setProperty("line-height", "16px", "important");
+    const start = parseFloat(getComputedStyle(box).fontSize) || 13;
+    const fit = () => {
+      let size = start;
+      el.style.setProperty("font-size", `${size}px`, "important");
+      while (el.scrollWidth > box.clientWidth && size > 10) {
+        size -= 0.5;
+        el.style.setProperty("font-size", `${size}px`, "important");
+      }
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(box);
+    return () => ro.disconnect();
+  }, [text]);
+  return (
+    <span ref={ref}>
+      {text}
+    </span>
+  );
+};
+
 const PersonCard = ({ person, professionLines }: { person: AFHProfessional; professionLines: [string, string] }) => {
   /* The card shows just the domain ("twomaidscleaning.com"); the link still goes to the full address. A path made it too long for the card. */
   const site = person.website?.replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
@@ -67,7 +101,7 @@ const PersonCard = ({ person, professionLines }: { person: AFHProfessional; prof
       <div className="rpp-afhpro-card-name">
         {person.morePath ? <Link to={person.morePath} className="bg-transparent">{person.name}</Link> : person.name}
       </div>
-      <div className="rpp-afhpro-card-license">{person.license || "\u00a0"}</div>
+      <div className="rpp-afhpro-card-license">{person.license ? <FitLine text={person.license} /> : "\u00a0"}</div>
       <div className="rpp-afhpro-card-line rpp-afhpro-card-phone">
         {person.phone ? <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a> : "\u00a0"}
       </div>
@@ -345,21 +379,30 @@ const AFHFindProfessional = () => (
         /* One card per row on phones (David, Sept 27): at two columns the names, emails and
            websites were cut off. Two columns from 480px, three from 768 and up — never four
            (David, Sept 27): a lone card on the last row is fine; every line must show. */
-        .rpp-afhpro-grid { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); margin-top: 8px; }
-        @media (min-width: 480px) { .rpp-afhpro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-        @media (min-width: 768px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-        @media (min-width: 960px) { .rpp-afhpro-grid { gap: 16px; } }
-        /* Four across ONLY for a section of exactly four, and only from 1100px (Oct 10, 2026):
-           the owner asked for the Operate row as four boxes. This overrides the Sept 27
-           "never four" rule for that row alone; at 1100+ each card is ~245px+ and every
-           line still shows (Nicole's long email fits at 12-13px). Below 1100 it stays 2 x 2. */
-        @media (min-width: 768px) and (max-width: 1099px) { .rpp-afhpro-grid[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-        @media (min-width: 1100px) { .rpp-afhpro-grid[data-count="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        .rpp-afhpro-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
+        /* Centered rows (owner, Oct 10, 2026): a short row (Maintain, two cards) sits in the middle
+           instead of hugging the left. Flex with fixed card widths rather than grid, so leftover
+           cards center. Widths: one per row on phones; two from 520px (Seth's license line does not fit a two-up card below that); three from 768px. */
+        .rpp-afhpro .rpp-afhpro-grid > .rpp-afhpro-card { flex: 0 0 100%; max-width: 100%; box-sizing: border-box; }
+        @media (min-width: 520px) { .rpp-afhpro .rpp-afhpro-grid > .rpp-afhpro-card { flex-basis: calc((100% - 12px) / 2); max-width: calc((100% - 12px) / 2); } }
+        @media (min-width: 768px) { .rpp-afhpro .rpp-afhpro-grid > .rpp-afhpro-card { flex-basis: calc((100% - 24px) / 3); max-width: calc((100% - 24px) / 3); } }
+        @media (min-width: 960px) {
+          .rpp-afhpro-grid { gap: 16px; }
+          .rpp-afhpro .rpp-afhpro-grid > .rpp-afhpro-card { flex-basis: calc((100% - 32px) / 3); max-width: calc((100% - 32px) / 3); }
+        }
+        /* Four across ONLY for a row of exactly four, and only from 1100px (Oct 10, 2026): the owner
+           asked for the Operate row as four boxes. This overrides the Sept 27 "never four" rule for
+           that row alone; at 1100+ each card is ~245px+ and every line still shows (Nicole's long
+           email fits at 12-13px). From 768 to 1099 that row is 2 x 2. */
+        @media (min-width: 768px) and (max-width: 959px) { .rpp-afhpro .rpp-afhpro-grid[data-count="4"] > .rpp-afhpro-card { flex-basis: calc((100% - 12px) / 2); max-width: calc((100% - 12px) / 2); } }
+        @media (min-width: 960px) and (max-width: 1099px) { .rpp-afhpro .rpp-afhpro-grid[data-count="4"] > .rpp-afhpro-card { flex-basis: calc((100% - 16px) / 2); max-width: calc((100% - 16px) / 2); } }
+        @media (min-width: 1100px) { .rpp-afhpro .rpp-afhpro-grid[data-count="4"] > .rpp-afhpro-card { flex-basis: calc((100% - 48px) / 4); max-width: calc((100% - 48px) / 4); } }
         /* Row titles. Class names avoid the word "section": index.css gives any [class*="section"] 32px padding !important. Plain h3 (main h3 is forced to 28px sitewide, hence the specificity);
            no uppercase or letter-spacing, which index.css would shrink to 14px. */
         .rpp-afhpro .rpp-afhpro-row + .rpp-afhpro-row { margin-top: 40px; }
-        .rpp-afhpro h3.rpp-afhpro-row-title { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: clamp(24px, 2.6vw, 28px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #0a5648 !important; margin: 0 0 4px !important; padding-left: 14px; border-left: 5px solid #0a5648; }
-        .rpp-afhpro .rpp-afhpro-row-lead { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.5; color: #1c1917; margin: 0 0 14px 19px; }
+        .rpp-afhpro h3.rpp-afhpro-row-title { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: clamp(24px, 2.6vw, 28px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #0a5648 !important; margin: 0 0 6px !important; text-align: center; }
+        .rpp-afhpro h3.rpp-afhpro-row-title::after { content: ""; display: block; width: 48px; height: 3px; background: #0a5648; border-radius: 2px; margin: 8px auto 0; }
+        .rpp-afhpro .rpp-afhpro-row-lead { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.5; color: #1c1917; margin: 0 auto 14px; text-align: center; max-width: 640px; }
         /* Fixed-height slots: the same row of every card lines up across the grid. */
         .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; min-width: 0; line-height: 1.25; }
         .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
@@ -373,12 +416,12 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-profession { height: 36px; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px !important; }
         .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 18px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 13px !important; line-height: 18px !important; font-weight: 700 !important; color: #1c1917 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         /* At two columns (480-767px) each label has ~200px: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
-        @media (min-width: 480px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
+        @media (min-width: 520px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 3px solid ${AFH_HEADSHOT_RING}; box-sizing: border-box; margin-bottom: 8px !important; }
         .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028 !important; } }
-        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #1c1917; margin-top: 2px !important; }
+        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; white-space: nowrap; overflow: hidden; font-size: 11px; line-height: 16px; color: #1c1917; margin-top: 2px !important; }
         .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 17px; overflow-wrap: anywhere; }
         .rpp-afhpro .rpp-afhpro-card-phone { height: 17px; margin-top: 6px !important; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-card-email { height: 20px; margin-top: 3px !important; white-space: nowrap; overflow: hidden; overflow-wrap: normal; }
