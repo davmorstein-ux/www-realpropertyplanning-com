@@ -836,7 +836,9 @@ const AFHClub = () => {
                 },
                 {
                   title: "Retiring",
-                  body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
+                  /* Oct 10, 2026: was "A management company can run the home while the asset stays in your name."
+                     The licensed owner keeps legal responsibility and oversight duties (WAC 388-76-11055, 11060). */
+                  body: "Step back without selling. A management company can handle the day-to-day under a written agreement while the home stays in your name. As the licensed owner you keep legal responsibility, and still meet with the manager monthly and visit at least quarterly.",
                 },
                 {
                   title: "Buying",

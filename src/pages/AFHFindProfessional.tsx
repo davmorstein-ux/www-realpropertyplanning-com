@@ -202,12 +202,16 @@ const PROFESSIONAL_CATEGORIES = [
     title: "AFH Management Companies",
     icon: "🏢",
     description:
-      "Management companies handle day-to-day operations, staffing, compliance, and administration for AFH owners who want to invest in the business without operating it directly. Services vary widely — some manage everything from licensing to caregiver hiring; others focus on compliance and record-keeping.",
+      /* Rewritten Oct 10, 2026: the old sentence said owners could "invest in the business without
+         operating it directly", which WAC 388-76-11055 contradicts (an owner relieved of daily
+         operations is treated as a change of ownership). Checked against WAC 388-76-11050 to 11060. */
+      "A management company can take on contracted work for an AFH owner: staffing and scheduling, billing, record-keeping, and compliance support. It does not take over the license. Under Washington rules, the licensed owner stays responsible for daily operations and resident care, must meet with the manager at least monthly and visit the home at least quarterly, and must file the management agreement with DSHS 60 days before it starts. Services vary widely — some handle everything from caregiver hiring to billing; others focus on compliance and record-keeping.",
     lookFor: [
       "Washington State operating experience",
       "DSHS compliance track record",
       "Staffing and caregiver management services",
       "Transparent fee structure",
+      "A written agreement that leaves you, the owner, in charge, filed with DSHS on form 27-226",
     ],
     link: null,
   },

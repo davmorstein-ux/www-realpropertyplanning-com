@@ -344,7 +344,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     label: "AFH management",
     profession: "AFH Management",
     professionLines: ["AFH", "Management"],
-    why: "An owner who does not live in the home, or who owns more than one, often hires a management company to handle staffing, scheduling, DSHS compliance and day-to-day operations. For a buyer, a manager with a track record can be the difference between an investment that runs and one that needs the owner every day.",
+    why: "An owner who does not live in the home, or who owns more than one, often hires a management company to handle staffing, scheduling, billing and compliance work under a written agreement filed with DSHS. The owner keeps legal responsibility for the home and its residents. For a buyer, a manager with a track record can be the difference between an investment that runs and one that needs the owner every day.",
     people: [FENGQUAN_SONG],
   },
   {
