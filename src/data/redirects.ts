@@ -30,6 +30,10 @@ export const REDIRECTS: SiteRedirect[] = [
      for home operators) into the senior living section, Oct 4, 2026. */
   { from: "/afh-club/what-is-an-adult-family-home", to: "/senior-living/what-is-an-adult-family-home" },
   { from: "/afh-club/choosing-an-adult-family-home", to: "/senior-living/choosing-an-adult-family-home" },
+  /* AFH Management Companies page retired Oct 9, 2026 (owner's decision): it
+     featured one company, whose owner is now listed in the Find a Professional
+     grid under AFH Management. */
+  { from: "/afh-club/management-companies", to: "/afh-club/find-a-professional" },
   /* RoomAndCare.com page removed Sept 30, 2026 (owner's decision): it was only ever a
      "coming soon" placeholder that search engines could index. */
   { from: "/long-term-care/finding-care-roomandcare", to: "/long-term-care" },

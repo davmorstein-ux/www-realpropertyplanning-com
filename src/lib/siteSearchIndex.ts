@@ -45,7 +45,6 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/afh-club/getting-started", label: "AFH Getting Started" },
   { path: "/afh-club/licensing-certification", label: "AFH Licensing Certification" },
   { path: "/afh-club/listings", label: "AFH Listings" },
-  { path: "/afh-club/management-companies", label: "AFH Management Companies" },
   { path: "/afh-club/ownership-structure", label: "AFH Ownership Structure" },
   { path: "/afh-club/real-estate-broker", label: "AFH Real Estate Broker" },
   { path: "/afh-club/regulations-compliance", label: "AFH Regulations Compliance" },

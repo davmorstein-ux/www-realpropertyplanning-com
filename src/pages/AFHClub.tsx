@@ -572,7 +572,9 @@ const PAGE_CSS = `
     max-width: 1040px;
     margin: 0 auto;
   }
-  .rpp-afh-dest-card { flex: 0 1 calc((100% - 48px) / 3); }
+  /* Four destinations since Oct 9, 2026 (Management Companies retired): four
+     across on desktop, two by two below 900px. */
+  .rpp-afh-dest-card { flex: 0 1 calc((100% - 72px) / 4); }
   .rpp-afh-dest-card {
     display: flex;
     flex-direction: column;
@@ -636,12 +638,6 @@ const PAGE_CSS = `
 const CATEGORY_META = [
   { key: "resources", href: "/afh-club/resources", img: "/afh-resources-v3.webp", placeholder: "#3f3a35" },
   { key: "listings", href: "/afh-club/listings", img: "/afh-listings-v3.webp", placeholder: "#3e3934" },
-  {
-    key: "management",
-    href: "/afh-club/management-companies",
-    img: "/afh-management-companies-v2.webp",
-    placeholder: "#3c3732",
-  },
   // Was the broker card. Replaced Sept 22, 2026: AFH Club presents itself as a
   // network, and the broker is the first listing on the professionals page.
   // The cover is a placeholder until a magazine-style one arrives.

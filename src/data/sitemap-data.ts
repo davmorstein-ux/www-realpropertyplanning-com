@@ -485,10 +485,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: ["/afh-club", "/realtor"],
   },
   {
-    path: "/afh-club/management-companies",
-    links: ["/afh-club/real-estate-broker"],
-  },
-  {
     path: "/afh-club/ownership-structure",
     links: ["/contact"],
   },

@@ -1318,12 +1318,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
-  "/afh-club/management-companies": {
-    title: "AFH Management Companies | AFH Club | Real Property Planning",
-    description: "Professional Adult Family Home management companies serving Washington State — Aura Living Care and other operators providing staffing, compliance, and care services.",
-    h1: "AFH Management Companies",
-    intro: "An independent management company runs an adult family home's staffing, compliance, and daily operations on the owner's behalf. For sellers, it is a way to keep the asset without the work; for new buyers, a way to meet DSHS operational expectations while building experience.",
-  },
   "/afh-club/ownership-structure": {
     title: "AFH Ownership: Individual or LLC? | AFH Club | Real Property Planning",
     description: "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, tax, and Washington State licensing considerations for AFH buyers.",
