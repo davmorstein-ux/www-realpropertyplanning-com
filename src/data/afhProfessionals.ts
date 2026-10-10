@@ -334,16 +334,24 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
 ];
 
 /**
- * Neutral order (owner's decision, Sept 27, 2026, after an outside audit noted
- * the featured broker always came first): groups A to Z by label, people A to Z
- * by last name. Applied here so every page that reads these lists agrees.
+ * Order. Sept 27, 2026 (after an outside audit noted the featured broker always
+ * came first): groups A to Z by label, people A to Z by last name.
+ * Oct 9, 2026, owner's decision: three groups lead, in this order: the AFH real
+ * estate broker, the AFH mortgage lender (Seth C. Raddue, TriStar Finance), then
+ * the business broker (Rachael Scott, Ballpark Realty). Every other group
+ * follows A to Z. Applied here so every page that reads these lists agrees.
  */
+const LEAD_GROUPS = ["real-estate", "mortgage-lending", "business-brokerage"];
+const groupRank = (g: AFHProfessionalGroup) => {
+  const i = LEAD_GROUPS.indexOf(g.id);
+  return i === -1 ? LEAD_GROUPS.length : i;
+};
 const lastName = (name: string) => {
   const words = name.split(" & ")[0].split(",")[0].trim().split(/\s+/);
   return words[words.length - 1].toLowerCase();
 };
 const NEUTRAL_ORDER: AFHProfessionalGroup[] = [...AFH_PROFESSIONAL_GROUPS]
-  .sort((a, b) => a.label.localeCompare(b.label))
+  .sort((a, b) => groupRank(a) - groupRank(b) || a.label.localeCompare(b.label))
   .map((g) => ({ ...g, people: [...g.people].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name))) }));
 
 /** Groups that actually have someone in them, in neutral order. The page renders only these. */
