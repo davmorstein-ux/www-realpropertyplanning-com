@@ -93,6 +93,12 @@ const TOPICS = [
     description: "How lenders count an adult family home's income, gross or after expenses, why it changes the answer, and what to ask before you borrow.",
   },
   {
+    title: "Hiring a Management Company",
+    href: "/afh-club/hiring-an-afh-management-company",
+    img: "/afh-management-company-cover.webp",
+    description: "What a management company can do for an adult family home, what stays with you as the licensed owner, and the DSHS filing that comes first.",
+  },
+  {
     title: "Which Tier? The AFH Payment Field Guide",
     href: "/afh-club/afh-payment-field-guide",
     img: "/afh-field-guide-cover-v2.webp",
@@ -309,6 +315,12 @@ const AFHResources = () => (
             href: "/afh-club/dscr-loans-adult-family-homes",
             img: "/afh-dscr-loans-cover-v2.webp",
             placeholder: "#1b2a4a",
+          },
+          {
+            title: "Hiring a Management Company",
+            href: "/afh-club/hiring-an-afh-management-company",
+            img: "/afh-management-company-cover.webp",
+            placeholder: "#0a5648",
           },
           {
             title: "Which Tier? The AFH Payment Field Guide",

@@ -66,8 +66,10 @@ export const AFH_MGMT = {
     "Yes. Washington allows an adult family home to hire a management company under a written agreement. The licensed owner stays responsible for the home and its residents, must meet with the manager every month and visit the home at least every quarter, and must file the agreement with DSHS 60 days before it starts. A company can manage many homes, but each home still needs its own on-site person in charge.",
   PUBLISHED: "2026-10-10",
   REVIEWED: "2026-10-10",
-  /** No cover yet. Owner may supply one (3:4); then add AFH Resources grid + carousel cards. */
-  COVER: null as string | null,
+  /** Cover art supplied by the owner Oct 10, 2026. 1086x1448. Its tablet diagram shows the
+   *  management company above "Owner Responsibilities" (the rules make the owner the
+   *  principal); flagged to the owner, who may regenerate it. */
+  COVER: "/afh-management-company-cover.webp" as string | null,
 } as const;
 
 /** Every rule the page cites, in the order it cites them. */
