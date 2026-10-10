@@ -359,6 +359,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           { title: "AFH Club Featured Professionals", href: "/afh-club/find-a-professional" },
+          { title: "Hiring an AFH Management Company", href: "/afh-club/hiring-an-afh-management-company" },
           { title: "AFH Caregiver Board: Jobs and Caregivers", href: "/afh-club/caregivers" },
           { title: "AFH Real Estate Broker", href: "/afh-club/real-estate-broker" },
         ],

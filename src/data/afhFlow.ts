@@ -142,6 +142,7 @@ export const AFH_FLOW_PAGES: FlowPage[] = [
       { label: "CBHS Tiers Explained", href: "/afh-club/cbhs-tiers", note: "Behavioral health support paid on top of the base rate." },
       { label: "The AFH Payment Field Guide", href: "/afh-club/afh-payment-field-guide", note: "ECS, SBS, private pay, and what a contract list does not prove." },
       { label: "Washington AFH Rules Have Changed", href: "/afh-club/washington-afh-rule-changes", note: "Every rule change since 2023, old beside new." },
+      { label: "Hiring a Management Company", href: "/afh-club/hiring-an-afh-management-company", note: "What a manager can do, what stays with you, and the DSHS filing." },
       { label: "Find a Professional", href: "/afh-club/find-a-professional", note: "Bookkeepers, insurance brokers and others." },
     ],
     watch: [

@@ -247,7 +247,7 @@ const PROFESSIONAL_CATEGORIES = [
       "Transparent fee structure",
       "A written agreement that leaves you, the owner, in charge, filed with DSHS on form 27-226",
     ],
-    link: null,
+    link: { label: "Hiring an AFH management company: what the rules allow", href: "/afh-club/hiring-an-afh-management-company" },
   },
   {
     title: "CPAs Familiar with AFH Operations",

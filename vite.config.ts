@@ -31,6 +31,7 @@ import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_C
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
+import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -1941,6 +1942,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     sections: dscrPrerenderSections(),
     faq: DSCR_FAQS.map((f) => ({ q: f.question, a: f.answer })),
     article: { datePublished: DSCR_LOANS.PUBLISHED, dateModified: DSCR_LOANS.REVIEWED },
+  },
+  [AFH_MGMT.PATH]: {
+    title: AFH_MGMT.SEO_TITLE,
+    description: AFH_MGMT.DESCRIPTION,
+    h1: AFH_MGMT.TITLE,
+    quickAnswerQ: "Can I hire a management company to run my adult family home in Washington?",
+    quickAnswerA: AFH_MGMT.SHORT_ANSWER,
+    intro: "What a management company can do for a Washington adult family home, what stays with you as the licensed owner, and the DSHS filing that has to come first.",
+    sections: afhMgmtPrerenderSections(),
+    faq: AFH_MGMT_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: AFH_MGMT.PUBLISHED, dateModified: AFH_MGMT.REVIEWED },
   },
   "/afh-club/afh-financing-calculator": {
     title: "Adult Family Home Occupancy & Financing Calculator | Can a buyer get the loan? | AFH Club",
