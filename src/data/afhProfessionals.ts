@@ -239,7 +239,8 @@ export const SETH_RADDUE: AFHProfessional = {
 /* Added to this directory Oct 9, 2026 at the owner's request. Details are
    the ones already published on /afh-club/management-companies since June 2026
    (phone, email, website, Seattle); headshot recropped from that page's photo.
-   That page still carries its own copy of these details. */
+   That page still carries its own copy of these details. The (214) number is
+   his cell (owner confirmed Oct 9, 2026). */
 export const FENGQUAN_SONG: AFHProfessional = {
   id: "fengquan-song",
   name: "Fengquan Song",
