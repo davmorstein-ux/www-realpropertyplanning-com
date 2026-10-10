@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
-import { AFH_PROFESSIONAL_GROUPS, ACTIVE_AFH_PROFESSIONAL_GROUPS, FEATURED_AFH_BROKER, NICOLE_GUZMAN_JOHNSON } from "@/data/afhProfessionals";
+import { AFH_PROFESSIONAL_GROUPS, AFH_PROFESSIONAL_SECTIONS, AFH_FEATURED_SECTIONS, ACTIVE_AFH_PROFESSIONAL_GROUPS, FEATURED_AFH_BROKER, NICOLE_GUZMAN_JOHNSON } from "@/data/afhProfessionals";
 
 const everyone = AFH_PROFESSIONAL_GROUPS.flatMap((g) => g.people);
 const page = readFileSync("src/pages/AFHFindProfessional.tsx", "utf8");
@@ -31,6 +31,13 @@ describe("AFH Club featured professionals", () => {
   it("nobody is listed twice, and group ids are unique", () => {
     expect(new Set(everyone.map((p) => p.id)).size).toBe(everyone.length);
     expect(new Set(AFH_PROFESSIONAL_GROUPS.map((g) => g.id)).size).toBe(AFH_PROFESSIONAL_GROUPS.length);
+  });
+  it("every group belongs to exactly one section, and no section is rendered empty", () => {
+    const placed = AFH_PROFESSIONAL_SECTIONS.flatMap((s) => s.groupIds);
+    expect(new Set(placed).size, "a group is in two sections").toBe(placed.length);
+    for (const g of AFH_PROFESSIONAL_GROUPS) expect(placed, `${g.id} has no section`).toContain(g.id);
+    for (const id of placed) expect(AFH_PROFESSIONAL_GROUPS.some((g) => g.id === id), `section names unknown group ${id}`).toBe(true);
+    for (const s of AFH_FEATURED_SECTIONS) expect(s.entries.length, s.id).toBeGreaterThan(0);
   });
   it("an empty group is never rendered", () => {
     for (const g of ACTIVE_AFH_PROFESSIONAL_GROUPS) expect(g.people.length, g.id).toBeGreaterThan(0);

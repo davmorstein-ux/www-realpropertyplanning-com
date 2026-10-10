@@ -9,7 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-find-a-professional.mp3.asset.json";
-import { AFH_FEATURED_PEOPLE, AFH_HEADSHOT_RING, type AFHProfessional } from "@/data/afhProfessionals";
+import { AFH_FEATURED_SECTIONS, AFH_HEADSHOT_RING, type AFHProfessional } from "@/data/afhProfessionals";
 import ArticleCover from "@/components/ArticleCover";
 
 /**
@@ -345,6 +345,17 @@ const AFHFindProfessional = () => (
         @media (min-width: 480px) { .rpp-afhpro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         @media (min-width: 768px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (min-width: 960px) { .rpp-afhpro-grid { gap: 16px; } }
+        /* Four across ONLY for a section of exactly four, and only from 1100px (Oct 10, 2026):
+           the owner asked for the Operate row as four boxes. This overrides the Sept 27
+           "never four" rule for that row alone; at 1100+ each card is ~245px+ and every
+           line still shows (Nicole's long email fits at 12-13px). Below 1100 it stays 2 x 2. */
+        @media (min-width: 768px) and (max-width: 1099px) { .rpp-afhpro-grid[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (min-width: 1100px) { .rpp-afhpro-grid[data-count="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        /* Row titles. Class names avoid the word "section": index.css gives any [class*="section"] 32px padding !important. Plain h3 (main h3 is forced to 28px sitewide, hence the specificity);
+           no uppercase or letter-spacing, which index.css would shrink to 14px. */
+        .rpp-afhpro .rpp-afhpro-row + .rpp-afhpro-row { margin-top: 40px; }
+        .rpp-afhpro h3.rpp-afhpro-row-title { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: clamp(24px, 2.6vw, 28px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #0a5648 !important; margin: 0 0 4px !important; padding-left: 14px; border-left: 5px solid #0a5648; }
+        .rpp-afhpro .rpp-afhpro-row-lead { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.5; color: #1c1917; margin: 0 0 14px 19px; }
         /* Fixed-height slots: the same row of every card lines up across the grid. */
         .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; min-width: 0; line-height: 1.25; }
         .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
@@ -394,11 +405,19 @@ const AFHFindProfessional = () => (
           <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", maxWidth: 720 }}>
             Independent professionals who can help your adult family home succeed.
           </p>
-          <div className="rpp-afhpro-grid">
-            {AFH_FEATURED_PEOPLE.map(({ person, professionLines }) => (
-              <PersonCard key={person.id} person={person} professionLines={professionLines} />
-            ))}
-          </div>
+          {/* Three titled rows (owner, Oct 10, 2026): Buy & Sell, Operate, Maintain.
+              Sections and their order live in src/data/afhProfessionals.ts. */}
+          {AFH_FEATURED_SECTIONS.map((section) => (
+            <div key={section.id} className="rpp-afhpro-row" aria-labelledby={`afhpro-${section.id}`}>
+              <h3 id={`afhpro-${section.id}`} className="rpp-afhpro-row-title">{section.title}</h3>
+              <div className="rpp-afhpro-row-lead">{section.lead}</div>
+              <div className="rpp-afhpro-grid" data-count={section.entries.length}>
+                {section.entries.map(({ person, professionLines }) => (
+                  <PersonCard key={person.id} person={person} professionLines={professionLines} />
+                ))}
+              </div>
+            </div>
+          ))}
           {/* Caregiver board (Oct 5, 2026): staff are not listed as featured
               professionals, so the board is pointed to under the grid instead. */}
           <div style={{ height: 32 }} aria-hidden="true" />

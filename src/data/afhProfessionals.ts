@@ -366,32 +366,68 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
 ];
 
 /**
- * Order. Sept 27, 2026 (after an outside audit noted the featured broker always
- * came first): groups A to Z by label, people A to Z by last name.
- * Oct 9, 2026, owner's decision: five groups lead, in this order. First row
- * (three across on desktop): the AFH real estate broker, the AFH mortgage
- * lender (Seth C. Raddue, TriStar Finance), AFH management (Fengquan Song,
- * Aura Living Care). Second row starts with the business broker (Rachael
- * Scott, Ballpark Realty), then insurance (Kaylin Cottingham-Wilson). Every
- * other group follows A to Z. Applied here so every page that reads these lists agrees.
+ * SECTIONS (owner, Oct 10, 2026): the grid is split into three titled rows by
+ * what the professional helps an owner do. A section lists its groups in the
+ * order they appear; within a group, people run A to Z by last name. Every
+ * group must belong to exactly one section (a test checks), and a section with
+ * nobody in it is not rendered.
+ *   Buy & Sell   the AFH real estate broker, the mortgage lender, the business broker
+ *                (photography and SBA lending join here once someone is listed)
+ *   Operate      management, insurance, website & marketing, bookkeeping
+ *   Maintain     house cleaning, water damage restoration
+ * This replaces the Oct 9 "five groups lead, then A to Z" order.
  */
-const LEAD_GROUPS = ["real-estate", "mortgage-lending", "afh-management", "business-brokerage", "business-insurance"];
-const groupRank = (g: AFHProfessionalGroup) => {
-  const i = LEAD_GROUPS.indexOf(g.id);
-  return i === -1 ? LEAD_GROUPS.length : i;
-};
+export interface AFHProfessionalSection {
+  id: string;
+  title: string;
+  /** One plain sentence under the section title saying who the row is for. */
+  lead: string;
+  groupIds: string[];
+}
+
+export const AFH_PROFESSIONAL_SECTIONS: AFHProfessionalSection[] = [
+  {
+    id: "buy-sell",
+    title: "Buy & Sell",
+    lead: "Buying or selling an adult family home, the building, the business, or both.",
+    groupIds: ["real-estate", "mortgage-lending", "business-brokerage", "sba-lending", "photography"],
+  },
+  {
+    id: "operate",
+    title: "Operate",
+    lead: "Running the home day to day: management, insurance, marketing, and the books.",
+    groupIds: ["afh-management", "business-insurance", "website-marketing", "bookkeeping"],
+  },
+  {
+    id: "maintain",
+    title: "Maintain",
+    lead: "Keeping the house itself clean, safe, and in good repair.",
+    groupIds: ["house-cleaning", "water-damage"],
+  },
+];
+
 const lastName = (name: string) => {
   const words = name.split(" & ")[0].split(",")[0].trim().split(/\s+/);
   return words[words.length - 1].toLowerCase();
 };
-const NEUTRAL_ORDER: AFHProfessionalGroup[] = [...AFH_PROFESSIONAL_GROUPS]
-  .sort((a, b) => groupRank(a) - groupRank(b) || a.label.localeCompare(b.label))
+const groupById = new Map(AFH_PROFESSIONAL_GROUPS.map((g) => [g.id, g]));
+const NEUTRAL_ORDER: AFHProfessionalGroup[] = AFH_PROFESSIONAL_SECTIONS.flatMap((s) => s.groupIds)
+  .map((id) => groupById.get(id))
+  .filter((g): g is AFHProfessionalGroup => !!g)
   .map((g) => ({ ...g, people: [...g.people].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name))) }));
+
+type FeaturedEntry = { person: AFHProfessional; profession: string; professionLines: [string, string]; groupId: string };
+const entriesOf = (groups: AFHProfessionalGroup[]): FeaturedEntry[] =>
+  groups.flatMap((g) => g.people.map((person) => ({ person, profession: g.profession, professionLines: g.professionLines, groupId: g.id })));
+
+/** The sections the page renders: each with its people in order. Empty sections are left out. */
+export const AFH_FEATURED_SECTIONS: Array<AFHProfessionalSection & { entries: FeaturedEntry[] }> = AFH_PROFESSIONAL_SECTIONS.map((s) => ({
+  ...s,
+  entries: entriesOf(NEUTRAL_ORDER.filter((g) => s.groupIds.includes(g.id))),
+})).filter((s) => s.entries.length > 0);
 
 /** Groups that actually have someone in them, in neutral order. The page renders only these. */
 export const ACTIVE_AFH_PROFESSIONAL_GROUPS = NEUTRAL_ORDER.filter((g) => g.people.length > 0);
 
-/** Every featured person as one flat list, each tagged with their profession, in group order. This is what the directory grid renders. */
-export const AFH_FEATURED_PEOPLE: Array<{ person: AFHProfessional; profession: string; professionLines: [string, string]; groupId: string }> = NEUTRAL_ORDER.flatMap((g) =>
-  g.people.map((person) => ({ person, profession: g.profession, professionLines: g.professionLines, groupId: g.id })),
-);
+/** Every featured person as one flat list, each tagged with their profession, in section order. */
+export const AFH_FEATURED_PEOPLE: FeaturedEntry[] = entriesOf(NEUTRAL_ORDER);

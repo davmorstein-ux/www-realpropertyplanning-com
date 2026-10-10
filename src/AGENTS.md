@@ -47,6 +47,7 @@ What has bitten people so far:
 | `font-size: 26px` on an `h2` | can render ~42px on a phone | global heading size rules with `!important` |
 | a `font-size` on a `<button>` | 18px | `button:not([data-nav-button]) { font-size: 18px !important }` |
 | a class name containing `card`, `Card`, `tile` or `Tile` | becomes `display:flex; flex-direction:column; width:100%; overflow:hidden` | `[class*="card"]`, `[class*="tile"]` attribute selectors |
+| a class name containing `section` (anywhere in the name) | gets `padding-top/bottom: 32px !important` (index.css line ~52); headings and text blocks balloon with empty space | `[class*="section"]` attribute selector; name classes `-row`, `-group`, etc. instead (found Oct 10, 2026 on the Find a Professional row titles) |
 | a class name containing `btn` or `cta` | picks up legacy button styling | substring selectors |
 | an inline `min-width` inside `<main>` on a phone | `min-width: 0` | the mobile overflow safety net |
 | an inline 3-5 column grid on a phone | two columns | same block |
