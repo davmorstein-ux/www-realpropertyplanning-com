@@ -237,6 +237,7 @@ const AFHFinancingCalculator = lazy(() => import("./pages/AFHFinancingCalculator
 const HowToFinanceAnAFH = lazy(() => import("./pages/HowToFinanceAnAFH"));
 const AFHDscrLoans = lazy(() => import("./pages/AFHDscrLoans"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
+const AFHArticle = lazy(() => import("./pages/AFHArticle"));
 const AFHPropertyScore = lazy(() => import("./pages/AFHPropertyScore"));
 const AFHPaymentFieldGuide = lazy(() => import("./pages/AFHPaymentFieldGuide"));
 const AFHBeforeYouBuy = lazy(() => import("./pages/afh/AFHBeforeYouBuy"));
@@ -692,6 +693,8 @@ export const AppRoutes = () => (
       <Route path="/afh-club/how-to-finance-an-afh" element={<HowToFinanceAnAFH />} />
       <Route path="/afh-club/dscr-loans-adult-family-homes" element={<AFHDscrLoans />} />
       <Route path="/afh-club/hiring-an-afh-management-company" element={<AFHManagementCompanies />} />
+      {/* AFH Club articles (Oct 12, 2026): src/data/afhArticles.ts. */}
+      <Route path="/afh-club/getting-paid-providerone-billing" element={<AFHArticle slug="getting-paid" />} />
       {/* How AFHs get paid: three-part series (Sept 2026). Hub + two deep dives. */}
       <Route path="/afh-club/afh-property-score" element={<AFHPropertyScore />} />
       <Route path="/afh-club/afh-payment-field-guide" element={<AFHPaymentFieldGuide />} />

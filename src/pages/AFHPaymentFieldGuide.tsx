@@ -84,10 +84,10 @@ const AFHPaymentFieldGuide = () => (
 
     <h3 style={gs.h3}>3. Specialty contracts (ECS and SBS)</h3>
     <p style={gs.p}>
-      These are contracts the home itself must qualify for and hold under the state's Residential Support Waiver. They pay in two different ways, and the difference matters when you read a seller's income. <strong>Expanded Community Services (ECS)</strong> is not an add-on: the home is paid the ECS daily rate ({money(AFH_SPECIALTY_RATES.ecsDailyPaid)}) or the resident's base rate, whichever is greater. <strong>Specialized Behavior Support (SBS)</strong> is an add-on: {money(AFH_SPECIALTY_RATES.sbsAddOn)} a day on top of the base rate, in exchange for six to eight additional hours a day of individualized staffing.
+      These are contracts the home itself must qualify for and hold under the state's Residential Support Waiver. They pay in two different ways, and the difference matters when you read a seller's income. <strong>Expanded Community Services (ECS)</strong> is not an add-on to the rate: the home is paid the ECS daily rate ({money(AFH_SPECIALTY_RATES.ecsDailyPaid)}) or the resident's base rate, whichever is greater. (DSHS's manual bills ECS under a code it calls an "add-on"; the payment still does not stack on the base rate.) <strong>Specialized Behavior Support (SBS)</strong> is an add-on: {money(AFH_SPECIALTY_RATES.sbsAddOn)} a day on top of the base rate, in exchange for six to eight additional hours a day of individualized staffing.
     </p>
     <p style={gs.p}>
-      These contracts matter less than they used to. Since July 1, 2025, a resident must first be found not eligible for CBHS before receiving SBS, which makes CBHS the primary route for behavioral support and means the two never stack. Both contracts come with a warning every buyer should memorize.
+      These contracts matter less than they used to. For care plans from assessments on or after July 1, 2025, a resident must first be found not eligible for CBHS before receiving SBS (existing SBS residents moved over at their next assessment, through June 30, 2026), which makes CBHS the primary route for behavioral support and means the two never stack. Both contracts come with a warning every buyer should memorize.
     </p>
     <div style={gs.warn}>
       <p style={{ ...gs.p, margin: 0 }}>
@@ -96,6 +96,9 @@ const AFHPaymentFieldGuide = () => (
     </div>
     <p style={gs.p}>
       DSHS contracting staff confirmed in September 2026 that they cannot add ECS or SBS to a new owner's contract without approval from DSHS's adult family home program staff. Residents' services continue after a sale, except the specialty services a new owner has not been granted. Whether a buyer can apply before closing, and on what terms, has been referred to the program managers for those contracts. This guide will be updated when they answer. Until then, treat specialty revenue as at risk in a sale.
+    </p>
+    <p style={gs.p}>
+      How a home gets its Medicaid contract, bills ProviderOne, collects each resident's share, and qualifies for ECS or SBS: <Link to="/afh-club/getting-paid-providerone-billing" style={gs.link}>Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts</Link>.
     </p>
     <p style={{ ...gs.p, fontSize: 17 }}>
       A note on Meaningful Day: you will still see it listed alongside ECS and SBS, including on state pages. The 2025 state budget eliminated its funding, and DSHS contracting staff confirmed in September 2026 that Meaningful Day has not been available since July 1, 2025. Do not count it as income in a purchase.

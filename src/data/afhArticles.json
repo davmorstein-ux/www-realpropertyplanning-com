@@ -1,0 +1,207 @@
+[
+  {
+    "slug": "getting-paid",
+    "path": "/afh-club/getting-paid-providerone-billing",
+    "short": "Getting Paid",
+    "title": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts",
+    "eyebrow": "Running an AFH · For owners & operators",
+    "dek": "How a Washington adult family home gets its Medicaid contract, bills ProviderOne, collects the resident's share, and qualifies for specialty designations and ECS or SBS contracts.",
+    "published": "2026-10-12",
+    "reviewed": "2026-10-12",
+    "cover": null,
+    "shortAnswer": "A Washington adult family home (AFH) gets paid by Medicaid only after three things are in place: a signed Medicaid contract with the Department of Social and Health Services (DSHS), a service authorization from the resident's case manager, and a claim in ProviderOne, the state's payment system run by the Health Care Authority (HCA). ProviderOne pays weekly. Claims must be filed within 12 months of the service date. The resident pays part of the cost directly to the home, and ProviderOne subtracts that amount from the Medicaid payment.",
+    "sections": [
+      {
+        "heading": "Step one: the Medicaid contract",
+        "body": "A license lets you operate. It does not let you bill Medicaid. DSHS says contractors \"cannot admit new Medicaid clients until they have a signed Medicaid contract in place.\"\n\nDSHS posts the steps for a licensed home:\n\n1. Email the DSHS Contracts Unit at adshqcontracts@dshs.wa.gov asking for a Medicaid contract. Give the home's name, license number and address.\n2. Return the forms DSHS sends (or send them with your request): the Contractor Intake Form (DSHS 27-043), \"Additional Details AFH,\" the Medicaid Provider Disclosure Statement, and a W-9.\n3. Review, sign and return the contract the contract manager emails you.\n4. DSHS sends back the fully signed contract with your ProviderOne number. HCA then emails login instructions. If none arrive within 24 hours, call HCA at 1-800-562-3022.\n\nThe DSHS sample contract also requires trained, background-checked staff and liability insurance of at least $1,000,000 per occurrence and $2,000,000 in total. The posted sample is an older version, so read the contract DSHS sends you. The contract ends \"on the effective date of a change in licensee,\" so a buyer needs a new one. See [Buying or Selling an AFH](/afh-club/buying-selling)."
+      },
+      {
+        "heading": "Step two: the authorization",
+        "body": "DSHS pays \"only for authorized services.\" The resident's DSHS case manager authorizes services based on the CARE assessment. You see each authorization in ProviderOne on the \"Social Service Authorization List,\" with the case manager's name and email.\n\nIf an authorization is in \"Error\" or \"Canceled\" status, HCA says you \"MUST contact the client's case manager before providing or billing for services.\" DSHS tells case managers the authorization \"should be entered/complete prior to the client being admitted.\" Billing questions go to HCA at 1-800-562-3022; authorization questions go to the case manager."
+      },
+      {
+        "heading": "Step three: billing in ProviderOne and when you are paid",
+        "body": "You submit claims in ProviderOne by direct entry, saved templates, batch templates (useful for the same residents every month) or a clearinghouse upload. What HCA says about timing:\n\n- **Payment cycle.** \"ProviderOne makes weekly payments.\" Claims submitted by Tuesday at 5 p.m. Pacific \"should pay the same week on Friday at the earliest or the following Monday at the latest.\" Holidays and system maintenance can move these dates.\n- **Late in the week.** A claim entered after the Tuesday deadline pays on Friday of the next week.\n- **Timely filing.** \"Providers must submit claims no later than 12 months from the date of service.\" The DSHS contract says the same.\n- **Remittance advice.** A weekly remittance advice (RA) listing paid, denied, adjusted and in-process claims is posted each Friday.\n- **Checks or direct deposit.** New social service providers are set up for paper checks (warrants) by default. You must sign up separately for electronic funds transfer (EFT).\n\nPart months are prorated, and DSHS \"does not pay for the last day of service if a client moves out,\" except on the date of death."
+      },
+      {
+        "heading": "The resident's share: client responsibility",
+        "body": "Most Medicaid residents pay part of the monthly cost themselves. ProviderOne calls this **client responsibility**. HCA defines it as \"the amount a client must pay to the provider each month.\" It has up to three parts:\n\n- **Room and board**: what the resident pays for food and shelter. The rules say \"Room and board is not participation.\"\n- **Participation**: what the resident pays toward the cost of care.\n- **Third-party resources**: other money owed toward care.\n\n**Who calculates it.** You do not. The DSHS contract defines participation as \"the amount determined by ALTSA/HCS financial services\" (the Aging and Long-Term Support Administration's Home and Community Services). For a resident on a home and community based waiver, WAC 182-515-1509 says the resident keeps a personal needs allowance, pays room and board up to a state standard, and pays the rest of their available income toward care after allowed deductions, such as guardianship fees or support for a spouse at home. A resident on Community First Choice (CFC) without a waiver keeps a personal needs allowance and pays room and board, but the participation calculation does not apply (WAC 182-513-1215). Either way, the amount is set by DSHS, not by you. Check each resident's client responsibility in ProviderOne before you bill, and again whenever DSHS tells you an amount has changed.\n\n**How it reduces your payment.** HCA: \"ProviderOne will automatically deduct applied CR from paid claims,\" and \"the provider must still collect this amount from the client each month.\" Medicaid pays the authorized rate minus the resident's share. You collect the share yourself.\n\n**Payment in full.** The Medicaid payment plus the participation DSHS assigns \"is payment in full\" for services in the resident's service plan (WAC 388-105-0050). You may not charge a Medicaid resident extra for anything the daily rate covers. The same rule allows a supplemental payment only for items not covered by the Medicaid rate, and only if you first have a written supplemental payment policy given to applicants and residents, record each payment in the resident's file, and notify the case manager. When a resident moves out, DSHS guidance says to refund unspent participation within 30 days.\n\n**Your Medicaid policy.** Every home must give prospective residents a separate written policy on when it accepts Medicaid (WAC 388-76-10522)."
+      },
+      {
+        "heading": "When a resident does not pay",
+        "body": "ProviderOne deducts the resident's share whether or not the resident pays you. DSHS's \"Non-Payment Frequently Asked Questions\" flyer for residential providers says:\n\n- \"As soon as you learn of non-payment promptly email the Home & Community Services (HCS) Case Manager (CM).\" Put [Secure] in the subject line.\n- Find out why. The case manager can meet with the resident and family, and help arrange a representative payee or a payment plan.\n- If you suspect financial exploitation, you are a mandated reporter. Report it to DSHS.\n- \"Do not wait until the client is several months in arrears to take action.\"\n\nNonpayment is a lawful reason for discharge (WAC 388-76-10615), usually with at least 30 days' written notice (RCW 70.129.110). For a Medicaid resident, the notice has required content, including the resident's right to a free lawyer, and you must send copies to the case manager and the long-term care ombudsman within three calendar days of issuing it (WAC 388-76-10617). DSHS also asks for form 05-249 to be sent to the case manager."
+      },
+      {
+        "heading": "Specialty designations: dementia, mental health and developmental disabilities",
+        "body": "DSHS \"may designate an adult family home to provide specialty care\" in developmental disability, mental illness and dementia (WAC 388-76-10495). DSHS grants the designation when (WAC 388-76-10500):\n\n1. The provider, entity representative and resident manager have completed the specialty training;\n2. The home sends DSHS written proof of that training (or challenge test) and of specialty training for all caregivers; and\n3. The home meets each resident's specialty needs.\n\nA home \"must not admit or keep a resident with specialty care needs\" unless the provider, entity representative, resident manager and staff have completed the specialty training in chapter 388-112A WAC (WAC 388-76-10505). There is one window: if a resident who already lives in a home without the designation develops one of these needs, the provider, entity representative and resident manager have 120 days to complete the specialty training (WAC 388-112A-0490; RCW 70.128.230). The window does not apply to admitting a new resident who already has the need. See [Training & Education](/afh-club/training-education) for the courses. These rules do not attach a payment rate to a designation."
+      },
+      {
+        "heading": "ECS and SBS: specialty contracts on top of the Medicaid contract",
+        "body": "Both are services under the Residential Support Waiver (RSW), a Medicaid program for adults with complex behavioral or psychiatric histories and no other placement option (WAC 388-106-0338). DSHS awards them to \"currently contracted AFH/AL providers who meet provider requirements.\"\n\n**Expanded Community Services (ECS)** covers personal care, 24-hour on-site support, medication management and behavior support. It \"does not offer 1:1/enhanced staffing.\"\n\n**Specialized Behavior Support (SBS)** adds \"six to eight hours a day of individualized staff time\" (WAC 388-106-0336). The home needs an approved staffing calendar before SBS is authorized, and \"may only serve up to three SBS residents at any given time.\" The HCS Regional Administrator may approve one more, to a maximum of four.\n\n**Who qualifies, from DSHS's pages:**\n\n- A current AFH Medicaid contract held for at least 12 months. (DSHS's case-management manual says a license held 12 months instead. AFH Club has asked DSHS which applies; a home with 12 months under contract meets both.)\n- No significant enforcement actions by Residential Care Services in the last year.\n- ECS or SBS contract training, given by DSHS's Regional Resource Specialist, completed before the contract.\n- For SBS, a \"demonstrated history\" of working with residents with challenging behavior.\n\n**CBHS comes first.** For care plans from assessments on or after July 1, 2025, a resident must first be found not eligible for Community Behavioral Health Support (CBHS) before getting SBS (WAC 388-106-0336). DSHS's manual says existing SBS residents moved to CBHS at their next annual or significant-change assessment between July 1, 2025 and June 30, 2026. ECS does not require a CBHS referral. See [CBHS Tiers](/afh-club/cbhs-tiers).\n\n**How to apply.** DSHS's pages list the requirements and say the contract training comes from DSHS's Regional Resource Specialist, but they do not describe an application or name a form. AFH Club has asked DSHS and will add the answer here. Until then, ask the DSHS Contracts Unit (adshqcontracts@dshs.wa.gov) or your Home and Community Services regional office."
+      },
+      {
+        "heading": "What about the rates?",
+        "body": "Daily base rates, CBHS tier rates and ECS and SBS amounts are in the [Payment Field Guide](/afh-club/afh-payment-field-guide) and [A Through E](/afh-club/care-classifications-a-through-e), with sources and dates."
+      }
+    ],
+    "next": "- Email adshqcontracts@dshs.wa.gov for your Medicaid contract as soon as your license is issued, and sign up for EFT in ProviderOne.\n- Before each Medicaid admission, confirm with the case manager that the authorization is active, and check the client responsibility amount in ProviderOne.\n- Write your Medicaid policy (WAC 388-76-10522) and a simple monthly process for collecting each resident's share.\n- Plan specialty training before you accept residents with dementia, mental illness or developmental disabilities: [Training & Education](/afh-club/training-education).\n- Understand how the money stacks: [Payment Field Guide](/afh-club/afh-payment-field-guide), [CARE Classifications](/afh-club/care-classifications-a-through-e), [CBHS Tiers](/afh-club/cbhs-tiers).",
+    "faqs": [
+      {
+        "question": "My license just came. Can I take a Medicaid resident tomorrow?",
+        "answer": "Not until you have a signed Medicaid contract. DSHS says contractors cannot admit new Medicaid clients without one. Email adshqcontracts@dshs.wa.gov with your home's name, license number and address. DSHS then sends your ProviderOne number, and the case manager must authorize the resident's services.",
+        "alts": [
+          "How do I get a Medicaid contract for my adult family home?",
+          "How does a new AFH get a DSHS Medicaid contract?",
+          "Can I accept Medicaid residents right after licensing?"
+        ]
+      },
+      {
+        "question": "How fast will ProviderOne pay me?",
+        "answer": "ProviderOne pays weekly. HCA says a claim submitted by Tuesday at 5 p.m. Pacific should pay that Friday at the earliest, or the following Monday at the latest. A claim entered after the deadline pays Friday of the next week. Holidays can shift this.",
+        "alts": [
+          "When does ProviderOne pay adult family homes?",
+          "How long does Medicaid take to pay an AFH?",
+          "What is the ProviderOne payment schedule?",
+          "How long does it take to get paid by Medicaid in an adult family home?"
+        ]
+      },
+      {
+        "question": "How long do I have to send a claim?",
+        "answer": "Twelve months from the date of service. HCA's billing guides and the DSHS contract both say so. After 12 months, DSHS will not pay the claim, even if you gave the care.",
+        "alts": [
+          "What is the timely filing limit for AFH Medicaid claims?",
+          "How late can I bill ProviderOne?"
+        ]
+      },
+      {
+        "question": "The authorization in ProviderOne says \"Error.\" What do I do?",
+        "answer": "Contact the resident's case manager before you provide or bill for services. HCA says this is required. The case manager's name and email are on the authorization. HCA's provider line helps with claims, not authorization errors.",
+        "alts": [
+          "What does an authorization in Error status mean in ProviderOne?",
+          "ProviderOne authorization canceled what do I do"
+        ]
+      },
+      {
+        "question": "Who decides how much the resident pays me each month?",
+        "answer": "DSHS financial staff, not the home. For a waiver resident (WAC 182-515-1509), the resident keeps a personal needs allowance, pays room and board, and pays most remaining income toward care. A resident on Community First Choice alone pays room and board but no participation (WAC 182-513-1215). Check the amount in ProviderOne before you bill.",
+        "alts": [
+          "What is client responsibility in an adult family home?",
+          "Who calculates a Medicaid resident's participation?",
+          "What is participation for an AFH resident?"
+        ]
+      },
+      {
+        "question": "Why is my Medicaid payment lower than the daily rate?",
+        "answer": "ProviderOne subtracts the resident's client responsibility from your claim. You collect that amount from the resident. The Medicaid payment plus the resident's share is payment in full, so you cannot charge extra for anything the daily rate covers. Extra charges for items the rate does not cover need a written supplemental payment policy first (WAC 388-105-0050).",
+        "alts": [
+          "Why does ProviderOne deduct client responsibility?",
+          "Can an adult family home charge a Medicaid resident extra?"
+        ]
+      },
+      {
+        "question": "My resident stopped paying their share. What now?",
+        "answer": "ProviderOne still deducts it. DSHS asks you to email the case manager right away, with [Secure] in the subject, and not to wait months. The case manager can help with a payee, a payment plan or a conservator. Nonpayment can be grounds for discharge, but only with proper written notice, usually at least 30 days, with copies to the case manager and ombudsman within three calendar days.",
+        "alts": [
+          "What if a Medicaid resident does not pay their participation?",
+          "Can I discharge a resident for not paying?"
+        ]
+      },
+      {
+        "question": "Do I need special approval to care for residents with dementia?",
+        "answer": "You need specialty training first, for the provider, entity representative, resident manager and staff, before you admit the resident. Then you can send DSHS proof of training and ask for a dementia designation. The same applies to mental illness and developmental disabilities. The 120-day window is only for a current resident who develops the need after moving in.",
+        "alts": [
+          "How does an AFH get a dementia specialty designation?",
+          "What are AFH specialty designations?",
+          "What training do I need to care for residents with dementia or mental illness?"
+        ]
+      },
+      {
+        "question": "Can a new home get an ECS or SBS contract?",
+        "answer": "Not in its first year. DSHS asks for 12 months under a Medicaid contract (one DSHS manual says 12 months licensed), no significant enforcement in the last year, and contract training. SBS also needs a history with challenging behavior, and residents must be found not eligible for CBHS first. A buyer should plan to requalify: the Medicaid contract ends at a change in licensee, and the 12-month requirement is measured on the buyer's own license or contract.",
+        "alts": [
+          "How do I qualify for an ECS contract?",
+          "How does an AFH get an SBS contract?",
+          "What are the requirements for ECS and SBS?"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "HCA: FAQ, ProviderOne Setup and Payment Information for New Social Service Providers (updated July 2026)",
+        "href": "https://hca.wa.gov/assets/billers-and-providers/faq-providerone-setup-payment-info-new-social-service-providers.pdf"
+      },
+      {
+        "label": "HCA: ProviderOne for Social Services, Getting Started and Billing Essentials (updated June 2025)",
+        "href": "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-getting-started-billing-essentials.pdf"
+      },
+      {
+        "label": "HCA: Submitting and Adjusting Social Service Claims (updated January 2026)",
+        "href": "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-submitting-adjusting-social-service-medical-claims.pdf"
+      },
+      {
+        "label": "DSHS: How to apply for an Adult Family Home Medicaid Contract",
+        "href": "https://www.dshs.wa.gov/node/29074"
+      },
+      {
+        "label": "DSHS: Sample AFH Client Service Contract (form dated December 2021)",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/Sample%20AFH%20Contract.pdf"
+      },
+      {
+        "label": "DSHS: AFH/AL specialty contracts (ECS and SBS)",
+        "href": "https://dshs.wa.gov/node/34864"
+      },
+      {
+        "label": "DSHS Long-Term Care Manual, Chapter 7f: Residential Support Waiver",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%207f.pdf"
+      },
+      {
+        "label": "DSHS Long-Term Care Manual, Chapter 8: Residential Services",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%208.docx"
+      },
+      {
+        "label": "DSHS: Non-Payment Frequently Asked Questions (residential providers)",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/non%20payment%20flyer.pdf"
+      },
+      {
+        "label": "WAC 182-515-1509: post-eligibility treatment of income, waiver residents",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=182-515-1509"
+      },
+      {
+        "label": "WAC 182-513-1100 and 182-513-1105: definitions, personal needs allowance and room and board",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1105"
+      },
+      {
+        "label": "WAC 182-513-1215: Community First Choice",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1215"
+      },
+      {
+        "label": "WAC 388-105-0050: payment in full and supplemental payments",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-105-0050"
+      },
+      {
+        "label": "WAC 388-76-10205 and 388-76-10522: Medicaid contract terms and the home's Medicaid policy",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10522"
+      },
+      {
+        "label": "WAC 388-76-10615 and 388-76-10617: discharge, and notice for Medicaid residents (amended April 30, 2026)",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10617"
+      },
+      {
+        "label": "RCW 70.129.110: 30-day notice before discharge",
+        "href": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.129.110"
+      },
+      {
+        "label": "WAC 388-76-10495, 10500 and 10505: specialty designations",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10500"
+      },
+      {
+        "label": "WAC 388-112A-0490 and RCW 70.128.230: specialty training and the 120-day window",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-112A-0490"
+      },
+      {
+        "label": "WAC 388-106-0336 and 388-106-0338: SBS, ECS and the Residential Support Waiver",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-106-0336"
+      }
+    ]
+  }
+]

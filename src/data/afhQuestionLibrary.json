@@ -1886,6 +1886,104 @@
    "pathTitle": "Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs Get Paid"
   },
   {
+   "id": "RU-046",
+   "topic": "Billing & getting paid",
+   "q": "Does an adult family home license let me bill Medicaid?",
+   "alts": [
+    "Is my AFH license enough to take Medicaid residents?",
+    "Do I need a separate contract to get paid by Medicaid?",
+    "what do I need before billing medicaid for an afh"
+   ],
+   "a": "No. A license lets you operate; it does not let you bill Medicaid. A home needs a signed Medicaid contract with DSHS, and DSHS says contractors cannot admit new Medicaid clients until that contract is in place. A licensed home requests one by emailing the DSHS Contracts Unit at adshqcontracts@dshs.wa.gov with the home's name, license number and address. Each resident's services must also be authorized by their DSHS case manager.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-047",
+   "topic": "Billing & getting paid",
+   "q": "What forms does DSHS need for an adult family home Medicaid contract?",
+   "alts": [
+    "Which paperwork do I send for an AFH Medicaid contract?",
+    "Medicaid contract forms adult family home"
+   ],
+   "a": "DSHS lists the Contractor Intake Form (DSHS 27-043), an \"Additional Details AFH\" form, the Medicaid Provider Disclosure Statement and a W-9. After you sign and return the contract, DSHS sends back the fully signed copy with your ProviderOne number, and HCA emails ProviderOne login instructions. If they do not arrive within 24 hours, call HCA at 1-800-562-3022.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-048",
+   "topic": "Billing & getting paid",
+   "q": "What day of the week does ProviderOne pay?",
+   "alts": [
+    "Which day do AFH Medicaid payments arrive?",
+    "What is the ProviderOne billing deadline each week?",
+    "ProviderOne Tuesday cutoff"
+   ],
+   "a": "ProviderOne pays weekly. HCA says a claim submitted by Tuesday at 5 p.m. Pacific should pay that Friday at the earliest or the following Monday at the latest; a claim entered after the deadline pays Friday of the next week. Holidays and system maintenance can move these dates. A remittance advice listing paid, denied and pending claims is posted each Friday.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-049",
+   "topic": "Billing & getting paid",
+   "q": "Will ProviderOne pay me by direct deposit?",
+   "alts": [
+    "How do I get electronic payments from ProviderOne?",
+    "Does ProviderOne send paper checks to new providers?"
+   ],
+   "a": "Not automatically. HCA sets new social service providers up for paper checks (warrants) by default. To be paid by direct deposit you sign up separately for electronic funds transfer (EFT) in ProviderOne.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-050",
+   "topic": "Billing & getting paid",
+   "q": "Does Medicaid pay for the day a resident moves out?",
+   "alts": [
+    "Is the last day of a resident's stay billable?",
+    "How is a partial month billed for an AFH resident?"
+   ],
+   "a": "Not usually. DSHS does not pay for the last day of service when a client moves out, except when the last day is the date of death. Payment for part of a month is prorated. When a resident moves out, DSHS guidance says to refund any unspent participation within 30 days.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-051",
+   "topic": "Billing & getting paid",
+   "q": "Who collects the resident's share of the cost in an adult family home?",
+   "alts": [
+    "Does DSHS collect participation from my residents?",
+    "Do I collect room and board from a Medicaid resident?"
+   ],
+   "a": "The home does. DSHS financial staff set the amount (client responsibility: room and board, plus participation toward care for waiver residents), and ProviderOne subtracts it from your claim automatically. HCA says the provider must still collect that amount from the resident each month. The Medicaid payment plus the resident's share is payment in full for the services in the resident's plan.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-052",
+   "topic": "Billing & getting paid",
+   "q": "Can I care for a resident with dementia before my home has the specialty designation?",
+   "alts": [
+    "Can I admit a resident with mental illness without specialty training?",
+    "What happens if a current resident develops dementia?"
+   ],
+   "a": "Only with the training. A home must not admit or keep a resident with dementia, mental illness or developmental disability needs unless the provider, entity representative, resident manager and staff have completed the specialty training. The one window: if a resident who already lives in the home develops one of these needs, the provider, entity representative and resident manager have 120 days to finish the training. It does not apply to admitting someone who already has the need.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "RU-053",
+   "topic": "Billing & getting paid",
+   "q": "What is the difference between ECS and SBS staffing?",
+   "alts": [
+    "Does ECS include one-on-one staffing?",
+    "How many SBS residents can one adult family home serve?"
+   ],
+   "a": "ECS (Expanded Community Services) covers personal care, 24-hour on-site support, medication management and behavior support, and does not offer one-on-one staffing. SBS (Specialized Behavior Support) adds six to eight hours a day of individualized staff time, needs an approved staffing calendar before it is authorized, and is limited to three SBS residents at a time (four with the HCS Regional Administrator's approval). For SBS, a resident must first be found not eligible for CBHS.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
    "id": "RU-040",
    "topic": "Management & resident managers",
    "q": "Does someone have to live in my adult family home?",

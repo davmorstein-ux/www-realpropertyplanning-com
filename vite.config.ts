@@ -33,6 +33,7 @@ import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from 
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
 import { STATUTE_GUIDES, statuteGuideMeta } from "./src/data/statuteGuides";
+import { AFH_ARTICLES, afhArticleMeta } from "./src/data/afhArticles";
 import { JOURNEYS, QUESTIONS_PATH, journeyPath, libraryFaq, libraryFor, ALL_LIBRARY_ENTRIES, LIBRARIES, libraryEntriesAll, libraryJourneyPath, libraryFaqOf } from "./src/data/questionLibrary";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
@@ -1108,6 +1109,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   /* Statute-based probate guides (Oct 11, 2026): src/data/statuteGuides.ts. */
   ...Object.fromEntries(STATUTE_GUIDES.map((g) => [g.path, statuteGuideMeta(g) as RouteMeta])),
+  /* AFH Club articles (Oct 12, 2026): src/data/afhArticles.ts. */
+  ...Object.fromEntries(AFH_ARTICLES.map((a) => [a.path, afhArticleMeta(a) as RouteMeta])),
   /* Question library (Oct 11, 2026): src/data/questionLibrary.ts. The journey pages carry every
      entry as an FAQ, so the questions and their links are in the static HTML and /ai/pages.json. */
   [QUESTIONS_PATH]: {
@@ -1222,7 +1225,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       { q: "What is the difference between a CARE classification and a CBHS tier?", a: "A CARE classification is assigned by DSHS to every Medicaid resident and sets the base daily rate. A CBHS tier is a separate Health Care Authority benefit for residents with qualifying behavioral needs, defined by hours of dedicated staff supervision per day." },
       { q: "Which AFH income survives a sale?", a: "CARE classifications and CBHS tiers follow each resident. DSHS contracting staff confirmed in September 2026 that residents do not need new assessments after a change of ownership, though each authorization is reissued under the new owner's ProviderOne number. Specialty contracts such as ECS and SBS belong to the owner and do not transfer; a buyer needs its own, approved by DSHS program staff. Private-pay rates are set by the home and can be changed by the next owner." },
     ],
-    article: { datePublished: "2026-09-18", dateModified: "2026-09-25" },
+    article: { datePublished: "2026-09-18", dateModified: "2026-10-12" },
   },
   "/afh-club/care-classifications-a-through-e": {
     title: "CARE Classifications A Through E: How Medicaid Pays Washington Adult Family Homes | AFH Club",
