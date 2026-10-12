@@ -89,7 +89,7 @@ const FAQS = [
   {
     question: "If I buy an operating adult family home, does the license come with it?",
     answer:
-      "No. The license belongs to the provider and the address together. A buyer applies for their own license through the DSHS Change of Ownership process and must be approved before operating. The seller's license ends at closing.",
+      "No. The license belongs to the provider and the address together. A buyer applies for their own license through the DSHS Change of Ownership process and must be approved before operating. The seller's license does not pass to the buyer; it closes when the seller relinquishes or surrenders it as part of the change of ownership.",
   },
   {
     question: "How can I check a listing's claim myself?",

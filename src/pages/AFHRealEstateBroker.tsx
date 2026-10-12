@@ -152,7 +152,7 @@ const AFHRealEstateBroker = () => (
             }}
           >
             Buying or selling an Adult Family Home is unlike any other real estate transaction. The real estate and the
-            DSHS license are handled separately, specialty contracts don't transfer automatically, and the CHOW process
+            DSHS license are handled separately, specialty contracts don't transfer, and the CHOW process
             adds complexity that standard residential brokers rarely encounter. You need a broker who understands all of
             it.
           </p>
@@ -300,11 +300,11 @@ const AFHRealEstateBroker = () => (
                   },
                   {
                     title: "Valuing an AFH requires dual expertise",
-                    body: "An AFH's value includes the real estate and the licensed business operation — bed capacity, compliance history, specialty contracts, and Medicaid relationships all affect price. A broker who is also a certified appraiser brings a rare combination of skills.",
+                    body: "An AFH's value includes the real estate and the licensed business operation — bed capacity, compliance history, census and income history all affect price, and because specialty contracts don't transfer, a buyer has to price in what must be requalified. A broker who is also a certified appraiser brings a rare combination of skills.",
                   },
                   {
                     title: "Specialty contracts need careful handling",
-                    body: "Dementia, ECS, and SBS specialty contracts don't transfer in a CHOW. A knowledgeable broker helps buyers understand what they are actually acquiring and what they will need to independently qualify for.",
+                    body: "ECS and SBS specialty contracts don't transfer in a CHOW, and specialty designations such as dementia, mental health and developmental disabilities belong to the provider's training, not the house. A knowledgeable broker helps buyers understand what they are actually acquiring and what they will need to independently qualify for.",
                   },
                   {
                     title: "Compliance history matters more than curb appeal",
