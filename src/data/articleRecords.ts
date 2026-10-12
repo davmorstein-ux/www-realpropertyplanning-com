@@ -147,13 +147,16 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
   "/afh-club/getting-paid-providerone-billing": {
     published: "2026-10-12",
     reviewed: "2026-10-12",
-    changes: [],
+    changes: [
+      { date: "2026-10-12", text: "Added DSHS Resource Development's written answer on how to start an ECS or SBS contract: contact Resource Development or the home's HCS residential case manager." },
+    ],
     sources: [
       { label: "HCA: FAQ, ProviderOne Setup and Payment Information for New Social Service Providers (updated July 2026)", href: "https://hca.wa.gov/assets/billers-and-providers/faq-providerone-setup-payment-info-new-social-service-providers.pdf" },
       { label: "HCA: ProviderOne for Social Services, Getting Started and Billing Essentials (updated June 2025)", href: "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-getting-started-billing-essentials.pdf" },
       { label: "HCA: Submitting and Adjusting Social Service Claims (updated January 2026)", href: "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-submitting-adjusting-social-service-medical-claims.pdf" },
       { label: "DSHS: How to apply for an Adult Family Home Medicaid Contract", href: "https://www.dshs.wa.gov/node/29074" },
       { label: "DSHS: AFH Licensing Frequently Asked Questions (specialty designations, Medicaid contracts)", href: "https://www.dshs.wa.gov/altsa/afh-licensing-faq" },
+      { label: "Written answer from DSHS Resource Development on how an AFH starts the ECS or SBS contract process (October 12, 2026)" },
       { label: "DSHS: Sample AFH Client Service Contract (form dated December 2021)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/Sample%20AFH%20Contract.pdf" },
       { label: "DSHS: Residential Long-Term Care Facilities Specialty Contracts (ECS and SBS)", href: "https://www.dshs.wa.gov/residential-long-term-care-facilities-specialty-contracts" },
       { label: "DSHS Long-Term Care Manual, Chapter 7f: Residential Support Waiver", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%207f.pdf" },

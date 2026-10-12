@@ -16,7 +16,9 @@
  *
  * "Getting Paid" (Oct 12, 2026): 41 claims verified, 5 overstated and corrected,
  * 2 unsourced and removed. Still open with DSHS (emailed by the owner Oct 12, 2026):
- *   - how a home applies for an ECS or SBS contract (Resource Development);
+ *   - ANSWERED Oct 12, 2026 (DSHS Resource Development, Debra Knutson, in writing):
+ *     an owner reaches out to Resource Development or the assigned HCS residential
+ *     case manager to start ECS/SBS. On the page.
  *   - whether the ECS/SBS 12-month requirement is 12 months under a Medicaid
  *     contract (DSHS specialty contracts page) or 12 months licensed (LTC Manual
  *     Ch. 7f); the page states the contract version and says so;
