@@ -155,6 +155,7 @@ const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEsta
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
 const QuestionLibrary = lazy(() => import("./pages/QuestionLibrary"));
+const StatuteGuide = lazy(() => import("./pages/guides/StatuteGuide"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const EmbedCalculators = lazy(() => import("./pages/EmbedCalculators"));
 const CostOfCareEmbedPage = lazy(() => import("./pages/embed/CostOfCareEmbedPage"));
@@ -488,6 +489,9 @@ export const AppRoutes = () => (
       {/* Twenty pages live under /guides/..., so a trimmed URL should land on the library, not a 404. */}
       {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
       <Route path="/calculators" element={<Calculators />} />
+      <Route path="/guides/probate-costs-washington" element={<StatuteGuide slug="probate-costs" />} />
+      <Route path="/guides/debts-after-death-washington" element={<StatuteGuide slug="debts-after-death" />} />
+      <Route path="/guides/contest-will-washington" element={<StatuteGuide slug="will-contests" />} />
       <Route path="/questions" element={<QuestionLibrary />} />
       <Route path="/questions/plan-ahead" element={<QuestionLibrary slug="plan-ahead" />} />
       <Route path="/questions/aging-parent" element={<QuestionLibrary slug="aging-parent" />} />

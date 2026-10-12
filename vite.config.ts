@@ -32,6 +32,7 @@ import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/d
 import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
+import { STATUTE_GUIDES, statuteGuideMeta } from "./src/data/statuteGuides";
 import { JOURNEYS, QUESTIONS_PATH, journeyPath, libraryFaq, libraryFor, ALL_LIBRARY_ENTRIES } from "./src/data/questionLibrary";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
@@ -1105,6 +1106,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-27", dateModified: "2026-09-28" },
   },
+  /* Statute-based probate guides (Oct 11, 2026): src/data/statuteGuides.ts. */
+  ...Object.fromEntries(STATUTE_GUIDES.map((g) => [g.path, statuteGuideMeta(g) as RouteMeta])),
   /* Question library (Oct 11, 2026): src/data/questionLibrary.ts. The journey pages carry every
      entry as an FAQ, so the questions and their links are in the static HTML and /ai/pages.json. */
   [QUESTIONS_PATH]: {

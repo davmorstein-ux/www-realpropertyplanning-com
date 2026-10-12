@@ -73,6 +73,9 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "What to Do With an Inherited House in Washington", href: "/guides/inherited-house-washington" },
       { title: "What To Do With the House", href: "/what-to-do-with-the-house" },
       { title: "Who Has Authority to Sell Probate Property in Washington?", href: "/guides/who-has-authority-sell-probate-property-washington" },
+      { title: "What Does Probate Cost in Washington?", href: "/guides/probate-costs-washington" },
+      { title: "Who Pays a Parent's Debts After They Die in Washington?", href: "/guides/debts-after-death-washington" },
+      { title: "Can a Will Be Challenged in Washington?", href: "/guides/contest-will-washington" },
     ],
   },
   {
