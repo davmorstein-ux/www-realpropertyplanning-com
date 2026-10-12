@@ -99,6 +99,12 @@ const TOPICS = [
     description: "What a management company can do for an adult family home, what stays with you as the licensed owner, and the DSHS filing that comes first.",
   },
   {
+    title: "Getting Paid",
+    href: "/afh-club/getting-paid-providerone-billing",
+    img: "/afh-getting-paid-cover.webp",
+    description: "How an adult family home gets its Medicaid contract, bills ProviderOne and gets paid, collects the resident's share, and qualifies for ECS or SBS.",
+  },
+  {
     title: "Which Tier? The AFH Payment Field Guide",
     href: "/afh-club/afh-payment-field-guide",
     img: "/afh-field-guide-cover-v2.webp",
@@ -321,6 +327,12 @@ const AFHResources = () => (
             href: "/afh-club/hiring-an-afh-management-company",
             img: "/afh-management-company-cover.webp",
             placeholder: "#0a5648",
+          },
+          {
+            title: "Getting Paid",
+            href: "/afh-club/getting-paid-providerone-billing",
+            img: "/afh-getting-paid-cover.webp",
+            placeholder: "#1b2a4a",
           },
           {
             title: "Which Tier? The AFH Payment Field Guide",
