@@ -242,7 +242,7 @@ export const PROBATE_GLOSSARY: ProbateGlossaryTerm[] = [
     term: "Administrator",
     category: "People and roles",
     definition:
-      "A personal representative appointed when there is no will or no named executor able to serve. If no one with priority asks to be appointed within 40 days of the death, the court may appoint a principal creditor or another suitable person.",
+      "A personal representative appointed when there is no will or no named executor able to serve. The law sets the order of priority: the surviving spouse or registered domestic partner, then next of kin, and others on the list, ending with the principal creditors. If none of them asks to be appointed within 90 days of the death, the court may appoint any suitable person.",
     guide: G.whoSells,
     source: src("11.28.120", "priority for appointment"),
   },

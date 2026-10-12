@@ -3,9 +3,11 @@
  * (Question Map step 6, Oct 4, 2026). Checked Oct 4, 2026 against the
  * statute text:
  *   - RCW 11.28.237  notice to heirs within 20 days of appointment
- *   - RCW 11.28.120  if those entitled don't petition for letters of
- *                    administration within 40 days of the death, the court may
- *                    appoint a principal creditor or another suitable person
+ *   - RCW 11.28.120  if those entitled (spouse or partner, next of kin, and the
+ *                    others on its list, ending with principal creditors) don't
+ *                    petition within 90 days of the death, the court may appoint
+ *                    any suitable person. (Was 40 days before 2026 c 204, effective
+ *                    June 11, 2026; corrected Oct 12, 2026.)
  *   - RCW 11.68.065  a beneficiary not yet fully paid may petition for a
  *                    status report, one year after appointment or the last report
  *   - RCW 11.68.070  a party may petition when a nonintervention personal
@@ -70,7 +72,7 @@ const ExecutorNotActing = () => (
       </ol>
       <p className="ena-note">
         <strong>If no one has opened probate at all:</strong> where there is no will and the family members with
-        priority do not petition within 40 days of the death, the court may appoint someone else, so an heir is not
+        priority do not petition within 90 days of the death, the court may appoint another suitable person, so an heir is not
         stuck waiting. With a will, the person named as executor has no authority until the court appoints them. In
         either case, a probate attorney can tell you how to get the estate opened.
       </p>

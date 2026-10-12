@@ -44,7 +44,12 @@
     "Who inherits my home if I never write a will?",
     "What does dying intestate mean for my property?",
     "What happens if someone dies without a will?",
-    "what happens when a parent dies with no will"
+    "what happens when a parent dies with no will",
+    "Do I need a will if I own a house?",
+    "do I need a will if my house is my only asset",
+    "What happens to my house if I die without a will?",
+    "what happens to property when someone dies without a will",
+    "dying without a will in washington"
    ],
    "a": "Washington state law, not your wishes, decides who inherits. With no will there is no named executor, so family members must ask the court to appoint a personal representative, and the process can become more complicated and time-consuming. A will lets you name who inherits the house and who carries out your wishes; a funded trust or another tool that passes property outside probate is another option.",
    "path": "/wills",
@@ -95,7 +100,9 @@
     "Is my old will still good?",
     "When should I review my will or trust?",
     "update will after moving or remarrying",
-    "Do I need a new will after selling my house?"
+    "Do I need a new will after selling my house?",
+    "How often should I update my estate plan?",
+    "when should I review my estate plan"
    ],
    "a": "Review it periodically, and especially after major life changes. A will or trust written decades ago may not reflect current wishes, family circumstances or law. A will written before a move, a remarriage, a death in the family, or the sale of a home may no longer say what you intended. Many legal service plans include an annual review, and beneficiary designations deserve a look at the same time.",
    "path": "/planning-before-a-crisis/legal-documents",
@@ -140,7 +147,9 @@
     "Can I name who gets my house without probate?",
     "TOD deed washington how it works",
     "How do I leave my house to my son without going through probate?",
-    "beneficiary deed for my home washington"
+    "beneficiary deed for my home washington",
+    "What is a transfer-on-death deed?",
+    "what does a TOD deed do"
    ],
    "a": "It is a Washington deed that names who should receive your property after death, without sending the house through probate. It must be recorded with the county auditor before the owner dies, and it takes the same mental capacity as making a will. It can suit a single residence or a straightforward plan, but it is not a full estate plan: it does not do everything a trust can, or resolve incapacity issues.",
    "path": "/articles/wills-trusts-other-options",
@@ -171,7 +180,9 @@
     "add child to title to avoid probate",
     "Is it a good idea to add my son to my house deed?",
     "joint ownership of my home with my kids",
-    "What's wrong with adding a child to the deed?"
+    "What's wrong with adding a child to the deed?",
+    "Should I put my adult child on my deed?",
+    "add my son to my house title"
    ],
    "a": "Be cautious. Adding a child to title may feel like a shortcut, but it is a gift. It can create tax complications, because the added share gets no step-up at death, plus ownership issues and exposure to that child's personal financial life. Done within five years before applying for long-term care, it can also cause a Medicaid penalty. Joint ownership can be useful, but only when handled with eyes open.",
    "path": "/articles/wills-trusts-other-options",
@@ -247,7 +258,9 @@
     "durable vs regular power of attorney washington",
     "Why does my power of attorney need to be durable?",
     "Does a power of attorney stop working if I get dementia?",
-    "financial power of attorney washington incapacity"
+    "financial power of attorney washington incapacity",
+    "Who will manage my house if I become incapacitated?",
+    "who handles my finances and home if I can't"
    ],
    "a": "A durable power of attorney names an agent to handle your finances and keeps working if you become incapacitated. In Washington, a power of attorney ends at incapacity unless the document says it survives. Without one, no one can legally sign real estate documents, access accounts or make financial decisions for you, including selling your home, and even adult children have no automatic authority. A Washington estate planning attorney should draft it.",
    "path": "/planning-before-a-crisis/legal-documents",
@@ -550,7 +563,9 @@
     "true cost of aging in place",
     "What does it actually cost to stay in my own home as I get older?",
     "aging in place budget checklist",
-    "Why isn't comparing my mortgage to a senior living fee enough?"
+    "Why isn't comparing my mortgage to a senior living fee enough?",
+    "Can I afford to keep my home after retirement?",
+    "can I afford to stay in my house when I retire"
    ],
    "a": "Count more than the mortgage. A realistic tally includes housing costs (mortgage or rent, property taxes, insurance, utilities), maintenance, home modifications, in-home care, and food and transportation, which senior living communities bundle into their fees. In-home care is where costs can escalate, since it is typically billed by the hour. Total it, then compare with a full cost breakdown from one or two communities at the needed level of care.",
    "path": "/articles/aging-in-place",
@@ -564,7 +579,9 @@
     "signs aging in place isn't working anymore",
     "When should we stop trying to keep Mom at home?",
     "when to move from home to senior living",
-    "Is it time to reconsider staying in the house?"
+    "Is it time to reconsider staying in the house?",
+    "How do I know when it is time to downsize?",
+    "signs it's time to downsize my home"
    ],
    "a": "Common signals: care hours multiply until in-home care rivals or exceeds the cost of a community with round-the-clock care; the home itself becomes the problem, such as stairs that are now dangerous; falls, wandering or medication errors happen despite support; or the main family caregiver's health, relationships or livelihood start to suffer. None of these are failures, but each calls for an honest reassessment.",
    "path": "/articles/aging-in-place",
@@ -612,6 +629,36 @@
    "pathTitle": "Aging in Place & Staying at Home Safely"
   },
   {
+   "id": "GP-001",
+   "topic": "Aging in place",
+   "q": "Should I stay in my home as I get older, or move?",
+   "alts": [
+    "Should I stay in my home as I get older?",
+    "is aging in place right for me",
+    "Is it better to stay in my house or move to senior living?",
+    "can I keep living in my own home as I age",
+    "stay home or move retirement decision"
+   ],
+   "a": "It depends on how well the home and the support around it fit you, now and later. Staying often works well when the home is suitable or can be made so with reasonable modifications, your needs are modest, your finances support housing plus services over the long term, family or community support is nearby, and you are thriving rather than isolated. Reassess if care hours multiply, the home itself becomes the problem, or safety incidents happen despite support.",
+   "path": "/articles/aging-in-place",
+   "pathTitle": "Aging in Place With Support"
+  },
+  {
+   "id": "GP-002",
+   "topic": "Aging in place",
+   "q": "Is it worth remodeling my house so I can age in place?",
+   "alts": [
+    "Should I renovate my home for aging in place?",
+    "home modifications to stay in my house as I get older",
+    "what changes make a house work for aging in place",
+    "aging in place remodel worth it",
+    "who does aging-in-place renovations"
+   ],
+   "a": "It can be. With the right modifications, staying home is often realistic. Common changes include grab bars and a walk-in shower conversion, a ramp or zero-step entry, a stairlift or moving the primary bedroom to the main floor, lever door handles, brighter lighting and wider doorways. Minor work can cost a few hundred dollars, while a full accessible bathroom remodel can run well into five figures, so get written bids before deciding. A Certified Aging-in-Place Specialist is a contractor trained in this work.",
+   "path": "/helping-an-aging-parent/living-independently/home-modifications",
+   "pathTitle": "Home modifications & aging in place"
+  },
+  {
    "id": "PA-042",
    "topic": "Family conversations",
    "q": "How do I start talking with my parents about their plans for the future?",
@@ -633,7 +680,9 @@
     "planning conversations with adult children",
     "What topics should we cover when planning ahead as a family?",
     "four conversations to have with aging parents",
-    "What do my kids need to know about my wishes?"
+    "What do my kids need to know about my wishes?",
+    "How do I talk to my adult children about my housing plans?",
+    "telling my kids where I want to live as I age"
    ],
    "a": "Four conversations matter most: where you want to live as you age, the plan if living alone becomes difficult, who will manage things if you can't, and your wishes for the property. The third is the legal backbone: someone must be named in signed documents to make financial and healthcare decisions. And if your wishes for the house aren't documented, the family is left guessing.",
    "path": "/planning-before-a-crisis/conversations-to-have",
@@ -713,6 +762,38 @@
    "pathTitle": "How Senior Transition Sales Differ From Ordinary Home Sales"
   },
   {
+   "id": "GP-003",
+   "topic": "When a move is coming",
+   "q": "What should I do first if I think I may need to move to senior living?",
+   "alts": [
+    "What should I do first if I might move to senior housing?",
+    "first steps before moving to assisted living",
+    "planning ahead for a possible move to a retirement community",
+    "how to get ready for a senior living move",
+    "senior move coming what to do now"
+   ],
+   "a": "Use the time before a crisis. Research the types of senior living, visit the places you're considering in person, learn what they cost, and ask about waitlists. Have the home evaluated, even if a move is a year or two away, so you know its likely value and what preparation it needs. And create or update your powers of attorney, will and trust now, because the ability to sign legal documents can be affected by cognitive decline.",
+   "path": "/planning-before-a-crisis/when-a-move-is-coming",
+   "pathTitle": "When a Move Seems Like It's Coming"
+  },
+  {
+   "id": "GP-005",
+   "topic": "When a move is coming",
+   "q": "What's the biggest mistake families make when a senior move is coming?",
+   "alts": [
+    "What is the biggest mistake people make when planning a senior move?",
+    "common mistakes moving a parent to assisted living",
+    "senior move planning mistakes to avoid",
+    "what not to do when planning a move to senior living"
+   ],
+   "a": "Waiting. Senior living communities, especially those with memory care or more support, can have waitlists, and if a move becomes urgent before you've started looking, your options narrow dramatically. On the house side, common costly mistakes are guessing the property's value, spending too much on unnecessary repairs, and waiting too long to seek professional guidance. A short conversation early usually prevents bigger problems later.",
+   "path": "/planning-before-a-crisis/when-a-move-is-coming",
+   "pathTitle": "When a Move Seems Like It's Coming",
+   "also": [
+    "/preparing-home-for-sale-during-transition"
+   ]
+  },
+  {
    "id": "PA-049",
    "topic": "Downsizing & selling",
    "q": "Do I need to clean out the house before getting it valued?",
@@ -737,7 +818,9 @@
     "repairs before selling a senior's home",
     "Should I update the kitchen before selling?",
     "sell house as-is or fix it up",
-    "what to fix before listing an older house"
+    "what to fix before listing an older house",
+    "Should we make repairs before selling an aging parent's home?",
+    "fix up mom's house before selling"
    ],
    "a": "Safety, water, roof and major mechanical issues tend to matter most; cosmetic upgrades vary by market, and many updates do not return their cost. Many homes sell well as-is, and updating is rarely all-or-nothing. Selling as-is can simplify the process, while targeted preparation may improve the outcome. Getting a valuation in current condition first helps show which repairs make sense.",
    "path": "/preparing-home-for-sale-during-transition",
@@ -751,7 +834,9 @@
     "where to begin downsizing",
     "too much stuff to move to a smaller place",
     "how long does downsizing take",
-    "downsizing tips for seniors moving"
+    "downsizing tips for seniors moving",
+    "How do we handle decades of belongings before a move?",
+    "sorting a lifetime of stuff before moving"
    ],
    "a": "Start small: a single category such as papers or photos, or one room, and build momentum from there. Timelines vary widely; some families work over many weeks or months, while others compress the process when a move or health event creates urgency. Small, consistent sessions usually feel most manageable, and a senior move manager can help when the work feels too large to handle alone.",
    "path": "/downsizing-preparing-for-transition",
@@ -787,6 +872,23 @@
    "a": "The most expensive mistakes come from acting before authority is confirmed, guessing at value, or making large repairs without input. Slow down and assemble the right team first: usually an attorney, a real estate professional and often a CPA, with a housing advisor and move manager in senior situations. Families typically choose to sell, keep, rent or transfer the home, depending on care costs, family goals, taxes and timing.",
    "path": "/what-should-we-do-first",
    "pathTitle": "What Should We Do First?"
+  },
+  {
+   "id": "GP-004",
+   "topic": "Downsizing & selling",
+   "q": "How do I get my house ready for a move that's still a ways off?",
+   "alts": [
+    "How do I prepare my house for a future move?",
+    "preparing my home to sell before moving to senior living",
+    "steps to get a longtime home ready to sell",
+    "what to do to my house before I downsize"
+   ],
+   "a": "Take it in steps: understand the home's condition, decide which preparation is actually worth doing, organize belongings gradually, and build a small support team. If a move is likely even a year or two away, having the home evaluated now leaves time to get bids and decide what to fix and what to leave as-is. Safety, water, roof and major mechanical issues tend to matter most, while many updates do not return their cost. Working one room or one category at a time keeps it manageable.",
+   "path": "/preparing-home-for-sale-during-transition",
+   "pathTitle": "Preparing a Home for Sale During a Transition",
+   "also": [
+    "/planning-before-a-crisis/when-a-move-is-coming"
+   ]
   },
   {
    "id": "PA-054",
@@ -825,7 +927,9 @@
     "how to avoid probate washington",
     "How can I make sure my kids don't have to go through probate?",
     "ways to skip probate on my house",
-    "what can I do now so my family avoids probate"
+    "what can I do now so my family avoids probate",
+    "Can I avoid probate entirely in Washington?",
+    "how to avoid probate completely"
    ],
    "a": "Yes, with planning. A will usually leads to probate. A funded trust, one that actually holds the property, can pass it to heirs without probate, and a recorded transfer on death deed, joint tenancy with right of survivorship, or a community property agreement can also pass property outside probate. Beneficiary designations on life insurance, retirement accounts and payable-on-death accounts pass outside the will. There is no universal winner, so an estate planning attorney can help evaluate which approach fits.",
    "path": "/planning-before-a-crisis/legal-documents",
@@ -900,7 +1004,9 @@
     "signs my elderly parent needs more help",
     "is it time for my dad to move out of his house",
     "parent not safe living alone signs",
-    "how to tell if mom needs assisted living"
+    "how to tell if mom needs assisted living",
+    "How do I know if my mother can still live alone?",
+    "is my mom safe living alone"
    ],
    "a": "Ask some honest questions. Is the home genuinely safe, or just familiar? Does your parent need help with bathing, dressing, or medications? Are memory concerns growing rather than stable? Is loneliness becoming a health issue? What would happen after a fall or a hospital stay? An Aging Life Care Manager can do a thorough professional assessment and translate it into a clear picture of the right level of care.",
    "path": "/articles/how-to-choose-senior-housing",
@@ -919,6 +1025,42 @@
    "a": "Common signs include wandering that creates real safety risk; repeated incidents like falls, leaving the stove on, or getting lost; agitation or nighttime disruption beyond what family or home caregivers can safely manage; needs that have outgrown assisted living; and a primary caregiver whose own health is suffering. The decision is rarely clean, and an Aging Life Care Manager can assess where your parent actually is.",
    "path": "/articles/memory-care-costs",
    "pathTitle": "Memory Care Costs"
+  },
+  {
+   "id": "GP-007",
+   "topic": "Signs and conversations",
+   "q": "What should I do if my dad keeps falling at home?",
+   "alts": [
+    "What should I do if my father keeps falling at home?",
+    "elderly parent falling repeatedly",
+    "mom fell again what now",
+    "repeated falls at home senior",
+    "my parent keeps falling, is it time to move"
+   ],
+   "a": "Start by reducing the risks. Walk through the bathroom, stairs, entry and kitchen, where most incidents happen; remove loose rugs and clutter, add grab bars and stair handrails, improve lighting, and consider a medical alert system. Recent falls often signal that additional support would help. If falls keep happening despite adequate support, the current arrangement may have reached its limits, and it helps to understand the options before a crisis forces the decision.",
+   "path": "/helping-an-aging-parent/living-independently/staying-safe-at-home",
+   "pathTitle": "Staying safe at home",
+   "also": [
+    "/articles/aging-in-place",
+    "/aging-in-place-staying-home-safely"
+   ]
+  },
+  {
+   "id": "GP-008",
+   "topic": "Signs and conversations",
+   "q": "What if my mom refuses help at home?",
+   "alts": [
+    "What if my parent refuses help at home?",
+    "elderly parent won't accept help",
+    "dad refuses caregivers",
+    "how to get a stubborn parent to accept in-home care"
+   ],
+   "a": "Resistance is common and usually about loss of control. Start with the smallest possible step and respect your parent's preferences. Listening, including them in decisions, and introducing changes gradually often eases the path. A neutral third party, such as a care advisor or geriatric care manager, can often shift the conversation.",
+   "path": "/aging-in-place-staying-home-safely",
+   "pathTitle": "Aging in Place & Staying at Home Safely",
+   "also": [
+    "/understanding-senior-transitions"
+   ]
   },
   {
    "id": "AP-006",
@@ -944,7 +1086,8 @@
    "alts": [
     "adult family home vs assisted living washington",
     "is an AFH smaller than assisted living",
-    "difference between AFH and ALF"
+    "difference between AFH and ALF",
+    "difference between an adult family home and assisted living"
    ],
    "a": "Mainly scale and setting. An adult family home is a private house serving up to six residents (occasionally eight) with a live-in or round-the-clock caregiver. An assisted living facility is a licensed building, often with dozens to hundreds of apartments, shift staff, and communal dining. Washington licenses the two under different laws, with different building requirements and inspection rules.",
    "path": "/senior-living/what-is-an-adult-family-home",
@@ -1069,6 +1212,34 @@
    "pathTitle": "Affordable Senior Housing"
   },
   {
+   "id": "GP-009",
+   "topic": "Care options",
+   "q": "Is assisted living the same as a nursing home?",
+   "alts": [
+    "assisted living vs nursing home",
+    "difference between assisted living and a nursing home",
+    "does my mom need assisted living or a nursing home",
+    "is a nursing home more care than assisted living"
+   ],
+   "a": "No. Assisted living, licensed in Washington for seven or more residents, provides housing, meals, personal care and social programming for people who need regular help with daily activities but not the intensive medical oversight of a nursing facility. A nursing home is the most intensive residential care: 24-hour supervised nursing, medical management and rehabilitation therapy. Costs differ too: Washington medians in 2025 survey data were $7,546 a month for assisted living and $13,155 for a semi-private nursing home room.",
+   "path": "/long-term-care/how-to-choose-care-settings",
+   "pathTitle": "How to Choose Between Care Settings: A Guide for Washington Families"
+  },
+  {
+   "id": "GP-011",
+   "topic": "Care options",
+   "q": "How do I compare senior living communities for my mom?",
+   "alts": [
+    "How do I compare senior living communities?",
+    "how to choose between assisted living communities",
+    "touring senior living what to look for",
+    "questions to ask when visiting assisted living"
+   ],
+   "a": "Start with an honest look at care needs and a real budget, which usually narrows the list to two or three options. Before visiting, check availability, waitlists, fees and care levels. On visits, ask every community the same questions and notice how staff treat residents and how the dining room feels at a meal. Before signing, read the whole contract: what the base rate includes, what triggers extra charges, how pricing changes as needs increase, and how often rates rise.",
+   "path": "/articles/how-to-choose-senior-housing",
+   "pathTitle": "How to Choose Senior Housing"
+  },
+  {
    "id": "AP-016",
    "topic": "Adult family homes",
    "q": "Where do I report a problem at my dad's adult family home?",
@@ -1168,6 +1339,19 @@
    "a": "DSHS pays a \"High Cost\" schedule in those three counties and a \"Standard Cost\" schedule everywhere else. Effective July 1, 2026, the base rate runs $4,394 to $8,495 per resident per month in King, Pierce, and Snohomish, versus $4,030 to $7,623 elsewhere, from the lightest to the heaviest care level. Add-on payments for specialized services are not included in those figures.",
    "path": "/adult-family-home-costs",
    "pathTitle": "What It Costs to Live in an Adult Family Home, by City and County"
+  },
+  {
+   "id": "GP-010",
+   "topic": "Adult family homes",
+   "q": "Would an adult family home be better than assisted living for my parent?",
+   "alts": [
+    "Would an adult family home be better than assisted living?",
+    "adult family home or assisted living which is better",
+    "is a small care home better for mom than a big facility"
+   ],
+   "a": "It depends on the person. Adult family homes suit people who need consistent personal care and supervision but do well in a smaller, quieter, home-like setting with smaller staff-to-resident ratios. Assisted living often fits people who would enjoy a more active social environment and structured programming. Adult family homes vary a lot in the care they provide, so compare each option's all-in monthly cost at your parent's care level and visit in person.",
+   "path": "/long-term-care/how-to-choose-care-settings",
+   "pathTitle": "How to Choose Between Care Settings: A Guide for Washington Families"
   },
   {
    "id": "AP-023",
@@ -1470,6 +1654,18 @@
    "pathTitle": "Medicaid and the Family Home in Washington"
   },
   {
+   "id": "GP-021",
+   "topic": "Medicaid and the house",
+   "q": "Does my parent have to sell the house when they move into care?",
+   "alts": [
+    "does mom have to sell her house when she goes into care",
+    "Can my parent keep their house after moving into care?"
+   ],
+   "a": "Not to qualify for Medicaid, generally. If your parent intends to return home and the equity is under $1,130,000 (2026), the house is usually exempt and does not have to be sold. Someone still has to pay the taxes, insurance and upkeep, and if your parent is not expected to return home, DSHS may place a lien on the house that it collects from if the house is later sold.",
+   "path": "/long-term-care/medicaid-and-the-family-home",
+   "pathTitle": "Medicaid and the Family Home in Washington"
+  },
+  {
    "id": "AP-043",
    "topic": "Hospital discharge and rehab",
    "q": "How many days of rehab does Medicare pay for after a hospital stay?",
@@ -1553,7 +1749,9 @@
     "where can mom go after the hospital",
     "discharge options for elderly parent",
     "rehab or home after hospital",
-    "hospital discharge to adult family home"
+    "hospital discharge to adult family home",
+    "How do I plan a move after my parent is hospitalized?",
+    "where does mom go after the hospital if she can't go home"
    ],
    "a": "The main options are going home with support (home health aides, nursing visits, therapy, meal delivery), a short-term skilled nursing facility for more intensive rehab or nursing, or, if care needs have changed for good, an adult family home or assisted living. The discharge planner, usually a social worker or case manager, helps arrange this, and you can ask about providers you've researched yourself.",
    "path": "/long-term-care/hospital-discharge-planning",
@@ -1595,7 +1793,11 @@
     "rent out parent's house to pay for care",
     "keep or sell mom's house after she moves to care",
     "what to do with dad's house when he goes to a nursing home",
-    "parent can't go home house decision"
+    "parent can't go home house decision",
+    "Should we sell the house to pay for long-term care?",
+    "sell mom's house to pay for her care",
+    "Can we rent my parent's house instead of selling it?",
+    "rent out dad's house while he's in care"
    ],
    "a": "It usually makes sense to decide once the care plan is settled, with the numbers in front of you. Keeping the house empty costs money every month. Renting brings in income but makes a landlord of whoever manages it and changes the tax picture. Selling pays for care but ends the option of coming home. In the first weeks, protect the house and keep every option open.",
    "path": "/long-term-care/hospital-discharge-planning",
@@ -1692,6 +1894,34 @@
    "pathTitle": "Can You Sell a Parent's House If They Have Dementia?"
   },
   {
+   "id": "GP-006",
+   "topic": "Legal authority and POA",
+   "q": "Can I use my parent's power of attorney to sell their house?",
+   "alts": [
+    "Can I use my parent's power of attorney to list the house?",
+    "Does a power of attorney let my family sell my house?",
+    "POA sell house washington",
+    "selling mom's house as her power of attorney",
+    "does an agent need a court order to sell a house"
+   ],
+   "a": "Usually yes, if the power of attorney grants authority over real property and is durable, meaning it says it survives incapacity. No court order is needed; the title company reviews the document, and for real estate it should be notarized. It won't work if it is limited to banking or health care, isn't durable once your parent has lost capacity, or springs on incapacity nobody has confirmed in writing. It ends at death; after that only a court-appointed personal representative or a trustee can sell.",
+   "path": "/power-of-attorney",
+   "pathTitle": "Power of Attorney and Real Estate in Washington State"
+  },
+  {
+   "id": "GP-020",
+   "topic": "Legal authority and POA",
+   "q": "Can I sell my mother's house if she has dementia?",
+   "alts": [
+    "selling a parent's house with dementia",
+    "Can I sell my dad's house if he has Alzheimer's?",
+    "selling a house when the owner has dementia"
+   ],
+   "a": "Usually, yes. Who signs depends on where your parent is in the illness and what papers they signed earlier. If your parent can still understand the sale, they can sign themselves. If not, an agent under a durable power of attorney can usually sell it. If the house is in a living trust, the successor trustee may be able to act. With none of these, a court has to appoint a conservator, who needs the court's permission to sell the home. If your parent is married, the spouse usually has to sign too.",
+   "path": "/guides/sell-parents-house-dementia-washington",
+   "pathTitle": "Can You Sell a Parent's House If They Have Dementia?"
+  },
+  {
    "id": "AP-058",
    "topic": "Selling a parent's house",
    "q": "My parent's house is in a living trust. Who can sell it if they have dementia?",
@@ -1761,7 +1991,9 @@
     "move first or sell first senior",
     "sell parent's house before moving to care",
     "timing home sale and move to assisted living",
-    "rent back after selling mom's house"
+    "rent back after selling mom's house",
+    "Should I sell my home before choosing a retirement community?",
+    "sell my house first or move to senior living first"
    ],
    "a": "There's no single right order. Move first when staying home is no longer safe, a discharge or an opening sets the date, the first months can be paid without the sale, or showings would upset your parent. Sell first when the proceeds are needed for the move, your parent can stay safely at home meanwhile, or a short rent-back with the buyer lets them move once.",
    "path": "/sell-house-fund-senior-living",
@@ -1789,7 +2021,9 @@
     "types of in-home care for seniors",
     "home health aide vs personal care aide",
     "help at home for elderly parent options",
-    "in home care services washington"
+    "in home care services washington",
+    "Can my parent receive care without moving?",
+    "can my dad get care at home instead of moving"
    ],
    "a": "Options range from companion or homemaker care (errands, meals, housekeeping, companionship) and personal care aides (bathing, dressing, grooming, mobility) to home health aides supervised by a nurse, skilled nursing visits for wound care or medication management, and physical, occupational, or speech therapy at home. Your local Area Agency on Aging can explain in-home care programs in your county.",
    "path": "/helping-an-aging-parent/needs-help-at-home/in-home-care",
@@ -1879,7 +2113,9 @@
     "siblings fighting over parent's care",
     "family conflict elder care decisions",
     "brother lives far away and disagrees about mom",
-    "mediator for siblings about parent care"
+    "mediator for siblings about parent care",
+    "What if siblings disagree about moving our parent?",
+    "my sister and I disagree about moving mom"
    ],
    "a": "Focus on what your parent wants, not on each sibling's preferences. When disagreements are significant, a geriatric care manager or family mediator can help. For family members who live far away, video calls, a shared care-coordination app, and clear written updates keep everyone informed. Clear agreements about who handles what, and regular family check-ins to adjust as needs change, also help.",
    "path": "/helping-an-aging-parent/needs-help-at-home/family-coordination",
@@ -1912,6 +2148,42 @@
    "a": "Minor modifications like grab bars, lighting, and hardware can often be done for a few hundred dollars. Larger projects like stairlifts, ramps, or bathroom remodels often cost several thousand dollars, and a full accessible bathroom remodel can run well into five figures. Get written bids. Some Washington residents may qualify for help through Area Agencies on Aging or local nonprofit housing programs.",
    "path": "/helping-an-aging-parent/living-independently/home-modifications",
    "pathTitle": "Home modifications & aging in place"
+  },
+  {
+   "id": "GP-012",
+   "topic": "Help at home and caregivers",
+   "q": "What if my parent needs help overnight?",
+   "alts": [
+    "my mom needs someone with her at night",
+    "24-hour care for elderly parent at home",
+    "overnight caregiver for dad",
+    "can my parent stay home if they need care at night"
+   ],
+   "a": "That is often when staying home gets hard. Staying home tends to stop working when care is needed at night, and round-the-clock care at home usually costs more than any residential setting. Adult family homes typically include 24-hour supervision. When touring one, ask how many caregivers are on duty overnight and whether they are awake at night. When the cost of the hours needed passes the cost of a residential setting, compare the options seriously.",
+   "path": "/senior-transitions/can-parent-afford-to-stay-home",
+   "pathTitle": "Can a Parent Afford to Stay at Home?",
+   "also": [
+    "/senior-living/choosing-an-adult-family-home",
+    "/senior-living/adult-family-homes"
+   ]
+  },
+  {
+   "id": "GP-013",
+   "topic": "Help at home and caregivers",
+   "q": "How can I help my mom when I live in another state?",
+   "alts": [
+    "How can I help my parent from another state?",
+    "long distance caregiving aging parent",
+    "helping elderly parent from far away",
+    "caring for a parent from out of state"
+   ],
+   "a": "Keep everyone informed with video calls, a shared care-coordination app and clear written updates, and agree clearly on who handles what. An aging life care manager can be especially valuable when families live far apart: they assess needs, coordinate medical care, monitor over time and act as an advocate. Make sure the legal pieces are in place too, such as a durable financial power of attorney and a HIPAA authorization, which lets healthcare providers share medical information with named family members.",
+   "path": "/helping-an-aging-parent/needs-help-at-home/family-coordination",
+   "pathTitle": "Coordinating family caregivers",
+   "also": [
+    "/aging-life-care-managers",
+    "/helping-an-aging-parent/health-crisis/legal-authority"
+   ]
   },
   {
    "id": "AP-073",
@@ -1965,7 +2237,9 @@
     "first thing to do with a house after a parent dies",
     "Dad just passed and his house is empty, what do I do right away?",
     "executor first week house checklist",
-    "How do I protect my parent's home in the first few days after the death?"
+    "How do I protect my parent's home in the first few days after the death?",
+    "Should I change the locks after a parent dies?",
+    "change locks on parents house after death"
    ],
    "a": "Start with three things: secure the house, confirm the insurance, and document its condition. Change the locks and control who has keys, tell the homeowner's insurer about the death, keep heat, power and water on, and photograph every room and the exterior. Then talk with the estate attorney about how the house is titled and what authority you need before doing anything bigger, like listing it.",
    "path": "/guides/executor-first-steps-house",
@@ -2065,7 +2339,9 @@
     "will says sell the house do I still need probate",
     "I'm named executor in my mom's will, can I list her house now?",
     "does the will give the executor authority to sell",
-    "named in will can I sign a listing agreement"
+    "named in will can I sign a listing agreement",
+    "Does being named executor in a will let me sell the house?",
+    "named executor can I sell the house"
    ],
    "a": "Not yet. Even when the will directs a sale, the executor generally needs court-issued authority first. The will states the person's wishes, but the court must appoint you and issue letters testamentary before you can sign a listing, accept an offer or transfer title, and the title company will require that court paperwork before closing. You can secure, insure and prepare the house in the meantime.",
    "path": "/guides/executor-sell-house-before-probate-washington",
@@ -2158,7 +2434,9 @@
     "small estate affidavit real estate Washington",
     "estate under $100,000 do we need probate",
     "Can a small estate skip probate if there's a house?",
-    "small estate affidavit house"
+    "small estate affidavit house",
+    "Can I use a small estate affidavit to transfer a house in Washington?",
+    "small estate affidavit transfer house"
    ],
    "a": "No. Washington's small estate affidavit can be used when the whole probate estate, including any real estate, is worth $100,000 or less after liens, and 40 days have passed since the death. It lets a successor collect personal property such as bank accounts, but it cannot transfer real estate. So a house in the person's name alone usually means probate, however small the rest of the estate is.",
    "path": "/washington-probate-guide/deadlines-and-key-rules",
@@ -2177,7 +2455,9 @@
     "can I open probate in my own county",
     "probate venue Washington county",
     "Where is a probate petition filed?",
-    "which court do I file probate in"
+    "which court do I file probate in",
+    "Where is probate filed in Washington?",
+    "which court handles probate in washington"
    ],
    "a": "In Washington, probate is filed in superior court, in any county the petitioner chooses. Within four months, a party can have the case moved to the county where the person lived. Most estates are then handled with little court involvement.",
    "path": "/washington-probate-guide/deadlines-and-key-rules",
@@ -2759,7 +3039,9 @@
     "partition action inherited house Washington",
     "one heir forcing sale",
     "co-owner sue to sell inherited property",
-    "Uniform Partition of Heirs Property Act"
+    "Uniform Partition of Heirs Property Act",
+    "Can siblings force the sale of an inherited house?",
+    "can my sister force a sale of our inherited house"
    ],
    "a": "Possibly. A co-owner can file a partition action asking the court to divide the property or, if it cannot be divided fairly, order it sold and the proceeds shared. For property inherited by relatives, Washington's Uniform Partition of Heirs Property Act may apply, giving the other co-owners a chance to buy out the one who sued. Partition is expensive and adversarial, so most families try agreement first.",
    "path": "/guides/heirs-disagree-selling-house",
@@ -2858,7 +3140,9 @@
     "does probate require an appraisal Washington",
     "must the executor get a certified appraisal",
     "appraisal required for estate inventory",
-    "Do we have to pay for an appraisal on dad's house?"
+    "Do we have to pay for an appraisal on dad's house?",
+    "Do we need a date-of-death appraisal?",
+    "is a date of death appraisal required"
    ],
    "a": "No. Washington requires the personal representative to value estate property as of the date of death in the inventory, but does not require a certified appraisal. An appraisal is the value that holds up if heirs, creditors or tax authorities question it, so it is the usual choice when taxes, a dispute or a buyout are involved. The estate attorney can say whether your case needs one.",
    "path": "/date-of-death-valuation-property-appraisals",
@@ -2905,7 +3189,9 @@
    "alts": [
     "appraisal vs comparative market analysis",
     "CMA or appraisal for probate",
-    "Is a realtor's market analysis the same as an appraisal?"
+    "Is a realtor's market analysis the same as an appraisal?",
+    "Do I need an appraisal or a real estate market analysis?",
+    "appraisal or market analysis for inherited house"
    ],
    "a": "An appraisal is an independent, certified opinion of value by a licensed appraiser following USPAP, with an inspection and written report that can be used for legal, tax, lending and court purposes. A CMA is a broker's pricing opinion based on recent sales, used to set a listing price, and does not carry the same legal weight. Use an appraisal when the number will be reported for taxes, relied on by a court or used to divide the estate.",
    "path": "/guides/appraisal-vs-cma",
@@ -3046,6 +3332,23 @@
     "/guides/repairs-before-selling-probate-home-washington"
    ],
    "pathTitle": "Should You Sell an Inherited House As-Is or Fix It Up?"
+  },
+  {
+   "id": "GP-015",
+   "topic": "Pricing & repairs",
+   "q": "Can we sell an inherited house as-is?",
+   "alts": [
+    "sell inherited house without fixing it",
+    "do we have to fix up mom's house before selling",
+    "as-is sale estate house washington",
+    "selling dad's house in its current condition"
+   ],
+   "a": "Yes. There is no legal requirement to make repairs before selling. Whether to fix it up depends on the condition, the market, repair costs and the time and money the estate can invest. As-is may be the better path for a home with structural or major system problems, or the only practical one when the estate lacks cash for repairs; often targeted improvements such as cleaning, paint and minor repairs work best. A personal representative is exempt from the seller disclosure form, but hiding a known problem is not safe.",
+   "path": "/guides/sell-inherited-house-as-is-or-fix",
+   "pathTitle": "Should You Sell an Inherited House As-Is or Fix It Up?",
+   "also": [
+    "/guides/repairs-before-selling-probate-home-washington"
+   ]
   },
   {
    "id": "ES-068",
@@ -3263,7 +3566,9 @@
     "what does probate mean",
     "Why do we have to go to court after my mom died?",
     "probate explained washington",
-    "what is the point of probate"
+    "what is the point of probate",
+    "What is probate?",
+    "probate definition"
    ],
    "a": "Probate is the court process for settling a person's estate after they die: validating the will, appointing the executor (personal representative), notifying creditors, paying debts and distributing what is left to the heirs. In Washington it is filed in superior court, and most estates are then handled with little court involvement. It is needed mainly when the person owned real estate in their name alone, or significant assets with no beneficiary designation or co-owner.",
    "path": "/estate-probate-inherited-property/probate-and-legal-authority",
@@ -3281,7 +3586,9 @@
     "How do I know if probate is required in my state?",
     "how do I know if my dad's estate needs probate",
     "is probate always required when someone dies",
-    "probate required or not washington"
+    "probate required or not washington",
+    "Does every estate need probate in Washington?",
+    "is probate always needed in washington"
    ],
    "a": "No. Probate is needed for property titled in the person's name alone with no beneficiary named. Property that passes by title or designation skips it: a house in a living trust, joint tenancy with right of survivorship, a transfer on death deed recorded before the death, and accounts or policies with a living beneficiary. If everything in the person's name is worth $100,000 or less after liens, a small estate affidavit may work, but it cannot transfer real estate, so a house in their name alone usually means probate.",
    "path": "/washington-probate-guide/deadlines-and-key-rules",
@@ -3329,7 +3636,9 @@
     "What happens to a house with a mortgage during probate?",
     "mortgage during probate washington",
     "Who pays dad's mortgage while the estate is open?",
-    "does the mortgage get paid off when the owner dies"
+    "does the mortgage get paid off when the owner dies",
+    "What if the inherited house still has a mortgage?",
+    "inherited house with a mortgage what happens"
    ],
    "a": "The mortgage does not go away. It stays a lien on the house, interest keeps running, and the personal representative normally keeps the payments current from estate funds, along with the property taxes and insurance. If payments stop, the loan falls behind and can eventually go to foreclosure, costing the family the equity. Tell the servicer about the death and ask to be confirmed as a successor in interest. When the house sells, the loan is paid off from the proceeds at closing.",
    "path": "/guides/mortgage-after-death-washington",
@@ -3343,7 +3652,9 @@
     "How do trusts avoid probate?",
     "how does a living trust work after someone dies",
     "Why doesn't a trust have to go through probate?",
-    "living trust probate how it works"
+    "living trust probate how it works",
+    "Does a living trust keep my house out of probate?",
+    "will putting my house in a living trust avoid probate"
    ],
    "a": "Property the trust actually owns passes under the trust's terms, not through probate. The person who created the trust controls it while alive; after their death a successor trustee named in it takes over and can manage or sell the trust's house, usually showing authority with a certification of trust. The key is that the house was deeded into the trust. A house left in the person's own name usually goes through probate first, even when a will sends everything to the trust.",
    "path": "/washington-probate-guide/house-in-a-trust",
@@ -3395,7 +3706,9 @@
     "What is an executor (or personal administrator)?",
     "executor meaning",
     "What's the difference between an executor and a personal representative?",
-    "what does it mean to be named executor in a will"
+    "what does it mean to be named executor in a will",
+    "What is a personal representative?",
+    "personal representative meaning"
    ],
    "a": "An executor is the person a will names to settle the estate. Washington's term is personal representative, which also covers an administrator the court appoints when there is no will. Being named does not give authority by itself; the executor becomes the personal representative only when the court appoints them. The job is collecting assets, paying debts, filing taxes and distributing what remains to the heirs, as a fiduciary acting in the estate's and beneficiaries' interest.",
    "path": "/probate-glossary",
@@ -3431,7 +3744,7 @@
     "named executor not filing probate washington",
     "nobody has opened probate for dad's estate"
    ],
-   "a": "You are not stuck waiting. The named executor has no authority until the court appoints them, and if the person named is unable or unwilling to serve, the court appoints an administrator instead. Anyone holding the original will must deliver it to the court or the named executor within 30 days of learning of the death. Where there is no will and the family members with priority do not petition within 40 days, the court may appoint someone else. A probate attorney can explain how to get the estate opened.",
+   "a": "You are not stuck waiting. The named executor has no authority until the court appoints them, and if the person named is unable or unwilling to serve, the court appoints an administrator instead. Anyone holding the original will must deliver it to the court or the named executor within 30 days of learning of the death. Where there is no will and the family members with priority do not petition within 90 days of the death, the court may appoint another suitable person. A probate attorney can explain how to get the estate opened.",
    "path": "/washington-probate-guide/heir",
    "pathTitle": "You Inherited a House, or a Share of One",
    "also": [
@@ -3505,6 +3818,18 @@
    ]
   },
   {
+   "id": "GP-023",
+   "topic": "Debts, mortgage & property taxes",
+   "q": "What happens to an inherited house with a reverse mortgage?",
+   "alts": [
+    "inherited house with a reverse mortgage",
+    "mom died with a reverse mortgage on the house"
+   ],
+   "a": "It becomes due. After the servicer's due-and-payable notice, heirs have 30 days to pay it off and keep the house, sell it, or give it to the lender, and extensions are possible while they actively sell. If the house is worth less than the balance on a federally insured reverse mortgage, selling for at least 95 percent of the appraised value satisfies the loan.",
+   "path": "/guides/mortgage-after-death-washington",
+   "pathTitle": "What Happens to the Mortgage When Someone Dies in Washington"
+  },
+  {
    "id": "ES-116",
    "topic": "Probate process & deadlines",
    "q": "How long will it take to settle my parent's estate?",
@@ -3517,7 +3842,8 @@
     "What causes delays in probate?",
     "Why is my dad's probate dragging on?",
     "probate delays washington",
-    "What can hold up settling mom's estate?"
+    "What can hold up settling mom's estate?",
+    "How long does Washington probate take?"
    ],
    "a": "There is no fixed length, but the creditor period sets a floor. Creditors have four months from the first publication of the notice to creditors, so most Washington estates stay open at least four months, and most take six months to a year when there is a house to sell, a tax return to file or a disagreement to resolve. The house itself can often be sold well before the estate closes.",
    "path": "/washington-probate-guide/deadlines-and-key-rules",
@@ -3548,13 +3874,50 @@
     "Can the house be sold while probate is still open?",
     "Do we have to wait until probate is finished to sell the house?",
     "can you list a house during probate washington",
-    "Is the executor allowed to sell dad's house before the estate is closed?"
+    "Is the executor allowed to sell dad's house before the estate is closed?",
+    "Can the executor sell the house before probate is finished?",
+    "executor sell house before estate is closed"
    ],
    "a": "Usually, yes. Once the court appoints the executor and issues letters testamentary, the executor can list, market, negotiate and close a sale while other parts of the estate are still being settled. Most Washington estates have nonintervention powers, so no court approval is needed for the sale. A court-supervised estate may need a hearing and confirmation. The sale does not have to wait for the creditor period to end.",
    "path": "/guides/sell-house-during-probate-washington",
    "pathTitle": "Can You Sell a House During Probate in Washington State?",
    "also": [
     "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "GP-016",
+   "topic": "Selling during probate",
+   "q": "How do I sell my parent's Washington house if I live in another state?",
+   "alts": [
+    "How do I sell a Washington estate house while living elsewhere?",
+    "selling inherited house from out of state",
+    "out of state executor selling house in washington",
+    "do I have to travel to washington to sell mom's house"
+   ],
+   "a": "Much of it, including the sale, can be handled from where you live with local professionals. An executor outside Washington can serve but must appoint a local agent to accept legal papers and may need a bond. Out-of-state families typically need someone local to visit and document the property, a certified appraiser, a broker experienced in estate sales, a cleanout or move manager, a probate attorney, and regular updates so you can take part in decisions without being there.",
+   "path": "/guides/out-of-state-families",
+   "pathTitle": "How Out-of-State Families Manage a Washington Property Sale",
+   "also": [
+    "/how-the-process-works"
+   ]
+  },
+  {
+   "id": "GP-019",
+   "topic": "Selling during probate",
+   "q": "How do I find a real estate agent who knows probate?",
+   "alts": [
+    "How do I find a real estate broker experienced in probate?",
+    "what to look for in a probate real estate agent",
+    "choosing a broker for an estate house sale",
+    "probate realtor qualifications"
+   ],
+   "a": "Look for a broker with specific, hands-on experience in probate and estate transactions: someone who understands court requirements, fiduciary documentation and pricing based on the home's condition. Not every agent understands the constraints of a probate sale. And don't choose the agent who gives the highest price estimate over the one who gives the most accurate one; overpricing wastes time and costs money, especially when you have fiduciary duties.",
+   "path": "/probate-estate-sales",
+   "pathTitle": "Probate & Estate Property Sales",
+   "also": [
+    "/executors/executors-guide",
+    "/guides/pricing-house-trust-estate"
    ]
   },
   {
@@ -3565,7 +3928,9 @@
     "Can the family clean out or live in the deceased's house right away?",
     "When can we start clearing out dad's house after he passed?",
     "Can my brother move into mom's house while the estate is being settled?",
-    "clean out parents house after death how soon"
+    "clean out parents house after death how soon",
+    "Can I live in my deceased parent's house during probate?",
+    "living in mom's house while probate is open"
    ],
    "a": "Plan the cleanout now, but do not rush it. Coordinate with the heirs about personal and family items first; the actual cleanout can start once everyone agrees what to keep, donate and discard, and nobody should take items before a proper inventory. While the estate is in probate, the personal representative controls the house, not a family member living there. If someone stays, put rent, or payment of taxes, insurance and utilities, in a written agreement.",
    "path": "/guides/executor-first-steps-house",
@@ -3699,6 +4064,25 @@
    ]
   },
   {
+   "id": "GP-014",
+   "topic": "Probate process & deadlines",
+   "q": "Who can open probate in Washington?",
+   "alts": [
+    "who can file for probate",
+    "who is allowed to start probate when someone dies",
+    "Can I open probate for my dad's estate?",
+    "who petitions the court for probate washington"
+   ],
+   "a": "If there is a will, the person it names as personal representative petitions the court to be appointed; being named alone gives no authority. If there is no will, or the named person can't or won't serve, the court appoints an administrator in a set order of priority: the surviving spouse or registered domestic partner first, then next of kin. If no one with priority asks to be appointed within 90 days of the death, the court may appoint another suitable person.",
+   "path": "/guides/who-has-authority-sell-probate-property-washington",
+   "pathTitle": "Who Has Authority to Sell Probate Property?",
+   "also": [
+    "/probate-glossary",
+    "/washington-probate-guide/heir",
+    "/guides/probate-costs-washington"
+   ]
+  },
+  {
    "id": "ES-161",
    "topic": "Authority to sell",
    "q": "How does mom's house get put in my name after probate?",
@@ -3713,6 +4097,18 @@
    "pathTitle": "Washington Probate & Estate Glossary"
   },
   {
+   "id": "GP-022",
+   "topic": "Authority to sell",
+   "q": "Does a power of attorney still work after death?",
+   "alts": [
+    "does power of attorney end at death",
+    "can I still use mom's power of attorney after she died"
+   ],
+   "a": "No. A power of attorney ends at the principal's death. After that, only the personal representative (for a probate estate), the successor trustee (for a trust) or a surviving joint owner can deal with the house.",
+   "path": "/washington-probate-guide/deadlines-and-key-rules",
+   "pathTitle": "Washington Probate Deadlines & Key Rules"
+  },
+  {
    "id": "ES-162",
    "topic": "First steps",
    "q": "What do I do about mom's mail and utilities after she died?",
@@ -3720,7 +4116,9 @@
     "What happens to the deceased person's mail and utilities?",
     "Should I cancel dad's utilities now that he's gone?",
     "forward mail after death",
-    "Who pays the utility bills on the house after a death?"
+    "Who pays the utility bills on the house after a death?",
+    "What should I do with utilities and insurance after a death?",
+    "keep utilities and insurance on after parent dies"
    ],
    "a": "Forward the mail and keep the utilities on. Have the post office forward mail to an address where you can watch for bills, financial statements and other important correspondence. Keep heat, electricity and water on to prevent frozen pipes, mold and other damage; canceling them to save money is a common mistake. Utilities, mortgage payments and insurance on estate property should keep being paid from estate funds.",
    "path": "/executor-responsibilities-first-steps/first-30-days",
@@ -3761,7 +4159,9 @@
     "does the executor have to hire a probate attorney",
     "Do I legally need a lawyer for probate?",
     "do I really need a lawyer for probate",
-    "is a probate attorney required in washington"
+    "is a probate attorney required in washington",
+    "Do I need a probate lawyer?",
+    "do I need an attorney for probate"
    ],
    "a": "No. Washington State does not require an attorney for probate. But the process involves court filings, legal deadlines and documentation that can be hard to handle alone, especially when real estate is involved. A probate attorney guides the executor or personal representative through filing with the court, notifying creditors, inventorying assets and transferring property to the heirs. The guide notes most families find an experienced attorney saves time, money and family conflict.",
    "path": "/professionals/probate-attorneys",
@@ -3808,7 +4208,9 @@
     "Do I need an elder law attorney for my mom?",
     "elder law attorney medicaid guardianship",
     "Who handles Medicaid planning and long-term care legal issues?",
-    "lawyer for an aging parent moving to assisted living"
+    "lawyer for an aging parent moving to assisted living",
+    "When should I consult an elder-law attorney?",
+    "when to see an elder law attorney"
    ],
    "a": "An elder law attorney focuses on the legal needs that come with aging: long-term care planning, Medicaid eligibility, guardianship, conservatorship and incapacity planning. Their work can also include powers of attorney, advance directives, veterans' benefits and the legal side of moving to assisted living or memory care. They help families decide about care, housing and assets before a crisis. When the family home is involved, an elder law attorney is often the most important advisor.",
    "path": "/attorneys/for-elder-law-attorneys",
@@ -3887,7 +4289,9 @@
    "alts": [
     "appraisal vs broker price opinion",
     "Do I need a certified appraisal or just an agent's estimate?",
-    "Why get an appraisal for my mom's estate house?"
+    "Why get an appraisal for my mom's estate house?",
+    "What does a certified residential appraiser do?",
+    "what does a certified appraiser do"
    ],
    "a": "A certified appraiser gives an objective, defensible opinion of value backed by formal methodology and local market data. Unlike a broker's price opinion, a certified appraisal is built on structured analysis and documented evidence. Appraisal reports are accepted by courts, lenders and the IRS, and are often required in probate, estate settlement, divorce, tax appeals and senior housing decisions. That difference can help prevent a dispute or protect a fiduciary.",
    "path": "/real-estate-appraiser",
@@ -3918,7 +4322,9 @@
     "Do I need an accountant when my parent sells their home?",
     "CPA for an inherited property sale",
     "What does a CPA do in probate?",
-    "tax help selling parents house washington"
+    "tax help selling parents house washington",
+    "Can a CPA help with an inherited home?",
+    "CPA inherited house taxes"
    ],
    "a": "Because selling or transferring real estate can have tax consequences. When a senior is leaving a longtime home or a property is going through probate, a CPA can help identify tax implications, coordinate financial records, and support decisions that affect timing, proceeds and potential liabilities. CPAs and financial advisors also advise on estate tax obligations, capital gains, stepped-up basis and whether holding or selling makes more financial sense.",
    "path": "/for-cpas",
@@ -4007,7 +4413,9 @@
     "what does a geriatric care manager do",
     "care manager for an elderly parent",
     "Who coordinates my mom's care and her doctors?",
-    "aging life care manager washington"
+    "aging life care manager washington",
+    "Who can help coordinate a complicated senior transition?",
+    "someone to coordinate my parent's move and care"
    ],
    "a": "An aging life care manager, also called a geriatric care manager, is a trained professional, often a social worker or registered nurse, who helps older adults and families with the challenges of aging. They assess physical, emotional and environmental needs, coordinate medical care, and act as an advocate during major transitions. Services often include in-home assessments, care plans, coordination with doctors and facility placement guidance.",
    "path": "/aging-life-care-managers",
@@ -4079,7 +4487,9 @@
     "senior move manager services",
     "help moving my mom into assisted living",
     "Who helps a parent downsize and pack up a longtime home?",
-    "senior move management washington"
+    "senior move management washington",
+    "what do senior move managers do",
+    "how can a senior move manager help my parents"
    ],
    "a": "A senior move manager helps older adults and families plan and manage the physical and emotional process of leaving a longtime home, whether the move is to assisted living, a family member's home or a smaller residence. Services typically include space planning, sorting belongings, coordinating donation and disposal, packing, overseeing the move, and unpacking and resettling. Many also coordinate with estate sale companies and cleanout crews to handle what remains.",
    "path": "/senior-move-managers",
@@ -4315,6 +4725,42 @@
    "pathTitle": "Working With Professionals",
    "also": [
     "/estate-probate-inherited-property/first-steps"
+   ]
+  },
+  {
+   "id": "GP-017",
+   "topic": "Attorneys & legal help",
+   "q": "What should I ask a probate attorney before hiring them?",
+   "alts": [
+    "questions to ask a probate lawyer",
+    "interviewing a probate attorney",
+    "how do probate attorneys charge in washington",
+    "before I hire a probate lawyer what should I ask"
+   ],
+   "a": "Ask how they bill, whether hourly, flat fee or another way, and for an estimate in writing. Washington law sets no fixed price or percentage; attorney fees must be just and reasonable, are disclosed when the estate closes, and heirs can ask the court to review them. Also ask about their experience with Washington probate specifically and with the county where the estate is being handled, and confirm the lawyer's license with the Washington State Bar Association.",
+   "path": "/guides/probate-costs-washington",
+   "pathTitle": "What Does Probate Cost in Washington?",
+   "also": [
+    "/executor-responsibilities-first-steps/working-with-professionals",
+    "/executor-responsibilities-first-steps/when-you-need-extra-help"
+   ]
+  },
+  {
+   "id": "GP-018",
+   "topic": "Attorneys & legal help",
+   "q": "When should I see an estate planning attorney?",
+   "alts": [
+    "When should I hire an estate-planning attorney?",
+    "when do I need an estate planning lawyer",
+    "is it time to get my will and power of attorney done",
+    "what does an estate planning attorney help with"
+   ],
+   "a": "Before the documents are needed. An estate planning attorney helps create wills, trusts and powers of attorney. If you don't have these documents, or yours are outdated, now is the time: the ability to sign legal documents can be affected by cognitive decline, and once that happens the window may close. A Washington estate planning attorney can typically complete the process in a matter of weeks. Review the plan periodically, especially after major life changes.",
+   "path": "/planning-before-a-crisis/legal-documents",
+   "pathTitle": "The Legal Documents That Matter Most",
+   "also": [
+    "/planning-before-a-crisis/when-a-move-is-coming",
+    "/professionals/attorneys"
    ]
   }
  ]

@@ -21,6 +21,14 @@
  *      existing entries), 31 new entries were written from existing pages by the
  *      same method and fact-checked (28 unchanged, 4 corrected), and 36 the site
  *      does not cover yet were listed as pages to write. 279 entries.
+ *   6. Oct 12, 2026: 70 questions ChatGPT drafted for the owner were sorted the
+ *      same way (ChatGPT's own answers were not used: they are not on the site).
+ *      46 were already answered (82 phrasings added to existing entries, mostly
+ *      fixing wrong Ask-box matches such as "What is probate?"), 23 new entries
+ *      were written from existing pages and fact-checked (8 corrected), 5 are
+ *      gaps. 302 entries. The same pass corrected the administrator rule to
+ *      RCW 11.28.120 as amended by 2026 c 204: 90 days (was 40) before the
+ *      court may appoint any suitable person.
  *
  * THE RULE FOR EDITS. An answer may say only what its linked page says. If a
  * page changes (a figure each January, a rule), change the answer with it. A
