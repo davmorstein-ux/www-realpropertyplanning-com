@@ -153,6 +153,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "HCA: ProviderOne for Social Services, Getting Started and Billing Essentials (updated June 2025)", href: "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-getting-started-billing-essentials.pdf" },
       { label: "HCA: Submitting and Adjusting Social Service Claims (updated January 2026)", href: "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-submitting-adjusting-social-service-medical-claims.pdf" },
       { label: "DSHS: How to apply for an Adult Family Home Medicaid Contract", href: "https://www.dshs.wa.gov/node/29074" },
+      { label: "DSHS: AFH Licensing Frequently Asked Questions (specialty designations, Medicaid contracts)", href: "https://www.dshs.wa.gov/altsa/afh-licensing-faq" },
       { label: "DSHS: Sample AFH Client Service Contract (form dated December 2021)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/Sample%20AFH%20Contract.pdf" },
       { label: "DSHS: Residential Long-Term Care Facilities Specialty Contracts (ECS and SBS)", href: "https://www.dshs.wa.gov/residential-long-term-care-facilities-specialty-contracts" },
       { label: "DSHS Long-Term Care Manual, Chapter 7f: Residential Support Waiver", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%207f.pdf" },

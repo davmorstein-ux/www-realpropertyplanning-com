@@ -13,7 +13,7 @@
     "sections": [
       {
         "heading": "Step one: the Medicaid contract",
-        "body": "A license lets you operate. It does not let you bill Medicaid. DSHS says contractors \"cannot admit new Medicaid clients until they have a signed Medicaid contract in place.\"\n\nDSHS posts the steps for a licensed home:\n\n1. Email the DSHS Contracts Unit at adshqcontracts@dshs.wa.gov asking for a Medicaid contract. Give the home's name, license number and address.\n2. Return the forms DSHS sends (or send them with your request): the Contractor Intake Form (DSHS 27-043), \"Additional Details AFH,\" the Medicaid Provider Disclosure Statement, and a W-9.\n3. Review, sign and return the contract the contract manager emails you.\n4. DSHS sends back the fully signed contract with your ProviderOne number. HCA then emails login instructions. If none arrive within 24 hours, call HCA at 1-800-562-3022.\n\nThe DSHS sample contract also requires trained, background-checked staff and liability insurance of at least $1,000,000 per occurrence and $2,000,000 in total. The posted sample is an older version, so read the contract DSHS sends you. The contract ends \"on the effective date of a change in licensee,\" so a buyer needs a new one. See [Buying or Selling an AFH](/afh-club/buying-selling)."
+        "body": "A license lets you operate. It does not let you bill Medicaid. DSHS says contractors \"cannot admit new Medicaid clients until they have a signed Medicaid contract in place.\"\n\nDSHS posts the steps for a licensed home:\n\n1. Email the DSHS Contracts Unit at adshqcontracts@dshs.wa.gov asking for a Medicaid contract. Give the home's name, license number and address. (DSHS's licensing FAQ also lists the AFH Contracts Manager at 360-725-2649, for adding or ending a Medicaid contract.)\n2. Return the forms DSHS sends (or send them with your request): the Contractor Intake Form (DSHS 27-043), \"Additional Details AFH,\" the Medicaid Provider Disclosure Statement, and a W-9.\n3. Review, sign and return the contract the contract manager emails you.\n4. DSHS sends back the fully signed contract with your ProviderOne number. HCA then emails login instructions. If none arrive within 24 hours, call HCA at 1-800-562-3022.\n\nThe DSHS sample contract also requires trained, background-checked staff and liability insurance of at least $1,000,000 per occurrence and $2,000,000 in total. The posted sample is an older version, so read the contract DSHS sends you. The contract ends \"on the effective date of a change in licensee,\" so a buyer needs a new one. See [Buying or Selling an AFH](/afh-club/buying-selling)."
       },
       {
         "heading": "Step two: the authorization",
@@ -33,7 +33,7 @@
       },
       {
         "heading": "Specialty designations: dementia, mental health and developmental disabilities",
-        "body": "DSHS \"may designate an adult family home to provide specialty care\" in developmental disability, mental illness and dementia (WAC 388-76-10495). DSHS grants the designation when (WAC 388-76-10500):\n\n1. The provider, entity representative and resident manager have completed the specialty training;\n2. The home sends DSHS written proof of that training (or challenge test) and of specialty training for all caregivers; and\n3. The home meets each resident's specialty needs.\n\nA home \"must not admit or keep a resident with specialty care needs\" unless the provider, entity representative, resident manager and staff have completed the specialty training in chapter 388-112A WAC (WAC 388-76-10505). There is one window: if a resident who already lives in a home without the designation develops one of these needs, the provider, entity representative and resident manager have 120 days to complete the specialty training (WAC 388-112A-0490; RCW 70.128.230). The window does not apply to admitting a new resident who already has the need. See [Training & Education](/afh-club/training-education) for the courses. These rules do not attach a payment rate to a designation."
+        "body": "DSHS \"may designate an adult family home to provide specialty care\" in developmental disability, mental illness and dementia (WAC 388-76-10495). DSHS grants the designation when (WAC 388-76-10500):\n\n1. The provider, entity representative and resident manager have completed the specialty training;\n2. The home sends DSHS written proof of that training (or challenge test) and of specialty training for all caregivers; and\n3. The home meets each resident's specialty needs.\n\nA home \"must not admit or keep a resident with specialty care needs\" unless the provider, entity representative, resident manager and staff have completed the specialty training in chapter 388-112A WAC (WAC 388-76-10505). There is one window: if a resident who already lives in a home without the designation develops one of these needs, the provider, entity representative and resident manager have 120 days to complete the specialty training (WAC 388-112A-0490; RCW 70.128.230). The window does not apply to admitting a new resident who already has the need. **How to ask for it.** DSHS's licensing FAQ says a licensed home adds a specialty designation by sending a complete, signed and dated AFH Information Change form (DSHS 10-585). See [Training & Education](/afh-club/training-education) for the courses. These rules do not attach a payment rate to a designation."
       },
       {
         "heading": "ECS and SBS: specialty contracts on top of the Medicaid contract",
@@ -108,7 +108,7 @@
       },
       {
         "question": "Do I need special approval to care for residents with dementia?",
-        "answer": "You need specialty training first, for the provider, entity representative, resident manager and staff, before you admit the resident. Then you can send DSHS proof of training and ask for a dementia designation. The same applies to mental illness and developmental disabilities. The 120-day window is only for a current resident who develops the need after moving in.",
+        "answer": "You need specialty training first, for the provider, entity representative, resident manager and staff, before you admit the resident. Then you ask DSHS for the dementia designation on the AFH Information Change form (DSHS 10-585), with proof of the training. The same applies to mental illness and developmental disabilities. The 120-day window is only for a current resident who develops the need after moving in.",
         "alts": [
           "How does an AFH get a dementia specialty designation?",
           "What are AFH specialty designations?",
@@ -141,6 +141,10 @@
       {
         "label": "DSHS: How to apply for an Adult Family Home Medicaid Contract",
         "href": "https://www.dshs.wa.gov/node/29074"
+      },
+      {
+        "label": "DSHS: AFH Licensing Frequently Asked Questions (specialty designations, Medicaid contracts)",
+        "href": "https://www.dshs.wa.gov/altsa/afh-licensing-faq"
       },
       {
         "label": "DSHS: Sample AFH Client Service Contract (form dated December 2021)",
