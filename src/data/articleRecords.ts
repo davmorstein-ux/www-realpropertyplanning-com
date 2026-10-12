@@ -154,7 +154,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "HCA: Submitting and Adjusting Social Service Claims (updated January 2026)", href: "https://www.hca.wa.gov/assets/billers-and-providers/p1-social-services-submitting-adjusting-social-service-medical-claims.pdf" },
       { label: "DSHS: How to apply for an Adult Family Home Medicaid Contract", href: "https://www.dshs.wa.gov/node/29074" },
       { label: "DSHS: Sample AFH Client Service Contract (form dated December 2021)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/Sample%20AFH%20Contract.pdf" },
-      { label: "DSHS: AFH/AL specialty contracts (ECS and SBS)", href: "https://dshs.wa.gov/node/34864" },
+      { label: "DSHS: Residential Long-Term Care Facilities Specialty Contracts (ECS and SBS)", href: "https://www.dshs.wa.gov/residential-long-term-care-facilities-specialty-contracts" },
       { label: "DSHS Long-Term Care Manual, Chapter 7f: Residential Support Waiver", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%207f.pdf" },
       { label: "DSHS Long-Term Care Manual, Chapter 8: Residential Services", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%208.docx" },
       { label: "DSHS: Non-Payment Frequently Asked Questions (residential providers)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/non%20payment%20flyer.pdf" },
