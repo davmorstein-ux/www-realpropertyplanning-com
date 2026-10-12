@@ -81,7 +81,7 @@ const ExecutorNotActing = () => (
         days to ask the court to review the fees or to compel the personal representative to close the estate.
       </p>
       <p className="ena-src">
-        Sources: <R cite="11.28.237" /> (notice to heirs); <R cite="11.28.120" /> (40-day rule);{" "}
+        Sources: <R cite="11.28.237" /> (notice to heirs); <R cite="11.28.120" /> (who may serve, and the 90-day rule);{" "}
         <R cite="11.68.065" /> (status report); <R cite="11.68.070" /> (petition against a nonintervention
         personal representative); <R cite="11.28.250" /> (removal); <R cite="11.68.110" /> (declaration of
         completion).

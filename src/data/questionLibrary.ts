@@ -29,6 +29,11 @@
  *      gaps. 302 entries. The same pass corrected the administrator rule to
  *      RCW 11.28.120 as amended by 2026 c 204: 90 days (was 40) before the
  *      court may appoint any suitable person.
+ *   7. Oct 12, 2026: ChatGPT's next 400 questions and Gemini's 27 were sorted by
+ *      four writers and checked by two independent reviewers (21 entries
+ *      corrected, 13 phrasings moved or dropped). 333 phrasings added to existing
+ *      entries, 65 new entries, about 170 questions the site does not cover
+ *      listed as pages to write. 367 entries.
  *
  * THE RULE FOR EDITS. An answer may say only what its linked page says. If a
  * page changes (a figure each January, a rule), change the answer with it. A

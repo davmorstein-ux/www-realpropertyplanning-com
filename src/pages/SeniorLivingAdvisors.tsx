@@ -70,7 +70,7 @@ const SeniorLivingAdvisors = () => (
               <p>
                 Senior Living Advisors typically have deep knowledge of the local care landscape, including which
                 communities and homes have strong reputations, availability, pricing structures, and the specific level
-                of care they provide. Many maintain large databases of vetted options and personally accompany families
+                of care they provide. Many maintain large databases of communities and personally accompany families
                 on tours, helping them ask the right questions and compare their choices with clarity.
               </p>
               <p>

@@ -94,7 +94,7 @@ describe.skipIf(!built)("question library: the Ask box, with every page on the s
     if (pages.some((p) => p.path === "/afh-club/questions/running"))
       for (const e of libraryEntriesAll(LIBRARIES.afh))
         for (const q of [e.q, ...e.alts]) expect(ask(q, pages, cards, "afh").answer?.q, `${e.id}: "${q}"`).toBe(e.q);
-  }, 240_000);
+  }, 600_000);
 
   it.skipIf(!inBuild)("answers link to the guide, never to the library page", () => {
     for (const e of ALL_LIBRARY_ENTRIES.slice(0, 40)) expect(ask(e.q, pages, cards, "rpp").answer?.path).toBe(e.path);
