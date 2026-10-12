@@ -32,6 +32,7 @@ import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/d
 import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
+import { JOURNEYS, QUESTIONS_PATH, journeyPath, libraryFaq, libraryFor, ALL_LIBRARY_ENTRIES } from "./src/data/questionLibrary";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -80,8 +81,10 @@ interface RouteMeta {
    * duplicate once React mounts.
    */
   article?: { datePublished: string; dateModified?: string };
-  /** Question/answer pairs rendered as visible FAQ plus static FAQPage JSON-LD. */
-  faq?: Array<{ q: string; a: string }>;
+  /** Question/answer pairs rendered as visible FAQ plus static FAQPage JSON-LD.
+   *  `path` (question library only): the page with the full answer, linked under it.
+   *  `alts`: other phrasings, passed to /ai/pages.json for the Ask box; not rendered. */
+  faq?: Array<{ q: string; a: string; path?: string; alts?: string[] }>;
   /**
    * Prerender the live AFH for-sale inventory (summary table, listing cards,
    * ItemList JSON-LD) from src/data/afhListings.ts into the static HTML,
@@ -1102,6 +1105,27 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-27", dateModified: "2026-09-28" },
   },
+  /* Question library (Oct 11, 2026): src/data/questionLibrary.ts. The journey pages carry every
+     entry as an FAQ, so the questions and their links are in the static HTML and /ai/pages.json. */
+  [QUESTIONS_PATH]: {
+    title: "Questions & Answers: Short Answers for Washington Families | Real Property Planning",
+    description: `${ALL_LIBRARY_ENTRIES.length} short answers to the questions Washington families ask about planning ahead, helping an aging parent, handling an estate, and finding the right professional. Each answer links to the guide that covers it in full.`,
+    h1: "Questions & Answers",
+    intro: "Short answers to the questions families ask most, grouped the same way as the rest of the site. Every answer comes from one of our guides and links to it, so you can read the full explanation and its sources.",
+    sections: JOURNEYS.map((j) => `${j.title} (${journeyPath(j.slug)}) — ${libraryFor(j.slug).length} questions. ${j.blurb}`),
+  },
+  ...Object.fromEntries(
+    JOURNEYS.map((j) => [
+      journeyPath(j.slug),
+      {
+        title: `${j.title}: Questions & Answers | Real Property Planning`,
+        description: `Short answers to ${libraryFor(j.slug).length} common questions from Washington families. ${j.blurb} Each answer links to the guide that covers it in full.`,
+        h1: `${j.title}: Questions & Answers`,
+        intro: `Short answers to common questions, each from one of our guides and linked to it. ${j.blurb}`,
+        faq: libraryFaq(j.slug),
+      } as RouteMeta,
+    ]),
+  ),
   "/calculators": {
     title: "Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning",
     description: "All of Real Property Planning's free calculators in one place. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",
@@ -2418,9 +2442,14 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
 
   if (faq && faq.length) {
     ssgParts.push(`<h2 style="font-size:1.3rem;margin-top:24px;margin-bottom:8px">Common questions</h2>`);
-    faq.forEach(({ q, a }) => {
+    faq.forEach(({ q, a, path: more }) => {
       ssgParts.push(`<h3 style="font-size:1.1rem;margin:16px 0 6px">${escHtml(q)}</h3>`);
       ssgParts.push(`<p style="color:#555;line-height:1.6;margin:0">${escHtml(a)}</p>`);
+      if (more) {
+        const t = ROUTE_METADATA[more.split("#")[0]];
+        const label = t ? (t.h1 || t.title.replace(/\s*\|.*$/, "")) : "Read more";
+        ssgParts.push(`<p style="margin:4px 0 0"><a href="${escHtml(more)}" style="color:#1a365d">${escHtml(label)}</a></p>`);
+      }
     });
   }
 

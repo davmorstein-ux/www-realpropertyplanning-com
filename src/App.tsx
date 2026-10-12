@@ -154,6 +154,7 @@ const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
 const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
+const QuestionLibrary = lazy(() => import("./pages/QuestionLibrary"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const EmbedCalculators = lazy(() => import("./pages/EmbedCalculators"));
 const CostOfCareEmbedPage = lazy(() => import("./pages/embed/CostOfCareEmbedPage"));
@@ -487,6 +488,11 @@ export const AppRoutes = () => (
       {/* Twenty pages live under /guides/..., so a trimmed URL should land on the library, not a 404. */}
       {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
       <Route path="/calculators" element={<Calculators />} />
+      <Route path="/questions" element={<QuestionLibrary />} />
+      <Route path="/questions/plan-ahead" element={<QuestionLibrary slug="plan-ahead" />} />
+      <Route path="/questions/aging-parent" element={<QuestionLibrary slug="aging-parent" />} />
+      <Route path="/questions/estate" element={<QuestionLibrary slug="estate" />} />
+      <Route path="/questions/professional" element={<QuestionLibrary slug="professional" />} />
       {/* Embeddable Cost of Care calculator (Oct 6, 2026): the share page, and the
           noindex pages other websites frame. See src/lib/calculatorEmbed.ts. */}
       <Route path="/calculators/embed" element={<EmbedCalculators />} />

@@ -191,6 +191,16 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
     blurb: "Plain-language explanations, grouped by topic.",
     groups: [
       { links: nav("/guides-and-resources") },
+      {
+        label: "Questions & Answers",
+        links: [
+          { title: "Questions & Answers", href: "/questions" },
+          { title: "I Want to Plan Ahead: Questions & Answers", href: "/questions/plan-ahead" },
+          { title: "I'm Helping an Aging Parent: Questions & Answers", href: "/questions/aging-parent" },
+          { title: "I'm Handling an Estate: Questions & Answers", href: "/questions/estate" },
+          { title: "I Need a Professional: Questions & Answers", href: "/questions/professional" },
+        ],
+      },
       ...GUIDE_LIBRARY.map((g) => ({
         label: g.label,
         links: [...(g.landing ? [{ title: g.landing.label.replace(/^Start here:\s*/i, "Start here: "), href: g.landing.href }] : []), ...g.pieces],

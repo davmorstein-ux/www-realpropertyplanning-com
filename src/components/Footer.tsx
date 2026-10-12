@@ -164,6 +164,9 @@ const Footer = () => {
             <Link to="/guides-and-resources" className="rpp-footer-link">
               Guides &amp; Articles
             </Link>
+            <Link to="/questions" className="rpp-footer-link">
+              Questions &amp; Answers
+            </Link>
             <Link to="/calculators" className="rpp-footer-link">
               Calculators
             </Link>

@@ -61,7 +61,7 @@ const WhenYouNeedExtraHelp = () => (
     <P>
       If the estate includes real property located in another state, a separate probate proceeding — called "ancillary probate" — may be required in that state. This means working with attorneys licensed in that jurisdiction, in addition to your Washington State attorney.
     </P>
-    <P>Out-of-state property also requires local professional support for appraisal, maintenance, and eventual sale. Real Property Planning can help identify the right professionals in other markets.</P>
+    <P>Out-of-state property also requires local professional support for appraisal, maintenance, and eventual sale. Look for professionals who work in the county where the property is.</P>
 
     <Divider />
 

@@ -34,7 +34,7 @@ const WorkingWithProfessionals = () => (
     </P>
     <SubH3>What to look for</SubH3>
     <P>
-      Experience with Washington State probate specifically, and familiarity with the county where the estate is being administered. Real Property Planning can refer you to attorneys who specialize in this work.
+      Experience with Washington State probate specifically, and familiarity with the county where the estate is being administered. Real Property Planning does not refer clients to attorneys; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).
     </P>
 
     <Divider />

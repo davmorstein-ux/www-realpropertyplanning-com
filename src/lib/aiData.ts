@@ -50,7 +50,9 @@ export interface AiPage {
   intro?: string;
   quickAnswer?: { q: string; a: string };
   sections?: string[];
-  faq?: { q: string; a: string }[];
+  /** `path` and `alts` are set only on the question library pages (src/data/questionLibrary.ts):
+   *  the page that holds the answer in full, and other ways people ask it (for the Ask box). */
+  faq?: { q: string; a: string; path?: string; alts?: string[] }[];
   /** "rpp" = Real Property Planning family side, "afh" = AFH Club. */
   area: "rpp" | "afh";
   reviewed?: string;
@@ -94,7 +96,7 @@ export interface RouteMetaLike {
   quickAnswerQ?: string;
   quickAnswerA?: string;
   sections?: string[];
-  faq?: Array<{ q: string; a: string }>;
+  faq?: Array<{ q: string; a: string; path?: string; alts?: string[] }>;
   noIndex?: boolean;
 }
 
@@ -158,7 +160,13 @@ export function buildAiPages(routes: Record<string, RouteMetaLike>): AiPage[] {
       if (m.intro) page.intro = clean(m.intro);
       if (m.quickAnswerQ && m.quickAnswerA) page.quickAnswer = { q: clean(m.quickAnswerQ)!, a: clean(m.quickAnswerA)! };
       if (m.sections?.length) page.sections = m.sections.map((s) => clean(s)!).filter(Boolean);
-      if (m.faq?.length) page.faq = m.faq.map((f) => ({ q: clean(f.q)!, a: clean(f.a)! }));
+      if (m.faq?.length)
+        page.faq = m.faq.map((f) => ({
+          q: clean(f.q)!,
+          a: clean(f.a)!,
+          ...(f.path ? { path: f.path } : {}),
+          ...(f.alts?.length ? { alts: f.alts.map((x) => clean(x)!).filter(Boolean) } : {}),
+        }));
       if (rec) {
         page.reviewed = rec.reviewed;
         if (rec.published) page.published = rec.published;

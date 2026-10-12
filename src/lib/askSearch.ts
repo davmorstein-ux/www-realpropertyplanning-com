@@ -19,7 +19,14 @@ import { norm, stem, termPattern, words, type Page, type Term } from "@/lib/mcp/
 
 export interface AnswerCard {
   kind: "qa" | "term";
+  /** The question shown to the visitor. */
   q: string;
+  /** The wording matched against the visitor's question, when it differs from `q`
+   *  (an alternate phrasing from the question library). */
+  match?: string;
+  /** Every phrasing of the same question, joined (question library only): a visitor's words
+   *  count if they appear in ANY phrasing, so the box need not hit one wording exactly. */
+  all?: string;
   a: string;
   path: string;
   pageTitle: string;
@@ -43,12 +50,27 @@ const pathOf = (url: string) => {
   }
 };
 
+/** A FAQ item; question-library items (src/data/questionLibrary.ts) also carry their source page and other phrasings. */
+type FaqItem = { q: string; a: string; path?: string; alts?: string[] };
+
+const titleOf = (p: Page) => p.h1 || p.title.replace(/\s*\|.*$/, "");
+
 export function buildCards(pages: Page[], terms: Term[]): AnswerCard[] {
   const cards: AnswerCard[] = [];
+  const byPath = new Map(pages.map((p) => [p.path, p]));
   for (const p of pages) {
-    const pageTitle = p.h1 || p.title.replace(/\s*\|.*$/, "");
+    const pageTitle = titleOf(p);
     if (p.quickAnswer) cards.push({ kind: "qa", q: p.quickAnswer.q, a: p.quickAnswer.a, path: p.path, pageTitle, area: p.area });
-    for (const f of p.faq ?? []) cards.push({ kind: "qa", q: f.q, a: f.a, path: p.path, pageTitle, area: p.area });
+    for (const f of (p.faq ?? []) as FaqItem[]) {
+      // A question-library answer points at the guide it came from, not at the library page.
+      const target = f.path ? byPath.get(f.path.replace(/#.*$/, "")) : undefined;
+      const path = f.path && target ? f.path : p.path;
+      const title = target ? titleOf(target) : pageTitle;
+      const area = target ? target.area : p.area;
+      const all = f.alts?.length ? [f.q, ...f.alts].join(" ") : undefined;
+      cards.push({ kind: "qa", q: f.q, a: f.a, path, pageTitle: title, area, ...(all ? { all } : {}) });
+      for (const alt of f.alts ?? []) cards.push({ kind: "qa", q: f.q, match: alt, a: f.a, path, pageTitle: title, area, all });
+    }
   }
   for (const t of terms) {
     cards.push({
@@ -63,7 +85,7 @@ export function buildCards(pages: Page[], terms: Term[]): AnswerCard[] {
   // The same question often appears on two pages (a guide and its hub); keep the first.
   const seen = new Set<string>();
   return cards.filter((c) => {
-    const k = norm(c.q);
+    const k = norm(c.match ?? c.q);
     if (seen.has(k)) return false;
     seen.add(k);
     return true;
@@ -84,7 +106,8 @@ function weightsFor(texts: string[], qTerms: string[]): Record<string, number> {
 }
 
 function scoreCard(c: AnswerCard, qTerms: string[], w: Record<string, number>): { s: number; coverage: number } {
-  const q = norm(c.q);
+  const q = norm(c.match ?? c.q);
+  const qAll = c.all ? norm(c.all) : q;
   const a = norm(c.a);
   const title = norm(c.pageTitle);
   let s = 0;
@@ -100,7 +123,8 @@ function scoreCard(c: AnswerCard, qTerms: string[], w: Record<string, number>): 
     if (inQ) s += 5 * k;
     if (inA) s += 2 * k;
     if (inT) s += 1 * k;
-    if (inQ || inA) covered += k;
+    // Coverage counts a word found in ANY phrasing of the question; the score above uses this phrasing only.
+    if (inQ || inA || (qAll !== q && has(re, qAll))) covered += k;
   }
   // Two query words side by side in the card's question ("license fee") are strong evidence.
   for (let i = 0; i + 1 < qTerms.length; i++) {
@@ -147,7 +171,12 @@ export const MIN_COVERAGE = 0.7;
 export const MIN_SCORE = 6;
 
 /** Everyday words that say nothing about the topic (on top of the search's own stop list). */
-const FILLER = new Set(["done", "have", "has", "had", "many", "need", "needs", "know", "make", "way", "will", "would", "could", "there", "their", "they", "when", "where", "who", "which", "why", "if", "any", "some", "all", "still", "just", "really", "please", "thanks", "thank", "tell", "want", "like", "go", "going", "take", "takes", "mom", "dad", "mother", "father", "her", "his", "she", "he", "you", "your", "us", "am", "was", "were", "been", "being", "after", "best", "good", "new", "find"]);
+const FILLER = new Set(["done", "have", "has", "had", "many", "need", "needs", "know", "make", "way", "will", "would", "could", "there", "their", "they", "when", "where", "who", "which", "why", "if", "any", "some", "all", "still", "just", "really", "please", "thanks", "thank", "tell", "want", "like", "go", "going", "take", "takes", "mom", "dad", "mother", "father", "her", "his", "she", "he", "you", "your", "us", "am", "was", "were", "been", "being", "after", "best", "good", "new", "find",
+  // Oct 11, 2026, with the question library: words that are often the rarest in a visitor's question but say
+  // nothing about the topic, and were blocking the right answer ("is it BETTER to sell as is", "after someone DIES").
+  "better", "worse", "idea", "start", "even", "last", "month", "week", "tomorrow", "today", "now", "also", "really",
+  "thing", "things", "stuff", "someone", "something", "anything", "anyone", "everything", "just", "ok", "okay", "him", "them",
+  "dies", "died", "die", "passed", "away", "kids", "parent", "parents", "brother", "sister", "husband", "wife"]);
 
 export function ask(question: string, pages: Page[], cards: AnswerCard[], area: "all" | "rpp" | "afh" = "all"): AskResult {
   const qTerms = words(question).filter((t) => !FILLER.has(t));
@@ -155,29 +184,40 @@ export function ask(question: string, pages: Page[], cards: AnswerCard[], area: 
   const phrase = norm(question);
 
   const cardPool = area === "all" ? cards : cards.filter((c) => c.area === area);
-  const w = weightsFor(cardPool.map((c) => norm(`${c.q} ${c.a}`)), qTerms);
+  // Word rarity is measured over distinct answers, so an answer with six phrasings does not make its own words look common.
+  const distinct = new Map<string, string>();
+  for (const c of cardPool) distinct.set(`${c.q}\u0000${c.a}`, `${c.q} ${c.a}`);
+  const w = weightsFor([...distinct.values()].map((x) => norm(x)), qTerms);
   // The question's most distinctive word must appear in the matched QUESTION, and its
   // two most distinctive words somewhere in the card: otherwise "how many beds can an
   // AFH have" matches "how many AFHs are there" on the common words alone.
   const rawWords = norm(question).split(" ").filter((x) => x.length > 2);
   const byWeight = [...qTerms].sort((x, y) => (w[y] ?? 0) - (w[x] ?? 0));
   const keyRe = new RegExp(termPattern(byWeight[0]));
+  const secondRe = byWeight[1] ? new RegExp(termPattern(byWeight[1])) : keyRe;
   const topTwo = byWeight.slice(0, 2).map((t) => new RegExp(termPattern(t)));
   let best: { c: AnswerCard; s: number; coverage: number } | null = null;
   for (const c of cardPool) {
-    const qn = norm(c.q);
-    const all = `${qn} ${norm(c.a)}`;
-    if (!keyRe.test(qn) || !topTwo.every((re) => re.test(all))) continue;
+    const qn = norm(c.match ?? c.q);
+    const qAll = c.all ? norm(c.all) : qn;
+    const all = `${qAll} ${norm(c.a)}`;
+    // Library entries (several phrasings): the rarest OR second-rarest word must be in some phrasing.
+    // Single-wording FAQs keep the original, stricter rule.
+    const keyOk = c.all ? keyRe.test(qAll) || secondRe.test(qAll) : keyRe.test(qAll);
+    if (!keyOk || !topTwo.every((re) => re.test(all))) continue;
     const r = scoreCard(c, qTerms, w);
     // Wording close to the visitor's own question wins ties between neighbouring FAQs.
-    const cardWords = new Set(norm(c.q).split(" ").filter((x) => x.length > 2));
+    const cardWords = new Set(qn.split(" ").filter((x) => x.length > 2));
     const overlap = rawWords.filter((x) => cardWords.has(x)).length / Math.max(rawWords.length, cardWords.size, 1);
     r.s += 12 * overlap;
+    // The visitor typed a question the site already words exactly: that one wins.
+    if (qn === phrase) r.s += 50;
     if (!best || r.s > best.s || (r.s === best.s && c.a.length < best.c.a.length)) best = { c, ...r };
   }
   const answer = best && best.s >= MIN_SCORE && best.coverage >= MIN_COVERAGE ? best.c : null;
 
-  const pagePool = area === "all" ? pages : pages.filter((p) => p.area === area);
+  // The question library pages repeat other pages' answers, so they are not offered as "read next".
+  const pagePool = (area === "all" ? pages : pages.filter((p) => p.area === area)).filter((p) => !p.path.startsWith("/questions"));
   const pw: Record<string, number> = {};
   for (const t of qTerms) {
     const re = new RegExp(termPattern(t));
