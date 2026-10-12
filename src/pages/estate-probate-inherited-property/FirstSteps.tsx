@@ -73,7 +73,7 @@ const FirstSteps = () => (
 
     <SubH2>Obtain Death Certificates</SubH2>
     <P>
-      You will need more certified copies of the death certificate than you expect. Order at least 10–12. They are required by banks, investment firms, the Social Security Administration, insurance companies, the court, and title companies. Running out and having to reorder causes delays.
+      You will need more certified copies of the death certificate than you expect. Order several: typically 8 to 12. They are required by banks, investment firms, the Social Security Administration, insurance companies, the court, and title companies. Running out and having to reorder causes delays.
     </P>
 
     <Divider />

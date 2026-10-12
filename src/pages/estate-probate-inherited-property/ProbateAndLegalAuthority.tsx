@@ -91,7 +91,7 @@ const ProbateAndLegalAuthority = () => (
     </P>
     <SubH3>What if siblings disagree about selling?</SubH3>
     <P>
-      The personal representative has the legal authority and responsibility to administer the estate — including making decisions about property — based on the will and Washington State law, not by consensus among heirs. If heirs cannot agree, the court can order a partition sale.
+      The personal representative has the legal authority and responsibility to administer the estate — including making decisions about property — based on the will and Washington State law, not by consensus among heirs. If heirs cannot agree, during probate the personal representative decides, under the will and the law; partition applies once the house has been distributed and the heirs own it together, when a co-owner can ask the court to divide or sell it (RCW 7.52.010).
     </P>
     <SubH3>How long does probate take in Washington State?</SubH3>
     <P>

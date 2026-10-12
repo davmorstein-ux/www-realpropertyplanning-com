@@ -98,7 +98,7 @@ const MedicaidAndLongTermCare = () => {
               The resource (asset) limit is $2,000 for a single person, or $3,000 for a married couple who both receive
               care. A primary residence, one vehicle, personal belongings, and certain other assets are exempt from the
               asset calculation — though for nursing home and COPES coverage, home equity above $1,130,000 (2026) makes
-              the applicant ineligible unless a spouse or dependent child lives in the home.
+              the applicant ineligible unless a spouse, or a child who is under 21, blind or disabled, lives in the home.
             </p>
             <p className={pClass}>
               For married couples, the rules are more complex. The community spouse — the partner who remains at home —

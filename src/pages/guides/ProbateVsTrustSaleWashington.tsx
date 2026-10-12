@@ -47,7 +47,7 @@ const probateBullets = [
   "The court appoints a personal representative to manage the estate",
   "Letters Testamentary or Letters of Administration are required before the executor has legal authority to sell",
   "Washington is a non-supervised probate state — most sales do not require court approval of price or terms",
-  "The process typically takes 4–12 months from opening probate to closing",
+  "The process usually takes six months to a year from opening probate to closing, and at least four months because of the creditor claim period",
   "All decisions must meet the executor's fiduciary duty to the estate and its beneficiaries",
 ];
 
@@ -62,7 +62,7 @@ const trustBullets = [
 const comparisonRows = [
   ["Court involvement", "Yes — probate court oversees the estate", "No — trust operates independently"],
   ["Legal authority", "Letters Testamentary required", "Trustee authority per trust document"],
-  ["Timeline", "4–12 months typical", "Weeks to months"],
+  ["Timeline", "Usually 6–12 months (at least 4)", "Weeks to months"],
   ["Court approval of price", "Not required in most WA cases", "Not required"],
   ["Fiduciary duty", "Executor owes duty to estate and heirs", "Trustee owes duty to beneficiaries"],
   ["Property title", "Held in decedent's name alone", "Held in trust name"],

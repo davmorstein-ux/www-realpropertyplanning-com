@@ -65,7 +65,7 @@ export const MTH_SECTIONS: MthSection[] = [
     heading: "While your parent is alive, the house is usually protected",
     paras: [
       "For Apple Health long-term care, the home is generally an exempt asset: it does not count toward the $2,000 asset limit for a single person. That stays true after your parent moves into a nursing home, adult family home or assisted living, as long as they intend to return home, or a spouse or dependent relative lives there. The house does not have to be sold for your parent to qualify.",
-      "There is a ceiling. For nursing home and COPES coverage, home equity above $1,130,000 (2026) makes the applicant ineligible unless a spouse or dependent child lives in the home. Equity is the value of your parent's share minus the mortgage and other debts on it, so an accurate, documented value matters when the house is close to the limit.",
+      "There is a ceiling. For nursing home and COPES coverage, home equity above $1,130,000 (2026) makes the applicant ineligible unless a spouse, or a child who is under 21, blind or disabled, lives in the home. Equity is the value of your parent's share minus the mortgage and other debts on it, so an accurate, documented value matters when the house is close to the limit.",
     ],
     cites: [SRC.exemption],
   },

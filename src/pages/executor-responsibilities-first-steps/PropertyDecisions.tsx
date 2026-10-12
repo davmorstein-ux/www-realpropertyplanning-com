@@ -71,7 +71,7 @@ const PropertyDecisions = () => (
       Co-ownership of inherited property is one of the most common sources of family conflict in estate administration. One heir wants to sell, another wants to keep it, a third can't afford to buy the others out.
     </P>
     <P>
-      As executor, you have a legal obligation to act in the best interest of the estate — not to broker a compromise that makes everyone happy. If heirs cannot agree, the court can order a partition sale. Working with an experienced real estate professional who understands this dynamic can help move things forward without unnecessary conflict.
+      As executor, you have a legal obligation to act in the best interest of the estate — not to broker a compromise that makes everyone happy. If heirs cannot agree, during probate the personal representative decides, under the will and the law; partition applies once the house has been distributed and the heirs own it together, when a co-owner can ask the court to divide or sell it (RCW 7.52.010). Working with an experienced real estate professional who understands this dynamic can help move things forward without unnecessary conflict.
     </P>
 
     <Divider />

@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "How long does it take to get Letters Testamentary in Washington?",
-    a: "Typically 4–8 weeks from filing the petition with the court, depending on the county and complexity of the estate.",
+    a: "There is no set waiting period. The court can admit the will and appoint the executor as soon as the petition is presented (RCW 11.20.020), and letters issue once the executor's oath is filed and any required bond is posted. Most of the time goes into preparing the petition and gathering the will and death certificate, so it varies from estate to estate.",
   },
   {
     q: "What if the personal representative lives out of state?",

@@ -126,7 +126,7 @@ const ForAttorneysHowItWorks = () => (
               What a Licensed Broker Handles So You Don't Have To
             </h2>
             <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
-              You stay the legal lead. Real Property Planning owns the property workstream end-to-end and reports back in writing.
+              You stay the legal lead. The featured broker handles the property side from start to finish and reports back in writing.
             </p>
             <ul className="space-y-4">
               {HANDLED.map((item) => (

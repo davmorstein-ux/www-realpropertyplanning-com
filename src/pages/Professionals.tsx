@@ -273,7 +273,7 @@ const Professionals = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Navigating a probate sale, inherited home, or senior housing transition often means working with several professionals at once. This page highlights experienced specialists across Western Washington who families trust during these transitions.
+            Navigating a probate sale, inherited home, or senior housing transition often means working with several professionals at once. This page highlights experienced specialists across Western Washington who work with families during these transitions.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             Each professional listed here works in areas that commonly intersect with real estate — so families can find the right help in one place.

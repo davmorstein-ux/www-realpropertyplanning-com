@@ -88,7 +88,7 @@ const WhatToDoWithTheProperty = () => (
     <P>A few things to keep in mind:</P>
     <UL>
       <li>The personal representative has legal authority to administer the estate, including making property decisions, based on the will and Washington State law — not by consensus.</li>
-      <li>If heirs cannot agree and the impasse cannot be resolved, the court can order a partition sale.</li>
+      <li>If heirs cannot agree: during probate the personal representative decides, under the will and the law; partition applies once the house has been distributed and the heirs own it together, when a co-owner can ask the court to divide or sell it (RCW 7.52.010).</li>
       <li>An experienced real estate professional and a good probate attorney can often help families reach a workable resolution without litigation.</li>
     </UL>
 

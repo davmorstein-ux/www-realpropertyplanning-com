@@ -16,7 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const softCta = `If you would like to discuss your specific situation, contact ${FEATURED_BROKER.name} for guidance.`;
+const softCta = `If you would like to talk through your specific situation, ${FEATURED_BROKER.role} is available through Get Connected.`;
 
 const faqs = [
   {
