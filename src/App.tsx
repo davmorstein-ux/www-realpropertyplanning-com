@@ -492,6 +492,12 @@ export const AppRoutes = () => (
       <Route path="/guides/probate-costs-washington" element={<StatuteGuide slug="probate-costs" />} />
       <Route path="/guides/debts-after-death-washington" element={<StatuteGuide slug="debts-after-death" />} />
       <Route path="/guides/contest-will-washington" element={<StatuteGuide slug="will-contests" />} />
+      <Route path="/afh-club/questions" element={<QuestionLibrary library="afh" />} />
+      <Route path="/afh-club/questions/opening" element={<QuestionLibrary library="afh" slug="opening" />} />
+      <Route path="/afh-club/questions/buying" element={<QuestionLibrary library="afh" slug="buying" />} />
+      <Route path="/afh-club/questions/selling" element={<QuestionLibrary library="afh" slug="selling" />} />
+      <Route path="/afh-club/questions/running" element={<QuestionLibrary library="afh" slug="running" />} />
+      <Route path="/afh-club/questions/evaluating" element={<QuestionLibrary library="afh" slug="evaluating" />} />
       <Route path="/questions" element={<QuestionLibrary />} />
       <Route path="/questions/plan-ahead" element={<QuestionLibrary slug="plan-ahead" />} />
       <Route path="/questions/aging-parent" element={<QuestionLibrary slug="aging-parent" />} />

@@ -3,22 +3,23 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AskBox from "@/components/AskBox";
+import BackToAFHClub from "@/components/BackToAFHClub";
 import {
-  ALL_LIBRARY_ENTRIES,
-  JOURNEYS,
-  QUESTIONS_PATH,
-  journeyPath,
-  libraryFor,
+  LIBRARIES,
+  libraryEntriesAll,
+  libraryJourneyPath,
+  libraryTopics,
   topicAnchor,
-  topicsFor,
   type Journey,
+  type Library,
 } from "@/data/questionLibrary";
 
 /**
- * /questions and /questions/<journey> (Oct 11, 2026): the question library.
- * Every entry is in src/data/questionLibrary.json; see the header of
- * src/data/questionLibrary.ts for where the answers came from and the rule for
- * editing them (an answer says only what its linked page says).
+ * /questions and /questions/<journey> (family side), and /afh-club/questions and
+ * /afh-club/questions/<journey> (AFH Club), Oct 11, 2026: the question libraries.
+ * Entries are in src/data/questionLibrary.json and afhQuestionLibrary.json; see the
+ * header of src/data/questionLibrary.ts for where the answers came from and the rule
+ * for editing them (an answer says only what its linked page says).
  *
  * Shown in full, not collapsed: readers (and search and AI tools) see every
  * answer, and each one links to the guide it came from.
@@ -66,44 +67,45 @@ const PAGE_CSS = `
   .rpp-qa .rpp-qa-others a { font-size: 17px !important; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 `;
 
-const NOTE =
-  "These are short answers to help you get oriented. Each one comes from one of our guides; follow the link for the full explanation and its sources. This is general information for Washington families, not legal, tax, financial or medical advice.";
+const NOTE: Record<Library["id"], string> = {
+  family:
+    "These are short answers to help you get oriented. Each one comes from one of our guides; follow the link for the full explanation and its sources. This is general information for Washington families, not legal, tax, financial or medical advice.",
+  afh:
+    "These are short answers to help you get oriented. Each one comes from an AFH Club guide; follow the link for the full explanation and its sources. DSHS rules and rates change: confirm current requirements with DSHS. This is general information, not legal, tax, lending or licensing advice.",
+};
 
-function Hub() {
+const describe = (lib: Library) =>
+  `${libraryEntriesAll(lib).length} short answers ${lib.id === "afh" ? "for people who open, buy, sell, run or finance a Washington adult family home" : "to the questions Washington families ask about planning ahead, helping an aging parent, handling an estate, and finding the right professional"}. Each answer links to the guide that covers it in full.`;
+
+function Hub({ lib }: { lib: Library }) {
   return (
     <>
-      <SEOHead
-        title="Questions & Answers: Short Answers for Washington Families | Real Property Planning"
-        description={`${ALL_LIBRARY_ENTRIES.length} short answers to the questions Washington families ask about planning ahead, helping an aging parent, handling an estate, and finding the right professional. Each answer links to the guide that covers it in full.`}
-        canonical={`${SITE}${QUESTIONS_PATH}`}
-      />
+      <SEOHead title={`${lib.title}: Short Answers | ${lib.id === "afh" ? "AFH Club" : "Real Property Planning"}`} description={describe(lib)} canonical={`${SITE}${lib.basePath}`} />
       <div className="rpp-qa-wrap">
-        <h1 className="rpp-qa-h1">Questions &amp; Answers</h1>
-        <div className="rpp-qa-intro">
-          Short answers to the questions families ask most, grouped the same way as the rest of the site. Every answer comes from one of our guides and links to it, so you can read the full explanation and its sources.
-        </div>
+        <h1 className="rpp-qa-h1">{lib.title}</h1>
+        <div className="rpp-qa-intro">{lib.intro}</div>
         <div className="rpp-qa-ask">
-          <AskBox />
+          {lib.id === "afh" ? <AskBox title="Ask an AFH question" accent={lib.accent} contactReason="afh-question" examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]} /> : <AskBox />}
         </div>
         <div className="rpp-qa-journeys">
-          {JOURNEYS.map((j) => (
-            <Link key={j.slug} to={journeyPath(j.slug)} className="rpp-qa-journey" style={{ ["--j" as string]: j.color }}>
+          {lib.journeys.map((j) => (
+            <Link key={j.slug} to={libraryJourneyPath(lib, j.slug)} className="rpp-qa-journey" style={{ ["--j" as string]: j.color }}>
               <span className="rpp-qa-jt">{j.title}</span>
-              <span className="rpp-qa-jn">{libraryFor(j.slug).length} questions</span>
+              <span className="rpp-qa-jn">{lib.entries(j.slug).length} questions</span>
               <span className="rpp-qa-jb">{j.blurb}</span>
             </Link>
           ))}
         </div>
-        <div className="rpp-qa-note">{NOTE}</div>
+        <div className="rpp-qa-note">{NOTE[lib.id]}</div>
       </div>
     </>
   );
 }
 
-function JourneyPage({ journey }: { journey: Journey }) {
-  const entries = libraryFor(journey.slug);
-  const topics = topicsFor(journey.slug);
-  const url = `${SITE}${journeyPath(journey.slug)}`;
+function JourneyPage({ lib, journey }: { lib: Library; journey: Journey }) {
+  const entries = lib.entries(journey.slug);
+  const topics = libraryTopics(lib, journey.slug);
+  const url = `${SITE}${libraryJourneyPath(lib, journey.slug)}`;
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -117,20 +119,20 @@ function JourneyPage({ journey }: { journey: Journey }) {
   return (
     <>
       <SEOHead
-        title={`${journey.title}: Questions & Answers | Real Property Planning`}
-        description={`Short answers to ${entries.length} common questions from Washington families. ${journey.blurb} Each answer links to the guide that covers it in full.`}
+        title={`${journey.title}: Questions & Answers | ${lib.id === "afh" ? "AFH Club" : "Real Property Planning"}`}
+        description={`Short answers to ${entries.length} common questions. ${journey.blurb} Each answer links to the guide that covers it in full.`}
         canonical={url}
         schemaJson={faqSchema}
       />
       <div className="rpp-qa-wrap" style={{ ["--j" as string]: journey.color }}>
-        <Link to={QUESTIONS_PATH} className="rpp-qa-back">← All questions &amp; answers</Link>
+        <Link to={lib.basePath} className="rpp-qa-back">← All {lib.id === "afh" ? "AFH Club " : ""}questions &amp; answers</Link>
         <h1 className="rpp-qa-h1">{journey.title}: Questions &amp; Answers</h1>
         <div className="rpp-qa-intro">
-          Short answers to {entries.length} common questions, each from one of our guides and linked to it. {journey.blurb}{" "}
+          Short answers to {entries.length} common questions, each from {lib.id === "afh" ? "an AFH Club guide" : "one of our guides"} and linked to it. {journey.blurb}{" "}
           Prefer the step-by-step guide? Start at <Link to={journey.start} className="rpp-qa-start">{journey.title}</Link>.
         </div>
         <div className="rpp-qa-ask">
-          <AskBox />
+          {lib.id === "afh" ? <AskBox title="Ask an AFH question" accent={lib.accent} contactReason="afh-question" examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]} /> : <AskBox />}
         </div>
         <nav aria-label="Topics on this page">
           <ul className="rpp-qa-jump">
@@ -153,12 +155,12 @@ function JourneyPage({ journey }: { journey: Journey }) {
             ))}
           </div>
         ))}
-        <div className="rpp-qa-note">{NOTE}</div>
+        <div className="rpp-qa-note">{NOTE[lib.id]}</div>
         <div className="rpp-qa-note" style={{ marginTop: 18 }}>
           <strong>More questions &amp; answers:</strong>
           <div className="rpp-qa-others">
-            {JOURNEYS.filter((j) => j.slug !== journey.slug).map((j) => (
-              <Link key={j.slug} to={journeyPath(j.slug)} className="rpp-qa-other" style={{ ["--j" as string]: j.color }}>{j.title}</Link>
+            {lib.journeys.filter((j) => j.slug !== journey.slug).map((j) => (
+              <Link key={j.slug} to={libraryJourneyPath(lib, j.slug)} className="rpp-qa-other" style={{ ["--j" as string]: j.color }}>{j.title}</Link>
             ))}
           </div>
         </div>
@@ -167,13 +169,15 @@ function JourneyPage({ journey }: { journey: Journey }) {
   );
 }
 
-export default function QuestionLibrary({ slug }: { slug?: Journey["slug"] }) {
-  const journey = slug ? JOURNEYS.find((j) => j.slug === slug) : undefined;
+export default function QuestionLibrary({ library = "family", slug }: { library?: Library["id"]; slug?: string }) {
+  const lib = LIBRARIES[library];
+  const journey = slug ? lib.journeys.find((j) => j.slug === slug) : undefined;
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
       <Header />
-      <main className="rpp-qa">{journey ? <JourneyPage journey={journey} /> : <Hub />}</main>
+      <main className="rpp-qa">{journey ? <JourneyPage lib={lib} journey={journey} /> : <Hub lib={lib} />}</main>
+      {lib.id === "afh" && <BackToAFHClub />}
       <Footer />
     </>
   );

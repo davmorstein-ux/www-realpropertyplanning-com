@@ -38,6 +38,7 @@
  * Node-safe: imported by vite.config.ts. No React, no "@/".
  */
 import DATA from "./questionLibrary.json";
+import AFH_DATA from "./afhQuestionLibrary.json";
 
 export interface LibraryEntry {
   id: string;
@@ -57,7 +58,7 @@ export interface LibraryEntry {
 }
 
 export interface Journey {
-  slug: "plan-ahead" | "aging-parent" | "estate" | "professional";
+  slug: string;
   /** Same words as the homepage tile. */
   title: string;
   /** The journey's own starting page (the homepage tile's link). */
@@ -103,3 +104,79 @@ export const topicAnchor = (topic: string) =>
 export function libraryFaq(slug: Journey["slug"]) {
   return libraryFor(slug).map((e) => ({ q: e.q, a: e.a, path: e.path, alts: e.alts }));
 }
+
+/* ------------------------------------------------------------------------- */
+/* AFH CLUB'S QUESTION LIBRARY (Oct 11, 2026): the same method, from the AFH   */
+/* Club pages, for people who open, buy, sell, run or finance an adult family  */
+/* home (never families choosing care: that is the family side). Pages that    */
+/* change monthly (listings, sold prices, city for-sale pages, market report,  */
+/* data) were left out so answers do not go stale. 160 written, independently  */
+/* fact-checked (126 unchanged, 31 corrected, 3 dropped as duplicates), 157.   */
+/* Journeys follow AFH Club's own paths (src/data/afhFlow.ts).                 */
+/* ------------------------------------------------------------------------- */
+
+export const AFH_QUESTIONS_PATH = "/afh-club/questions";
+
+const AFH_FLOW = "/afh-club/washington-adult-family-home-guide";
+export const AFH_JOURNEYS: Journey[] = [
+  { slug: "opening", title: "Opening a New Adult Family Home", start: `${AFH_FLOW}/opening`, color: "#0a5648", blurb: "Licensing steps, qualifications, training, building requirements and WABO, startup costs and fees, and the rules that changed." },
+  { slug: "buying", title: "Buying an Adult Family Home", start: `${AFH_FLOW}/buying`, color: "#25597e", blurb: "Change of ownership, what to verify, reading listings, DSHS records, buying as an individual or an LLC, and the Property Score." },
+  { slug: "selling", title: "Selling Your Adult Family Home", start: `${AFH_FLOW}/selling`, color: "#8A4214", blurb: "Selling at retirement, the business or the building, what buyers need, resident notice, and valuation." },
+  { slug: "running", title: "Running a Licensed Adult Family Home", start: `${AFH_FLOW}/running`, color: "#246044", blurb: "Inspections and compliance, how Medicaid pays (CARE, CBHS, ECS, SBS), staffing, records, and management companies." },
+  { slug: "evaluating", title: "Evaluating an AFH Property or Investment", start: `${AFH_FLOW}/evaluating`, color: "#662D56", blurb: "Financing (residential, SBA, DSCR, commercial), how lenders count income, coverage ratios, and what the calculators show." },
+];
+
+export const AFH_LIBRARY = AFH_DATA as Record<string, LibraryEntry[]>;
+
+/** Both libraries, for the shared page component and the tests. */
+export interface Library {
+  id: "family" | "afh";
+  basePath: string;
+  title: string;
+  intro: string;
+  /** Accent for the hub and the Ask box. */
+  accent: string;
+  journeys: Journey[];
+  entries: (slug: string) => LibraryEntry[];
+}
+
+export const LIBRARIES: Record<Library["id"], Library> = {
+  family: {
+    id: "family",
+    basePath: QUESTIONS_PATH,
+    title: "Questions & Answers",
+    intro: "Short answers to the questions families ask most, grouped the same way as the rest of the site. Every answer comes from one of our guides and links to it, so you can read the full explanation and its sources.",
+    accent: "#1B3A6B",
+    journeys: JOURNEYS,
+    entries: (slug) => LIBRARY[slug as keyof typeof LIBRARY] ?? [],
+  },
+  afh: {
+    id: "afh",
+    basePath: AFH_QUESTIONS_PATH,
+    title: "AFH Club Questions & Answers",
+    intro: "Short answers for people who open, buy, sell, run or finance an adult family home in Washington, grouped by AFH Club's paths. Every answer comes from an AFH Club guide and links to it, with its sources.",
+    accent: "#0a5648",
+    journeys: AFH_JOURNEYS,
+    entries: (slug) => AFH_LIBRARY[slug] ?? [],
+  },
+};
+
+export const libraryJourneyPath = (lib: Library, slug: string) => `${lib.basePath}/${slug}`;
+
+export function libraryTopics(lib: Library, slug: string): { topic: string; entries: LibraryEntry[] }[] {
+  const out: { topic: string; entries: LibraryEntry[] }[] = [];
+  for (const e of lib.entries(slug)) {
+    let t = out.find((x) => x.topic === e.topic);
+    if (!t) out.push((t = { topic: e.topic, entries: [] }));
+    t.entries.push(e);
+  }
+  return out;
+}
+
+export const libraryEntriesAll = (lib: Library): LibraryEntry[] => lib.journeys.flatMap((j) => lib.entries(j.slug));
+
+/** For the build: one FAQ list per journey page, carrying the source page and alternate phrasings. */
+export const libraryFaqOf = (lib: Library, slug: string) => lib.entries(slug).map((e) => ({ q: e.q, a: e.a, path: e.path, alts: e.alts }));
+
+/** Every entry in both libraries. */
+export const EVERY_LIBRARY_ENTRY: LibraryEntry[] = [...libraryEntriesAll(LIBRARIES.family), ...libraryEntriesAll(LIBRARIES.afh)];

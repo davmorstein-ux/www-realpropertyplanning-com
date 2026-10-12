@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ask, buildCards } from "@/lib/askSearch";
 import type { Page, Term } from "@/lib/mcp/data";
-import { ALL_LIBRARY_ENTRIES, JOURNEYS, journeyPath, libraryFor } from "@/data/questionLibrary";
+import { ALL_LIBRARY_ENTRIES, EVERY_LIBRARY_ENTRY, JOURNEYS, LIBRARIES, journeyPath, libraryEntriesAll, libraryFor, libraryJourneyPath } from "@/data/questionLibrary";
 import { REDIRECTS } from "@/data/redirects";
 
 /**
@@ -26,11 +26,24 @@ describe("question library: content", () => {
       expect(isRoute(journeyPath(j.slug)), journeyPath(j.slug)).toBe(true);
     }
     expect(isRoute("/questions")).toBe(true);
+    for (const j of LIBRARIES.afh.journeys) {
+      expect(LIBRARIES.afh.entries(j.slug).length, j.slug).toBeGreaterThan(15);
+      expect(isRoute(libraryJourneyPath(LIBRARIES.afh, j.slug)), j.slug).toBe(true);
+    }
+    expect(isRoute("/afh-club/questions")).toBe(true);
+  });
+
+  it("AFH Club answers link only to AFH Club pages, and never to pages whose figures change monthly", () => {
+    for (const e of libraryEntriesAll(LIBRARIES.afh))
+      for (const p of [e.path, ...(e.also ?? [])]) {
+        expect(p.startsWith("/afh-club/"), `${e.id} links to ${p}`).toBe(true);
+        expect(/\/afh-club\/(listings|sold|for-sale|market-report|new-licenses|washington-afh-data)/.test(p), `${e.id} links to ${p}`).toBe(false);
+      }
   });
 
   it("ids are unique and every link is a live page, not a redirect", () => {
-    expect(new Set(ALL_LIBRARY_ENTRIES.map((e) => e.id)).size).toBe(ALL_LIBRARY_ENTRIES.length);
-    for (const e of ALL_LIBRARY_ENTRIES) {
+    expect(new Set(EVERY_LIBRARY_ENTRY.map((e) => e.id)).size).toBe(EVERY_LIBRARY_ENTRY.length);
+    for (const e of EVERY_LIBRARY_ENTRY) {
       for (const p of [e.path, ...(e.also ?? [])]) {
         expect(isRoute(p), `${e.id} links to ${p}, which is not a route`).toBe(true);
         expect(redirected.has(p), `${e.id} links to ${p}, which redirects`).toBe(false);
@@ -40,7 +53,7 @@ describe("question library: content", () => {
   });
 
   it("answers are short and plain; there are several ways to ask each question", () => {
-    for (const e of ALL_LIBRARY_ENTRIES) {
+    for (const e of EVERY_LIBRARY_ENTRY) {
       const w = e.a.split(/\s+/).length;
       expect(w, `${e.id} answer is ${w} words`).toBeGreaterThanOrEqual(30);
       expect(w, `${e.id} answer is ${w} words`).toBeLessThanOrEqual(95);
@@ -51,7 +64,7 @@ describe("question library: content", () => {
 
   it("no phrasing is used twice", () => {
     const seen = new Map<string, string>();
-    for (const e of ALL_LIBRARY_ENTRIES)
+    for (const e of EVERY_LIBRARY_ENTRY)
       for (const q of [e.q, ...e.alts]) {
         const k = norm(q);
         expect(seen.has(k), `"${q}" is in both ${seen.get(k)} and ${e.id}`).toBe(false);
@@ -60,7 +73,7 @@ describe("question library: content", () => {
   });
 
   it("names no one and endorses no one", () => {
-    for (const e of ALL_LIBRARY_ENTRIES) {
+    for (const e of EVERY_LIBRARY_ENTRY) {
       expect(e.a, e.id).not.toMatch(/\bDavid\b|\bStein\b|\bvetted\b|\bendorsed?\b|trusted professional|we recommend|our team/i);
       expect(e.a, e.id).not.toMatch(/\beXp\b/);
     }
@@ -78,6 +91,9 @@ describe.skipIf(!built)("question library: the Ask box, with every page on the s
   it.skipIf(!inBuild)("every question and every phrasing brings back its own answer", () => {
     for (const e of ALL_LIBRARY_ENTRIES)
       for (const q of [e.q, ...e.alts]) expect(ask(q, pages, cards, "rpp").answer?.q, `${e.id}: "${q}"`).toBe(e.q);
+    if (pages.some((p) => p.path === "/afh-club/questions/running"))
+      for (const e of libraryEntriesAll(LIBRARIES.afh))
+        for (const q of [e.q, ...e.alts]) expect(ask(q, pages, cards, "afh").answer?.q, `${e.id}: "${q}"`).toBe(e.q);
   }, 240_000);
 
   it.skipIf(!inBuild)("answers link to the guide, never to the library page", () => {

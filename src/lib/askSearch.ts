@@ -217,7 +217,7 @@ export function ask(question: string, pages: Page[], cards: AnswerCard[], area: 
   const answer = best && best.s >= MIN_SCORE && best.coverage >= MIN_COVERAGE ? best.c : null;
 
   // The question library pages repeat other pages' answers, so they are not offered as "read next".
-  const pagePool = (area === "all" ? pages : pages.filter((p) => p.area === area)).filter((p) => !p.path.startsWith("/questions"));
+  const pagePool = (area === "all" ? pages : pages.filter((p) => p.area === area)).filter((p) => !/^\/(afh-club\/)?questions(\/|$)/.test(p.path));
   const pw: Record<string, number> = {};
   for (const t of qTerms) {
     const re = new RegExp(termPattern(t));

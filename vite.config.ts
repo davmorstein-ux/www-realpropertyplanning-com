@@ -33,7 +33,7 @@ import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from 
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
 import { STATUTE_GUIDES, statuteGuideMeta } from "./src/data/statuteGuides";
-import { JOURNEYS, QUESTIONS_PATH, journeyPath, libraryFaq, libraryFor, ALL_LIBRARY_ENTRIES } from "./src/data/questionLibrary";
+import { JOURNEYS, QUESTIONS_PATH, journeyPath, libraryFaq, libraryFor, ALL_LIBRARY_ENTRIES, LIBRARIES, libraryEntriesAll, libraryJourneyPath, libraryFaqOf } from "./src/data/questionLibrary";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -1126,6 +1126,26 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
         h1: `${j.title}: Questions & Answers`,
         intro: `Short answers to common questions, each from one of our guides and linked to it. ${j.blurb}`,
         faq: libraryFaq(j.slug),
+      } as RouteMeta,
+    ]),
+  ),
+  /* AFH Club question library (Oct 11, 2026): src/data/afhQuestionLibrary.json. */
+  [LIBRARIES.afh.basePath]: {
+    title: "AFH Club Questions & Answers: Short Answers for Adult Family Home Owners, Buyers and Investors | AFH Club",
+    description: `${libraryEntriesAll(LIBRARIES.afh).length} short answers for people who open, buy, sell, run or finance a Washington adult family home. Each answer links to the AFH Club guide that covers it in full.`,
+    h1: "AFH Club Questions & Answers",
+    intro: LIBRARIES.afh.intro,
+    sections: LIBRARIES.afh.journeys.map((j) => `${j.title} (${libraryJourneyPath(LIBRARIES.afh, j.slug)}) — ${LIBRARIES.afh.entries(j.slug).length} questions. ${j.blurb}`),
+  },
+  ...Object.fromEntries(
+    LIBRARIES.afh.journeys.map((j) => [
+      libraryJourneyPath(LIBRARIES.afh, j.slug),
+      {
+        title: `${j.title}: Questions & Answers | AFH Club`,
+        description: `Short answers to ${LIBRARIES.afh.entries(j.slug).length} common questions. ${j.blurb} Each answer links to the AFH Club guide that covers it in full.`,
+        h1: `${j.title}: Questions & Answers`,
+        intro: `Short answers to common questions, each from an AFH Club guide and linked to it. ${j.blurb}`,
+        faq: libraryFaqOf(LIBRARIES.afh, j.slug),
       } as RouteMeta,
     ]),
   ),

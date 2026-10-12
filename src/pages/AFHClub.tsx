@@ -776,6 +776,12 @@ const AFHClub = () => {
             contactReason="afh-question"
             examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]}
           />
+          {/* Question library link (Oct 11, 2026). */}
+          <div style={{ maxWidth: 860, margin: "14px auto 0", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}>
+            <Link to="/afh-club/questions" className="rpp-heading-link" style={{ color: "#0a5648", fontWeight: 700, fontSize: 18, textDecoration: "underline", textUnderlineOffset: 3 }}>
+              Browse all AFH Club questions &amp; answers →
+            </Link>
+          </div>
         </section>
 
         {/* Welcome band removed. It sat directly beneath a hero that already
