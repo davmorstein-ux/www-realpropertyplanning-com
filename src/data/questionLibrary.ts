@@ -16,6 +16,11 @@
  *      against its page and corrected or dropped any that went further than the
  *      page, left out a condition, or leaned toward a listed professional.
  *      Result: 212 unchanged, 36 corrected, 2 dropped, 248 published.
+ *   5. Oct 11, 2026 (evening): Google's list of 90 common probate questions was
+ *      sorted against the site. 21 were already answered (added as phrasings of
+ *      existing entries), 31 new entries were written from existing pages by the
+ *      same method and fact-checked (28 unchanged, 4 corrected), and 36 the site
+ *      does not cover yet were listed as pages to write. 279 entries.
  *
  * THE RULE FOR EDITS. An answer may say only what its linked page says. If a
  * page changes (a figure each January, a rule), change the answer with it. A

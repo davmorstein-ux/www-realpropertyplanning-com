@@ -42,7 +42,9 @@
     "no will what happens to house washington",
     "If Dad dies without a will, who gets the house?",
     "Who inherits my home if I never write a will?",
-    "What does dying intestate mean for my property?"
+    "What does dying intestate mean for my property?",
+    "What happens if someone dies without a will?",
+    "what happens when a parent dies with no will"
    ],
    "a": "Washington state law, not your wishes, decides who inherits. With no will there is no named executor, so family members must ask the court to appoint a personal representative, and the process can become more complicated and time-consuming. A will lets you name who inherits the house and who carries out your wishes; a funded trust or another tool that passes property outside probate is another option.",
    "path": "/wills",
@@ -813,6 +815,38 @@
    "a": "No. To be age-restricted, a 55+ community must have at least one resident 55 or older in at least 80 percent of occupied homes, publish and follow age policies, and verify ages with surveys updated at least every two years. A community only marketed to retirees without meeting these tests is age-targeted, not age-restricted, and cannot turn away younger buyers or renters.",
    "path": "/senior-transitions/55-plus-communities-washington",
    "pathTitle": "55+ Communities in Washington: What Families Should Know"
+  },
+  {
+   "id": "PA-101",
+   "topic": "Passing on the house",
+   "q": "Is there a way to keep my house and savings out of probate?",
+   "alts": [
+    "Can probate be avoided?",
+    "how to avoid probate washington",
+    "How can I make sure my kids don't have to go through probate?",
+    "ways to skip probate on my house",
+    "what can I do now so my family avoids probate"
+   ],
+   "a": "Yes, with planning. A will usually leads to probate. A funded trust, one that actually holds the property, can pass it to heirs without probate, and a recorded transfer on death deed, joint tenancy with right of survivorship, or a community property agreement can also pass property outside probate. Beneficiary designations on life insurance, retirement accounts and payable-on-death accounts pass outside the will. There is no universal winner, so an estate planning attorney can help evaluate which approach fits.",
+   "path": "/planning-before-a-crisis/legal-documents",
+   "pathTitle": "The Legal Documents That Matter Most",
+   "also": [
+    "/articles/wills-trusts-other-options"
+   ]
+  },
+  {
+   "id": "PA-102",
+   "topic": "Wills & trusts",
+   "q": "What is a payable-on-death or transfer-on-death account?",
+   "alts": [
+    "What is a payable-on-death (POD) or transfer-on-death (TOD) account?",
+    "POD account meaning",
+    "How does a payable on death bank account work?",
+    "TOD account vs will"
+   ],
+   "a": "It is a bank or investment account with a named beneficiary, marked payable on death (POD) or transfer on death (TOD). Like the beneficiary on a life insurance policy or retirement account, the designation passes the account directly to that person at death, outside the will, and in most cases it controls whatever the will says. Review these designations regularly to make sure they still reflect your wishes, especially after a divorce, a death in the family or another major life change.",
+   "path": "/planning-before-a-crisis/legal-documents",
+   "pathTitle": "The Legal Documents That Matter Most"
   }
  ],
  "aging-parent": [
@@ -1979,7 +2013,11 @@
     "documents to locate after a death",
     "Where do I look for mom's will and the house deed?",
     "Does a copy of the will work or do I need the original?",
-    "important documents checklist after someone dies"
+    "important documents checklist after someone dies",
+    "What documents do I need to bring to a probate lawyer?",
+    "what papers to bring to the estate attorney",
+    "What records should I organize before calling a lawyer?",
+    "what documents should I gather before meeting a probate attorney"
    ],
    "a": "Look for the original signed will, not a copy, since the court requires the original. Check home files, safe deposit boxes and with the person's attorney. Also find any trust documents, bank and investment statements, life insurance policies, property deeds and vehicle titles. Do not close any accounts yet; just locate and document what exists.",
    "path": "/estate-probate-inherited-property/first-steps",
@@ -2137,7 +2175,9 @@
     "where to file probate Washington",
     "What court handles probate in Washington?",
     "can I open probate in my own county",
-    "probate venue Washington county"
+    "probate venue Washington county",
+    "Where is a probate petition filed?",
+    "which court do I file probate in"
    ],
    "a": "In Washington, probate is filed in superior court, in any county the petitioner chooses. Within four months, a party can have the case moved to the county where the person lived. Most estates are then handled with little court involvement.",
    "path": "/washington-probate-guide/deadlines-and-key-rules",
@@ -2188,7 +2228,9 @@
     "notice to creditors Washington probate",
     "how long do creditors have to file a claim",
     "creditor claim period Washington",
-    "Do I have to publish a notice for dad's bills?"
+    "Do I have to publish a notice for dad's bills?",
+    "How long do creditors have to file a claim against the estate?",
+    "deadline for creditors to make a claim on an estate"
    ],
    "a": "The personal representative publishes a notice to creditors once a week for three weeks in a legal newspaper, files it with the court, and mails it to known creditors, with a copy to the DSHS Office of Financial Recovery. Creditors then have four months after the first publication (or 30 days after a mailed notice, if later). If no notice is given, claims can be brought for up to 24 months after the death.",
    "path": "/probate-glossary",
@@ -2253,7 +2295,13 @@
     "non-probate assets list",
     "Do life insurance and retirement accounts go through probate?",
     "what passes outside probate Washington",
-    "payable on death account probate"
+    "payable on death account probate",
+    "Which assets go through probate and which do not?",
+    "what goes through probate and what doesn't",
+    "Do retirement accounts (IRAs, 401ks) go through probate?",
+    "does an IRA or 401k go through probate",
+    "How do life insurance policies pay out without probate?",
+    "does life insurance go through probate"
    ],
    "a": "Assets that pass by beneficiary designation, such as life insurance, retirement accounts and payable-on-death accounts, go straight to the named beneficiary. Assets held in joint tenancy pass to the surviving owner, and assets in a properly funded living trust also skip probate. What usually goes through probate is property in the person's name alone, including a house and bank accounts without beneficiary designations.",
    "path": "/estate-probate-inherited-property/probate-and-legal-authority",
@@ -2281,7 +2329,9 @@
     "joint tenancy right of survivorship house after death",
     "house owned jointly with spouse probate",
     "surviving owner house Washington",
-    "tenants in common inherited house probate"
+    "tenants in common inherited house probate",
+    "Do jointly owned assets go to probate?",
+    "does a jointly owned house go through probate"
    ],
    "a": "It depends on the deed's exact wording. A house held in joint tenancy with right of survivorship belongs to the surviving owner, who usually records proof of the death with the county. Without survivorship language, co-owners hold shares that pass through each owner's estate. A married couple's community property agreement may also pass the house to the survivor without a full probate.",
    "path": "/washington-probate-guide/no-probate-needed",
@@ -2532,7 +2582,9 @@
     "executor fiduciary duties Washington",
     "personal representative responsibilities",
     "what does an executor have to do",
-    "duty of loyalty executor"
+    "duty of loyalty executor",
+    "What are the legal duties and responsibilities of an executor?",
+    "what is an executor responsible for"
    ],
    "a": "You owe fiduciary duties to the estate and its beneficiaries. Act only in their interest, not your own or one heir's; manage assets with reasonable care; keep beneficiaries informed and account for assets, debts and distributions; carry out the will as written; and pay the estate's debts before distributing anything. Executors can be held personally liable for mistakes, which is why a probate attorney is strongly recommended.",
    "path": "/executor-responsibilities-first-steps/legal-duties",
@@ -2560,7 +2612,9 @@
     "executor fee Washington",
     "personal representative compensation",
     "How much can an executor charge?",
-    "Is there a percentage fee for executors in Washington?"
+    "Is there a percentage fee for executors in Washington?",
+    "Is an executor entitled to compensation or a fee?",
+    "can the executor take a fee from the estate"
    ],
    "a": "Yes. Washington has no fee schedule or percentage. If the will sets the compensation, that is the executor's pay unless they formally renounce it before qualifying and ask the court to set a fee. If the will is silent, the executor is entitled to what the court considers just and reasonable for the work done, so keeping a log of hours and tasks helps. Failing in your duties can reduce or eliminate the fee.",
    "path": "/executor-responsibilities-first-steps/legal-duties",
@@ -2605,7 +2659,9 @@
     "who pays probate attorney fees",
     "are executor expenses paid by the estate",
     "estate pays professional fees",
-    "cost of probate lawyer paid from estate"
+    "cost of probate lawyer paid from estate",
+    "who pays the attorney fees in probate",
+    "does the estate pay the probate lawyer"
    ],
    "a": "No. The fees of the professionals who help settle the estate, such as the probate attorney, CPA and appraiser, are paid from the estate, not from the executor's own money. Washington probate has specific filing deadlines, so engage an attorney early, ideally within the first two weeks. The site does not refer clients to attorneys; you can confirm a lawyer's license with the Washington State Bar Association.",
    "path": "/executor-responsibilities-first-steps/working-with-professionals",
@@ -2670,7 +2726,9 @@
     "executor not acting what can heirs do",
     "executor won't communicate Washington",
     "remove an executor Washington",
-    "heir rights when probate is stalled"
+    "heir rights when probate is stalled",
+    "Can an executor be removed or replaced?",
+    "how do we get an executor removed"
    ],
    "a": "Escalate in order. Check with the superior court clerk whether probate was opened and who was appointed. Ask the personal representative in writing for the inventory, the plan for the house and a timeline. Once a year has passed since appointment, a beneficiary not paid in full can ask the court to order a status report. If there is a breach of duty or neglect, an heir can petition the court, which can remove the personal representative.",
    "path": "/washington-probate-guide/heir",
@@ -2780,7 +2838,10 @@
     "date of death value house",
     "appraisal as of the date of death",
     "why get an appraisal after a parent dies",
-    "estate appraisal purpose"
+    "estate appraisal purpose",
+    "How is real estate valued for probate?",
+    "what value is used for the house in probate",
+    "how do you value a house for an estate inventory"
    ],
    "a": "It estimates the house's fair market value as of the day the owner died. That number sets the heirs' new tax basis for a later sale, goes into the estate inventory, feeds any estate tax return, and gives heirs an independent value to divide the estate by, for example when one heir keeps the house. It is easiest to support when done soon after the death.",
    "path": "/date-of-death-valuation-property-appraisals",
@@ -3076,7 +3137,11 @@
     "are children responsible for parents' debts Washington",
     "heirs liable for deceased debts",
     "who pays debts after death",
-    "insolvent estate heirs"
+    "insolvent estate heirs",
+    "Who is responsible for paying the deceased person's debts?",
+    "who pays a dead person's bills",
+    "What happens to credit card debt after death?",
+    "do I have to pay my mom's credit cards after she died"
    ],
    "a": "Generally, no. Debts are paid from the estate, not by the heirs personally, though someone who receives a nonprobate asset can be required to contribute. If debts exceed assets, creditors are paid in the order the law sets before anyone inherits. The personal representative publishes a notice to creditors and must pay valid debts before distributing anything.",
    "path": "/washington-probate-guide/deadlines-and-key-rules",
@@ -3188,6 +3253,482 @@
     "/date-of-death-valuation-property-appraisals"
    ],
    "pathTitle": "Preparing the Property for Sale"
+  },
+  {
+   "id": "ES-101",
+   "topic": "Probate process & deadlines",
+   "q": "What is probate, and why does my parent's estate have to go through it?",
+   "alts": [
+    "What is probate and why is it required?",
+    "what does probate mean",
+    "Why do we have to go to court after my mom died?",
+    "probate explained washington",
+    "what is the point of probate"
+   ],
+   "a": "Probate is the court process for settling a person's estate after they die: validating the will, appointing the executor (personal representative), notifying creditors, paying debts and distributing what is left to the heirs. In Washington it is filed in superior court, and most estates are then handled with little court involvement. It is needed mainly when the person owned real estate in their name alone, or significant assets with no beneficiary designation or co-owner.",
+   "path": "/estate-probate-inherited-property/probate-and-legal-authority",
+   "pathTitle": "Understanding Probate & Legal Authority",
+   "also": [
+    "/probate-glossary"
+   ]
+  },
+  {
+   "id": "ES-102",
+   "topic": "Probate process & deadlines",
+   "q": "Does every estate have to go through probate?",
+   "alts": [
+    "Do all estates have to go through probate?",
+    "How do I know if probate is required in my state?",
+    "how do I know if my dad's estate needs probate",
+    "is probate always required when someone dies",
+    "probate required or not washington"
+   ],
+   "a": "No. Probate is needed for property titled in the person's name alone with no beneficiary named. Property that passes by title or designation skips it: a house in a living trust, joint tenancy with right of survivorship, a transfer on death deed recorded before the death, and accounts or policies with a living beneficiary. If everything in the person's name is worth $100,000 or less after liens, a small estate affidavit may work, but it cannot transfer real estate, so a house in their name alone usually means probate.",
+   "path": "/washington-probate-guide/deadlines-and-key-rules",
+   "pathTitle": "Washington Probate Deadlines & Key Rules",
+   "also": [
+    "/estate-probate-inherited-property/probate-and-legal-authority"
+   ]
+  },
+  {
+   "id": "ES-103",
+   "topic": "Probate process & deadlines",
+   "q": "What's the difference between dying with a will and dying without one?",
+   "alts": [
+    "What is the difference between testate (with a will) and intestate (without a will)?",
+    "testate vs intestate",
+    "what does intestate mean",
+    "What changes if dad left a will versus no will?"
+   ],
+   "a": "Testate means the person left a valid will; intestate means they did not. A will says who receives the probate estate and names an executor, who still has to be appointed by the court. Without one, Washington's intestacy law decides who inherits, starting with a surviving spouse or registered domestic partner and then descendants, and the court appoints an administrator in a set order of priority.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary"
+  },
+  {
+   "id": "ES-104",
+   "topic": "Probate process & deadlines",
+   "q": "What is a small estate affidavit?",
+   "alts": [
+    "What is small estate probate/affidavit?",
+    "small estate affidavit washington how it works",
+    "how small does an estate have to be to avoid probate",
+    "collect a bank account without probate small estate"
+   ],
+   "a": "It is a sworn statement that lets a successor collect a person's personal property, such as a bank account or car, without probate. In Washington it can be used when the whole probate estate, including any real estate, is worth $100,000 or less after liens, and 40 days have passed since the death. It cannot transfer real estate, so a house in the person's name alone usually still means probate.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary",
+   "also": [
+    "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "ES-105",
+   "topic": "Debts, mortgage & property taxes",
+   "q": "What happens to the mortgage on mom's house while it's in probate?",
+   "alts": [
+    "What happens to a house with a mortgage during probate?",
+    "mortgage during probate washington",
+    "Who pays dad's mortgage while the estate is open?",
+    "does the mortgage get paid off when the owner dies"
+   ],
+   "a": "The mortgage does not go away. It stays a lien on the house, interest keeps running, and the personal representative normally keeps the payments current from estate funds, along with the property taxes and insurance. If payments stop, the loan falls behind and can eventually go to foreclosure, costing the family the equity. Tell the servicer about the death and ask to be confirmed as a successor in interest. When the house sells, the loan is paid off from the proceeds at closing.",
+   "path": "/guides/mortgage-after-death-washington",
+   "pathTitle": "What Happens to the Mortgage When Someone Dies in Washington"
+  },
+  {
+   "id": "ES-106",
+   "topic": "Trusts & non-probate transfers",
+   "q": "How does a living trust avoid probate?",
+   "alts": [
+    "How do trusts avoid probate?",
+    "how does a living trust work after someone dies",
+    "Why doesn't a trust have to go through probate?",
+    "living trust probate how it works"
+   ],
+   "a": "Property the trust actually owns passes under the trust's terms, not through probate. The person who created the trust controls it while alive; after their death a successor trustee named in it takes over and can manage or sell the trust's house, usually showing authority with a certification of trust. The key is that the house was deeded into the trust. A house left in the person's own name usually goes through probate first, even when a will sends everything to the trust.",
+   "path": "/washington-probate-guide/house-in-a-trust",
+   "pathTitle": "The House Is in a Living Trust",
+   "also": [
+    "/probate-glossary"
+   ]
+  },
+  {
+   "id": "ES-107",
+   "topic": "Probate process & deadlines",
+   "q": "What happens to dad's bank account that was only in his name?",
+   "alts": [
+    "What happens to bank accounts held solely in the deceased’s name?",
+    "bank account in deceased person's name only",
+    "Can I get money out of mom's checking account after she died?",
+    "who can access a dead parent's bank account"
+   ],
+   "a": "A bank account in the person's name alone, with no beneficiary designation, usually goes through probate. If the whole probate estate, including any real estate, is worth $100,000 or less after liens, a successor can collect it with a small estate affidavit 40 days after the death. Otherwise it waits for the personal representative, who can act only after the superior court appoints them and issues letters. In the meantime, note what accounts exist, but do not close them yet.",
+   "path": "/estate-probate-inherited-property/probate-and-legal-authority",
+   "pathTitle": "Understanding Probate & Legal Authority",
+   "also": [
+    "/executor-responsibilities-first-steps/first-30-days"
+   ]
+  },
+  {
+   "id": "ES-108",
+   "topic": "Estate sales & contents",
+   "q": "How are mom's jewelry and personal belongings divided after she dies?",
+   "alts": [
+    "How are personal items and jewelry handled?",
+    "who gets mom's jewelry after she dies",
+    "dividing personal belongings in an estate",
+    "What happens to dad's furniture and keepsakes in probate?"
+   ],
+   "a": "A will can give specific instructions about personal items, and the executor it names carries them out. Nothing should be handed out until the estate has been properly administered, because distributing too early can make the executor personally liable. When it is time, heirs take items of personal or sentimental value first, before any estate sale or liquidation; the rest can go to an estate sale, be donated, or be removed and disposed of.",
+   "path": "/estate-probate-inherited-property/preparing-the-property",
+   "pathTitle": "Preparing the Property for Sale",
+   "also": [
+    "/wills",
+    "/executor-responsibilities-first-steps/first-30-days"
+   ]
+  },
+  {
+   "id": "ES-109",
+   "topic": "Executor duties & help",
+   "q": "What is an executor?",
+   "alts": [
+    "What is an executor (or personal administrator)?",
+    "executor meaning",
+    "What's the difference between an executor and a personal representative?",
+    "what does it mean to be named executor in a will"
+   ],
+   "a": "An executor is the person a will names to settle the estate. Washington's term is personal representative, which also covers an administrator the court appoints when there is no will. Being named does not give authority by itself; the executor becomes the personal representative only when the court appoints them. The job is collecting assets, paying debts, filing taxes and distributing what remains to the heirs, as a fiduciary acting in the estate's and beneficiaries' interest.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary",
+   "also": [
+    "/executor-responsibilities-first-steps/legal-duties"
+   ]
+  },
+  {
+   "id": "ES-110",
+   "topic": "Executor duties & help",
+   "q": "Do I have to be the executor just because I'm named in the will?",
+   "alts": [
+    "Am I required to serve as an executor if I am named in the will?",
+    "can I refuse to be executor",
+    "Can I say no to being my dad's executor?",
+    "decline executor role washington"
+   ],
+   "a": "No. Being named in the will does not by itself make you the executor; the person named must petition the court to be appointed. If the named personal representative is unable or unwilling to serve, the court appoints an administrator to fill the same role. An executor who has already started can resign and have a successor appointed, or bring in a professional fiduciary to handle some or all of the administration.",
+   "path": "/guides/who-has-authority-sell-probate-property-washington",
+   "pathTitle": "Who Has Authority to Sell Probate Property?",
+   "also": [
+    "/executor-responsibilities-first-steps/when-you-need-extra-help"
+   ]
+  },
+  {
+   "id": "ES-111",
+   "topic": "Executor duties & help",
+   "q": "The person named as executor won't start probate. What can we do?",
+   "alts": [
+    "What if the executor refuses to start probate?",
+    "executor won't open probate",
+    "named executor not filing probate washington",
+    "nobody has opened probate for dad's estate"
+   ],
+   "a": "You are not stuck waiting. The named executor has no authority until the court appoints them, and if the person named is unable or unwilling to serve, the court appoints an administrator instead. Anyone holding the original will must deliver it to the court or the named executor within 30 days of learning of the death. Where there is no will and the family members with priority do not petition within 40 days, the court may appoint someone else. A probate attorney can explain how to get the estate opened.",
+   "path": "/washington-probate-guide/heir",
+   "pathTitle": "You Inherited a House, or a Share of One",
+   "also": [
+    "/guides/who-has-authority-sell-probate-property-washington",
+    "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "ES-112",
+   "topic": "Taxes",
+   "q": "Is the executor's fee taxable income?",
+   "alts": [
+    "Are executor fees taxable?",
+    "do I pay tax on an executor fee",
+    "Should I take an executor fee or just my inheritance?",
+    "personal representative fee income tax"
+   ],
+   "a": "Yes. A fee paid to the executor is taxable income to the executor, while an inheritance generally is not. An executor who is also an heir can choose to take no fee, so when the executor would receive the money either way, waiving the fee can leave more in the family. A CPA can confirm whether that holds for your estate.",
+   "path": "/executor-responsibilities-first-steps/legal-duties",
+   "pathTitle": "Understanding Your Legal Duties as Executor"
+  },
+  {
+   "id": "ES-113",
+   "topic": "Taxes",
+   "q": "Do I have to pay income tax on a house I inherited?",
+   "alts": [
+    "Do beneficiaries pay income tax on inherited property?",
+    "is inherited property taxable income",
+    "income tax on an inheritance from my parents",
+    "Is my inheritance counted as income?"
+   ],
+   "a": "Generally not just for inheriting it. An inheritance generally is not taxable income, and Washington has no separate inheritance tax. Tax comes in when the house is sold: federal capital gains tax applies only to gain above the stepped-up basis, the value at the date of death, so there is often little or no gain on a sale soon after the death. Washington's capital gains tax does not apply to real estate. A CPA can confirm your situation.",
+   "path": "/guides/taxes-selling-inherited-house-washington",
+   "pathTitle": "What Taxes Do You Pay When Selling an Inherited House in Washington?",
+   "also": [
+    "/executor-responsibilities-first-steps/legal-duties"
+   ]
+  },
+  {
+   "id": "ES-114",
+   "topic": "Taxes",
+   "q": "What tax returns does the executor have to file for the estate?",
+   "alts": [
+    "What taxes must be filed during probate (final income tax, estate tax)?",
+    "final tax return for a deceased parent",
+    "Does the estate have to file a tax return?",
+    "estate tax return washington executor"
+   ],
+   "a": "Usually the deceased's final personal income tax return and any required estate income tax returns, and, depending on the estate's size, an estate tax return. Washington has its own estate tax with a relatively low exemption, separate from the federal one, and many estates owe no federal tax but still owe, or must file, the Washington estate tax. An executor who fails to file required returns can be pursued by the IRS, so bring in a CPA early.",
+   "path": "/executor-responsibilities-first-steps/working-with-professionals",
+   "pathTitle": "Working With Professionals",
+   "also": [
+    "/probate-glossary",
+    "/executor-responsibilities-first-steps/legal-duties"
+   ]
+  },
+  {
+   "id": "ES-115",
+   "topic": "Debts, mortgage & property taxes",
+   "q": "What happens if dad's estate owes more than it's worth?",
+   "alts": [
+    "What is an insolvent estate (more debts than assets)?",
+    "estate has more debt than assets",
+    "What if there isn't enough money in the estate to pay the bills?",
+    "my parent died owing more than they had"
+   ],
+   "a": "That is an insolvent estate: its debts are larger than its assets. Heirs are not personally liable for the decedent's debts, though someone who receives a nonprobate asset can be required to contribute toward them. Creditors are paid in the order the law sets before anyone inherits. Nonintervention powers are available only to a solvent estate; without them, selling the house generally needs a court order and the court's confirmation, unless the will authorizes the sale.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary",
+   "also": [
+    "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "ES-116",
+   "topic": "Probate process & deadlines",
+   "q": "How long will it take to settle my parent's estate?",
+   "alts": [
+    "How long does the probate process take?",
+    "probate timeline washington",
+    "how many months does probate take",
+    "When will mom's estate be finished?",
+    "What makes probate take so long?",
+    "What causes delays in probate?",
+    "Why is my dad's probate dragging on?",
+    "probate delays washington",
+    "What can hold up settling mom's estate?"
+   ],
+   "a": "There is no fixed length, but the creditor period sets a floor. Creditors have four months from the first publication of the notice to creditors, so few Washington estates close in less than about five or six months, and many take a year or more when there is a house to sell, a tax return to file or a disagreement to resolve. The house itself can often be sold well before the estate closes.",
+   "path": "/washington-probate-guide/deadlines-and-key-rules",
+   "pathTitle": "Washington Probate Deadlines & Key Rules"
+  },
+  {
+   "id": "ES-117",
+   "topic": "Probate process & deadlines",
+   "q": "What happens when we first go to court to open probate?",
+   "alts": [
+    "What happens at the first court appearance?",
+    "first probate hearing what to expect",
+    "How does the court appoint an executor?",
+    "opening probate in court washington"
+   ],
+   "a": "In Washington the petition is filed in superior court with the original will, usually through a probate attorney. The court may admit the will and appoint the executor as soon as the petition is presented, without notice to the heirs, and letters issue once the oath is filed and any bond is posted. Without a will, the surviving spouse gets 10 days' notice of someone else's petition unless they waive it. Most estates are then handled with little court involvement.",
+   "path": "/washington-probate-guide/deadlines-and-key-rules",
+   "pathTitle": "Washington Probate Deadlines & Key Rules",
+   "also": [
+    "/guides/who-has-authority-sell-probate-property-washington"
+   ]
+  },
+  {
+   "id": "ES-151",
+   "topic": "Selling during probate",
+   "q": "Can we sell mom's house while probate is still open?",
+   "alts": [
+    "Can the house be sold while probate is still open?",
+    "Do we have to wait until probate is finished to sell the house?",
+    "can you list a house during probate washington",
+    "Is the executor allowed to sell dad's house before the estate is closed?"
+   ],
+   "a": "Usually, yes. Once the court appoints the executor and issues letters testamentary, the executor can list, market, negotiate and close a sale while other parts of the estate are still being settled. Most Washington estates have nonintervention powers, so no court approval is needed for the sale. A court-supervised estate may need a hearing and confirmation. The sale does not have to wait for the creditor period to end.",
+   "path": "/guides/sell-house-during-probate-washington",
+   "pathTitle": "Can You Sell a House During Probate in Washington State?",
+   "also": [
+    "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "ES-152",
+   "topic": "First steps",
+   "q": "Can we start cleaning out mom's house right after she dies, or can one of us live there?",
+   "alts": [
+    "Can the family clean out or live in the deceased's house right away?",
+    "When can we start clearing out dad's house after he passed?",
+    "Can my brother move into mom's house while the estate is being settled?",
+    "clean out parents house after death how soon"
+   ],
+   "a": "Plan the cleanout now, but do not rush it. Coordinate with the heirs about personal and family items first; the actual cleanout can start once everyone agrees what to keep, donate and discard, and nobody should take items before a proper inventory. While the estate is in probate, the personal representative controls the house, not a family member living there. If someone stays, put rent, or payment of taxes, insurance and utilities, in a written agreement.",
+   "path": "/guides/executor-first-steps-house",
+   "pathTitle": "What Should an Executor Do First With a House?",
+   "also": [
+    "/guides/heirs-disagree-selling-house"
+   ]
+  },
+  {
+   "id": "ES-154",
+   "topic": "Probate process & deadlines",
+   "q": "When do the heirs actually get their inheritance?",
+   "alts": [
+    "How and when do beneficiaries actually receive their inheritance?",
+    "How long until I get my share of mom's estate?",
+    "when do beneficiaries get paid from an estate",
+    "Will I get the house itself or money from the estate?"
+   ],
+   "a": "At the end, after creditors and expenses are paid. Distribution is the final handing over of estate property to the heirs or beneficiaries, as cash, as the property itself, or as a share of sale proceeds. The executor must pay the estate's legitimate debts before distributing anything, and creditors have four months after the notice to creditors is first published, so distribution rarely comes quickly.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary",
+   "also": [
+    "/executor-responsibilities-first-steps/legal-duties",
+    "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "ES-155",
+   "topic": "Heirs & disagreements",
+   "q": "What happens if someone in the family contests mom's will?",
+   "alts": [
+    "What happens if a family member contests the will?",
+    "My brother is challenging dad's will. Now what?",
+    "will contest washington what happens",
+    "Does a will contest hold up the estate?"
+   ],
+   "a": "It becomes a court matter. A will contest challenges the will's validity, for example over capacity, undue influence or how it was signed, and must be filed within four months after the will is admitted to probate or rejected, with the personal representative served within 90 days. Court proceedings may follow, and a contested will can delay appointment by months. An experienced probate attorney is essential, and a mediator can sometimes resolve disputes without litigation.",
+   "path": "/executor-responsibilities-first-steps/when-you-need-extra-help",
+   "pathTitle": "When You Need Extra Help",
+   "also": [
+    "/probate-glossary",
+    "/guides/executor-sell-house-before-probate-washington"
+   ]
+  },
+  {
+   "id": "ES-156",
+   "topic": "Heirs & disagreements",
+   "q": "How do siblings settle disagreements during probate?",
+   "alts": [
+    "How are disputes between siblings handled in probate?",
+    "My siblings and I can't agree on anything about mom's estate. What are our options?",
+    "sibling dispute probate washington",
+    "What is TEDRA?",
+    "What happens if heirs or beneficiaries do not get along?",
+    "my brothers and sisters are fighting over mom's estate"
+   ],
+   "a": "Most disagreements are about value or timing, and an independent appraisal everyone relies on settles many of them. Heirs can also buy one another out. Washington's Trust and Estate Dispute Resolution Act (TEDRA) lets everyone sign a binding agreement without a hearing, or ask the court to decide. A mediator can sometimes resolve disputes without litigation. While the estate is in probate, the personal representative decides about the house; it is not a vote.",
+   "path": "/washington-probate-guide/deadlines-and-key-rules",
+   "pathTitle": "Washington Probate Deadlines & Key Rules",
+   "also": [
+    "/executor-responsibilities-first-steps/when-you-need-extra-help",
+    "/guides/heirs-disagree-selling-house"
+   ]
+  },
+  {
+   "id": "ES-157",
+   "topic": "Executor duties & help",
+   "q": "What can we do if the executor is misusing the estate's money?",
+   "alts": [
+    "What if the executor is accused of stealing or mismanaging funds?",
+    "I think my sister is taking money from mom's estate as executor",
+    "executor stealing from estate washington",
+    "Can the court remove an executor who mismanages the estate?"
+   ],
+   "a": "An executor owes a duty of loyalty and cannot use estate assets for personal benefit; one who favors an heir unfairly can be sued by the other beneficiaries. If the personal representative has breached a duty, abused their authority or wrongfully neglected the estate, an heir can petition the court, which can restrict their powers, remove them and appoint someone else, or order other relief. Start by asking in writing for the inventory, and keep copies.",
+   "path": "/washington-probate-guide/heir",
+   "pathTitle": "You Inherited a House, or a Share of One",
+   "also": [
+    "/executor-responsibilities-first-steps/legal-duties"
+   ]
+  },
+  {
+   "id": "ES-158",
+   "topic": "Probate process & deadlines",
+   "q": "How do we handle dad's car after he died?",
+   "alts": [
+    "What happens to a car or vehicle title after death?",
+    "Can I get mom's car without going through probate?",
+    "transfer car after death washington small estate"
+   ],
+   "a": "A car is personal property. If everything in the person's name, real estate included, is worth $100,000 or less after liens, a successor can collect personal property such as a car with a small estate affidavit 40 days after the death, without probate. The affidavit cannot transfer real estate, so a house in the person's name alone usually means probate, and assets owned solely in the person's name then generally go through it.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary",
+   "also": [
+    "/washington-probate-guide/deadlines-and-key-rules",
+    "/estate-probate-inherited-property/probate-and-legal-authority"
+   ]
+  },
+  {
+   "id": "ES-159",
+   "topic": "Executor duties & help",
+   "q": "Mom lived in Washington but owned a house in another state. What happens to that house?",
+   "alts": [
+    "How do you transfer out-of-state property (ancillary probate)?",
+    "What is ancillary probate?",
+    "Does dad's vacation home in another state need its own probate?",
+    "ancillary probate out of state house"
+   ],
+   "a": "It may need a second, local probate in that state, called ancillary probate. That means working with attorneys licensed in that state in addition to the Washington attorney. The property also needs local help with appraisal, maintenance and the eventual sale. The same applies in reverse: a Washington house owned by someone who lived elsewhere usually needs an ancillary probate here.",
+   "path": "/executor-responsibilities-first-steps/when-you-need-extra-help",
+   "pathTitle": "When You Need Extra Help",
+   "also": [
+    "/probate-glossary"
+   ]
+  },
+  {
+   "id": "ES-160",
+   "topic": "Probate process & deadlines",
+   "q": "How is probate closed in Washington?",
+   "alts": [
+    "How do you formally close a probate case?",
+    "What is a declaration of completion?",
+    "How does the executor finish and close mom's estate?",
+    "close estate washington probate"
+   ],
+   "a": "In most Washington estates, which are administered with nonintervention powers, the personal representative closes the estate by filing a declaration of completion. Heirs then have 30 days to ask the court to review it or the fees. If no one does, the fees are deemed reasonable, the estate is deemed properly settled, and the personal representative is discharged. An estate stays open at least until the four-month creditor claim period has run.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary",
+   "also": [
+    "/washington-probate-guide/deadlines-and-key-rules"
+   ]
+  },
+  {
+   "id": "ES-161",
+   "topic": "Authority to sell",
+   "q": "How does mom's house get put in my name after probate?",
+   "alts": [
+    "How do you transfer a deed into a beneficiary's name?",
+    "How do I get the deed to dad's house changed to me?",
+    "transfer house to heir washington deed",
+    "What deed does the executor sign to give me the house?"
+   ],
+   "a": "If the house went through probate, the personal representative signs a personal representative's deed conveying it to the heir, the same kind of deed used for a buyer. The title company will want certified letters and, usually, proof of nonintervention powers. A deed takes effect against later buyers once it is recorded with the county. Passing a house to heirs by inheritance is exempt from the real estate excise tax.",
+   "path": "/probate-glossary",
+   "pathTitle": "Washington Probate & Estate Glossary"
+  },
+  {
+   "id": "ES-162",
+   "topic": "First steps",
+   "q": "What do I do about mom's mail and utilities after she died?",
+   "alts": [
+    "What happens to the deceased person's mail and utilities?",
+    "Should I cancel dad's utilities now that he's gone?",
+    "forward mail after death",
+    "Who pays the utility bills on the house after a death?"
+   ],
+   "a": "Forward the mail and keep the utilities on. Have the post office forward mail to an address where you can watch for bills, financial statements and other important correspondence. Keep heat, electricity and water on to prevent frozen pipes, mold and other damage; canceling them to save money is a common mistake. Utilities, mortgage payments and insurance on estate property should keep being paid from estate funds.",
+   "path": "/executor-responsibilities-first-steps/first-30-days",
+   "pathTitle": "Your First 30 Days as Executor",
+   "also": [
+    "/guides/executor-first-steps-house"
+   ]
   }
  ],
  "professional": [
@@ -3216,7 +3757,12 @@
     "Is an attorney required for probate in WA?",
     "can I do probate myself without a lawyer",
     "probate without attorney washington",
-    "Does the executor or personal representative need a probate lawyer?"
+    "Does the executor or personal representative need a probate lawyer?",
+    "Is a lawyer required if a family member is the executor?",
+    "does the executor have to hire a probate attorney",
+    "Do I legally need a lawyer for probate?",
+    "do I really need a lawyer for probate",
+    "is a probate attorney required in washington"
    ],
    "a": "No. Washington State does not require an attorney for probate. But the process involves court filings, legal deadlines and documentation that can be hard to handle alone, especially when real estate is involved. A probate attorney guides the executor or personal representative through filing with the court, notifying creditors, inventorying assets and transferring property to the heirs. The page notes most families find an experienced attorney saves time, money and family conflict.",
    "path": "/professionals/probate-attorneys",
@@ -3244,7 +3790,9 @@
     "estate planning lawyer vs probate lawyer",
     "Which attorney writes wills and trusts?",
     "Do I need an estate planner or a probate attorney for my parents?",
-    "Who do I see to plan ahead versus after someone dies?"
+    "Who do I see to plan ahead versus after someone dies?",
+    "What is the difference between a probate attorney and an estate planning attorney?",
+    "probate attorney vs estate planning attorney"
    ],
    "a": "It comes down to timing. An estate planning attorney helps people plan ahead, creating wills, trusts, powers of attorney and directives for how assets should be handled. A probate attorney handles estate administration after a death, including the court process, creditor issues, and the transfer or sale of property. In short, estate planning happens before a death; probate deals with the estate afterward.",
    "path": "/for-attorneys",
@@ -3752,6 +4300,23 @@
    "a": "Start by matching the problem to a category. The site groups independent professionals into four: legal (estate planning, probate, elder law, family law, divorce and real estate attorneys), financial and valuation (CPAs, financial planners, mortgage lenders, appraisers), senior housing and care (advisors and care managers), and property and transition support (brokers, liquidators, title and escrow). A short conversation early usually prevents bigger problems later.",
    "path": "/building-your-professional-team",
    "pathTitle": "Building Your Professional Team"
+  },
+  {
+   "id": "PR-151",
+   "topic": "Attorneys & legal help",
+   "q": "How do I find a good probate attorney?",
+   "alts": [
+    "How do I choose a probate lawyer in Washington?",
+    "What should I look for in a probate attorney?",
+    "Can Real Property Planning refer me to a probate lawyer?",
+    "find probate attorney washington"
+   ],
+   "a": "Choose one yourself; Real Property Planning does not refer clients to attorneys. Look for experience with Washington probate specifically and familiarity with the county where the estate is being administered. Confirm any lawyer's license with the Washington State Bar Association (wsba.org). Reach out early, ideally within the first two weeks, since Washington probate has filing deadlines.",
+   "path": "/executor-responsibilities-first-steps/working-with-professionals",
+   "pathTitle": "Working With Professionals",
+   "also": [
+    "/estate-probate-inherited-property/first-steps"
+   ]
   }
  ]
 }
