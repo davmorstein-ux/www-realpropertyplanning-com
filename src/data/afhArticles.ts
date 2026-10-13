@@ -5,6 +5,11 @@
  *
  *   /afh-club/getting-paid-providerone-billing
  *     Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts
+ *   /afh-club/leasing-a-house-to-an-afh-operator
+ *     Leasing a House to an AFH Operator (Oct 12, 2026; 38 claims verified, 11 corrected;
+ *     the two "In practice" paragraphs are the owner's market observations, not rules.
+ *     Open with DSHS: whether the Property Owner Written Statement is needed for every
+ *     leased home; whether a landlord's sale of the house must be reported.)
  *
  * HOW THEY ARE CHECKED. Same method as the statute guides (statuteGuides.ts): a
  * writer drafts only from official pages it opened (HCA billing guides, DSHS

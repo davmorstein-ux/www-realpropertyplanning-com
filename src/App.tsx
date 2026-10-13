@@ -696,6 +696,7 @@ export const AppRoutes = () => (
       <Route path="/afh-club/hiring-an-afh-management-company" element={<AFHManagementCompanies />} />
       {/* AFH Club articles (Oct 12, 2026): src/data/afhArticles.ts. */}
       <Route path="/afh-club/getting-paid-providerone-billing" element={<AFHArticle slug="getting-paid" />} />
+      <Route path="/afh-club/leasing-a-house-to-an-afh-operator" element={<AFHArticle slug="leasing" />} />
       {/* How AFHs get paid: three-part series (Sept 2026). Hub + two deep dives. */}
       <Route path="/afh-club/afh-property-score" element={<AFHPropertyScore />} />
       <Route path="/afh-club/afh-payment-field-guide" element={<AFHPaymentFieldGuide />} />

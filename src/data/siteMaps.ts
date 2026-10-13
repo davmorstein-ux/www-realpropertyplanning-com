@@ -351,6 +351,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
         links: [
           { title: "The AFH Payment Field Guide", href: "/afh-club/afh-payment-field-guide" },
           { title: "Getting Paid: ProviderOne Billing and Specialty Contracts", href: "/afh-club/getting-paid-providerone-billing" },
+          { title: "Leasing a House to an AFH Operator", href: "/afh-club/leasing-a-house-to-an-afh-operator" },
           { title: "A Through E: CARE Classifications", href: "/afh-club/care-classifications-a-through-e" },
           { title: "CBHS Tiers Explained", href: "/afh-club/cbhs-tiers" },
         ],

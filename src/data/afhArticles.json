@@ -207,5 +207,288 @@
         "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-106-0336"
       }
     ]
+  },
+  {
+    "slug": "leasing",
+    "path": "/afh-club/leasing-a-house-to-an-afh-operator",
+    "short": "Leasing to an AFH Operator",
+    "title": "Leasing a House to an Adult Family Home Operator: What Owners and Operators Need to Know",
+    "eyebrow": "Buying & Investing · For owners & operators",
+    "dek": "What Washington's licensing rules say when an adult family home operates in a rented house: who holds the license, what happens on a move, sale or closure, access, zoning, insurance, and what the lease has to settle.",
+    "published": "2026-10-12",
+    "reviewed": "2026-10-12",
+    "cover": "/afh-leasing-cover.webp",
+    "shortAnswer": "Yes. A licensed operator can run an adult family home (AFH) in a rented house. The licensing rules anticipate it: the application must name the property owner in some cases when the building \"is leased, under contract, or rented.\" But the license belongs to the operator, not to the house or the landlord. It is valid only for that provider at that address. Licensing rules govern moves, closures and sales; the lease decides the rest: rent, repairs, who pays for changes, and what happens when the license ends.",
+    "sections": [
+      {
+        "heading": "Who holds the license, and where the property owner fits",
+        "body": "The Department of Social and Health Services (DSHS) licenses the **provider**, the person or entity that runs the home, not the property owner.\n\nIf the house is leased or rented, the application must name the property owner **when the owner takes an \"active interest\"** in the operation of the home (WAC 388-76-10095(1)). The rule says active interest \"includes but is not limited to\":\n\n- charging rent as a percentage of the business\n- help with start-up or operating costs\n- collecting resident fees\n- recruiting residents\n- management oversight\n- assessing residents or developing their negotiated care plans\n- providing personal or special care to residents\n- owning the property through an affiliated entity\n\nThe list is not complete. A percentage rent, or an owner who helps find residents, puts the owner on the application.\n\nDSHS's online application guide also lists a \"Property Owner(s) Written Statement,\" marked \"Required if property owner not listed as other role.\" The guide does not say what the statement must contain; ask DSHS's licensing applications unit. The background-check rule covers the applicant and \"anyone affiliated with an applicant.\" That definition lists roles such as partner, officer, majority owner and spouse, not property owners as such; an owner who also holds a listed role is covered (WAC 388-76-10000, 10161). For the operator's own structure, see [Individual or LLC?](/afh-club/ownership-structure)."
+      },
+      {
+        "heading": "The license stays with the operator and the address",
+        "body": "A license is \"Not transferable\" and \"Valid only for the provider and address listed on the license\" (WAC 388-76-10010).\n\n- **The operator moves.** A new address needs a new application and a new license. The operator cannot open there until DSHS grants it, and must give each resident written notice at least 30 days before the move (WAC 388-76-10110). The license does not stay behind for the next tenant.\n- **The operator sells the business.** That is a change of ownership. The buyer needs its own license, and the current owner gives DSHS and residents 60 calendar days' written notice unless DSHS grants priority processing (WAC 388-76-10105, 10106, 10107). See [Buying or Selling an AFH](/afh-club/buying-selling).\n- **The owner sells the house.** A change of ownership is a change in \"the provider\" or \"the control of a provider\" (WAC 388-76-10105(3)). One listed example is the home handing business operations to another party \"whether or not there is a partial or whole transfer of real property.\" None of the listed examples is a sale of the building alone, and the rule does not mention landlords. Ask DSHS whether anything must be reported, especially if the new owner will take an active interest.\n\nWhether a new operator must meet rules adopted after the home was first licensed is covered in [Selling Your AFH Business at Retirement](/afh-club/selling-your-business-at-retirement)."
+      },
+      {
+        "heading": "If the home closes or the license is lost",
+        "body": "DSHS can impose a stop placement, conditions or fines, or suspend or revoke the license (RCW 70.128.160). Under a stop placement the home must \"Not admit any person until the stop placement order is terminated\" (WAC 388-76-10980).\n\n\"The home ceases to operate\" is one of the few grounds on which a home may discharge a resident, and the home must first try reasonable accommodations and prepare residents for a safe move (WAC 388-76-10615). Notice to the resident and representative is generally at least 30 days in writing, shorter in listed cases such as danger to health or safety (RCW 70.129.110; WAC 388-76-10616). A home that chooses to close must tell DSHS, each resident and each representative at least 30 days ahead, and carry out a discharge plan (WAC 388-76-10210). A home that has not cared for residents for 24 months must give up its license (WAC 388-76-10050).\n\nNone of these rules gives the property owner a role in a closure or any right to the license. When the lease ends is a lease question. Who arranges resident moves after a suspension or revocation is a question for DSHS."
+      },
+      {
+        "heading": "Does Washington's landlord-tenant law apply?",
+        "body": "The Residential Landlord-Tenant Act (chapter 59.18 RCW) defines a tenant as a person \"entitled to occupy a dwelling unit primarily for living or dwelling purposes under a rental agreement\" (RCW 59.18.030). It excludes residence at an institution where living there is \"merely incidental to\" medical or similar services, such as \"licensed nursing homes\" (RCW 59.18.040). Adult family homes are not named in either section.\n\nThe statute's text does not say whether a lease of a house to an AFH operator is covered. Get legal advice rather than assuming either answer.\n\nResidents have their own protections. Chapter 70.129 RCW covers residents of facilities licensed under chapter 70.128 RCW (RCW 70.129.010). Its duties fall on \"the facility.\" In the AFH rules, that \"includes the person or entity that is licensed\" (WAC 388-76-10000). Residents' move-out protections run against the operator."
+      },
+      {
+        "heading": "Who can come into the house",
+        "body": "The operator must allow:\n\n- **DSHS.** It may make an unannounced inspection \"at any time\" (RCW 70.128.070). At initial licensing it may inspect the entire premises, including all buildings and grounds (WAC 388-76-10003). In complaint investigations it gets \"access to the entire premises\" (RCW 70.128.090; WAC 388-76-10003). The home must not interfere (WAC 388-76-10915).\n- **The long-term care ombuds.** The facility \"must not interfere with access\" to residents by state representatives or the ombuds (RCW 70.129.090; WAC 388-76-10935).\n\nThe landlord's own entry comes from the lease. If chapter 59.18 RCW applies, its entry rules apply too: at least two days' written notice except in emergencies, one day to show the house (RCW 59.18.150). See [DSHS Inspections & Compliance](/afh-club/regulations-compliance)."
+      },
+      {
+        "heading": "Zoning, building rules and changes to the house",
+        "body": "An AFH \"must be considered a residential use of property for zoning\" and is \"a permitted use in all areas zoned for residential or commercial purposes,\" including single-family zones (RCW 70.128.140). That section is about zoning and utility rates; it does not mention HOA rules or private covenants. The home must still meet local licensing, building and housing codes and fire rules, and \"the home\" (the licensed operator) must check with local authorities.\n\nA home licensed after September 20, 2026 needs interior doors residents pass through to be at least 27 inches wide (WAC 388-76-10715(6)). The physical rules are on [AFH Building Requirements & Inspections](/afh-club/building-inspection), [What Is WABO?](/afh-club/wabo-inspection-guide) and [AFH Rules Have Changed](/afh-club/washington-afh-rule-changes). Moving all residents out for construction needs 30 days' notice to DSHS and DSHS approval of the relocation plan first (WAC 388-76-10710).\n\n**Who pays for required changes, who owns them, and whether they come out at the end is a lease term, not a rule.**\n\n**In practice.** From AFH Club's work with Washington owners and operators: rent for a house leased to an AFH operator depends on the level of care the operator plans to provide and on whether residents will be private pay or Medicaid, since those set what the business can support. Rent set as a percentage of the business is a different arrangement: it makes the owner an active interest (above). When an operator leaves, modifications and repairs usually fall to whoever owns or runs the house next, not to the departing operator, unless the lease says otherwise."
+      },
+      {
+        "heading": "Insurance",
+        "body": "The licensed home must carry commercial general (or business) liability and professional liability (or errors and omissions) insurance (WAC 388-76-10191). Each policy needs at least \"$500,000\" per occurrence and \"$1,000,000\" general aggregate; a Medicaid contract may require more (WAC 388-76-10192). Coverage starts before the first resident or within 10 working days of the license, whichever is first. Lapses must be reported to DSHS's complaint resolution unit (WAC 388-76-10191). The State of Washington, DSHS and their officials, agents and employees must be listed as additional insureds on all policies \"relating to the operation or premises\" of the home (WAC 388-76-10192).\n\nThese rules apply to the operator, not the owner. The owner's building and liability coverage, including whether a policy allows a care business in the house, is a question for the owner's insurer. For costs, see [AFH Costs & Fees](/afh-club/costs-fees)."
+      },
+      {
+        "heading": "Financing a house you plan to lease",
+        "body": "AFH Club's [DSCR loan guide](/afh-club/dscr-loans-adult-family-homes) explains that many ordinary rental DSCR (debt service coverage ratio) programs exclude care homes. For an investor buying to lease to an operator, it \"depends on the lender.\" It also warns against financing as an ordinary rental while planning a care home. See also [How to Finance an AFH](/afh-club/how-to-finance-an-afh)."
+      },
+      {
+        "heading": "Topics a lease typically needs to address",
+        "body": "| Lease topic | Why it matters |\n|---|---|\n| Use as a licensed AFH, and capacity | 2 to 6 residents, up to 8 with DSHS approval (WAC 388-76-10000). Zoning: RCW 70.128.140. |\n| Rent and the owner's role | Percentage rent, recruiting, oversight or start-up help is \"active interest\" (WAC 388-76-10095). |\n| Start date vs. licensing | No residents until licensed. See [Buying or Selling an AFH](/afh-club/buying-selling) for DSHS timing. |\n| Changes and restoration | Local codes (RCW 70.128.140); 27-inch doors for new licenses (WAC 388-76-10715); DSHS approval to move all residents for remodeling (WAC 388-76-10710). |\n| Insurance and proof | Coverage, proof on request, lapse reporting (WAC 388-76-10191, 10192). |\n| License and inspection history | License tied to provider and address (WAC 388-76-10010). See [Violations lookup](/afh-club/violation-history-lookup). |\n| Access | DSHS and ombuds access cannot be blocked (RCW 70.128.090, 70.129.090). |\n| License loss, closure, empty home | 30-day closure notice and discharge plan (WAC 388-76-10210); 24 months empty (WAC 388-76-10050). |\n| Relocation | New license, 30 days' notice (WAC 388-76-10110). |\n| Operator sells the business | New license, 60 days' notice (WAC 388-76-10105, 10106). Assignment is a lease term. |\n| Owner sells the house | Change of ownership turns on the provider or its control (WAC 388-76-10105). Ask DSHS about reporting. |\n| Emergencies | Written succession plan (WAC 388-76-10201). |\n\n**In practice.** AFH leases are commonly annual. Deposits, and whether rent starts at signing or only once the operator's license is issued, vary from deal to deal. There is no standard, so settle both in writing."
+      }
+    ],
+    "next": "- Read [AFH Licensing & Certification](/afh-club/licensing-certification) for what the operator must do before opening.\n- Check the house against [AFH Building Requirements](/afh-club/building-inspection) before agreeing who pays for changes.\n- Look up the operator's record with [Violations and Inspection Reports](/afh-club/violation-history-lookup).",
+    "faqs": [
+      {
+        "question": "Can I get an AFH license if I rent the house?",
+        "answer": "Yes (WAC 388-76-10095). You are the licensee, not your landlord. If your landlord takes an active interest, such as recruiting residents, the application must name them.",
+        "alts": [
+          "Can I run an adult family home in a rented house?",
+          "lease a house for an adult family home"
+        ]
+      },
+      {
+        "question": "My landlord wants a percentage of my income instead of fixed rent. Does that matter?",
+        "answer": "Yes. \"The charging of rent as a percentage of the business\" is an active interest, so your application must name the owner (WAC 388-76-10095). The landlord does not become the licensee.",
+        "alts": [
+          "Can AFH rent be a percentage of revenue?",
+          "percentage rent adult family home landlord"
+        ]
+      },
+      {
+        "question": "I own the house. Can the next operator use the old license?",
+        "answer": "No. The license cannot be transferred (WAC 388-76-10010). A new operator needs its own license.",
+        "alts": [
+          "Does the AFH license stay with the house when the tenant leaves?",
+          "Can a new tenant use the old AFH license?"
+        ]
+      },
+      {
+        "question": "I want to sell the house and my operator will stay. Is that a change of ownership?",
+        "answer": "Change of ownership turns on a change in the provider or its control (WAC 388-76-10105). The rule does not address a landlord selling. Ask DSHS before closing whether anything must be reported.",
+        "alts": [
+          "What happens to an AFH lease if I sell the house?",
+          "Can I sell a house that is leased to an adult family home?"
+        ]
+      },
+      {
+        "question": "My operator's license was revoked. Do I have to move the residents?",
+        "answer": "The discharge and notice rules fall on the home, not the owner (WAC 388-76-10615; RCW 70.129.110). Ask DSHS who arranges moves after a revocation.",
+        "alts": [
+          "What happens to the landlord if the AFH operator loses its license?",
+          "What if my AFH tenant loses its license?",
+          "AFH tenant license revoked landlord"
+        ]
+      },
+      {
+        "question": "Who pays for ramps, wider doors or fire upgrades?",
+        "answer": "No rule decides this between owner and operator. Meeting local codes is the home's job (RCW 70.128.140). Cost, ownership and restoration are lease terms; put them in writing before work starts.",
+        "alts": [
+          "Who pays for accessibility upgrades in an AFH rental?",
+          "Who pays for modifications in a leased adult family home?",
+          "AFH lease who pays for improvements"
+        ]
+      },
+      {
+        "question": "How is rent set for a house leased to an adult family home?",
+        "answer": "From AFH Club's work with Washington owners and operators: it depends on the level of care the operator plans to provide and on whether residents will be private pay or Medicaid, since those set what the business can support. Leases are commonly annual. Rent set as a percentage of the business makes the owner an active interest who must be named on the license application (WAC 388-76-10095).",
+        "alts": [
+          "How much rent can I charge an AFH operator?",
+          "AFH lease rent market",
+          "How long are adult family home leases?",
+          "How do I estimate market rent for an AFH property?",
+          "market rent adult family home house"
+        ]
+      },
+      {
+        "question": "What should a lease with an AFH operator cover?",
+        "answer": "No rule writes the lease, but the licensing rules make several topics matter: use as a licensed home and its capacity, how rent is set (percentage rent makes the owner an active interest), the start date versus licensing, who pays for and owns changes, insurance and proof of it, DSHS and ombuds access, what happens on license loss, relocation or a sale of the business, and the operator's emergency plan. The article's table ties each to its rule.",
+        "alts": [
+          "What should an AFH landlord include in a commercial lease?",
+          "What should a landlord check before leasing to an AFH operator?",
+          "AFH lease clauses landlord"
+        ]
+      },
+      {
+        "question": "Who can enter a leased adult family home?",
+        "answer": "DSHS may inspect at any time, and in complaint investigations gets access to the entire premises (RCW 70.128.070, 70.128.090). The long-term care ombuds must not be kept from residents (RCW 70.129.090). The landlord's own entry comes from the lease, and from the landlord-tenant act's notice rules if that law applies (RCW 59.18.150).",
+        "alts": [
+          "What should an AFH landlord know about inspections and access?",
+          "Can the landlord enter an adult family home?",
+          "DSHS inspection access leased AFH"
+        ]
+      },
+      {
+        "question": "What happens to the lease if the AFH operator sells the business?",
+        "answer": "The license cannot be transferred, so the buyer needs its own license, and the seller gives DSHS and residents 60 days' written notice unless DSHS grants priority processing (WAC 388-76-10010, 10105, 10106, 10107). Whether the lease can be assigned to the buyer is a lease term, not a rule.",
+        "alts": [
+          "What happens to an AFH lease when the business is sold?",
+          "Can my AFH tenant assign the lease to a buyer?"
+        ]
+      },
+      {
+        "question": "Can the lease require the operator to carry insurance?",
+        "answer": "The rules already require the licensed home to carry commercial general and professional liability coverage of at least $500,000 per occurrence and $1,000,000 aggregate, with the State as additional insured (WAC 388-76-10191, 10192). Requiring proof, or more coverage, is a lease term. The owner's own building and liability coverage is a question for the owner's insurer.",
+        "alts": [
+          "Can a landlord require proof of AFH licensing and insurance?",
+          "Can an AFH lease require liability insurance?",
+          "AFH tenant insurance requirements"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "WAC 388-76-10095",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10095"
+      },
+      {
+        "label": "DSHS: Adult Family Home License Web Application guide (v1.7, April 2025)",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/BAAU/AFHWebApp.pdf"
+      },
+      {
+        "label": "WAC 388-76-10000",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10000"
+      },
+      {
+        "label": "WAC 388-76-10161",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10161"
+      },
+      {
+        "label": "WAC 388-76-10010",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10010"
+      },
+      {
+        "label": "WAC 388-76-10110",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10110"
+      },
+      {
+        "label": "WAC 388-76-10105",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10105"
+      },
+      {
+        "label": "WAC 388-76-10106",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10106"
+      },
+      {
+        "label": "WAC 388-76-10107",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10107"
+      },
+      {
+        "label": "WAC 388-76-10050",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10050"
+      },
+      {
+        "label": "RCW 70.128.160",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.128.160"
+      },
+      {
+        "label": "WAC 388-76-10980",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10980"
+      },
+      {
+        "label": "WAC 388-76-10616",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10616"
+      },
+      {
+        "label": "WAC 388-76-10615",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10615"
+      },
+      {
+        "label": "RCW 70.129.110",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.129.110"
+      },
+      {
+        "label": "WAC 388-76-10210",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10210"
+      },
+      {
+        "label": "RCW 59.18.030",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.030"
+      },
+      {
+        "label": "RCW 59.18.040",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.040"
+      },
+      {
+        "label": "RCW 59.18.150",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.150"
+      },
+      {
+        "label": "RCW 70.129.010",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.129.010"
+      },
+      {
+        "label": "RCW 70.129.090",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.129.090"
+      },
+      {
+        "label": "RCW 43.190.080",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=43.190.080"
+      },
+      {
+        "label": "WAC 388-76-10935",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10935"
+      },
+      {
+        "label": "RCW 70.128.070",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.128.070"
+      },
+      {
+        "label": "RCW 70.128.090",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.128.090"
+      },
+      {
+        "label": "WAC 388-76-10003",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10003"
+      },
+      {
+        "label": "WAC 388-76-10915",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10915"
+      },
+      {
+        "label": "RCW 70.128.140",
+        "href": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.128.140"
+      },
+      {
+        "label": "WAC 388-76-10710",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10710"
+      },
+      {
+        "label": "WAC 388-76-10715",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10715"
+      },
+      {
+        "label": "WAC 388-76-10191",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10191"
+      },
+      {
+        "label": "WAC 388-76-10192",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10192"
+      },
+      {
+        "label": "WAC 388-76-10201",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10201"
+      }
+    ]
   }
 ]

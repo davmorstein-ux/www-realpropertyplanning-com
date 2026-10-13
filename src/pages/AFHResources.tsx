@@ -99,6 +99,12 @@ const TOPICS = [
     description: "What a management company can do for an adult family home, what stays with you as the licensed owner, and the DSHS filing that comes first.",
   },
   {
+    title: "Leasing to an AFH Operator",
+    href: "/afh-club/leasing-a-house-to-an-afh-operator",
+    img: "/afh-leasing-cover.webp",
+    description: "When an adult family home runs in a rented house: who holds the license, what happens on a move, sale or closure, and what the lease has to settle.",
+  },
+  {
     title: "Getting Paid",
     href: "/afh-club/getting-paid-providerone-billing",
     img: "/afh-getting-paid-cover.webp",
@@ -327,6 +333,12 @@ const AFHResources = () => (
             href: "/afh-club/hiring-an-afh-management-company",
             img: "/afh-management-company-cover.webp",
             placeholder: "#0a5648",
+          },
+          {
+            title: "Leasing to an AFH Operator",
+            href: "/afh-club/leasing-a-house-to-an-afh-operator",
+            img: "/afh-leasing-cover.webp",
+            placeholder: "#1b2a4a",
           },
           {
             title: "Getting Paid",
