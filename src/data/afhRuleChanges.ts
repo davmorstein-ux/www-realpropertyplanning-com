@@ -467,7 +467,7 @@ export const RULE_CHANGES: RuleChange[] = [
     before: "DSHS had to approve a management agreement in advance.",
     after: "The provider files an attestation instead of waiting for approval. The provider remains responsible for the home.",
     affects: "Owners who hire a management company.",
-    impact: "The filing is an attestation rather than a separate approval form, though the rule still calls it a "department approved" agreement and DSHS can require changes. The agreement and signed attestation are due 60 days before it takes effect, and residents get 60 days' notice. It does not replace the provider's own qualifications.",
+    impact: "The filing is an attestation rather than a separate approval form, though the rule still calls it a ‘department approved’ agreement and DSHS can require changes. The agreement and signed attestation are due 60 days before it takes effect, and residents get 60 days' notice. It does not replace the provider's own qualifications.",
     citation: { label: "WAC 388-76-11050", href: WAC("388-76-11050") },
     filing: W23_12_075,
     verified: V,
