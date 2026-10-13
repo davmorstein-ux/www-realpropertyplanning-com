@@ -215,7 +215,7 @@ export const AFH_GLOSSARY: GlossaryTerm[] = [
     term: "Licensed capacity",
     category: "Licensing and people",
     definition:
-      "The number of residents printed on the license. Six is the standard. Seven or eight requires separate DSHS approval after at least 24 months under the initial license, the last 12 at six residents, two full inspections with no enforcement action, proof of financial solvency, and a sprinkler system if the home serves residents who need help evacuating.",
+      "The number of residents printed on the license. Six is the standard. Seven or eight requires separate DSHS approval after at least 24 months under the initial license, including at least 12 months licensed for six residents, two full inspections with no enforcement action, proof of financial solvency, and a sprinkler system if the home serves residents who need help evacuating.",
     guide: G.data,
     source: { label: "WAC 388-76-10031", href: WAC("388-76-10031") },
   },

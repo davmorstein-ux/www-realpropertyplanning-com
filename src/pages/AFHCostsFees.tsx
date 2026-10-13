@@ -77,9 +77,9 @@ const STARTUP_COSTS = [
   },
   {
     category: "Liability Insurance",
-    amount: "About $1,900–$2,840/year (6 beds)",
+    amount: "About $2,840/year (6 beds, 2024 average)",
     detail:
-      "Required by WAC 388-76-10191, with minimum limits of $500,000 per occurrence and $1,000,000 aggregate. The Insurance Commissioner's 2025 study found the average annual premium was $318 per bed in 2019 and $473 per bed in 2024. Six beds at those averages is about $1,900 to $2,840 a year. Some insurers have training and experience requirements beyond DSHS minimums.",
+      "Required by WAC 388-76-10191, with minimum limits of $500,000 per occurrence and $1,000,000 aggregate. The Insurance Commissioner's 2025 study found the average annual premium was $318 per bed in 2019 and $473 per bed in 2024. At the 2024 average, six beds is about $2,840 a year (about $1,900 at the 2019 average). Some insurers have training and experience requirements beyond DSHS minimums.",
     source: "WAC 388-76-10192; WA OIC 2025 study",
   },
   {
@@ -388,7 +388,7 @@ const AFHCostsFees = () => (
             }}
           >
             A 2025 study by the Washington Office of the Insurance Commissioner found that the average annual premium
-            was $318 per bed in 2019 and $473 per bed in 2024. For a 6-bed home that is about $1,900 to $2,840 a year.
+            was $318 per bed in 2019 and $473 per bed in 2024. For a 6-bed home that is about $2,840 a year at the 2024 average (about $1,900 at the 2019 average).
             DSHS notes that some insurers impose training and experience requirements above and beyond what DSHS
             requires for licensure.
           </p>
