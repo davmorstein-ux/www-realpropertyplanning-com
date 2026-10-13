@@ -8,7 +8,9 @@
     "Does the AFH owner have to live in the house?",
     "Can I open an adult family home and live somewhere else?",
     "afh live-in requirement washington",
-    "do I need to live in the house to run an AFH"
+    "do I need to live in the house to run an AFH",
+    "Does the AFH owner have to be present at the home every day?",
+    "does the afh owner have to be there every day"
    ],
    "a": "Not necessarily, but someone qualified must be there. Under WAC 388-76-10040, the provider or entity representative must live in the home or employ a resident manager who does, unless the home has 24-hour staffing with a staff person who can make needed decisions always present. Residents may need help at 2am just as much as 2pm, so plan for around-the-clock coverage before you apply.",
    "path": "/afh-club/getting-started",
@@ -51,7 +53,8 @@
     "What is DSHS form 10-417?",
     "afh license application documents checklist",
     "What forms go with the AFH application?",
-    "caregiver experience attestation adult family home"
+    "caregiver experience attestation adult family home",
+    "What documents should I assemble before submitting an AFH license application?"
    ],
    "a": "The main items are the Caregiver Experience Attestation form (DSHS 10-417) documenting your 1,000 hours of direct care, your training certificates, background check forms, proof of liability insurance, and the Disclosure of Services form (DSHS 10-508). A floor plan of each level of the home must also accompany the application. Gather these before you submit online.",
    "path": "/afh-club/licensing-certification",
@@ -91,6 +94,20 @@
    ]
   },
   {
+   "id": "AQ-084",
+   "topic": "Provider qualifications",
+   "q": "Can I open an adult family home if I've never worked as a caregiver?",
+   "alts": [
+    "Can I start an adult family home with no healthcare experience?",
+    "open AFH without caregiving experience",
+    "Do I need hands-on care experience to run an adult family home?",
+    "I have no nursing or caregiving background. Can I still become an AFH provider?"
+   ],
+   "a": "Not as the licensed individual provider, unless you are in an exempt profession. Washington requires at least 1,000 hours of successful direct care of vulnerable adults, in a licensed or contracted setting, within the previous 60 months and after age 18. Physicians, physician assistants, and licensed RNs, ARNPs and LPNs are exempt. The guide is blunt: this is not a business you can enter without hands-on care experience. If a business entity holds the license, the entity representative it names must meet the same qualifications.",
+   "path": "/afh-club/getting-started",
+   "pathTitle": "Is an Adult Family Home Right for You?"
+  },
+  {
    "id": "OP-007",
    "topic": "Business structure",
    "q": "Can I be the entity representative for more than one LLC that runs adult family homes?",
@@ -103,6 +120,24 @@
    "a": "No. An individual may be the entity representative for only one entity provider. When an LLC, corporation or partnership holds the license, it must designate an entity representative who meets all the same personal qualifications as an individual provider. Either way, DSHS issues one license per home. The guide suggests talking with a Washington business attorney before choosing a structure.",
    "path": "/afh-club/getting-started",
    "pathTitle": "Is an Adult Family Home Right for You?"
+  },
+  {
+   "id": "AQ-078",
+   "topic": "Business structure",
+   "q": "Can my spouse and I run an adult family home together?",
+   "alts": [
+    "Can a husband and wife jointly operate an adult family home?",
+    "married couple afh license washington",
+    "Can my wife and I both run our adult family home?",
+    "husband and wife adult family home providers"
+   ],
+   "a": "It depends on how you set it up. Washington licenses either an individual or a business entity, such as an LLC, corporation or partnership, and issues one license per home. An entity must name one entity representative who meets every qualification an individual provider must meet. The applicant's spouse or domestic partner needs background checks before licensure, and anyone who provides care may be subject to background-check, training and credential requirements.",
+   "path": "/afh-club/getting-started",
+   "pathTitle": "Is an Adult Family Home Right for You?",
+   "also": [
+    "/afh-club/ownership-structure",
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
   },
   {
    "id": "OP-008",
@@ -136,6 +171,152 @@
    "pathTitle": "Opening a New Adult Family Home",
    "also": [
     "/afh-club/getting-started"
+   ]
+  },
+  {
+   "id": "AQ-001",
+   "topic": "Getting started",
+   "q": "What does running an adult family home actually look like day to day?",
+   "alts": [
+    "What does an adult family home owner actually do each day?",
+    "What is a typical day like for an AFH provider?",
+    "afh owner daily duties",
+    "What would my job be if I opened an adult family home?"
+   ],
+   "a": "An adult family home is three things at once: someone's home, a licensed care setting and a small business. DSHS says the provider is responsible for residents' care and services 24 hours a day, whether on site or not. Before committing, spend time in an operating home during meals, shift changes, medication times, evening routines and busy mornings, and ask what happens when a caregiver calls out or a resident falls at night.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-014",
+   "topic": "Getting started",
+   "q": "Is it better to buy an operating adult family home or open a new one?",
+   "alts": [
+    "Is it easier to buy an operating adult family home or open a new one from scratch?",
+    "How do I compare the risk of opening a new AFH versus buying an existing operation?",
+    "buy existing afh vs start new",
+    "Should I start my own adult family home or buy one that's running?",
+    "Should I buy a vacant house or an existing licensed AFH?",
+    "vacant house vs licensed afh"
+   ],
+   "a": "Each has trade-offs. Buying a licensed home means the building was approved for AFH use and it may have residents and revenue, but you still apply for a new license, ECS and SBS contracts do not transfer, and a home whose license lapsed must meet current rules. Converting a house may require costly structural changes, and its layout can limit resident capacity or bedroom classification. Homes typically do not reach full capacity immediately, so plan for a ramp-up period.",
+   "path": "/afh-club/building-inspection",
+   "pathTitle": "AFH Building Requirements & Inspections",
+   "also": [
+    "/afh-club/costs-fees"
+   ]
+  },
+  {
+   "id": "AQ-022",
+   "topic": "Getting started",
+   "q": "Can I run an adult family home while keeping my full-time job?",
+   "alts": [
+    "Can I operate an AFH as a side business while keeping another full-time job?",
+    "afh side business",
+    "Do I have to quit my job to open an adult family home?",
+    "Can I own an AFH and work somewhere else?"
+   ],
+   "a": "Possibly, but the home still needs someone qualified around the clock. The provider must live in the home or employ a resident manager who does, unless the home has 24-hour staffing with a decision-maker always present. A management company can handle staffing, billing and records, but you stay responsible, meet with the manager monthly and visit at least quarterly. The getting-started guide is blunt: this is not a 9-to-5 business.",
+   "path": "/afh-club/getting-started",
+   "pathTitle": "Is an Adult Family Home Right for You?",
+   "also": [
+    "/afh-club/hiring-an-afh-management-company"
+   ]
+  },
+  {
+   "id": "AQ-047",
+   "topic": "Getting started",
+   "q": "What is an adult family home in Washington State?",
+   "alts": [
+    "What does adult family home mean in Washington?",
+    "afh definition washington",
+    "What counts as an adult family home in WA?"
+   ],
+   "a": "A regular house licensed by DSHS to provide room, board, personal care and special care to two to six adults who are not related to the provider (RCW 70.128.010). DSHS may approve seven or eight for a provider with at least 24 months under the initial license and a clean inspection record (WAC 388-76-10031).",
+   "path": "/afh-club/washington-adult-family-home-guide/rules-and-key-figures",
+   "pathTitle": "Washington Adult Family Homes: Rules & Key Figures",
+   "also": [
+    "/afh-club/getting-started"
+   ]
+  },
+  {
+   "id": "AQ-054",
+   "topic": "Getting started",
+   "q": "How can I tell if there's enough demand for a new adult family home in my area?",
+   "alts": [
+    "How can I test demand for a new adult family home in a particular ZIP code?",
+    "afh market saturation zip code",
+    "How many adult family homes are already near me?",
+    "Is my area already full of adult family homes?"
+   ],
+   "a": "Start with the DSHS Adult Family Home Locator to see how many licensed homes already operate in your ZIP code or county. Market saturation affects how quickly you will fill beds. Homes typically do not reach full capacity immediately, so plan for a ramp-up period before revenue is stable, and prepare conservative projections that show what happens if the home opens slowly.",
+   "path": "/afh-club/getting-started",
+   "pathTitle": "Is an Adult Family Home Right for You?",
+   "also": [
+    "/afh-club/costs-fees",
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-059",
+   "topic": "Getting started",
+   "q": "How many residents can an adult family home have in Washington?",
+   "alts": [
+    "How many residents can an adult family home serve in Washington?",
+    "How many beds can an AFH have?",
+    "afh maximum residents washington",
+    "Can an adult family home ever have more than six residents?"
+   ],
+   "a": "Two to six under a standard license. DSHS may approve seven or eight for a provider who has held the initial license at least 24 months (12 of them at six residents), shows financial solvency and management experience, has recent inspections without enforcement action, and meets the sprinkler and evacuation requirements in WAC 388-76-10031. Seven bedrooms do not make a seven-bed home.",
+   "path": "/afh-club/getting-started",
+   "pathTitle": "Is an Adult Family Home Right for You?",
+   "also": [
+    "/afh-club/afh-property-classifications"
+   ]
+  },
+  {
+   "id": "AQ-069",
+   "topic": "Getting started",
+   "q": "What are the main risks of running an adult family home?",
+   "alts": [
+    "What are the biggest risks of owning an adult family home?",
+    "Why do adult family homes close?",
+    "afh business risks",
+    "What should I know before committing to the adult family home business?"
+   ],
+   "a": "DSHS warns that a number of providers close after only one or two years, usually because they did not realize how hard it would be to share their home, how hard the work would be, or how hard it may be to attract residents and run a business. The homes are heavily regulated, the provider is responsible for residents' care 24 hours a day, and a home without reliable backup coverage is one unexpected event away from a serious problem.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-079",
+   "topic": "Getting started",
+   "q": "What should I ask experienced AFH owners before getting into the business?",
+   "alts": [
+    "What questions should I ask an experienced AFH owner before entering the industry?",
+    "questions for afh owners before opening a home",
+    "How do I learn what running an adult family home is really like?",
+    "what to ask an adult family home provider before starting one"
+   ],
+   "a": "Ask what happens when a caregiver calls out two hours before a shift, a resident falls at night, two residents need help at once, a family is unhappy with care, a hospital wants to send someone back with changed needs, a resident dies and the room stays vacant, or the provider gets sick or needs a vacation. Ask to observe meals, shift changes, medication times and busy mornings, not just a scheduled tour.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-085",
+   "topic": "Getting started",
+   "q": "Can I run an adult family home in the house I live in?",
+   "alts": [
+    "Can I operate an adult family home in the house where I live?",
+    "run AFH out of my own house",
+    "Can my own home become an adult family home while my family lives there?",
+    "Can I turn the house I live in into an AFH?"
+   ],
+   "a": "Yes. An individual provider either lives in the home or employs a resident manager who does, and many providers live in the home. Everyone in the household over age 11 needs a Washington name and date of birth background check. Before deciding, ask whether your family will accept the loss of privacy and the lifestyle changes of operating in a residence, and have the house reviewed against the AFH building inspection checklist.",
+   "path": "/afh-club/getting-started",
+   "pathTitle": "Is an Adult Family Home Right for You?",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
    ]
   },
   {
@@ -257,6 +438,20 @@
    "pathTitle": "AFH Training & Education Requirements"
   },
   {
+   "id": "AQ-086",
+   "topic": "Training",
+   "q": "What training do I have to finish before my adult family home can be licensed?",
+   "alts": [
+    "What training must I complete before opening an AFH?",
+    "AFH pre-license training list washington",
+    "Which classes do I need before I can open an adult family home?",
+    "What certificates do I need before DSHS will license my AFH?"
+   ],
+   "a": "All of these come before the license is issued: the 75-hour Home Care Aide training and Department of Health certification (unless you are exempt), AFH Administrator Training through a community college contracted with DSHS, and current CPR and first aid cards. Safe food handling is built into the caregiver training. Specialty training for dementia, mental health or developmental disabilities is needed only before admitting or serving residents with those needs.",
+   "path": "/afh-club/training-education",
+   "pathTitle": "AFH Training & Education Requirements"
+  },
+  {
    "id": "OP-018",
    "topic": "Rule changes",
    "q": "How long do new caregivers at my AFH have to get Home Care Aide certified?",
@@ -308,7 +503,9 @@
    "alts": [
     "dshs baau portal afh application",
     "How do I apply online for an AFH license?",
-    "afh online application tips"
+    "afh online application tips",
+    "How do I apply for an adult family home license in Washington?",
+    "how to apply for an afh license"
    ],
    "a": "Online, through the DSHS BAAU application portal. DSHS asks applicants to avoid the symbols &, =, + and # in the application and spell them out instead. A floor plan of each level of the home must accompany the application, and application fees are paid with it. DSHS's BAAU office takes application questions by email.",
    "path": "/afh-club/licensing-certification",
@@ -339,13 +536,49 @@
     "multiple afh licenses one provider",
     "Requirements to license an additional adult family home",
     "afh multiple-home provider rules 2026",
-    "Do I need a separate license for each AFH?"
+    "Do I need a separate license for each AFH?",
+    "What are the requirements to open a second adult family home?",
+    "requirements for a second AFH license",
+    "What should I do before expanding from one AFH to two?"
    ],
    "a": "Yes, but each additional home needs its own license and proof of financial solvency and management experience (RCW 70.128.065). Since September 20, 2026, DSHS must deny a license to an applicant who already operates homes and does not meet the multiple-home provider requirements; before, denial was optional. That includes adding a home by buying one through a change of ownership.",
    "path": "/afh-club/washington-afh-rule-changes",
    "pathTitle": "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards",
    "also": [
     "/afh-club/getting-started"
+   ]
+  },
+  {
+   "id": "AQ-048",
+   "topic": "Licensing process",
+   "q": "How long does Washington take to approve an AFH license?",
+   "alts": [
+    "How long will DSHS take to issue my adult family home license?",
+    "afh license processing time washington",
+    "What is the DSHS wait for a new AFH license?"
+   ],
+   "a": "DSHS does not promise a timeline. It posts its application queue online; in late September 2026 it was working on applications received in May 2026, and it allows up to 60 days once an application is complete. The local building inspection and the DSHS licensing inspection come on top of that.",
+   "path": "/afh-club/washington-adult-family-home-guide/rules-and-key-figures",
+   "pathTitle": "Washington Adult Family Homes: Rules & Key Figures",
+   "also": [
+    "/afh-club/licensing-certification"
+   ]
+  },
+  {
+   "id": "AQ-087",
+   "topic": "Licensing process",
+   "q": "What inspections does a new adult family home have to pass before it opens?",
+   "alts": [
+    "What inspections happen before a new adult family home opens?",
+    "AFH inspections before licensing",
+    "Who inspects my house before I can open an adult family home?",
+    "Is there more than one inspection to open an AFH in Washington?"
+   ],
+   "a": "Two main inspections, by different agencies. The local building official for your city or county inspects the house using the AFH Local Building Inspection Checklist (DSHS form 15-604), and DSHS will not license the home until that is done. A DSHS licensor then conducts an initial inspection. Most applicants do not pass the first DSHS inspection, and DSHS allows a maximum of three visits. A home on septic also needs the local health authority to inspect and approve the system.",
+   "path": "/afh-club/licensing-certification",
+   "pathTitle": "AFH Licensing & Certification in Washington State",
+   "also": [
+    "/afh-club/building-inspection"
    ]
   },
   {
@@ -356,7 +589,8 @@
     "27 inch door rule afh",
     "Do I have to widen doors for my adult family home?",
     "afh door width requirement 2026",
-    "Does the 27-inch door rule apply to a former AFH whose license lapsed?"
+    "Does the 27-inch door rule apply to a former AFH whose license lapsed?",
+    "afh doorway width requirements"
    ],
    "a": "At least 27 inches, for homes licensed after September 20, 2026: every interior door residents pass through, other than a designated emergency exit (WAC 388-76-10715). It's a DSHS licensing rule, not a checklist item; the building checklist sets widths only for exit doors (at least 32 inches clear). A former AFH whose license lapsed must meet it; a continuously licensed home sold to a new owner does not. Measure doors early.",
    "path": "/afh-club/wabo-technical-guide",
@@ -404,7 +638,10 @@
     "septic system afh inspection washington",
     "How many people can my septic serve for an AFH?",
     "health department septic approval adult family home",
-    "Do I need septic approval before applying to DSHS?"
+    "Do I need septic approval before applying to DSHS?",
+    "Will an older septic system limit how many residents an AFH can serve?",
+    "septic capacity AFH residents",
+    "septic replacement AFH conversion"
    ],
    "a": "It can, but start early. DSHS asks for a document from the local health authority showing the system was inspected and approved for use as an AFH, and how many people (not bedrooms) it can serve. Begin that inspection and approval before submitting your DSHS application, because septic upgrades can involve significant cost and delay and cannot be resolved quickly.",
    "path": "/afh-club/building-inspection",
@@ -418,7 +655,11 @@
     "afh toilet requirement for 6 residents",
     "Does a six-bed adult family home need two toilets?",
     "Do ensuite bathrooms count toward the AFH toilet ratio?",
-    "toilet per resident rule afh washington"
+    "toilet per resident rule afh washington",
+    "How should I evaluate a house with only one full bathroom for AFH use?",
+    "one bathroom house adult family home",
+    "How many bathrooms does an adult family home need?",
+    "how many bathrooms for an AFH"
    ],
    "a": "For homes licensed after August 1, 2023: one accessible toilet per five persons, usable without going through another person's room (WAC 388-76-10780, changed March 2025). DSHS's explanation says a toilet in a resident's own bathroom counts. Count every person in the home, not only residents. Toilets residents don't use need not meet the AFH building code but must be closed to residents. The older two-toilet rule is out of date.",
    "path": "/afh-club/washington-afh-rule-changes",
@@ -437,6 +678,152 @@
    "a": "Yes, but it now takes two sign-offs. Construction that changes exits or a resident bedroom needs the local building official's approval again (WAC 388-76-10700). Since September 20, 2026, the home must also notify DSHS and receive an approved DSHS inspection before a resident sleeps in a bedroom DSHS has not already inspected and approved.",
    "path": "/afh-club/washington-afh-rule-changes",
    "pathTitle": "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards"
+  },
+  {
+   "id": "AQ-015",
+   "topic": "Building requirements",
+   "q": "Can a bedroom in a daylight basement be used for an adult family home resident?",
+   "alts": [
+    "Can an AFH use bedrooms located in a daylight basement?",
+    "basement bedroom adult family home",
+    "Does a walkout basement bedroom work for an AFH?",
+    "Can residents sleep downstairs in an adult family home?"
+   ],
+   "a": "Possibly, depending on its exit route. Each resident bedroom is classified by how residents get out: Type S if the route includes stairs, an elevator or a platform lift; Type NS1 if one route is at grade or served by a compliant ramp; NS2 if two are. A large basement bedroom is not automatically a resident bedroom, and a room reached by stairs can be used only by residents who can get out on their own.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington",
+   "also": [
+    "/afh-club/afh-property-score"
+   ]
+  },
+  {
+   "id": "AQ-016",
+   "topic": "Building requirements",
+   "q": "What makes a room usable as a resident bedroom in an adult family home?",
+   "alts": [
+    "What is the difference between a bedroom that meets building code and one acceptable for AFH residents?",
+    "afh resident bedroom requirements",
+    "Does every bedroom in the house count as an AFH bedroom?",
+    "What does a resident bedroom need in a Washington adult family home?"
+   ],
+   "a": "More than a bed and a door. A resident bedroom must be an outside room with natural light and direct access to the common areas and bathrooms, with at least 80 square feet of usable floor for one resident or 120 for two (closets don't count), no more than two residents, a smoke alarm, a door that opens from outside if locked, clothing storage and an emergency escape window. Its exit route also decides which residents may use it.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington"
+  },
+  {
+   "id": "AQ-017",
+   "topic": "Building requirements",
+   "q": "How big does a resident bedroom need to be in an adult family home?",
+   "alts": [
+    "How do I measure whether a bedroom has enough usable space for an AFH resident?",
+    "afh bedroom square feet",
+    "minimum bedroom size adult family home washington"
+   ],
+   "a": "At least 80 square feet of usable floor area for one resident, or 120 for two, and no more than two residents per room. Closets and vestibules don't count toward the area, so measure the usable floor itself. Bring a tape measure to the showing: the same visit is a good time to check door widths, the escape window's sill height and clear opening, and any ramp slope.",
+   "path": "/afh-club/afh-property-score",
+   "pathTitle": "AFH Property Score",
+   "also": [
+    "/afh-club/afh-property-classifications"
+   ]
+  },
+  {
+   "id": "AQ-027",
+   "topic": "Building requirements",
+   "q": "What changes does an older house usually need to become an adult family home?",
+   "alts": [
+    "What accessibility changes might an older home need for AFH use?",
+    "common modifications to convert a house to an afh",
+    "Will I have to remodel my house to open an adult family home?",
+    "afh conversion ramps grab bars windows"
+   ],
+   "a": "Most existing homes need at least some work, and each change triggers its own permit and inspection. Common ones: a ramp built to code, which can let a bedroom whose exit has stairs be classified NS1 instead of S; grab bars at toilets, tubs and showers; emergency escape windows in resident bedrooms; smoke and carbon monoxide alarms; and, for homes licensed after September 20, 2026, interior doors at least 27 inches wide. Septic upgrades can be a significant unexpected cost.",
+   "path": "/afh-club/building-inspection",
+   "pathTitle": "AFH Building Requirements & Inspections"
+  },
+  {
+   "id": "AQ-038",
+   "topic": "Building requirements",
+   "q": "Can I turn a garage into a resident bedroom in an adult family home?",
+   "alts": [
+    "Can a garage conversion count as a resident bedroom in an adult family home?",
+    "afh garage bedroom conversion",
+    "Will a converted garage pass as an AFH bedroom?",
+    "Can I turn my garage into bedrooms for an adult family home?",
+    "Can an attached garage be converted into resident bedrooms for an AFH?",
+    "Can a garage conversion create a suitable AFH bedroom?",
+    "Will a converted garage pass the AFH building inspection?"
+   ],
+   "a": "Possibly, but expect extra review. Converted garages, basement rooms and rooms reached through stairs often need it, because a room's exit path and location decide whether it qualifies. A resident bedroom must be an outside room with natural light and direct access to the common areas and bathrooms, with at least 80 square feet for one resident and a compliant escape window. Since September 20, 2026, DSHS must also inspect and approve a bedroom before a resident sleeps in it.",
+   "path": "/afh-club/wabo-technical-guide",
+   "pathTitle": "WABO Checklist: The Technical Guide for Washington Adult Family Homes",
+   "also": [
+    "/afh-club/afh-property-classifications",
+    "/afh-club/washington-afh-rule-changes"
+   ]
+  },
+  {
+   "id": "AQ-039",
+   "topic": "Building requirements",
+   "q": "What should I check about the exits when looking at a house for an AFH?",
+   "alts": [
+    "What should I check about emergency exits when screening a potential AFH property?",
+    "afh bedroom exit requirements",
+    "Do stairs on the way out matter for an adult family home bedroom?",
+    "emergency escape route adult family home house"
+   ],
+   "a": "Start with each bedroom's exit route. Type S means the route includes stairs, an elevator or a platform lift; NS1 means one route is at grade or served by a compliant ramp; NS2 means two are. The type limits which residents can safely use the room. The exit door needs at least 32 inches of clear width, hardware must work with one hand and without a key, and every resident bedroom needs an emergency escape window.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington"
+  },
+  {
+   "id": "AQ-055",
+   "topic": "Building requirements",
+   "q": "What does a bathroom need for residents who need help in an adult family home?",
+   "alts": [
+    "afh accessible bathroom requirements",
+    "grab bars and shower size adult family home",
+    "Is my bathroom big enough for an adult family home?",
+    "How do I evaluate whether an existing bathroom can accommodate residents who need assistance?",
+    "What does the inspector check in an AFH bathroom?"
+   ],
+   "a": "Start with what every AFH bathroom must meet. Resident bedrooms need direct access to the bathrooms, bathroom doors must open from outside when locked, grab bars go on both sides of the toilet and at tubs and showers, and a shower used for bathing must be at least 30 inches deep by 48 inches long. In a home licensed after September 20, 2026, interior doors residents pass through must be at least 27 inches wide; a continuously licensed home sold to a new owner is exempt.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington"
+  },
+  {
+   "id": "AQ-062",
+   "topic": "Building requirements",
+   "q": "Does an adult family home have to be a one-story house?",
+   "alts": [
+    "Does an adult family home need all bedrooms on one floor?",
+    "Can a split-level house be converted into a licensed adult family home?",
+    "Can a split-level house be converted into an adult family home?",
+    "How can I assess a split-level house for potential AFH conversion?",
+    "split level house afh washington"
+   ],
+   "a": "No, but stairs limit who can live in a room. Each resident bedroom is classified by its exit route: Type S if the route includes stairs, an elevator or a platform lift; NS1 if one route is at grade or on a compliant ramp; NS2 if two are. Residents who need help evacuating must have an exit path with no stairs, and lifts don't count, so a bedroom reached by stairs is only for residents who can get out on their own.",
+   "path": "/afh-club/afh-property-score",
+   "pathTitle": "AFH Property Score",
+   "also": [
+    "/afh-club/afh-property-classifications"
+   ]
+  },
+  {
+   "id": "AQ-089",
+   "topic": "Building requirements",
+   "q": "What AFH conversion costs do people forget to budget for?",
+   "alts": [
+    "What property modifications are commonly overlooked when budgeting for an AFH conversion?",
+    "hidden costs converting a house to an adult family home",
+    "What surprises come up when converting a house into an AFH?",
+    "Which repairs catch new owners off guard in an adult family home conversion?"
+   ],
+   "a": "Site items are easy to miss: fire apparatus access and water supply, such as road access, driveway conditions and hydrants. Other common surprises are replacement windows that shrink the clear opening, ramps without proper landings, small showers, round doorknobs or keyed deadbolts, unpermitted work, septic upgrades, and widening interior doors to 27 inches for homes licensed after September 20, 2026. Price each one before you commit to the property.",
+   "path": "/afh-club/wabo-technical-guide",
+   "pathTitle": "WABO Checklist: The Technical Guide for Washington Adult Family Homes",
+   "also": [
+    "/afh-club/building-inspection"
+   ]
   },
   {
    "id": "OP-030",
@@ -468,6 +855,24 @@
    "a": "It depends on budget and timing. Converting an existing home is the most common path, with lower entry cost and a faster route to licensure, but it may need costly changes and the layout can limit capacity. Building new gives the most control over layout and bedroom classification, but it is the most expensive option with the longest wait for revenue. Buying a licensed home is a third path, though the prior license does not transfer.",
    "path": "/afh-club/building-inspection",
    "pathTitle": "AFH Building Requirements & Inspections"
+  },
+  {
+   "id": "AQ-071",
+   "topic": "Building inspection",
+   "q": "What should I ask the building department before remodeling a house for an adult family home?",
+   "alts": [
+    "What questions should I ask the local building department before renovating a house for an AFH?",
+    "Do I need permits before converting a house to an AFH?",
+    "afh remodel permit questions building department",
+    "What does the city need before an AFH building inspection?"
+   ],
+   "a": "First confirm the property is in their jurisdiction: it goes by where the house physically sits, not the mailing address. Then ask for their local application requirements, which permits the planned work needs, whether that work must pass its final inspection before the AFH inspection is scheduled, and whether they also require plans, engineering, fire review or septic review. Bring the current checklist, DSHS form 15-604, and a floor plan of every floor.",
+   "path": "/afh-club/building-inspection",
+   "pathTitle": "AFH Building Requirements & Inspections",
+   "also": [
+    "/afh-club/wabo-technical-guide",
+    "/afh-club/wabo-inspection-guide"
+   ]
   },
   {
    "id": "OP-032",
@@ -542,6 +947,20 @@
    ]
   },
   {
+   "id": "AQ-023",
+   "topic": "Startup costs & fees",
+   "q": "How much money does it take to open an adult family home?",
+   "alts": [
+    "How much money do I need to start an adult family home?",
+    "startup costs to open an afh washington",
+    "What do I have to pay for before my adult family home earns anything?",
+    "How much should I budget to start an AFH business?"
+   ],
+   "a": "There is no single figure; it depends on the condition of the home, the training you already have and local permit fees. Building modifications are usually the largest and most variable expense. Known costs include the annual license fee of $450 per licensed bed ($2,700 for six beds, since July 2025), $100 to apply for Home Care Aide certification, and liability insurance, which averaged $473 per bed in 2024. Homes typically do not reach full capacity immediately, so plan for a ramp-up period.",
+   "path": "/afh-club/costs-fees",
+   "pathTitle": "AFH Costs & Fees in Washington State"
+  },
+  {
    "id": "OP-037",
    "topic": "7–8 bed homes",
    "q": "Can I open a new adult family home with seven or eight beds?",
@@ -549,7 +968,9 @@
     "8 bed afh new provider",
     "How do I get approved for 7 or 8 residents?",
     "afh capacity increase requirements washington",
-    "Can I build a house for eight residents and license it right away?"
+    "Can I build a house for eight residents and license it right away?",
+    "How do I decide whether six or eight resident beds fit my business plan?",
+    "six vs eight beds AFH"
    ],
    "a": "No. A new home is licensed for two to six residents. A provider may apply for seven or eight only after at least 24 months under the initial license (the last 12 at six residents), two full inspections with no enforcement action, and proof of financial solvency, plus the sprinkler and evacuation requirements. A new house can be laid out for seven or eight, but those beds wait. The faster inspection track for capacity increases expired January 1, 2026.",
    "path": "/afh-club/washington-afh-rule-changes",
@@ -585,6 +1006,20 @@
    "a": "Yes, it can ask, but don't plan around it. Since August 1, 2023, a home may ask the Residential Care Services director in writing for an exemption from a specific requirement (WAC 388-76-10004). It must not affect any resident's health, safety, rights or quality of life, and the decision is at the director's sole discretion and cannot be appealed. It can help with unusual houses but is never something to count on when buying.",
    "path": "/afh-club/washington-afh-rule-changes",
    "pathTitle": "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards"
+  },
+  {
+   "id": "AQ-057",
+   "topic": "Rule changes",
+   "q": "A Washington AFH rule just changed. How do I know if it applies to my home?",
+   "alts": [
+    "What should an AFH owner check after a change in Washington administrative rules?",
+    "afh wac change does it apply to me",
+    "How do I verify an adult family home rule change?",
+    "afh rule update what to check"
+   ],
+   "a": "Read the rule's own words. A rule that says homes licensed after a date applies to new licenses only; operating rules, such as drills, records and residency agreements, apply to every home from the effective date; payment rules apply by resident or assessment date. Check the history line on the Legislature's WAC page and open the newest WSR filing, which controls if it differs. A CR-101 or CR-102 proposal changes nothing until a CR-103 adopts it.",
+   "path": "/afh-club/washington-afh-rule-changes",
+   "pathTitle": "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards"
   }
  ],
  "buying": [
@@ -596,7 +1031,8 @@
     "Does DSHS inspect an adult family home again when it's sold?",
     "What if I fail the DSHS inspection when buying an AFH?",
     "afh change of ownership inspection",
-    "How many tries do I get to pass the licensing inspection as a new owner?"
+    "How many tries do I get to pass the licensing inspection as a new owner?",
+    "How do I prepare for an initial licensing visit without relying on the seller's old records?"
    ],
    "a": "Yes. Even if the home was recently licensed, a buyer must meet all current DSHS qualifications, pass a background check and have the home inspected by DSHS as part of licensing. Most applicants do not pass the first inspection, and DSHS allows at most three visits. Before the inspection, review the current building checklist (DSHS form 15-604) against the home's condition.",
    "path": "/afh-club/buying-selling",
@@ -609,7 +1045,8 @@
    "alts": [
     "Am I responsible for the previous owner's deficiencies at an adult family home?",
     "Do violations carry over to the new owner of an AFH?",
-    "buying afh with deficiencies who corrects them"
+    "buying afh with deficiencies who corrects them",
+    "How should an AFH buyer evaluate an unresolved plan of correction?"
    ],
    "a": "Yes. The new owner must correct every deficiency that exists at the time of the ownership change (WAC 388-76-10105). The DSHS AFH Locator shows limits and enforcements issued in the previous three years only; anything older, and anything still in progress, you learn by asking the current owner. Ask the seller directly about ongoing limits, exemptions and outstanding enforcement before you make an offer.",
    "path": "/afh-club/buying-selling",
@@ -628,6 +1065,41 @@
    "a": "Through the DSHS BAAU online portal. A change of ownership requires a complete new license application and a new license (WAC 388-76-10105), and you must meet every current provider qualification regardless of the seller's. To avoid disrupting residents, the current provider may ask DSHS in writing for priority processing (WAC 388-76-10107). A complete application avoids delays.",
    "path": "/afh-club/buying-selling",
    "pathTitle": "Buying or Selling an Adult Family Home"
+  },
+  {
+   "id": "AQ-025",
+   "topic": "Change of ownership",
+   "q": "Does the AFH license stay with the property when the house is sold?",
+   "alts": [
+    "Can an adult family home license transfer when a property is sold?",
+    "afh license transfer with house sale",
+    "If I buy the house, do I get the seller's AFH license?",
+    "Does a new owner have to relicense an adult family home?"
+   ],
+   "a": "No. A Washington adult family home license is valid only for the provider and the address printed on it, and it cannot be bought, assigned or transferred with the house or the business. A buyer applies for a new license through the DSHS change-of-ownership process, must meet all current qualifications, and must be approved before caring for a single resident. Specialty contracts such as ECS and SBS do not transfer either.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington",
+   "also": [
+    "/afh-club/buying-selling"
+   ]
+  },
+  {
+   "id": "AQ-070",
+   "topic": "Change of ownership",
+   "q": "Can I keep using the seller's license after I buy an adult family home?",
+   "alts": [
+    "Can I buy an existing AFH business and keep operating under its license?",
+    "Can a new owner use the previous operator's AFH license?",
+    "Can a Washington AFH license be transferred when the real estate is sold?",
+    "afh license transfer to buyer",
+    "Does the AFH license come with the house when I buy it?"
+   ],
+   "a": "No. The license is valid only for the seller and that address, and it does not transfer with the real estate or the business. The buyer files a complete new license application through the change-of-ownership process, meets every current provider qualification and has the home inspected by DSHS. The seller keeps operating until the change of ownership is approved, and the buyer cannot operate until DSHS issues the new license.",
+   "path": "/afh-club/buying-selling",
+   "pathTitle": "Buying or Selling an Adult Family Home",
+   "also": [
+    "/afh-club/washington-adult-family-home-guide/selling"
+   ]
   },
   {
    "id": "BU-005",
@@ -665,6 +1137,26 @@
    ]
   },
   {
+   "id": "AQ-044",
+   "topic": "Licensing as a buyer",
+   "q": "When I buy an adult family home, does my license have to come through before closing?",
+   "alts": [
+    "Can I apply for an AFH license before closing on the property?",
+    "afh change of ownership license timing closing",
+    "Should I close on an AFH before or after I get licensed?",
+    "buying an afh closing date and license",
+    "Can I apply for an AFH license before I purchase the property?",
+    "apply for afh license before buying"
+   ],
+   "a": "Build the closing date around your license. The buyer cannot operate until DSHS issues the new license, and DSHS will not estimate how long a change of ownership takes; a complete application avoids delays. Its posted queue showed applications received in May 2026 being processed in late September 2026, with up to 60 days once an application is complete. Meanwhile the seller keeps operating, after giving DSHS and each resident 60 days' written notice naming the buyer.",
+   "path": "/afh-club/before-you-buy-an-adult-family-home",
+   "pathTitle": "Before You Buy an Adult Family Home: What to Verify",
+   "also": [
+    "/afh-club/buying-selling",
+    "/afh-club/washington-adult-family-home-guide/selling"
+   ]
+  },
+  {
    "id": "BU-008",
    "topic": "Medicaid & specialty contracts",
    "q": "Does the seller's Medicaid contract carry over when I buy an adult family home?",
@@ -689,11 +1181,29 @@
     "Do specialty contracts transfer when you buy an adult family home?",
     "The seller has an SBS contract. Do I get it?",
     "ecs sbs contract change of ownership",
-    "Can I bill ECS rates right after buying an AFH?"
+    "Can I bill ECS rates right after buying an AFH?",
+    "What happens to specialty contracts when an AFH business is sold?"
    ],
    "a": "No. Expanded Community Services (ECS) and Specialized Behavior Support (SBS) contracts do not transfer at a change of ownership. You must meet the qualifications and have your own fully executed contract before providing or billing for those services, and ECS and SBS also need approval from DSHS AFH program staff. Ask the current owner which specialty contracts are in place.",
    "path": "/afh-club/buying-selling",
    "pathTitle": "Buying or Selling an Adult Family Home"
+  },
+  {
+   "id": "AQ-008",
+   "topic": "Medicaid & specialty contracts",
+   "q": "How do I check which Medicaid contracts an adult family home has?",
+   "alts": [
+    "How can an AFH operator verify which Medicaid contracts a home currently holds?",
+    "afh locator medicaid contract",
+    "How do I see what contracts an AFH holds?"
+   ],
+   "a": "Start with the DSHS Adult Family Home Locator, which shows each home's license, capacity, contracts and specialty designations. Treat a listed contract as a lead, not proof of income: Meaningful Day is still listed on many homes' contracts, but it has not been available since July 1, 2025. If you are buying, ECS and SBS specialty contracts do not transfer with the home, so the new owner needs its own.",
+   "path": "/afh-club/glossary",
+   "pathTitle": "Washington Adult Family Home Glossary",
+   "also": [
+    "/afh-club/washington-afh-rule-changes",
+    "/afh-club/afh-payment-field-guide"
+   ]
   },
   {
    "id": "BU-010",
@@ -703,7 +1213,13 @@
     "How do I verify an adult family home's income before buying?",
     "What financial records should I ask an AFH seller for?",
     "afh seller profit claim proof",
-    "Is it rude to ask an adult family home seller for tax returns?"
+    "Is it rude to ask an adult family home seller for tax returns?",
+    "How can I verify the accuracy of an AFH seller's advertised monthly revenue?",
+    "verify AFH seller revenue",
+    "How can I evaluate an AFH seller's claimed revenue?",
+    "How do I verify the seller's reported occupancy and revenue?",
+    "verify afh seller occupancy",
+    "What financial records should I request before buying an operating AFH?"
    ],
    "a": "Ask for proof: tax returns, profit and loss statements and bank deposits, plus who does the work that produces the income. Asking for proof is ordinary due diligence, not distrust. Split revenue into private pay, the Medicaid base rate, CBHS and any ECS or SBS contract, and check that it reconciles from each resident, to classification, to authorized rate, to bank deposits.",
    "path": "/afh-club/before-you-buy-an-adult-family-home",
@@ -723,6 +1239,94 @@
    "pathTitle": "Before You Buy an Adult Family Home: What to Verify"
   },
   {
+   "id": "AQ-002",
+   "topic": "Due diligence",
+   "q": "How do I confirm how many beds an adult family home is licensed for before I buy it?",
+   "alts": [
+    "How can I verify the number of licensed beds before buying an AFH?",
+    "check afh licensed capacity",
+    "Is the seller's bed count the same as the licensed capacity?",
+    "Where do I find an adult family home's approved capacity?"
+   ],
+   "a": "Check the license, not the bedroom count. Ask for the current DSHS license, which shows the provider, address and approved capacity, and search the address in the DSHS Adult Family Home Locator, which shows each home's license and capacity. Seven bedrooms do not make a seven-bed home: a standard license allows up to six residents, and seven or eight is a separate DSHS decision with additional operating-history requirements.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington",
+   "also": [
+    "/afh-club/glossary"
+   ]
+  },
+  {
+   "id": "AQ-049",
+   "topic": "Due diligence",
+   "q": "How do I check whether zoning allows an adult family home at an address?",
+   "alts": [
+    "Is an adult family home allowed in a single-family zone?",
+    "afh zoning washington",
+    "Does zoning allow an AFH in a residential neighborhood?"
+   ],
+   "a": "State law (RCW 70.128.140) says an adult family home must be treated as a residential use and is a permitted use in all areas zoned residential or commercial, including single-family zones. HOA rules that restrict adult family homes are also unenforceable under RCW 64.38.060, though an HOA can still apply ordinary rules that cover every home. Septic capacity, unpermitted additions, and fire access are the more common site questions.",
+   "path": "/afh-club/afh-property-score",
+   "pathTitle": "AFH Property Score",
+   "also": [
+    "/afh-club/getting-started"
+   ]
+  },
+  {
+   "id": "AQ-072",
+   "topic": "Due diligence",
+   "q": "Can a steep driveway be a problem for an adult family home?",
+   "alts": [
+    "How do I assess whether a steep driveway creates problems for an adult family home?",
+    "What should I check before buying a house with steep driveway access for an AFH?",
+    "afh driveway fire access requirements",
+    "Does fire truck access matter for an adult family home?",
+    "What should I check when an AFH property has a steep driveway or limited ambulance access?",
+    "Can a house on a steep private road be an adult family home?"
+   ],
+   "a": "It can be. The building checklist covers fire apparatus access and water supply, which can involve road access, driveway conditions and hydrants, and they must be acceptable to the local fire jurisdiction; homes outside a fire district may face extra verification. Also check parking for caregivers, visitors, service providers and emergency access, and whether a compliant resident ramp fits. Review this before you remove your feasibility contingency.",
+   "path": "/afh-club/wabo-technical-guide",
+   "pathTitle": "WABO Checklist: The Technical Guide for Washington Adult Family Homes",
+   "also": [
+    "/afh-club/afh-property-classifications",
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-076",
+   "topic": "Due diligence",
+   "q": "What if the adult family home I'm buying has a bedroom added without a permit?",
+   "alts": [
+    "What should I investigate if an AFH property has unpermitted bedroom additions?",
+    "unpermitted addition afh purchase",
+    "Can residents sleep in a bedroom DSHS never approved?",
+    "afh bedroom not on the approved floor plan"
+   ],
+   "a": "Resolve it before you buy. Unpermitted construction that does not match the approved plans is a common cause of inspection delays. Ask for building permits and final approvals for the AFH work, and documentation of any bedroom or exit changes since the inspection. Work that changes exits or a resident bedroom needs the local building official's approval again, and since September 20, 2026 no resident may sleep in a bedroom DSHS has not inspected and approved.",
+   "path": "/afh-club/wabo-technical-guide",
+   "pathTitle": "WABO Checklist: The Technical Guide for Washington Adult Family Homes",
+   "also": [
+    "/afh-club/afh-property-classifications",
+    "/afh-club/washington-afh-rule-changes"
+   ]
+  },
+  {
+   "id": "AQ-088",
+   "topic": "Due diligence",
+   "q": "What mistakes do first-time adult family home buyers make most often?",
+   "alts": [
+    "What are the most common mistakes first-time AFH buyers make?",
+    "first time AFH buyer mistakes",
+    "What do new buyers get wrong when buying an adult family home?",
+    "What should I not assume when buying my first AFH?"
+   ],
+   "a": "The biggest, according to the building guide, is assuming a property is AFH-ready just because it was used as one before. Others come from taking sales claims on trust: that the license transfers (it never does), that the home is grandfathered without proof of continuous licensing, that specialty contracts continue, or that the price reflects income you will actually keep. Verify the checklist, license, permit history, residents and revenue yourself.",
+   "path": "/afh-club/before-you-buy-an-adult-family-home",
+   "pathTitle": "Before You Buy an Adult Family Home: What to Verify",
+   "also": [
+    "/afh-club/wabo-technical-guide"
+   ]
+  },
+  {
    "id": "BU-012",
    "topic": "Income & financing",
    "q": "The current owners work in the home without pay. Why does that matter to me as a buyer?",
@@ -730,7 +1334,11 @@
     "How do I account for the seller's unpaid hours in an AFH?",
     "afh owner unpaid labor replacement wages",
     "If I won't work in the home myself, how does that change the numbers?",
-    "Will a lender count the owner's free labor as AFH income?"
+    "Will a lender count the owner's free labor as AFH income?",
+    "How do I evaluate an AFH whose owner also works as its primary caregiver?",
+    "seller is the main caregiver afh",
+    "How should I value an AFH with unusually high owner labor contributions?",
+    "owner works unpaid AFH value"
    ],
    "a": "Because if you will not work those hours, you pay someone who will, and a lender subtracts those wages too. Ask how many hours the current owners work unpaid, along with what staffing, overnight coverage and overtime really cost. A lender counts last year's income after replacement wages if you won't work in the home, not the income you plan to add.",
    "path": "/afh-club/before-you-buy-an-adult-family-home",
@@ -743,13 +1351,32 @@
    "alts": [
     "How do banks look at AFH income for a purchase loan?",
     "afh loan debt coverage 1.25",
-    "Will my income projections help me qualify for an AFH loan?"
+    "Will my income projections help me qualify for an AFH loan?",
+    "Can I use projected resident revenue to qualify for an AFH acquisition loan?",
+    "can a lender count future residents on an afh loan"
    ],
    "a": "Last year's income, after replacement wages if you won't work in the home, not the income you plan to add. Many lenders look for that income to cover the loan about 1.25 times. Get a lender's own read of last year's income and the coverage it produces before you commit. Talk with a lender early, since the financing answer may also shape whether you buy as an individual or through an LLC.",
    "path": "/afh-club/before-you-buy-an-adult-family-home",
    "pathTitle": "Before You Buy an Adult Family Home: What to Verify",
    "also": [
     "/afh-club/ownership-structure"
+   ]
+  },
+  {
+   "id": "AQ-090",
+   "topic": "Income & financing",
+   "q": "Why do I need extra cash on hand right after buying an adult family home?",
+   "alts": [
+    "How do I estimate working capital needed immediately after acquiring an AFH?",
+    "working capital after buying an AFH",
+    "Will Medicaid payments start right away after I buy an adult family home?",
+    "Do AFH payments stop for a while after a change of ownership?"
+   ],
+   "a": "Because a contract start date is not the same as a deposit. After a sale, Medicaid billing depends on each resident's authorization being reissued under the new owner's ProviderOne number, so plan working capital for a lag after closing and confirm the expected timing with DSHS. If you are using an SBA 7(a) loan, it can include working capital along with the house, business and closing costs.",
+   "path": "/afh-club/care-classifications-a-through-e",
+   "pathTitle": "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income",
+   "also": [
+    "/afh-club/how-to-finance-an-afh"
    ]
   },
   {
@@ -760,7 +1387,9 @@
     "The AFH I want to buy has a stop placement. Should I worry?",
     "stop placement adult family home buyer",
     "Can I fill empty beds if the home has a stop placement?",
-    "What enforcement actions should a buyer look for on an AFH record?"
+    "What enforcement actions should a buyer look for on an AFH record?",
+    "What questions should I ask about a home's past stop-placement orders?",
+    "AFH stop placement history buyer"
    ],
    "a": "A stop placement suspends admissions, so it blocks new residents while it is in place. That matters if your plan is to fill empty beds. It is one of several enforcement actions, along with civil penalties and suspension or revocation of the license. Ask the seller whether any restrictions are currently in place, and remember the new owner must correct deficiencies that exist at the change of ownership.",
    "path": "/afh-club/violation-history-lookup",
@@ -778,7 +1407,9 @@
     "The home's DSHS record looks clean but it just changed owners. What am I missing?",
     "afh violation history previous owner license number",
     "Does an adult family home's history follow the address or the owner?",
-    "How do I find inspections from before the current owner?"
+    "How do I find inspections from before the current owner?",
+    "What should I investigate if an AFH has changed owners several times?",
+    "AFH with many previous owners"
    ],
    "a": "Because each new owner gets a new license number, so older history can sit under a previous license. Search by name, address and license number, review all reports rather than just the latest, and identify whether issues relate to the current or a prior operator. Limits and enforcement are shown for the previous three years, so request older records too.",
    "path": "/afh-club/before-you-buy-an-adult-family-home",
@@ -797,7 +1428,14 @@
     "Where do I find older enforcement records on an adult family home I want to buy?",
     "How do I request DSHS records for an AFH?",
     "how do I check if an adult family home has violations",
-    "look up AFH violations"
+    "look up AFH violations",
+    "How can I look up inspection reports for an adult family home I am considering buying?",
+    "How can I find the inspection and complaint history of a Washington adult family home?",
+    "AFH complaint history lookup",
+    "How do I check an AFH license and enforcement history?",
+    "check afh enforcement history",
+    "How should a buyer investigate unresolved DSHS complaints against an AFH?",
+    "check open DSHS complaints before buying AFH"
    ],
    "a": "The DSHS Locator shows limits and enforcement issued within the previous three years. Its advanced search of enforcement letters goes back further, to actions from 2011. For more, contact the Residential Care Services office for the home's area or submit a public records request to DSHS with the facility name, address, license number, date range and record types. For anything still in progress, ask the current owner.",
    "path": "/afh-club/violation-history-lookup",
@@ -827,11 +1465,67 @@
     "How bad is a citation on an adult family home's record?",
     "afh deficiency red flags buyer",
     "What does a deficiency mean on a DSHS inspection report for a home I'm buying?",
-    "How do I judge an adult family home's violation history?"
+    "How do I judge an adult family home's violation history?",
+    "What should I look for in an AFH statement of deficiencies before buying the business?",
+    "How should a buyer assess a history of repeated deficiencies at an AFH?"
    ],
    "a": "Not automatically. A deficiency means a rule was not met; it does not automatically mean harm occurred. Focus on severity, frequency and response: how recent the issue is, whether there was harm or risk, whether it repeats, how the provider responded and whether DSHS confirmed compliance. Red flags include repeated citations for the same issue, ongoing medication or staffing problems, missed correction deadlines and enforcement actions. They require follow-up.",
    "path": "/afh-club/violation-history-lookup",
    "pathTitle": "How to Look Up Washington Adult Family Home Violations and Inspection Reports"
+  },
+  {
+   "id": "AQ-012",
+   "topic": "DSHS records",
+   "q": "How do I find out if an enforcement action against an adult family home is still in effect?",
+   "alts": [
+    "How can I verify whether a reported AFH enforcement action is still active?",
+    "is afh stop placement still active",
+    "How do I check if a DSHS limit on an adult family home has been lifted?",
+    "Is an old AFH enforcement action still in place?"
+   ],
+   "a": "Read the record, then ask. In the DSHS Locator, open the home's reports and inspection letters and match each issue to its outcome, including whether DSHS confirmed compliance. The Locator shows limits and enforcement from the previous three years only, and anything still in progress you learn by asking the current owner. A stop placement order must stay posted where residents, visitors and staff can see it until DSHS ends it.",
+   "path": "/afh-club/violation-history-lookup",
+   "pathTitle": "How to Look Up Washington Adult Family Home Violations and Inspection Reports",
+   "also": [
+    "/afh-club/buying-selling",
+    "/afh-club/washington-afh-rule-changes"
+   ]
+  },
+  {
+   "id": "AQ-036",
+   "topic": "DSHS records",
+   "q": "How can I find out if a house used to be a licensed adult family home?",
+   "alts": [
+    "How do I find out whether a property previously held an AFH license?",
+    "was this house ever an adult family home",
+    "check afh licensing history of an address",
+    "The seller says it used to be an AFH. How do I verify that?"
+   ],
+   "a": "Confirm the history yourself rather than relying on the seller's word. The DSHS Adult Family Home Locator shows homes licensed now, and its advanced search of enforcement letters goes back to actions from 2011. Search the address, not just a name, because each new owner gets a new license number. For older records, submit a public records request to DSHS with the address, date range and record types. A former AFH must meet current rules to be licensed again.",
+   "path": "/afh-club/violation-history-lookup",
+   "pathTitle": "How to Look Up Washington Adult Family Home Violations and Inspection Reports",
+   "also": [
+    "/afh-club/before-you-buy-an-adult-family-home",
+    "/afh-club/afh-property-classifications"
+   ]
+  },
+  {
+   "id": "AQ-037",
+   "topic": "DSHS records",
+   "q": "How do I check if an adult family home is currently licensed?",
+   "alts": [
+    "How can I check the current licensing status of an adult family home in Washington?",
+    "How do I verify whether a particular Washington address is currently licensed as an AFH?",
+    "afh license lookup by address",
+    "Is this house a licensed adult family home?",
+    "dshs afh locator license status"
+   ],
+   "a": "Search the address in the DSHS Adult Family Home Locator. If it is not listed, it is not currently licensed, whatever a listing says. A listed home shows its license, capacity, contracts and specialty designations, plus the limits and enforcement letters issued in the previous three years. The license itself names the provider, the address and the resident capacity, so ask the seller or listing broker for the current DSHS license as well.",
+   "path": "/afh-club/afh-property-classifications",
+   "pathTitle": "Is It Really an Adult Family Home? How to Read AFH Listings in Washington",
+   "also": [
+    "/afh-club/glossary"
+   ]
   },
   {
    "id": "BU-019",
@@ -927,7 +1621,9 @@
     "Is moving my newly bought adult family home into an LLC a change of ownership?",
     "afh transfer to llc after purchase new license",
     "Do I need a new license if half my AFH company's shares change hands?",
-    "If I change my entity representative, do I need a new AFH license?"
+    "If I change my entity representative, do I need a new AFH license?",
+    "How does DSHS treat a change in the controlling ownership of an AFH company?",
+    "AFH LLC ownership change DSHS"
    ],
    "a": "Yes, but changing later is another change of ownership. Forming an LLC or corporation to take over a licensed home, a merger, or a transfer of 50 percent or more of an entity's shares counts as a change of ownership, which means a new license application. Replacing the entity representative does not (WAC 388-76-10105). That is why it helps to decide the structure before you apply.",
    "path": "/afh-club/ownership-structure",
@@ -965,6 +1661,40 @@
    "pathTitle": "Should You Buy an Adult Family Home as an Individual or Through an LLC?"
   },
   {
+   "id": "AQ-005",
+   "topic": "Individual or LLC",
+   "q": "Can I own the house while someone else runs the adult family home in it?",
+   "alts": [
+    "Can an investor own the building while someone else operates the AFH?",
+    "lease my house to an adult family home operator",
+    "Can the property owner and the AFH provider be different people?",
+    "Can I buy a house and rent it to a licensed AFH operator?"
+   ],
+   "a": "Yes. The building and the operation can be held separately: another licensed provider can lease the house and run a home there under its own license, because DSHS licenses the provider that operates the home. If the property owner takes an active interest in running the home, the license application must name the property owner (WAC 388-76-10095). The lease needs to allow adult family home use for the length of the operator's plans.",
+   "path": "/afh-club/ownership-structure",
+   "pathTitle": "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
+   "also": [
+    "/afh-club/selling-your-business-at-retirement"
+   ]
+  },
+  {
+   "id": "AQ-096",
+   "topic": "Individual or LLC",
+   "q": "Can a business partner put up the money while I run the adult family home?",
+   "alts": [
+    "Can a business partner contribute the down payment while I operate the AFH?",
+    "AFH partner investor and operator",
+    "Can I team up with an investor to buy an adult family home?",
+    "partner funds the AFH, I run it"
+   ],
+   "a": "Possibly; the ownership structure decides how. An LLC can suit buyers bringing in partners. If an entity holds the license, it names an entity representative who meets the experience, training and background-check requirements, and one person can represent only one entity. Partners, officers, directors and majority owners need background checks before licensure. With an SBA 7(a) loan, anyone owning 20% or more gives a personal guarantee.",
+   "path": "/afh-club/ownership-structure",
+   "pathTitle": "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
+   "also": [
+    "/afh-club/how-to-finance-an-afh"
+   ]
+  },
+  {
    "id": "BU-028",
    "topic": "AFH Property Score",
    "q": "What is the AFH Property Score and how does it work?",
@@ -972,11 +1702,30 @@
     "Is there a quick way to tell if a house could be an adult family home?",
     "afh property score calculator",
     "How do I screen a listing for adult family home use before a showing?",
-    "What does the AFH Property Score measure?"
+    "What does the AFH Property Score measure?",
+    "How can I tell whether a house could qualify as an adult family home?",
+    "could this house work as an AFH",
+    "How can I compare two houses using the AFH Property Score before scheduling tours?"
    ],
    "a": "It is a free screening tool, three to five minutes long, that estimates how well a house could work physically as a Washington adult family home. Every question is something you can see in a listing and its photos. It scores the real estate only, on a 100-point scale weighted by how expensive each shortfall is to fix, and separately lists feasibility items to investigate. It is not an inspection, an appraisal or a licensing decision.",
    "path": "/afh-club/afh-property-score",
    "pathTitle": "AFH Property Score"
+  },
+  {
+   "id": "AQ-093",
+   "topic": "AFH Property Score",
+   "q": "My house scored well on the AFH Property Score. Can it still fail licensing?",
+   "alts": [
+    "Can a property score highly as an AFH candidate but still fail licensing review?",
+    "high AFH property score but not licensable",
+    "Does a good AFH Property Score guarantee the house will pass inspection?"
+   ],
+   "a": "Yes. A high score only means the property shows characteristics favorable for further evaluation. The house must still pass the local building official's AFH inspection and meet DSHS licensing requirements, and the provider must qualify separately. Even a passed building checklist does not guarantee a specific licensed capacity. Review the score's items to investigate, such as septic capacity, unpermitted additions and fire access, alongside the number.",
+   "path": "/afh-club/afh-property-score",
+   "pathTitle": "AFH Property Score",
+   "also": [
+    "/afh-club/wabo-technical-guide"
+   ]
   },
   {
    "id": "BU-029",
@@ -985,7 +1734,9 @@
    "alts": [
     "Can I buy the adult family home real estate without the business?",
     "afh business only purchase",
-    "Does buying the house get me the AFH business too?"
+    "Does buying the house get me the AFH business too?",
+    "Can I buy an AFH business without purchasing the real estate?",
+    "buy AFH business only, no real estate"
    ],
    "a": "Yes, deals vary. With an operating AFH, what conveys can be the real estate alone, the operating business alone, or both together, and the AFH Club listing label says which. You are buying a house, a business or both, but never the license; you apply for your own through change of ownership. Get written confirmation of what is sold together or separately, and at what prices.",
    "path": "/afh-club/afh-property-classifications",
@@ -1002,11 +1753,50 @@
     "Is this adult family home worth what they're asking?",
     "afh asking price good buy",
     "Can a beautiful operating AFH be a bad purchase?",
-    "Should I pass on an adult family home that needs work?"
+    "Should I pass on an adult family home that needs work?",
+    "How do I determine whether an AFH asking price is reasonable?",
+    "is the AFH asking price fair"
    ],
    "a": "Ask a different question: not whether it is a good adult family home, but whether it is the right home for you, at this price, under these assumptions. Work through the house, your license, the residents, the revenue, the expenses, the inspection record and the financing first; only then does the asking price mean something. A house that needs work can be a good buy at the right price, and a beautiful operating home can be a poor one if the price counts income you won't keep.",
    "path": "/afh-club/before-you-buy-an-adult-family-home",
    "pathTitle": "Before You Buy an Adult Family Home: What to Verify"
+  },
+  {
+   "id": "AQ-007",
+   "topic": "House vs business",
+   "q": "What's the difference between buying an adult family home's business and buying the house?",
+   "alts": [
+    "What is the difference between buying an AFH business and buying the real estate it occupies?",
+    "afh business vs real estate purchase",
+    "What am I paying for when I buy an operating adult family home?",
+    "Am I buying a house or a business when I buy an adult family home?",
+    "What do I actually get when I buy an adult family home business?"
+   ],
+   "a": "The real estate is the house; the business is the operation inside it: occupancy, staff, referral relationships and the home's inspection record. A buyer paying for the business can pay more than the house would sell for as a residence, but neither part includes the license or specialty contracts, which do not transfer. The split also shapes financing: residential and SBA 504 loans cover the real estate only, while an SBA 7(a) loan can include the business.",
+   "path": "/afh-club/buying-selling",
+   "pathTitle": "Buying or Selling an Adult Family Home",
+   "also": [
+    "/afh-club/how-to-finance-an-afh"
+   ]
+  },
+  {
+   "id": "AQ-068",
+   "topic": "House vs business",
+   "q": "Can I lease a house for my adult family home instead of buying one?",
+   "alts": [
+    "Can an AFH operator lease a house instead of buying it?",
+    "Does the AFH provider have to own the house?",
+    "rent a house to run an adult family home",
+    "leasing a home for an afh washington",
+    "Can a licensed provider operate an AFH from a home owned by an unrelated landlord?",
+    "can an AFH operator lease the house"
+   ],
+   "a": "Yes. DSHS licenses the provider that operates the home, and another provider can lease a house and run a home there under its own license. The lease needs to allow adult family home use for the length of your plans. If the building is leased to the licensee and the property owner takes an active interest in running the home, the license application must name the property owner (WAC 388-76-10095).",
+   "path": "/afh-club/ownership-structure",
+   "pathTitle": "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
+   "also": [
+    "/afh-club/selling-your-business-at-retirement"
+   ]
   }
  ],
  "selling": [
@@ -1052,13 +1842,32 @@
     "What happens to my AFH residents when the home is sold?",
     "afh sale residents stay or move",
     "Do my Medicaid residents need new paperwork after I sell?",
-    "Does a resident's Exception to Rule stay with them after an AFH sale?"
+    "Does a resident's Exception to Rule stay with them after an AFH sale?",
+    "What happens to current residents when an adult family home is sold?"
    ],
    "a": "Not necessarily. Residents decide whether to stay or move, and the 60-day notice must tell them that right. Medicaid residents who stay need no new assessment, but they need new authorizations under the new owner's ProviderOne number. An Exception to Rule follows the resident. The notice must also flag any policy change that could affect them, such as whether the home will serve Medicaid residents.",
    "path": "/afh-club/buying-selling",
    "pathTitle": "Buying or Selling an Adult Family Home",
    "also": [
     "/afh-club/selling-your-business-at-retirement"
+   ]
+  },
+  {
+   "id": "AQ-083",
+   "topic": "Resident notice",
+   "q": "How do I sell my adult family home without disrupting the residents?",
+   "alts": [
+    "How can I prepare an AFH for a future sale without disrupting residents?",
+    "How do I protect my residents when I sell my AFH?",
+    "selling an afh with residents in place",
+    "keep residents during an afh sale"
+   ],
+   "a": "Keep the home licensed and running; you keep operating until the change of ownership is approved. Give DSHS and each resident 60 days' written notice, and residents decide whether to stay or move. To avoid disrupting residents, you can ask DSHS in writing for priority processing. Medicaid residents who stay need no new assessment, only new authorizations under the new owner's ProviderOne number, and an Exception to Rule follows the resident.",
+   "path": "/afh-club/buying-selling",
+   "pathTitle": "Buying or Selling an Adult Family Home",
+   "also": [
+    "/afh-club/selling-your-business-at-retirement",
+    "/afh-club/washington-adult-family-home-guide/selling"
    ]
   },
   {
@@ -1069,7 +1878,9 @@
     "Why do AFH sales take longer than a regular house sale?",
     "how long to sell an adult family home washington",
     "How early should I start selling my AFH if I want to retire?",
-    "Does the buyer's DSHS license slow down my AFH sale?"
+    "Does the buyer's DSHS license slow down my AFH sale?",
+    "How long does it typically take to sell an operating adult family home?",
+    "how long to sell an AFH"
    ],
    "a": "Longer than a typical home sale, mainly because of the buyer's DSHS license. DSHS will not estimate how long a change-of-ownership license takes. Its posted queue showed applications received in May 2026 being processed in late September 2026, processing can take up to 60 days once an application is complete, and most applicants do not pass the first inspection. Add the 60-day resident notice, and build that into your retirement planning.",
    "path": "/afh-club/selling-your-business-at-retirement",
@@ -1109,6 +1920,40 @@
    ]
   },
   {
+   "id": "AQ-004",
+   "topic": "Keeping the license",
+   "q": "What happens to my adult family home license when I retire?",
+   "alts": [
+    "What happens to the license when an AFH owner retires?",
+    "Can I pass my AFH license to the buyer when I retire?",
+    "afh license after retirement",
+    "Does my license end when I stop running my adult family home?"
+   ],
+   "a": "It does not pass to anyone. Washington AFH licenses are not transferable, so a buyer of your business applies for its own license through a change of ownership, and your license closes when you relinquish or surrender it. To keep ownership instead, a resident manager can run the home day to day while you stay the licensee and responsible. Keeping the license continuous until a buyer takes over preserves the building rules the home was first licensed under.",
+   "path": "/afh-club/selling-your-business-at-retirement",
+   "pathTitle": "Selling Your AFH Business at Retirement",
+   "also": [
+    "/afh-club/buying-selling"
+   ]
+  },
+  {
+   "id": "AQ-034",
+   "topic": "Keeping the license",
+   "q": "I lease my house to an AFH operator. What happens if they lose or close their license?",
+   "alts": [
+    "What happens to a landlord if the AFH operator loses its license?",
+    "afh landlord tenant license revoked",
+    "Does the AFH license stay with my house if my tenant stops operating?",
+    "Can a new operator use my house if the old AFH closes?"
+   ],
+   "a": "The license belongs to the operator, not your house, so it does not stay with the property. Another provider can lease the house and run a home there under its own license. Timing matters: a home taken over through a change of ownership keeps the building rules it was first licensed under, but if the home closes and a new home later opens at the same address, it must meet current rules, such as 27-inch interior doors.",
+   "path": "/afh-club/selling-your-business-at-retirement",
+   "pathTitle": "Selling Your AFH Business at Retirement",
+   "also": [
+    "/afh-club/afh-property-classifications"
+   ]
+  },
+  {
    "id": "SE-007",
    "topic": "Valuation",
    "q": "Will a regular appraisal tell me what my adult family home is worth?",
@@ -1116,7 +1961,13 @@
     "Does a residential appraisal include my AFH business?",
     "afh appraisal real estate only business value",
     "Why might my operating AFH sell for more than the same house as a residence?",
-    "Can a home appraisal capture my AFH's goodwill?"
+    "Can a home appraisal capture my AFH's goodwill?",
+    "Should the real estate and business be valued separately in an AFH sale?",
+    "value AFH business and real estate separately",
+    "How do I separate the value of an AFH property from the value of its operating business?",
+    "How do I separate the value of an AFH building from the value of its operating business?",
+    "How is an AFH property appraised compared with an ordinary house?",
+    "AFH appraisal vs regular house"
    ],
    "a": "Only part of it. A residential appraisal values the real estate only; it does not value the operating business. A licensed, operating AFH can sell for more than the same house as a residence when the buyer is also paying for the business: occupancy, staff, referral relationships and the home's inspection record. Getting both the real estate and the operating business valued gives you a realistic picture of what you are selling.",
    "path": "/afh-club/selling-your-business-at-retirement",
@@ -1133,13 +1984,32 @@
     "How is an adult family home business valued separately from the house?",
     "afh goodwill value factors",
     "Does my license add value when I sell my AFH?",
-    "What do buyers actually pay for in an AFH business?"
+    "What do buyers actually pay for in an AFH business?",
+    "How do I estimate the value of an adult family home business?",
+    "afh business value estimate"
    ],
    "a": "Value comes from things beyond the property: occupancy history, revenue and profitability, staff retention, the mix of Medicaid and private-pay residents, and the reputation you have built with families and referral sources. The license and contracts are not part of what transfers, since the buyer must obtain their own, so they are not something the buyer receives.",
    "path": "/afh-club/selling-your-business-at-retirement",
    "pathTitle": "Selling Your AFH Business at Retirement",
    "also": [
     "/afh-club/buying-selling"
+   ]
+  },
+  {
+   "id": "AQ-067",
+   "topic": "Valuation",
+   "q": "Does an ECS or SBS contract make my adult family home worth more when I sell?",
+   "alts": [
+    "Do specialty contracts increase the resale value of an AFH business?",
+    "Will a buyer pay more for my AFH's specialty contract?",
+    "afh specialty contract value in a sale",
+    "Do ECS and SBS contracts add to an AFH sale price?"
+   ],
+   "a": "Not automatically, because they don't transfer. ECS and SBS contracts belong to the owner: a buyer must qualify for and hold its own fully executed contract, approved by DSHS program staff, before providing or being paid for those services. Revenue from them cannot be assumed to survive closing, so treat it as at risk in a sale. When selling, know which buyers can keep your contracts and market to them.",
+   "path": "/afh-club/afh-payment-field-guide",
+   "pathTitle": "Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs Get Paid",
+   "also": [
+    "/afh-club/how-to-finance-an-afh"
    ]
   },
   {
@@ -1202,6 +2072,40 @@
    "pathTitle": "Buying or Selling an Adult Family Home"
   },
   {
+   "id": "AQ-066",
+   "topic": "What buyers need",
+   "q": "What financial records should I prepare before listing my AFH for sale?",
+   "alts": [
+    "How do I get my AFH's books ready for a sale?",
+    "afh financial records before selling",
+    "Which financial records will an AFH buyer want to see?"
+   ],
+   "a": "Start with what a buyer's lender will underwrite: two years of tax returns and the resident roster with payer types. Careful buyers also ask for profit and loss statements and bank deposits, each Medicaid resident's current classification and last assessment date on a de-identified schedule matched to deposits, and the last three years of inspections, complaints and enforcement. State the price split between house and business in the listing.",
+   "path": "/afh-club/how-to-finance-an-afh",
+   "pathTitle": "How to Finance an Adult Family Home in Washington",
+   "also": [
+    "/afh-club/before-you-buy-an-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-075",
+   "topic": "What buyers need",
+   "q": "What will a buyer question in my adult family home's income numbers?",
+   "alts": [
+    "What financial adjustments might a buyer challenge in an AFH seller's earnings statement?",
+    "Why would a buyer say my AFH earns less than I do?",
+    "afh seller earnings adjustments",
+    "What income won't a buyer count when buying my AFH?"
+   ],
+   "a": "Anything that won't survive the sale or hides a real cost. Unpaid owner hours: a buyer who won't work them pays someone who will, and a lender subtracts those wages. ECS and SBS income, since those contracts don't transfer. Meaningful Day, which has not been available since July 1, 2025. Annualized CBHS deposits, which overstate what a buyer can count on. And income that depends on one or two high-paying residents, which is fragile.",
+   "path": "/afh-club/before-you-buy-an-adult-family-home",
+   "pathTitle": "Before You Buy an Adult Family Home: What to Verify",
+   "also": [
+    "/afh-club/afh-payment-field-guide",
+    "/afh-club/cbhs-tiers"
+   ]
+  },
+  {
    "id": "SE-013",
    "topic": "Exit options",
    "q": "If I lease my house to the person buying my AFH business, what should I watch for?",
@@ -1209,7 +2113,9 @@
     "Can I collect rent from the buyer of my adult family home business?",
     "afh sell business lease building to buyer",
     "What does the lease need to allow if my buyer runs an AFH in my house?",
-    "Does the buyer of my AFH business still need a new license if they lease my house?"
+    "Does the buyer of my AFH business still need a new license if they lease my house?",
+    "How do I sell the AFH business while retaining ownership of the house?",
+    "sell afh business keep the house"
    ],
    "a": "You collect rent instead of a lump sum, and the lease needs to allow adult family home use for the length of the buyer's plans. The buyer of the business still applies for its own license through a change of ownership, and you give DSHS and every resident 60 days' written notice first.",
    "path": "/afh-club/selling-your-business-at-retirement",
@@ -1237,7 +2143,9 @@
     "How do I make my adult family home easier to sell before I retire?",
     "afh gradual transition retirement",
     "Does my AFH need to run without me to sell well?",
-    "What's a staged exit for an adult family home owner?"
+    "What's a staged exit for an adult family home owner?",
+    "How can I prepare an adult family home business for retirement or succession?",
+    "How should I plan a gradual retirement from daily AFH operations?"
    ],
    "a": "Yes. Some owners hand over in stages: they reduce their own hours first, build a staff that can run the home without them, then sell. A home that runs without its owner is easier for a buyer and a lender to value. Another option is a resident manager running the home day to day, though you stay the licensee and responsible, and the manager must meet the same experience and training rules, including 1,000 hours of direct care.",
    "path": "/afh-club/selling-your-business-at-retirement",
@@ -1251,13 +2159,46 @@
     "Do I need a new license if I add my daughter as a co-owner of my adult family home?",
     "afh new partner change of ownership",
     "Can my son join my AFH as an owner without a new license?",
-    "Does taking on a business partner trigger the 60-day resident notice?"
+    "Does taking on a business partner trigger the 60-day resident notice?",
+    "Can an AFH owner create a succession plan that involves an adult child?",
+    "pass my AFH to my son or daughter"
    ],
    "a": "It can be. A new owner of the business, including a new partner or an LLC you form, applies for its own license through a change of ownership, and you give DSHS and every resident 60 days' written notice first (WAC 388-76-10106). For a home licensed to an entity, the rule is specific: forming an LLC or corporation to take over the home, a merger, or a transfer of 50 percent or more of the entity's shares is a change of ownership; replacing the entity representative is not (WAC 388-76-10105).",
    "path": "/afh-club/ownership-structure",
    "pathTitle": "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
    "also": [
     "/afh-club/washington-adult-family-home-guide/selling"
+   ]
+  },
+  {
+   "id": "AQ-051",
+   "topic": "Exit options",
+   "q": "How can I compare the sale of my AFH real estate and business together versus separately?",
+   "alts": [
+    "Should I sell my adult family home business and building together or separately?",
+    "sell afh business and real estate separately",
+    "Is it better to sell the AFH house and business in one sale?"
+   ],
+   "a": "Many retiring owners sell both together, because a buyer can step into an operating home with residents and staff rather than assembling those pieces separately. The license is the exception: it never transfers, so the buyer still needs a new license of their own. A single transaction is usually simpler. There are situations, like keeping the real estate as an investment while transferring just the operations, where separating them makes sense. It depends on your goals for retirement.",
+   "path": "/afh-club/selling-your-business-at-retirement",
+   "pathTitle": "Selling Your AFH Business at Retirement"
+  },
+  {
+   "id": "AQ-058",
+   "topic": "Exit options",
+   "q": "If my business partner leaves our adult family home, do we need a new license?",
+   "alts": [
+    "What should happen if my AFH business partner wants to exit but I want to continue?",
+    "afh partner buyout change of ownership",
+    "Partner selling shares in our AFH LLC, does DSHS care?",
+    "co-owner leaving an adult family home license"
+   ],
+   "a": "It depends on what changes hands. For a home licensed to an entity, a transfer of 50 percent or more of its shares counts as a change of ownership, which means a new license application, and the current owner gives DSHS and every resident 60 days' written notice first. Replacing the entity representative is not a change of ownership, but the new representative must meet every qualification an individual provider must meet.",
+   "path": "/afh-club/ownership-structure",
+   "pathTitle": "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
+   "also": [
+    "/afh-club/glossary",
+    "/afh-club/selling-your-business-at-retirement"
    ]
   },
   {
@@ -1269,7 +2210,8 @@
     "afh provider death license estate",
     "My mom ran an adult family home and passed away. What happens to the home?",
     "what if the AFH owner dies",
-    "afh provider passed away what happens"
+    "afh provider passed away what happens",
+    "What happens to an AFH license when the owner dies unexpectedly?"
    ],
    "a": "The license belongs to the provider and does not pass to the family or the estate. DSHS handles each home case by case, depending on how well it planned ahead and how the business is set up. A resident who has to move gets 30 days' written notice, unless staying would endanger their health or safety. For a family selling, a home that stays licensed until a buyer takes over can be worth more than one that has closed.",
    "path": "/afh-club/selling-your-business-at-retirement",
@@ -1330,7 +2272,11 @@
     "How many caregivers do I need on shift in my AFH?",
     "Can I staff my adult family home with just one person?",
     "AFH staffing ratio washington",
-    "Does having one caregiver in the home meet DSHS staffing rules?"
+    "Does having one caregiver in the home meet DSHS staffing rules?",
+    "How many caregivers does an adult family home need on each shift?",
+    "AFH caregivers per shift",
+    "How should an AFH plan staffing for residents with higher care needs?",
+    "How can I design a caregiver schedule when two residents require assistance at the same time?"
    ],
    "a": "Not always. Washington requires at least one qualified caregiver in the home whenever residents are there, but also enough staff to meet each resident's needs, and minimum presence does not mean adequate staffing. One caregiver may be unable to safely help several residents who need transfers, toileting, meals, medications or evacuation help at the same time. Base the schedule on actual resident needs, the home's layout, caregiver skills, appointments, nighttime needs and foreseeable emergencies.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
@@ -1372,11 +2318,66 @@
     "How do I cover a no-show caregiver in my AFH?",
     "My AFH caregiver called in sick, now what?",
     "adult family home backup staffing plan",
-    "How should an AFH handle last-minute staff call-outs?"
+    "How should an AFH handle last-minute staff call-outs?",
+    "How do I create a backup staffing plan for an AFH during severe weather?",
+    "How can an AFH operator plan for caregivers calling out at the last minute?",
+    "AFH last-minute caregiver call-outs",
+    "What happens if a scheduled caregiver calls out at the last minute?",
+    "caregiver no-show AFH"
    ],
    "a": "Plan for it before it happens. A dependable staffing system includes a reliable call-out and backup-coverage process, clear on-call authority, written responsibilities for every shift, resident-specific orientation before anyone works alone, and tracking of training expiration dates. The guide warns that a home without reliable backup coverage is one unexpected event away from a serious problem, and suggests testing the call-out process when you take over a home.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
    "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-011",
+   "topic": "Staffing & caregivers",
+   "q": "How should I keep records of my caregivers' training?",
+   "alts": [
+    "How should an AFH document staff training and competency?",
+    "How do I track caregiver certifications and training dates?"
+   ],
+   "a": "In each staff member's personnel file. Washington requires the file to hold the required records, such as background checks, training and certification, and personnel records were the sixth most-cited AFH rule in DSHS's October to December 2024 list, with 94 citations. The operator guide adds tracking training expiration dates, resident-specific orientation before anyone works alone, and watching caregivers perform resident-specific tasks when you take over a home.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-033",
+   "topic": "Staffing & caregivers",
+   "q": "What has to be in an AFH employee's personnel file?",
+   "alts": [
+    "What employee records should an AFH maintain?",
+    "afh personnel file requirements",
+    "What staff records does DSHS check in an adult family home?",
+    "Which caregiver documents do I need to keep on file?"
+   ],
+   "a": "Each staff member's file must hold the required records, such as background checks, training and certification (WAC 388-76-10198). Personnel records and background checks were both among the ten rules DSHS cited most often in adult family homes in October to December 2024. The Washington name and date-of-birth check is valid for two years and must be kept current. Track training expiration dates, and audit every personnel file when you take over a home.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-082",
+   "topic": "Staffing & caregivers",
+   "q": "How do I check my caregivers' files before a DSHS inspection?",
+   "alts": [
+    "How can I audit caregiver training files before a routine inspection?",
+    "What has to be in an AFH caregiver's personnel file?",
+    "afh personnel file audit",
+    "caregiver training records for an adult family home inspection"
+   ],
+   "a": "Go file by file. Each staff member's file must hold the required records, such as background checks, training and certification; personnel records were among DSHS's ten most-cited rules in October to December 2024. Confirm each Washington background check is current, Home Care Aide certification is on track (365 days from hire, or 425 with a provisional certificate, for applicants through 2027), 12 continuing education hours are done by each birthday, and specialty training matches the residents served.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance",
+   "also": [
+    "/afh-club/washington-afh-rule-changes",
+    "/afh-club/training-education"
+   ]
   },
   {
    "id": "RU-005",
@@ -1441,6 +2442,24 @@
    "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
   },
   {
+   "id": "AQ-053",
+   "topic": "Medications & records",
+   "q": "What do I need to check before letting a caregiver help with medications?",
+   "alts": [
+    "What should an AFH owner review before assigning medication-related duties to staff?",
+    "afh caregiver medication tasks nurse delegation",
+    "Can any caregiver give medications in an adult family home?",
+    "medication duties and staff training adult family home"
+   ],
+   "a": "Check that the task matches the caregiver's training and legal authority, and treat medication management as a high-risk process. Delegated nursing tasks need nurse delegation: a registered nurse's authorization for a trained caregiver to perform a specific task for a specific resident. The caregiver must be a certified Home Care Aide or Nursing Assistant Certified with core delegation training, plus diabetes training before giving insulin. Keep nurse-delegation documentation and each resident's daily medication log current.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home",
+   "also": [
+    "/afh-club/glossary",
+    "/afh-club/training-education"
+   ]
+  },
+  {
    "id": "RU-009",
    "topic": "Admissions & resident rights",
    "q": "Can my adult family home set house rules like fixed visiting hours or set meal times?",
@@ -1476,7 +2495,9 @@
     "The hospital wants to send a resident today, should I say yes?",
     "How do I decide whether to admit a new resident to my AFH?",
     "AFH admission decision checklist",
-    "Can I turn down a referral if my home can't meet their needs?"
+    "Can I turn down a referral if my home can't meet their needs?",
+    "What questions should I ask before accepting a resident returning from the hospital?",
+    "AFH admitting resident from hospital"
    ],
    "a": "Only after a careful admission decision. First decide whether the home can meet the person's assessed needs with its current staffing, training, layout, equipment and resident mix. Review the current assessment, ask what has changed, speak with the resident, representative, case manager and discharge planner, and put services, rates, responsibilities and limitations in writing. Do not let a hospital's preferred discharge date, a referral source's urgency or an empty bed replace that decision.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
@@ -1494,6 +2515,23 @@
    "a": "No. Train staff to protect the resident, get emergency help when needed, preserve relevant information, and make required reports without waiting for permission from someone who is unavailable. Reporting a concern is not the same as proving exactly what happened, and delayed reporting can increase the risk to residents and add regulatory consequences. For an immediate emergency, call 911; concerns involving vulnerable adults can also be reported to DSHS.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
    "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-080",
+   "topic": "Admissions & resident rights",
+   "q": "Can my adult family home take a resident who wanders at night?",
+   "alts": [
+    "How do I evaluate whether an AFH can safely accept a resident who wanders at night?",
+    "Should I admit a resident with dementia who wanders?",
+    "afh admission elopement risk",
+    "night wandering resident adult family home"
+   ],
+   "a": "Only if the home can meet that person's assessed needs with its current staffing, training, layout, equipment and resident mix. Weigh elopement risk, nighttime behaviors and supervision needs, and compatibility with current residents. If the needs are dementia-related, the provider, entity representative and resident manager need dementia specialty training before admitting, and caregivers need it too. Your emergency plan should cover a missing or wandering resident. Put services, rates and limitations in writing first.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home",
+   "also": [
+    "/afh-club/training-education"
+   ]
   },
   {
    "id": "RU-013",
@@ -1517,7 +2555,12 @@
     "AFH succession plan requirement",
     "What happens to my adult family home if I become incapacitated?",
     "Do I need a backup provider plan for my AFH?",
-    "Who takes over my adult family home if I can't?"
+    "Who takes over my adult family home if I can't?",
+    "What should be included in an AFH business continuity plan?",
+    "afh business continuity plan",
+    "What should be included in an AFH emergency continuity plan if the owner becomes incapacitated?",
+    "What succession plan should an AFH owner create in case they can no longer manage the business?",
+    "AFH succession plan contents"
    ],
    "a": "Yes. Washington requires every adult family home to keep a written plan for how the home will keep meeting the licensing rules and caring for residents if the provider or entity representative cannot fulfill their duties, and to make it available to DSHS on request. A good plan names who has temporary authority, how staffing and payroll continue, how residents and DSHS are notified, and where licenses and records are kept. Review it whenever people, ownership, banking or insurance change.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
@@ -1530,7 +2573,8 @@
    "alts": [
     "AFH gross revenue vs owner income",
     "Six residents at a good rate, why isn't that my income?",
-    "What expenses do people forget when projecting AFH income?"
+    "What expenses do people forget when projecting AFH income?",
+    "What should my first-year AFH business plan include beyond projected occupancy?"
    ],
    "a": "No. Gross revenue is not owner income. Six occupied beds at an attractive rate leave out caregiver wages, payroll taxes, overtime and relief coverage, food and supplies, insurance, licensing and training, repairs and equipment, vacancies, debt service or rent, and pay for your own caregiving and management time. Prepare conservative projections showing what happens if the home opens slowly, loses a resident, needs more nighttime staffing or faces a major repair.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
@@ -1544,7 +2588,9 @@
     "How do I plan for vacancies in my AFH?",
     "Does an adult family home need an operating reserve?",
     "AFH cash reserve scenarios",
-    "What financial surprises hit adult family home owners?"
+    "What financial surprises hit adult family home owners?",
+    "How do I plan cash flow when Medicaid payments are delayed?",
+    "AFH cash flow delayed Medicaid payment"
    ],
    "a": "Keep an operating reserve and model several scenarios rather than spending as though every occupied bed is permanent. The guide suggests testing one vacant bed for three months, a caregiver wage increase, additional awake-night coverage, a major appliance, roof, plumbing or accessibility repair, a delayed reimbursement, and a resident whose needs increase faster than the payment rate. Track revenue by resident and payer source monthly, and keep separate business accounts and accurate books.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
@@ -1561,6 +2607,92 @@
     "How do I get organized after taking over an AFH?"
    ],
    "a": "Focus on reliable systems rather than rapid expansion. Review every assessment and negotiated care plan and confirm actual care matches them. Audit personnel files, training, credentials and background checks, and test the call-out process. Reconcile medication orders, supplies and logs. Walk every exit, test alarms and review drill records. Set up separate banking and bookkeeping, review insurance, calculate the actual cost of each occupied bed, and build a cash-flow forecast and reserve.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-006",
+   "topic": "Business finances",
+   "q": "What happens to my adult family home's finances if two residents move out?",
+   "alts": [
+    "What happens financially if two AFH residents move out at once?",
+    "losing two residents adult family home income",
+    "How much does an empty bed hurt an AFH's bottom line?",
+    "If residents leave, do my costs go down too?"
+   ],
+   "a": "Income drops much faster than costs. Each resident adds a full year of rate while adding little to costs, because the house, license, insurance and base staff are already paid for, so losing residents removes revenue while most costs stay. Payments tied to a resident, such as a CBHS tier, leave with them. Keep an operating reserve and test scenarios such as one vacant bed for three months; occupancy also decides whether a lender approves a loan.",
+   "path": "/afh-club/afh-financing-calculator",
+   "pathTitle": "AFH Occupancy & Financing Calculator",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home",
+    "/afh-club/cbhs-tiers"
+   ]
+  },
+  {
+   "id": "AQ-020",
+   "topic": "Business finances",
+   "q": "How do I project income for an adult family home when residents are paid different ways?",
+   "alts": [
+    "How can I forecast AFH revenue when residents have different reimbursement arrangements?",
+    "afh revenue forecast medicaid private pay",
+    "How do I estimate AFH income with Medicaid, CBHS and private-pay residents?",
+    "What income can I count on from each resident?",
+    "How do I forecast revenue when several residents have different Medicaid payment arrangements?",
+    "projecting income for a mix of medicaid and private pay residents"
+   ],
+   "a": "Resident by resident, by payment system. The Medicaid base rate follows each resident's CARE classification and county and is reassessed as needs change; a CBHS tier is paid on top for qualifying residents and reviewed at least every 12 months; ECS and SBS are owner-held contracts; private-pay levels are set by the home. Count only beds with a Medicaid resident today, since a Medicaid contract alone is not income, and leave Meaningful Day out.",
+   "path": "/afh-club/afh-payment-field-guide",
+   "pathTitle": "Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs Get Paid",
+   "also": [
+    "/afh-club/afh-valuation-estimator"
+   ]
+  },
+  {
+   "id": "AQ-060",
+   "topic": "Business finances",
+   "q": "Can you make money running an adult family home?",
+   "alts": [
+    "Is owning an adult family home a profitable business?",
+    "Can an AFH with strong revenue still have weak cash flow?",
+    "afh profit after expenses"
+   ],
+   "a": "It depends on what is left after costs, not on revenue. Gross revenue is not owner income: full beds still have to cover caregiver wages, payroll taxes, overtime, food and supplies, insurance, licensing, repairs, vacancies, debt service or rent, and pay for your own caregiving and management time. Caregiver wages alone often take a large share of what residents pay, so strong revenue can still leave little. Prepare conservative projections before committing.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home",
+   "also": [
+    "/afh-club/dscr-loans-adult-family-homes"
+   ]
+  },
+  {
+   "id": "AQ-065",
+   "topic": "Business finances",
+   "q": "What are the main costs of running an adult family home?",
+   "alts": [
+    "What are common operating expenses for an adult family home?",
+    "afh operating expenses list",
+    "What expenses come out of an adult family home's revenue?",
+    "What does an AFH pay for every month?",
+    "How do I build a realistic monthly AFH operating budget?",
+    "AFH operating budget what to include"
+   ],
+   "a": "They include caregiver wages, payroll taxes, overtime and relief coverage; food, continence and cleaning supplies, and utilities; insurance, licensing, training, professional fees and transportation; repairs and equipment; referral and marketing costs; and debt service or rent. Budget for vacancies, higher staffing as residents' needs change, and pay for your own caregiving and management time. The annual license fee has been $450 per licensed bed since July 2025.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home",
+   "also": [
+    "/afh-club/costs-fees"
+   ]
+  },
+  {
+   "id": "AQ-098",
+   "topic": "Business finances",
+   "q": "What numbers should I check every month to catch money trouble early at my AFH?",
+   "alts": [
+    "What metrics should I monitor monthly to spot an AFH cash-flow problem early?",
+    "AFH monthly financial metrics",
+    "How do I know if my adult family home is heading into a cash crunch?",
+    "What financial reports should an AFH owner review each month?"
+   ],
+   "a": "Know the home's financial position every month, not just at tax time. At a minimum: revenue by resident and payer source, accounts receivable and unpaid balances, payroll and overtime, food and household costs, insurance and professional fees, property costs and debt service, maintenance reserves, referral costs, occupancy and vacancy trends, the cost of added care, taxes and licensing, and owner pay versus profit. Keep separate business accounts and accurate books.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
    "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home"
   },
@@ -1648,7 +2780,11 @@
     "AFH inspection prep checklist",
     "What should I self-audit before DSHS shows up?",
     "How do I stay inspection-ready year round in my AFH?",
-    "Is there a mock inspection list for adult family homes?"
+    "Is there a mock inspection list for adult family homes?",
+    "What records should an AFH operator organize before a licensing inspection?",
+    "AFH inspection records checklist",
+    "What should I include in a quarterly internal quality-assurance review?",
+    "AFH self audit checklist"
    ],
    "a": "Build self-auditing into normal operations. Set a recurring review schedule for assessments and negotiated care plans, medication records, caregiver qualifications and training, background checks, emergency drills, incident and mandatory-reporting documentation, water temperature, food storage, bedrooms, exits and alarms, required notices, and insurance and business records. DSHS publishes tables of the rules most often cited in inspections, which show where homes most often go wrong.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
@@ -1670,6 +2806,37 @@
    "a": "Yes. Each home must keep its last three years of inspection reports available to anyone who asks (RCW 70.128.080). DSHS says its online Locator shows limits and enforcement issued within the previous three years. Because a change of ownership brings a new license, a previous owner's record may not follow the address.",
    "path": "/afh-club/regulations-compliance",
    "pathTitle": "Understanding DSHS Inspections & Compliance"
+  },
+  {
+   "id": "AQ-077",
+   "topic": "DSHS inspections & compliance",
+   "q": "What's the difference between a complaint investigation and a routine DSHS inspection?",
+   "alts": [
+    "What is the difference between a complaint investigation and a routine AFH inspection?",
+    "afh complaint inspection vs routine inspection",
+    "Why did DSHS come to my adult family home between inspections?"
+   ],
+   "a": "A routine inspection is DSHS's unannounced review of the whole home, at least every 18 months, or up to two years after three clean inspections in a row: care, documentation, staffing and safety, with inspectors reviewing records, interviewing staff and residents and observing daily operations. A complaint investigation is triggered when someone, whether a resident, family member or staff, files a concern with DSHS, and comes on top of routine visits. Complaints range from minor administrative issues to serious safety incidents.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance"
+  },
+  {
+   "id": "AQ-081",
+   "topic": "DSHS inspections & compliance",
+   "q": "What dates belong on an adult family home compliance calendar?",
+   "alts": [
+    "How can I create an AFH compliance calendar for recurring reviews and renewals?",
+    "What AFH renewals and deadlines do I need to track?",
+    "afh renewal deadlines checklist",
+    "recurring compliance tasks for an adult family home"
+   ],
+   "a": "Track the annual license fee, due each year in the month the home was first licensed; each Washington background check, valid two years; 12 hours of continuing education for providers, resident managers and certified caregivers, due by each person's birthday; current CPR and first aid cards; and partial evacuation drills at least every two months, with a full drill each year. Add recurring reviews of care plans, medication records, training, required notices, and insurance and business records.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance",
+   "also": [
+    "/afh-club/training-education",
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
   },
   {
    "id": "RU-025",
@@ -1707,13 +2874,86 @@
     "My AFH got cited, what goes in the plan of correction?",
     "What should I do after DSHS finds a problem at my adult family home?",
     "afh plan of correction tips",
-    "Can I keep operating if DSHS puts conditions on my license?"
+    "Can I keep operating if DSHS puts conditions on my license?",
+    "How can an AFH owner track corrective actions to prevent repeat deficiencies?"
    ],
    "a": "Treat it as a real fix, not a writing exercise. Protect the resident first, make any required reports, begin correcting, and document the response. A real correction addresses what happened, which residents may have been affected, what was corrected immediately, what system will prevent it happening again, and how you will monitor compliance. For lower-level or first-time violations, DSHS can set license conditions, and the home may continue operating while corrections are made.",
    "path": "/afh-club/dos-and-donts-operating-adult-family-home",
    "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home",
    "also": [
     "/afh-club/regulations-compliance"
+   ]
+  },
+  {
+   "id": "AQ-041",
+   "topic": "Enforcement",
+   "q": "What's the difference between a DSHS citation and an enforcement action at an AFH?",
+   "alts": [
+    "What is the difference between a DSHS inspection finding and an enforcement action?",
+    "afh deficiency vs enforcement",
+    "Is a citation the same as a fine for an adult family home?",
+    "Does a deficiency mean DSHS took action against the license?",
+    "What is the difference between a statement of deficiencies and an enforcement action?",
+    "Is a DSHS citation the same as an enforcement action?"
+   ],
+   "a": "A citation, or deficiency, means DSHS found a licensing rule was not met; it does not by itself mean a resident was harmed, and most citations require correction rather than severe penalties. Enforcement is DSHS's response when violations call for more, in proportion to their severity: license conditions, civil fines, a stop placement that suspends admissions, or suspension or revocation of the license.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance",
+   "also": [
+    "/afh-club/glossary",
+    "/afh-club/violation-history-lookup"
+   ]
+  },
+  {
+   "id": "AQ-042",
+   "topic": "Enforcement",
+   "q": "How do I show DSHS that my AFH actually fixed what it was cited for?",
+   "alts": [
+    "What records help demonstrate that corrective actions were actually completed?",
+    "afh attestation of correction",
+    "proof of correction after dshs citation adult family home",
+    "What do I send DSHS after a deficiency is cited?",
+    "How can an operator prepare documentation for a DSHS follow-up visit?"
+   ],
+   "a": "Within 10 calendar days, the home returns a signed attestation of correction stating that it has corrected or will correct each deficiency by a date DSHS approves. The home also keeps its own plan of correction and must show it to DSHS on request (WAC 388-76-10930, as amended September 20, 2026). A real correction records what happened, what was corrected immediately, what system will prevent a repeat, and how compliance will be monitored.",
+   "path": "/afh-club/violation-history-lookup",
+   "pathTitle": "How to Look Up Washington Adult Family Home Violations and Inspection Reports",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-061",
+   "topic": "Enforcement",
+   "q": "What happens if DSHS cites my adult family home for a violation?",
+   "alts": [
+    "What happens if DSHS finds violations at my adult family home?",
+    "What does DSHS do when an AFH fails an inspection?",
+    "afh citation consequences washington",
+    "Will one citation shut down my adult family home?"
+   ],
+   "a": "Usually a required correction, not a severe penalty. DSHS responds in proportion to severity, along a ladder: license conditions the home corrects within a set time while it keeps operating, then civil fines, then a stop placement on new admissions, and finally suspension or revocation for severe, repeated or uncorrected violations. After an inspection report, the home returns a signed attestation of correction within 10 calendar days.",
+   "path": "/afh-club/regulations-compliance",
+   "pathTitle": "Understanding DSHS Inspections & Compliance",
+   "also": [
+    "/afh-club/violation-history-lookup"
+   ]
+  },
+  {
+   "id": "AQ-092",
+   "topic": "Enforcement",
+   "q": "DSHS cited my adult family home after an inspection. What do I have to do now?",
+   "alts": [
+    "What should an AFH owner do immediately after receiving a statement of deficiencies?",
+    "AFH statement of deficiencies next steps",
+    "What is an attestation of correction and when is it due?",
+    "How long do I have to respond to a DSHS inspection report on my AFH?"
+   ],
+   "a": "Protect any affected resident first and make any required reports. Then return a signed attestation of correction within 10 calendar days, stating that you have corrected or will correct each deficiency by a date DSHS approves. Keep your own plan of correction, since DSHS can ask to see it. A real correction covers what happened, who was affected, what was fixed immediately, what system prevents a repeat, and how you will monitor it.",
+   "path": "/afh-club/violation-history-lookup",
+   "pathTitle": "How to Look Up Washington Adult Family Home Violations and Inspection Reports",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
    ]
   },
   {
@@ -1724,7 +2964,9 @@
     "Who assigns a resident's CARE classification?",
     "What does the CARE assessment look at?",
     "how is CARE classification determined adult family home",
-    "Can I choose the rate for a Medicaid resident in my adult family home?"
+    "Can I choose the rate for a Medicaid resident in my adult family home?",
+    "What determines a resident's Medicaid payment rate at an AFH?",
+    "what sets an AFH resident's Medicaid rate"
    ],
    "a": "A DSHS case manager completes a CARE assessment; the home does not set the price. CARE weighs cognitive performance, clinical complexity, mood and behavior, activities of daily living, and exceptional care criteria. It places the person in a group first, working from the highest group down, then assigns a sub-level from the ADL or behavior score. The result is one of seventeen classifications, which, together with the county, sets the daily rate.",
    "path": "/afh-club/care-classifications-a-through-e",
@@ -1770,6 +3012,70 @@
    "a": "Within a group, the ADL score generally sets the sub-level. In Group C, High is an ADL score of 25 to 28, Medium-High is 18 to 24, and Medium is 9 to 17. Group C means clinically complex without significant cognitive impairment. At the base rates effective July 1, 2026, C High pays $200.91 per day in King, Pierce and Snohomish counties and $181.93 in all other Washington counties.",
    "path": "/afh-club/care-classifications-a-through-e",
    "pathTitle": "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income"
+  },
+  {
+   "id": "AQ-031",
+   "topic": "Medicaid & CARE classifications",
+   "q": "What do the A, B, C, D and E classifications mean for an adult family home?",
+   "alts": [
+    "What do Washington AFH payment classifications A through E mean?",
+    "afh medicaid classification letters meaning",
+    "What does C High or D Med mean for my resident?"
+   ],
+   "a": "They are the five groups in DSHS's CARE assessment, split into 17 classifications from A Low to E High. Group E is exceptional care; D is clinical complexity with significant cognitive impairment; C is clinical complexity without it; B is qualifying mood and behavior needs; A is everyone else. They are not a ladder residents climb. The classification, together with the county, sets the daily Medicaid rate the home is paid for that resident.",
+   "path": "/afh-club/care-classifications-a-through-e",
+   "pathTitle": "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income"
+  },
+  {
+   "id": "AQ-035",
+   "topic": "Medicaid & CARE classifications",
+   "q": "Does an adult family home earn more in some Washington counties than others?",
+   "alts": [
+    "How can I compare potential AFH revenue in different Washington counties?",
+    "afh medicaid rate by county",
+    "Do King County adult family homes get paid more?",
+    "Which counties pay AFHs the highest Medicaid rates?"
+   ],
+   "a": "For Medicaid residents, yes. Homes in King, Pierce and Snohomish counties are paid more than homes in the rest of the state. At rates effective July 1, 2026, the base daily rate runs from $144.47 to $279.30 in those three counties and from $132.49 to $250.61 elsewhere, depending on each resident's classification. Private-pay rates are set by each home, and no agency publishes them.",
+   "path": "/afh-club/care-classifications-a-through-e",
+   "pathTitle": "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income",
+   "also": [
+    "/afh-club/washington-adult-family-home-guide/rules-and-key-figures"
+   ]
+  },
+  {
+   "id": "AQ-064",
+   "topic": "Medicaid & CARE classifications",
+   "q": "How does an adult family home get paid in Washington?",
+   "alts": [
+    "How do adult family homes get paid in Washington State?",
+    "Where does an AFH's income come from?",
+    "afh revenue sources medicaid private pay",
+    "Who pays an adult family home for residents' care?"
+   ],
+   "a": "Mostly through Medicaid. A DSHS case manager's CARE assessment places each Medicaid resident in one of 17 classifications, from A Low to E High, and the classification and rate region set the daily rate. Some residents also qualify for Community Behavioral Health Support, paid in six tiers, and some homes hold owner-level ECS or SBS contracts. Private-pay rates are set by each home. Billing Medicaid requires a signed Medicaid contract first.",
+   "path": "/afh-club/washington-adult-family-home-guide/rules-and-key-figures",
+   "pathTitle": "Washington Adult Family Homes: Rules & Key Figures",
+   "also": [
+    "/afh-club/getting-paid-providerone-billing"
+   ]
+  },
+  {
+   "id": "AQ-091",
+   "topic": "Medicaid & CARE classifications",
+   "q": "What should I do when a resident in my adult family home needs more care than before?",
+   "alts": [
+    "What should I do when a resident's assessed care needs increase?",
+    "resident needs more care AFH reassessment",
+    "My Medicaid resident's condition got worse. Can their classification and rate change?",
+    "How do I handle a significant change in a resident's condition at my AFH?"
+   ],
+   "a": "Treat it as both a care question and a payment question. Staff should know how to respond to significant changes in condition, which can be reportable, and staffing may need to increase, or the home may not be able to meet future needs. Medicaid residents are reassessed, including when their condition changes significantly, and the rate can go down as well as up. Talk with the resident's representative promptly rather than letting confusion grow.",
+   "path": "/afh-club/care-classifications-a-through-e",
+   "pathTitle": "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
   },
   {
    "id": "RU-032",
@@ -1851,7 +3157,8 @@
     "What is the ECS daily rate for an AFH?",
     "How much is the SBS add-on per day?",
     "Is ECS paid on top of the Medicaid base rate?",
-    "ecs sbs rates adult family home"
+    "ecs sbs rates adult family home",
+    "How do specialty contracts affect an AFH's revenue?"
    ],
    "a": "Expanded Community Services (ECS) is not an add-on: the home is paid the ECS daily rate ($256.87) or the resident's base rate, whichever is greater. Specialized Behavior Support (SBS) is an add-on of $178.00 a day on top of the base rate, for six to eight additional hours a day of individualized staffing. Both amounts come from the 2025-27 collective bargaining agreement. The home must qualify for and hold these contracts, and since July 1, 2025 a resident must first be found not eligible for CBHS before receiving SBS.",
    "path": "/afh-club/afh-payment-field-guide",
@@ -1879,11 +3186,64 @@
     "Who decides AFH private-pay Level 1 through 5?",
     "Is there a state schedule for private-pay care levels?",
     "how to price private pay adult family home",
-    "Do private-pay levels have to match other homes?"
+    "Do private-pay levels have to match other homes?",
+    "Can an adult family home charge private-pay residents different rates?"
    ],
    "a": "Yes. No agency sets private-pay care levels. Many homes price private-pay residents as a base monthly rate plus a care-level charge, often labeled Level 1 through 5, and each home defines its own levels and amounts in its admission agreement. Levels are reviewed whenever the home reassesses, and they are a business decision the next owner can change.",
    "path": "/afh-club/afh-payment-field-guide",
    "pathTitle": "Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs Get Paid"
+  },
+  {
+   "id": "AQ-040",
+   "topic": "Specialty contracts & private pay",
+   "q": "What should I check before accepting a resident who comes with CBHS or SBS funding?",
+   "alts": [
+    "What should I ask before accepting a resident whose funding includes a specialty add-on?",
+    "afh resident with cbhs tier admission",
+    "accepting a behavioral health resident with add-on payment"
+   ],
+   "a": "First, whether your home can be paid. For CBHS, the home enrolls through ProviderOne and must contract with the resident's managed care plan. SBS needs the home's own contract and an approved staffing calendar, and a home may generally serve up to three SBS residents at a time. Second, whether you can staff it: the add-on pays for staff time that must actually be provided and logged daily. Tiers are reviewed at least every 12 months, and the income leaves with the resident.",
+   "path": "/afh-club/cbhs-tiers",
+   "pathTitle": "CBHS Tiers Explained: The Behavioral Health Add-On Behind Some AFH Income",
+   "also": [
+    "/afh-club/getting-paid-providerone-billing"
+   ]
+  },
+  {
+   "id": "AQ-052",
+   "topic": "Specialty contracts & private pay",
+   "q": "Can my AFH be paid ECS or SBS rates without the specialty contract?",
+   "alts": [
+    "Can an AFH receive specialty payments without meeting the relevant contract requirements?",
+    "bill sbs without a contract adult family home",
+    "Do I need my own ECS contract to get the ECS rate?",
+    "afh specialty contract requirements before billing"
+   ],
+   "a": "No. ECS and SBS are contracts the home itself must qualify for and hold, with its own fully executed contract in place before providing or billing for those services. DSHS asks for a current Medicaid contract held at least 12 months (one DSHS manual says 12 months licensed), no significant enforcement in the last year, and contract training completed first. SBS also needs a demonstrated history with challenging behavior and an approved staffing calendar.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts",
+   "also": [
+    "/afh-club/afh-payment-field-guide",
+    "/afh-club/buying-selling"
+   ]
+  },
+  {
+   "id": "AQ-097",
+   "topic": "Specialty contracts & private pay",
+   "q": "Can my adult family home charge a private-pay resident extra for added services?",
+   "alts": [
+    "Can an AFH charge a private-pay resident for optional services outside the basic agreement?",
+    "AFH extra charges private pay",
+    "How do I bill private-pay residents for additional care?",
+    "Can I add fees for services not in my AFH base rate?"
+   ],
+   "a": "Yes, if it is set out in writing first. No agency sets private-pay care levels; each home defines its own levels and amounts in its admission agreement. Before admission, explain in writing which services the base rate includes, the charges for additional care or services, who supplies items like continence products and transportation, and how changing needs and rates are handled. Medicaid residents follow stricter rules on extra charges.",
+   "path": "/afh-club/dos-and-donts-operating-adult-family-home",
+   "pathTitle": "The Dos and Don'ts of Operating a Washington Adult Family Home",
+   "also": [
+    "/afh-club/afh-payment-field-guide",
+    "/afh-club/getting-paid-providerone-billing"
+   ]
   },
   {
    "id": "RU-046",
@@ -1953,7 +3313,10 @@
    "q": "Who collects the resident's share of the cost in an adult family home?",
    "alts": [
     "Does DSHS collect participation from my residents?",
-    "Do I collect room and board from a Medicaid resident?"
+    "Do I collect room and board from a Medicaid resident?",
+    "How does the resident participation amount affect what an AFH receives?",
+    "What is a resident participation amount and who collects it?",
+    "AFH resident participation who collects"
    ],
    "a": "The home does. DSHS financial staff set the amount (client responsibility: room and board, plus participation toward care for waiver residents), and ProviderOne subtracts it from your claim automatically. HCA says the provider must still collect that amount from the resident each month. The Medicaid payment plus the resident's share is payment in full for the services in the resident's plan.",
    "path": "/afh-club/getting-paid-providerone-billing",
@@ -1984,6 +3347,121 @@
    "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
   },
   {
+   "id": "AQ-003",
+   "topic": "Billing & getting paid",
+   "q": "How do I bill Medicaid for residents in my adult family home?",
+   "alts": [
+    "How does an AFH submit claims for Medicaid services?",
+    "providerone claim submission adult family home",
+    "How do I send Medicaid claims through ProviderOne?"
+   ],
+   "a": "Through ProviderOne, once two things are in place: a signed DSHS Medicaid contract and a service authorization from the resident's case manager. Claims can be entered directly, from saved or batch templates, or uploaded through a clearinghouse, and must be filed within 12 months of the service date. ProviderOne pays weekly and subtracts the resident's client responsibility, which you collect from the resident yourself.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "AQ-009",
+   "topic": "Billing & getting paid",
+   "q": "How do I match my Medicaid payments to my residents each month?",
+   "alts": [
+    "How can I reconcile Medicaid payments against my AFH resident ledger?",
+    "What records help reconcile AFH payments received through ProviderOne?",
+    "How can I reconcile the resident census against monthly AFH payments?",
+    "providerone remittance advice reconcile",
+    "Which ProviderOne report shows what I was paid for each resident?"
+   ],
+   "a": "Use the remittance advice ProviderOne posts each Friday, which lists paid, denied, adjusted and in-process claims, and match it to each resident's authorization. Expect each payment to be the authorized rate minus the resident's client responsibility, which ProviderOne deducts and you collect from the resident. Check each resident's client responsibility in ProviderOne before you bill, and know revenue by resident and payer source every month.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts",
+   "also": [
+    "/afh-club/dos-and-donts-operating-adult-family-home"
+   ]
+  },
+  {
+   "id": "AQ-010",
+   "topic": "Billing & getting paid",
+   "q": "My Medicaid payment doesn't match the resident's authorized rate. What should I do?",
+   "alts": [
+    "What should an AFH operator do when a Medicaid payment does not match the authorized rate?",
+    "medicaid payment lower than rate afh",
+    "Why did ProviderOne pay less than the daily rate?"
+   ],
+   "a": "Check three things. First, client responsibility: ProviderOne subtracts the resident's share from your claim, and you collect it from the resident. Second, the dates: part months are prorated, and DSHS does not pay the last day when a resident moves out, except the date of death. Third, the authorization: if it shows Error or Canceled, contact the case manager before providing or billing. Billing questions go to HCA at 1-800-562-3022; authorization questions go to the case manager.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "AQ-021",
+   "topic": "Billing & getting paid",
+   "q": "What changes if my adult family home starts serving residents with dementia?",
+   "alts": [
+    "What changes when an AFH focuses on dementia care rather than general personal care?",
+    "afh dementia designation",
+    "How do I get a dementia specialty designation for my AFH?"
+   ],
+   "a": "Mainly training and paperwork. The provider, entity representative, resident manager and staff must complete dementia specialty training before the home admits a resident with those needs, and the provider, entity representative and resident manager pass the DSHS competency test. Then you ask DSHS for the designation on the AFH Information Change form (DSHS 10-585), with proof of the training. The rules do not attach a payment rate to a designation.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts",
+   "also": [
+    "/afh-club/training-education"
+   ]
+  },
+  {
+   "id": "AQ-032",
+   "topic": "Billing & getting paid",
+   "q": "Who do I contact when a Medicaid payment for my AFH is wrong or denied?",
+   "alts": [
+    "When should an AFH operator contact a case manager about a payment discrepancy?",
+    "providerone claim denied adult family home",
+    "My Medicaid payment doesn't match the authorization. Who do I call?",
+    "afh payment discrepancy case manager"
+   ],
+   "a": "It depends on the problem. Authorization questions go to the resident's case manager, and if an authorization shows Error or Canceled you must contact the case manager before providing or billing for services. Billing questions go to HCA at 1-800-562-3022. Check the weekly remittance advice, posted each Friday, for denied or adjusted claims; claims must be filed within 12 months of the service date. If a resident stops paying their share, email the case manager promptly.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "AQ-046",
+   "topic": "Billing & getting paid",
+   "q": "How do I check a Medicaid resident's service authorization at my AFH?",
+   "alts": [
+    "providerone social service authorization list",
+    "Where do I see a resident's authorization before billing?",
+    "afh medicaid authorization check before admission"
+   ],
+   "a": "In ProviderOne, on the Social Service Authorization List, which shows each authorization with the case manager's name and email. DSHS pays only for authorized services, and it tells case managers the authorization should be complete before the client is admitted, so confirm with the case manager that it is active before each Medicaid admission. If an authorization shows Error or Canceled, contact the case manager before providing or billing for services.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "AQ-074",
+   "topic": "Billing & getting paid",
+   "q": "How do I know what a Medicaid resident's daily rate covers?",
+   "alts": [
+    "How do I find out which services are included in a resident's Medicaid daily rate?",
+    "What services does the Medicaid rate pay for in an AFH?",
+    "medicaid service authorization providerone afh",
+    "Can I charge a Medicaid resident extra for care?"
+   ],
+   "a": "Check the resident's service authorization. DSHS pays only for authorized services, which the case manager authorizes based on the CARE assessment; each one appears in ProviderOne on the Social Service Authorization List. The Medicaid payment plus the resident's share is payment in full for services in the service plan. Extra charges are allowed only for items the rate does not cover, under a written supplemental payment policy given to residents first, with each payment recorded and the case manager notified.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
+   "id": "AQ-094",
+   "topic": "Billing & getting paid",
+   "q": "How do I keep track of a Medicaid resident's share separately from the ProviderOne payment?",
+   "alts": [
+    "How should an AFH track the resident participation amount separately from Medicaid payments?",
+    "tracking client responsibility AFH",
+    "How do I keep the resident's monthly share straight from the Medicaid deposit?",
+    "resident share vs ProviderOne payment AFH bookkeeping"
+   ],
+   "a": "Treat them as two payments. ProviderOne automatically deducts the resident's client responsibility from your claim, and you collect that amount from the resident each month. Check each resident's amount in ProviderOne before you bill and whenever DSHS says it changed, and set up a simple monthly process for collecting each share. ProviderOne deducts it whether or not the resident pays, so if a payment is missed, email the case manager promptly.",
+   "path": "/afh-club/getting-paid-providerone-billing",
+   "pathTitle": "Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts"
+  },
+  {
    "id": "RU-040",
    "topic": "Management & resident managers",
    "q": "Does someone have to live in my adult family home?",
@@ -2004,7 +3482,9 @@
     "Resident manager qualifications washington AFH",
     "How many hours of care experience does an AFH resident manager need?",
     "Can a management company place anyone as my resident manager?",
-    "afh resident manager 1000 hours"
+    "afh resident manager 1000 hours",
+    "What qualifications does an adult family home resident manager need?",
+    "resident manager requirements afh"
    ],
    "a": "Anyone serving as resident manager must meet the resident-manager qualifications, which include 1,000 hours of direct care within the past 60 months (WAC 388-76-10130). That applies even when a management company places the person in the home. The licensed owner keeps ultimate responsibility for all personnel issues (WAC 388-76-11060), so the owner must stay in charge of who is placed there. A resident manager can be designated for only one home at a time.",
    "path": "/afh-club/hiring-an-afh-management-company",
@@ -2018,7 +3498,9 @@
     "Can I own more than one AFH in Washington?",
     "AFH second license requirements",
     "How long do I have to run my first adult family home before getting another?",
-    "multiple adult family homes washington rules"
+    "multiple adult family homes washington rules",
+    "Can I own several AFHs and hire managers for each one?",
+    "own multiple adult family homes with managers"
    ],
    "a": "A second license needs 24 months on the first with no enforcement actions for significant violations; later licenses need 12 months since the last one (WAC 388-76-10037). Owning several homes yourself is a separate path from hiring a management company. A company can manage several homes under written agreements, but each licensed owner stays responsible for the home and its residents, meets with the manager monthly and visits at least quarterly, and each home needs its own on-site person in charge.",
    "path": "/afh-club/hiring-an-afh-management-company",
@@ -2031,7 +3513,10 @@
    "alts": [
     "Questions to ask before signing an adult family home management agreement",
     "How do I interview a management company for my AFH?",
-    "afh management company interview questions"
+    "afh management company interview questions",
+    "How do I evaluate a management company before signing an agreement?",
+    "What compliance issues should I investigate before hiring an outside AFH management company?",
+    "What questions should I ask a company offering to manage my adult family home?"
    ],
    "a": "Ask whether they file the management agreement and form DSHS 27-226 with DSHS 60 days before starting; who will be the on-site person in charge and who employs them; what bond or insurance covers residents' money; what they report monthly; how many homes they manage; and what happens to staff and records if the agreement ends. Hiring a manager does not hand over the license: you stay responsible for the home and residents, meet with the manager monthly and visit at least quarterly.",
    "path": "/afh-club/hiring-an-afh-management-company",
@@ -2039,6 +3524,68 @@
    "also": [
     "/afh-club/find-a-professional"
    ]
+  },
+  {
+   "id": "AQ-013",
+   "topic": "Management & resident managers",
+   "q": "If I hire a management company, what am I still responsible for?",
+   "alts": [
+    "Which responsibilities remain with the licensed AFH provider when management is outsourced?",
+    "afh owner responsibilities with management company",
+    "What can't I hand off to an AFH manager?",
+    "Does a management agreement move my responsibility as the licensee?",
+    "If a management company runs my AFH, is it still my license?",
+    "Does hiring a manager take the DSHS responsibility off me?",
+    "Does a management company take over my AFH license responsibilities?"
+   ],
+   "a": "Hiring a manager does not hand over the license or the responsibility. The licensed owner keeps ultimate responsibility for daily operations and residents' care, services and safety; for personnel, staffing plans and staff training; for monthly oversight meetings and on-site visits at least quarterly; for appointing the entity representative; and for signing license applications. If you give the manager so much that you no longer run the home day to day, DSHS treats it as a change of ownership (WAC 388-76-11055).",
+   "path": "/afh-club/hiring-an-afh-management-company",
+   "pathTitle": "Hiring a Management Company for Your Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-024",
+   "topic": "Management & resident managers",
+   "q": "What's the difference between the AFH provider and the resident manager?",
+   "alts": [
+    "What is the difference between an AFH provider and a resident manager?",
+    "provider vs resident manager adult family home",
+    "Is the resident manager the same as the licensee?",
+    "Who is responsible for the home, the provider or the resident manager?"
+   ],
+   "a": "The provider is the individual or entity DSHS licenses to operate the home, and the license is valid only for that provider and address. A resident manager is a qualified person the provider employs or contracts with to live in the home when the provider or entity representative does not. A resident manager can run the home day to day and must meet the same experience rules, including 1,000 hours of direct care, but the provider stays the licensee and remains responsible.",
+   "path": "/afh-club/glossary",
+   "pathTitle": "Washington Adult Family Home Glossary",
+   "also": [
+    "/afh-club/selling-your-business-at-retirement"
+   ]
+  },
+  {
+   "id": "AQ-043",
+   "topic": "Management & resident managers",
+   "q": "Who makes staffing decisions when a management company runs my adult family home?",
+   "alts": [
+    "What should an AFH management agreement say about staffing decisions?",
+    "afh management agreement staffing personnel",
+    "Can the management company hire and schedule my AFH staff?",
+    "Can a management company employ my resident manager?"
+   ],
+   "a": "The company can recruit and schedule staff and run payroll as your agent, if the written agreement assigns that work. But every agreement must leave you, the licensed owner, with ultimate responsibility for personnel, staffing plans and staff training. Whether the management company may itself be the resident manager's employer is not spelled out in the rules, so ask DSHS before setting it up that way; either way, you must stay in charge of who is placed in the home.",
+   "path": "/afh-club/hiring-an-afh-management-company",
+   "pathTitle": "Hiring a Management Company for Your Washington Adult Family Home"
+  },
+  {
+   "id": "AQ-095",
+   "topic": "Management & resident managers",
+   "q": "Can an AFH management company hire staff and run payroll for my home?",
+   "alts": [
+    "How should an AFH management agreement address staffing and payroll authority?",
+    "AFH management company payroll staffing",
+    "Who controls staffing when a management company runs my adult family home?",
+    "What staffing decisions can I hand to an AFH manager?"
+   ],
+   "a": "Yes, as your agent, if the written agreement assigns it: recruiting and scheduling staff and running payroll are typical. But the agreement must leave you, the licensed owner, with ultimate responsibility for personnel, staffing plans and staff training, and you still meet with the manager monthly and visit at least quarterly. If you hand over so much that you no longer run the home day to day, DSHS treats it as a change of ownership.",
+   "path": "/afh-club/hiring-an-afh-management-company",
+   "pathTitle": "Hiring a Management Company for Your Washington Adult Family Home"
   },
   {
    "id": "RU-044",
@@ -2091,7 +3638,8 @@
     "Owner-occupied mortgage on an AFH",
     "Can I buy an adult family home with a conventional loan?",
     "I'll live in the house and run the AFH, can I get a normal mortgage?",
-    "Residential loan for an AFH I will occupy"
+    "Residential loan for an AFH I will occupy",
+    "How do lenders treat a homebuyer who intends to occupy part of the property and run an AFH?"
    ],
    "a": "Sometimes. A handful of Puget Sound lenders write standard residential mortgages on licensed adult family homes when the buyer will occupy the home. It is the cheapest money and the lowest down payment, but you qualify on your own income and credit, the home's business revenue may count only partly or not at all, and it finances the house, not the business. The business portion is paid in cash or on seller terms. Use a lender that says it does this.",
    "path": "/afh-club/how-to-finance-an-afh",
@@ -2105,7 +3653,9 @@
     "SBA 7a down payment AFH",
     "Can an SBA loan cover the AFH business and the house together?",
     "What does an SBA 7(a) loan pay for when buying an adult family home?",
-    "Minimum down payment to buy an operating AFH"
+    "Minimum down payment to buy an operating AFH",
+    "Can I use an SBA 7(a) loan to buy an adult family home?",
+    "sba 7a loan for afh purchase"
    ],
    "a": "About 10% down is typical for an SBA 7(a) loan, according to the financing guide. Because the SBA guarantees most of the bank's loan, it can run up to 25 years with no balloon when real estate is the majority of the loan, and it can include the house, business, goodwill, working capital and closing costs in one loan, up to $5 million. The trade-off is a higher, variable rate and a slower close.",
    "path": "/afh-club/how-to-finance-an-afh",
@@ -2168,6 +3718,65 @@
    "pathTitle": "How to Finance an Adult Family Home in Washington"
   },
   {
+   "id": "AQ-029",
+   "topic": "Loan types",
+   "q": "Can I get a DSCR loan on a house I plan to turn into an adult family home?",
+   "alts": [
+    "Can I use a DSCR loan to buy a house intended for an AFH?",
+    "dscr loan afh conversion",
+    "Will a DSCR lender count income from an AFH I haven't opened yet?",
+    "financing a house to convert into an adult family home",
+    "Can projected AFH income qualify me for a loan before I have any residents?"
+   ],
+   "a": "Usually not on its own. A DSCR loan qualifies mainly on the income the home produces, and there is no income history for a lender to count until the home is licensed and has residents. Buyers converting a house generally look at owner-occupied residential loans, renovation programs or other financing, and refinance once the home has a track record. Tell the lender your plan: financing a property as an ordinary rental while planning a licensed care home can conflict with the loan terms.",
+   "path": "/afh-club/dscr-loans-adult-family-homes",
+   "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?"
+  },
+  {
+   "id": "AQ-030",
+   "topic": "Loan types",
+   "q": "Can I get financing to buy an adult family home if I've never owned one?",
+   "alts": [
+    "Can a first-time AFH buyer qualify for commercial financing?",
+    "first time afh buyer loan",
+    "Do lenders finance new AFH owners with no experience?",
+    "Is being new a problem when financing an adult family home?"
+   ],
+   "a": "Possibly. SBA programs finance most AFH sales, and DSCR and SBA loans both lean mainly on the home's income rather than the buyer's paycheck. Lenders still check credit and cash reserves, and SBA lenders also look at the buyer's experience running a care home or a plan for who will. Commercial portfolio loans mostly suit investors and experienced operators buying additional homes. Get pre-qualified in your loan type before you shop.",
+   "path": "/afh-club/dscr-loans-adult-family-homes",
+   "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?",
+   "also": [
+    "/afh-club/how-to-finance-an-afh"
+   ]
+  },
+  {
+   "id": "AQ-050",
+   "topic": "Loan types",
+   "q": "What types of loans can finance an adult family home purchase?",
+   "alts": [
+    "What loan options are there for buying an AFH?",
+    "afh financing options washington",
+    "Which kind of loan do people use to buy an adult family home?"
+   ],
+   "a": "It depends on what you are buying. A house you will live in and run yourself can use an owner-occupied residential mortgage. A licensed operating business with its real estate is usually financed with an SBA 7(a) loan, which can include the business, working capital and closing costs. SBA 504 gives a lower fixed rate on the real estate only, and portfolio or commercial loans suit investors who need more flexibility at the cost of a larger down payment.",
+   "path": "/afh-club/how-to-finance-an-afh",
+   "pathTitle": "How to Finance an Adult Family Home in Washington"
+  },
+  {
+   "id": "AQ-063",
+   "topic": "Loan types",
+   "q": "How much down payment do I need to buy an adult family home?",
+   "alts": [
+    "What down payment do lenders typically require for AFH financing?",
+    "afh loan down payment washington",
+    "Can I buy an adult family home with 10% down?",
+    "minimum down payment for an adult family home loan"
+   ],
+   "a": "It depends on the loan. Some lenders publish owner-occupied residential AFH loans as low as 5% down for qualified buyers who will live in the home (published terms as of September 2026), but these finance the house, not the business. SBA 7(a) and SBA 504 loans typically need about 10% down. Portfolio or commercial loans, used by investors, typically need 25 to 35% down. Whichever loan, the lender also asks whether the home's income covers the payment.",
+   "path": "/afh-club/how-to-finance-an-afh",
+   "pathTitle": "How to Finance an Adult Family Home in Washington"
+  },
+  {
    "id": "EV-008",
    "topic": "Loan terms",
    "q": "What's the difference between the rate period, amortization and maturity on an AFH loan?",
@@ -2205,7 +3814,9 @@
     "How does a lender decide if an adult family home can carry the loan?",
     "Minimum net income to finance an AFH purchase",
     "what DSCR do lenders want for an AFH",
-    "minimum debt coverage ratio adult family home loan"
+    "minimum debt coverage ratio adult family home loan",
+    "Can I qualify for an AFH loan based on business cash flow?",
+    "AFH loan based on business income"
    ],
    "a": "It depends on coverage. Whichever loan type, the lender asks whether the home's income covers the payment. It takes last year's net operating income, after operating costs and, for a buyer who will hire staff, the wages to replace the current owners' hours, and divides it by the annual loan payment. Most want at least 1.25 times. It uses tax returns, not projections, and counts every loan on the deal.",
    "path": "/afh-club/how-to-finance-an-afh",
@@ -2236,7 +3847,10 @@
     "Two-year income average AFH loan",
     "Does a recent increase in residents help me qualify for an AFH loan?",
     "Whose income history counts when buying an adult family home, the seller's or mine?",
-    "Lender averages two years of AFH income"
+    "Lender averages two years of AFH income",
+    "How does a lender calculate debt service coverage for an AFH with variable occupancy?",
+    "Will a lender consider projected income from beds that are not yet occupied?",
+    "lender count empty beds afh"
    ],
    "a": "Not necessarily. One Washington AFH lender described averaging two years of gross income documented by each resident's agreement, not beds filled today: a home that grossed $420,000 one year and $540,000 the next averages $480,000, even if it earns more now. SBA procedures for applications from October 1, 2026 use the last full year or a two-year average, and expected growth cannot be used to reach the minimum. Ask whose years count; for an established home it is usually the home's record, but lenders differ.",
    "path": "/afh-club/dscr-loans-adult-family-homes",
@@ -2264,7 +3878,13 @@
     "Investor vs owner-operator AFH financing",
     "Why does the lender subtract staff wages if I won't work in the home?",
     "The seller nets $150,000, why does the lender count less for me?",
-    "Replacement wages AFH loan underwriting"
+    "Replacement wages AFH loan underwriting",
+    "What happens to AFH business value if the owner provides unpaid caregiving labor?",
+    "owner's unpaid hours and AFH value",
+    "How does an AFH lender treat the salary of an owner who also provides care?",
+    "What is the difference between owner-operator and investor financing for AFHs?",
+    "How do lenders account for owner wages when underwriting an AFH business?",
+    "owner replacement wages AFH loan"
    ],
    "a": "Because of who does the work. Most adult family homes are owner-operated, with the owners covering many care hours themselves. A buyer who will not work those hours must pay staff, so lenders subtract replacement wages before counting income. That means the same home supports a much higher price for an owner-operator than for an investor who hires staff, and a home that nets a lot to its owners may net far less to a buyer on paper.",
    "path": "/afh-club/afh-financing-calculator",
@@ -2272,6 +3892,50 @@
    "also": [
     "/afh-club/how-to-finance-an-afh"
    ]
+  },
+  {
+   "id": "AQ-019",
+   "topic": "How lenders count income",
+   "q": "Can I get a loan on an adult family home that has been open less than two years?",
+   "alts": [
+    "What financing options exist when an AFH business has less than two years of operating history?",
+    "afh loan short operating history",
+    "Will a lender finance a newer adult family home?",
+    "Do lenders need two years of AFH income?",
+    "How do lenders evaluate an AFH that has been open for less than two years?",
+    "new AFH not enough income history for a loan"
+   ],
+   "a": "Possibly, but lenders count history, not projections. One Washington AFH lender averages two years of gross income, and SBA procedures for applications from October 1, 2026 use the last full year or a two-year average, without expected growth. A home with no income history is a poor fit for a DSCR loan; buyers converting a house generally look at owner-occupied residential loans or renovation programs, then refinance once the home has a track record.",
+   "path": "/afh-club/dscr-loans-adult-family-homes",
+   "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?"
+  },
+  {
+   "id": "AQ-045",
+   "topic": "How lenders count income",
+   "q": "If I lease my building to an AFH operator, can the rent help me qualify for a loan?",
+   "alts": [
+    "Can an investor use rental income from an AFH operator to qualify for a real estate loan?",
+    "dscr loan afh lease to operator",
+    "investor buying afh building to lease financing",
+    "Will a rental DSCR lender count rent from an adult family home tenant?"
+   ],
+   "a": "Sometimes, depending on the lender. Some lenders count rent, meaning market rent for the house or a lease from an operator, but that method is mostly used by ordinary rental-property DSCR programs, and many of them exclude care homes. For an investor buying the building to lease to an operator, fit depends on the lender, so ask first, and ask whether the lender counts gross income, net operating income or rent before comparing offers.",
+   "path": "/afh-club/dscr-loans-adult-family-homes",
+   "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?"
+  },
+  {
+   "id": "AQ-073",
+   "topic": "How lenders count income",
+   "q": "Can I get a loan on a house I plan to lease to an adult family home operator?",
+   "alts": [
+    "How does a lease between a property owner and an AFH operator affect loan underwriting?",
+    "Will a lender count rent from an AFH operator?",
+    "DSCR loan for a house leased to an afh",
+    "investor loan for property leased to an adult family home"
+   ],
+   "a": "It depends on the lender, so ask first. Some lenders count rent, either market rent for the house or a lease from an operator, but many ordinary rental-property DSCR programs exclude care homes. Never hide the plan: financing a property as an ordinary rental while planning a licensed care home can conflict with the loan terms, the insurance and the statements you sign. Ask which income a lender counts before comparing offers.",
+   "path": "/afh-club/dscr-loans-adult-family-homes",
+   "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?"
   },
   {
    "id": "EV-015",
@@ -2298,7 +3962,9 @@
     "Does occupancy matter for an AFH loan?",
     "Empty beds and adult family home financing",
     "AFH occupancy lender approval",
-    "Can two more residents get my AFH buyer approved?"
+    "Can two more residents get my AFH buyer approved?",
+    "How does occupancy affect the value of an operating AFH?",
+    "afh occupancy and value"
    ],
    "a": "More than almost anything else. Each additional resident adds a full year of rate to the income while adding little to costs, because the house, license, insurance and base staff are already paid for. Two residents can move a home from a loan the lender declines to one it approves at full price. Lenders underwrite last year's tax returns, so the occupancy has to be real, not projected.",
    "path": "/afh-club/afh-financing-calculator",
@@ -2315,7 +3981,10 @@
     "What documents does a lender want when buying an adult family home?",
     "AFH purchase due diligence tax returns resident roster",
     "What should I ask an AFH seller for?",
-    "Buying an AFH what to request from the seller"
+    "Buying an AFH what to request from the seller",
+    "What financial statements will an AFH lender request?",
+    "what documents does an AFH lender want",
+    "What financial statements should I prepare before applying for an AFH acquisition loan?"
    ],
    "a": "Ask for two years of tax returns and the resident roster with payer types, since that is what your lender will underwrite. Ask about the contracts: ECS, SBS and DDA contracts do not transfer on a sale, so confirm you can qualify for your own before you price them in. Ask for a price allocation between house and business, which decides what you can finance and how. Get pre-qualified in your loan type early; SBA loans take 45 to 90 days to close.",
    "path": "/afh-club/how-to-finance-an-afh",
@@ -2345,7 +4014,11 @@
     "Price allocation house vs business adult family home",
     "How do I finance the business part of an AFH?",
     "AFH purchase allocation real estate business",
-    "Should the listing say how much is for the house and how much for the business?"
+    "Should the listing say how much is for the house and how much for the business?",
+    "Can I finance the house and the AFH operating business with separate loans?",
+    "separate loans for AFH house and business",
+    "Can I finance both the AFH property and the operating business?",
+    "finance AFH house and business together"
    ],
    "a": "Because the split decides what can be financed and how. Residential and SBA 504 loans cover the real estate only, so the business portion is paid in cash or on seller terms, while an SBA 7(a) loan can include the business. Buyers are advised to ask for the allocation, and sellers to state it in the listing so each part can be financed correctly.",
    "path": "/afh-club/how-to-finance-an-afh",
@@ -2355,6 +4028,20 @@
    ]
   },
   {
+   "id": "AQ-018",
+   "topic": "Buying an operating AFH",
+   "q": "How do I compare two adult family homes for sale when their residents need different levels of care?",
+   "alts": [
+    "How do I compare the asking price of two AFHs with different resident care needs?",
+    "same occupancy different afh income",
+    "Why would two full six-bed homes earn different amounts?",
+    "afh classification mix value"
+   ],
+   "a": "Compare the classification mix and the staffing it takes, not just occupancy. At July 1, 2026 rates in King, Pierce and Snohomish counties, six Medicaid residents at B Med bring in about $354,000 a year, while the same six beds at D Med-High bring in about $493,000. Higher rates need more staff time and skill, and classifications can go down. Ask each seller for a de-identified resident schedule and reconcile it to authorized rates and deposits.",
+   "path": "/afh-club/care-classifications-a-through-e",
+   "pathTitle": "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income"
+  },
+  {
    "id": "EV-020",
    "topic": "Selling and financing",
    "q": "I'm selling my adult family home. How do I make it easier for a buyer to get a loan?",
@@ -2362,7 +4049,11 @@
     "What can a seller do if the AFH numbers don't work at the asking price?",
     "Should I carry a note when selling my AFH?",
     "Selling an AFH buyer financing tips",
-    "How do I price my adult family home for an SBA buyer?"
+    "How do I price my adult family home for an SBA buyer?",
+    "How should I price an AFH with vacant licensed beds?",
+    "pricing an afh with empty beds",
+    "What happens to my sale strategy if my AFH has only two occupied beds?",
+    "selling AFH with low occupancy"
    ],
    "a": "Price for the SBA buyer, who is most of the market; their lender underwrites your returns and occupancy. Fill empty beds before or during the listing, since every resident on the returns raises the approvable price. State the split between house and business, and consider carrying the business portion on seller financing, which widens the buyer pool. Know which buyer can keep your contracts. Lowering the price is the last lever, not the first.",
    "path": "/afh-club/how-to-finance-an-afh",
@@ -2379,7 +4070,8 @@
     "Questions to ask an AFH lender",
     "How do I compare loan offers for an adult family home?",
     "AFH loan checklist questions",
-    "What to ask a DSCR lender about an adult family home"
+    "What to ask a DSCR lender about an adult family home",
+    "What lender questions should I ask before making an offer on an AFH property?"
    ],
    "a": "Ask whether they count gross income, net operating income or rent, and over what period and whose history. Ask their minimum ratio, down payment, credit score and cash reserves; whether the loan covers only the real estate or the business too; how long the rate is fixed, the amortization, the maturity, and whether there is a balloon; whether there is a prepayment penalty; and whether they lend the program themselves or place it with another lender.",
    "path": "/afh-club/dscr-loans-adult-family-homes",
@@ -2398,6 +4090,23 @@
    "a": "The DSCR guide says never hide the plan. If you intend to run an adult family home, tell the lender. Financing a property as an ordinary rental while planning a licensed care home can conflict with the loan terms, the insurance, and the statements you sign. Many ordinary rental-property programs exclude care homes, so ask first.",
    "path": "/afh-club/dscr-loans-adult-family-homes",
    "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?"
+  },
+  {
+   "id": "AQ-056",
+   "topic": "Questions for a lender",
+   "q": "What should I know about financing before offering on a vacant former adult family home?",
+   "alts": [
+    "What financing questions should I ask before making an offer on a vacant former AFH?",
+    "loan for a former afh with no residents",
+    "Can I finance an empty former adult family home with no income?",
+    "buying a closed afh financing"
+   ],
+   "a": "That there is no income to underwrite. A former AFH has no license today and no residents, so a lender has no income history to count, and DSCR loans fit poorly. Buyers converting a house generally look at owner-occupied residential loans, renovation programs or other financing, and refinance once the home has a track record. Price the work too: a home that was once an AFH but is not licensed now must meet current rules, including 27-inch interior doors.",
+   "path": "/afh-club/dscr-loans-adult-family-homes",
+   "pathTitle": "Can You Get a DSCR Loan for an Adult Family Home?",
+   "also": [
+    "/afh-club/afh-property-classifications"
+   ]
   },
   {
    "id": "EV-023",
@@ -2440,6 +4149,38 @@
    "a": "No. \"AFH-ready\" is not \"licensed.\" A listing can mean an operating home, a former one, a house that passed the building inspection, or just a marketing idea. When evaluating, start with the house and whether it will work as an adult family home, then the income it could earn, then what it is worth. The site's calculators use your own assumptions and give estimates, not appraisals.",
    "path": "/afh-club/washington-adult-family-home-guide/evaluating",
    "pathTitle": "Evaluating an AFH Property or Investment"
+  },
+  {
+   "id": "AQ-026",
+   "topic": "Evaluating a property",
+   "q": "What should I check when I tour a house I might use as an adult family home?",
+   "alts": [
+    "What should I look for when touring a potential AFH property?",
+    "afh property showing checklist",
+    "What do I measure at a showing for an adult family home?",
+    "touring a house for adult family home use"
+   ],
+   "a": "Bring a tape measure. Resident bedrooms need at least 80 square feet of usable floor for one resident or 120 for two. The required exit door needs 32 inches of clear width, and in a home licensed after September 20, 2026 every interior door residents use must be at least 27 inches wide. Check that escape-window sills are no higher than 44 inches, that ramps are no steeper than 1 inch of rise per foot, and that a bathing shower is at least 30 by 48 inches.",
+   "path": "/afh-club/afh-property-score",
+   "pathTitle": "AFH Property Score"
+  },
+  {
+   "id": "AQ-028",
+   "topic": "Evaluating a property",
+   "q": "What problems with a house should make me think twice about buying it for an AFH?",
+   "alts": [
+    "What property problems should make an AFH buyer reconsider a purchase?",
+    "afh property deal breakers",
+    "Which house issues are expensive to fix for an adult family home?",
+    "red flags when buying a house for an adult family home"
+   ],
+   "a": "Focus on what is costly to fix. A grab bar is a small item, but a resident entrance that needs structural rebuilding can decide whether the deal works at all. Septic upgrades can be a significant unexpected cost. Septic capacity, unpermitted additions and fire access are the more common site questions, and a bedroom reached by stairs can be used only by residents who can get out on their own. Price the changes before you buy.",
+   "path": "/afh-club/before-you-buy-an-adult-family-home",
+   "pathTitle": "Before You Buy an Adult Family Home: What to Verify",
+   "also": [
+    "/afh-club/afh-property-score",
+    "/afh-club/building-inspection"
+   ]
   }
  ]
 }

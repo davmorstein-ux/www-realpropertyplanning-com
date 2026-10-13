@@ -125,6 +125,10 @@ export function libraryFaq(slug: Journey["slug"]) {
 /* change monthly (listings, sold prices, city for-sale pages, market report,  */
 /* data) were left out so answers do not go stale. 160 written, independently  */
 /* fact-checked (126 unchanged, 31 corrected, 3 dropped as duplicates), 157.   */
+/* Oct 12, 2026: ChatGPT's 400 AFH questions sorted the same way (four writers,  */
+/* two independent reviewers): 147 phrasings added, 98 new entries (incl. 5    */
+/* page FAQs the Ask box was missing), about 180 uncovered questions listed as  */
+/* pages to write. 263 entries.                                                  */
 /* Oct 12, 2026: 8 "Billing & getting paid" entries added to Running from the  */
 /* new Getting Paid article (afhArticles.ts), restating only that page. 165.  */
 /* Journeys follow AFH Club's own paths (src/data/afhFlow.ts).                 */
