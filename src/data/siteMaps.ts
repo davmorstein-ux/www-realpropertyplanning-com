@@ -209,10 +209,15 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
   },
   {
     id: "calculators",
-    label: "Cost of Care Calculators",
-    blurb: "Estimate what each kind of care costs in Washington.",
+    label: "Calculators",
+    blurb: "What a remodel is worth, and what each kind of care costs in Washington.",
     groups: [
       {
+        label: "For homeowners",
+        links: [{ title: "What's My Remodel Worth? (King County)", href: "/whats-my-remodel-worth" }],
+      },
+      {
+        label: "Cost of care",
         links: [
           { title: "Cost of Care Calculator (all care types)", href: "/cost-of-care-calculator" },
           ...CARE_CALCULATORS.map((c) => ({ title: `${c.shortLabel} Cost Calculator`, href: `/cost-of-care-calculator/${c.slug}` })),

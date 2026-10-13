@@ -34,6 +34,7 @@ import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscr
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
 import { STATUTE_GUIDES, statuteGuideMeta } from "./src/data/statuteGuides";
 import { AFH_ARTICLES, afhArticleMeta } from "./src/data/afhArticles";
+import { REMODEL_PAGE, REMODEL_FAQS } from "./src/data/remodelPage";
 import { JOURNEYS, QUESTIONS_PATH, journeyPath, libraryFaq, libraryFor, ALL_LIBRARY_ENTRIES, LIBRARIES, libraryEntriesAll, libraryJourneyPath, libraryFaqOf } from "./src/data/questionLibrary";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { LANES as AFH_FINANCING_LANES } from "./src/data/afhLenders";
@@ -1154,11 +1155,25 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   ),
   "/calculators": {
     title: "Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning",
-    description: "All of Real Property Planning's free calculators in one place. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",
+    description: "All of Real Property Planning's free calculators in one place. For King County homeowners: what a remodel is worth. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",
     h1: "Calculators",
     quickAnswerQ: "What calculators does Real Property Planning offer?",
-    quickAnswerA: "Eleven free calculators in two groups. For families, six cost-of-care calculators, one each for memory care, independent living, in-home care, nursing homes, assisted living, and adult family homes. For people buying, owning or investing in a Washington adult family home, five tools: the AFH Property Score, an ROI calculator, a valuation estimator, an occupancy and financing calculator, and a lookup of costs by city and county. None asks for contact details.",
+    quickAnswerA: "Twelve free calculators in three groups. For King County homeowners, What's My Remodel Worth?, which estimates what a remodel adds to a house's value. For families, six cost-of-care calculators, one each for memory care, independent living, in-home care, nursing homes, assisted living, and adult family homes. For people buying, owning or investing in a Washington adult family home, five tools: the AFH Property Score, an ROI calculator, a valuation estimator, an occupancy and financing calculator, and a lookup of costs by city and county. None asks for contact details.",
     intro: "Every calculator on the site, grouped by who it is for. Families choosing care and people buying or running an adult family home have different questions, so the two groups are kept separate, and each links on to its own section.",
+  },
+  [REMODEL_PAGE.PATH]: {
+    title: REMODEL_PAGE.SEO_TITLE,
+    description: REMODEL_PAGE.DESCRIPTION,
+    h1: REMODEL_PAGE.TITLE,
+    quickAnswerQ: "How much value does a remodel add to a King County house?",
+    quickAnswerA: REMODEL_PAGE.SHORT_ANSWER,
+    intro: "A free calculator for King County homeowners. Look up your house by address or enter its details, choose which parts you would remodel and at what quality (economy, standard, premium or luxury), and see two values afterward: a broker's view of what buyers have paid, and an appraiser's view of what a refinance appraisal is likely to support. Built from King County Assessor sales and building records.",
+    sections: [
+      "How it works — The King County Assessor publishes every recorded sale and a building record for every house. The calculator uses ordinary market sales of single-family homes from the last two years, each matched to its house, and learns what each feature added to price in each assessor neighborhood.",
+      "Why two values — Buyers pay extra for a freshly remodeled, move-in ready house, up to what the neighborhood's best houses offer. A refinance appraisal credits measurable change only and little for quality past the neighborhood's best houses (conformity).",
+    ],
+    faq: REMODEL_FAQS.map((f) => ({ q: f.question, a: f.answer, ...(f.alts?.length ? { alts: f.alts } : {}) })),
+    article: { datePublished: REMODEL_PAGE.PUBLISHED, dateModified: REMODEL_PAGE.REVIEWED },
   },
   "/calculators/embed": {
     title: "Add the Cost of Care Calculator to Your Website | Real Property Planning",

@@ -3,11 +3,11 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
-import { AFH_CALCULATORS, CALCULATOR_COUNT } from "@/data/calculatorIndex";
+import { AFH_CALCULATORS, CALCULATOR_COUNT, HOME_CALCULATORS } from "@/data/calculatorIndex";
 import { CARE_CALCULATORS } from "@/lib/careCalculators";
 
 /**
- * /calculators (Sept 2026): every calculator on the site, in two groups.
+ * /calculators (Sept 2026): every calculator on the site, in groups (homeowners added Oct 13, 2026).
  *
  * The homepage says the site has "10+ calculators". Until this page existed a
  * visitor could not check that, or find them all in one place. It is the
@@ -52,7 +52,7 @@ const Calculators = () => (
   <>
     <SEOHead
       title="Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning"
-      description={`All ${CALCULATOR_COUNT} free calculators in one place. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.`}
+      description={`All ${CALCULATOR_COUNT} free calculators in one place. For King County homeowners: what a remodel is worth. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.`}
       canonical="https://realpropertyplanning.com/calculators"
     />
     <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
@@ -63,10 +63,28 @@ const Calculators = () => (
           <p className="rpp-calcs-kicker" style={{ color: NAVY, fontFamily: FONT }}>Free tools</p>
           <h1 className="rpp-calcs-h1" style={{ fontFamily: FONT, fontWeight: 700, color: INK }}>Calculators</h1>
           <p className="rpp-calcs-p" style={{ fontFamily: FONT, color: INK, maxWidth: 720 }}>
-            {CALCULATOR_COUNT} calculators, in two groups. Each is free, asks for no contact details, and uses Washington figures.
+            {CALCULATOR_COUNT} calculators, in three groups. Each is free, asks for no contact details, and uses Washington figures.
           </p>
         </div>
       </div>
+
+      {/* ---------- homeowners (Oct 13, 2026) ---------- */}
+      <section style={{ background: "#ffffff" }}>
+        <div className="rpp-calcs-section" style={{ paddingBottom: 8 }}>
+          <p className="rpp-calcs-kicker" style={{ color: NAVY, fontFamily: FONT }}>For homeowners</p>
+          <h2 className="rpp-calcs-h2" style={{ fontFamily: FONT, fontWeight: 700, color: INK }}>What is a remodel worth?</h2>
+          <ul className="rpp-calcs-list" style={{ marginTop: 14 }}>
+            {HOME_CALCULATORS.map((c) => (
+              <li key={c.href}>
+                <Link to={c.href} className="rpp-calcs-item bg-transparent">
+                  <span className="rpp-calcs-name">{c.title}</span>
+                  <span className="rpp-calcs-blurb">{c.blurb}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* ---------- families ---------- */}
       <section style={{ background: "#ffffff" }}>

@@ -53,10 +53,19 @@ export const AFH_CALCULATORS: CalculatorEntry[] = [
   },
 ];
 
+/** For homeowners (Oct 13, 2026). */
+export const HOME_CALCULATORS: CalculatorEntry[] = [
+  {
+    href: "/whats-my-remodel-worth",
+    title: "What's My Remodel Worth?",
+    blurb: "King County homeowners: look up your house, choose a remodel and its quality, and see a broker's and an appraiser's value afterward.",
+  },
+];
+
 /** Family-side calculators, one per care type. */
 export const FAMILY_CALCULATOR_HREFS: string[] = CARE_CALCULATORS.map((c) => `/cost-of-care-calculator/${c.slug}`);
 
-export const CALCULATOR_COUNT = AFH_CALCULATORS.length + CARE_CALCULATORS.length;
+export const CALCULATOR_COUNT = HOME_CALCULATORS.length + AFH_CALCULATORS.length + CARE_CALCULATORS.length;
 
 /** The homepage says "10+". This is the floor that claim depends on. */
 export const HOMEPAGE_CALCULATOR_CLAIM = 10;

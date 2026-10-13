@@ -47,6 +47,17 @@ const DSHS_CHOW_ANSWERS: ArticleSource = {
 };
 
 export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
+  /* What's My Remodel Worth? (Oct 13, 2026): src/lib/remodelValue.ts. Model fitted on the downloads below. */
+  "/whats-my-remodel-worth": {
+    published: "2026-10-13",
+    reviewed: "2026-10-13",
+    changes: [],
+    sources: [
+      { label: "King County Assessor data download: Real Property Sales (downloaded October 13, 2026; sales through September 30, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
+      { label: "King County Assessor data download: Residential Building (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
+      { label: "King County Assessor data download: Parcel (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
+    ],
+  },
   /* Statute-based probate guides (Oct 11, 2026): src/data/statuteGuides.ts. Sources as verified by an independent reviewer. */
   "/guides/choosing-a-trustee-washington": {
     published: "2026-10-12",
