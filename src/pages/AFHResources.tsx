@@ -99,6 +99,12 @@ const TOPICS = [
     description: "What a management company can do for an adult family home, what stays with you as the licensed owner, and the DSHS filing that comes first.",
   },
   {
+    title: "Do AFHs Pay Taxes?",
+    href: "/afh-club/do-adult-family-homes-pay-taxes",
+    img: "/afh-taxes-cover.webp",
+    description: "Washington's B&O exemption for licensed homes, the sales tax AFHs still pay, and the federal live-in Medicaid income exclusion with its limits.",
+  },
+  {
     title: "Leasing to an AFH Operator",
     href: "/afh-club/leasing-a-house-to-an-afh-operator",
     img: "/afh-leasing-cover.webp",
@@ -333,6 +339,12 @@ const AFHResources = () => (
             href: "/afh-club/hiring-an-afh-management-company",
             img: "/afh-management-company-cover.webp",
             placeholder: "#0a5648",
+          },
+          {
+            title: "Do AFHs Pay Taxes?",
+            href: "/afh-club/do-adult-family-homes-pay-taxes",
+            img: "/afh-taxes-cover.webp",
+            placeholder: "#1b2a4a",
           },
           {
             title: "Leasing to an AFH Operator",

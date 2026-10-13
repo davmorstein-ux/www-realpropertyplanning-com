@@ -5,6 +5,10 @@
  *
  *   /afh-club/getting-paid-providerone-billing
  *     Getting Paid: ProviderOne Billing, Client Responsibility and Specialty Contracts
+ *   /afh-club/do-adult-family-homes-pay-taxes
+ *     Do Adult Family Homes Pay Taxes? (Oct 13, 2026; 33 verified, 3 wrong + 7 overstated
+ *     corrected. Key caution: Notice 2014-7 covers 1915(c) waiver payments; DSHS pays AFH
+ *     personal care under Community First Choice (1915(k)), which the IRS does not name.)
  *   /afh-club/leasing-a-house-to-an-afh-operator
  *     Leasing a House to an AFH Operator (Oct 12, 2026; 38 claims verified, 11 corrected;
  *     the two "In practice" paragraphs are the owner's market observations, not rules.

@@ -183,6 +183,25 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     ],
   },
   /* AFH Club articles (Oct 12, 2026): src/data/afhArticles.ts. Sources as verified by an independent reviewer. */
+  "/afh-club/do-adult-family-homes-pay-taxes": {
+    published: "2026-10-13",
+    reviewed: "2026-10-13",
+    changes: [],
+    sources: [
+      { label: "RCW 82.04.327", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=82.04.327" },
+      { label: "WAC 458-20-168", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=458-20-168" },
+      { label: "Washington DOR: Apply for a business license", href: "https://dor.wa.gov/open-business/apply-business-license" },
+      { label: "Washington DOR: Tax returns (My DOR help)", href: "https://dor.wa.gov/manage-business/my-dor-help/tax-returns" },
+      { label: "Washington DOR: Filing frequencies and due dates", href: "https://dor.wa.gov/file-pay-taxes/filing-frequencies-due-dates" },
+      { label: "26 U.S.C. \u00a7 131: Foster care payments (difficulty of care)", href: "https://www.law.cornell.edu/uscode/text/26/131" },
+      { label: "IRS Notice 2014-7 (2014-4 I.R.B. 445)", href: "https://www.irs.gov/pub/irs-drop/n-14-07.pdf" },
+      { label: "IRS: Certain Medicaid waiver payments may be excludable from income (updated April 29, 2026)", href: "https://www.irs.gov/individuals/certain-medicaid-waiver-payments-may-be-excludable-from-income" },
+      { label: "DSHS Long-Term Care Manual, Chapter 7b: Community First Choice (rev. 04/2026)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%207b.pdf" },
+      { label: "DSHS Long-Term Care Manual, Chapter 7d: COPES (rev. 8/2025)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter7d_COPES_June2025_Final.docx" },
+      { label: "DSHS Long-Term Care Manual, Chapter 8: Residential Services (rev. 5/2026)", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%208.pdf" },
+      { label: "WAC 182-515-1509", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=182-515-1509" },
+    ],
+  },
   "/afh-club/leasing-a-house-to-an-afh-operator": {
     published: "2026-10-12",
     reviewed: "2026-10-12",

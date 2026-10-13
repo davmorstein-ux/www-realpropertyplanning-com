@@ -44,7 +44,7 @@
         "body": "Daily base rates, CBHS tier rates and ECS and SBS amounts are in the [Payment Field Guide](/afh-club/afh-payment-field-guide) and [A Through E](/afh-club/care-classifications-a-through-e), with sources and dates."
       }
     ],
-    "next": "- Email adshqcontracts@dshs.wa.gov for your Medicaid contract as soon as your license is issued, and sign up for EFT in ProviderOne.\n- Before each Medicaid admission, confirm with the case manager that the authorization is active, and check the client responsibility amount in ProviderOne.\n- Write your Medicaid policy (WAC 388-76-10522) and a simple monthly process for collecting each resident's share.\n- Plan specialty training before you accept residents with dementia, mental illness or developmental disabilities: [Training & Education](/afh-club/training-education).\n- Understand how the money stacks: [Payment Field Guide](/afh-club/afh-payment-field-guide), [CARE Classifications](/afh-club/care-classifications-a-through-e), [CBHS Tiers](/afh-club/cbhs-tiers).",
+    "next": "- Email adshqcontracts@dshs.wa.gov for your Medicaid contract as soon as your license is issued, and sign up for EFT in ProviderOne.\n- Before each Medicaid admission, confirm with the case manager that the authorization is active, and check the client responsibility amount in ProviderOne.\n- Write your Medicaid policy (WAC 388-76-10522) and a simple monthly process for collecting each resident's share.\n- Plan specialty training before you accept residents with dementia, mental illness or developmental disabilities: [Training & Education](/afh-club/training-education).\n- Understand how the money stacks: [Payment Field Guide](/afh-club/afh-payment-field-guide), [CARE Classifications](/afh-club/care-classifications-a-through-e), [CBHS Tiers](/afh-club/cbhs-tiers).\n- Taxes on that income: [Do Adult Family Homes Pay Taxes?](/afh-club/do-adult-family-homes-pay-taxes).",
     "faqs": [
       {
         "question": "My license just came. Can I take a Medicaid resident tomorrow?",
@@ -488,6 +488,172 @@
       {
         "label": "WAC 388-76-10201",
         "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10201"
+      }
+    ]
+  },
+  {
+    "slug": "taxes",
+    "path": "/afh-club/do-adult-family-homes-pay-taxes",
+    "short": "Do AFHs Pay Taxes?",
+    "title": "Do Adult Family Homes Pay Taxes? B&O, Sales Tax and the Live-In Medicaid Exclusion",
+    "eyebrow": "Running an AFH · For owners & buyers",
+    "dek": "Washington's B&O exemption for licensed adult family homes, the sales tax AFHs still pay, and the federal 'difficulty of care' exclusion for live-in providers: what it covers, its limits, and why the Medicaid program matters.",
+    "published": "2026-10-13",
+    "reviewed": "2026-10-13",
+    "cover": "/afh-taxes-cover.webp",
+    "shortAnswer": "Partly. Washington's business and occupation (B&O) tax does not apply to the care income of licensed adult family homes (AFHs). Goods billed to residents separately are a different question. An AFH still pays retail sales tax on equipment and supplies it buys. For federal income tax, the Internal Revenue Service (IRS) lets some providers exclude certain Medicaid waiver payments, but only for care in the provider's own home, with limits. Whether your payments qualify depends on the facts. Personal care for many Washington AFH residents is paid through a program the IRS notice does not name. A CPA (certified public accountant) should apply these rules to your home.",
+    "sections": [
+      {
+        "heading": "Washington B&O tax: the licensed-AFH exemption",
+        "body": "B&O tax is a state tax on a business's gross income. RCW 82.04.327 (Revised Code of Washington) says: \"This chapter does not apply to adult family homes which are licensed as such, or which are specifically exempt from licensing, under rules of the department of social and health services.\" Chapter 82.04 is the B&O tax chapter.\n\nThe Department of Revenue (DOR) rule, WAC 458-20-168(9)(c) (WAC is the Washington Administrative Code), explains it. The exemption covers \"gross income derived from personal and professional services\" of AFHs licensed by the Department of Social and Health Services (DSHS), or specifically exempt from licensing under DSHS rules. It also says: \"This exemption does not apply to persons who provide home care services to clients in the clients' own residences.\"\n\nIn plain words: the exemption is tied to the **AFH license** and covers **care services income**, not home care in people's own houses. Neither text limits the exemption by the number of homes you own or by how many residents pay with Medicaid."
+      },
+      {
+        "heading": "Sales tax: you still pay it on what you buy",
+        "body": "The B&O exemption does not cover sales tax on your purchases. WAC 458-20-168(10) says AFHs and similar care providers \"are required to pay retail sales tax on purchases of equipment and supplies,\" unless a specific exemption in law applies. So beds, lifts, gloves and household goods are normally taxed when you buy them.\n\n**Selling goods to residents is a different question.** WAC 458-20-168(7) says \"Retailing B&O tax applies to sales of tangible personal property sold and billed separately\" from care services. It also treats drugs sold for self-administration as taxable unless exempt. Medical supplies used to provide care are not treated as separate sales just because they are itemized. The statute says the whole B&O chapter does not apply to licensed AFHs; the rule is written for health care providers generally. If your home bills residents separately for items, ask DOR or a CPA whether you must collect sales tax and how to report it."
+      },
+      {
+        "heading": "Do you have to register with DOR if your income is exempt?",
+        "body": "DOR says you must register and get a business license if, among other reasons, you \"plan to hire employees within the next 90 days\" or your gross income is \"$12,000 per year or more.\" Most AFHs hire caregivers, so most need a license for that reason alone.\n\nOnce registered, even a business with no activity \"must still file your return by the due date.\" DOR's \"active non-reporting\" status removes filing for some small businesses; one condition is B&O gross income that \"is less than $125,000 per year.\"\n\nWe could **not** find a DOR page saying whether an AFH with only exempt income must file and report it, or whether exempt income counts toward that test. Ask DOR (dor.wa.gov) how to set up your account."
+      },
+      {
+        "heading": "Federal income tax: the \"difficulty of care\" exclusion",
+        "body": "Federal law, 26 U.S.C. § 131, excludes \"qualified foster care payments\" from income. It includes \"difficulty of care payments\" for care \"provided in the home of the foster care provider.\"\n\nIn 2014 the IRS published **Notice 2014-7**: \"the Service will treat qualified Medicaid waiver payments as difficulty of care payments under § 131(c).\" An IRS question-and-answer page (Q&A) explains it:\n\n- **Which payments.** The IRS names \"a state Medicaid Home and Community-Based Services waiver program described in section 1915(c).\" For other programs (Q1), it \"will depend on the nature of the payments and the purpose and design of the program.\" That is case by case, not a yes.\n- **Only in the provider's own home.** \"A person's 'home' is where he resides.\" Payments for care \"outside of the home where the provider resides\" do not qualify. Q3: a provider who \"has a separate home\" cannot exclude them.\n- **Five adults per home.** Section 131(c)(2) applies \"in the case of any foster home\" and limits the exclusion to \"5 qualified foster individuals\" age 19 or over. The notice says waiver payments \"are subject to these limits.\" The IRS does not explain how an AFH maps onto a \"foster home.\"\n- **Care only.** Q8: only \"payments for the care\" are excludable, so vacation pay is not.\n- **The resident's share.** Q7 covers a program where the individual must \"pay the administrator\" part of the cost. If the payments otherwise qualify, you may exclude \"the entire payment that you receive under the state Medicaid waiver program.\" But you \"may not exclude direct payments from a care recipient\" from private funds.\n- **Earned Income Credit (EIC).** Q9: if the payments otherwise count as earned income, you \"may choose to include all, but not part, of these payments in earned income.\"\n- **Self-employment tax.** Q13 (a contractor paid on a Form 1099) and Q14 (a sole proprietor): payments that qualify as excludable are not self-employment income. Payments that do not qualify do not get this treatment.\n- **Payments to a company.** The notice describes payments \"to an individual care provider.\" The IRS sources say nothing about a limited liability company (LLC) or corporation.\n\n**Two Washington facts for your CPA.** Here the resident pays their share to the home: \"A client must pay the client's provider\" (WAC 182-515-1509). Q7 describes paying the administrator instead. And the IRS sources never mention adult family homes."
+      },
+      {
+        "heading": "Which Washington Medicaid program pays your residents?",
+        "body": "This matters because Notice 2014-7 is written for 1915(c) waiver payments. DSHS official manuals show that Washington AFH residents can be paid through several programs:\n\n- **Community First Choice (CFC).** DSHS says CFC \"is a Medicaid State Plan option granted under 1915(k) of the Social Security Act.\" It is not a 1915(c) waiver. CFC clients may receive services in an \"Adult Family Home (AFH),\" and DSHS lists an AFH as a CFC personal care provider.\n- **COPES** (Community Options Program Entry System). DSHS says \"COPES is one of the 1915(c) Medicaid waivers\" and that its services \"act as a wraparound to services available to the Community First Choice (CFC) State Plan program.\" DSHS adds that since July 1, 2015, \"it would be highly unusual for a person to be enrolled in COPES and not also be enrolled in CFC because personal care is no longer available in COPES.\"\n- **Other programs.** The DSHS residential services chapter lists contracted AFHs as available under CFC, DDA (Developmental Disabilities Administration) waivers, Medicaid Personal Care (MPC), COPES, the Residential Support Waiver, Roads to Community Living (RCL) and State-funded Medical Care Services (MCS).\n\nSo the personal care payment for many residents may come through CFC, a state plan program. The IRS names only 1915(c) waivers and says other programs depend on \"the nature of the payments and the purpose and design of the program.\" The IRS sources we read do not mention CFC or 1915(k), so this page does not say whether CFC payments are excludable.\n\n**Practical step:** for each resident, ask the DSHS case manager which program pays for the care, and give that to your CPA. The program codes and rates behind your payments are explained in the [AFH payment field guide](/afh-club/afh-payment-field-guide) and [Getting paid: ProviderOne billing](/afh-club/getting-paid-providerone-billing)."
+      },
+      {
+        "heading": "What this means when you buy or sell an AFH",
+        "body": "The federal rules depend on **who** gets paid and **where they live**, so two homes with the same Medicaid income can produce different after-tax results. A live-in provider may be able to exclude qualifying payments, within the five-person limit. An owner who lives elsewhere does not meet the \"own home\" test (Q3). An LLC or corporation owner faces a question the IRS does not answer. An owner of two homes can live in only one.\n\nA seller's after-tax result may not carry over to a buyer. Lenders read tax returns, not projections; see [How to finance an AFH](/afh-club/how-to-finance-an-afh). Have a CPA model your own situation before you set a price or make an offer. Related pages: [Individual or LLC](/afh-club/ownership-structure), [Selling your AFH business at retirement](/afh-club/selling-your-business-at-retirement), the [AFH valuation estimator](/afh-club/afh-valuation-estimator) and [Before you buy: what to verify](/afh-club/before-you-buy-an-adult-family-home)."
+      }
+    ],
+    "next": "- Keep your license current; the B&O exemption depends on it. See [Licensing & certification](/afh-club/licensing-certification).\n- Ask DOR how to register and file when your income is exempt.\n- For each Medicaid resident, write down the program (CFC, COPES or other) and take it to a CPA.\n- Buying or selling? Have a CPA compare the seller's tax position with yours. See [Running a licensed home](/afh-club/washington-adult-family-home-guide/running).",
+    "faqs": [
+      {
+        "question": "Are adult family homes tax exempt in Washington?",
+        "answer": "No, not generally. Under RCW 82.04.327, Washington's B&O tax does not apply to licensed AFHs; separately billed goods are a question for DOR. AFHs still pay retail sales tax on equipment and supplies (WAC 458-20-168(10)), and may owe federal income tax, payroll taxes and property tax. Ask a CPA.",
+        "alts": [
+          "Is an adult family home tax exempt?",
+          "Do adult family homes pay taxes in Washington?",
+          "Do I pay B&O tax on my AFH?",
+          "AFH B&O tax exemption"
+        ]
+      },
+      {
+        "question": "Is my Medicaid income taxable?",
+        "answer": "For federal income tax, it depends. IRS Notice 2014-7 lets some providers exclude 1915(c) waiver payments for care in the provider's own home. Personal care for many Washington AFH residents is paid through Community First Choice, a 1915(k) state plan program, and the IRS says other programs depend on the facts. Find out each resident's program and ask a CPA.",
+        "alts": [
+          "Are AFH Medicaid payments taxable income?",
+          "difficulty of care payments adult family home",
+          "IRS Notice 2014-7 adult family home"
+        ]
+      },
+      {
+        "question": "I own two AFHs. Can both use the difficulty of care exclusion?",
+        "answer": "The IRS says payments for care \"outside of the home where the provider resides\" do not qualify. You can live in only one home. Whether payments for that one home qualify still depends on the program and other facts. A CPA should review it.",
+        "alts": [
+          "If I own more than one AFH, can all of them be tax exempt?",
+          "Can every AFH I own use the Medicaid income exclusion?"
+        ]
+      },
+      {
+        "question": "Does the exclusion apply to all six residents?",
+        "answer": "Section 131(c)(2) limits difficulty of care payments, \"in the case of any foster home,\" to five people age 19 or older, and Notice 2014-7 says waiver payments \"are subject to these limits.\" The IRS sources we read do not explain how to count when some residents are private pay or on other programs. Ask a CPA.",
+        "alts": [
+          "How many residents does the difficulty of care exclusion cover?",
+          "Is the Medicaid exclusion limited to 5 residents?"
+        ]
+      },
+      {
+        "question": "Does it work if my AFH is an LLC?",
+        "answer": "The IRS sources do not say. Notice 2014-7 describes payments \"to an individual care provider.\" The IRS Q&A discusses a sole proprietor but not LLCs or corporations. A CPA should answer this before you choose a structure; see [Individual or LLC](/afh-club/ownership-structure).",
+        "alts": [
+          "Can an LLC use the difficulty of care exclusion?",
+          "AFH LLC Medicaid income tax"
+        ]
+      },
+      {
+        "question": "Does a buyer get the same tax treatment as the seller?",
+        "answer": "Not automatically. The B&O exemption follows the AFH license, and a buyer gets their own license through a change of ownership. The federal exclusion depends on the provider, where they live, the program and the resident count. Ask a CPA.",
+        "alts": [
+          "Will I get the same tax break as the AFH seller?",
+          "Does the AFH tax exclusion transfer to a buyer?"
+        ]
+      },
+      {
+        "question": "Do excluded payments count for the Earned Income Credit?",
+        "answer": "This applies only to payments that truly qualify for the exclusion. For those, Q9 says you \"may choose to include all, but not part, of these payments in earned income.\" Have a CPA run it both ways.",
+        "alts": [
+          "difficulty of care payments earned income credit",
+          "Can I use excluded Medicaid payments for EITC?"
+        ]
+      },
+      {
+        "question": "Do I pay self-employment tax on excluded payments?",
+        "answer": "For payments that truly qualify, the IRS says they \"are not self-employment income subject to self-employment tax\" (Q13, contractor; Q14, sole proprietor). Payments that do not qualify, such as care in a home where you do not live, are not covered by this answer. Leaving income out may also affect your future Social Security record, so ask a CPA before you file.",
+        "alts": [
+          "Are difficulty of care payments subject to self-employment tax?",
+          "self employment tax AFH Medicaid payments"
+        ]
+      },
+      {
+        "question": "Do adult family homes pay sales tax on supplies?",
+        "answer": "Yes, unless another exemption applies. Washington's rule says adult family homes and similar providers must pay retail sales tax on purchases of equipment and supplies (WAC 458-20-168(10)). Goods billed to residents separately from care are a question to put to the Department of Revenue.",
+        "alts": [
+          "Do I pay sales tax on AFH supplies?",
+          "AFH retail sales tax on purchases"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "RCW 82.04.327",
+        "href": "https://app.leg.wa.gov/RCW/default.aspx?cite=82.04.327"
+      },
+      {
+        "label": "WAC 458-20-168",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=458-20-168"
+      },
+      {
+        "label": "Washington DOR: Apply for a business license",
+        "href": "https://dor.wa.gov/open-business/apply-business-license"
+      },
+      {
+        "label": "Washington DOR: Tax returns (My DOR help)",
+        "href": "https://dor.wa.gov/manage-business/my-dor-help/tax-returns"
+      },
+      {
+        "label": "Washington DOR: Filing frequencies and due dates",
+        "href": "https://dor.wa.gov/file-pay-taxes/filing-frequencies-due-dates"
+      },
+      {
+        "label": "26 U.S.C. § 131: Foster care payments (difficulty of care)",
+        "href": "https://www.law.cornell.edu/uscode/text/26/131"
+      },
+      {
+        "label": "IRS Notice 2014-7 (2014-4 I.R.B. 445)",
+        "href": "https://www.irs.gov/pub/irs-drop/n-14-07.pdf"
+      },
+      {
+        "label": "IRS: Certain Medicaid waiver payments may be excludable from income (updated April 29, 2026)",
+        "href": "https://www.irs.gov/individuals/certain-medicaid-waiver-payments-may-be-excludable-from-income"
+      },
+      {
+        "label": "DSHS Long-Term Care Manual, Chapter 7b: Community First Choice (rev. 04/2026)",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%207b.pdf"
+      },
+      {
+        "label": "DSHS Long-Term Care Manual, Chapter 7d: COPES (rev. 8/2025)",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter7d_COPES_June2025_Final.docx"
+      },
+      {
+        "label": "DSHS Long-Term Care Manual, Chapter 8: Residential Services (rev. 5/2026)",
+        "href": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/LTCManual/Chapter%208.pdf"
+      },
+      {
+        "label": "WAC 182-515-1509",
+        "href": "https://app.leg.wa.gov/WAC/default.aspx?cite=182-515-1509"
       }
     ]
   }

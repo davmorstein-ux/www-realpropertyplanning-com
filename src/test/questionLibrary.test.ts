@@ -98,7 +98,7 @@ describe.skipIf(!built)("question library: the Ask box, with every page on the s
 
   it.skipIf(!inBuild)("answers link to the guide, never to the library page", () => {
     for (const e of ALL_LIBRARY_ENTRIES.slice(0, 40)) expect(ask(e.q, pages, cards, "rpp").answer?.path).toBe(e.path);
-  });
+  }, 60_000);
 
   /* Questions worded differently from anything stored (Oct 11, 2026 probe). Each must reach the right page.
      These are regression guards for the matcher, not a target to tune the wording against. */

@@ -413,8 +413,9 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 20px",
             }}
           >
-            Tax treatment is not covered here. How an LLC or corporation is taxed depends on elections and your own
-            situation; ask a CPA before you choose.
+            How an LLC or corporation is taxed depends on elections and your own situation; ask a CPA before you choose.
+            For the B&amp;O exemption and the federal live-in Medicaid income exclusion (which the IRS describes for
+            individual providers), see <Link to="/afh-club/do-adult-family-homes-pay-taxes" style={{ color: "#0a5648", fontWeight: 600, textDecoration: "underline" }}>Do Adult Family Homes Pay Taxes?</Link>.
           </p>
         </div>
       </section>
