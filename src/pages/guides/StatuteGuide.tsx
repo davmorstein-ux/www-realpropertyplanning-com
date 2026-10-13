@@ -82,13 +82,14 @@ function Page({ g }: { g: Guide }) {
     headline: g.title,
     description: mdToText(g.shortAnswer),
     url,
-    datePublished: STATUTE_GUIDES_PUBLISHED,
-    dateModified: STATUTE_GUIDES_REVIEWED,
+    datePublished: g.published ?? STATUTE_GUIDES_PUBLISHED,
+    dateModified: g.reviewed ?? STATUTE_GUIDES_REVIEWED,
     author: articleAuthor,
     publisher: articlePublisher,
     isPartOf: { "@type": "WebSite", name: "Real Property Planning", url: "https://realpropertyplanning.com" },
   };
   const others = STATUTE_GUIDES.filter((x) => x.slug !== g.slug);
+  const back = g.back ?? { href: "/washington-probate-guide", label: "Washington Probate Guide" };
   return (
     <div className="stg">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
@@ -96,24 +97,24 @@ function Page({ g }: { g: Guide }) {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://realpropertyplanning.com" },
-          { name: "Estate & Probate", url: "https://realpropertyplanning.com/probate-estate-sales" },
+          g.crumb ?? { name: "Estate & Probate", url: "https://realpropertyplanning.com/probate-estate-sales" },
           { name: g.short, url },
         ]}
       />
       <Header />
       <main id="main-content">
-        <ProbateStartHere />
+        {g.probateBanner !== false && <ProbateStartHere />}
         <section style={{ background: "#eef3f7", padding: "36px 16px 32px", borderBottom: `3px solid ${A}` }}>
           <div className="stg-wrap" style={{ paddingTop: 28 }}>
             <div className="stg-narrow">
-              <p className="stg-eyebrow">Estate &amp; Probate · For executors and families</p>
+              <p className="stg-eyebrow">{g.eyebrow ?? "Estate & Probate · For executors and families"}</p>
               <h1 className="stg-h1">{g.title}</h1>
               <div className="stg-answer">
                 <p className="stg-label">The short answer</p>
                 <MiniMarkdown md={g.shortAnswer} classes={MD_CLASSES} />
               </div>
               <p className="stg-small" style={{ marginTop: 12 }}>
-                Written from the Washington statutes it cites, checked {fmt(STATUTE_GUIDES_REVIEWED)}. Its primary sources are listed at the end of the page.
+                Written from the Washington statutes it cites, checked {fmt(g.reviewed ?? STATUTE_GUIDES_REVIEWED)}. Its primary sources are listed at the end of the page.
               </p>
               <nav aria-label="On this page">
                 <ul className="stg-toc">
@@ -127,7 +128,7 @@ function Page({ g }: { g: Guide }) {
         </section>
 
         <Band bg="#ffffff">
-          <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+          <BackToPreviousPage variant="top" fallback={back} />
         </Band>
 
         {g.sections.map((s, i) => (
@@ -152,7 +153,7 @@ function Page({ g }: { g: Guide }) {
             </p>
             <div className="stg-note" style={{ marginTop: 20 }}>
               <p style={{ marginBottom: 0 }}>
-                General information about Washington law, not legal or tax advice. Laws change, and how they apply depends on the facts; a Washington probate attorney can advise on a particular estate.
+                General information about Washington law, not legal or tax advice. Laws change, and how they apply depends on the facts; a Washington {g.slug === "choosing-a-trustee" ? "estate planning attorney can advise on a particular trust" : "probate attorney can advise on a particular estate"}.
                 Real Property Planning does not refer clients to attorneys.
               </p>
             </div>
@@ -162,7 +163,7 @@ function Page({ g }: { g: Guide }) {
         <PageFAQ faqs={g.faqs.map((f) => ({ question: f.question, answer: f.answer }))} heading={`${g.short}: Common Questions`} eyebrow="Frequently Asked Questions" id={`stg-${g.slug}`} />
         <div style={{ padding: "0 16px 32px" }}>
           <div className="stg-wrap">
-            <BackToPreviousPage variant="bottom" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+            <BackToPreviousPage variant="bottom" fallback={back} />
           </div>
         </div>
       </main>

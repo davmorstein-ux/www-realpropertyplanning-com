@@ -115,6 +115,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
     landing: { href: "/planning-before-a-crisis", label: "Start here: planning before a crisis" },
     pieces: [
       { title: "Estate Planning & Powers of Attorney", href: "/estate-planning-powers-of-attorney" },
+      { title: "Family Member or Trust Company? Choosing a Trustee in Washington", href: "/guides/choosing-a-trustee-washington" },
       { title: "How to Pass Real Estate to Your Children", href: "/articles/wills-trusts-other-options" },
       { title: "Power of Attorney and Real Estate in Washington State", href: "/power-of-attorney" },
       { title: "The Conversations Worth Having Now", href: "/planning-before-a-crisis/conversations-to-have" },

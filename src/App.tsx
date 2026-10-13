@@ -492,6 +492,7 @@ export const AppRoutes = () => (
       <Route path="/calculators" element={<Calculators />} />
       <Route path="/guides/probate-costs-washington" element={<StatuteGuide slug="probate-costs" />} />
       <Route path="/guides/debts-after-death-washington" element={<StatuteGuide slug="debts-after-death" />} />
+      <Route path="/guides/choosing-a-trustee-washington" element={<StatuteGuide slug="choosing-a-trustee" />} />
       <Route path="/guides/contest-will-washington" element={<StatuteGuide slug="will-contests" />} />
       <Route path="/afh-club/questions" element={<QuestionLibrary library="afh" />} />
       <Route path="/afh-club/questions/opening" element={<QuestionLibrary library="afh" slug="opening" />} />

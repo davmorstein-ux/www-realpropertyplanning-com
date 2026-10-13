@@ -48,6 +48,10 @@ const Trustees = () => (
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
           This page is for trustees and successor trustees responsible for a house held in a Washington trust: what to do first, whether the beneficiaries must approve a sale, what happens when co-trustees disagree, and what to do when a beneficiary is living in the house.
         </p>
+        <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+          Still deciding who should serve, or whether to name a family member, a trust company or both? See{" "}
+          <Link to="/guides/choosing-a-trustee-washington" className="underline font-semibold text-foreground">Family Member or Trust Company? Choosing a Trustee in Washington</Link>, which also covers the notice and appraisal rule when the house is a quarter or more of the trust.
+        </p>
         </div>
       </div>
     </section>

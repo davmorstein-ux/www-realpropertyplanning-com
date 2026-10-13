@@ -5,6 +5,12 @@
  *   /guides/probate-costs-washington      What Does Probate Cost in Washington?
  *   /guides/debts-after-death-washington  Who Pays a Parent's Debts After They Die?
  *   /guides/contest-will-washington       Can a Will Be Challenged in Washington?
+ *   /guides/choosing-a-trustee-washington Family Member or Trust Company? Choosing a
+ *                                         Trustee in Washington (Oct 12, 2026; same
+ *                                         method: written from chapters 11.98, 11.98B,
+ *                                         11.100, 11.106 and 30B RCW, independently
+ *                                         verified: 34 claims verified, 10 corrected,
+ *                                         3 unsourced removed).
  *
  * HOW THEY WERE CHECKED. Each draft was written from the RCW sections and official
  * pages it cites (read on app.leg.wa.gov, IRS, FTC, CFPB, Dept. of Education, King
@@ -42,7 +48,7 @@ export interface StatuteGuideFaq {
 }
 
 export interface StatuteGuide {
-  slug: "probate-costs" | "debts-after-death" | "will-contests";
+  slug: "probate-costs" | "debts-after-death" | "will-contests" | "choosing-a-trustee";
   path: string;
   /** Short label for links. */
   short: string;
@@ -53,6 +59,14 @@ export interface StatuteGuide {
   next: string | null;
   faqs: StatuteGuideFaq[];
   sources: { label: string; href: string }[];
+  /** Optional overrides for guides outside probate (Oct 12, 2026: choosing a trustee). */
+  eyebrow?: string;
+  crumb?: { name: string; url: string };
+  back?: { href: string; label: string };
+  /** false hides the probate "start here" banner. */
+  probateBanner?: boolean;
+  published?: string;
+  reviewed?: string;
 }
 
 export const STATUTE_GUIDES = DATA as StatuteGuide[];
@@ -88,6 +102,6 @@ export function statuteGuideMeta(g: StatuteGuide) {
       ...(g.next ? [`What to do next — ${mdToText(g.next)}`] : []),
     ],
     faq: g.faqs.map((f) => ({ q: f.question, a: f.answer, ...(f.alts?.length ? { alts: f.alts } : {}) })),
-    article: { datePublished: STATUTE_GUIDES_PUBLISHED, dateModified: STATUTE_GUIDES_REVIEWED },
+    article: { datePublished: g.published ?? STATUTE_GUIDES_PUBLISHED, dateModified: g.reviewed ?? STATUTE_GUIDES_REVIEWED },
   };
 }
