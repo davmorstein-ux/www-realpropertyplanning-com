@@ -194,6 +194,19 @@ const PROFESSIONAL_CATEGORIES = [
     link: null,
   },
   {
+    title: "Restoration & Rebuilding Contractors",
+    icon: "🔨",
+    description:
+      "After a fire, flood or storm, the damaged parts of an operating home have to be torn out and rebuilt, usually through an insurance claim, while residents stay safe. A contractor that runs the claim, the repairs and the rebuild together keeps the work in one set of hands.",
+    lookFor: [
+      "A Washington contractor registration you can check with L&I",
+      "Experience working directly with insurance adjusters on the claim",
+      "A plan for keeping residents' rooms, exits and kitchen usable during the work",
+      "Experience in care homes or other occupied buildings",
+    ],
+    link: null,
+  },
+  {
     title: "Business Insurance",
     icon: "🛡️",
     description:
@@ -281,7 +294,7 @@ const AFHFindProfessional = () => (
   <>
     <SEOHead
       title="Find an AFH Professional | AFH Club | Real Property Planning"
-      description="Professionals who work with Washington adult family homes, each one met with personally: a real estate broker, a bookkeeper, an insurance broker, house cleaning, water damage restoration, and website design and marketing. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
+      description="Professionals who work with Washington adult family homes, each one met with personally: a real estate broker, a bookkeeper, an insurance broker, house cleaning, water damage restoration, a restoration contractor, and website design and marketing. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
       canonical="https://realpropertyplanning.com/afh-club/find-a-professional"
     />
     <BreadcrumbSchema

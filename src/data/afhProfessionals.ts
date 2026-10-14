@@ -4,6 +4,8 @@ import mjSharmaPhoto from "@/assets/providers/mj-sharma-two-maids-headshot.webp"
 import twoMaidsLogo from "@/assets/providers/two-maids-cleaning-logo.webp";
 import ruslanBagaveevPhoto from "@/assets/providers/ruslan-bagaveev-dryout-headshot.webp";
 import dryoutLogo from "@/assets/providers/dryout-water-damage-restoration-logo.webp";
+import kateWilliamsPhoto from "@/assets/providers/kate-williams-paul-davis-headshot.webp";
+import paulDavisLogo from "@/assets/providers/paul-davis-restoration-logo.webp";
 import kaylinPhoto from "@/assets/providers/kaylin-cottingham-wilson-griffith-insurance-headshot.webp";
 import griffithLogo from "@/assets/providers/griffith-insurance-group-logo.webp";
 import exaelPhoto from "@/assets/providers/exael-zuniga-invision-marketing-headshot.webp";
@@ -154,6 +156,26 @@ export const RUSLAN_BAGAVEEV: AFHProfessional = {
   website: "https://www.wtrdmg.com",
   specialty: "Water damage restoration and dry-out for homes and licensed care homes",
   bio: "",
+};
+
+/* Added Oct 14, 2026 (owner met her in person). Card shows the office line; her cell is in
+   the note. Website is the national pauldavis.com she gave: no local franchise page was confirmed.
+   Logo supplied by the owner the same day. No contractor license number supplied yet. */
+export const KATE_WILLIAMS: AFHProfessional = {
+  id: "kate-williams",
+  name: "Kate Williams",
+  title: "Owner, Paul Davis Restoration",
+  company: "Paul Davis Restoration",
+  photo: kateWilliamsPhoto,
+  photoAlt: "Photo of Kate Williams, Owner of Paul Davis Restoration",
+  logo: paulDavisLogo,
+  logoAlt: "Paul Davis Property Restoration Experts logo",
+  phone: "(360) 939-8699",
+  email: "kate.williams@pauldavis.com",
+  website: "https://www.pauldavis.com",
+  specialty: "Property restoration and rebuilding after water, fire and storm damage. Everett, Whidbey Island and Mount Vernon, WA",
+  bio: "",
+  note: "Cell: (360) 939-8638",
 };
 
 /* Added Sept 28, 2026. License number OE20486 (owner clarified the same day that
@@ -314,6 +336,14 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     people: [RUSLAN_BAGAVEEV],
   },
   {
+    id: "restoration-contractor",
+    label: "Restoration & rebuilding contractor",
+    profession: "Restoration Contractor",
+    professionLines: ["Restoration", "Contractor"],
+    why: "After a fire, flood or storm, an operating home needs more than a dry-out: damaged rooms have to be torn out and rebuilt, usually through an insurance claim, while residents stay safe. A contractor that handles the claim paperwork, the repairs and the rebuild keeps one set of hands on a home that cannot simply close while the work is done.",
+    people: [KATE_WILLIAMS],
+  },
+  {
     id: "business-insurance",
     label: "Insurance broker",
     profession: "Insurance Broker",
@@ -374,7 +404,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
  *   Buy & Sell   the AFH real estate broker, the mortgage lender, the business broker
  *                (photography and SBA lending join here once someone is listed)
  *   Operate      management, insurance, website & marketing, bookkeeping
- *   Maintain     house cleaning, water damage restoration
+ *   Maintain     house cleaning, water damage restoration, restoration contractor (Oct 14, 2026)
  * This replaces the Oct 9 "five groups lead, then A to Z" order.
  */
 export interface AFHProfessionalSection {
@@ -402,7 +432,7 @@ export const AFH_PROFESSIONAL_SECTIONS: AFHProfessionalSection[] = [
     id: "maintain",
     title: "Maintain",
     lead: "Keeping the house itself clean, safe, and in good repair.",
-    groupIds: ["house-cleaning", "water-damage"],
+    groupIds: ["house-cleaning", "water-damage", "restoration-contractor"],
   },
 ];
 
