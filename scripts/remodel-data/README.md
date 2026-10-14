@@ -15,9 +15,11 @@ King County Assessor data downloads. Refresh quarterly.
    python3 -I scripts/remodel-data/1_join.py RAW_DIR /tmp/kc.duckdb
    python3 -I scripts/remodel-data/2_build.py RAW_DIR /tmp/kc.duckdb public/data/remodel
    ```
-   `2_build.py` prints the hold-out accuracy and the coefficients.
+   `2_build.py` prints the hold-out accuracy and the coefficients. Estimates are
+   priced at the latest quarter of sales (`marketQuarter` in model.json), which
+   carries current mortgage rates and the season; refresh after each quarter ends.
 5. Update the figures quoted in `src/data/remodelPage.ts` (sales count, date
-   range, accuracy, percentages) and `MODEL_YEAR` in `src/lib/remodelValue.ts`
+   range, MARKET_MONTHS, accuracy, percentages) and `MODEL_YEAR` in `src/lib/remodelValue.ts`
    when the year changes; add a dated line to the page's record in
    `src/data/articleRecords.ts`.
 

@@ -16,9 +16,11 @@ export const REMODEL_PAGE = {
   DESCRIPTION:
     "Free King County calculator: look up your house, choose what you would remodel and at what quality, and see two values afterward, a broker's view of what buyers pay and an appraiser's view of what a refinance appraisal is likely to support. Built from 27,000 King County home sales.",
   PUBLISHED: "2026-10-13",
-  REVIEWED: "2026-10-13",
+  REVIEWED: "2026-10-14",
   SALES_FROM: "October 2024",
   SALES_THROUGH: "September 2026",
+  /** The quarter today's estimates are priced at (model.json marketQuarter). */
+  MARKET_MONTHS: "July to September 2026",
   N_SALES: "27,066",
   SHORT_ANSWER:
     "It depends on how much of the house you redo, the quality you choose, and what the best houses in your neighborhood are like. In King County sales from the last two years, each step up in the assessor's quality grade added about 10% to price, each step up in condition about 8%, and a recent renovation about 20% more in what buyers paid. Appraisers credit less: they give no premium for \"newly remodeled\" and stop crediting quality that goes past the neighborhood's best houses.",

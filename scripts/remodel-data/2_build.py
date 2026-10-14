@@ -13,10 +13,17 @@ def feats(d, mo):
         'llot': np.log(d.lot.clip(1000, 200000)), 'age': age, 'age2': age**2/100,
         'ren10': ((d.yr > 0) & (d.yr >= 2016)).astype(int), 'ren_old': ((d.yr > 0) & (d.yr < 2016)).astype(int),
         'cond': d.cond, 'vw': d.vw.clip(0, 12), 'wfb': (d.wf.fillna('0').astype(str).str.strip() != '0').astype(int),
-        'gar': (d.gar > 0).astype(int), 'fp': d.fp.clip(0, 3), 'baths': d.baths.clip(0, 8), 'beds': d.beds.clip(0, 8), 'mo': mo})
-FEATS = ['lliv','finshare','grade','llot','age','age2','ren10','ren_old','cond','vw','wfb','gar','fp','baths','beds','mo']
-mo = ((pd.to_datetime(df.d) - pd.Timestamp('2024-10-01')).dt.days / 30.4).values
-X = feats(df, mo)
+        'gar': (d.gar > 0).astype(int), 'fp': d.fp.clip(0, 3), 'baths': d.baths.clip(0, 8), 'beds': d.beds.clip(0, 8)})
+FEATS = ['lliv','finshare','grade','llot','age','age2','ren10','ren_old','cond','vw','wfb','gar','fp','baths','beds']
+# TODAY'S MARKET (Oct 14, 2026): one effect per quarter of sale instead of a straight-line
+# trend. The most recent quarter is the baseline (no dummy), so the area effects price a
+# house at the level of the last three months of sales: that level already reflects
+# current mortgage rates and the season. A straight line missed the summer 2026 dip.
+quarter = pd.to_datetime(df.d).dt.to_period('Q').astype(str)
+LATEST_Q = sorted(quarter.unique())[-1]
+Q = pd.get_dummies(quarter, prefix='q').astype(float).drop(columns=['q_' + LATEST_Q])
+X = pd.concat([feats(df, None).reset_index(drop=True), Q.reset_index(drop=True)], axis=1)
+QFEATS = list(Q.columns)
 y = np.log(df.p.values)
 
 def fit(idx):
@@ -24,7 +31,7 @@ def fit(idx):
     M = pd.concat([X[idx].reset_index(drop=True), A.reset_index(drop=True)], axis=1)
     b, *_ = np.linalg.lstsq(M.values, y[idx], rcond=None)
     coef = dict(zip(M.columns, b))
-    base = X[idx].values @ np.array([coef[f] for f in FEATS])
+    base = X[idx][FEATS + QFEATS].values @ np.array([coef[f] for f in FEATS + QFEATS])
     area_eff = np.array([coef.get('a_'+str(a), 0) for a in df.area[idx]])
     resid = y[idx] - base - area_eff
     t = pd.DataFrame({'sk': df.sk[idx].values, 'r': resid})
@@ -33,7 +40,7 @@ def fit(idx):
     return coef, sub_adj
 
 def predict(coef, sub_adj, d, Xd):
-    lp = Xd.values @ np.array([coef[f] for f in FEATS])
+    lp = Xd[FEATS + QFEATS].values @ np.array([coef[f] for f in FEATS + QFEATS])
     lp += np.array([coef.get('a_'+str(a), 0) for a in d.area]) + np.array([sub_adj.get(s, 0) for s in d.sk])
     return lp
 
@@ -42,7 +49,8 @@ coef, sub_adj = fit(~te)
 e = np.abs(np.exp(predict(coef, sub_adj, df[te], X[te]) - y[te]) - 1)
 print("holdout n=%d median err %.1f%% | within10 %.0f%% | within20 %.0f%% | p80 err %.1f%%" % (te.sum(), 100*np.median(e), 100*(e<.1).mean(), 100*(e<.2).mean(), 100*np.quantile(e, .8)))
 coef, sub_adj = fit(np.ones(len(y), bool))
-for f in FEATS: print(f"  {f:9s} {coef[f]:+.4f}")
+for f in FEATS + QFEATS: print(f"  {f:9s} {coef[f]:+.4f}")
+print("baseline (today's market) =", LATEST_Q)
 
 # per-subarea: total location effect, grade p90, n, median price; area fallback
 areas = {}
@@ -84,7 +92,8 @@ for z, g in homes.groupby('zip'):
     zipdefault[z] = g.sk.mode()[0]
 model = {
   'asOf': {'salesThrough': str(df.d.max())[:10], 'salesFrom': str(df.d.min())[:10], 'nSales': int(len(df)), 'built': '2026-10-13'},
-  'coef': {f: round(coef[f], 5) for f in FEATS}, 'intercept': 0.0, 'moNow': 24,
+  # "mo" stays at 0 so the page's math is unchanged: the market level now lives in the area effects.
+  'coef': {**{f: round(coef[f], 5) for f in FEATS}, 'mo': 0.0}, 'intercept': 0.0, 'moNow': 0, 'marketQuarter': LATEST_Q,
   'subs': subs, 'areas': areas, 'zipDefault': zipdefault,
 }
 # intercept is folded into area effects (no constant column); keep the model honest about it

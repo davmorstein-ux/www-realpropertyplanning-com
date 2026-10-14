@@ -15,10 +15,16 @@
  * the lot) from the last 24 months, matched to each house's building record.
  * log(price) is fitted on size, finished-basement share, assessor grade, lot,
  * age, renovation, condition, view, waterfront, garage, fireplaces, baths,
- * bedrooms and month of sale, with an effect for each of the assessor's
+ * bedrooms and quarter of sale, with an effect for each of the assessor's
  * neighborhoods (area + sub-area, shrunk toward the area when sales are few).
- * Tested on a 20% hold-out it had never seen: half of estimates within 8% of the
- * actual price, 88% within 20%.
+ *
+ * TODAY'S MARKET (Oct 14, 2026, after the owner found his own house priced a
+ * little high): estimates are set at the level of the LATEST QUARTER of sales
+ * (model.json "marketQuarter"), not a straight-line trend. Recent sales already
+ * reflect current mortgage rates and the season; the straight line had missed
+ * the summer 2026 dip and ran about 2% high. coef.mo is kept at 0 for that reason.
+ * Tested on a 20% hold-out it had never seen: half of estimates within 8% (7.8%)
+ * of the actual price, 88% within 20%.
  *
  * THE TWO VIEWS.
  *   Broker's view: what buyers have paid. Includes the premium for a recent
@@ -34,6 +40,8 @@ import { REMODEL_PARTS, TIER_GRADE, type Tier } from "@/data/remodelTiers";
 
 export interface RemodelModel {
   asOf: { salesThrough: string; salesFrom: string; nSales: number; built: string };
+  /** The quarter of sales today's estimates are priced at, e.g. "2026Q3". */
+  marketQuarter?: string;
   coef: Record<string, number>;
   moNow: number;
   /** "area-subarea" → location effect, 90th-percentile grade, sales count, city, median sale. */

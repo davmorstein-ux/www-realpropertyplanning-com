@@ -50,8 +50,10 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
   /* What's My Remodel Worth? (Oct 13, 2026): src/lib/remodelValue.ts. Model fitted on the downloads below. */
   "/whats-my-remodel-worth": {
     published: "2026-10-13",
-    reviewed: "2026-10-13",
-    changes: [],
+    reviewed: "2026-10-14",
+    changes: [
+      { date: "2026-10-14", text: "Estimates are now set at the level of the latest three months of King County sales (July to September 2026), which reflect current mortgage rates, instead of a two-year trend line. Typical estimates came down about 2%." },
+    ],
     sources: [
       { label: "King County Assessor data download: Real Property Sales (downloaded October 13, 2026; sales through September 30, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
       { label: "King County Assessor data download: Residential Building (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },

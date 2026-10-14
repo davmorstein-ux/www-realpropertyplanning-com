@@ -453,7 +453,7 @@ export default function RemodelValue() {
                 <strong>The data.</strong> The King County Assessor publishes every recorded sale and a building record for every house. The calculator uses {P.N_SALES} ordinary market sales of single-family homes from {P.SALES_FROM} to {P.SALES_THROUGH}, each matched to its house: living area, finished basement, bedrooms, baths, fireplaces, garage, lot, view, waterfront, age, renovation, condition, and the assessor's quality grade. Family transfers, foreclosures and sales the assessor flagged as unusual are left out.
               </p>
               <p>
-                <strong>The model.</strong> It learns from those sales what each feature has added to price in each of the assessor's neighborhoods, then prices your house as it is and as it would be after the remodel.
+                <strong>The model.</strong> It learns from those sales what each feature has added to price in each of the assessor's neighborhoods, then prices your house as it is and as it would be after the remodel. Estimates are set at the level of the most recent three months of sales ({P.MARKET_MONTHS}), so they reflect today's mortgage rates and season rather than an average of the whole two years.
               </p>
               <p>
                 <strong>Your remodel choices.</strong> The county's records do not know window brands or roof shingles. They grade a whole house's quality on a 1–13 scale. Each part of the house carries a share of that grade (the kitchen the most), and each quality level aims at a grade: economy 7, standard 8, premium 10, luxury 12. Redoing everything at premium makes a house grade 10. Economy finishes in a better house pull its grade down.
