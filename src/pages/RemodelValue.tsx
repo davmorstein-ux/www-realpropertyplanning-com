@@ -12,6 +12,7 @@ import { CONDITION_LABELS, GRADE_LABELS, REMODEL_PARTS, TIERS, type Tier } from 
 import {
   EMPTY_SCOPE,
   estimate,
+  loadZip,
   matchAddresses,
   rowToFacts,
   title as titleCase,
@@ -147,8 +148,7 @@ export default function RemodelValue() {
     }
     setZipState("loading");
     let live = true;
-    fetch(`/data/remodel/zip/${zip}.json`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+    loadZip(zip)
       .then((z: ZipFile) => {
         if (!live) return;
         setZipFile(z);

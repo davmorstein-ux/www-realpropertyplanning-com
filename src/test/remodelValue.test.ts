@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
+import { gunzipSync } from "node:zlib";
 import { resolve } from "node:path";
 import { EMPTY_SCOPE, estimate, gradeAfter, matchAddresses, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
 import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
@@ -7,7 +8,7 @@ import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
 /** What's My Remodel Worth? (src/lib/remodelValue.ts). */
 const dir = resolve(__dirname, "../../public/data/remodel");
 const model = JSON.parse(readFileSync(`${dir}/model.json`, "utf8")) as RemodelModel;
-const zip = (z: string) => JSON.parse(readFileSync(`${dir}/zip/${z}.json`, "utf8")) as ZipFile;
+const zip = (z: string) => JSON.parse(gunzipSync(readFileSync(`${dir}/zip/${z}.bin`)).toString("utf8")) as ZipFile;
 
 const mercer = {
   sk: model.zipDefault["98040"],
@@ -54,8 +55,12 @@ describe("remodel value model", () => {
   it("every ZIP file has a known neighborhood for each house, and no names", () => {
     const files = readdirSync(`${dir}/zip`);
     expect(files.length).toBeGreaterThan(100);
+    // Keep the data small enough to publish (Oct 14, 2026: publishing failed with 28 MB of uncompressed files).
+    let total = 0;
+    for (const f of files) total += readFileSync(`${dir}/zip/${f}`).length;
+    expect(total, "compressed ZIP files total").toBeLessThan(12_000_000);
     for (const f of files.slice(0, 20)) {
-      const z = zip(f.replace(".json", ""));
+      const z = zip(f.replace(".bin", ""));
       for (const k of z.keys) expect(model.subs[k] || model.areas[k.split("-")[0]], `${f} ${k}`).toBeTruthy();
       expect(z.homes[0].length).toBe(16);
     }

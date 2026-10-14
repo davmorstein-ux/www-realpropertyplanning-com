@@ -1,6 +1,6 @@
 """Fit the remodel-value model and export model.json + per-ZIP home files.
 usage: build.py RAW_DIR DUCKDB OUT_DIR"""
-import duckdb, sys, json, os, numpy as np, pandas as pd
+import duckdb, sys, json, os, gzip, numpy as np, pandas as pd
 R, DB, OUT = sys.argv[1:4]
 c = duckdb.connect(DB)
 df = c.sql("select * from j where liv>=500 and grade between 4 and 13 and lot>0 and cond between 1 and 5").df()
@@ -87,8 +87,10 @@ for z, g in homes.groupby('zip'):
     for r in g.sort_values('addr').itertuples():
         rows.append([r.addr, keys.index(r.sk), int(r.liv - r.finb), int(r.finb), int(max(r.bsmt - r.finb, 0)), int(r.beds), float(r.baths), int(r.fp),
                      1 if r.gar > 0 else 0, int(r.lot), int(r.yb), int(r.yr), int(r.cond), int(r.grade), int(min(r.vw, 12)), 0 if str(r.wf).strip() in ('0', 'nan', 'None', '') else 1])
-    with open(f"{OUT}/zip/{z}.json", 'w') as fh:
-        json.dump({'keys': keys, 'cols': ['addr','k','above','finBsmt','unfinBsmt','beds','baths','fp','garage','lot','yrBuilt','yrRenovated','cond','grade','views','waterfront'], 'homes': rows}, fh, separators=(',', ':'))
+    body = json.dumps({'keys': keys, 'cols': ['addr','k','above','finBsmt','unfinBsmt','beds','baths','fp','garage','lot','yrBuilt','yrRenovated','cond','grade','views','waterfront'], 'homes': rows}, separators=(',', ':'))
+    # gzip-compressed, named .bin (see loadZip in src/lib/remodelValue.ts)
+    with open(f"{OUT}/zip/{z}.bin", 'wb') as fh:
+        fh.write(gzip.compress(body.encode('utf8'), 9, mtime=0))
     zipdefault[z] = g.sk.mode()[0]
 model = {
   'asOf': {'salesThrough': str(df.d.max())[:10], 'salesFrom': str(df.d.min())[:10], 'nSales': int(len(df)), 'built': '2026-10-13'},

@@ -6,7 +6,7 @@
  * scripts/remodel-data/ rebuilds everything from fresh downloads; refresh
  * quarterly. Outputs, served from /public:
  *   /data/remodel/model.json      the fitted model and neighborhood effects
- *   /data/remodel/zip/<zip>.json  public building facts for every single-family
+ *   /data/remodel/zip/<zip>.bin   gzip-compressed JSON: public building facts for every single-family
  *                                 house in that ZIP, for the address lookup
  * No owner, buyer or seller names and no individual sale prices are published.
  *
@@ -227,7 +227,24 @@ export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): Remode
   };
 }
 
-/** One row of a /data/remodel/zip/<zip>.json file, in its column order. */
+/**
+ * Load one ZIP code's homes. The files are gzip-compressed JSON (Oct 14, 2026: the
+ * uncompressed files totalled 28 MB and publishing failed, likely on size; compressed
+ * they are about 6 MB). Named .bin so no host treats them as pre-encoded; if a host
+ * decompresses them anyway, the gzip check below falls through to plain JSON.
+ */
+export async function loadZip(zip: string): Promise<ZipFile> {
+  const r = await fetch(`/data/remodel/zip/${zip}.bin`);
+  if (!r.ok) throw new Error(String(r.status));
+  const buf = new Uint8Array(await r.arrayBuffer());
+  if (buf[0] === 0x1f && buf[1] === 0x8b) {
+    const stream = new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"));
+    return JSON.parse(await new Response(stream).text()) as ZipFile;
+  }
+  return JSON.parse(new TextDecoder().decode(buf)) as ZipFile;
+}
+
+/** One row of a ZIP file, in its column order. */
 export type ZipRow = [string, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number];
 export interface ZipFile {
   keys: string[];
