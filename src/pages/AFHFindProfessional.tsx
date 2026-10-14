@@ -87,12 +87,15 @@ const FitLine = ({ text }: { text: string }) => {
 const PersonCard = ({ person, professionLines }: { person: AFHProfessional; professionLines: [string, string] }) => {
   /* The card shows just the domain ("twomaidscleaning.com"); the link still goes to the full address. A path made it too long for the card. */
   const site = person.website?.replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
+  /* The whole card opens the person's website (David, Oct 14, 2026). The website line's link is
+     stretched over the card with ::after ("rpp-afhpro-whole"), so there are no nested links; the
+     phone, email, name and logo links sit above it and keep doing their own thing. */
   /* Every slot has a fixed height so the same row of every card lines up across the grid
      (David, Sept 22): profession, photo, name, license (kept open even when empty — most
      people will not have one), phone, email on one line (FitEmail), website, logo.
      div/span throughout, not <p>: the site's global p rules add margins. */
   return (
-    <div className="rpp-afhpro-card">
+    <div className={`rpp-afhpro-card${person.website ? " rpp-afhpro-card-linked" : ""}`}>
       <div className="rpp-afhpro-card-profession">
         <span>{professionLines[0]}</span>
         <span>{professionLines[1]}</span>
@@ -109,7 +112,9 @@ const PersonCard = ({ person, professionLines }: { person: AFHProfessional; prof
         {person.email ? <FitEmail email={person.email} /> : "\u00a0"}
       </div>
       <div className="rpp-afhpro-card-line rpp-afhpro-card-site">
-        {person.website && site ? <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a> : "\u00a0"}
+        {person.website && site ? (
+          <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent rpp-afhpro-whole" aria-label={`${person.name}, ${person.company}: website ${site} (opens in a new tab)`}>{site}</a>
+        ) : "\u00a0"}
       </div>
       <div className="rpp-afhpro-card-logo">
         {/* The logo links to the same website as the line above (David, Sept 27 2026). The alt
@@ -418,6 +423,11 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-row-lead { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.5; color: #1c1917; margin: 0 auto 14px; text-align: center; max-width: 640px; }
         /* Fixed-height slots: the same row of every card lines up across the grid. */
         .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; min-width: 0; line-height: 1.25; }
+        .rpp-afhpro .rpp-afhpro-card-linked { position: relative; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-linked:hover { border-color: #0a5648; box-shadow: 0 8px 22px -12px rgba(10,86,72,.45); } }
+        .rpp-afhpro .rpp-afhpro-card-linked:focus-within { border-color: #0a5648; }
+        .rpp-afhpro a.rpp-afhpro-whole::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 12px; }
+        .rpp-afhpro .rpp-afhpro-card-linked a:not(.rpp-afhpro-whole) { position: relative; z-index: 2; }
         .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
         /* Two fixed lines (David, Sept 25): every profession label is set as two lines in
            src/data/afhProfessionals.ts (professionLines), e.g. "Water Damage" / "Restoration",
