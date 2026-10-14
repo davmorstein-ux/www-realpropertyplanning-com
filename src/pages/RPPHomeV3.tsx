@@ -776,6 +776,20 @@ const RPPHomeV3 = () => {
               }
               .rpp-coc-dot.is-current { background: #7f1d1d; }
 
+              /* Remodel calculator card: the cost-of-care heading size comes from
+                 index.css rules keyed to that card's href, so this one sets its own. */
+              main h3.rpp-rmv-heading.rpp-rmv-heading {
+                font-size: 40px !important;
+                font-weight: 900 !important;
+                line-height: 1.1 !important;
+                margin: 0 !important;
+              }
+              .rpp-rmv-card .rpp-coc-opt-name { font-weight: 600 !important; }
+              main h3.rpp-rmv-heading.rpp-rmv-heading, main h3.rpp-rmv-heading span { white-space: normal !important; }
+              @media (max-width: 640px) {
+                main h3.rpp-rmv-heading.rpp-rmv-heading { font-size: 24px !important; }
+                .rpp-rmv-card .rpp-coc-cta.rpp-coc-cta { white-space: normal; padding: 14px 22px !important; }
+              }
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
                   grid-template-columns: 1fr;
@@ -866,6 +880,28 @@ const RPPHomeV3 = () => {
                         >
                           {formatCurrency(care.waMonthly)}
                         </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </a>
+
+              {/* ── What's My Remodel Worth? (Oct 14, 2026, owner) ── same card as the
+                  cost of care calculator above, for King County homeowners. */}
+              <a href="/whats-my-remodel-worth" className="rpp-coc-card rpp-rmv-card group marquee-hover" style={{ marginTop: "1.5rem" }}>
+                <div className="rpp-coc-layout">
+                  <div className="rpp-coc-left">
+                    <h3 className="rpp-rmv-heading" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", margin: 0, lineHeight: 1.1 }}>
+                      <span style={{ color: "#272421" }}>What's My</span>{" "}
+                      <span style={{ color: "#14283a" }}>Remodel Worth?</span>
+                    </h3>
+                    <div className="rpp-coc-rangelabel" style={{ color: "#1B3A6B" }}>For King County homeowners</div>
+                    <span className="rpp-coc-cta">Try the calculator</span>
+                  </div>
+                  <ul className="rpp-coc-options">
+                    {["Look up your house by address", "Choose what you would remodel, from economy to luxury", "See two values: a broker's and an appraiser's", "Built from King County home sales"].map((line) => (
+                      <li key={line}>
+                        <span className="rpp-coc-opt-name">{line}</span>
                       </li>
                     ))}
                   </ul>
