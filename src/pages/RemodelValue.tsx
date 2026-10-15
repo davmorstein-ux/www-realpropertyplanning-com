@@ -48,6 +48,7 @@ import {
   EMPTY_SPEND,
   estimateSpend,
   loadZip,
+  countyOfKey,
   rangeOf,
   matchAddresses,
   rowToFacts,
@@ -60,7 +61,7 @@ import {
 } from "@/lib/remodelValue";
 
 /**
- * What's My Remodel Worth? (Oct 13, 2026; Snohomish County added Oct 15). King and Snohomish County homeowners look up their
+ * What's My Remodel Worth? (Oct 13, 2026; Snohomish and Pierce counties added Oct 15). King, Snohomish and Pierce County homeowners look up their
  * house (or type its details), enter what they would spend (or spent) on each part
  * (sliders, Oct 15, 2026, replacing quality buttons), and get two values, a broker's view
  * and an appraiser's view, plus which spending paid off.
@@ -185,9 +186,10 @@ function NumField({ id, label, value, onChange, step = 1, min = 0 }: { id: strin
 
 export default function RemodelValue() {
   const url = `https://realpropertyplanning.com${P.PATH}`;
-  /* Oct 15, 2026: King County and Snohomish County models; each house uses its own county's. */
+  /* Oct 15, 2026: King, Snohomish and Pierce County models; each house uses its own county's. */
   const [king, setKing] = useState<RemodelModel | null>(null);
   const [sno, setSno] = useState<RemodelModel | null>(null);
+  const [pie, setPie] = useState<RemodelModel | null>(null);
   const [modelError, setModelError] = useState(false);
   const [zip, setZip] = useState("");
   const [zipFile, setZipFile] = useState<ZipFile | null>(null);
@@ -208,6 +210,7 @@ export default function RemodelValue() {
     const get = (path: string) => fetch(path).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))));
     get("/data/remodel/model.json").then(setKing).catch(() => setModelError(true));
     get("/data/remodel/model-sno.json").then(setSno).catch(() => setSno(null));
+    get("/data/remodel/model-pie.json").then(setPie).catch(() => setPie(null));
   }, []);
 
   useEffect(() => {
@@ -241,7 +244,7 @@ export default function RemodelValue() {
   };
 
   const startManual = () => {
-    const m = king?.zipDefault[zip] ? king : sno?.zipDefault[zip] ? sno : null;
+    const m = [king, sno, pie].find((x) => x?.zipDefault[zip]) ?? null;
     if (!m) return;
     setPicked("manual");
     setFacts({ sk: m.zipDefault[zip], ...MANUAL_DEFAULTS, cond: m.condAvg ?? MANUAL_DEFAULTS.cond });
@@ -250,9 +253,11 @@ export default function RemodelValue() {
   const set = <K extends keyof HomeFacts>(k: K, v: HomeFacts[K]) => setFacts((f) => (f ? { ...f, [k]: v } : f));
   const setSpent = (id: string, n: number) => setScope((s) => ({ ...s, spent: { ...s.spent, [id]: Math.max(0, Math.round(n)) } }));
 
-  /** The model for the house in hand: Snohomish neighborhood keys start with "S". */
-  const model = facts ? (facts.sk.startsWith("S") ? sno : king) : king;
-  const isSno = !!model?.county;
+  /** The model for the house in hand: Snohomish neighborhood keys start with "S", Pierce keys "P". */
+  const county = facts ? countyOfKey(facts.sk) : "King";
+  const model = county === "Snohomish" ? sno : county === "Pierce" ? pie : king;
+  const isSno = county === "Snohomish";
+  const isPie = county === "Pierce";
   const gradeLabels = model?.gradeLabels ?? GRADE_LABELS;
   const condLabels = model?.condLabels ?? CONDITION_LABELS;
   const baseRate = BASE_RATE[model?.county ?? "King"] ?? BASE_RATE.King;
@@ -300,7 +305,7 @@ export default function RemodelValue() {
         <div style={{ background: "#faf8f4", borderBottom: `3px solid ${NAVY}`, padding: "44px 0 34px" }}>
           <div className="rmv-wrap">
             <div style={{ maxWidth: 780 }}>
-              <p className="rmv-eyebrow">Free tool · King &amp; Snohomish County homes</p>
+              <p className="rmv-eyebrow">Free tool · King, Snohomish &amp; Pierce County homes</p>
               <h1 className="rmv-h1">{P.TITLE}</h1>
               <p>
                 Look up your house, choose what you would remodel and at what quality, and see what it could be worth afterward, two ways: what buyers pay, and what a refinance appraisal is likely to support.
@@ -310,7 +315,7 @@ export default function RemodelValue() {
                 <p style={{ marginBottom: 0 }}>{P.SHORT_ANSWER}</p>
               </div>
               <p className="rmv-small" style={{ marginTop: 12 }}>
-                Built from {P.N_SALES} King County and {P.SNO_N_SALES} Snohomish County home sales and the counties' public building records. No sign-up; nothing you type is saved.
+                Built from {P.N_SALES} King County, {P.SNO_N_SALES} Snohomish County and {P.PIE_N_SALES} Pierce County home sales and the counties' public building records. No sign-up; nothing you type is saved.
               </p>
             </div>
           </div>
@@ -320,7 +325,7 @@ export default function RemodelValue() {
         <div style={{ padding: "36px 0 10px" }}>
           <div className="rmv-wrap">
             <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">1</span><h2 className="rmv-h2" style={{ margin: 0 }}>Find your house</h2><img src={artLookup} alt="" aria-hidden="true" width={64} height={64} className="rmv-stepart" /></div>
-            <p>Single-family homes in King and Snohomish counties. Enter the ZIP code, then start typing the street address (number first).</p>
+            <p>Single-family homes in King, Snohomish and Pierce counties. Enter the ZIP code, then start typing the street address (number first).</p>
             {modelError && <p role="alert">The calculator's data did not load. Refresh the page to try again.</p>}
             <div className="rmv-box">
               <div className="rmv-grid2">
@@ -354,16 +359,16 @@ export default function RemodelValue() {
               </div>
               <p id="rmv-addr-help" className="rmv-small" style={{ marginTop: 12, marginBottom: 0 }}>
                 {zipState === "loading" && "Loading homes in this ZIP code…"}
-                {zipState === "missing" && "That ZIP code is not in King or Snohomish County's records. This calculator covers those two counties for now."}
+                {zipState === "missing" && "That ZIP code is not in King, Snohomish or Pierce County's records. This calculator covers those three counties for now."}
                 {zipState === "ok" && zipFile && !picked && addr.trim().length >= 3 && suggestions.length === 0 && "No single-family house matches that address. Check the spelling, or enter the details yourself."}
-                {zipState === "ok" && picked && picked !== "manual" && `Filled in from ${isSno ? "Snohomish" : "King"} County's public building record. Change anything that is out of date.`}
+                {zipState === "ok" && picked && picked !== "manual" && `Filled in from ${county} County's public building record. Change anything that is out of date.`}
                 {zipState === "ok" && !picked && (
                   <>
                     Not listed, a condo or townhouse, or rather not look it up?{" "}
                     <button type="button" className="rmv-link" onClick={startManual} disabled={!king}>Enter the details yourself</button>
                   </>
                 )}
-                {zipState === "idle" && "Condos, townhouses and houses outside King and Snohomish counties are not covered yet."}
+                {zipState === "idle" && "Condos, townhouses and houses outside King, Snohomish and Pierce counties are not covered yet."}
               </p>
             </div>
           </div>
@@ -385,7 +390,7 @@ export default function RemodelValue() {
                 )}
                 {hood && hood.n >= 10 && (
                   <p>
-                    {isSno ? "Your area" : `Your assessor neighborhood${hood.city ? ` in ${hood.city}` : ""}`}: median sale {fmtShort(hood.med)} across {hood.n} sales since {isSno ? "January 2024" : P.SALES_FROM}.
+                    {isSno ? "Your area" : `Your assessor neighborhood${hood.city ? ` in ${hood.city}` : ""}`}: median sale {fmtShort(hood.med)} across {hood.n} sales since {isSno ? "January 2024" : isPie ? P.PIE_SALES_FROM : P.SALES_FROM}.
                   </p>
                 )}
                 <div className="rmv-box">
@@ -409,7 +414,7 @@ export default function RemodelValue() {
                     <div>
                       <label className="rmv-label" htmlFor="f-grade">Quality grade</label>
                       <select id="f-grade" className="rmv-in" value={facts.grade} onChange={(e) => set("grade", Number(e.target.value))}>
-                        {Object.entries(gradeLabels).map(([g, l]) => <option key={g} value={g}>{isSno ? l : l}</option>)}
+                        {Object.entries(gradeLabels).map(([g, l]) => <option key={g} value={g}>{l}</option>)}
                       </select>
                     </div>
                     <div>
@@ -437,7 +442,11 @@ export default function RemodelValue() {
                     )}
                   </div>
                   <p className="rmv-small" style={{ marginTop: 14, marginBottom: 0 }}>
-                    {isSno ? (
+                    {isPie ? (
+                      <>
+                        <strong>Quality</strong> is the Pierce County Assessor's rating of construction and finishes, from Low to Excellent; most houses are Average, Fair plus or Average plus. <strong>Condition</strong> is upkeep; nearly every house is Average. If the county's record is older than your last remodel, update both.
+                      </>
+                    ) : isSno ? (
                       <>
                         <strong>Quality</strong> is the Snohomish County Assessor's rating of construction and finishes; most houses are Average or Average plus. <strong>Condition</strong> is rated for the house's age; most are "above normal for its age." If the county's record is older than your last remodel, update both.
                       </>
@@ -591,7 +600,7 @@ export default function RemodelValue() {
                         <div className="rmv-val-k">{done ? "Today, without the remodel" : "Today, as is"}</div>
                         <div className="rmv-val-n">{fmt(result.asIs)}</div>
                         {range(result.asIs)}
-                        <div className="rmv-val-s">{done ? "What the house would sell for today had the work not been done." : `Estimated from your house's details and ${isSno ? "Snohomish" : "King"} County sales.`}</div>
+                        <div className="rmv-val-s">{done ? "What the house would sell for today had the work not been done." : `Estimated from your house's details and ${county} County sales.`}</div>
                       </div>
                       <div className="rmv-val rmv-val-a">
                         <img src={artAfter} alt="" aria-hidden="true" width={88} height={88} className="rmv-valart" />
@@ -684,6 +693,9 @@ export default function RemodelValue() {
                 <strong>Snohomish County.</strong> Houses there are priced by a separate model built the same way from the Snohomish County Assessor's open data: {P.SNO_N_SALES} valid market sales of single-family homes from {P.SNO_SALES_FROM} to {P.SNO_SALES_THROUGH} (the county already excludes quit claims, estate sales and gifts), matched to each house's improvement record, with location by ZIP code and tax area. The county rates quality in words and condition relative to the house's age, and publishes no view or renovation-year field. Tested on sales it had not seen, half its estimates were within 7% of the price. Its sales file is updated quarterly, so its market level is {P.SNO_MARKET_MONTHS}. The full-renovation ceiling and spending table are the same as King County's.
               </p>
               <p>
+                <strong>Pierce County.</strong> Houses there are priced by a third model built the same way from the Pierce County Assessor-Treasurer's data downloads: {P.PIE_N_SALES} valid market sales of single-family homes from {P.PIE_SALES_FROM} to {P.PIE_SALES_THROUGH} (warranty and bargain-and-sale deeds the assessor marked valid, one parcel per sale), matched to each house's building record, with location by the assessor's neighborhood. The county rates quality in words from Low to Excellent and publishes view and waterfront ratings. Its "year remodeled" is a weighted year that moves for additions and partial work rather than the date of a renovation, so the calculator does not use it. Tested on sales it had not seen, half its estimates were within {P.PIE_MEDIAN_ERR} of the price and {P.PIE_WITHIN_20} within 20%. Pierce County does not publish ZIP codes for parcels, so each house is filed under the ZIP code whose center is nearest; near a ZIP boundary it is filed under both neighbors. The full-renovation ceiling and spending table are the same as King County's.
+              </p>
+              <p>
                 <strong>The model.</strong> It learns from those sales what each feature has added to price in each of the assessor's neighborhoods, then prices your house as it is and as it would be after the remodel. Estimates are set at the level of the most recent three months of sales ({P.MARKET_MONTHS}), so they reflect today's mortgage rates and season rather than an average of the whole two years.
               </p>
               <p>
@@ -696,7 +708,7 @@ export default function RemodelValue() {
                 <strong>The new-construction ceiling.</strong> However much is redone, an older house is not priced above the same house built new. In King County sales, remodeled houses over 30 years old sold for about what the same house brings as new construction, and rarely more. The broker's view stops there and the appraiser's view at 95% of it.
               </p>
               <p>
-                <strong>Mortgage rates.</strong> Higher rates shrink what a buyer can borrow for the same payment, so values fall; lower rates do the opposite. The values are built from sales that went under contract at about {BASE_RATE.King.toFixed(1)}% in King County ({P.MARKET_MONTHS} sales) and {BASE_RATE.Snohomish.toFixed(1)}% in Snohomish County, Freddie Mac's 30-year averages at the time. Enter today's rate and every value moves about {Math.round(RATE_SENSITIVITY * 100)}% per percentage point, up to 15%. That is a deliberately modest assumption: a one-point rise cuts a buyer's loan by about 11% at the same payment, but prices have historically moved much less, because sellers hold and inventory tightens.
+                <strong>Mortgage rates.</strong> Higher rates shrink what a buyer can borrow for the same payment, so values fall; lower rates do the opposite. The values are built from sales that went under contract at about {BASE_RATE.King.toFixed(1)}% in King County ({P.MARKET_MONTHS} sales), {BASE_RATE.Snohomish.toFixed(1)}% in Snohomish County and {BASE_RATE.Pierce.toFixed(1)}% in Pierce County, Freddie Mac's 30-year averages at the time. Enter today's rate and every value moves about {Math.round(RATE_SENSITIVITY * 100)}% per percentage point, up to 15%. That is a deliberately modest assumption: a one-point rise cuts a buyer's loan by about 11% at the same payment, but prices have historically moved much less, because sellers hold and inventory tightens.
               </p>
               <p>
                 <strong>Likely range.</strong> Every estimate misses some. Tested on King County sales it had not seen, 6 in 10 houses sold within the range shown under each value, so treat the range, not the single number, as the answer.
@@ -708,7 +720,7 @@ export default function RemodelValue() {
                 <strong>Why two values.</strong> Buyers pay extra for a house that is freshly remodeled and move-in ready, and they will pay for quality up to what the neighborhood's best houses offer. A refinance appraisal is more conservative: it credits measurable change and gives little for quality past the neighborhood's best houses (appraisers call this conformity). If you plan to refinance rather than sell, plan around the appraiser's view.
               </p>
               <p className="rmv-small">
-                Sources: King County Assessor public data downloads (sales, residential building and parcel records), downloaded October 13, 2026; Snohomish County Assessor open data (Recent Property Sales, Improvement Records, Assessor Roll), downloaded October 15, 2026. Lookups show only the public building record for an address; no owner names or individual sale prices are shown.
+                Sources: King County Assessor public data downloads (sales, residential building and parcel records), downloaded October 13, 2026; Snohomish County Assessor open data (Recent Property Sales, Improvement Records, Assessor Roll), downloaded October 15, 2026; Pierce County Assessor-Treasurer data mart (sale, improvement, improvement built-as, appraisal account and tax account files), downloaded October 15, 2026. Lookups show only the public building record for an address; no owner names or individual sale prices are shown.
               </p>
             </div>
           </div>

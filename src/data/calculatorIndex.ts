@@ -58,7 +58,7 @@ export const HOME_CALCULATORS: CalculatorEntry[] = [
   {
     href: "/whats-my-remodel-worth",
     title: "What's My Remodel Worth?",
-    blurb: "King and Snohomish County homeowners: look up your house, choose a remodel and its quality, and see a broker's and an appraiser's value afterward.",
+    blurb: "King, Snohomish and Pierce County homeowners: look up your house, enter what you would spend on each part, and see a broker's and an appraiser's value afterward.",
   },
 ];
 

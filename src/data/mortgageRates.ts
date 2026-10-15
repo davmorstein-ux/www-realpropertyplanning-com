@@ -24,7 +24,7 @@
  */
 export const CURRENT_RATE = 7.4;
 export const CURRENT_RATE_DATE = "October 15, 2026";
-export const BASE_RATE: Record<string, number> = { King: 6.6, Snohomish: 6.3 };
+export const BASE_RATE: Record<string, number> = { King: 6.6, Snohomish: 6.3, Pierce: 6.6 };
 export const RATE_SENSITIVITY = 0.03;
 export const RATE_ADJUST_CAP = 0.15;
 

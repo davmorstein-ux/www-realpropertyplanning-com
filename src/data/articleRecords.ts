@@ -52,6 +52,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-10-13",
     reviewed: "2026-10-15",
     changes: [
+      { date: "2026-10-15", text: "Added Pierce County: about 193,000 single-family homes for address lookup, priced by a separate model fitted on 14,662 Pierce County sales (October 2024 to September 2026); half its test estimates were within 6% of the price. Pierce County publishes no parcel ZIP codes, so each house is filed under the nearest ZIP code (and its neighbor near a boundary)." },
       { date: "2026-10-15", text: "Added a mortgage rate field. Values move about 3% per percentage point from the rate the underlying sales went under contract at (about 6.6% in King County, 6.3% in Snohomish County; Freddie Mac weekly averages). It starts at Freddie Mac's 7.40% of October 15, 2026." },
       { date: "2026-10-15", text: "Added spending categories for gutters and downspouts and for home theater, and split siding and exterior paint into two; roof no longer includes gutters." },
       { date: "2026-10-15", text: "Added Snohomish County: about 190,000 single-family homes for address lookup, priced by a separate model fitted on 14,385 Snohomish County sales (January 2024 to May 2026); half its test estimates were within 7% of the price." },
@@ -71,6 +72,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "Snohomish County Assessor open data: Recent Property Sales (downloaded October 15, 2026; sales January 2024 to May 2026)", href: "https://snohomishcountywa.gov/6206/GIS-Open-Data" },
       { label: "Snohomish County Assessor open data: Improvement Records (downloaded October 15, 2026)", href: "https://snohomish-county-open-data-portal-snoco-gis.hub.arcgis.com/documents/3c5edc985cec4fba8b3938d16ed1d3c3" },
       { label: "Snohomish County Assessor open data: Assessor Roll, CSV version (downloaded October 15, 2026)", href: "https://snohomishcountywa.gov/6206/GIS-Open-Data" },
+      { label: "Pierce County Assessor-Treasurer data mart: sale, improvement, improvement built-as, appraisal account and tax account files (downloaded October 15, 2026)", href: "https://www.piercecountywa.gov/736/Data-Downloads" },
     ],
   },
   /* Statute-based probate guides (Oct 11, 2026): src/data/statuteGuides.ts. Sources as verified by an independent reviewer. */

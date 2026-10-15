@@ -895,11 +895,11 @@ const RPPHomeV3 = () => {
                       <span style={{ color: "#272421" }}>What's My</span>{" "}
                       <span style={{ color: "#14283a" }}>Remodel Worth?</span>
                     </h3>
-                    <div className="rpp-coc-rangelabel" style={{ color: "#1B3A6B" }}>For King &amp; Snohomish County homeowners</div>
+                    <div className="rpp-coc-rangelabel" style={{ color: "#1B3A6B" }}>For King, Snohomish &amp; Pierce County homeowners</div>
                     <span className="rpp-coc-cta">Try the calculator</span>
                   </div>
                   <ul className="rpp-coc-options">
-                    {["Look up your house by address", "Choose what you would remodel, from economy to luxury", "See two values: a broker's and an appraiser's", "Built from King and Snohomish County home sales"].map((line) => (
+                    {["Look up your house by address", "Enter what you would spend (or spent) on each part", "See two values: a broker's and an appraiser's", "Built from King, Snohomish and Pierce County home sales"].map((line) => (
                       <li key={line}>
                         <span className="rpp-coc-opt-name">{line}</span>
                       </li>

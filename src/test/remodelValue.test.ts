@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { resolve } from "node:path";
-import { EMPTY_SCOPE, EMPTY_SPEND, estimate, estimateSpend, gradeAfter, matchAddresses, rangeOf, renoCeilings, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
+import { countyOfKey, EMPTY_SCOPE, EMPTY_SPEND, estimate, estimateSpend, gradeAfter, matchAddresses, rangeOf, renoCeilings, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
 import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
 import { SPEND_CATEGORIES } from "@/data/remodelCosts";
 import { BASE_RATE, rateFactor } from "@/data/mortgageRates";
@@ -165,6 +165,32 @@ describe("remodel value model", () => {
       expect(base.asIs).toBeLessThan(1_600_000);
       const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 17000, extpaint: 8000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
       const r = estimateSpend(sno, h, { ...EMPTY_SPEND, spent: full })!;
+      expect(r.broker / r.unrenovated).toBeLessThanOrEqual(r.ceilingBroker + 0.001);
+      expect(r.broker).toBeGreaterThan(r.asIs);
+    });
+  });
+
+  describe("Pierce County", () => {
+    const pie = JSON.parse(readFileSync(`${dir}/model-pie.json`, "utf8")) as RemodelModel;
+    const house = (zip: string) => ({ ...mercer, sk: pie.zipDefault[zip], above: 1900, finBsmt: 0, unfinBsmt: 0, beds: 3, baths: 2.5, lot: 7000, yrBuilt: 1995, yrRenovated: 0, cond: 4, grade: 7, views: 0, waterfront: false, garage: true, fp: 1 });
+    it("has its own model with keys that start with P, and the page picks it from the key", () => {
+      expect(pie.county).toBe("Pierce");
+      expect(Object.keys(pie.subs).every((k) => k.startsWith("P"))).toBe(true);
+      expect(pie.gradeLabels?.["7"]).toBe("Average");
+      expect(pie.noRenovationYear).toBe(true);
+      expect(countyOfKey("P101114")).toBe("Pierce");
+      expect(countyOfKey("S123")).toBe("Snohomish");
+      expect(countyOfKey("38-10")).toBe("King");
+    });
+    it("prices an average 1995 Puyallup two-story in a believable range, and Gig Harbor above Tacoma's south end", () => {
+      const puy = estimateSpend(pie, house("98374"), EMPTY_SPEND)!;
+      expect(puy.asIs).toBeGreaterThan(450_000);
+      expect(puy.asIs).toBeLessThan(800_000);
+      const gig = estimateSpend(pie, house("98335"), EMPTY_SPEND)!;
+      const tac = estimateSpend(pie, house("98404"), EMPTY_SPEND)!;
+      expect(gig.asIs).toBeGreaterThan(tac.asIs);
+      const full = { kitchen: 40000, baths: 30000, flooring: 15000, paint: 6000, finishes: 9000, exterior: 12000, extpaint: 6000, roof: 16000, windows: 15000, systems: 15000, landscaping: 9000 };
+      const r = estimateSpend(pie, house("98374"), { ...EMPTY_SPEND, spent: full })!;
       expect(r.broker / r.unrenovated).toBeLessThanOrEqual(r.ceilingBroker + 0.001);
       expect(r.broker).toBeGreaterThan(r.asIs);
     });

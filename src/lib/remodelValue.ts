@@ -518,21 +518,33 @@ async function loadZipFile(path: string): Promise<ZipFile | null> {
 }
 
 /**
- * Homes in a ZIP code from King County (/data/remodel/zip) and Snohomish County
- * (/data/remodel/zip-sno), merged; a few ZIP codes cross the county line. Snohomish
- * neighborhood keys start with "S", so each house is priced with its own county's model.
+ * Homes in a ZIP code from King County (/data/remodel/zip), Snohomish County
+ * (/data/remodel/zip-sno) and Pierce County (/data/remodel/zip-pie), merged; a few ZIP
+ * codes cross a county line. Snohomish neighborhood keys start with "S" and Pierce keys
+ * with "P", so each house is priced with its own county's model.
  */
 export async function loadZip(zip: string): Promise<ZipFile> {
-  const [king, sno] = await Promise.all([
-    loadZipFile(`/data/remodel/zip/${zip}.bin`).catch(() => null),
-    loadZipFile(`/data/remodel/zip-sno/${zip}.bin`).catch(() => null),
-  ]);
-  if (!king && !sno) throw new Error("not found");
-  if (!king || !sno) return (king ?? sno)!;
-  const off = king.keys.length;
-  const homes = [...king.homes, ...sno.homes.map((r) => [r[0], r[1] + off, ...r.slice(2)] as ZipRow)].sort((x, y) => (x[0] < y[0] ? -1 : 1));
-  return { keys: [...king.keys, ...sno.keys], homes };
+  const files = (
+    await Promise.all(
+      ["zip", "zip-sno", "zip-pie"].map((d) => loadZipFile(`/data/remodel/${d}/${zip}.bin`).catch(() => null)),
+    )
+  ).filter((f): f is ZipFile => !!f);
+  if (!files.length) throw new Error("not found");
+  if (files.length === 1) return files[0];
+  const keys: string[] = [];
+  const homes: ZipRow[] = [];
+  for (const f of files) {
+    const off = keys.length;
+    keys.push(...f.keys);
+    homes.push(...f.homes.map((r) => [r[0], r[1] + off, ...r.slice(2)] as ZipRow));
+  }
+  homes.sort((x, y) => (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0));
+  return { keys, homes };
 }
+
+/** Which county's model prices a neighborhood key: "S…" Snohomish, "P…" Pierce, otherwise King. */
+export const countyOfKey = (sk: string): "King" | "Snohomish" | "Pierce" =>
+  sk.startsWith("S") ? "Snohomish" : sk.startsWith("P") ? "Pierce" : "King";
 
 /** One row of a ZIP file, in its column order. */
 export type ZipRow = [string, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number];

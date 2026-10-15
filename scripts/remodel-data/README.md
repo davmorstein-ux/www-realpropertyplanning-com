@@ -36,3 +36,17 @@ Downloads (Snohomish County GIS Open Data, https://snohomishcountywa.gov/6206/GI
 `python3 -I scripts/remodel-data/sno_build.py RAW_DIR public/data/remodel`
 writes `model-sno.json` and `zip-sno/<zip>.bin`. Update the SNO_* figures in `src/data/remodelPage.ts`.
 RCW 42.56.070(8): these data may not be used to compile lists of individuals for commercial purposes.
+
+## Pierce County (added Oct 15, 2026)
+
+Downloads (Pierce County Assessor-Treasurer, https://www.piercecountywa.gov/736/Data-Downloads, "Data Mart"):
+`sale`, `improvement`, `improvement_builtas`, `appraisal_account` and `tax_account` (zips of
+pipe-delimited .txt files with no header row; the layouts are on the same page). Unzip into one folder.
+Do not use the Tax Description file or any file with owner names; `sale.txt` has grantor and grantee
+names, which the script never writes anywhere.
+
+`python3 -I scripts/remodel-data/pie_build.py RAW_DIR public/data/remodel`
+writes `model-pie.json` and `zip-pie/<zip>.bin`, and prints the hold-out accuracy. Pierce publishes
+no ZIP code for parcels, so the script places each house by its latitude and longitude in the
+nearest ZIP code (pip package `zipcodes`), and in the second-nearest too when it is almost as close.
+Update the PIE_* figures in `src/data/remodelPage.ts` and `BASE_RATE.Pierce` in `src/data/mortgageRates.ts`.
