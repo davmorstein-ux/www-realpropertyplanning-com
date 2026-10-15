@@ -96,6 +96,11 @@ const CSS = `
 .rmv .rmv-th-sub { font-weight: 500; font-size: 13px; color: #4a443d; }
 .rmv td.rmv-over { color: #8a3b12; font-weight: 700; }
 .rmv tr.rmv-total th, .rmv tr.rmv-total td { font-weight: 700; background: #faf8f4; }
+.rmv .rmv-totalbox { background: #fff; border: 2px solid ${NAVY}; border-radius: 12px; padding: 16px 20px; margin: 0 0 26px; }
+.rmv .rmv-totalrow { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.rmv .rmv-totallabel { font-family: ${FONT}; font-size: 20px !important; font-weight: 700; color: ${INK}; }
+.rmv .rmv-totalnum { font-family: ${FONT}; font-size: clamp(28px, 4vw, 36px) !important; font-weight: 700; color: ${NAVY}; font-variant-numeric: tabular-nums; }
+.rmv .rmv-totalparts { font-family: ${FONT}; font-size: 15.5px !important; color: #4a443d; line-height: 1.5; margin-top: 6px; }
 .rmv .rmv-toggle { display: flex; gap: 8px; align-items: center; min-height: 46px; font-size: 17px; }
 .rmv .rmv-toggle input { width: 20px; height: 20px; }
 `;
@@ -432,7 +437,7 @@ export default function RemodelValue() {
                           aria-valuetext={fmt(v)}
                         />
                         <div className="rmv-ex">
-                          {c.hint}
+                          {c.id === "baths" ? <>All bathrooms together: for $8,000 on each of 3 baths, enter $24,000</> : c.hint}
                           {cr && <> · A complete job on this house here: about {fmt(cr.fullJob)}</>}
                         </div>
                       </div>
@@ -465,6 +470,25 @@ export default function RemodelValue() {
             {/* ---------- results ---------- */}
             <div style={{ padding: "30px 0 40px", background: "#faf8f4", marginTop: 26, borderTop: "1px solid #e6e0d6" }} aria-live="polite">
               <div className="rmv-wrap">
+                {/* Total invested (owner, Oct 15, 2026): directly above the values, so a visitor can check the
+                    categories add up to what they know they spent. */}
+                {(() => {
+                  const parts = SPEND_CATEGORIES.map((c) => ({ label: c.label, v: scope.spent[c.id] ?? 0 })).filter((x) => x.v > 0);
+                  const total = parts.reduce((t, x) => t + x.v, 0);
+                  return (
+                    <div className="rmv-totalbox">
+                      <div className="rmv-totalrow">
+                        <span className="rmv-totallabel">{done ? "Total invested in updates" : "Total planned for updates"}</span>
+                        <span className="rmv-totalnum">{fmt(total)}</span>
+                      </div>
+                      <div className="rmv-totalparts">
+                        {parts.length
+                          ? parts.map((x) => `${x.label} ${fmt(x.v)}`).join(" + ")
+                          : "Move the sliders above. The total should match what you know you spent."}
+                      </div>
+                    </div>
+                  );
+                })()}
                 <h2 className="rmv-h2">{done ? "What your remodel is worth today" : "What it could be worth"}</h2>
                 {!result && <p>Enter the living area to see an estimate.</p>}
                 {result && (
