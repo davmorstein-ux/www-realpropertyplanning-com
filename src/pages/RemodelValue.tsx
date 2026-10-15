@@ -481,14 +481,14 @@ export default function RemodelValue() {
                         <div className="rmv-val-n">{fmt(result.appraiser)}</div>
                         {anyScope && range(result.appraiser)}
                         <div className="rmv-val-d" style={{ color: "#0f5f57" }}>{anyScope ? `${signed(result.appraiser - result.asIs)} added` : "Enter spending above"}</div>
-                        <div className="rmv-val-s">What a refinance appraisal is likely to support: up to about 20% over the house unrenovated.</div>
+                        <div className="rmv-val-s">What a refinance appraisal is likely to support: up to about {Math.round((result.ceilingAppraiser - 1) * 100)}% over the house unrenovated in this neighborhood.</div>
                       </div>
                       <div className="rmv-val rmv-val-b">
                         <div className="rmv-val-k">{done ? "Broker's view, with it" : "Broker's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.broker)}</div>
                         {anyScope && range(result.broker)}
                         <div className="rmv-val-d" style={{ color: NAVY }}>{anyScope ? `${signed(result.broker - result.asIs)} added` : "Enter spending above"}</div>
-                        <div className="rmv-val-s">What buyers have paid for houses like it, renovated: up to about 30% over the house unrenovated. The best case if you sell.</div>
+                        <div className="rmv-val-s">What buyers have paid for houses like it, renovated: up to about {Math.round((result.ceilingBroker - 1) * 100)}% over the house unrenovated in this neighborhood. The best case if you sell.</div>
                       </div>
                     </div>
 
@@ -538,7 +538,7 @@ export default function RemodelValue() {
                     {result.nearCeiling && (
                       <div className="rmv-warn">
                         <p style={{ marginBottom: 0 }}>
-                          <strong>At about the most a full renovation adds.</strong> Unrenovated, this house would sell for about {fmt(result.unrenovated)}. In King County sales a complete renovation has added up to about 30% to an unrenovated house, and an appraiser credits about 20%, however much was spent.
+                          <strong>At about the most a full renovation adds.</strong> Unrenovated, this house would sell for about {fmt(result.unrenovated)}. In this neighborhood's price range a complete renovation has added up to about {Math.round((result.ceilingBroker - 1) * 100)}% to an unrenovated house in King County sales, and an appraiser credits about {Math.round((result.ceilingAppraiser - 1) * 100)}%, however much was spent.
                         </p>
                       </div>
                     )}
@@ -568,7 +568,7 @@ export default function RemodelValue() {
                 <strong>Your spending.</strong> Each category carries a share of what a full renovation adds (the kitchen the most, about a quarter) and has a "complete job" cost for a house of your size in your neighborhood. Spending up to that cost earns most of the category's value; spending past it earns less and less. That is how the table shows which spending paid off. The shares and costs are the site author's working estimates for King County and will be refined.
               </p>
               <p>
-                <strong>The full-renovation ceiling.</strong> A complete remodel lifts a house by a limited amount, measured from what the same house sells for unrenovated. In King County sales, houses resold after a recorded renovation gained a median 25% over the market in Kirkland's 98034 and up to about a third countywide; a 98034 split entry that sold for $985,000 unrenovated compares with a similar fully renovated one at $1,315,000. So the broker's view stops at 30% above the unrenovated value and the appraiser's view at 20%. Added square feet, baths and bedrooms are priced on top.
+                <strong>The full-renovation ceiling.</strong> A complete remodel lifts a house by a limited amount, measured from what the same house sells for unrenovated. In King County sales, houses resold after a recorded renovation gained a median 25% over the market in Kirkland's 98034 and up to about a third countywide; a 98034 split entry that sold for $985,000 unrenovated compares with a similar fully renovated one at $1,315,000. So in a neighborhood like that the broker's view stops at 30% above the unrenovated value and the appraiser's view at 20%. The ceiling rises with the neighborhood's price level, because King County buyers have paid a larger renovation premium in pricier neighborhoods: about 31% under a $700,000 neighborhood median, 36% around $1 million, and 43% over $1.7 million in the sales model. So it runs from about 26% / 17% in the least expensive neighborhoods to 36% / 24% in the most expensive. Added square feet, baths and bedrooms are priced on top.
               </p>
               <p>
                 <strong>The new-construction ceiling.</strong> However much is redone, an older house is not priced above the same house built new. In King County sales, remodeled houses over 30 years old sold for about what the same house brings as new construction, and rarely more. The broker's view stops there and the appraiser's view at 95% of it.

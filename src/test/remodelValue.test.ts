@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { resolve } from "node:path";
-import { EMPTY_SCOPE, EMPTY_SPEND, estimate, estimateSpend, gradeAfter, matchAddresses, rangeOf, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
+import { EMPTY_SCOPE, EMPTY_SPEND, estimate, estimateSpend, gradeAfter, matchAddresses, rangeOf, renoCeilings, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
 import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
 import { SPEND_CATEGORIES } from "@/data/remodelCosts";
 
@@ -101,8 +101,9 @@ describe("remodel value model", () => {
       expect(r.unrenovated).toBeGreaterThan(850_000);
       expect(r.unrenovated).toBeLessThan(1_150_000);
       expect(r.broker / r.unrenovated).toBeGreaterThan(1.2);
-      expect(r.broker / r.unrenovated).toBeLessThanOrEqual(1.301);
-      expect(r.appraiser / r.unrenovated).toBeLessThanOrEqual(1.201);
+      expect(r.broker / r.unrenovated).toBeLessThanOrEqual(r.ceilingBroker + 0.001);
+      expect(r.appraiser / r.unrenovated).toBeLessThanOrEqual(r.ceilingAppraiser + 0.001);
+      expect(r.broker).toBeLessThan(1_400_000); // the renovated comparable sold for $1,315,000
       expect(r.appraiser).toBeLessThanOrEqual(r.broker);
     });
     it("spending more always helps a little less: doubling a kitchen adds far less than double", () => {
@@ -118,6 +119,12 @@ describe("remodel value model", () => {
       const r = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full })!;
       const sum = r.categories.reduce((t, c) => t + c.broker, 0);
       expect(Math.abs(sum - (r.broker - r.asIs))).toBeLessThan(10_000);
+    });
+    it("the full-renovation ceiling rises with the neighborhood's price level", () => {
+      expect(renoCeilings(550_000).broker).toBeLessThan(renoCeilings(1_050_000).broker);
+      expect(renoCeilings(1_050_000).broker).toBeCloseTo(1.3, 3);
+      expect(renoCeilings(1_050_000).appraiser).toBeCloseTo(1.2, 3);
+      expect(renoCeilings(3_000_000).broker).toBeGreaterThan(1.33);
     });
     it("older work earns less", () => {
       const recent = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full, doneYear: 2022 })!;

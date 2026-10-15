@@ -129,6 +129,34 @@ export const NEW_BUILD_CAP_APPRAISER = 0.95;
  */
 export const FULL_RENO_BROKER = 1.3;
 export const FULL_RENO_APPRAISER = 1.2;
+
+/**
+ * CEILING BY NEIGHBORHOOD PRICE LEVEL (Oct 15, 2026, owner: "depending on the neighborhood the
+ * contribution of value ... should change"). Fitting the sales model separately for five
+ * neighborhood price tiers (assessor neighborhood median sale), the premium for renovating an
+ * average-condition house (condition 3 -> 4.5 plus the recent-renovation premium) was:
+ *   under $700K 31% · $700K-900K 35% · $900K-1.2M 36% · $1.2M-1.7M 41% · over $1.7M 43%
+ * (King County single-family sales Oct 2024-Sept 2026). The ceilings keep the owner-checked 30% /
+ * 20% at the $900K-1.2M tier (his 98034 sales) and scale with those ratios between tiers.
+ */
+const TIER_PREMIUM: [number, number][] = [
+  [600000, 31],
+  [800000, 35],
+  [1050000, 36],
+  [1450000, 41],
+  [2200000, 43],
+];
+export function renoCeilings(neighborhoodMedian: number | undefined): { broker: number; appraiser: number } {
+  const x = Math.log(neighborhoodMedian && neighborhoodMedian > 0 ? neighborhoodMedian : 1050000);
+  const pts = TIER_PREMIUM.map(([m, v]) => [Math.log(m), v] as const);
+  let v = pts[0][1];
+  if (x >= pts[pts.length - 1][0]) v = pts[pts.length - 1][1];
+  else
+    for (let i = 0; i < pts.length - 1; i++)
+      if (x >= pts[i][0] && x <= pts[i + 1][0]) v = pts[i][1] + ((x - pts[i][0]) / (pts[i + 1][0] - pts[i][0])) * (pts[i + 1][1] - pts[i][1]);
+  const ratio = v / 36;
+  return { broker: 1 + (FULL_RENO_BROKER - 1) * ratio, appraiser: 1 + (FULL_RENO_APPRAISER - 1) * ratio };
+}
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 interface Features {
@@ -352,6 +380,9 @@ export interface SpendResult {
   alreadyUpdated: number;
   /** True when the spending is past the point where more of it adds meaningful value. */
   nearCeiling: boolean;
+  /** This neighborhood's full-renovation ceilings (multiples of the unrenovated value). */
+  ceilingBroker: number;
+  ceilingAppraiser: number;
 }
 
 /** Spending at the full-job cost earns 90% of a category's value: 1 − e^(−CURVE) = 0.9. */
@@ -404,8 +435,9 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
     const cap = Math.max(Math.exp(lpNew) * factor, v.before);
     return { ...v, after: Math.min(v.after, cap) };
   };
-  const B = capView(view(FULL_RENO_BROKER), NEW_BUILD_CAP_BROKER);
-  const A = capView(view(FULL_RENO_APPRAISER), NEW_BUILD_CAP_APPRAISER);
+  const ceil = renoCeilings(m.subs[h.sk]?.med);
+  const B = capView(view(ceil.broker), NEW_BUILD_CAP_BROKER);
+  const A = capView(view(ceil.appraiser), NEW_BUILD_CAP_APPRAISER);
 
   // Split each view's gain from the spending across categories by what each earned.
   const gainB = Math.max(0, B.after - B.before);
@@ -413,7 +445,7 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
   const round = (v: number) => Math.round(v / 1000) * 1000;
   const categories: CategoryResult[] = cats.map(({ c, spent, k, earned }) => {
     // Most this category can add (broker), and where its last dollar still returns 50 cents.
-    const maxValue = B.before * (Math.pow(FULL_RENO_BROKER, (1 - B.used) * c.share * age) - 1);
+    const maxValue = B.before * (Math.pow(ceil.broker, (1 - B.used) * c.share * age) - 1);
     const r = (maxValue * CURVE) / k; // return on the first dollar
     const paysBackTo = r > 0.5 ? Math.round(((k / CURVE) * Math.log(r / 0.5)) / 500) * 500 : 0;
     return {
@@ -433,7 +465,9 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
     unrenovated: round(Math.exp(lpU0)),
     totalSpent: cats.reduce((t, x) => t + x.spent, 0),
     categories,
-    addedSpace: round(B.before - Math.exp(lpU0 + Math.log(FULL_RENO_BROKER) * B.used)),
+    addedSpace: round(B.before - Math.exp(lpU0 + Math.log(ceil.broker) * B.used)),
+    ceilingBroker: ceil.broker,
+    ceilingAppraiser: ceil.appraiser,
     alreadyUpdated: B.used,
     nearCeiling: score > 0.85,
   };
