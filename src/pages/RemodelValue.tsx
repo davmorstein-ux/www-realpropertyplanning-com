@@ -10,6 +10,7 @@ import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { REMODEL_FAQS, REMODEL_PAGE as P } from "@/data/remodelPage";
 import { CONDITION_LABELS, GRADE_LABELS } from "@/data/remodelTiers";
 import { SLIDER_MAX, SLIDER_STEP, SPEND_CATEGORIES } from "@/data/remodelCosts";
+import { BASE_RATE, CURRENT_RATE, CURRENT_RATE_DATE, RATE_SENSITIVITY, rateFactor } from "@/data/mortgageRates";
 /* Category icons and before/after art supplied by the owner, Oct 15, 2026. */
 import icoKitchen from "@/assets/remodel/kitchen.webp";
 import icoBaths from "@/assets/remodel/baths.webp";
@@ -134,6 +135,10 @@ const CSS = `
 .rmv .rmv-th-sub { font-weight: 500; font-size: 13px; color: #4a443d; }
 .rmv td.rmv-over { color: #8a3b12; font-weight: 700; }
 .rmv tr.rmv-total th, .rmv tr.rmv-total td { font-weight: 700; background: #faf8f4; }
+.rmv .rmv-ratebox { background: #fff; border: 1px solid #ddd8cf; border-radius: 12px; padding: 14px 20px; margin: 0 0 14px; }
+.rmv .rmv-raterow { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.rmv .rmv-rateinput { display: flex; align-items: center; gap: 6px; font-size: 20px; font-weight: 700; }
+.rmv .rmv-rateinput .rmv-in { width: 110px; text-align: right; font-size: 20px; font-weight: 700; }
 .rmv .rmv-totalbox { background: #fff; border: 2px solid ${NAVY}; border-radius: 12px; padding: 16px 20px; margin: 0 0 26px; }
 .rmv .rmv-totalrow { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .rmv .rmv-totallabel { font-family: ${FONT}; font-size: 20px !important; font-weight: 700; color: ${INK}; }
@@ -195,6 +200,8 @@ export default function RemodelValue() {
   /* Oct 14, 2026: "Already remodeled" mode. The house facts then describe the house before the work. */
   const [mode, setMode] = useState<"plan" | "done">("plan");
   const [doneYear, setDoneYear] = useState(2020);
+  /* Oct 15, 2026 (owner): the visitor's 30-year mortgage rate moves every value. */
+  const [rate, setRate] = useState(CURRENT_RATE);
   const done = mode === "done";
 
   useEffect(() => {
@@ -248,9 +255,11 @@ export default function RemodelValue() {
   const isSno = !!model?.county;
   const gradeLabels = model?.gradeLabels ?? GRADE_LABELS;
   const condLabels = model?.condLabels ?? CONDITION_LABELS;
+  const baseRate = BASE_RATE[model?.county ?? "King"] ?? BASE_RATE.King;
+  const rf = rateFactor(rate, baseRate);
   const result = useMemo(
-    () => (model && facts ? estimateSpend(model, facts, done ? { ...scope, doneYear: doneYear > 1900 ? doneYear : undefined } : scope) : null),
-    [model, facts, scope, done, doneYear],
+    () => (model && facts ? estimateSpend(model, facts, { ...(done ? { ...scope, doneYear: doneYear > 1900 ? doneYear : undefined } : scope), rateFactor: rf }) : null),
+    [model, facts, scope, done, doneYear, rf],
   );
   const range = (v: number) => {
     const r = model ? rangeOf(model, v) : null;
@@ -532,6 +541,27 @@ export default function RemodelValue() {
             {/* ---------- results ---------- */}
             <div style={{ padding: "30px 0 40px", background: "#faf8f4", marginTop: 26, borderTop: "1px solid #e6e0d6" }} aria-live="polite">
               <div className="rmv-wrap">
+                {/* Mortgage rate (owner, Oct 15, 2026): every value moves with it. */}
+                <div className="rmv-ratebox">
+                  <div className="rmv-raterow">
+                    <label className="rmv-totallabel" htmlFor="rmv-rate">30-year mortgage rate</label>
+                    <div className="rmv-rateinput">
+                      <input id="rmv-rate" className="rmv-in" type="number" inputMode="decimal" step={0.05} min={1} max={15} value={Number.isFinite(rate) ? rate : ""} onChange={(e) => setRate(e.target.value === "" ? NaN : Number(e.target.value))} />
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div className="rmv-totalparts">
+                    Freddie Mac's national average was {CURRENT_RATE.toFixed(2)}% on {CURRENT_RATE_DATE}; enter today's rate if it has changed. The sales behind these values went under contract at about {baseRate.toFixed(1)}%.{" "}
+                    {Math.abs(rf - 1) < 0.0005 ? (
+                      <>No rate adjustment.</>
+                    ) : (
+                      <strong>
+                        Values {rf < 1 ? "lowered" : "raised"} {Math.abs((rf - 1) * 100).toFixed(1)}% for a rate {Math.abs(rate - baseRate).toFixed(2)} points {rate > baseRate ? "higher" : "lower"}.
+                      </strong>
+                    )}{" "}
+                    Higher rates lower what buyers can pay; each point moves values about {Math.round(RATE_SENSITIVITY * 100)}% here.
+                  </div>
+                </div>
                 {/* Total invested (owner, Oct 15, 2026): directly above the values, so a visitor can check the
                     categories add up to what they know they spent. */}
                 {(() => {
@@ -664,6 +694,9 @@ export default function RemodelValue() {
               </p>
               <p>
                 <strong>The new-construction ceiling.</strong> However much is redone, an older house is not priced above the same house built new. In King County sales, remodeled houses over 30 years old sold for about what the same house brings as new construction, and rarely more. The broker's view stops there and the appraiser's view at 95% of it.
+              </p>
+              <p>
+                <strong>Mortgage rates.</strong> Higher rates shrink what a buyer can borrow for the same payment, so values fall; lower rates do the opposite. The values are built from sales that went under contract at about {BASE_RATE.King.toFixed(1)}% in King County ({P.MARKET_MONTHS} sales) and {BASE_RATE.Snohomish.toFixed(1)}% in Snohomish County, Freddie Mac's 30-year averages at the time. Enter today's rate and every value moves about {Math.round(RATE_SENSITIVITY * 100)}% per percentage point, up to 15%. That is a deliberately modest assumption: a one-point rise cuts a buyer's loan by about 11% at the same payment, but prices have historically moved much less, because sellers hold and inventory tightens.
               </p>
               <p>
                 <strong>Likely range.</strong> Every estimate misses some. Tested on King County sales it had not seen, 6 in 10 houses sold within the range shown under each value, so treat the range, not the single number, as the answer.

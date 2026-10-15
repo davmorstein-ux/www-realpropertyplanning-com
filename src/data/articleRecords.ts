@@ -52,6 +52,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-10-13",
     reviewed: "2026-10-15",
     changes: [
+      { date: "2026-10-15", text: "Added a mortgage rate field. Values move about 3% per percentage point from the rate the underlying sales went under contract at (about 6.6% in King County, 6.3% in Snohomish County; Freddie Mac weekly averages). It starts at Freddie Mac's 7.40% of October 15, 2026." },
       { date: "2026-10-15", text: "Added spending categories for gutters and downspouts and for home theater, and split siding and exterior paint into two; roof no longer includes gutters." },
       { date: "2026-10-15", text: "Added Snohomish County: about 190,000 single-family homes for address lookup, priced by a separate model fitted on 14,385 Snohomish County sales (January 2024 to May 2026); half its test estimates were within 7% of the price." },
       { date: "2026-10-15", text: "Complete-job costs now scale with the house's own value, so the same dollars count for less in an expensive house, and value builds more steadily with spending instead of crediting the first dollars at several times their cost." },
@@ -66,6 +67,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "King County Assessor data download: Real Property Sales (downloaded October 13, 2026; sales through September 30, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
       { label: "King County Assessor data download: Residential Building (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
       { label: "King County Assessor data download: Parcel (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
+      { label: "Freddie Mac Primary Mortgage Market Survey, weekly 30-year fixed averages (read October 15, 2026)", href: "https://www.freddiemac.com/pmms/archive" },
       { label: "Snohomish County Assessor open data: Recent Property Sales (downloaded October 15, 2026; sales January 2024 to May 2026)", href: "https://snohomishcountywa.gov/6206/GIS-Open-Data" },
       { label: "Snohomish County Assessor open data: Improvement Records (downloaded October 15, 2026)", href: "https://snohomish-county-open-data-portal-snoco-gis.hub.arcgis.com/documents/3c5edc985cec4fba8b3938d16ed1d3c3" },
       { label: "Snohomish County Assessor open data: Assessor Roll, CSV version (downloaded October 15, 2026)", href: "https://snohomishcountywa.gov/6206/GIS-Open-Data" },

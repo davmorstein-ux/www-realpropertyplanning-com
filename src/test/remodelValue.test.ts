@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 import { EMPTY_SCOPE, EMPTY_SPEND, estimate, estimateSpend, gradeAfter, matchAddresses, rangeOf, renoCeilings, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
 import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
 import { SPEND_CATEGORIES } from "@/data/remodelCosts";
+import { BASE_RATE, rateFactor } from "@/data/mortgageRates";
 
 /** What's My Remodel Worth? (src/lib/remodelValue.ts). */
 const dir = resolve(__dirname, "../../public/data/remodel");
@@ -167,6 +168,17 @@ describe("remodel value model", () => {
       expect(r.broker / r.unrenovated).toBeLessThanOrEqual(r.ceilingBroker + 0.001);
       expect(r.broker).toBeGreaterThan(r.asIs);
     });
+  });
+
+  it("mortgage rates: higher rates lower every value, lower rates raise them, capped at 15%", () => {
+    const split = { ...mercer, sk: model.zipDefault["98034"], above: 1150, finBsmt: 850, unfinBsmt: 150, lot: 8500, yrBuilt: 1977, grade: 7 };
+    const at = (r: number) => estimateSpend(model, split, { ...EMPTY_SPEND, spent: { kitchen: 50000 }, rateFactor: rateFactor(r, BASE_RATE.King) })!;
+    const base = at(BASE_RATE.King), high = at(BASE_RATE.King + 1), low = at(BASE_RATE.King - 1);
+    expect(high.asIs).toBeLessThan(base.asIs);
+    expect(low.broker).toBeGreaterThan(base.broker);
+    expect(high.asIs / base.asIs).toBeCloseTo(0.97, 2);
+    expect(rateFactor(20, BASE_RATE.King)).toBeCloseTo(0.85, 6);
+    expect(rateFactor(NaN, BASE_RATE.King)).toBe(1);
   });
 
   it("the likely range brackets the estimate", () => {

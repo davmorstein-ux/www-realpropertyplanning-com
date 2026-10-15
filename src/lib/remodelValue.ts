@@ -369,6 +369,8 @@ export interface SpendInput {
   addGarage: boolean;
   /** "Already remodeled" mode: the year the work was finished. */
   doneYear?: number;
+  /** Mortgage-rate multiplier for every value (src/data/mortgageRates.ts rateFactor); 1 = none. */
+  rateFactor?: number;
 }
 
 export const EMPTY_SPEND: SpendInput = { spent: {}, addAbove: 0, addFinBsmt: 0, addBaths: 0, addBeds: 0, addFp: 0, addGarage: false };
@@ -481,14 +483,15 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
       paysBackTo,
     };
   });
+  const rf = s.rateFactor && s.rateFactor > 0 ? s.rateFactor : 1;
   return {
-    asIs: round(Math.exp(lp0)),
-    broker: round(B.after),
-    appraiser: round(Math.min(A.after, B.after)),
-    unrenovated: round(Math.exp(lpU0)),
+    asIs: round(Math.exp(lp0) * rf),
+    broker: round(B.after * rf),
+    appraiser: round(Math.min(A.after, B.after) * rf),
+    unrenovated: round(Math.exp(lpU0) * rf),
     totalSpent: cats.reduce((t, x) => t + x.spent, 0),
-    categories,
-    addedSpace: round(B.before - Math.exp(lpU0 + Math.log(ceil.broker) * B.used)),
+    categories: rf === 1 ? categories : categories.map((c) => ({ ...c, broker: Math.round((c.broker * rf) / 500) * 500, appraiser: Math.round((c.appraiser * rf) / 500) * 500 })),
+    addedSpace: round((B.before - Math.exp(lpU0 + Math.log(ceil.broker) * B.used)) * rf),
     ceilingBroker: ceil.broker,
     ceilingAppraiser: ceil.appraiser,
     alreadyUpdated: B.used,
