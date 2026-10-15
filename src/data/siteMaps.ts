@@ -214,7 +214,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
     groups: [
       {
         label: "For homeowners",
-        links: [{ title: "What's My Remodel Worth? (King County)", href: "/whats-my-remodel-worth" }],
+        links: [{ title: "What's My Remodel Worth? (King & Snohomish counties)", href: "/whats-my-remodel-worth" }],
       },
       {
         label: "Cost of care",

@@ -1167,7 +1167,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: REMODEL_PAGE.TITLE,
     quickAnswerQ: "How much value does a remodel add to a King County house?",
     quickAnswerA: REMODEL_PAGE.SHORT_ANSWER,
-    intro: "A free calculator for King County homeowners. Look up your house by address or enter its details, choose which parts you would remodel and at what quality (economy, standard, premium or luxury), and see two values afterward: a broker's view of what buyers have paid, and an appraiser's view of what a refinance appraisal is likely to support. Built from King County Assessor sales and building records.",
+    intro: "A free calculator for King and Snohomish County homeowners. Look up your house by address or enter its details, enter what you would spend (or spent) on each part of the house, and see two values afterward plus which spending paid off: a broker's view of what buyers have paid, and an appraiser's view of what a refinance appraisal is likely to support. Built from King County and Snohomish County Assessor sales and building records.",
     sections: [
       "How it works — The King County Assessor publishes every recorded sale and a building record for every house. The calculator uses ordinary market sales of single-family homes from the last two years, each matched to its house, and learns what each feature added to price in each assessor neighborhood.",
       "Why two values — Buyers pay extra for a freshly remodeled, move-in ready house, up to what the neighborhood's best houses offer. A refinance appraisal credits measurable change only and little for quality past the neighborhood's best houses (conformity).",

@@ -145,6 +145,30 @@ describe("remodel value model", () => {
     });
   });
 
+  describe("Snohomish County", () => {
+    const sno = JSON.parse(readFileSync(`${dir}/model-sno.json`, "utf8")) as RemodelModel;
+    const snoZip = (z: string) => JSON.parse(gunzipSync(readFileSync(`${dir}/zip-sno/${z}.bin`)).toString("utf8")) as ZipFile;
+    it("has its own model, keys that start with S, and labels for its own scales", () => {
+      expect(sno.county).toBe("Snohomish");
+      expect(Object.keys(sno.subs).every((k) => k.startsWith("S"))).toBe(true);
+      expect(sno.gradeLabels?.["7"]).toBe("Average");
+      expect(sno.condAvg).toBeGreaterThan(3);
+      expect(readdirSync(`${dir}/zip-sno`).length).toBeGreaterThan(20);
+    });
+    it("prices a looked-up Mill Creek house in a believable range, and a full remodel stays under its ceiling", () => {
+      const z = snoZip("98012");
+      const r0 = z.homes.find((r) => r[2] > 1800 && r[2] < 2600 && r[10] > 1975 && r[10] < 1995)!;
+      const h = rowToFacts(z, r0);
+      const base = estimateSpend(sno, h, EMPTY_SPEND)!;
+      expect(base.asIs).toBeGreaterThan(500_000);
+      expect(base.asIs).toBeLessThan(1_600_000);
+      const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 25000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
+      const r = estimateSpend(sno, h, { ...EMPTY_SPEND, spent: full })!;
+      expect(r.broker / r.unrenovated).toBeLessThanOrEqual(r.ceilingBroker + 0.001);
+      expect(r.broker).toBeGreaterThan(r.asIs);
+    });
+  });
+
   it("the likely range brackets the estimate", () => {
     const r = rangeOf(model, 1_000_000)!;
     expect(r[0]).toBeLessThan(1_000_000);

@@ -52,6 +52,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-10-13",
     reviewed: "2026-10-15",
     changes: [
+      { date: "2026-10-15", text: "Added Snohomish County: about 190,000 single-family homes for address lookup, priced by a separate model fitted on 14,385 Snohomish County sales (January 2024 to May 2026); half its test estimates were within 7% of the price." },
       { date: "2026-10-15", text: "Complete-job costs now scale with the house's own value, so the same dollars count for less in an expensive house, and value builds more steadily with spending instead of crediting the first dollars at several times their cost." },
       { date: "2026-10-15", text: "The most a full renovation adds now depends on the neighborhood's price level, from about 26% (broker) / 17% (appraiser) in the least expensive King County neighborhoods to about 36% / 24% in the most expensive, following the renovation premium measured in sales in each price tier." },
       { date: "2026-10-15", text: "The remodel is now entered as dollars spent per category (sliders) instead of quality levels, with a table of which spending paid off. Category shares and complete-job costs are the author's working estimates." },
@@ -64,6 +65,9 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "King County Assessor data download: Real Property Sales (downloaded October 13, 2026; sales through September 30, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
       { label: "King County Assessor data download: Residential Building (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
       { label: "King County Assessor data download: Parcel (downloaded October 13, 2026)", href: "https://info.kingcounty.gov/assessor/DataDownload/default.aspx" },
+      { label: "Snohomish County Assessor open data: Recent Property Sales (downloaded October 15, 2026; sales January 2024 to May 2026)", href: "https://snohomishcountywa.gov/6206/GIS-Open-Data" },
+      { label: "Snohomish County Assessor open data: Improvement Records (downloaded October 15, 2026)", href: "https://snohomish-county-open-data-portal-snoco-gis.hub.arcgis.com/documents/3c5edc985cec4fba8b3938d16ed1d3c3" },
+      { label: "Snohomish County Assessor open data: Assessor Roll, CSV version (downloaded October 15, 2026)", href: "https://snohomishcountywa.gov/6206/GIS-Open-Data" },
     ],
   },
   /* Statute-based probate guides (Oct 11, 2026): src/data/statuteGuides.ts. Sources as verified by an independent reviewer. */

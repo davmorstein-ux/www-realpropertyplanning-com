@@ -12,13 +12,17 @@
 export const REMODEL_PAGE = {
   PATH: "/whats-my-remodel-worth",
   TITLE: "What's My Remodel Worth?",
-  SEO_TITLE: "What's My Remodel Worth? King County Remodel Value Calculator | Real Property Planning",
+  SEO_TITLE: "What's My Remodel Worth? King & Snohomish County Remodel Value Calculator | Real Property Planning",
   DESCRIPTION:
-    "Free King County calculator: look up your house, choose what you would remodel and at what quality, and see two values afterward, a broker's view of what buyers pay and an appraiser's view of what a refinance appraisal is likely to support. Built from 27,000 King County home sales.",
+    "Free calculator for King and Snohomish County homes: look up your house, choose what you would remodel and at what quality, and see two values afterward, a broker's view of what buyers pay and an appraiser's view of what a refinance appraisal is likely to support. Built from about 27,000 King County and 14,000 Snohomish County home sales.",
   PUBLISHED: "2026-10-13",
   REVIEWED: "2026-10-15",
   SALES_FROM: "October 2024",
   SALES_THROUGH: "September 2026",
+  SNO_N_SALES: "14,385",
+  SNO_SALES_FROM: "January 2024",
+  SNO_SALES_THROUGH: "May 2026",
+  SNO_MARKET_MONTHS: "April and May 2026",
   /** The quarter today's estimates are priced at (model.json marketQuarter). */
   MARKET_MONTHS: "July to September 2026",
   N_SALES: "27,066",
@@ -54,12 +58,12 @@ export const REMODEL_FAQS: { question: string; answer: string; alts?: string[] }
   {
     question: "Where does the remodel calculator get its numbers?",
     answer:
-      "From the King County Assessor's public records: every recorded sale and the building record for each house. The model uses 27,066 ordinary market sales of single-family homes from October 2024 to September 2026, each matched to its house. Family transfers, foreclosures and sales the assessor flagged as unusual are left out. Lookups show the public building record for an address; no owner names or individual sale prices are shown.",
+      "From the King County Assessor's public records: every recorded sale and the building record for each house. The model uses 27,066 ordinary market sales of single-family homes from October 2024 to September 2026, each matched to its house. Family transfers, foreclosures and sales the assessor flagged as unusual are left out. Snohomish County houses are priced the same way from the Snohomish County Assessor's open data: 14,385 valid market sales of single-family homes from January 2024 to May 2026. Lookups show the public building record for an address; no owner names or individual sale prices are shown.",
   },
   {
     question: "How accurate is the remodel value calculator?",
     answer:
-      "Tested on 5,336 King County sales it had not seen, half of its estimates were within 8% of the actual sale price and 88% were within 20%. It cannot see what the records miss, such as a remodel done without a permit, a bad layout, deferred maintenance, or a great view the assessor has not rated. Treat it as a starting point. A broker's market analysis or an appraisal looks at the house itself.",
+      "Tested on 5,336 King County sales it had not seen, half of its estimates were within 8% of the actual sale price and 88% were within 20%; for Snohomish County, half were within 7% and 90% within 20%. It cannot see what the records miss, such as a remodel done without a permit, a bad layout, deferred maintenance, or a great view the assessor has not rated. Treat it as a starting point. A broker's market analysis or an appraisal looks at the house itself.",
   },
   {
     question: "Can the calculator tell me what a remodel I already did is worth today?",

@@ -45,6 +45,24 @@ export interface RemodelModel {
   marketQuarter?: string;
   /** Likely range: 6 in 10 hold-out sales sold between these multiples of the estimate (20th and 80th percentiles). */
   band?: [number, number];
+  /**
+   * SNOHOMISH COUNTY (Oct 15, 2026; scripts/remodel-data/sno_build.py). Fields absent from the King
+   * County model, which keeps its defaults:
+   *   county            "Snohomish"; neighborhood keys start with "S".
+   *   gradeLabels       the county's own quality words (Low ... Exceptional) for the numeric scale used.
+   *   condLabels        condition words; Snohomish rates condition RELATIVE TO AGE on 1..7.
+   *   condAvg           the "average" condition the unrenovated baseline uses (King 3; Snohomish 5,
+   *                     "above normal for age", its most common rating).
+   *   condNew           the condition new houses get (King 3; Snohomish 7, "excellent").
+   *   noViews / noRenovationYear   the county publishes no view, waterfront or renovation-year field.
+   */
+  county?: string;
+  gradeLabels?: Record<string, string>;
+  condLabels?: Record<string, string>;
+  condAvg?: number;
+  condNew?: number;
+  noViews?: boolean;
+  noRenovationYear?: boolean;
   coef: Record<string, number>;
   moNow: number;
   /** "area-subarea" → location effect, 90th-percentile grade, sales count, city, median sale. */
@@ -404,7 +422,7 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
   const base = asIsFeatures(h);
   const lp0 = logPrice(m, h.sk, base);
   if (lp0 === null) return null;
-  const unreno = { ...base, cond: Math.min(h.cond, 3), ren10: 0, renOld: 0 };
+  const unreno = { ...base, cond: Math.min(h.cond, m.condAvg ?? 3), ren10: 0, renOld: 0 };
   const withSpace: Features = {
     ...unreno,
     liv: base.liv + Math.max(0, s.addAbove) + Math.max(0, s.addFinBsmt),
@@ -434,7 +452,7 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
   };
   // New-construction ceiling (NEW_BUILD_CAP_BROKER): the same house built new, at a grade up to
   // one step higher as the spending approaches a full renovation.
-  const lpNew = logPrice(m, h.sk, { ...withSpace, grade: h.grade + Math.min(1, score), yrBuilt: MODEL_YEAR, cond: 3 })!;
+  const lpNew = logPrice(m, h.sk, { ...withSpace, grade: h.grade + Math.min(1, score), yrBuilt: MODEL_YEAR, cond: m.condNew ?? 3 })!;
   const capView = (v: { used: number; before: number; after: number }, factor: number) => {
     const cap = Math.max(Math.exp(lpNew) * factor, v.before);
     return { ...v, after: Math.min(v.after, cap) };
@@ -484,15 +502,33 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
  * they are about 6 MB). Named .bin so no host treats them as pre-encoded; if a host
  * decompresses them anyway, the gzip check below falls through to plain JSON.
  */
-export async function loadZip(zip: string): Promise<ZipFile> {
-  const r = await fetch(`/data/remodel/zip/${zip}.bin`);
-  if (!r.ok) throw new Error(String(r.status));
+async function loadZipFile(path: string): Promise<ZipFile | null> {
+  const r = await fetch(path);
+  if (!r.ok) return null;
   const buf = new Uint8Array(await r.arrayBuffer());
   if (buf[0] === 0x1f && buf[1] === 0x8b) {
     const stream = new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"));
     return JSON.parse(await new Response(stream).text()) as ZipFile;
   }
+  if (buf[0] !== 0x7b) return null; // not JSON (for example an HTML not-found page)
   return JSON.parse(new TextDecoder().decode(buf)) as ZipFile;
+}
+
+/**
+ * Homes in a ZIP code from King County (/data/remodel/zip) and Snohomish County
+ * (/data/remodel/zip-sno), merged; a few ZIP codes cross the county line. Snohomish
+ * neighborhood keys start with "S", so each house is priced with its own county's model.
+ */
+export async function loadZip(zip: string): Promise<ZipFile> {
+  const [king, sno] = await Promise.all([
+    loadZipFile(`/data/remodel/zip/${zip}.bin`).catch(() => null),
+    loadZipFile(`/data/remodel/zip-sno/${zip}.bin`).catch(() => null),
+  ]);
+  if (!king && !sno) throw new Error("not found");
+  if (!king || !sno) return (king ?? sno)!;
+  const off = king.keys.length;
+  const homes = [...king.homes, ...sno.homes.map((r) => [r[0], r[1] + off, ...r.slice(2)] as ZipRow)].sort((x, y) => (x[0] < y[0] ? -1 : 1));
+  return { keys: [...king.keys, ...sno.keys], homes };
 }
 
 /** One row of a ZIP file, in its column order. */
