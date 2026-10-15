@@ -8,10 +8,11 @@ import IntentCTA from "@/components/IntentCTA";
 import AuthorByline from "@/components/AuthorByline";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { REMODEL_FAQS, REMODEL_PAGE as P } from "@/data/remodelPage";
-import { CONDITION_LABELS, GRADE_LABELS, REMODEL_PARTS, TIERS, type Tier } from "@/data/remodelTiers";
+import { CONDITION_LABELS, GRADE_LABELS } from "@/data/remodelTiers";
+import { SLIDER_MAX, SLIDER_STEP, SPEND_CATEGORIES } from "@/data/remodelCosts";
 import {
-  EMPTY_SCOPE,
-  estimate,
+  EMPTY_SPEND,
+  estimateSpend,
   loadZip,
   rangeOf,
   matchAddresses,
@@ -19,16 +20,17 @@ import {
   title as titleCase,
   type HomeFacts,
   type RemodelModel,
-  type RemodelScope,
+  type SpendInput,
   type ZipFile,
   type ZipRow,
 } from "@/lib/remodelValue";
 
 /**
  * What's My Remodel Worth? (Oct 13, 2026). King County homeowners look up their
- * house (or type its details), choose what they would remodel and at what
- * quality, and get two values: a broker's view and an appraiser's view.
- * Math: src/lib/remodelValue.ts. Tier table: src/data/remodelTiers.ts. Words and
+ * house (or type its details), enter what they would spend (or spent) on each part
+ * (sliders, Oct 15, 2026, replacing quality buttons), and get two values, a broker's view
+ * and an appraiser's view, plus which spending paid off.
+ * Math: estimateSpend in src/lib/remodelValue.ts. Spending table: src/data/remodelCosts.ts. Words and
  * FAQs: src/data/remodelPage.ts. Data: /public/data/remodel (King County Assessor).
  *
  * Scoped "rmv-" classes with !important to survive index.css; no class name
@@ -82,6 +84,18 @@ const CSS = `
 .rmv .rmv-val-r { font-size: 15px !important; font-weight: 600; color: #4a443d; margin: 0 0 6px; }
 .rmv .rmv-val-s { font-size: 15px; color: #4a443d; line-height: 1.5; margin-top: 6px; }
 .rmv .rmv-warn { background: #fff7e6; border: 1px solid #f0d9a8; border-radius: 10px; padding: 14px 18px; margin-top: 14px; }
+.rmv .rmv-spendhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.rmv .rmv-spendnum { max-width: 150px; text-align: right; }
+.rmv input.rmv-range { width: 100%; margin: 10px 0 6px; accent-color: ${NAVY}; height: 28px; }
+.rmv label.rmv-spendlabel { font-family: ${FONT} !important; font-size: 19px !important; font-weight: 700 !important; color: ${INK} !important; }
+@media (max-width: 600px) { .rmv .rmv-hide-sm { display: none; } .rmv table.rmv-table th, .rmv table.rmv-table td { padding: 8px 8px !important; font-size: 15px !important; } }
+.rmv table.rmv-table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #ddd8cf; margin-top: 8px; }
+.rmv table.rmv-table th, .rmv table.rmv-table td { font-family: ${FONT}; font-size: 16px; padding: 9px 12px; text-align: left; border-bottom: 1px solid #eee9e0; color: ${INK}; vertical-align: top; }
+.rmv table.rmv-table thead th { background: #f1f4f9; font-weight: 700; font-size: 15px; }
+.rmv table.rmv-table tbody th { font-weight: 600; }
+.rmv .rmv-th-sub { font-weight: 500; font-size: 13px; color: #4a443d; }
+.rmv td.rmv-over { color: #8a3b12; font-weight: 700; }
+.rmv tr.rmv-total th, .rmv tr.rmv-total td { font-weight: 700; background: #faf8f4; }
 .rmv .rmv-toggle { display: flex; gap: 8px; align-items: center; min-height: 46px; font-size: 17px; }
 .rmv .rmv-toggle input { width: 20px; height: 20px; }
 `;
@@ -131,8 +145,8 @@ export default function RemodelValue() {
   const [addr, setAddr] = useState("");
   const [picked, setPicked] = useState<string | null>(null);
   const [facts, setFacts] = useState<HomeFacts | null>(null);
-  const [scope, setScope] = useState<RemodelScope>(EMPTY_SCOPE);
-  const [cost, setCost] = useState(0);
+  /* Oct 15, 2026 (owner): dollars spent per category, not quality levels. */
+  const [scope, setScope] = useState<SpendInput>(EMPTY_SPEND);
   /* Oct 14, 2026: "Already remodeled" mode. The house facts then describe the house before the work. */
   const [mode, setMode] = useState<"plan" | "done">("plan");
   const [doneYear, setDoneYear] = useState(2020);
@@ -184,10 +198,10 @@ export default function RemodelValue() {
   };
 
   const set = <K extends keyof HomeFacts>(k: K, v: HomeFacts[K]) => setFacts((f) => (f ? { ...f, [k]: v } : f));
-  const setTier = (part: string, t: Tier | null) => setScope((s) => ({ ...s, tiers: { ...s.tiers, [part]: t } }));
+  const setSpent = (id: string, n: number) => setScope((s) => ({ ...s, spent: { ...s.spent, [id]: Math.max(0, Math.round(n)) } }));
 
   const result = useMemo(
-    () => (model && facts ? estimate(model, facts, done ? { ...scope, doneYear: doneYear > 1900 ? doneYear : undefined } : scope) : null),
+    () => (model && facts ? estimateSpend(model, facts, done ? { ...scope, doneYear: doneYear > 1900 ? doneYear : undefined } : scope) : null),
     [model, facts, scope, done, doneYear],
   );
   const range = (v: number) => {
@@ -195,7 +209,7 @@ export default function RemodelValue() {
     return r ? <div className="rmv-val-r">Likely range {fmtShort(r[0])} – {fmtShort(r[1])}</div> : null;
   };
   const hood = model && facts ? model.subs[facts.sk] : undefined;
-  const anyScope = Object.values(scope.tiers).some(Boolean) || scope.addAbove > 0 || scope.addFinBsmt > 0 || scope.addBaths > 0 || scope.addBeds > 0 || scope.addFp > 0 || scope.addGarage;
+  const anyScope = Object.values(scope.spent).some((v) => v > 0) || scope.addAbove > 0 || scope.addFinBsmt > 0 || scope.addBaths > 0 || scope.addBeds > 0 || scope.addFp > 0 || scope.addGarage;
 
   const schema = {
     "@context": "https://schema.org",
@@ -378,27 +392,49 @@ export default function RemodelValue() {
                 </div>
                 {done ? (
                   <>
-                    <p>Choose each part that was redone and the quality. Leave the rest at "Not changing".</p>
+                    <p>Move each slider to what was spent, or type the amount. Leave the rest at $0.</p>
                     <div style={{ maxWidth: 260, marginBottom: 14 }}>
                       <NumField id="a-year" label="Year the work was finished" value={doneYear} onChange={setDoneYear} min={1950} />
                     </div>
                   </>
                 ) : (
-                  <p>Choose each part you would redo and the quality. Leave the rest at "Not changing".</p>
+                  <p>Move each slider to what you would spend, or type the amount. Leave the rest at $0.</p>
                 )}
                 <div className="rmv-box">
-                  {REMODEL_PARTS.map((p) => {
-                    const t = scope.tiers[p.id] ?? null;
+                  {SPEND_CATEGORIES.map((c) => {
+                    const v = scope.spent[c.id] ?? 0;
+                    const cr = result?.categories.find((x) => x.id === c.id);
                     return (
-                      <div key={p.id} className="rmv-part">
-                        <h3 className="rmv-h3" id={`part-${p.id}`}>{p.label}</h3>
-                        <div className="rmv-picks" role="group" aria-labelledby={`part-${p.id}`}>
-                          <button type="button" className="rmv-pick" aria-pressed={t === null} onClick={() => setTier(p.id, null)}>Not changing</button>
-                          {TIERS.map((x) => (
-                            <button key={x.id} type="button" className="rmv-pick" aria-pressed={t === x.id} onClick={() => setTier(p.id, x.id)}>{x.label}</button>
-                          ))}
+                      <div key={c.id} className="rmv-part">
+                        <div className="rmv-spendhead">
+                          <label className="rmv-spendlabel" htmlFor={`s-${c.id}`}>{c.label}</label>
+                          <input
+                            className="rmv-in rmv-spendnum"
+                            type="number"
+                            inputMode="numeric"
+                            min={0}
+                            step={SLIDER_STEP}
+                            aria-label={`${c.label}, dollars`}
+                            value={v || ""}
+                            placeholder="$0"
+                            onChange={(e) => setSpent(c.id, Number(e.target.value) || 0)}
+                          />
                         </div>
-                        {t && <div className="rmv-ex">{p.examples[t]}</div>}
+                        <input
+                          id={`s-${c.id}`}
+                          className="rmv-range"
+                          type="range"
+                          min={0}
+                          max={SLIDER_MAX}
+                          step={SLIDER_STEP}
+                          value={Math.min(v, SLIDER_MAX)}
+                          onChange={(e) => setSpent(c.id, Number(e.target.value))}
+                          aria-valuetext={fmt(v)}
+                        />
+                        <div className="rmv-ex">
+                          {c.hint}
+                          {cr && <> · A complete job on this house here: about {fmt(cr.fullJob)}</>}
+                        </div>
                       </div>
                     );
                   })}
@@ -420,8 +456,8 @@ export default function RemodelValue() {
                         </select>
                       </div>
                     )}
-                    <NumField id="a-cost" label={done ? "What it cost, optional ($)" : "Remodel cost, optional ($)"} value={cost} onChange={setCost} step={1000} />
                   </div>
+                  <p className="rmv-small" style={{ marginTop: 12, marginBottom: 0 }}>Added space is valued from King County sales of houses that have it. Enter its cost in the categories above only for finishes, not the construction itself.</p>
                 </div>
               </div>
             </div>
@@ -444,44 +480,65 @@ export default function RemodelValue() {
                         <div className="rmv-val-k">{done ? "Appraiser's view, with it" : "Appraiser's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.appraiser)}</div>
                         {anyScope && range(result.appraiser)}
-                        <div className="rmv-val-d" style={{ color: "#0f5f57" }}>{anyScope ? `${signed(result.appraiser - result.asIs)} added` : "Choose a remodel above"}</div>
-                        <div className="rmv-val-s">What a refinance appraisal is likely to support: measurable changes only, capped at the neighborhood's best houses.</div>
+                        <div className="rmv-val-d" style={{ color: "#0f5f57" }}>{anyScope ? `${signed(result.appraiser - result.asIs)} added` : "Enter spending above"}</div>
+                        <div className="rmv-val-s">What a refinance appraisal is likely to support: up to about 20% over the house unrenovated.</div>
                       </div>
                       <div className="rmv-val rmv-val-b">
                         <div className="rmv-val-k">{done ? "Broker's view, with it" : "Broker's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.broker)}</div>
                         {anyScope && range(result.broker)}
-                        <div className="rmv-val-d" style={{ color: NAVY }}>{anyScope ? `${signed(result.broker - result.asIs)} added` : "Choose a remodel above"}</div>
-                        <div className="rmv-val-s">{done ? (doneYear && 2026 - doneYear > 10 ? "What buyers have paid for houses like it with work more than 10 years old. The best case if you sell." : "What buyers have paid for houses like it, recently remodeled. The best case if you sell.") : "What buyers have paid for houses like it, freshly remodeled. The best case if you sell."}</div>
+                        <div className="rmv-val-d" style={{ color: NAVY }}>{anyScope ? `${signed(result.broker - result.asIs)} added` : "Enter spending above"}</div>
+                        <div className="rmv-val-s">What buyers have paid for houses like it, renovated: up to about 30% over the house unrenovated. The best case if you sell.</div>
                       </div>
                     </div>
-                    {anyScope && (
-                      <p className="rmv-small" style={{ marginTop: 20 }}>
-                        Quality grade {facts.grade} → {result.newGrade.toFixed(1)}; condition {facts.cond} → {result.newCond.toFixed(1)}.
-                        {cost > 0 && (
-                          <> For each $1 spent: about ${((result.appraiser - result.asIs) / cost).toFixed(2)} in the appraiser's view and ${((result.broker - result.asIs) / cost).toFixed(2)} in the broker's view.</>
-                        )}
-                      </p>
-                    )}
-                    {result.overImproved && (
-                      <div className="rmv-warn">
-                        <p style={{ marginBottom: 0 }}>
-                          <strong>Past the neighborhood's best houses.</strong> These choices take the house to grade {result.newGrade.toFixed(1)}; the best tenth of houses sold in this neighborhood are grade {result.neighborhoodTopGrade}. The appraiser's view gives no credit past that point and the broker's view half credit. Buyers here have not paid much more for it.
+
+                    {result.totalSpent > 0 && (
+                      <>
+                        <div style={{ paddingTop: 28 }}><h3 className="rmv-h3">Which spending paid off</h3></div>
+                        <div style={{ overflowX: "auto" }}>
+                          <table className="rmv-table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Spent</th>
+                                <th scope="col">Value added<br /><span className="rmv-th-sub">appraiser – broker</span></th>
+                                <th scope="col" className="rmv-hide-sm">Back per $1</th>
+                                <th scope="col">Pays back well up to</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {result.categories.filter((c) => c.spent > 0).map((c) => {
+                                const over = c.spent > Math.max(c.paysBackTo, 1000) * 1.5;
+                                return (
+                                  <tr key={c.id}>
+                                    <th scope="row">{c.label}</th>
+                                    <td>{fmt(c.spent)}</td>
+                                    <td>{fmtShort(c.appraiser)} – {fmtShort(c.broker)}</td>
+                                    <td className="rmv-hide-sm">${(c.appraiser / c.spent).toFixed(2)} – ${(c.broker / c.spent).toFixed(2)}</td>
+                                    <td className={over ? "rmv-over" : undefined}>{c.paysBackTo > 0 ? fmt(c.paysBackTo) : "Rarely pays back"}{over ? " · well past it" : ""}</td>
+                                  </tr>
+                                );
+                              })}
+                              <tr className="rmv-total">
+                                <th scope="row">Total</th>
+                                <td>{fmt(result.totalSpent)}</td>
+                                <td>{fmtShort(result.categories.reduce((t, c) => t + c.appraiser, 0))} – {fmtShort(result.categories.reduce((t, c) => t + c.broker, 0))}</td>
+                                <td className="rmv-hide-sm">${(result.categories.reduce((t, c) => t + c.appraiser, 0) / result.totalSpent).toFixed(2)} – ${(result.categories.reduce((t, c) => t + c.broker, 0) / result.totalSpent).toFixed(2)}</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p className="rmv-small" style={{ marginTop: 10 }}>
+                          <strong>Pays back well up to</strong>: spending up to this amount still returns at least 50 cents of value per dollar in the broker's view. Past it, each extra dollar adds less. Some work, like a roof or systems, rarely pays back at sale but avoids a buyer's deduction for a worn one.
+                          {result.alreadyUpdated > 0.05 && <> This house is already partly updated, so new spending has less room to add value.</>}
                         </p>
-                      </div>
+                      </>
                     )}
-                    {result.cappedAtFull && (
+                    {result.nearCeiling && (
                       <div className="rmv-warn">
                         <p style={{ marginBottom: 0 }}>
-                          {result.cappedAtNew ? (
-                            <>
-                              <strong>Limited by new construction.</strong> This house built new today, at the same size and quality, would sell for about {fmt(result.newBuild)} here. Remodeled older houses have sold for about what the same house brings new, rarely more.
-                            </>
-                          ) : (
-                            <>
-                              <strong>At the most a full renovation adds.</strong> Unrenovated, this house would sell for about {fmt(result.unrenovated)}. In King County sales a complete renovation has added up to about 30% to an unrenovated house, and an appraiser credits about 20%, however much was spent. More spending than this buys finishes the market here does not pay extra for.
-                            </>
-                          )}
+                          <strong>At about the most a full renovation adds.</strong> Unrenovated, this house would sell for about {fmt(result.unrenovated)}. In King County sales a complete renovation has added up to about 30% to an unrenovated house, and an appraiser credits about 20%, however much was spent.
                         </p>
                       </div>
                     )}
@@ -508,7 +565,7 @@ export default function RemodelValue() {
                 <strong>The model.</strong> It learns from those sales what each feature has added to price in each of the assessor's neighborhoods, then prices your house as it is and as it would be after the remodel. Estimates are set at the level of the most recent three months of sales ({P.MARKET_MONTHS}), so they reflect today's mortgage rates and season rather than an average of the whole two years.
               </p>
               <p>
-                <strong>Your remodel choices.</strong> The county's records do not know window brands or roof shingles. They grade a whole house's quality on a 1–13 scale. Each part of the house carries a share of that grade (the kitchen the most), and each quality level aims at a grade: economy 7, standard 8, premium 10, luxury 12. Redoing everything at premium makes a house grade 10. Economy finishes in a better house pull its grade down.
+                <strong>Your spending.</strong> Each category carries a share of what a full renovation adds (the kitchen the most, about a quarter) and has a "complete job" cost for a house of your size in your neighborhood. Spending up to that cost earns most of the category's value; spending past it earns less and less. That is how the table shows which spending paid off. The shares and costs are the site author's working estimates for King County and will be refined.
               </p>
               <p>
                 <strong>The full-renovation ceiling.</strong> A complete remodel lifts a house by a limited amount, measured from what the same house sells for unrenovated. In King County sales, houses resold after a recorded renovation gained a median 25% over the market in Kirkland's 98034 and up to about a third countywide; a 98034 split entry that sold for $985,000 unrenovated compares with a similar fully renovated one at $1,315,000. So the broker's view stops at 30% above the unrenovated value and the appraiser's view at 20%. Added square feet, baths and bedrooms are priced on top.
@@ -520,7 +577,7 @@ export default function RemodelValue() {
                 <strong>Likely range.</strong> Every estimate misses some. Tested on King County sales it had not seen, 6 in 10 houses sold within the range shown under each value, so treat the range, not the single number, as the answer.
               </p>
               <p>
-                <strong>Already remodeled?</strong> Choose "Already remodeled", describe the house as it was before the work, and the calculator prices it today both ways. Work finished more than ten years ago earns the smaller premium buyers have paid for older renovations.
+                <strong>Already remodeled?</strong> Choose "Already remodeled", describe the house as it was before the work, enter what was spent, and the calculator prices it today both ways. Work finished more than ten years ago earns about 60% of its value, because buyers pay less for an older renovation.
               </p>
               <p>
                 <strong>Why two values.</strong> Buyers pay extra for a house that is freshly remodeled and move-in ready, and they will pay for quality up to what the neighborhood's best houses offer. A refinance appraisal is more conservative: it credits measurable change and gives little for quality past the neighborhood's best houses (appraisers call this conformity). If you plan to refinance rather than sell, plan around the appraiser's view.

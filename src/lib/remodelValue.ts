@@ -37,6 +37,7 @@
  *     neighborhood's top tenth (the conformity principle).
  */
 import { REMODEL_PARTS, TIER_GRADE, type Tier } from "@/data/remodelTiers";
+import { OLD_WORK_FACTOR, SPEND_CATEGORIES, neighborhoodCostFactor, type SpendCategory } from "@/data/remodelCosts";
 
 export interface RemodelModel {
   asOf: { salesThrough: string; salesFrom: string; nSales: number; built: string };
@@ -296,6 +297,145 @@ export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): Remode
     newCond,
     coverage,
     overImproved,
+  };
+}
+
+/* ------------------------------------------------------------------------------------------
+ * SPENDING VERSION (Oct 15, 2026, owner: "ask the homeowner how much money they spent on each
+ * area ... instead of asking what quality level"). The page uses this; estimate() above (the
+ * quality-tier version) is kept for its tests and reference.
+ *
+ * Calibration (see FULL_RENO_BROKER): a full renovation adds at most +30% (broker) / +20%
+ * (appraiser) over the house unrenovated. Each category earns its share of that, with
+ * diminishing returns on spending (src/data/remodelCosts.ts). A house that is already partly
+ * updated has used part of that room: "already used" = log(as-is / unrenovated) / log(ceiling),
+ * and new spending fills only the room left. Added space is priced by the sales model on top.
+ * -------------------------------------------------------------------------------------------- */
+
+export interface SpendInput {
+  /** Dollars per category id (src/data/remodelCosts.ts). */
+  spent: Record<string, number>;
+  addAbove: number;
+  addFinBsmt: number;
+  addBaths: number;
+  addBeds: number;
+  addFp: number;
+  addGarage: boolean;
+  /** "Already remodeled" mode: the year the work was finished. */
+  doneYear?: number;
+}
+
+export const EMPTY_SPEND: SpendInput = { spent: {}, addAbove: 0, addFinBsmt: 0, addBaths: 0, addBeds: 0, addFp: 0, addGarage: false };
+
+export interface CategoryResult {
+  id: string;
+  label: string;
+  spent: number;
+  /** Full-job cost for this house and neighborhood. */
+  fullJob: number;
+  broker: number;
+  appraiser: number;
+  /** Spending up to here returns at least 50 cents per dollar in the broker's view (0 = never does). */
+  paysBackTo: number;
+}
+
+export interface SpendResult {
+  asIs: number;
+  broker: number;
+  appraiser: number;
+  unrenovated: number;
+  totalSpent: number;
+  categories: CategoryResult[];
+  /** Value of added space (square feet, baths, bedrooms, fireplaces, garage), broker's view. */
+  addedSpace: number;
+  /** Share of the full-renovation room the house had already used before this work, 0–1. */
+  alreadyUpdated: number;
+  /** True when the spending is past the point where more of it adds meaningful value. */
+  nearCeiling: boolean;
+}
+
+/** Spending at the full-job cost earns 90% of a category's value: 1 − e^(−CURVE) = 0.9. */
+export const CURVE = Math.log(10);
+
+export function fullJobCost(c: SpendCategory, h: HomeFacts, costFactor: number): number {
+  const sq = Math.max(600, h.above + h.finBsmt) / 2000;
+  const size =
+    c.scale === "sqft" ? sq : c.scale === "sqrtSqft" ? Math.sqrt(sq) : c.scale === "baths" ? Math.max(1, h.baths) : Math.sqrt(Math.max(2000, h.lot) / 8000);
+  return Math.round((c.fullJob * size * costFactor) / 500) * 500;
+}
+
+export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): SpendResult | null {
+  const base = asIsFeatures(h);
+  const lp0 = logPrice(m, h.sk, base);
+  if (lp0 === null) return null;
+  const unreno = { ...base, cond: Math.min(h.cond, 3), ren10: 0, renOld: 0 };
+  const withSpace: Features = {
+    ...unreno,
+    liv: base.liv + Math.max(0, s.addAbove) + Math.max(0, s.addFinBsmt),
+    finBsmt: base.finBsmt + Math.max(0, s.addFinBsmt),
+    baths: base.baths + Math.max(0, s.addBaths),
+    beds: base.beds + Math.max(0, s.addBeds),
+    fp: base.fp + Math.max(0, s.addFp),
+    garage: base.garage || s.addGarage,
+  };
+  const lpU0 = logPrice(m, h.sk, unreno)!;
+  const lpU1 = logPrice(m, h.sk, withSpace)!;
+  const costFactor = neighborhoodCostFactor(m.subs[h.sk]?.med);
+  const age = s.doneYear && MODEL_YEAR - s.doneYear > 10 ? OLD_WORK_FACTOR : 1;
+
+  const cats = SPEND_CATEGORIES.map((c) => {
+    const spent = Math.max(0, s.spent[c.id] ?? 0);
+    const k = fullJobCost(c, h, costFactor);
+    return { c, spent, k, earned: c.share * (1 - Math.exp((-CURVE * spent) / k)) * age };
+  });
+  const score = Math.min(1, cats.reduce((t, x) => t + x.earned, 0));
+
+  const view = (ceiling: number) => {
+    const L = Math.log(ceiling);
+    const used = clamp((lp0 - lpU0) / L, 0, 1);
+    const lpBefore = lpU1 + L * used; // the house with any added space, before this work
+    const lpAfter = lpU1 + L * (used + (1 - used) * score);
+    return { used, before: Math.exp(lpBefore), after: Math.exp(Math.max(lpAfter, lp0 + (lpU1 - lpU0))) };
+  };
+  // New-construction ceiling (NEW_BUILD_CAP_BROKER): the same house built new, at a grade up to
+  // one step higher as the spending approaches a full renovation.
+  const lpNew = logPrice(m, h.sk, { ...withSpace, grade: h.grade + Math.min(1, score), yrBuilt: MODEL_YEAR, cond: 3 })!;
+  const capView = (v: { used: number; before: number; after: number }, factor: number) => {
+    const cap = Math.max(Math.exp(lpNew) * factor, v.before);
+    return { ...v, after: Math.min(v.after, cap) };
+  };
+  const B = capView(view(FULL_RENO_BROKER), NEW_BUILD_CAP_BROKER);
+  const A = capView(view(FULL_RENO_APPRAISER), NEW_BUILD_CAP_APPRAISER);
+
+  // Split each view's gain from the spending across categories by what each earned.
+  const gainB = Math.max(0, B.after - B.before);
+  const gainA = Math.max(0, A.after - A.before);
+  const round = (v: number) => Math.round(v / 1000) * 1000;
+  const categories: CategoryResult[] = cats.map(({ c, spent, k, earned }) => {
+    // Most this category can add (broker), and where its last dollar still returns 50 cents.
+    const maxValue = B.before * (Math.pow(FULL_RENO_BROKER, (1 - B.used) * c.share * age) - 1);
+    const r = (maxValue * CURVE) / k; // return on the first dollar
+    const paysBackTo = r > 0.5 ? Math.round(((k / CURVE) * Math.log(r / 0.5)) / 500) * 500 : 0;
+    return {
+      id: c.id,
+      label: c.label,
+      spent,
+      fullJob: k,
+      broker: score > 0 ? Math.round((gainB * earned) / score / 500) * 500 : 0,
+      appraiser: score > 0 ? Math.round((gainA * earned) / score / 500) * 500 : 0,
+      paysBackTo,
+    };
+  });
+  return {
+    asIs: round(Math.exp(lp0)),
+    broker: round(B.after),
+    appraiser: round(Math.min(A.after, B.after)),
+    unrenovated: round(Math.exp(lpU0)),
+    totalSpent: cats.reduce((t, x) => t + x.spent, 0),
+    categories,
+    addedSpace: round(B.before - Math.exp(lpU0 + Math.log(FULL_RENO_BROKER) * B.used)),
+    alreadyUpdated: B.used,
+    nearCeiling: score > 0.85,
   };
 }
 

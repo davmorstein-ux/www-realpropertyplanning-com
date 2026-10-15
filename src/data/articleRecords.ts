@@ -52,6 +52,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-10-13",
     reviewed: "2026-10-15",
     changes: [
+      { date: "2026-10-15", text: "The remodel is now entered as dollars spent per category (sliders) instead of quality levels, with a table of which spending paid off. Category shares and complete-job costs are the author's working estimates." },
       { date: "2026-10-15", text: "A full remodel now adds at most 30% over the same house unrenovated in the broker's view and 20% in the appraiser's view. Quality grade, condition and the renovation premium had been added on top of one another, which overstated full remodels by roughly half. Checked against King County repeat sales and a pair of 98034 split-entry sales." },
       { date: "2026-10-14", text: "A remodeled house is no longer priced above the same house built new: the broker's view stops at the new-construction value and the appraiser's view at 95% of it. Remodeled King County houses over 30 years old sold for a median 0.995 times that value." },
       { date: "2026-10-14", text: "Added a likely range under each value (6 in 10 tested sales fell inside it) and an \"Already remodeled\" mode that prices past work in today's market." },

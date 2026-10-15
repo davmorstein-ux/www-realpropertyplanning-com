@@ -64,7 +64,7 @@ export const REMODEL_FAQS: { question: string; answer: string; alts?: string[] }
   {
     question: "Can the calculator tell me what a remodel I already did is worth today?",
     answer:
-      "Yes. Choose \"Already remodeled\", enter the year the work was finished, describe the house as it was before the work, and pick what was redone. It shows today's value without the remodel and with it, in an appraiser's view and a broker's view. Work more than ten years old earns a smaller premium from buyers, because King County sales show buyers pay less for an older renovation.",
+      "Yes. Choose \"Already remodeled\", enter the year the work was finished, describe the house as it was before the work, and enter what was spent on each part. It shows today's value without the remodel and with it, in an appraiser's view and a broker's view. Work more than ten years old earns a smaller premium from buyers, because King County sales show buyers pay less for an older renovation.",
     alts: ["how much did my past remodel add to my home value"],
   },
   {

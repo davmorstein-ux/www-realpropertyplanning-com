@@ -2,8 +2,9 @@ import { describe, expect, it } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { resolve } from "node:path";
-import { EMPTY_SCOPE, estimate, gradeAfter, matchAddresses, rangeOf, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
+import { EMPTY_SCOPE, EMPTY_SPEND, estimate, estimateSpend, gradeAfter, matchAddresses, rangeOf, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
 import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
+import { SPEND_CATEGORIES } from "@/data/remodelCosts";
 
 /** What's My Remodel Worth? (src/lib/remodelValue.ts). */
 const dir = resolve(__dirname, "../../public/data/remodel");
@@ -84,6 +85,45 @@ describe("remodel value model", () => {
     expect(r.unrenovated).toBeGreaterThan(850_000);
     expect(r.unrenovated).toBeLessThan(1_150_000);
     expect(r.broker).toBeLessThan(1_450_000);
+  });
+
+  describe("spending sliders (the page's version)", () => {
+    // The owner's paired sales, 98034 split entries: $985,000 unrenovated; similar house fully renovated
+    // for about $250,000, $1,315,000.
+    const split = { ...mercer, sk: model.zipDefault["98034"], above: 1150, finBsmt: 850, unfinBsmt: 150, lot: 8500, yrBuilt: 1977, grade: 7 };
+    const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 25000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
+
+    it("the spending table's shares add to 1", () => {
+      expect(SPEND_CATEGORIES.reduce((t, c) => t + c.share, 0)).toBeCloseTo(1, 6);
+    });
+    it("a complete $250,000 remodel lands near the owner's renovated sale, never past the ceilings", () => {
+      const r = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full })!;
+      expect(r.unrenovated).toBeGreaterThan(850_000);
+      expect(r.unrenovated).toBeLessThan(1_150_000);
+      expect(r.broker / r.unrenovated).toBeGreaterThan(1.2);
+      expect(r.broker / r.unrenovated).toBeLessThanOrEqual(1.301);
+      expect(r.appraiser / r.unrenovated).toBeLessThanOrEqual(1.201);
+      expect(r.appraiser).toBeLessThanOrEqual(r.broker);
+    });
+    it("spending more always helps a little less: doubling a kitchen adds far less than double", () => {
+      const a = estimateSpend(model, split, { ...EMPTY_SPEND, spent: { kitchen: 50000 } })!;
+      const b = estimateSpend(model, split, { ...EMPTY_SPEND, spent: { kitchen: 100000 } })!;
+      expect(b.broker).toBeGreaterThanOrEqual(a.broker);
+      expect(b.broker - a.asIs).toBeLessThan(1.5 * (a.broker - a.asIs));
+      expect(b.categories.find((c) => c.id === "kitchen")!.paysBackTo).toBeLessThan(100000);
+    });
+    it("nothing spent changes nothing; category values add up to the total gain", () => {
+      const z = estimateSpend(model, split, EMPTY_SPEND)!;
+      expect(z.broker).toBe(z.asIs);
+      const r = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full })!;
+      const sum = r.categories.reduce((t, c) => t + c.broker, 0);
+      expect(Math.abs(sum - (r.broker - r.asIs))).toBeLessThan(10_000);
+    });
+    it("older work earns less", () => {
+      const recent = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full, doneYear: 2022 })!;
+      const old = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full, doneYear: 2010 })!;
+      expect(old.broker).toBeLessThan(recent.broker);
+    });
   });
 
   it("the likely range brackets the estimate", () => {
