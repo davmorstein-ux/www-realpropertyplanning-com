@@ -53,7 +53,8 @@ describe("remodel value model", () => {
   });
 
   it("already remodeled: older work earns the smaller premium; the appraiser's view ignores the year", () => {
-    const scope = all("premium");
+    // A partial remodel, so the full-renovation ceiling does not flatten the difference.
+    const scope = { ...EMPTY_SCOPE, tiers: { kitchen: "standard" as const, baths: "standard" as const, flooring: "standard" as const } };
     const recent = estimate(model, mercer, { ...scope, doneYear: 2021 })!;
     const old = estimate(model, mercer, { ...scope, doneYear: 2010 })!;
     expect(recent.broker).toBeGreaterThan(old.broker);
@@ -69,6 +70,20 @@ describe("remodel value model", () => {
       expect(r.appraiser, t).toBeLessThanOrEqual(r.broker);
       expect(r.broker, t).toBeGreaterThan(r.asIs);
     }
+  });
+
+  it("a full remodel adds at most about 30% (broker) / 20% (appraiser) over the unrenovated house", () => {
+    // The owner's paired sales, 98034 split entries: $985,000 unrenovated, $1,315,000 fully renovated.
+    const split = { ...mercer, sk: model.zipDefault["98034"], above: 1150, finBsmt: 850, unfinBsmt: 150, lot: 8500, yrBuilt: 1977, grade: 7 };
+    for (const t of ["standard", "premium", "luxury"] as const) {
+      const r = estimate(model, split, all(t))!;
+      expect(r.broker / r.unrenovated, t).toBeLessThanOrEqual(1.301);
+      expect(r.appraiser / r.unrenovated, t).toBeLessThanOrEqual(1.201);
+    }
+    const r = estimate(model, split, all("premium"))!;
+    expect(r.unrenovated).toBeGreaterThan(850_000);
+    expect(r.unrenovated).toBeLessThan(1_150_000);
+    expect(r.broker).toBeLessThan(1_450_000);
   });
 
   it("the likely range brackets the estimate", () => {

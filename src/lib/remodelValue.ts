@@ -110,6 +110,24 @@ export const RENEW_FULL = 0.7;
  */
 export const NEW_BUILD_CAP_BROKER = 1.0;
 export const NEW_BUILD_CAP_APPRAISER = 0.95;
+
+/**
+ * FULL-RENOVATION CEILING (Oct 15, 2026). Grade, condition and the renovation premium each
+ * measure part of "updated", so stacking all three over-counted: the owner's split entry in
+ * 98034 (as-is about $1.1M, which he judged right) showed about $1.7M after a full premium
+ * remodel. His paired sales: unrenovated split entry $985,000; similar house fully renovated
+ * (about $250,000 spent) $1,315,000, +33%. King County checks (Oct 15, 2026):
+ *   - repeat sales since 2012 with a recorded renovation between the two sales (n=834):
+ *     gain over the market median +7%, 75th percentile +36%; in 98034 (n=23) median +25%;
+ *   - 98034 split entries built 1965-1990, grade 7: average condition $1.15M median, very
+ *     good condition $1.36M (+19%).
+ * So the finish-and-condition uplift is measured from the house UNRENOVATED (its own size,
+ * grade and lot, condition no better than average, no renovation), and stops at +30% in the
+ * broker's view and +20% in the appraiser's view. Added space (square feet, baths,
+ * bedrooms, garage) is outside the ceiling: it is priced on top.
+ */
+export const FULL_RENO_BROKER = 1.3;
+export const FULL_RENO_APPRAISER = 1.2;
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 interface Features {
@@ -203,6 +221,10 @@ export interface RemodelResult {
   newBuild: number;
   /** True when the new-construction ceiling lowered the broker's or the appraiser's value. */
   cappedAtNew: boolean;
+  /** True when the full-renovation ceiling (FULL_RENO_BROKER) lowered a value. */
+  cappedAtFull: boolean;
+  /** The house unrenovated (average condition, no renovation), with any added space. */
+  unrenovated: number;
 }
 
 /** A value's likely range from the model's tested error (null when the model has no band). */
@@ -249,8 +271,10 @@ export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): Remode
   // The new-construction ceiling (see NEW_BUILD_CAP_BROKER). A remodel never lowers the value
   // below as-is through the cap; only a downgrade (economy finishes in a better house) can.
   const asNew = (grade: number) => logPrice(m, h.sk, { ...added, grade, yrBuilt: MODEL_YEAR, cond: 3, ren10: 0, renOld: 0 })!;
-  const capB = asNew(brokerGrade) + Math.log(NEW_BUILD_CAP_BROKER);
-  const capA = asNew(appraiserGrade) + Math.log(NEW_BUILD_CAP_APPRAISER);
+  // The unrenovated house, with any added space: the base the full-renovation ceiling is measured from.
+  const lpU = logPrice(m, h.sk, { ...added, grade: h.grade, cond: Math.min(h.cond, 3), ren10: 0, renOld: 0 })!;
+  const capB = Math.min(asNew(brokerGrade) + Math.log(NEW_BUILD_CAP_BROKER), lpU + Math.log(FULL_RENO_BROKER));
+  const capA = Math.min(asNew(appraiserGrade) + Math.log(NEW_BUILD_CAP_APPRAISER), lpU + Math.log(FULL_RENO_APPRAISER));
   const brokerLp = coverage > 0 || lpB > lp0 ? Math.min(lpB, Math.max(capB, Math.min(lp0, lpB))) : lpB;
   const appraiserLp0 = coverage > 0 || lpA > lp0 ? Math.min(lpA, Math.max(capA, Math.min(lp0, lpA))) : lpA;
   const appraiserLp = Math.min(appraiserLp0, brokerLp);
@@ -262,7 +286,11 @@ export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): Remode
     broker: round(Math.exp(brokerLp)),
     appraiser: round(Math.exp(appraiserLp)),
     newBuild: round(Math.exp(asNew(brokerGrade))),
-    cappedAtNew: brokerLp < lpB - 1e-9 || appraiserLp0 < lpA - 1e-9,
+    cappedAtNew:
+      (brokerLp < lpB - 1e-9 && Math.abs(brokerLp - (asNew(brokerGrade) + Math.log(NEW_BUILD_CAP_BROKER))) < 1e-9) ||
+      (appraiserLp0 < lpA - 1e-9 && Math.abs(appraiserLp0 - (asNew(appraiserGrade) + Math.log(NEW_BUILD_CAP_APPRAISER))) < 1e-9),
+    cappedAtFull: brokerLp < lpB - 1e-9 || appraiserLp0 < lpA - 1e-9,
+    unrenovated: round(Math.exp(lpU)),
     neighborhoodTopGrade: top,
     newGrade: rawGrade,
     newCond,

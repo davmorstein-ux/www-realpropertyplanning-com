@@ -16,21 +16,21 @@ export const REMODEL_PAGE = {
   DESCRIPTION:
     "Free King County calculator: look up your house, choose what you would remodel and at what quality, and see two values afterward, a broker's view of what buyers pay and an appraiser's view of what a refinance appraisal is likely to support. Built from 27,000 King County home sales.",
   PUBLISHED: "2026-10-13",
-  REVIEWED: "2026-10-14",
+  REVIEWED: "2026-10-15",
   SALES_FROM: "October 2024",
   SALES_THROUGH: "September 2026",
   /** The quarter today's estimates are priced at (model.json marketQuarter). */
   MARKET_MONTHS: "July to September 2026",
   N_SALES: "27,066",
   SHORT_ANSWER:
-    "It depends on how much of the house you redo, the quality you choose, and what the best houses in your neighborhood are like. In King County sales from the last two years, each step up in the assessor's quality grade added about 10% to price, each step up in condition about 8%, and a recent renovation about 20% more in what buyers paid. Appraisers credit less: they give no premium for \"newly remodeled\" and stop crediting quality that goes past the neighborhood's best houses.",
+    "Less than most owners hope. In King County sales, a complete renovation has added up to about 30% to what the same house sells for unrenovated, and appraisers credit about 20%. How much of that a remodel earns depends on how much of the house it covers, the quality, and what the best houses in the neighborhood are like. Spending past that point, or past what the neighborhood's best houses have, mostly does not come back at sale.",
 };
 
 export const REMODEL_FAQS: { question: string; answer: string; alts?: string[] }[] = [
   {
     question: "How much value does a remodel add to a King County house?",
     answer:
-      "In King County single-family sales from October 2024 to September 2026, each step up in the assessor's building grade (the quality of construction and finishes) went with about 10% more in price, each step up in condition about 8%, and a renovation in the last ten years about 20% more. What your remodel adds depends on how much of the house it touches, the quality, and your neighborhood. The calculator on this page works it out for your house.",
+      "In King County sales, a complete renovation has added up to about 30% over what the same house sells for unrenovated: houses resold after a recorded renovation gained a median 25% over the market in 98034 and up to about a third countywide. Appraisers credit about 20%. A partial remodel earns part of that, depending on what it covers and the quality. The calculator on this page works it out for your house.",
     alts: ["does remodeling increase home value in King County", "how much does a kitchen remodel add to home value"],
   },
   {

@@ -470,10 +470,18 @@ export default function RemodelValue() {
                         </p>
                       </div>
                     )}
-                    {result.cappedAtNew && (
+                    {result.cappedAtFull && (
                       <div className="rmv-warn">
                         <p style={{ marginBottom: 0 }}>
-                          <strong>Limited by new construction.</strong> This house built new today, at the same size and quality, would sell for about {fmt(result.newBuild)} here. Remodeled older houses in King County have sold for about what the same house brings new, rarely more, so the broker's view stops at that figure and the appraiser's view at 95% of it.
+                          {result.cappedAtNew ? (
+                            <>
+                              <strong>Limited by new construction.</strong> This house built new today, at the same size and quality, would sell for about {fmt(result.newBuild)} here. Remodeled older houses have sold for about what the same house brings new, rarely more.
+                            </>
+                          ) : (
+                            <>
+                              <strong>At the most a full renovation adds.</strong> Unrenovated, this house would sell for about {fmt(result.unrenovated)}. In King County sales a complete renovation has added up to about 30% to an unrenovated house, and an appraiser credits about 20%, however much was spent. More spending than this buys finishes the market here does not pay extra for.
+                            </>
+                          )}
                         </p>
                       </div>
                     )}
@@ -501,6 +509,9 @@ export default function RemodelValue() {
               </p>
               <p>
                 <strong>Your remodel choices.</strong> The county's records do not know window brands or roof shingles. They grade a whole house's quality on a 1–13 scale. Each part of the house carries a share of that grade (the kitchen the most), and each quality level aims at a grade: economy 7, standard 8, premium 10, luxury 12. Redoing everything at premium makes a house grade 10. Economy finishes in a better house pull its grade down.
+              </p>
+              <p>
+                <strong>The full-renovation ceiling.</strong> A complete remodel lifts a house by a limited amount, measured from what the same house sells for unrenovated. In King County sales, houses resold after a recorded renovation gained a median 25% over the market in Kirkland's 98034 and up to about a third countywide; a 98034 split entry that sold for $985,000 unrenovated compares with a similar fully renovated one at $1,315,000. So the broker's view stops at 30% above the unrenovated value and the appraiser's view at 20%. Added square feet, baths and bedrooms are priced on top.
               </p>
               <p>
                 <strong>The new-construction ceiling.</strong> However much is redone, an older house is not priced above the same house built new. In King County sales, remodeled houses over 30 years old sold for about what the same house brings as new construction, and rarely more. The broker's view stops there and the appraiser's view at 95% of it.
