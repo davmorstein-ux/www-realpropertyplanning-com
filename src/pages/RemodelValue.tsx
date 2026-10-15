@@ -16,6 +16,8 @@ import icoBaths from "@/assets/remodel/baths.webp";
 import icoFlooring from "@/assets/remodel/flooring.webp";
 import icoPaint from "@/assets/remodel/paint.webp";
 import icoExterior from "@/assets/remodel/exterior.webp";
+import icoExtPaint from "@/assets/remodel/exterior-paint.webp";
+import icoFinishes from "@/assets/remodel/finishes.webp";
 import icoRoof from "@/assets/remodel/roof.webp";
 import icoGutters from "@/assets/remodel/gutters.webp";
 import icoWindows from "@/assets/remodel/windows.webp";
@@ -32,6 +34,8 @@ const CATEGORY_ICONS: Record<string, string> = {
   flooring: icoFlooring,
   paint: icoPaint,
   exterior: icoExterior,
+  extpaint: icoExtPaint,
+  finishes: icoFinishes,
   roof: icoRoof,
   gutters: icoGutters,
   windows: icoWindows,

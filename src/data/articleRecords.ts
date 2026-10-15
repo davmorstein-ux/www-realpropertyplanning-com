@@ -52,7 +52,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-10-13",
     reviewed: "2026-10-15",
     changes: [
-      { date: "2026-10-15", text: "Added two spending categories, gutters and downspouts and home theater; roof no longer includes gutters." },
+      { date: "2026-10-15", text: "Added spending categories for gutters and downspouts and for home theater, and split siding and exterior paint into two; roof no longer includes gutters." },
       { date: "2026-10-15", text: "Added Snohomish County: about 190,000 single-family homes for address lookup, priced by a separate model fitted on 14,385 Snohomish County sales (January 2024 to May 2026); half its test estimates were within 7% of the price." },
       { date: "2026-10-15", text: "Complete-job costs now scale with the house's own value, so the same dollars count for less in an expensive house, and value builds more steadily with spending instead of crediting the first dollars at several times their cost." },
       { date: "2026-10-15", text: "The most a full renovation adds now depends on the neighborhood's price level, from about 26% (broker) / 17% (appraiser) in the least expensive King County neighborhoods to about 36% / 24% in the most expensive, following the renovation premium measured in sales in each price tier." },

@@ -91,7 +91,7 @@ describe("remodel value model", () => {
     // The owner's paired sales, 98034 split entries: $985,000 unrenovated; similar house fully renovated
     // for about $250,000, $1,315,000.
     const split = { ...mercer, sk: model.zipDefault["98034"], above: 1150, finBsmt: 850, unfinBsmt: 150, lot: 8500, yrBuilt: 1977, grade: 7 };
-    const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 25000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
+    const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 17000, extpaint: 8000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
 
     it("the spending table's shares add to 1", () => {
       expect(SPEND_CATEGORIES.reduce((t, c) => t + c.share, 0)).toBeCloseTo(1, 6);
@@ -162,7 +162,7 @@ describe("remodel value model", () => {
       const base = estimateSpend(sno, h, EMPTY_SPEND)!;
       expect(base.asIs).toBeGreaterThan(500_000);
       expect(base.asIs).toBeLessThan(1_600_000);
-      const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 25000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
+      const full = { kitchen: 60000, baths: 45000, flooring: 22000, paint: 9000, finishes: 13000, exterior: 17000, extpaint: 8000, roof: 23000, windows: 20000, systems: 20000, landscaping: 13000 };
       const r = estimateSpend(sno, h, { ...EMPTY_SPEND, spent: full })!;
       expect(r.broker / r.unrenovated).toBeLessThanOrEqual(r.ceilingBroker + 0.001);
       expect(r.broker).toBeGreaterThan(r.asIs);
