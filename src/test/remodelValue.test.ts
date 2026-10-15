@@ -126,6 +126,18 @@ describe("remodel value model", () => {
       expect(renoCeilings(1_050_000).appraiser).toBeCloseTo(1.2, 3);
       expect(renoCeilings(3_000_000).broker).toBeGreaterThan(1.33);
     });
+    it("costs scale with the house: the same dollars matter more in Burien than in Clyde Hill", () => {
+      const h = (z: string, sqft: number, grade: number) => ({ ...mercer, sk: model.zipDefault[z], above: sqft, grade, lot: 9000 });
+      const ten = { ...EMPTY_SPEND, spent: { paint: 5000, flooring: 5000 } };
+      const burien = estimateSpend(model, h("98166", 1700, 7), ten)!;
+      const clyde = estimateSpend(model, h("98004", 4000, 10), ten)!;
+      expect(burien.broker / burien.asIs).toBeGreaterThan(2 * (clyde.broker / clyde.asIs - 1) + 1);
+      // $50,000 of windows is far past what pays back in Renton; $100,000 is about right in Medina
+      const renton = estimateSpend(model, h("98058", 2100, 7), { ...EMPTY_SPEND, spent: { windows: 50000 } })!;
+      const medina = estimateSpend(model, h("98039", 4500, 10), { ...EMPTY_SPEND, spent: { windows: 100000 } })!;
+      expect((renton.broker - renton.asIs) / 50000).toBeLessThan(0.5);
+      expect((medina.broker - medina.asIs) / 100000).toBeGreaterThan(0.8);
+    });
     it("older work earns less", () => {
       const recent = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full, doneYear: 2022 })!;
       const old = estimateSpend(model, split, { ...EMPTY_SPEND, spent: full, doneYear: 2010 })!;

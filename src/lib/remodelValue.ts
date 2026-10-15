@@ -37,7 +37,7 @@
  *     neighborhood's top tenth (the conformity principle).
  */
 import { REMODEL_PARTS, TIER_GRADE, type Tier } from "@/data/remodelTiers";
-import { OLD_WORK_FACTOR, SPEND_CATEGORIES, neighborhoodCostFactor, type SpendCategory } from "@/data/remodelCosts";
+import { COST_BASE_VALUE, OLD_WORK_FACTOR, SPEND_CATEGORIES, type SpendCategory } from "@/data/remodelCosts";
 
 export interface RemodelModel {
   asOf: { salesThrough: string; salesFrom: string; nSales: number; built: string };
@@ -385,14 +385,19 @@ export interface SpendResult {
   ceilingAppraiser: number;
 }
 
-/** Spending at the full-job cost earns 90% of a category's value: 1 − e^(−CURVE) = 0.9. */
-export const CURVE = Math.log(10);
+/**
+ * How a category's value builds with spending, x = spent / full-job cost (Oct 15, 2026):
+ * earned = 1 − (1 − x/REACH)², reaching 90% at the full-job cost and 100% at REACH (about 1.46x
+ * it), flat after that. Steadier than the earlier 1 − 10^(−x), which credited the first dollars
+ * of every category at several times their cost (owner: a $10,000 job in Clyde Hill should mean
+ * next to nothing).
+ */
+export const REACH = 1 / (1 - Math.sqrt(0.1));
+export const earnedShare = (x: number) => (x >= REACH ? 1 : 1 - Math.pow(1 - Math.max(0, x) / REACH, 2));
 
-export function fullJobCost(c: SpendCategory, h: HomeFacts, costFactor: number): number {
-  const sq = Math.max(600, h.above + h.finBsmt) / 2000;
-  const size =
-    c.scale === "sqft" ? sq : c.scale === "sqrtSqft" ? Math.sqrt(sq) : c.scale === "baths" ? Math.max(1, h.baths) : Math.sqrt(Math.max(2000, h.lot) / 8000);
-  return Math.round((c.fullJob * size * costFactor) / 500) * 500;
+export function fullJobCost(c: SpendCategory, unrenovatedValue: number): number {
+  const factor = Math.min(6, Math.max(0.35, unrenovatedValue / COST_BASE_VALUE));
+  return Math.round((c.fullJob * factor) / 500) * 500;
 }
 
 export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): SpendResult | null {
@@ -411,13 +416,12 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
   };
   const lpU0 = logPrice(m, h.sk, unreno)!;
   const lpU1 = logPrice(m, h.sk, withSpace)!;
-  const costFactor = neighborhoodCostFactor(m.subs[h.sk]?.med);
   const age = s.doneYear && MODEL_YEAR - s.doneYear > 10 ? OLD_WORK_FACTOR : 1;
 
   const cats = SPEND_CATEGORIES.map((c) => {
     const spent = Math.max(0, s.spent[c.id] ?? 0);
-    const k = fullJobCost(c, h, costFactor);
-    return { c, spent, k, earned: c.share * (1 - Math.exp((-CURVE * spent) / k)) * age };
+    const k = fullJobCost(c, Math.exp(lpU0));
+    return { c, spent, k, earned: c.share * earnedShare(spent / k) * age };
   });
   const score = Math.min(1, cats.reduce((t, x) => t + x.earned, 0));
 
@@ -446,8 +450,9 @@ export function estimateSpend(m: RemodelModel, h: HomeFacts, s: SpendInput): Spe
   const categories: CategoryResult[] = cats.map(({ c, spent, k, earned }) => {
     // Most this category can add (broker), and where its last dollar still returns 50 cents.
     const maxValue = B.before * (Math.pow(ceil.broker, (1 - B.used) * c.share * age) - 1);
-    const r = (maxValue * CURVE) / k; // return on the first dollar
-    const paysBackTo = r > 0.5 ? Math.round(((k / CURVE) * Math.log(r / 0.5)) / 500) * 500 : 0;
+    // marginal value of a dollar at x: maxValue * 2(1 - x/REACH) / (REACH k); solve for 50 cents
+    const r = (2 * maxValue) / (REACH * k);
+    const paysBackTo = r > 0.5 ? Math.round((k * REACH * (1 - 0.5 / r)) / 500) * 500 : 0;
     return {
       id: c.id,
       label: c.label,
