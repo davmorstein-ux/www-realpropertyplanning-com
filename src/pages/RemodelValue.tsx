@@ -556,7 +556,7 @@ export default function RemodelValue() {
                                     <td>{fmt(c.spent)}</td>
                                     <td>{fmtShort(c.appraiser)} – {fmtShort(c.broker)}</td>
                                     <td className="rmv-hide-sm">${(c.appraiser / c.spent).toFixed(2)} – ${(c.broker / c.spent).toFixed(2)}</td>
-                                    <td className={over ? "rmv-over" : undefined}>{c.paysBackTo > 0 ? fmt(c.paysBackTo) : "Rarely pays back"}{over ? " · well past it" : ""}</td>
+                                    <td className={over ? "rmv-over" : undefined}>{c.paysBackTo >= 1000 ? fmt(c.paysBackTo) : "Rarely pays back"}{over ? " · well past it" : ""}</td>
                                   </tr>
                                 );
                               })}

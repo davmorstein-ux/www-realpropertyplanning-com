@@ -37,12 +37,16 @@ export const SPEND_CATEGORIES: SpendCategory[] = [
   { id: "baths", label: "Bathrooms", share: 0.17, fullJob: 45000, hint: "All bathrooms together: tile, vanities, fixtures, showers" },
   { id: "flooring", label: "Flooring", share: 0.1, fullJob: 22000, hint: "Hardwood, LVP, tile, carpet" },
   { id: "paint", label: "Interior paint", share: 0.06, fullJob: 9000, hint: "Walls, ceilings, trim" },
-  { id: "finishes", label: "Interior finishes", share: 0.06, fullJob: 13000, hint: "Trim, doors, lighting, built-ins" },
-  { id: "exterior", label: "Siding & exterior paint", share: 0.08, fullJob: 27000, hint: "New siding, exterior paint, entry" },
-  { id: "roof", label: "Roof", share: 0.07, fullJob: 24000, hint: "Tear-off and new roof, gutters" },
+  { id: "finishes", label: "Interior finishes", share: 0.05, fullJob: 13000, hint: "Trim, doors, lighting, built-ins" },
+  { id: "exterior", label: "Siding & exterior paint", share: 0.07, fullJob: 27000, hint: "New siding, exterior paint, entry" },
+  { id: "roof", label: "Roof", share: 0.06, fullJob: 24000, hint: "Tear-off and new roof" },
+  { id: "gutters", label: "Gutters & downspouts", share: 0.02, fullJob: 6000, hint: "Seamless gutters, downspouts, gutter guards, drainage" },
   { id: "windows", label: "Windows & exterior doors", share: 0.08, fullJob: 22000, hint: "Replacement windows, entry and patio doors" },
-  { id: "systems", label: "Heating, cooling & systems", share: 0.08, fullJob: 22000, hint: "Furnace or heat pump, A/C, electrical, plumbing, water heater" },
+  { id: "systems", label: "Heating, cooling & systems", share: 0.07, fullJob: 22000, hint: "Furnace or heat pump, A/C, electrical, plumbing, water heater" },
   { id: "landscaping", label: "Landscaping", share: 0.05, fullJob: 13000, hint: "Yard, plantings, hardscape, fencing" },
+  /* Oct 15, 2026 (owner). A home theater is a buyer-specific taste: a small share, so most of what is
+     spent on one past a modest room does not come back at sale. */
+  { id: "theater", label: "Home theater", share: 0.02, fullJob: 15000, hint: "Projector or screen, sound, seating, room finishing" },
 ];
 
 /** Slider range, from the owner (Oct 15, 2026): $0 to $100,000 in $500 steps. Larger amounts can be typed. */
