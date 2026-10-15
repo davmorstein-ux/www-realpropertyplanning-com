@@ -10,6 +10,35 @@ import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { REMODEL_FAQS, REMODEL_PAGE as P } from "@/data/remodelPage";
 import { CONDITION_LABELS, GRADE_LABELS } from "@/data/remodelTiers";
 import { SLIDER_MAX, SLIDER_STEP, SPEND_CATEGORIES } from "@/data/remodelCosts";
+/* Category icons and before/after art supplied by the owner, Oct 15, 2026. */
+import icoKitchen from "@/assets/remodel/kitchen.webp";
+import icoBaths from "@/assets/remodel/baths.webp";
+import icoFlooring from "@/assets/remodel/flooring.webp";
+import icoPaint from "@/assets/remodel/paint.webp";
+import icoExterior from "@/assets/remodel/exterior.webp";
+import icoRoof from "@/assets/remodel/roof.webp";
+import icoGutters from "@/assets/remodel/gutters.webp";
+import icoWindows from "@/assets/remodel/windows.webp";
+import icoSystems from "@/assets/remodel/systems.webp";
+import icoLandscaping from "@/assets/remodel/landscaping.webp";
+import icoTheater from "@/assets/remodel/theater.webp";
+import artLookup from "@/assets/remodel/lookup.webp";
+import artBefore from "@/assets/remodel/house-before.webp";
+import artAfter from "@/assets/remodel/house-after.webp";
+
+const CATEGORY_ICONS: Record<string, string> = {
+  kitchen: icoKitchen,
+  baths: icoBaths,
+  flooring: icoFlooring,
+  paint: icoPaint,
+  exterior: icoExterior,
+  roof: icoRoof,
+  gutters: icoGutters,
+  windows: icoWindows,
+  systems: icoSystems,
+  landscaping: icoLandscaping,
+  theater: icoTheater,
+};
 import {
   EMPTY_SPEND,
   estimateSpend,
@@ -84,6 +113,11 @@ const CSS = `
 .rmv .rmv-val-r { font-size: 15px !important; font-weight: 600; color: #4a443d; margin: 0 0 6px; }
 .rmv .rmv-val-s { font-size: 15px; color: #4a443d; line-height: 1.5; margin-top: 6px; }
 .rmv .rmv-warn { background: #fff7e6; border: 1px solid #f0d9a8; border-radius: 10px; padding: 14px 18px; margin-top: 14px; }
+.rmv .rmv-spendname { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.rmv img.rmv-ico, .rmv .rmv-ico { width: 52px; height: 52px; flex: 0 0 52px; border-radius: 10px; object-fit: contain; background: #fff; }
+.rmv .rmv-ico-empty { display: inline-block; background: #f3f1ec; }
+.rmv img.rmv-stepart { width: 64px; height: 64px; margin-left: auto; object-fit: contain; }
+.rmv img.rmv-valart { display: block; width: 88px; height: 88px; object-fit: contain; margin: 0 0 6px; }
 .rmv .rmv-spendhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .rmv .rmv-spendnum { max-width: 150px; text-align: right; }
 .rmv input.rmv-range { width: 100%; margin: 10px 0 6px; accent-color: ${NAVY}; height: 28px; }
@@ -272,7 +306,7 @@ export default function RemodelValue() {
         {/* ---------- step 1 ---------- */}
         <div style={{ padding: "36px 0 10px" }}>
           <div className="rmv-wrap">
-            <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">1</span><h2 className="rmv-h2" style={{ margin: 0 }}>Find your house</h2></div>
+            <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">1</span><h2 className="rmv-h2" style={{ margin: 0 }}>Find your house</h2><img src={artLookup} alt="" aria-hidden="true" width={64} height={64} className="rmv-stepart" /></div>
             <p>Single-family homes in King and Snohomish counties. Enter the ZIP code, then start typing the street address (number first).</p>
             {modelError && <p role="alert">The calculator's data did not load. Refresh the page to try again.</p>}
             <div className="rmv-box">
@@ -429,7 +463,14 @@ export default function RemodelValue() {
                     return (
                       <div key={c.id} className="rmv-part">
                         <div className="rmv-spendhead">
-                          <label className="rmv-spendlabel" htmlFor={`s-${c.id}`}>{c.label}</label>
+                          <div className="rmv-spendname">
+                            {CATEGORY_ICONS[c.id] ? (
+                              <img src={CATEGORY_ICONS[c.id]} alt="" aria-hidden="true" width={52} height={52} loading="lazy" className="rmv-ico" />
+                            ) : (
+                              <span className="rmv-ico rmv-ico-empty" aria-hidden="true" />
+                            )}
+                            <label className="rmv-spendlabel" htmlFor={`s-${c.id}`}>{c.label}</label>
+                          </div>
                           <input
                             className="rmv-in rmv-spendnum"
                             type="number"
@@ -512,12 +553,14 @@ export default function RemodelValue() {
                   <>
                     <div className="rmv-results">
                       <div className="rmv-val">
+                        <img src={artBefore} alt="" aria-hidden="true" width={88} height={88} className="rmv-valart" />
                         <div className="rmv-val-k">{done ? "Today, without the remodel" : "Today, as is"}</div>
                         <div className="rmv-val-n">{fmt(result.asIs)}</div>
                         {range(result.asIs)}
                         <div className="rmv-val-s">{done ? "What the house would sell for today had the work not been done." : `Estimated from your house's details and ${isSno ? "Snohomish" : "King"} County sales.`}</div>
                       </div>
                       <div className="rmv-val rmv-val-a">
+                        <img src={artAfter} alt="" aria-hidden="true" width={88} height={88} className="rmv-valart" />
                         <div className="rmv-val-k">{done ? "Appraiser's view, with it" : "Appraiser's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.appraiser)}</div>
                         {anyScope && range(result.appraiser)}
@@ -525,6 +568,7 @@ export default function RemodelValue() {
                         <div className="rmv-val-s">What a refinance appraisal is likely to support: up to about {Math.round((result.ceilingAppraiser - 1) * 100)}% over the house unrenovated in this neighborhood.</div>
                       </div>
                       <div className="rmv-val rmv-val-b">
+                        <img src={artAfter} alt="" aria-hidden="true" width={88} height={88} className="rmv-valart" />
                         <div className="rmv-val-k">{done ? "Broker's view, with it" : "Broker's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.broker)}</div>
                         {anyScope && range(result.broker)}
