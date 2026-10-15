@@ -470,6 +470,13 @@ export default function RemodelValue() {
                         </p>
                       </div>
                     )}
+                    {result.cappedAtNew && (
+                      <div className="rmv-warn">
+                        <p style={{ marginBottom: 0 }}>
+                          <strong>Limited by new construction.</strong> This house built new today, at the same size and quality, would sell for about {fmt(result.newBuild)} here. Remodeled older houses in King County have sold for about what the same house brings new, rarely more, so the broker's view stops at that figure and the appraiser's view at 95% of it.
+                        </p>
+                      </div>
+                    )}
                     <p className="rmv-small" style={{ marginTop: 16 }}>
                       An automated estimate from public records, not an appraisal or a market analysis. <strong>Likely range:</strong> tested on sales it had not seen, 6 in 10 sold within a range this wide around its estimate; half within 8% and 88% within 20%. It cannot see layout, workmanship, unpermitted work, or anything the county's record misses.{" "}
                       <a href="#how-it-works" style={{ color: NAVY, fontWeight: 700 }}>How it works</a>
@@ -494,6 +501,9 @@ export default function RemodelValue() {
               </p>
               <p>
                 <strong>Your remodel choices.</strong> The county's records do not know window brands or roof shingles. They grade a whole house's quality on a 1–13 scale. Each part of the house carries a share of that grade (the kitchen the most), and each quality level aims at a grade: economy 7, standard 8, premium 10, luxury 12. Redoing everything at premium makes a house grade 10. Economy finishes in a better house pull its grade down.
+              </p>
+              <p>
+                <strong>The new-construction ceiling.</strong> However much is redone, an older house is not priced above the same house built new. In King County sales, remodeled houses over 30 years old sold for about what the same house brings as new construction, and rarely more. The broker's view stops there and the appraiser's view at 95% of it.
               </p>
               <p>
                 <strong>Likely range.</strong> Every estimate misses some. Tested on King County sales it had not seen, 6 in 10 houses sold within the range shown under each value, so treat the range, not the single number, as the answer.

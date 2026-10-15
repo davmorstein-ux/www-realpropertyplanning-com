@@ -95,6 +95,21 @@ export const MODEL_YEAR = 2026;
 /** Share of the house redone where the broker's "newly renovated" premium starts, and where it is full. */
 export const RENEW_START = 0.25;
 export const RENEW_FULL = 0.7;
+/**
+ * NEW-CONSTRUCTION CEILING (Oct 14, 2026, after the owner priced his own house with
+ * every part redone at premium and got more than new construction sells for nearby).
+ * Cause: the assessor rates EVERY new house condition 3 (100% of sales 0-10 years
+ * old); conditions 4-5 only describe older houses, relative to their age. So raising
+ * an old house's condition toward 5 and adding the renovation premium priced it above
+ * the same house built new. King County check: houses over 30 years old remodeled
+ * since 2016 sold for a median 0.995x the model's value of the same house as new
+ * construction (25th percentile 0.913x; n=899, Oct 2024-Sept 2026).
+ * So after a remodel: the broker's view stops at 1.00x the same house built new
+ * (same size, lot, view, grade after the remodel, condition 3, no renovation flag),
+ * and the appraiser's view at 0.95x, between that median and the 25th percentile.
+ */
+export const NEW_BUILD_CAP_BROKER = 1.0;
+export const NEW_BUILD_CAP_APPRAISER = 0.95;
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 interface Features {
@@ -184,6 +199,10 @@ export interface RemodelResult {
   coverage: number;
   /** True when the remodel's quality goes past what the neighborhood's best houses have. */
   overImproved: boolean;
+  /** The same house after the remodel, built new (condition 3, no renovation): the ceiling. */
+  newBuild: number;
+  /** True when the new-construction ceiling lowered the broker's or the appraiser's value. */
+  cappedAtNew: boolean;
 }
 
 /** A value's likely range from the model's tested error (null when the model has no band). */
@@ -227,13 +246,23 @@ export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): Remode
   })!;
   const lpA = logPrice(m, h.sk, { ...added, grade: appraiserGrade })!;
 
+  // The new-construction ceiling (see NEW_BUILD_CAP_BROKER). A remodel never lowers the value
+  // below as-is through the cap; only a downgrade (economy finishes in a better house) can.
+  const asNew = (grade: number) => logPrice(m, h.sk, { ...added, grade, yrBuilt: MODEL_YEAR, cond: 3, ren10: 0, renOld: 0 })!;
+  const capB = asNew(brokerGrade) + Math.log(NEW_BUILD_CAP_BROKER);
+  const capA = asNew(appraiserGrade) + Math.log(NEW_BUILD_CAP_APPRAISER);
+  const brokerLp = coverage > 0 || lpB > lp0 ? Math.min(lpB, Math.max(capB, Math.min(lp0, lpB))) : lpB;
+  const appraiserLp0 = coverage > 0 || lpA > lp0 ? Math.min(lpA, Math.max(capA, Math.min(lp0, lpA))) : lpA;
+  const appraiserLp = Math.min(appraiserLp0, brokerLp);
+
   const round = (v: number) => Math.round(v / 1000) * 1000;
   const asIs = round(Math.exp(lp0));
   return {
     asIs,
-    // Neither view goes below as-is unless the scope downgrades the house.
-    broker: round(Math.exp(lpB)),
-    appraiser: round(Math.exp(lpA)),
+    broker: round(Math.exp(brokerLp)),
+    appraiser: round(Math.exp(appraiserLp)),
+    newBuild: round(Math.exp(asNew(brokerGrade))),
+    cappedAtNew: brokerLp < lpB - 1e-9 || appraiserLp0 < lpA - 1e-9,
     neighborhoodTopGrade: top,
     newGrade: rawGrade,
     newCond,

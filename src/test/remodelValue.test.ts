@@ -61,6 +61,16 @@ describe("remodel value model", () => {
     expect(recent.appraiser).toBe(old.appraiser);
   });
 
+  it("a fully remodeled older house never prices above the same house built new", () => {
+    for (const t of ["premium", "luxury"] as const) {
+      const r = estimate(model, mercer, all(t))!;
+      expect(r.broker, t).toBeLessThanOrEqual(r.newBuild);
+      expect(r.appraiser, t).toBeLessThanOrEqual(Math.round(r.newBuild * 0.95 / 1000) * 1000 + 1000);
+      expect(r.appraiser, t).toBeLessThanOrEqual(r.broker);
+      expect(r.broker, t).toBeGreaterThan(r.asIs);
+    }
+  });
+
   it("the likely range brackets the estimate", () => {
     const r = rangeOf(model, 1_000_000)!;
     expect(r[0]).toBeLessThan(1_000_000);
