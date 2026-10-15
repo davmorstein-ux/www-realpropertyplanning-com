@@ -42,6 +42,8 @@ export interface RemodelModel {
   asOf: { salesThrough: string; salesFrom: string; nSales: number; built: string };
   /** The quarter of sales today's estimates are priced at, e.g. "2026Q3". */
   marketQuarter?: string;
+  /** Likely range: 6 in 10 hold-out sales sold between these multiples of the estimate (20th and 80th percentiles). */
+  band?: [number, number];
   coef: Record<string, number>;
   moNow: number;
   /** "area-subarea" → location effect, 90th-percentile grade, sales count, city, median sale. */
@@ -71,6 +73,13 @@ export interface HomeFacts {
 
 export interface RemodelScope {
   tiers: Partial<Record<string, Tier | null>>;
+  /**
+   * "Already remodeled" mode (Oct 14, 2026): the year the work was finished. The house facts then
+   * describe the house BEFORE the work, and the broker's renovation premium is the one buyers paid
+   * for work of that age: the "within 10 years" premium if it is 10 years old or less, the smaller
+   * "renovated longer ago" premium if older. Omit when planning a remodel.
+   */
+  doneYear?: number;
   addAbove: number;
   addFinBsmt: number;
   addBaths: number;
@@ -177,6 +186,10 @@ export interface RemodelResult {
   overImproved: boolean;
 }
 
+/** A value's likely range from the model's tested error (null when the model has no band). */
+export const rangeOf = (m: RemodelModel, v: number): [number, number] | null =>
+  m.band ? [Math.round((v * m.band[0]) / 5000) * 5000, Math.round((v * m.band[1]) / 5000) * 5000] : null;
+
 export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): RemodelResult | null {
   const base = asIsFeatures(h);
   const lp0 = logPrice(m, h.sk, base);
@@ -207,8 +220,10 @@ export function estimate(m: RemodelModel, h: HomeFacts, s: RemodelScope): Remode
   const lpB = logPrice(m, h.sk, {
     ...added,
     grade: brokerGrade,
-    ren10: Math.max(base.ren10, renew),
-    renOld: base.renOld * (1 - renew),
+    ...(s.doneYear && MODEL_YEAR - s.doneYear > 10
+      ? // work older than 10 years earns the "renovated longer ago" premium, not the recent one
+        { ren10: base.ren10, renOld: Math.max(base.renOld, renew) }
+      : { ren10: Math.max(base.ren10, renew), renOld: base.renOld * (1 - renew) }),
   })!;
   const lpA = logPrice(m, h.sk, { ...added, grade: appraiserGrade })!;
 

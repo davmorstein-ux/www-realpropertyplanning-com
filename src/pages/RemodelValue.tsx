@@ -13,6 +13,7 @@ import {
   EMPTY_SCOPE,
   estimate,
   loadZip,
+  rangeOf,
   matchAddresses,
   rowToFacts,
   title as titleCase,
@@ -78,6 +79,7 @@ const CSS = `
 .rmv .rmv-val-k { font-size: 14px !important; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #4a443d; }
 .rmv .rmv-val-n { font-size: clamp(30px, 4vw, 38px) !important; font-weight: 700 !important; line-height: 1.15 !important; margin: 6px 0 4px !important; color: ${INK} !important; font-variant-numeric: tabular-nums; }
 .rmv .rmv-val-d { font-size: 17px !important; font-weight: 700 !important; }
+.rmv .rmv-val-r { font-size: 15px !important; font-weight: 600; color: #4a443d; margin: 0 0 6px; }
 .rmv .rmv-val-s { font-size: 15px; color: #4a443d; line-height: 1.5; margin-top: 6px; }
 .rmv .rmv-warn { background: #fff7e6; border: 1px solid #f0d9a8; border-radius: 10px; padding: 14px 18px; margin-top: 14px; }
 .rmv .rmv-toggle { display: flex; gap: 8px; align-items: center; min-height: 46px; font-size: 17px; }
@@ -131,6 +133,10 @@ export default function RemodelValue() {
   const [facts, setFacts] = useState<HomeFacts | null>(null);
   const [scope, setScope] = useState<RemodelScope>(EMPTY_SCOPE);
   const [cost, setCost] = useState(0);
+  /* Oct 14, 2026: "Already remodeled" mode. The house facts then describe the house before the work. */
+  const [mode, setMode] = useState<"plan" | "done">("plan");
+  const [doneYear, setDoneYear] = useState(2020);
+  const done = mode === "done";
 
   useEffect(() => {
     fetch("/data/remodel/model.json")
@@ -180,7 +186,14 @@ export default function RemodelValue() {
   const set = <K extends keyof HomeFacts>(k: K, v: HomeFacts[K]) => setFacts((f) => (f ? { ...f, [k]: v } : f));
   const setTier = (part: string, t: Tier | null) => setScope((s) => ({ ...s, tiers: { ...s.tiers, [part]: t } }));
 
-  const result = useMemo(() => (model && facts ? estimate(model, facts, scope) : null), [model, facts, scope]);
+  const result = useMemo(
+    () => (model && facts ? estimate(model, facts, done ? { ...scope, doneYear: doneYear > 1900 ? doneYear : undefined } : scope) : null),
+    [model, facts, scope, done, doneYear],
+  );
+  const range = (v: number) => {
+    const r = model ? rangeOf(model, v) : null;
+    return r ? <div className="rmv-val-r">Likely range {fmtShort(r[0])} – {fmtShort(r[1])}</div> : null;
+  };
   const hood = model && facts ? model.subs[facts.sk] : undefined;
   const anyScope = Object.values(scope.tiers).some(Boolean) || scope.addAbove > 0 || scope.addFinBsmt > 0 || scope.addBaths > 0 || scope.addBeds > 0 || scope.addFp > 0 || scope.addGarage;
 
@@ -290,7 +303,15 @@ export default function RemodelValue() {
             {/* ---------- step 2 ---------- */}
             <div style={{ padding: "26px 0 10px" }}>
               <div className="rmv-wrap">
-                <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">2</span><h2 className="rmv-h2" style={{ margin: 0 }}>Your house today</h2></div>
+                <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">2</span><h2 className="rmv-h2" style={{ margin: 0 }}>{done ? "Your house before the remodel" : "Your house today"}</h2></div>
+                {done && (
+                  <p>
+                    Describe the house as it was <strong>before</strong> the work you enter below.
+                    {picked && picked !== "manual" && facts.yrRenovated >= doneYear
+                      ? ` The county's record shows a renovation in ${facts.yrRenovated}, so it may already include this remodel: set the quality grade, condition, size and baths back to what they were before, and the year last renovated to 0 or the earlier renovation.`
+                      : " The county's record may not include the remodel yet; if it does, set the grade, condition, size and baths back to what they were before."}
+                  </p>
+                )}
                 {hood && hood.n >= 10 && (
                   <p>
                     Your assessor neighborhood{hood.city ? ` in ${hood.city}` : ""}: median sale {fmtShort(hood.med)} across {hood.n} sales since {P.SALES_FROM}. Its best houses (top tenth) are grade {model!.subs[facts.sk].g90}.
@@ -351,7 +372,20 @@ export default function RemodelValue() {
             <div style={{ padding: "26px 0 10px" }}>
               <div className="rmv-wrap">
                 <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">3</span><h2 className="rmv-h2" style={{ margin: 0 }}>The remodel</h2></div>
-                <p>Choose each part you would redo and the quality. Leave the rest at "Not changing".</p>
+                <div className="rmv-picks" role="group" aria-label="Planning or already done" style={{ margin: "4px 0 12px" }}>
+                  <button type="button" className="rmv-pick" aria-pressed={!done} onClick={() => setMode("plan")}>Planning a remodel</button>
+                  <button type="button" className="rmv-pick" aria-pressed={done} onClick={() => setMode("done")}>Already remodeled</button>
+                </div>
+                {done ? (
+                  <>
+                    <p>Choose each part that was redone and the quality. Leave the rest at "Not changing".</p>
+                    <div style={{ maxWidth: 260, marginBottom: 14 }}>
+                      <NumField id="a-year" label="Year the work was finished" value={doneYear} onChange={setDoneYear} min={1950} />
+                    </div>
+                  </>
+                ) : (
+                  <p>Choose each part you would redo and the quality. Leave the rest at "Not changing".</p>
+                )}
                 <div className="rmv-box">
                   {REMODEL_PARTS.map((p) => {
                     const t = scope.tiers[p.id] ?? null;
@@ -386,7 +420,7 @@ export default function RemodelValue() {
                         </select>
                       </div>
                     )}
-                    <NumField id="a-cost" label="Remodel cost, optional ($)" value={cost} onChange={setCost} step={1000} />
+                    <NumField id="a-cost" label={done ? "What it cost, optional ($)" : "Remodel cost, optional ($)"} value={cost} onChange={setCost} step={1000} />
                   </div>
                 </div>
               </div>
@@ -395,27 +429,30 @@ export default function RemodelValue() {
             {/* ---------- results ---------- */}
             <div style={{ padding: "30px 0 40px", background: "#faf8f4", marginTop: 26, borderTop: "1px solid #e6e0d6" }} aria-live="polite">
               <div className="rmv-wrap">
-                <h2 className="rmv-h2">What it could be worth</h2>
+                <h2 className="rmv-h2">{done ? "What your remodel is worth today" : "What it could be worth"}</h2>
                 {!result && <p>Enter the living area to see an estimate.</p>}
                 {result && (
                   <>
                     <div className="rmv-results">
                       <div className="rmv-val">
-                        <div className="rmv-val-k">Today, as is</div>
+                        <div className="rmv-val-k">{done ? "Today, without the remodel" : "Today, as is"}</div>
                         <div className="rmv-val-n">{fmt(result.asIs)}</div>
-                        <div className="rmv-val-s">Estimated from your house's details and King County sales.</div>
+                        {range(result.asIs)}
+                        <div className="rmv-val-s">{done ? "What the house would sell for today had the work not been done." : "Estimated from your house's details and King County sales."}</div>
                       </div>
                       <div className="rmv-val rmv-val-a">
-                        <div className="rmv-val-k">Appraiser's view, after</div>
+                        <div className="rmv-val-k">{done ? "Appraiser's view, with it" : "Appraiser's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.appraiser)}</div>
+                        {anyScope && range(result.appraiser)}
                         <div className="rmv-val-d" style={{ color: "#0f5f57" }}>{anyScope ? `${signed(result.appraiser - result.asIs)} added` : "Choose a remodel above"}</div>
                         <div className="rmv-val-s">What a refinance appraisal is likely to support: measurable changes only, capped at the neighborhood's best houses.</div>
                       </div>
                       <div className="rmv-val rmv-val-b">
-                        <div className="rmv-val-k">Broker's view, after</div>
+                        <div className="rmv-val-k">{done ? "Broker's view, with it" : "Broker's view, after"}</div>
                         <div className="rmv-val-n">{fmt(result.broker)}</div>
+                        {anyScope && range(result.broker)}
                         <div className="rmv-val-d" style={{ color: NAVY }}>{anyScope ? `${signed(result.broker - result.asIs)} added` : "Choose a remodel above"}</div>
-                        <div className="rmv-val-s">What buyers have paid for houses like it, freshly remodeled. The best case if you sell.</div>
+                        <div className="rmv-val-s">{done ? (doneYear && 2026 - doneYear > 10 ? "What buyers have paid for houses like it with work more than 10 years old. The best case if you sell." : "What buyers have paid for houses like it, recently remodeled. The best case if you sell.") : "What buyers have paid for houses like it, freshly remodeled. The best case if you sell."}</div>
                       </div>
                     </div>
                     {anyScope && (
@@ -434,7 +471,7 @@ export default function RemodelValue() {
                       </div>
                     )}
                     <p className="rmv-small" style={{ marginTop: 16 }}>
-                      An automated estimate from public records, not an appraisal or a market analysis. Tested on sales it had not seen, half its estimates were within 8% of the price and 88% within 20%. It cannot see layout, workmanship, unpermitted work, or anything the county's record misses.{" "}
+                      An automated estimate from public records, not an appraisal or a market analysis. <strong>Likely range:</strong> tested on sales it had not seen, 6 in 10 sold within a range this wide around its estimate; half within 8% and 88% within 20%. It cannot see layout, workmanship, unpermitted work, or anything the county's record misses.{" "}
                       <a href="#how-it-works" style={{ color: NAVY, fontWeight: 700 }}>How it works</a>
                     </p>
                   </>
@@ -457,6 +494,12 @@ export default function RemodelValue() {
               </p>
               <p>
                 <strong>Your remodel choices.</strong> The county's records do not know window brands or roof shingles. They grade a whole house's quality on a 1–13 scale. Each part of the house carries a share of that grade (the kitchen the most), and each quality level aims at a grade: economy 7, standard 8, premium 10, luxury 12. Redoing everything at premium makes a house grade 10. Economy finishes in a better house pull its grade down.
+              </p>
+              <p>
+                <strong>Likely range.</strong> Every estimate misses some. Tested on King County sales it had not seen, 6 in 10 houses sold within the range shown under each value, so treat the range, not the single number, as the answer.
+              </p>
+              <p>
+                <strong>Already remodeled?</strong> Choose "Already remodeled", describe the house as it was before the work, and the calculator prices it today both ways. Work finished more than ten years ago earns the smaller premium buyers have paid for older renovations.
               </p>
               <p>
                 <strong>Why two values.</strong> Buyers pay extra for a house that is freshly remodeled and move-in ready, and they will pay for quality up to what the neighborhood's best houses offer. A refinance appraisal is more conservative: it credits measurable change and gives little for quality past the neighborhood's best houses (appraisers call this conformity). If you plan to refinance rather than sell, plan around the appraiser's view.

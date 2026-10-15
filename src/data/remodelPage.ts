@@ -62,6 +62,12 @@ export const REMODEL_FAQS: { question: string; answer: string; alts?: string[] }
       "Tested on 5,336 King County sales it had not seen, half of its estimates were within 8% of the actual sale price and 88% were within 20%. It cannot see what the records miss, such as a remodel done without a permit, a bad layout, deferred maintenance, or a great view the assessor has not rated. Treat it as a starting point. A broker's market analysis or an appraisal looks at the house itself.",
   },
   {
+    question: "Can the calculator tell me what a remodel I already did is worth today?",
+    answer:
+      "Yes. Choose \"Already remodeled\", enter the year the work was finished, describe the house as it was before the work, and pick what was redone. It shows today's value without the remodel and with it, in an appraiser's view and a broker's view. Work more than ten years old earns a smaller premium from buyers, because King County sales show buyers pay less for an older renovation.",
+    alts: ["how much did my past remodel add to my home value"],
+  },
+  {
     question: "Is the remodel calculator an appraisal?",
     answer:
       "No. It is an automated estimate from public records, not an appraisal, a broker price opinion, or a comparative market analysis, and it should not be used for a loan. For a value you can rely on, ask a licensed broker for a market analysis or hire a certified appraiser.",

@@ -52,6 +52,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-10-13",
     reviewed: "2026-10-14",
     changes: [
+      { date: "2026-10-14", text: "Added a likely range under each value (6 in 10 tested sales fell inside it) and an \"Already remodeled\" mode that prices past work in today's market." },
       { date: "2026-10-14", text: "Estimates are now set at the level of the latest three months of King County sales (July to September 2026), which reflect current mortgage rates, instead of a two-year trend line. Typical estimates came down about 2%." },
     ],
     sources: [

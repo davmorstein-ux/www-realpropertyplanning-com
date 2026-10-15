@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { resolve } from "node:path";
-import { EMPTY_SCOPE, estimate, gradeAfter, matchAddresses, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
+import { EMPTY_SCOPE, estimate, gradeAfter, matchAddresses, rangeOf, rowToFacts, type RemodelModel, type ZipFile } from "@/lib/remodelValue";
 import { REMODEL_PARTS, TIERS } from "@/data/remodelTiers";
 
 /** What's My Remodel Worth? (src/lib/remodelValue.ts). */
@@ -50,6 +50,21 @@ describe("remodel value model", () => {
     const r = estimate(model, { ...mercer, sk: model.zipDefault["98042"] }, all("luxury"))!;
     expect(r.overImproved).toBe(true);
     expect(r.newGrade).toBeGreaterThan(r.neighborhoodTopGrade);
+  });
+
+  it("already remodeled: older work earns the smaller premium; the appraiser's view ignores the year", () => {
+    const scope = all("premium");
+    const recent = estimate(model, mercer, { ...scope, doneYear: 2021 })!;
+    const old = estimate(model, mercer, { ...scope, doneYear: 2010 })!;
+    expect(recent.broker).toBeGreaterThan(old.broker);
+    expect(old.broker).toBeGreaterThan(old.asIs);
+    expect(recent.appraiser).toBe(old.appraiser);
+  });
+
+  it("the likely range brackets the estimate", () => {
+    const r = rangeOf(model, 1_000_000)!;
+    expect(r[0]).toBeLessThan(1_000_000);
+    expect(r[1]).toBeGreaterThan(1_000_000);
   });
 
   it("every ZIP file has a known neighborhood for each house, and no names", () => {

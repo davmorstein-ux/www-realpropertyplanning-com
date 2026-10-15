@@ -46,7 +46,11 @@ def predict(coef, sub_adj, d, Xd):
 
 rng = np.random.default_rng(7); te = rng.random(len(y)) < 0.2
 coef, sub_adj = fit(~te)
-e = np.abs(np.exp(predict(coef, sub_adj, df[te], X[te]) - y[te]) - 1)
+resid = y[te] - predict(coef, sub_adj, df[te], X[te])   # log(actual / estimate)
+e = np.abs(np.exp(-resid) - 1)
+# LIKELY RANGE (Oct 14, 2026): 6 in 10 hold-out sales sold between these multiples of the estimate.
+BAND = [round(float(np.exp(np.quantile(resid, .2))), 3), round(float(np.exp(np.quantile(resid, .8))), 3)]
+print("likely range (20th-80th percentile of actual/estimate):", BAND)
 print("holdout n=%d median err %.1f%% | within10 %.0f%% | within20 %.0f%% | p80 err %.1f%%" % (te.sum(), 100*np.median(e), 100*(e<.1).mean(), 100*(e<.2).mean(), 100*np.quantile(e, .8)))
 coef, sub_adj = fit(np.ones(len(y), bool))
 for f in FEATS + QFEATS: print(f"  {f:9s} {coef[f]:+.4f}")
@@ -96,6 +100,7 @@ model = {
   'asOf': {'salesThrough': str(df.d.max())[:10], 'salesFrom': str(df.d.min())[:10], 'nSales': int(len(df)), 'built': '2026-10-13'},
   # "mo" stays at 0 so the page's math is unchanged: the market level now lives in the area effects.
   'coef': {**{f: round(coef[f], 5) for f in FEATS}, 'mo': 0.0}, 'intercept': 0.0, 'moNow': 0, 'marketQuarter': LATEST_Q,
+  'band': BAND,
   'subs': subs, 'areas': areas, 'zipDefault': zipdefault,
 }
 # intercept is folded into area effects (no constant column); keep the model honest about it
