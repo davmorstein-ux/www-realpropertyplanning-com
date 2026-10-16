@@ -28,6 +28,8 @@ import icoTheater from "@/assets/remodel/theater.webp";
 import artLookup from "@/assets/remodel/lookup.webp";
 import artBefore from "@/assets/remodel/house-before.webp";
 import artAfter from "@/assets/remodel/house-after.webp";
+import artStepToday from "@/assets/remodel/step-house-today.webp";
+import artStepRemodel from "@/assets/remodel/step-remodel.webp";
 
 const CATEGORY_ICONS: Record<string, string> = {
   kitchen: icoKitchen,
@@ -122,7 +124,7 @@ const CSS = `
 .rmv .rmv-spendname { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .rmv img.rmv-ico, .rmv .rmv-ico { width: 52px; height: 52px; flex: 0 0 52px; border-radius: 10px; object-fit: contain; background: #fff; }
 .rmv .rmv-ico-empty { display: inline-block; background: #f3f1ec; }
-.rmv img.rmv-stepart { width: 64px; height: 64px; margin-left: auto; object-fit: contain; }
+.rmv img.rmv-stepart { width: 64px; height: 64px; margin-left: 12px; flex: 0 0 64px; object-fit: contain; }
 .rmv img.rmv-valart { display: block; width: 88px; height: 88px; object-fit: contain; margin: 0 0 6px; }
 .rmv .rmv-spendhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .rmv .rmv-spendnum { max-width: 150px; text-align: right; }
@@ -379,7 +381,7 @@ export default function RemodelValue() {
             {/* ---------- step 2 ---------- */}
             <div style={{ padding: "26px 0 10px" }}>
               <div className="rmv-wrap">
-                <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">2</span><h2 className="rmv-h2" style={{ margin: 0 }}>{done ? "Your house before the remodel" : "Your house today"}</h2></div>
+                <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">2</span><h2 className="rmv-h2" style={{ margin: 0 }}>{done ? "Your house before the remodel" : "Your house today"}</h2><img src={artStepToday} alt="" aria-hidden="true" width={64} height={64} className="rmv-stepart" /></div>
                 {done && (
                   <p>
                     Describe the house as it was <strong>before</strong> the work you enter below.
@@ -463,7 +465,7 @@ export default function RemodelValue() {
             {/* ---------- step 3 ---------- */}
             <div style={{ padding: "26px 0 10px" }}>
               <div className="rmv-wrap">
-                <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">3</span><h2 className="rmv-h2" style={{ margin: 0 }}>The remodel</h2></div>
+                <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">3</span><h2 className="rmv-h2" style={{ margin: 0 }}>The remodel</h2><img src={artStepRemodel} alt="" aria-hidden="true" width={64} height={64} className="rmv-stepart" /></div>
                 <div className="rmv-picks" role="group" aria-label="Planning or already done" style={{ margin: "4px 0 12px" }}>
                   <button type="button" className="rmv-pick" aria-pressed={!done} onClick={() => setMode("plan")}>Planning a remodel</button>
                   <button type="button" className="rmv-pick" aria-pressed={done} onClick={() => setMode("done")}>Already remodeled</button>
