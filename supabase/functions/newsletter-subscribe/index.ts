@@ -1,5 +1,6 @@
 // ---------------------------------------------------------------------------
-// REDEPLOY MARKER — 2026-08-15
+// REDEPLOY MARKER — 2026-10-16 (two lists: family and AFH Club)
+// Earlier marker: 2026-08-15
 //
 // This comment exists to change the file's contents and nothing else. Edge
 // functions deploy separately from the site: publishing rebuilds the React
@@ -28,7 +29,18 @@ const corsHeaders = {
    POSTing to this endpoint could file subscribers into any group in the
    account. The client sends an email and a source tag; nothing else it sends
    decides where the record lands. */
-const GROUP_ID = "195718488033068791";
+const GROUP_ID = "195718488033068791"; // family-side list (probate, inherited homes, senior moves)
+
+/* Two lists since Oct 16, 2026: family-side readers and AFH buyers/owners/
+   investors want different email. The caller may name a list, but only from
+   this whitelist, so it still cannot file anyone into an arbitrary group.
+
+   AFH_GROUP_ID is filled in once the AFH Club group exists in MailerLite.
+   Until then AFH signups land in the family group with their "afh" source
+   tag intact, so nobody is lost and they can be moved over in one filter. */
+const AFH_GROUP_ID = "";
+const groupFor = (list: unknown): string =>
+  list === "afh" && AFH_GROUP_ID ? AFH_GROUP_ID : GROUP_ID;
 
 /* Every response to a subscribe attempt is this, whatever actually happened:
    new subscriber, already on the list, bounced address, MailerLite outage.
@@ -47,7 +59,7 @@ serve(async (req) => {
   }
 
   try {
-    const { email, source, company_website, form_loaded_at, turnstile_token } = await req.json();
+    const { email, source, list, company_website, form_loaded_at, turnstile_token } = await req.json();
 
     /* Honeypot — mirrors send-contact-email. Real visitors never see this
        field; bots that fill every input trip it. Answer OK so the bot cannot
@@ -127,8 +139,8 @@ serve(async (req) => {
       body: JSON.stringify({
         email: address,
         status: "unconfirmed",
-        groups: [GROUP_ID],
-        fields: { source: String(source || "unknown").slice(0, 120) },
+        groups: [groupFor(list)],
+        fields: { source: `${list === "afh" ? "afh" : "family"}|${String(source || "unknown")}`.slice(0, 120) },
       }),
     });
 

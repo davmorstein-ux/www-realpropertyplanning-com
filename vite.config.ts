@@ -1154,6 +1154,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       } as RouteMeta,
     ]),
   ),
+  "/newsletter": {
+    title: "Newsletters: Washington Families and AFH Club | Real Property Planning",
+    description: "Two free, occasional newsletters: one for Washington families dealing with inherited homes, probate, senior moves and the cost of care, and one for adult family home buyers, owners and investors.",
+    h1: "Newsletters",
+    intro: "There are two newsletters, written for different people. The family newsletter covers inherited homes, probate, senior moves and what care costs in Washington. The AFH Club newsletter covers adult family homes for sale and recent sales, DSHS rate and rule changes, and the Washington AFH Market Report. Both are free and occasional, ask you to confirm your address before anything is sent, and can be unsubscribed from at any time.",
+  },
   "/calculators": {
     title: "Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning",
     description: "All of Real Property Planning's free calculators in one place. For King County homeowners: what a remodel is worth. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",

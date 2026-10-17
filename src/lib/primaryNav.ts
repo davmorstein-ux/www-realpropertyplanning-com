@@ -108,6 +108,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Licensing & Certification", href: "/afh-club/licensing-certification" },
       { name: "Find a Professional", href: "/afh-club/find-a-professional" },
       { name: "Caregiver Job Board", href: "/afh-club/caregivers" },
+      { name: "AFH Club Newsletter", href: "/newsletter#afh" },
     ],
   },
   {
@@ -117,6 +118,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     items: [
      { name: "All Guides & Articles", href: "/guides-and-resources" },
       { name: "All Calculators", href: "/calculators" },
+      { name: "Newsletter", href: "/newsletter" },
       { name: "What's My Remodel Worth?", href: "/whats-my-remodel-worth" },
       { name: "Articles Library", href: "/articles" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },

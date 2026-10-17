@@ -40,7 +40,10 @@ const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
  * Frequency language stays vague on the LOW side ("occasional") on purpose.
  * "Monthly" is a promise, and a missed month reads as abandonment.
  * ------------------------------------------------------------------ */
-type Variant = "general" | "probate" | "senior" | "footer";
+type Variant = "general" | "probate" | "senior" | "footer" | "afh" | "afhFooter";
+
+/** Which MailerLite list a signup joins (Oct 16, 2026). The edge function maps this to a group from a fixed whitelist. */
+export type NewsletterList = "family" | "afh";
 
 const COPY: Record<Variant, { heading: string; body: string; cta: string }> = {
   general: {
@@ -59,8 +62,18 @@ const COPY: Record<Variant, { heading: string; body: string; cta: string }> = {
     cta: "Send Me Senior Transition Resources",
   },
   footer: {
-    heading: "Practical guidance for the decisions ahead",
-    body: "Occasional, plain-English updates. No sales pressure.",
+    heading: "Get the Real Property Planning newsletter",
+    body: "Occasional, plain-English notes for Washington families on inherited homes, probate, senior moves and the cost of care. No sales pressure.",
+    cta: "Subscribe",
+  },
+  afh: {
+    heading: "The AFH Club newsletter",
+    body: "Occasional updates for adult family home buyers, owners and investors in Washington: new listings and sales, DSHS rate and rule changes, and new tools.",
+    cta: "Subscribe to AFH Club",
+  },
+  afhFooter: {
+    heading: "Get the AFH Club newsletter",
+    body: "Occasional updates for adult family home buyers, owners and investors: listings, sales, and DSHS rate and rule changes.",
     cta: "Subscribe",
   },
 };
@@ -74,6 +87,9 @@ interface NewsletterSignupProps {
      The signup still lands in the same MailerLite group; the source tag is
      what tells the alerts apart. */
   copy?: { heading: string; body: string; cta: string };
+  /* Which list. Defaults to "afh" on any /afh-club page and "family" elsewhere,
+     so the AFH city alerts and Market Report join the AFH list on their own. */
+  list?: NewsletterList;
 }
 
 /* The edge function holds the MailerLite key and pins the group; this only
@@ -81,6 +97,7 @@ interface NewsletterSignupProps {
 async function subscribeRequest(payload: {
   email: string;
   source: string;
+  list: NewsletterList;
   company_website: string;
   form_loaded_at: number;
   turnstile_token: string;
@@ -89,8 +106,13 @@ async function subscribeRequest(payload: {
   if (error) throw error;
 }
 
-const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: NewsletterSignupProps) => {
+const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, list: listProp }: NewsletterSignupProps) => {
   const { pathname } = useLocation();
+  const list: NewsletterList = listProp ?? (pathname.startsWith("/afh-club") ? "afh" : "family");
+  /* Accent by list: navy for the family side, AFH Club hunter green. The old
+     burgundy belonged to a retired colour scheme and is not used on the site. */
+  const accent = list === "afh" ? "#0a5648" : "#1B3A6B";
+  const accentHover = list === "afh" ? "#073f35" : "#132b50";
   const [email, setEmail] = useState("");
   /* Honeypot. Real visitors never see this; bots that fill every input trip
      it. Sent to the function under the key company_website; the DOM field
@@ -193,6 +215,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
       await subscribeRequest({
         email: trimmed,
         source: tag,
+        list,
         company_website: companyWebsite,
         form_loaded_at: formLoadedAt.current,
         turnstile_token: turnstileToken,
@@ -209,15 +232,15 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
   };
 
   return (
-    <div className="rpp-news">
+    <div className="rpp-news" style={{ ["--rpp-news-accent" as string]: accent, ["--rpp-news-accent-hover" as string]: accentHover } as React.CSSProperties}>
       <style dangerouslySetInnerHTML={{ __html: `
         /* Doubled class selectors. index.css sets font-size, color and display
            on bare p / input / button / label with !important; a single class
            loses every one of those fights. */
         .rpp-news.rpp-news {
           background: #f7f4ef;
-          border: 1px solid #dfc9cb;
-          border-left: 4px solid hsl(355 45% 30%);
+          border: 1px solid #ddd6cc;
+          border-left: 4px solid var(--rpp-news-accent);
           border-radius: 8px;
           padding: 28px 24px;
           margin: 40px auto;
@@ -262,7 +285,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           border-radius: 6px !important;
         }
         .rpp-news-input.rpp-news-input:focus-visible {
-          outline: 3px solid hsl(355 45% 30%) !important;
+          outline: 3px solid var(--rpp-news-accent) !important;
           outline-offset: 2px !important;
         }
         /* Named "submit", NOT "btn". index.css carries 45 rules keyed on
@@ -284,13 +307,13 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           font-size: 16px !important;
           font-weight: 700 !important;
           color: #ffffff !important;
-          background: hsl(355 45% 30%) !important;
+          background: var(--rpp-news-accent) !important;
           border: none !important;
           border-radius: 6px !important;
           cursor: pointer !important;
           transition: background 200ms ease;
         }
-        .rpp-news-submit.rpp-news-submit:hover { background: hsl(355 50% 24%) !important; }
+        .rpp-news-submit.rpp-news-submit:hover { background: var(--rpp-news-accent-hover) !important; }
         .rpp-news-submit.rpp-news-submit:focus-visible {
           outline: 3px solid #272421 !important;
           outline-offset: 3px !important;
@@ -302,7 +325,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           color: #1c1917 !important;
           margin: 12px 0 0 !important;
         }
-        .rpp-news-fine.rpp-news-fine a { color: hsl(355 45% 30%) !important; }
+        .rpp-news-fine.rpp-news-fine a { color: var(--rpp-news-accent) !important; }
         /* Error text is not carried by colour alone — it is announced via
            role=alert and tied to the input with aria-describedby, so it
            survives both colour blindness and screen readers. */

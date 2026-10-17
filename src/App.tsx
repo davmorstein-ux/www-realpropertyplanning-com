@@ -154,6 +154,7 @@ const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
 const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
+const Newsletter = lazy(() => import("./pages/Newsletter"));
 const RemodelValue = lazy(() => import("./pages/RemodelValue"));
 const QuestionLibrary = lazy(() => import("./pages/QuestionLibrary"));
 const StatuteGuide = lazy(() => import("./pages/guides/StatuteGuide"));
@@ -491,6 +492,7 @@ export const AppRoutes = () => (
       {/* Twenty pages live under /guides/..., so a trimmed URL should land on the library, not a 404. */}
       {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
       <Route path="/calculators" element={<Calculators />} />
+      <Route path="/newsletter" element={<Newsletter />} />
       {/* What's My Remodel Worth? (Oct 13, 2026): King County remodel value calculator. */}
       <Route path="/whats-my-remodel-worth" element={<RemodelValue />} />
       <Route path="/guides/probate-costs-washington" element={<StatuteGuide slug="probate-costs" />} />

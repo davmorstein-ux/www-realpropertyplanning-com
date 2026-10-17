@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
@@ -6,9 +7,24 @@ import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
 import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  /* Newsletter signup on every page (Oct 16, 2026). Before this the general
+     signup appeared on one page out of 170+, so nobody found it. AFH Club pages
+     get the AFH list; everything else the family list. Not shown on
+     /newsletter itself, which carries both forms. */
+  const isAFH = pathname.startsWith("/afh-club");
+  const showNews = pathname !== "/newsletter";
   return (
     <footer data-nosnippet="true" style={{ backgroundColor: "#23211f", padding: "2.5rem 0 1.5rem" }}>
       <style dangerouslySetInnerHTML={{ __html: `
+        .rpp-footer-news { margin: 0 auto 2.75rem; max-width: 760px; }
+        .rpp-footer-news .rpp-news.rpp-news { margin: 0 auto; max-width: 760px; }
+        .rpp-footer-news p.rpp-footer-news-other {
+          font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
+          font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.85);
+          text-align: center; margin: 14px 0 0;
+        }
+        .rpp-footer-news p.rpp-footer-news-other a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
         .rpp-footer-link {
           color: rgba(255,255,255,0.72) !important;
           text-decoration: none !important;
@@ -103,6 +119,22 @@ const Footer = () => {
       ` }} />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+        {showNews && (
+          <div className="rpp-footer-news">
+            <NewsletterSignup
+              variant={isAFH ? "afhFooter" : "footer"}
+              list={isAFH ? "afh" : "family"}
+              source={`footer:${pathname}`}
+            />
+            <p className="rpp-footer-news-other">
+              {isAFH ? (
+                <>Looking for help with a parent's care or an inherited home? <Link to="/newsletter">See the family newsletter</Link>.</>
+              ) : (
+                <>Buy, own or invest in an adult family home? <Link to="/newsletter#afh">See the AFH Club newsletter</Link>.</>
+              )}
+            </p>
+          </div>
+        )}
         {/* Main columns */}
         <div className="rpp-footer-grid">
           {/* Brand & NAP — same heading class and link typography as the
@@ -196,6 +228,9 @@ const Footer = () => {
             </Link>
             <Link to="/contact" className="rpp-footer-link">
               Contact
+            </Link>
+            <Link to="/newsletter" className="rpp-footer-link">
+              Newsletter
             </Link>
             <Link to="/counties" className="rpp-footer-link">
               Service Areas
