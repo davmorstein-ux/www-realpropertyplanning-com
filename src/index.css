@@ -5467,19 +5467,10 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
 }
 
 /* NO UNDERLINE. A burgundy rule used to wipe out from the centre beneath the
-   mark on hover. It was removed because the logo already carries two burgundy
-   rules flanking the word PLANNING — adding a third horizontal line to signal
-   the same thing made the header busier, not clearer.
-
-   The obvious idea is to animate those existing rules instead. That is not
-   possible today: they are pixels inside rpp-logo-v9.webp, and CSS cannot
-   reach into a raster image. Doing it properly needs the logo as inline SVG,
-   at which point each rule becomes a <path> that can be targeted and animated
-   on hover — the effect described, using the marks already there rather than
-   inventing a new one.
-
-   Until then the hover is the lift and shadow below, which is quieter and
-   does not compete with the existing rules. */
+   mark on hover; it was removed as one horizontal line too many. Since
+   Oct 16, 2026 (rpp-logo-v10.webp) the logo itself has no flanking rules
+   either: PLANNING is charcoal #333333, centred on REAL PROPERTY's ink width.
+   The hover is the lift and shadow below. */
 
 /* Keyboard users get a ring, not just the hover treatment. Offset
    so it clears the mark rather than crowding it. */
