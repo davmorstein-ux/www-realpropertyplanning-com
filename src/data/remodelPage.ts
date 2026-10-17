@@ -33,7 +33,8 @@ export const REMODEL_PAGE = {
   MARKET_MONTHS: "July to September 2026",
   N_SALES: "27,066",
   SHORT_ANSWER:
-    "Less than most owners hope. In King County sales, a complete renovation has added up to about 30% to what the same house sells for unrenovated, and appraisers credit about 20%. How much of that a remodel earns depends on how much of the house it covers, the quality, and what the best houses in the neighborhood are like. Spending past that point, or past what the neighborhood's best houses have, mostly does not come back at sale.",
+    // Oct 16, 2026: rewritten in plain words at David's request ("Less than most owners hope" was hard to follow).
+    "In King County, a complete renovation has added up to about 30% to a house's sale price. A refinance appraisal usually credits about 20%. Money spent beyond what the best houses in your neighborhood have rarely comes back when you sell.",
 };
 
 export const REMODEL_FAQS: { question: string; answer: string; alts?: string[] }[] = [

@@ -85,6 +85,8 @@ const CSS = `
 .rmv .rmv-wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
 .rmv p { font-family: ${FONT} !important; font-size: 18px !important; line-height: 1.65 !important; color: ${INK} !important; margin: 0 0 14px !important; }
 .rmv p.rmv-small { font-size: 15.5px !important; color: #3f3a35 !important; }
+.rmv p.rmv-lead { font-size: 21px !important; line-height: 1.55 !important; max-width: 720px; margin: 14px 0 18px !important; }
+.rmv p.rmv-small.rmv-hero-meta { margin: 0 !important; max-width: 720px; }
 .rmv .rmv-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: .15em !important; text-transform: uppercase; color: ${NAVY} !important; margin: 0 0 10px !important; }
 .rmv h1.rmv-h1 { font-family: ${FONT} !important; font-size: clamp(32px, 4.8vw, 48px) !important; line-height: 1.12 !important; font-weight: 700 !important; color: ${INK} !important; margin: 0 0 14px !important; }
 .rmv h2.rmv-h2 { font-family: ${FONT} !important; font-size: clamp(23px, 3vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: ${INK} !important; margin: 0 0 10px !important; }
@@ -311,23 +313,21 @@ export default function RemodelValue() {
             <div style={{ maxWidth: 780 }}>
               <p className="rmv-eyebrow">Free tool · King, Snohomish &amp; Pierce County homes</p>
               <h1 className="rmv-h1">{P.TITLE}</h1>
-              <p>
-                Look up your house, choose what you would remodel and at what quality, and see what it could be worth afterward, two ways: what buyers pay, and what a refinance appraisal is likely to support.
-              </p>
-              <div className="rmv-answer">
-                <p className="rmv-eyebrow" style={{ marginBottom: 6 }}>The short answer</p>
-                <p style={{ marginBottom: 0 }}>{P.SHORT_ANSWER}</p>
-              </div>
-              <p className="rmv-small" style={{ marginTop: 12 }}>
+              {/* Oct 16, 2026: the hero was six stacked pieces (two of them boxed) and
+                  read as cluttered. Now: one plain answer, one small line, the
+                  founder's note. The "Look up your house…" sentence was dropped
+                  because Step 1 says the same thing directly below. */}
+              <p className="rmv-lead">{P.SHORT_ANSWER}</p>
+              <p className="rmv-small rmv-hero-meta">
                 Built from {P.N_SALES} King County, {P.SNO_N_SALES} Snohomish County and {P.PIE_N_SALES} Pierce County home sales and the counties' public building records. No sign-up; nothing you type is saved.
               </p>
             </div>
-            <WhyIBuiltThis note={CALCULATOR_NOTES["/whats-my-remodel-worth"]} accent={NAVY} style={{ margin: "26px 0 0" }} />
+            <WhyIBuiltThis note={CALCULATOR_NOTES["/whats-my-remodel-worth"]} accent={NAVY} style={{ margin: "32px 0 40px" }} />
           </div>
         </div>
 
         {/* ---------- step 1 ---------- */}
-        <div style={{ padding: "36px 0 10px" }}>
+        <div style={{ padding: "52px 0 10px" }}>
           <div className="rmv-wrap">
             <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">1</span><h2 className="rmv-h2" style={{ margin: 0 }}>Find your house</h2><img src={artLookup} alt="" aria-hidden="true" width={64} height={64} className="rmv-stepart" /></div>
             <p>Single-family homes in King, Snohomish and Pierce counties. Enter the ZIP code, then start typing the street address (number first).</p>
