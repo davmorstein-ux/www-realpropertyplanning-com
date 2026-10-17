@@ -1,4 +1,6 @@
 import Header from "@/components/Header";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
 import Footer from "@/components/Footer";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import SEOHead from "@/components/SEOHead";
@@ -67,6 +69,7 @@ const CostByLocation = () => {
         <HeroBandTitle as="h1">What It Costs to Live in an Adult Family Home, by City and County</HeroBandTitle>
 
         <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
+          <WhyIBuiltThis note={CALCULATOR_NOTES["/adult-family-home-costs"]} accent={GREEN} style={{ marginBottom: 28 }} />
           <AFHCostByLocationCard accent={GREEN} />
         </div>
 

@@ -1,4 +1,6 @@
 import { Navigate, useParams, Link } from "react-router-dom";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { costOfCareNote } from "@/data/calculatorNotes";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -115,6 +117,7 @@ const CostOfCareDetail = () => {
 
             <div className="rpp-calcpage-layout">
               <div className="rpp-calcpage-calc">
+                <WhyIBuiltThis note={costOfCareNote(option.slug)} accent={option.color} style={{ marginBottom: 28 }} />
                 <CostOfCareEmbed careTypeId={option.careTypeId} />
               </div>
 

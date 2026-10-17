@@ -6,7 +6,7 @@
  * When the featured person changes, change the record in featuredProfessionals.ts
  * AND the photo, logo and bio here.
  */
-import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON, HUB_FOUNDER_NAME } from "@/data/featuredProfessionals";
 import brokerPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import brokerageLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
 import appraisalFirmLogo from "@/assets/stein-appraisal-appraiser-logo-washington.webp";
@@ -21,6 +21,10 @@ export const APPRAISER_PHOTO = brokerPhoto;
 export const APPRAISER_PHOTO_ALT = `Photo of ${FEATURED_APPRAISER.name}`;
 export const APPRAISAL_FIRM_LOGO = appraisalFirmLogo;
 export const APPRAISAL_FIRM_LOGO_ALT = `${FEATURED_APPRAISER.firm} logo`;
+
+/** The founder's photo, for the "Why I built this" notes on the calculators. Same file as the broker photo today; it does NOT change if the featured broker changes. */
+export const FOUNDER_PHOTO = brokerPhoto;
+export const FOUNDER_PHOTO_ALT = `Photo of ${HUB_FOUNDER_NAME}`;
 
 /** Bio shown on /realtor (family side). */
 export const BROKER_BIO = `${FEATURED_BROKER.name} is a Washington State licensed real estate broker${SAME_PERSON ? " and Certified Residential Appraiser" : ""} specializing in Adult Family Home sales, probate and estate properties, and trust-owned real estate across Washington State.

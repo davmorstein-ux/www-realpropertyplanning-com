@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -320,6 +322,7 @@ export default function RemodelValue() {
                 Built from {P.N_SALES} King County, {P.SNO_N_SALES} Snohomish County and {P.PIE_N_SALES} Pierce County home sales and the counties' public building records. No sign-up; nothing you type is saved.
               </p>
             </div>
+            <WhyIBuiltThis note={CALCULATOR_NOTES["/whats-my-remodel-worth"]} accent={NAVY} style={{ margin: "26px 0 0" }} />
           </div>
         </div>
 

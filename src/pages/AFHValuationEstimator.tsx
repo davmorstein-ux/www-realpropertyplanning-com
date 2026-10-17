@@ -1,4 +1,6 @@
 import { useState } from "react";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
 import AFHStepsBar from "@/components/AFHStepsBar";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -123,6 +125,7 @@ const AFHValuationEstimator = () => {
         </div>
 
         <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
+          <WhyIBuiltThis note={CALCULATOR_NOTES["/afh-club/afh-valuation-estimator"]} accent={C} style={{ marginBottom: 28 }} />
           <CalcShell color={C} icon="scale" eyebrow="AFH Club Calculator" title="What an Adult Family Home Is Worth" subtitle="The business by income capitalization, plus the property if it is included">
             <CalcSection title="Business financials">
               <AFHRevenueBuilder

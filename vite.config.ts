@@ -12,6 +12,7 @@ import { buildAfhDirectoryRoutes, loadAllFacilities } from "./src/data/afh/prere
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
 import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
 import { guideLibraryHtml } from "./src/data/guideLibrary";
+import { calculatorNoteForRoute, FOUNDER_SIGNATURE, WHY_HEADING } from "./src/data/calculatorNotes";
 import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
 import { REDIRECTS } from "./src/data/redirects";
 import { POLICY_PAGES } from "./src/data/policyPages";
@@ -2470,6 +2471,17 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   if (inventory) ssgParts.push(inventory.html);
 
   if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
+
+  /* Founder's "Why I built this" note on each calculator (Oct 16, 2026), text from src/data/calculatorNotes.ts. */
+  const whyNote = calculatorNoteForRoute(route);
+  if (whyNote) {
+    ssgParts.push(
+      `<section aria-label="${escHtml(WHY_HEADING)}" style="margin:20px 0;padding:18px 20px;border:1px solid #e5e1da;border-left:5px solid #1B3A6B;border-radius:12px;background:#fff">` +
+        `<h2 style="font-size:1.15rem;margin:0 0 6px">${escHtml(WHY_HEADING)}</h2>` +
+        `<p style="font-size:1.05rem;line-height:1.7;color:#333;margin:0 0 8px">${escHtml(whyNote)}</p>` +
+        `<p style="margin:0;font-weight:600;color:#3f3a35">— ${escHtml(FOUNDER_SIGNATURE)}</p></section>`
+    );
+  }
 
   if (meta.guideLibrary) ssgParts.push(guideLibraryHtml(escHtml));
 

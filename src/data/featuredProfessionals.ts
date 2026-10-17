@@ -105,7 +105,8 @@ export const FEATURED_APPRAISER: FeaturedAppraiser = {
 
 /**
  * The hub's founder — a fixed historical fact, not a role that changes hands.
- * Only the About page's founder story and the schema `founderOf` line use it.
+ * Used by the About page's founder story, the schema `founderOf` line, and the
+ * "Why I built this" notes on the calculators (src/data/calculatorNotes.ts).
  */
 export const HUB_FOUNDER_NAME = "David Stein";
 /** True while the founder is also the featured broker; the schema Person then carries founderOf. */

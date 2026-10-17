@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
 import AFHStepsBar from "@/components/AFHStepsBar";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -247,6 +249,9 @@ const AFHPropertyScore = () => {
 
         <div className="aps-root" style={{ background: "#faf8f4", padding: "2rem 1rem 3rem" }}>
           <div ref={topRef} style={{ scrollMarginTop: "calc(var(--header-height, 120px) + var(--afh-stepsbar-h, 0px) + 12px)" }} />
+          {view === "intro" && (
+            <WhyIBuiltThis note={CALCULATOR_NOTES["/afh-club/afh-property-score"]} accent={PLUM} style={{ marginBottom: 28 }} />
+          )}
 
           {/* ---------------- INTRO ---------------- */}
           {view === "intro" && (

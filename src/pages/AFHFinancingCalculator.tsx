@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
 import { useSearchParams } from "react-router-dom";
 import AFHStepsBar from "@/components/AFHStepsBar";
 import SEOHead from "@/components/SEOHead";
@@ -284,6 +286,7 @@ const AFHFinancingCalculator = () => {
         </div>
 
         <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
+          <WhyIBuiltThis note={CALCULATOR_NOTES["/afh-club/afh-financing-calculator"]} accent={TEAL} style={{ marginBottom: 28 }} />
           <CalcShell color={TEAL} icon="key" eyebrow="AFH Club Calculator" title="Can a Buyer Get the Loan?" subtitle="Lender coverage by price and occupancy, for an owner-operator or an investor">
             <CalcSection title="The home">
               <div className="ck-grid">

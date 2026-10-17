@@ -1,4 +1,6 @@
 import { useState } from "react";
+import WhyIBuiltThis from "@/components/WhyIBuiltThis";
+import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
 import AFHStepsBar from "@/components/AFHStepsBar";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -112,6 +114,7 @@ const AFHROICalculator = () => {
         </div>
 
         <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
+          <WhyIBuiltThis note={CALCULATOR_NOTES["/afh-club/afh-roi-calculator"]} accent={C} style={{ marginBottom: 28 }} />
           <CalcShell color={C} icon="chart" eyebrow="AFH Club Calculator" title="Return on an Adult Family Home" subtitle="Cash flow, cap rate and cash-on-cash return for a purchase">
             <CalcSection title="The purchase">
               <div className="ck-grid">
