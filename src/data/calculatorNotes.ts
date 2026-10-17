@@ -43,7 +43,7 @@ export const CALCULATOR_NOTES: Record<string, string> = {
   "/whats-my-remodel-worth":
     "Many people who inherit a home, or who are handling an estate, have to decide whether it's worth fixing up a house that's had years of deferred maintenance. Some updates pay for themselves at sale. Many don't. As an appraiser and a broker, I see both sides of that question, and I built this so you can see the tradeoff before you spend the money.",
   "/afh-club/afh-property-score":
-    "I've watched buyers fall in love with a house and only later learn it could never be licensed as an adult family home. The hallway is too narrow, there's no step-free entry, or there aren't enough bathrooms. I built this screen so you can catch those problems in ten minutes instead of after an inspection.",
+    "I've watched buyers fall in love with a house and only later learn it could never be licensed as an adult family home. The hallway is too narrow, there's no step-free entry, or there aren't enough bathrooms. I built this screen so you can catch those problems in a few minutes instead of after an inspection.",
   "/afh-club/afh-roi-calculator":
     "An adult family home is a business inside a house, and buyers often judge it by the house alone. I built this so you can see whether the beds, the care mix, and the operating costs actually support the price.",
   "/afh-club/afh-valuation-estimator":
