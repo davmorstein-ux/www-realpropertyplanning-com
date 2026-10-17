@@ -85,6 +85,8 @@ const CSS = `
 .rmv .rmv-wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
 .rmv p { font-family: ${FONT} !important; font-size: 18px !important; line-height: 1.65 !important; color: ${INK} !important; margin: 0 0 14px !important; }
 .rmv p.rmv-small { font-size: 15.5px !important; color: #3f3a35 !important; }
+.rmv ul.rmv-how { list-style: disc outside !important; padding-left: 24px !important; margin: 0 0 8px !important; max-width: 720px; }
+.rmv ul.rmv-how li { display: list-item !important; font-family: ${FONT}; font-size: 18px; line-height: 1.6; color: ${INK}; margin: 0 0 10px; }
 .rmv details.rmv-details { margin: 22px 0 20px; border: 1px solid #d9d4cc; border-radius: 10px; background: #fff; }
 .rmv details.rmv-details > summary { cursor: pointer; padding: 16px 18px; min-height: 48px; font-family: ${FONT}; font-size: 18px; font-weight: 700; color: ${NAVY}; list-style-position: inside; }
 .rmv details.rmv-details > summary:focus-visible { outline: 3px solid ${NAVY}; outline-offset: 2px; }
@@ -705,33 +707,43 @@ export default function RemodelValue() {
                   price-tier percentages and the full rate reasoning were not cut:
                   they moved, word for word, into "Technical details" below, which
                   a reader opens if they want it. */}
-              <p>
-                <strong>The data.</strong> Each county assessor publishes every recorded sale and a building record for every house. The calculator learned from about {Math.round(TOTAL_SALES / 1000)},000 ordinary single-family sales from 2024 to 2026 in King, Snohomish and Pierce counties, leaving out family transfers, foreclosures and unusual sales.
-              </p>
-              <p>
-                <strong>The model.</strong> It learns what each feature (size, baths, basement, garage, view, condition, quality and more) has added to price in each neighborhood. Then it prices your house as it is and as it would be after the remodel, at today's market level ({P.MARKET_MONTHS}).
-              </p>
-              <p>
-                <strong>Your spending.</strong> Each part of the house carries a share of what a full renovation adds (the kitchen the most, about a quarter) and a "complete job" cost for a house your size. Spending up to that cost earns most of the value; past it, less and less. These shares and costs are the author's working estimates.
-              </p>
-              <p>
-                <strong>The ceilings.</strong> In a neighborhood like Kirkland's 98034, a complete remodel has added about 30% to what the same house sells for unrenovated (appraisers: about 20%). The figure is somewhat less in lower-priced neighborhoods and more in expensive ones. An older house is never priced above the same house built new. Added square feet, baths and bedrooms are priced on top.
-              </p>
-              <p>
-                <strong>Mortgage rates.</strong> Values assume the rates buyers had when these sales went under contract, about {RATE_LO.toFixed(1)}–{RATE_HI.toFixed(1)}%. Enter today's rate and values move about {Math.round(RATE_SENSITIVITY * 100)}% per point, up to 15%.
-              </p>
-              <p>
-                <strong>Likely range.</strong> Every estimate misses some. In testing, 6 in 10 King County houses sold within the range shown, so treat the range as the answer.
-              </p>
-              <p>
-                <strong>Already remodeled?</strong> Describe the house as it was before the work and enter what you spent, and the calculator prices it both ways. Work finished more than ten years ago earns about 60% of its value.
-              </p>
-              <p>
-                <strong>Why two values.</strong> Buyers pay extra for move-in ready, and for quality up to the neighborhood's best houses. A refinance appraiser credits only measurable change. If you'll refinance rather than sell, plan around the appraiser's view.
-              </p>
+              {/* Oct 17, 2026: cut to five one-line points at David's request ("too
+                  much to read"). The eight explanatory paragraphs that were here
+                  moved, unchanged, to the top of "Technical details" below. */}
+              <ul className="rmv-how">
+                <li>It compares your house with about {Math.round(TOTAL_SALES / 1000)},000 recent home sales in King, Snohomish and Pierce counties.</li>
+                <li>It estimates what your house is worth today, and what it could be worth after the work you choose.</li>
+                <li>Spending more than a job usually costs adds less and less value.</li>
+                <li>You get two numbers: what a buyer would likely pay, and what an appraiser would likely support for a refinance.</li>
+                <li>Every estimate misses some, so treat the range shown as the answer, not the single number.</li>
+              </ul>
               <details className="rmv-details">
-                <summary>Technical details: each county's data, the ceilings, and mortgage rates</summary>
+                <summary>Technical details: the data, the model, the limits, and mortgage rates</summary>
                 <div className="rmv-details-body">
+                <p>
+                  <strong>The data.</strong> Each county assessor publishes every recorded sale and a building record for every house. The calculator learned from about {Math.round(TOTAL_SALES / 1000)},000 ordinary single-family sales from 2024 to 2026 in King, Snohomish and Pierce counties, leaving out family transfers, foreclosures and unusual sales.
+                </p>
+                <p>
+                  <strong>The model.</strong> It learns what each feature (size, baths, basement, garage, view, condition, quality and more) has added to price in each neighborhood. Then it prices your house as it is and as it would be after the remodel, at today's market level ({P.MARKET_MONTHS}).
+                </p>
+                <p>
+                  <strong>Your spending.</strong> Each part of the house carries a share of what a full renovation adds (the kitchen the most, about a quarter) and a "complete job" cost for a house your size. Spending up to that cost earns most of the value; past it, less and less. These shares and costs are the author's working estimates.
+                </p>
+                <p>
+                  <strong>The ceilings.</strong> In a neighborhood like Kirkland's 98034, a complete remodel has added about 30% to what the same house sells for unrenovated (appraisers: about 20%). The figure is somewhat less in lower-priced neighborhoods and more in expensive ones. An older house is never priced above the same house built new. Added square feet, baths and bedrooms are priced on top.
+                </p>
+                <p>
+                  <strong>Mortgage rates.</strong> Values assume the rates buyers had when these sales went under contract, about {RATE_LO.toFixed(1)}–{RATE_HI.toFixed(1)}%. Enter today's rate and values move about {Math.round(RATE_SENSITIVITY * 100)}% per point, up to 15%.
+                </p>
+                <p>
+                  <strong>Likely range.</strong> Every estimate misses some. In testing, 6 in 10 King County houses sold within the range shown, so treat the range as the answer.
+                </p>
+                <p>
+                  <strong>Already remodeled?</strong> Describe the house as it was before the work and enter what you spent, and the calculator prices it both ways. Work finished more than ten years ago earns about 60% of its value.
+                </p>
+                <p>
+                  <strong>Why two values.</strong> Buyers pay extra for move-in ready, and for quality up to the neighborhood's best houses. A refinance appraiser credits only measurable change. If you'll refinance rather than sell, plan around the appraiser's view.
+                </p>
                 <p>
                   <strong>King County.</strong> The King County Assessor publishes every recorded sale and a building record for every house. The calculator uses {P.N_SALES} ordinary market sales of single-family homes from {P.SALES_FROM} to {P.SALES_THROUGH}, each matched to its house: living area, finished basement, bedrooms, baths, fireplaces, garage, lot, view, waterfront, age, renovation, condition, and the assessor's quality grade. Family transfers, foreclosures and sales the assessor flagged as unusual are left out.
                 </p>
@@ -750,11 +762,11 @@ export default function RemodelValue() {
                 <p>
                   <strong>Mortgage rates.</strong> Higher rates shrink what a buyer can borrow for the same payment, so values fall; lower rates do the opposite. The values are built from sales that went under contract at about {BASE_RATE.King.toFixed(1)}% in King County ({P.MARKET_MONTHS} sales), {BASE_RATE.Snohomish.toFixed(1)}% in Snohomish County and {BASE_RATE.Pierce.toFixed(1)}% in Pierce County, Freddie Mac's 30-year averages at the time. Enter today's rate and every value moves about {Math.round(RATE_SENSITIVITY * 100)}% per percentage point, up to 15%. That is a deliberately modest assumption: a one-point rise cuts a buyer's loan by about 11% at the same payment, but prices have historically moved much less, because sellers hold and inventory tightens.
                 </p>
+                <p className="rmv-small">
+                  Sources: King County Assessor public data downloads (sales, residential building and parcel records), downloaded October 13, 2026; Snohomish County Assessor open data (Recent Property Sales, Improvement Records, Assessor Roll), downloaded October 15, 2026; Pierce County Assessor-Treasurer data mart (sale, improvement, improvement built-as, appraisal account and tax account files), downloaded October 15, 2026. Lookups show only the public building record for an address; no owner names or individual sale prices are shown.
+                </p>
                 </div>
               </details>
-              <p className="rmv-small">
-                Sources: King County Assessor public data downloads (sales, residential building and parcel records), downloaded October 13, 2026; Snohomish County Assessor open data (Recent Property Sales, Improvement Records, Assessor Roll), downloaded October 15, 2026; Pierce County Assessor-Treasurer data mart (sale, improvement, improvement built-as, appraisal account and tax account files), downloaded October 15, 2026. Lookups show only the public building record for an address; no owner names or individual sale prices are shown.
-              </p>
             </div>
           </div>
         </div>
