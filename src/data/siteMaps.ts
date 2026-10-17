@@ -112,6 +112,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Roles & Responsibilities", href: "/roles" },
           { title: "Planning & Next Steps", href: "/planning" },
           { title: "Planning Before a Crisis: How This Resource Helps", href: "/planning-before-a-crisis/how-we-can-help" },
+          { title: "What Will Happen to the Family Home? (Free Checklist)", href: "/family-home-planning" },
         ],
       },
     ],

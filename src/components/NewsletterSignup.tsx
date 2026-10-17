@@ -90,6 +90,10 @@ interface NewsletterSignupProps {
   /* Which list. Defaults to "afh" on any /afh-club page and "family" elsewhere,
      so the AFH city alerts and Market Report join the AFH list on their own. */
   list?: NewsletterList;
+  /* Replaces the "please check your email" confirmation, e.g. to hand over a
+     download the signup was for (/family-home-planning). Keep the
+     confirm-your-address sentence in whatever replaces it. */
+  doneMessage?: React.ReactNode;
 }
 
 /* The edge function holds the MailerLite key and pins the group; this only
@@ -106,7 +110,7 @@ async function subscribeRequest(payload: {
   if (error) throw error;
 }
 
-const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, list: listProp }: NewsletterSignupProps) => {
+const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, list: listProp, doneMessage }: NewsletterSignupProps) => {
   const { pathname } = useLocation();
   const list: NewsletterList = listProp ?? (pathname.startsWith("/afh-club") ? "afh" : "family");
   /* Accent by list: navy for the family side, AFH Club hunter green. The old
@@ -359,7 +363,9 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
         }
       ` }} />
 
-      {status === "done" ? (
+      {status === "done" && doneMessage ? (
+        <div className="rpp-news-done" role="status">{doneMessage}</div>
+      ) : status === "done" ? (
         /* role="status" announces without stealing focus. The confirmation
            step is stated plainly — otherwise someone who never clicks the
            confirmation link believes they subscribed. */

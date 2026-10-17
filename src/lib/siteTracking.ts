@@ -20,7 +20,11 @@
  *                        the answer's page, and the page asked from.
  *   sign_up              newsletter or "notify me" signup confirmed: method
  *                        "newsletter" and the form's source tag (called from
- *                        NewsletterSignup.tsx via trackSignup).
+ *                        NewsletterSignup.tsx via trackSignup). Also sends a
+ *                        Meta Pixel "Lead" (no data) when the pixel is running,
+ *                        which is only on ad landing pages (metaPixel.ts).
+ *   planner_completed    the three questions on /family-home-planning were all
+ *                        answered: page_path only, never the answers.
  *
  * WHAT IS NEVER COLLECTED: the visitor's name, email, phone number, what they type
  * into a calculator, or contact-form message text. The one typed text collected is
@@ -35,6 +39,7 @@
  */
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { AFH_CALCULATORS, FAMILY_CALCULATOR_HREFS } from "@/data/calculatorIndex";
+import { trackMetaLead } from "@/lib/metaPixel";
 
 const send = (name: string, params: Record<string, string>): void => {
   try {
@@ -138,4 +143,11 @@ export const trackAsk = (question: string, answerPath: string | null): void =>
   });
 
 /** Newsletter / "notify me" signup confirmed by the server. */
-export const trackSignup = (source: string): void => send("sign_up", { method: "newsletter", signup_source: source || "unspecified" });
+export const trackSignup = (source: string): void => {
+  send("sign_up", { method: "newsletter", signup_source: source || "unspecified" });
+  trackMetaLead();
+};
+
+/** All three questions on a planner page answered. The answers are never sent. */
+export const trackPlannerCompleted = (): void =>
+  send("planner_completed", { page_path: typeof window === "undefined" ? "" : path() });

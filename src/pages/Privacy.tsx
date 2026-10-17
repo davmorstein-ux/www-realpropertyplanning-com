@@ -37,6 +37,14 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *                           links carry utm_source=realpropertyplanning.com so
  *                           the professional can see the referral in their own
  *                           analytics
+ *   Meta Pixel              src/lib/metaPixel.ts (Oct 17, 2026) — ad landing
+ *                           pages only (/family-home-planning); PageView and a
+ *                           data-free Lead on signup; no automatic events, no
+ *                           advanced matching, no tracking of later pages;
+ *                           skipped under Global Privacy Control; nothing loads
+ *                           until a Pixel ID is set
+ *   Planner answers         /family-home-planning — kept in the browser only;
+ *                           planner_completed records that it was finished
  *   Google Fonts            index.html stylesheet link — Google receives the
  *                           visitor's IP on every page load
  *   Contact form            Contact.tsx — name, email, phone, message, sent
@@ -64,7 +72,7 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  * current practice — it is not a substitute for a lawyer reading it.
  */
 
-const UPDATED = "September 30, 2026";
+const UPDATED = "October 17, 2026";
 
 const Privacy = () => {
   return (
@@ -158,6 +166,16 @@ const Privacy = () => {
                 you opened the form. This tells us which pages people find useful enough to ask a
                 question about. It does not record your name, email address, phone number, or anything
                 you wrote.
+              </p>
+              <p>
+                <strong>Facebook advertising.</strong> We advertise some pages on Facebook. Those pages
+                only (currently the family home planning page) use Meta's pixel, which tells Meta that
+                someone arrived from an ad and whether they signed up, so we can see which ads are
+                useful. It records the page and the fact of a signup. It does not record your email
+                address, your answers to the questions on that page, or which other pages of this site
+                you go on to read, and it is not used on any page about health or care. If your browser
+                sends a Global Privacy Control signal, the pixel does not load. Meta's own use of the
+                data is covered by Meta's privacy policy.
               </p>
               <p>
                 <strong>Fonts.</strong> The typefaces on this site are served by Google Fonts. Your

@@ -1160,6 +1160,18 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Newsletters",
     intro: "There are two newsletters, written for different people. The family newsletter covers inherited homes, probate, senior moves and what care costs in Washington. The AFH Club newsletter covers adult family homes for sale and recent sales, DSHS rate and rule changes, and the Washington AFH Market Report. Both are free and occasional, ask you to confirm your address before anything is sent, and can be unsubscribed from at any time.",
   },
+  "/family-home-planning": {
+    title: "What Will Happen to the Family Home? A Free Planning Checklist | Real Property Planning",
+    description: "Three quick questions and a free 7-step checklist for Washington families planning what happens to a parent's home: staying, moving, or passing it on.",
+    h1: "What will happen to the family home?",
+    quickAnswerQ: "How should a Washington family plan for a parent's home?",
+    quickAnswerA: "Start by asking what the parents want: to stay, to move, or how the house should pass on. Then find out how the home is owned (the deed often decides whether it goes through probate), gather the papers in one place, make sure a durable power of attorney covers real estate, understand what the home costs and is worth, learn the trade-offs of a will, a living trust and a transfer on death deed, and write the plan down where the family can find it.",
+    intro: "A free planning page for Washington families. Three quick questions point to where to start: a first conversation, staying at home, a move, or passing the house on. The free 7-step checklist covers what to ask, what to find, and when a professional is worth calling, with a one-page summary to fill in together.",
+    sections: [
+      "The 7 steps — 1. Ask what your parents actually want. 2. Find out how the home is owned. 3. Gather the papers in one place. 4. Make sure someone can act if a parent cannot. 5. Understand the money. 6. Know the ways a house can pass, and their trade-offs. 7. Write it down and share it.",
+      "A point many families miss — Avoiding probate is not the same as protecting the house. Washington can recover the cost of Medicaid long-term care received at 55 or older from the estate, including a house passed by a transfer on death deed (RCW 43.20B.080).",
+    ],
+  },
   "/calculators": {
     title: "Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning",
     description: "All of Real Property Planning's free calculators in one place. For King County homeowners: what a remodel is worth. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",
