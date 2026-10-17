@@ -326,7 +326,7 @@ export default function RemodelValue() {
                   read as cluttered. Now: one plain answer, one small line, the
                   founder's note. The "Look up your house…" sentence was dropped
                   because Step 1 says the same thing directly below. */}
-              <p className="rmv-lead">{P.SHORT_ANSWER}</p>
+              <p className="rmv-lead">{P.TAGLINE}</p>
               <p className="rmv-small rmv-hero-meta">
                 Built from {P.N_SALES} King County, {P.SNO_N_SALES} Snohomish County and {P.PIE_N_SALES} Pierce County home sales and the counties' public building records. No sign-up; nothing you type is saved.
               </p>

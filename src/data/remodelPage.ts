@@ -32,6 +32,9 @@ export const REMODEL_PAGE = {
   /** The quarter today's estimates are priced at (model.json marketQuarter). */
   MARKET_MONTHS: "July to September 2026",
   N_SALES: "27,066",
+  /** The one line visitors see under the title (Oct 17, 2026, David: "simpler and less wordy"). */
+  TAGLINE: "See how much a remodel could add to your home's value.",
+  /** Not shown on the page since Oct 17, 2026. Kept as the crawler quick answer (vite.config.ts) and matches the FAQ. */
   SHORT_ANSWER:
     // Oct 16, 2026: rewritten in plain words at David's request ("Less than most owners hope" was hard to follow).
     "In King County, a complete renovation has added up to about 30% to a house's sale price. A refinance appraisal usually credits about 20%. Money spent beyond what the best houses in your neighborhood have rarely comes back when you sell.",
