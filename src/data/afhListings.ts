@@ -1858,7 +1858,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "4 total",
     sqft: "2,530",
     price: "$889,000",
-    photo: null,
+    photo: "/listing-photos/8285_Custer_Loop_Rd_Custer.webp",
     broker: "Douglas Linton",
     brokerage: "John L. Scott, Inc",
     listingContactPhone: "(253) 433-2003",
