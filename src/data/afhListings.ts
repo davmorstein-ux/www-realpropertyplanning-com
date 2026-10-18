@@ -2036,7 +2036,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2.25 total",
     sqft: "2,693",
     price: "$1,649,950",
-    photo: null,
+    photo: "/listing-photos/5117_144th_St_SW_Edmonds.webp",
     broker: "Justin Eco",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(206) 773-8940",
