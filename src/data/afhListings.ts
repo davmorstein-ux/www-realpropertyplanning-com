@@ -2156,7 +2156,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2 total",
     sqft: "1,780",
     price: "$850,000",
-    photo: null,
+    photo: "/listing-photos/11606_SE_219th_Pl_Kent.webp",
     broker: "Julie C Costales",
     brokerage: "Kelly Right RE of Seattle LLC",
     listingContactPhone: "(206) 992-7370",
