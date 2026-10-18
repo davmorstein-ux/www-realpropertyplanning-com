@@ -20,8 +20,8 @@
  */
 import { db, ensureSchema } from "../_shared/pushdb.ts";
 import { vapidKeys } from "../_shared/vapid.ts";
-import { sendPush } from "../push-check/webpush.ts";
-import { SCOPE_PATTERN } from "../push-check/diff.ts";
+import { sendPush } from "../_shared/webpush.ts";
+import { SCOPE_PATTERN } from "../_shared/diff.ts";
 
 const cors = {
   "Access-Control-Allow-Origin": "*",

@@ -38,6 +38,6 @@ npx tsc --noEmit -p tsconfig.app.json
 ## AFH listing push alerts ("Real Plan" home-screen app, Oct 18, 2026)
 - Feed: `src/data/afhAlerts.ts` → `dist/afh-alert-feed.json` at build. It must never carry a listing's address, price, photo or beds (NWMLS; same rule as `src/lib/aiData.ts`); `src/test/afhAlerts.test.ts` fails if it does.
 - Sending: `supabase/functions/push-check` (pg_cron every 15 min, diffs the LIVE feed, so alerts follow Publish). Sign-ups: `supabase/functions/push-subscribe`; box: `src/components/AFHPushAlerts.tsx`; browser side `src/lib/pushAlerts.ts`; `public/sw.js` has no fetch handler on purpose (never cache pages).
-- Web Push is hand-written on Web Crypto (`push-check/webpush.ts`); the npm `web-push` package needs Node ECDH that Deno lacks. Tests decrypt its output independently.
+- Web Push is hand-written on Web Crypto (`_shared/webpush.ts`); the npm `web-push` package needs Node ECDH that Deno lacks. Tests decrypt its output independently.
 - Keys: public key in `src/lib/pushAlerts.ts` and `supabase/functions/_shared/vapid.ts` (must match); private key only in the Supabase secret `VAPID_PRIVATE_KEY`. Replacing the pair cancels every subscription.
 - More than 12 changes in one publish are saved without sending (treated as a data update). Adding a past sale for the sold page sends nothing.
