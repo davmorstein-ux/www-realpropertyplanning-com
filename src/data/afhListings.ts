@@ -2010,7 +2010,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2.75 total",
     sqft: "2,000",
     price: "$800,000",
-    photo: null,
+    photo: "/listing-photos/11605_SE_258th_St_Kent.webp",
     broker: "Kennedy E. Akinlosotu",
     brokerage: "Nations Realty, LLC",
     listingContactPhone: "(206) 423-9999",
