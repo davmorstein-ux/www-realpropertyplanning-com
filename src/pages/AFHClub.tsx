@@ -10,6 +10,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { useTranslation } from "react-i18next";
+import AFHGetApp from "@/components/AFHGetApp";
 import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
 /**
@@ -782,6 +783,12 @@ const AFHClub = () => {
               Browse all AFH Club questions &amp; answers →
             </Link>
           </div>
+        </section>
+
+        {/* Get the Real Plan app (Oct 18, 2026): the installable Home Screen
+            app and its listing alerts. Hidden inside the installed app. */}
+        <section style={{ background: "#ffffff", padding: "32px 20px", borderBottom: "1px solid #e3ddd3" }}>
+          <AFHGetApp />
         </section>
 
         {/* Welcome band removed. It sat directly beneath a hero that already
