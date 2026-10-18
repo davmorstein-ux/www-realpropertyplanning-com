@@ -2084,7 +2084,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "3 total",
     sqft: "3,246",
     price: "$1,880,000",
-    photo: null,
+    photo: "/listing-photos/2496559_Edmonds.webp",
     broker: "Samuel Mottley",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(425) 387-5554",
