@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
-// REDEPLOY MARKER — 2026-10-16 (two lists: family and AFH Club)
-// Earlier marker: 2026-08-15
+// REDEPLOY MARKER — 2026-10-17 (AFH Club group ID filled in)
+// Earlier markers: 2026-10-16, 2026-08-15
 //
 // This comment exists to change the file's contents and nothing else. Edge
 // functions deploy separately from the site: publishing rebuilds the React
@@ -35,10 +35,10 @@ const GROUP_ID = "195718488033068791"; // family-side list (probate, inherited h
    investors want different email. The caller may name a list, but only from
    this whitelist, so it still cannot file anyone into an arbitrary group.
 
-   AFH_GROUP_ID is filled in once the AFH Club group exists in MailerLite.
-   Until then AFH signups land in the family group with their "afh" source
-   tag intact, so nobody is lost and they can be moved over in one filter. */
-const AFH_GROUP_ID = "";
+   AFH Club group created in MailerLite on Oct 17, 2026. Signups made before
+   then landed in the family group with an "afh" source tag, so they can be
+   found with a filter on that field. */
+const AFH_GROUP_ID = "201626214767527128";
 const groupFor = (list: unknown): string =>
   list === "afh" && AFH_GROUP_ID ? AFH_GROUP_ID : GROUP_ID;
 
