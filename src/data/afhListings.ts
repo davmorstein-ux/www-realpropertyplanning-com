@@ -1986,7 +1986,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "4 total",
     sqft: "3,530",
     price: "$1,200,000",
-    photo: null,
+    photo: "/listing-photos/2594691_Federal_Way.webp",
     broker: "Matthew Akinlosotu",
     brokerage: "Kelly Right RE of Seattle LLC",
     listingContactPhone: "(206) 359-1385",
