@@ -54,12 +54,15 @@ async function deliver(alert: Alert, keys: VapidKeys): Promise<[number, number]>
     select endpoint, p256dh, auth from public.push_subscriptions where scopes && ${sql.array(alert.audience)}::text[]`;
   const payload = { title: alert.title, body: alert.body, url: `${SITE}${alert.path}`, tag: `${alert.key}:${alert.event}` };
   let delivered = 0;
+  // Push-service answers, e.g. "201,410" (no addresses): what the status page shows.
+  const statuses: string[] = [];
   for (let i = 0; i < rows.length; i += 10) {
     const batch = rows.slice(i, i + 10);
     const results = await Promise.allSettled(batch.map((s) => sendPush(s, payload, keys)));
     for (let j = 0; j < batch.length; j++) {
       const r = results[j];
       const ep = batch[j].endpoint;
+      statuses.push(r.status === "fulfilled" ? String(r.value.status) : `error: ${String((r.reason as Error)?.message ?? r.reason).slice(0, 80)}`);
       if (r.status === "fulfilled" && r.value.status < 300) {
         delivered++;
         await sql`update public.push_subscriptions set last_sent_at = now(), failures = 0 where endpoint = ${ep}`;
@@ -72,8 +75,8 @@ async function deliver(alert: Alert, keys: VapidKeys): Promise<[number, number]>
     }
   }
   await sql`
-    insert into public.afh_alert_log (listing, event, recipients, delivered)
-    values (${alert.key}, ${alert.event}, ${rows.length}, ${delivered})`;
+    insert into public.afh_alert_log (listing, event, recipients, delivered, statuses)
+    values (${alert.key}, ${alert.event}, ${rows.length}, ${delivered}, ${statuses.join(",")})`;
   return [rows.length, delivered];
 }
 
@@ -139,8 +142,24 @@ Deno.serve(async (req) => {
   try {
     const result = await runCheck();
     const schedule = await scheduleCheck();
-    const [{ n }] = await db()<{ n: number }[]>`select count(*)::int as n from public.push_subscriptions`;
-    return json({ ok: true, ...result, subscribers: n, schedule, sendingKey: vapidKeys() ? "set" : "MISSING: add VAPID_PRIVATE_KEY" });
+    const sql = db();
+    const [{ n }] = await sql<{ n: number }[]>`select count(*)::int as n from public.push_subscriptions`;
+    // What the scheduled runs did, for the owner checking from a browser. Counts and
+    // push-service status codes only; no subscriber addresses.
+    const [state] = await sql<{ checked_at: Date | null; last_result: unknown }[]>`
+      select checked_at, last_result from public.afh_alert_state where id = 'feed'`;
+    const recent = await sql`
+      select sent_at, listing, event, recipients, delivered, statuses
+      from public.afh_alert_log order by id desc limit 15`;
+    return json({
+      ok: true,
+      ...result,
+      subscribers: n,
+      schedule,
+      sendingKey: vapidKeys() ? "set" : "MISSING: add VAPID_PRIVATE_KEY",
+      lastScheduledCheck: state ? { at: state.checked_at, result: state.last_result } : null,
+      recentAlerts: recent,
+    });
   } catch (e) {
     console.error("push-check failed:", e);
     return json({ ok: false, error: (e as Error).message }, 500);

@@ -55,6 +55,7 @@ create table if not exists public.afh_alert_log (
   delivered  integer not null
 );
 alter table public.afh_alert_log enable row level security;
+alter table public.afh_alert_log add column if not exists statuses text;
 `;
 
 /** pg_cron calls push-check every 15 minutes. Re-running replaces the job of the same name. */
