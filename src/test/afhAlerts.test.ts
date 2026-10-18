@@ -9,7 +9,7 @@ import path from "node:path";
 import { afhListings, listingSlug } from "@/data/afhListings";
 import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import { audienceFor, buildAlertFeed, fingerprint, scopeFor, VALID_SCOPES } from "@/data/afhAlerts";
-import { diffFeeds, eventFor, SCOPE_PATTERN, type FeedItem } from "../../supabase/functions/push-check/diff";
+import { diffFeeds, eventFor, SCOPE_PATTERN, type FeedItem } from "../../supabase/functions/_shared/diff";
 import { b64urlToBytes, bytesToB64url, encryptPayload, vapidAuthorization } from "../../supabase/functions/_shared/webpush";
 
 const root = path.resolve(__dirname, "../..");
