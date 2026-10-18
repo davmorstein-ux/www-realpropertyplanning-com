@@ -1930,7 +1930,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "3 full · 2 half",
     sqft: "2,084",
     price: "$949,950",
-    photo: null,
+    photo: "/listing-photos/808_Sauk_Mountain_Dr_Sedro-Woolley.webp",
     broker: "Faysel Siraj",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(206) 353-0606",
