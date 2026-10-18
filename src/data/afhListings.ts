@@ -1954,7 +1954,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2 full",
     sqft: "2,366",
     price: "$1,015,000",
-    photo: null,
+    photo: "/listing-photos/2104_SE_7th_St_Puyallup.webp",
     broker: "Zora Brzac",
     brokerage: "HomeSmart Real Estate Assoc",
     listingContactPhone: "(425) 381-7911",
