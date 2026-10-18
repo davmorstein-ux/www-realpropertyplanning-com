@@ -1599,7 +1599,7 @@ export const afhListings: AFHListing[] = [
   {
     id: 81,
     marketStatus: "pending",
-    lastVerified: "2026-10-03",
+    lastVerified: "2026-10-18",
     statusChanged: "2026-08-27",
     listedDate: "2026-08-14",
     listingType: "realEstate",
@@ -1653,7 +1653,7 @@ export const afhListings: AFHListing[] = [
   {
     id: 83,
     marketStatus: "pending",
-    lastVerified: "2026-10-03",
+    lastVerified: "2026-10-18",
     statusChanged: "2026-08-28",
     listedDate: "2026-07-28",
     listingType: "realEstate",
@@ -1707,7 +1707,7 @@ export const afhListings: AFHListing[] = [
   {
     id: 85,
     marketStatus: "pending",
-    lastVerified: "2026-10-03",
+    lastVerified: "2026-10-18",
     statusChanged: "2026-09-04",
     listedDate: "2026-08-24",
     listingType: "realEstate",
@@ -1786,8 +1786,9 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 88,
-    marketStatus: "active",
-    lastVerified: "2026-10-03",
+    marketStatus: "pending",
+    lastVerified: "2026-10-18",
+    statusChanged: "2026-10-07",
     listedDate: "2026-09-24",
     listingType: "realEstate",
     source: "nwmls",
