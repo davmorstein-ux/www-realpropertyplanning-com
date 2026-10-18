@@ -7,11 +7,11 @@ import AskBox from "@/components/AskBox";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2030.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2030-mobile.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2031.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2031-mobile.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2030-mobile-900.webp";
+import heroMobile900 from "@/assets/hero/rpp-hero-2031-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
