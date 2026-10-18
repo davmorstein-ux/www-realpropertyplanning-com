@@ -1,4 +1,5 @@
 import EstateSubPageLayout, { SubH2, P, UL, Divider } from "@/components/EstateSubPageLayout";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for guidance specific to your situation.";
@@ -72,6 +73,8 @@ const PreparingTheProperty = () => (
     <P>
       An experienced estate real estate broker can walk through the property and give honest, practical advice about what matters and what doesn't — before money is spent.
     </P>
+
+    <RemodelWorthCallout />
 
     <Divider />
 

@@ -2,6 +2,7 @@ import FlowBranchPage from "@/components/flow/FlowBranchPage";
 import ProbateFlowChart from "@/components/probate/ProbateFlowChart";
 import { FLOW_BY_SLUG, FLOW_BASE, DEADLINES_PATH } from "@/data/probateFlow";
 import ExecutorNotActing from "@/components/guides/ExecutorNotActing";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 
 /**
  * One box of the probate flow chart (Oct 1, 2026). Words live in
@@ -20,7 +21,7 @@ export default function ProbateFlowPage({ slug }: { slug: string }) {
       glossary={{ label: "glossary", href: "/probate-glossary" }}
       accent="#25597e"
       heroBg="#eef3f7"
-      extra={slug === "heir" ? <ExecutorNotActing /> : undefined}
+      extra={slug === "heir" ? <ExecutorNotActing /> : slug === "selling-the-house" ? <div style={{ padding: "0 16px" }}><RemodelWorthCallout /></div> : undefined}
       disclaimer="General information, not legal advice; Real Property Planning does not refer clients to attorneys."
     />
   );

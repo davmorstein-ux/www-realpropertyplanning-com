@@ -1,4 +1,5 @@
 import EstateSubPageLayout, { SubH2, P, UL, Divider } from "@/components/EstateSubPageLayout";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State probate attorney for guidance specific to your situation.";
@@ -49,6 +50,8 @@ const WhatToDoWithTheProperty = () => (
     <P>
       An experienced estate real estate broker understands these dynamics and can guide the family through the process without unnecessary pressure.
     </P>
+
+    <RemodelWorthCallout />
 
     <Divider />
 

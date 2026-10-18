@@ -10,6 +10,7 @@ import NextStepBlock from "@/components/NextStepBlock";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import NextQuestions from "@/components/NextQuestions";
 
@@ -167,6 +168,9 @@ const InheritedHouseWashington = () => (
 
       <RelatedServices currentPath="/guides/inherited-house-washington" />
 
+      <div className="px-5">
+        <RemodelWorthCallout />
+      </div>
       <AuthorByline context="estate" />
       <DisclaimerSection />
       <NextQuestions />

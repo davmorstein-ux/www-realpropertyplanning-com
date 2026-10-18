@@ -19,6 +19,7 @@ import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import IntentCTA from "@/components/IntentCTA";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 interface Pathway {
@@ -349,6 +350,9 @@ const SellingAnInheritedHome = () => {
             not before it. */}
         <NewsletterSignup variant="probate" />
 
+        <div className="px-5">
+          <RemodelWorthCallout />
+        </div>
         <IntentCTA
           heading="Selling as-is or preparing the home first?"
           body="That decision depends on condition, market, timeline, and who is paying for the work. It is the question most inherited-home sellers get wrong by guessing. Ask it with the property in mind."
