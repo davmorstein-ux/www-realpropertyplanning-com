@@ -1882,7 +1882,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2.75 total",
     sqft: "3,068",
     price: "$900,000",
-    photo: null,
+    photo: "/listing-photos/2592019_Centralia.webp",
     broker: "Vasi Nemes Jr",
     brokerage: "206 Realty LLC",
     listingContactPhone: "(206) 229-0390",
