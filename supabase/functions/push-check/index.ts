@@ -22,7 +22,7 @@
 import { db, ensureSchema, SCHEDULE_SQL } from "../_shared/pushdb.ts";
 import { vapidKeys } from "../_shared/vapid.ts";
 import { diffFeeds, MAX_ALERTS_PER_RUN, type Alert, type FeedItem } from "./diff.ts";
-import { sendPush, type VapidKeys } from "./webpush.ts";
+import { sendPush, type VapidKeys } from "../_shared/webpush.ts";
 
 const SITE = "https://realpropertyplanning.com";
 // ALERT_FEED_URL exists for local testing only; production reads the live site.

@@ -8,7 +8,7 @@
  * visitors must sign up again — so replace the pair only if the private key
  * leaks.
  */
-import type { VapidKeys } from "../push-check/webpush.ts";
+import type { VapidKeys } from "./webpush.ts";
 
 export const VAPID_PUBLIC_KEY = "BCsW4MfFpXJR9PX4PyYHtGctQ_J-9JD_rSXrfqrHf-Nj3YoRKTH6JARd0IOFVXwjzq3KeE9m_8MGF0uOaBPXK2k";
 export const VAPID_SUBJECT = "mailto:david@realpropertyplanning.com";
