@@ -1,28 +1,19 @@
 {
+  "id": "/",
   "name": "Real Property Planning",
-  "short_name": "Real Property Planning",
-  "description": "Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State.",
-  "start_url": "/",
+  "short_name": "Real Plan",
+  "description": "Washington guides for probate, inherited property, senior housing, and adult family homes, with AFH Club listing alerts.",
+  "start_url": "/?source=app",
   "scope": "/",
-  "display": "browser",
-  "background_color": "#F5F0E8",
-  "theme_color": "#1B3A6B",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#faf8f4",
+  "theme_color": "#faf8f4",
   "icons": [
-    {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32 48x48 64x64 128x128 256x256",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/rpp-mark-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
+    { "src": "/real-plan-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/real-plan-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/real-plan-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/real-plan-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
   ]
 }
