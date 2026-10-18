@@ -14,6 +14,7 @@ import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInv
 import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { calculatorNoteForRoute, FOUNDER_SIGNATURE, WHY_HEADING } from "./src/data/calculatorNotes";
 import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
+import { buildAlertFeed } from "./src/data/afhAlerts";
 import { REDIRECTS } from "./src/data/redirects";
 import { POLICY_PAGES } from "./src/data/policyPages";
 import { GLOSSARY_A_TO_Z } from "./src/data/afhGlossary";
@@ -3130,6 +3131,15 @@ const routeMetadataPlugin = {
        Built from the same data the pages use; the public MCP server fetches the
        JSON from the live site. See src/lib/aiData.ts (and its NWMLS note). */
     await writeAiData(distDir);
+
+    /* AFH listing push alerts (Oct 18, 2026): the feed the push-check function
+       compares every 15 minutes. Written by the build so it only changes when
+       the site is published. No listing details in it — see src/data/afhAlerts.ts. */
+    {
+      const feed = buildAlertFeed();
+      await writeFile(path.join(distDir, "afh-alert-feed.json"), JSON.stringify(feed));
+      console.log(`afh-alert-feed: ${feed.items.length} listings`);
+    }
 
     /* Prerender coverage (Oct 8, 2026 audit): a <Route> in App.tsx with no page
        written here is served the homepage HTML (homepage title and canonical) to

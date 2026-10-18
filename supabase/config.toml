@@ -50,3 +50,17 @@ verify_jwt = false
 
 [functions.mcp]
 verify_jwt = false
+
+# AFH listing push alerts (Oct 18, 2026). Both public on purpose; see the
+# header comment in each function for why that is safe.
+#   push-subscribe: a subscription only exists after the visitor taps Allow on
+#     the phone's own permission prompt; endpoints are limited to the real push
+#     services; nothing about other subscribers is ever returned.
+#   push-check: pg_cron calls it every 15 minutes with no key. Calling it can
+#     only send alerts for real changes on the published site, at most once a
+#     minute; an extra call with no change sends nothing.
+[functions.push-subscribe]
+verify_jwt = false
+
+[functions.push-check]
+verify_jwt = false

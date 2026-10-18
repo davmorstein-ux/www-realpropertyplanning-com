@@ -9,6 +9,7 @@ import { liveListings, soldListings, AFH_TYPE_LABELS, type AFHListingType, type 
 import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import AFHBuyerGuides from "@/components/AFHBuyerGuides";
+import AFHPushAlerts from "@/components/AFHPushAlerts";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO } from "@/data/featuredProfessionalAssets";
@@ -580,6 +581,11 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
             {shown.map((listing, index) => (
               <AFHListingCard key={listing.id} listing={listing} index={index} total={shown.length} />
             ))}
+          </div>
+
+          {/* ── PHONE ALERTS ── statewide by default; any city page can be chosen (Oct 18, 2026) */}
+          <div style={{ marginTop: "2.5rem" }}>
+            <AFHPushAlerts />
           </div>
 
           {/* ── GUIDES FOR BUYERS ── same list the prerender writes into the static HTML */}

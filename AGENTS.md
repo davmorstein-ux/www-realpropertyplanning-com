@@ -34,3 +34,10 @@ npx tsc --noEmit -p tsconfig.app.json
 - The Tailwind `Unexpected "section"` build warning is harmless.
 - Every indexable route needs a prerendered page (an entry in `ROUTE_METADATA` in `vite.config.ts`, or a generated route list). A route without one is served the **homepage HTML** to crawlers — homepage title and canonical — so Google files it as a copy of the homepage. The Oct 8, 2026 audit found eleven such pages (privacy, bookkeeping, legal plans, both AFH financing pages, six cost-of-care calculators). The build now prints `all N static routes have a prerendered page` or a ⚠ list; dynamic routes (`:slug`, `/*`) are not covered by that check, so add their entries by hand.
 - Link to a page's current address, never one in `src/data/redirects.ts` (use `currentPath()` from that file for computed links), and never to a directory filter page with zero homes (those are not prerendered).
+
+## AFH listing push alerts ("Real Plan" home-screen app, Oct 18, 2026)
+- Feed: `src/data/afhAlerts.ts` → `dist/afh-alert-feed.json` at build. It must never carry a listing's address, price, photo or beds (NWMLS; same rule as `src/lib/aiData.ts`); `src/test/afhAlerts.test.ts` fails if it does.
+- Sending: `supabase/functions/push-check` (pg_cron every 15 min, diffs the LIVE feed, so alerts follow Publish). Sign-ups: `supabase/functions/push-subscribe`; box: `src/components/AFHPushAlerts.tsx`; browser side `src/lib/pushAlerts.ts`; `public/sw.js` has no fetch handler on purpose (never cache pages).
+- Web Push is hand-written on Web Crypto (`push-check/webpush.ts`); the npm `web-push` package needs Node ECDH that Deno lacks. Tests decrypt its output independently.
+- Keys: public key in `src/lib/pushAlerts.ts` and `supabase/functions/_shared/vapid.ts` (must match); private key only in the Supabase secret `VAPID_PRIVATE_KEY`. Replacing the pair cancels every subscription.
+- More than 12 changes in one publish are saved without sending (treated as a data update). Adding a past sale for the sold page sends nothing.

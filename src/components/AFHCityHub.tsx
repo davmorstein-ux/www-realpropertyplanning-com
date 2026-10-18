@@ -11,6 +11,7 @@ import { soldStats } from "@/data/afhInventoryPrerender";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { Link } from "react-router-dom";
 import { cityExists, getCityIndexEntry } from "@/data/afh/directory";
+import AFHPushAlerts from "@/components/AFHPushAlerts";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import AFHBuyerGuides from "@/components/AFHBuyerGuides";
@@ -288,6 +289,7 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
         <section id="city-alert" className="py-10 md:py-14 bg-cream scroll-mt-32">
           <div className="container px-5 md:px-8">
             <div className="max-w-3xl mx-auto">
+              <AFHPushAlerts citySlug={slug} />
               <NewsletterSignup
                 source={`afh-alert:${slug}`}
                 copy={{
