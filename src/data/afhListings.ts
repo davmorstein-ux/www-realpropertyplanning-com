@@ -1817,7 +1817,7 @@ export const afhListings: AFHListing[] = [
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "licensedNotOperating",
-    businessIncluded: "separate",
+    businessIncluded: "unknown",
     address: "7501 93rd Avenue Ct SW",
     city: "Lakewood",
     state: "WA",
@@ -1833,10 +1833,14 @@ export const afhListings: AFHListing[] = [
     listingContactEmail: "Sharon.oguta@lookupnw.com",
     mlsNum: "2583527",
     businessNotes:
-      "Licensed adult family home (DSHS license 757823, licensed for 6), vacant with no residents, sold furnished. As of Oct 2026 the price is for the real estate only; the listing estimates the business at about $110,000 more. A buyer still applies for a new license through a change of ownership. The listing mentions room to expand to 8 residents; DSHS approves 7 or 8 only for a provider who meets WAC 388-76-10031, including 24 months of licensed operation. The current owner's Expanded Community Services (ECS) contract does not transfer.",
+      "Licensed adult family home (DSHS license 757823, licensed for 6), vacant with no residents, sold furnished. A buyer applies for a new license through a change of ownership. The listing mentions room to expand to 8 residents; DSHS approves 7 or 8 only for a provider who meets WAC 388-76-10031, including 24 months of licensed operation. The current owner's Expanded Community Services (ECS) contract does not transfer.",
   },
   /* Added Oct 18, 2026 from the owner's NWMLS export. Broker contact emails are the
-     ones already on file for the same listing broker. No photos supplied yet. */
+     ones already on file for the same listing broker. No photos supplied yet.
+     AGENT-ONLY REMARKS ARE CONFIDENTIAL (NWMLS): status, business-included and
+     notes come from the public marketing remarks only — never from the "Agent Only
+     Remarks" column (price splits, business prices, companion MLS numbers, resident
+     move-out dates). Where the public remarks don't say, use "unknown". */
   {
     id: 90,
     marketStatus: "active",
@@ -1869,8 +1873,7 @@ export const afhListings: AFHListing[] = [
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
-    businessIncluded: "separate",
-    linkedMls: "2592040",
+    businessIncluded: "unknown",
     address: "Address Upon Request",
     city: "Centralia",
     state: "WA",
@@ -1893,8 +1896,8 @@ export const afhListings: AFHListing[] = [
     listedDate: "2026-10-01",
     listingType: "realEstate",
     source: "nwmls",
-    afhStatus: "licensedNotOperating",
-    businessIncluded: "no",
+    afhStatus: "operating",
+    businessIncluded: "unknown",
     address: "4209 191st Street SW",
     city: "Lynnwood",
     state: "WA",
@@ -1942,7 +1945,7 @@ export const afhListings: AFHListing[] = [
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "licensedNotOperating",
-    businessIncluded: "separate",
+    businessIncluded: "unknown",
     address: "2104 SE 7th Street",
     city: "Puyallup",
     state: "WA",
@@ -1958,7 +1961,7 @@ export const afhListings: AFHListing[] = [
     listingContactEmail: "zorahomess@gmail.com",
     mlsNum: "2582377",
     businessNotes:
-      "Converted for adult family home use in 2023 and licensed for 6, but never operated. The listing offers the license, furniture and business goods for an additional $60,000. A DSHS license does not transfer in a sale: a buyer applies for a new one through a change of ownership.",
+      "Converted for adult family home use in 2023 and licensed for 6, but never operated. A DSHS license does not transfer in a sale: a buyer applies for a new one through a change of ownership.",
   },
   {
     id: 95,
