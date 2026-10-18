@@ -31,6 +31,22 @@ describe("Meta Pixel", () => {
     expect(window.fbq).toBeUndefined();
   });
 
+  it("on the landing page: no automatic events, no tracking of later pages, a data-free Lead", () => {
+    if (!META_PIXEL_ID) return;
+    window.history.pushState({}, "", "/family-home-planning");
+    loadMetaPixel();
+    expect(metaPixelActive()).toBe(true);
+    const fbq = window.fbq!;
+    expect(fbq.disablePushState).toBe(true);
+    expect(fbq.queue).toEqual([
+      ["set", "autoConfig", false, META_PIXEL_ID],
+      ["init", META_PIXEL_ID],
+      ["track", "PageView"],
+    ]);
+    trackMetaLead();
+    expect(fbq.queue!.at(-1)).toEqual(["track", "Lead"]);
+  });
+
   it("never sends a Lead when the pixel was not started", () => {
     const fbq = vi.fn();
     (window as { fbq?: unknown }).fbq = fbq;

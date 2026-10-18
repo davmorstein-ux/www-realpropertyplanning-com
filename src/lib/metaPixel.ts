@@ -25,7 +25,7 @@
  */
 
 /** Paste the Pixel ID from Meta Events Manager here (digits only). */
-export const META_PIXEL_ID = "";
+export const META_PIXEL_ID = "2610952959369284";
 
 /** The only pages the pixel may load on. Ad landing pages with no health content. */
 export const PIXEL_PAGES = new Set<string>(["/family-home-planning"]);
