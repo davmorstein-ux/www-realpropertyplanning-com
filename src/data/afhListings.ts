@@ -2108,7 +2108,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "3.5 total",
     sqft: "5,380",
     price: "$1,600,000",
-    photo: null,
+    photo: "/listing-photos/1008_E_Guiberson_St_Kent.webp",
     broker: "Izzy Iniguez-Chavez",
     brokerage: "KW Lake Washington So",
     listingContactPhone: "(206) 618-4551",
