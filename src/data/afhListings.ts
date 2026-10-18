@@ -2132,7 +2132,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "4.25 total",
     sqft: "7,617",
     price: "$2,675,000",
-    photo: null,
+    photo: "/listing-photos/4221_W_Armour_St_Seattle.webp",
     broker: "Edward Krigsman",
     brokerage: "Windermere Real Estate Co.",
     listingContactPhone: "(206) 387-6789",
