@@ -2060,7 +2060,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "1.75 total",
     sqft: "1,845",
     price: "$759,990",
-    photo: null,
+    photo: "/listing-photos/2590294_Des_Moines.webp",
     broker: "Candice Frazier",
     brokerage: "Best Choice Realty LLC",
     listingContactPhone: "(253) 222-9923",
