@@ -1776,7 +1776,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "4 total",
     sqft: "3,802",
     price: "$2,250,000",
-    photo: null,
+    photo: "/listing-photos/16342_72nd_Ave_W_Edmonds.webp",
     broker: "Adrian Marchis",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(206) 226-9819",
