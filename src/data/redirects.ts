@@ -274,6 +274,8 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/afh-club/listings/edmonds-nwmls-2471335", to: "/afh-club/listings" },
   { from: "/afh-club/listings/puyallup-nwmls-2497783", to: "/afh-club/listings" },
   { from: "/afh-club/listings/milton-nwmls-2536730", to: "/afh-club/listings" },
+  /* Expired Oct 8, 2026; removed Oct 18 (owner: a 3-bedroom house, not an AFH listing). */
+  { from: "/afh-club/listings/edmonds-nwmls-2566847", to: "/afh-club/listings" },
   /* /terminology retired Oct 4, 2026: its terms were merged into the Washington probate
      glossary, with statute citations. */
   { from: "/terminology", to: "/probate-glossary" },
