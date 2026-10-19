@@ -1980,7 +1980,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "6 total",
     sqft: "6,130",
     price: "$3,950,000",
-    photo: null,
+    photo: "/listing-photos/2579429_Bellevue.webp",
     broker: "Sorin V. Adamovici",
     brokerage: "HomeSmart Real Estate Assoc",
     listingContactPhone: "(425) 246-3847",
