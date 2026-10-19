@@ -564,7 +564,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2 full · 1 half",
     sqft: "1,544",
     price: "$975,000",
-    photo: null,
+    photo: "/listing-photos/9320_220th_St_SW_Edmonds.webp",
     broker: "Douglas Linton",
     brokerage: "John L. Scott, Inc",
     listingContactPhone: "(253) 433-2003",
