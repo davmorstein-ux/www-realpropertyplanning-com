@@ -85,7 +85,14 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2030 (Oct 4, 2026): the same entryway photograph, recut
+            /* rpp-hero-2031 (Oct 18, 2026): the owner's new entryway render with
+               a magenta door matching the logo. Same 1920x364 band and the same
+               mobile crops. The render was warmer than 2030, so the left wall
+               (the tagline's column) was blended 55% toward cream, feathered out
+               before the mirror; navy on it measures 7.25:1 at its weakest
+               (2030 was 5.2:1). Re-measure if the artwork changes again.
+
+               rpp-hero-2030 (Oct 4, 2026): the same entryway photograph, recut
                by the owner with more headroom — the lantern, ceiling line,
                rug and right-hand planter are no longer clipped. Desktop
                1920x364 (5.27:1); mobile 1200x430, cropped from the right so
