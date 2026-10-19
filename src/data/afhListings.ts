@@ -1906,7 +1906,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "2.5 total",
     sqft: "1,880",
     price: "$949,950",
-    photo: null,
+    photo: "/listing-photos/4209_191st_St_SW_Lynnwood.webp",
     broker: "Mahlet Altaye",
     brokerage: "KW Greater Seattle",
     listingContactPhone: "(206) 371-4834",
