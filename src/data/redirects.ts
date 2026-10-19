@@ -266,7 +266,7 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/wahkiakum-county-probate-estate-real-estate", to: "/wahkiakum-county" },
   /* AFH listings that expired or were cancelled (Oct 3, 2026). NWMLS IDX rules do not
      allow expired or withdrawn listings to be displayed, so their pages were removed. */
-  { from: "/afh-club/listings/edmonds-nwmls-2496559", to: "/afh-club/listings" },
+  /* edmonds-nwmls-2496559 was here; the listing came back on the market Oct 4, 2026 and was re-added Oct 18. */
   { from: "/afh-club/listings/auburn-nwmls-2541949", to: "/afh-club/listings" },
   { from: "/afh-club/listings/bellevue-nwmls-2482928", to: "/afh-club/listings" },
   { from: "/afh-club/listings/federal-way-nwmls-2551807", to: "/afh-club/listings" },
