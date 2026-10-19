@@ -611,7 +611,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "3 full",
     sqft: "3,174",
     price: "$735,000",
-    photo: null,
+    photo: "/listing-photos/2325_48th_Ave_SW_Tumwater.webp",
     broker: "Heidi Korndorffer",
     brokerage: "Better Properties Real Estate",
     listingContactPhone: "(425) 345-1216",
