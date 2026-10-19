@@ -88,7 +88,9 @@ const RPPHomeV3 = () => {
             /* rpp-hero-2031 (Oct 18, 2026): the owner's new entryway render with
                a magenta door matching the logo, and (same evening, his idea) a navy
                accent wall behind the door to echo the logo's A — regenerated in
-               ChatGPT so the wall carries the room's light rather than a flat fill. Same 1920x364 band and the same
+               ChatGPT so the wall carries the room's light rather than a flat fill.
+               Final render (Oct 18, 21:30): matching windows, clean trim, sunlight
+               on the navy wall; tagline contrast 7.33:1 minimum. Same 1920x364 band and the same
                mobile crops. The render was warmer than 2030, so the left wall
                (the tagline's column) was blended 55% toward cream, feathered out
                before the mirror; navy on it measures 7.25:1 at its weakest
