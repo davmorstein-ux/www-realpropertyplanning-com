@@ -183,7 +183,7 @@ export const isComplete = (s: Situation, a: Answers): boolean => visibleQuestion
 const PROS: PlanStep = {
   id: "pros",
   title: "Line up the right professionals",
-  why: "Most families need some of an attorney, a broker, a tax adviser and help with the contents. Real Property Planning lists people its founder has met in person; you choose and hire them directly.",
+  why: "Most families need some combination of an attorney, a broker, a tax adviser and help with the contents. Real Property Planning lists people its founder has met in person; you choose and hire them directly.",
   links: [
     { title: "Featured professionals", href: "/featured-professionals" },
     { title: "Building your professional team", href: "/estate-probate-inherited-property/professional-team" },
