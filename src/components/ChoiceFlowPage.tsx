@@ -8,6 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
 import NextQuestions from "@/components/NextQuestions";
+import MyPlanInvite from "@/components/MyPlanInvite";
 
 /** Same rule as scripts/build-aging-parent-routes.mjs, so the prerendered
  *  description and the live one agree. */
@@ -105,6 +106,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                     Pick the option below that best matches your situation to get started.
                   </p>
                   <ChoiceGrid choices={node.children!} />
+                  {isRoot && <MyPlanInvite situation="parent" style={{ marginTop: 40 }} />}
                 </>
               ) : node.content ? (
                 <>

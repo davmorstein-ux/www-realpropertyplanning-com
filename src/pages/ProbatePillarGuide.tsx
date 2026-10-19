@@ -1,3 +1,4 @@
+import MyPlanInvite from "@/components/MyPlanInvite";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -93,6 +94,7 @@ const ProbatePillarGuide = () => (
       <section style={{ background: "#ffffff", padding: "36px 16px 44px" }}>
         <div className="prp-wrap">
           <ProbateFlowChart />
+          <MyPlanInvite situation="estate" style={{ marginTop: 36 }} />
         </div>
       </section>
 
