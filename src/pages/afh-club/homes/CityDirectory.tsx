@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AFHDirectoryNextSteps from "@/components/AFHDirectoryNextSteps";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -306,6 +307,7 @@ const CityDirectory = () => {
                     facilities={shown}
                     emptyMessage={`No ${city} homes currently match this. Try another filter, or view all ${cityEntry.facilityCount} homes in ${city}.`}
                   />
+                  <AFHDirectoryNextSteps city={city} style={{ marginTop: 40 }} />
                 </>
               )}
             </div>

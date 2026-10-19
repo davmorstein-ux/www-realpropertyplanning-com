@@ -584,7 +584,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
           </div>
 
           {/* ── PHONE ALERTS ── statewide by default; any city page can be chosen (Oct 18, 2026) */}
-          <div style={{ marginTop: "2.5rem" }}>
+          <div id="phone-alerts" style={{ marginTop: "2.5rem", scrollMarginTop: "calc(var(--header-height, 120px) + 12px)" }}>
             <AFHPushAlerts />
           </div>
 

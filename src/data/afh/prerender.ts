@@ -20,6 +20,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { listingsForFacility } from "../afhAddressMatch";
 import { afhListings, formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
+import { directoryNextSteps } from "./nextSteps";
 import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "./inspectionRecord";
 
 /* ------------------------------------------------------------------ */
@@ -240,6 +241,21 @@ export function citySummarySentence(
   );
 }
 
+/** The same "Where to go next" links as AFHDirectoryNextSteps.tsx, for the static HTML. */
+function nextStepsHtml(city: string): string {
+  return (
+    h2("Where to go next") +
+    directoryNextSteps(city)
+      .map(
+        (g) =>
+          `<h3 style="font-size:18px;margin:16px 0 8px">${esc(g.heading)}</h3><ul style="padding-left:20px;margin:0 0 12px">` +
+          g.links.map((l) => `<li style="margin:0 0 8px">${a(l.href.replace(/#.*$/, ""), l.label)}: ${esc(l.note)}</li>`).join("") +
+          `</ul>`,
+      )
+      .join("")
+  );
+}
+
 function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (typeof FILTERS)[number]): PrerenderedRoute {
   const { city, citySlug } = entry;
   const shown = filter ? facilities.filter(filter.matches) : facilities;
@@ -299,6 +315,7 @@ function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (
 
   parts.push(h2(`${shown.length} ${plural(shown.length, "home", "homes")}${filter ? ` of ${entry.facilityCount}` : ""}`));
   parts.push(`<ul style="list-style:none;padding:0;margin:0">${shown.map(facilityRow).join("")}</ul>`);
+  parts.push(nextStepsHtml(city));
   parts.push(h2("About this data"));
   parts.push(sourceNote(s.retrievedAt));
   parts.push(ld(itemList), ld(crumbs), WRAP_CLOSE);
@@ -398,6 +415,7 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility, cityHomes: Facili
         `</ul>`,
     );
   }
+  parts.push(nextStepsHtml(ad.city));
   parts.push(p(a(`/afh-club/homes/${citySlug}`, `All ${entry.facilityCount} licensed adult family homes in ${ad.city} →`)));
   parts.push(h2("About this data"));
   parts.push(sourceNote(f.retrievedAt));

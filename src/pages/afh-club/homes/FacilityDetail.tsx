@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import AFHDirectoryNextSteps from "@/components/AFHDirectoryNextSteps";
 import { CONTRACT_LABELS, SPECIALTY_LABELS, type AFHFacility } from "@/data/afh/types";
 import { getCityIndexEntry, loadCity } from "@/data/afh/directory";
 import { listingsForFacility } from "@/data/afhAddressMatch";
@@ -281,6 +282,8 @@ const FacilityDetail = () => {
                   </ul>
                 </div>
               )}
+
+              <AFHDirectoryNextSteps city={a.city} style={{ marginTop: 40 }} />
 
               <p className="mt-6 text-[17px]">
                 <Link
