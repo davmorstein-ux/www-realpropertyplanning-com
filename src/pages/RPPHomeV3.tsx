@@ -822,6 +822,13 @@ const RPPHomeV3 = () => {
             {/* ── Ask a question (Oct 8, 2026): answers from the guides themselves ── */}
             <div style={{ margin: "0 0 4.5rem" }}>
               <AskBox />
+              {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
+              <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "18px auto 0", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 19, lineHeight: 1.5, color: "#1c1917" }}>
+                Not sure what to ask?{" "}
+                <Link to="/my-plan" className="rpp-heading-link" style={{ color: "#1B3A6B", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3, fontSize: 19 }}>
+                  Get a free step-by-step plan for your situation →
+                </Link>
+              </p>
             </div>
 
             {/* ── Trust bar: the numbers, once, in one row ─────────── */}

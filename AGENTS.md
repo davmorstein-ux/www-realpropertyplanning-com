@@ -41,3 +41,8 @@ npx tsc --noEmit -p tsconfig.app.json
 - Web Push is hand-written on Web Crypto (`_shared/webpush.ts`); the npm `web-push` package needs Node ECDH that Deno lacks. Tests decrypt its output independently.
 - Keys: public key in `src/lib/pushAlerts.ts` and `supabase/functions/_shared/vapid.ts` (must match); private key only in the Supabase secret `VAPID_PRIVATE_KEY`. Replacing the pair cancels every subscription.
 - More than 12 changes in one publish are saved without sending (treated as a data update). Adding a past sale for the sold page sends nothing.
+
+## My Real Property Plan (/my-plan, Oct 18, 2026)
+- Questions, rules, wording and every link: `src/data/myPlan.ts` only; `src/pages/MyPlan.tsx` just renders. `src/test/myPlan.test.ts` builds every answer combination and fails on any link that isn't a live route or that redirects.
+- No AI, never gated (owner's decisions). Answers live in the URL fragment only; never send them to analytics, MailerLite or anywhere (care and Medicaid answers). Family side only; AFH buyers go to AFH Club.
+- Newsletter offers after results: `src/components/ResultSignup.tsx` (care-cost and remodel pages). Keep source tags generic (no care type).

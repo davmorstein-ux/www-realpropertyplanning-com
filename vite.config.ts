@@ -1173,12 +1173,24 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "A point many families miss — Avoiding probate is not the same as protecting the house. Washington can recover the cost of Medicaid long-term care received at 55 or older from the estate, including a house passed by a transfer on death deed (RCW 43.20B.080).",
     ],
   },
+  "/my-plan": {
+    title: "My Real Property Plan: a Free Step-by-Step Plan for Washington Families | Real Property Planning",
+    description: "Answer a few questions about an inherited house or a parent's housing and get a free, step-by-step plan built from Washington guides. No email needed. Print it or save the link.",
+    h1: "My Real Property Plan",
+    quickAnswerQ: "Where do I start with an inherited house or a parent's housing in Washington?",
+    quickAnswerA: "With an inherited house, start with who has authority to act (the deed and any will or trust decide it), then protect the house, keep the mortgage, taxes and insurance paid, and find out what it is worth before deciding to sell, keep or rent. With a parent's housing, check that a durable power of attorney covers real estate, compare what each option costs, learn how Medicaid treats the home if it may be needed, and plan any move and sale together. My Real Property Plan turns your answers into a step-by-step plan with the Washington guide for each step.",
+    intro: "A free planning tool for Washington families. Choose a situation (a parent has died and there is a house, or helping a parent with housing or care), answer four to six questions, and get a numbered plan built from the site's own guides. No email is needed; the plan can be printed or saved as a link, and the answers are never sent anywhere.",
+    sections: [
+      "Inherited house — Authority first (executor, heir, trustee, or no probate needed), then protecting the house, the bills, the value, the decision to sell, keep or rent, updates before a sale, taxes on a sale, probate deadlines and costs, and the professionals to call.",
+      "A parent's housing — Where your parent is now, whether someone can sign for them, what each option costs, paying for care (savings and the house, or Medicaid), making the house work for staying or planning the move and sale, and what happens to the house later.",
+    ],
+  },
   "/calculators": {
     title: "Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning",
-    description: "All of Real Property Planning's free calculators in one place. For King County homeowners: what a remodel is worth. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",
+    description: "All of Real Property Planning's free calculators in one place. For King, Snohomish and Pierce County homeowners: what a remodel is worth. For Washington families: what care costs by care type, and adult family home costs by city and county. For adult family home buyers, owners and investors: property score, ROI, valuation and financing.",
     h1: "Calculators",
     quickAnswerQ: "What calculators does Real Property Planning offer?",
-    quickAnswerA: "Twelve free calculators in three groups. For King County homeowners, What's My Remodel Worth?, which estimates what a remodel adds to a house's value. For families, six cost-of-care calculators, one each for memory care, independent living, in-home care, nursing homes, assisted living, and adult family homes. For people buying, owning or investing in a Washington adult family home, five tools: the AFH Property Score, an ROI calculator, a valuation estimator, an occupancy and financing calculator, and a lookup of costs by city and county. None asks for contact details.",
+    quickAnswerA: "Twelve free calculators in three groups. For King, Snohomish and Pierce County homeowners, What's My Remodel Worth?, which estimates what a remodel adds to a house's value. For families, six cost-of-care calculators, one each for memory care, independent living, in-home care, nursing homes, assisted living, and adult family homes, plus a lookup of adult family home costs by city and county. For people buying, owning or investing in a Washington adult family home, four tools: the AFH Property Score, an ROI calculator, a valuation estimator, and an occupancy and financing calculator. None asks for contact details.",
     intro: "Every calculator on the site, grouped by who it is for. Families choosing care and people buying or running an adult family home have different questions, so the two groups are kept separate, and each links on to its own section.",
   },
   [REMODEL_PAGE.PATH]: {

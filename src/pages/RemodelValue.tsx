@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import IntentCTA from "@/components/IntentCTA";
+import ResultSignup from "@/components/ResultSignup";
 import AuthorByline from "@/components/AuthorByline";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { REMODEL_FAQS, REMODEL_PAGE as P } from "@/data/remodelPage";
@@ -690,6 +691,8 @@ export default function RemodelValue() {
                       An automated estimate from public records, not an appraisal or a market analysis. <strong>Likely range:</strong> tested on sales it had not seen, 6 in 10 sold within a range this wide around its estimate; half within 8% and 88% within 20%. It cannot see layout, workmanship, unpermitted work, or anything the county's record misses.{" "}
                       <a href="#how-it-works" style={{ color: NAVY, fontWeight: 700 }}>How it works</a>
                     </p>
+                    {/* Newsletter right after the result (Oct 18, 2026 audit). */}
+                    <ResultSignup kind="remodel" />
                   </>
                 )}
               </div>

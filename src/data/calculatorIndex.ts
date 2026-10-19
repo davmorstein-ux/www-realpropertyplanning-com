@@ -46,9 +46,17 @@ export const AFH_CALCULATORS: CalculatorEntry[] = [
     title: "Occupancy & Financing Calculator",
     blurb: "Whether a buyer can get the loan at a given price and number of residents, and what each empty bed does to the lender's answer.",
   },
+];
+
+/**
+ * Family-side calculators beyond the per-care-type set (Oct 18, 2026). The AFH
+ * cost lookup is for families budgeting by city or county, so it belongs here,
+ * not in AFH_CALCULATORS (standing rule, Sept 2026: family tools stay off AFH Club).
+ */
+export const FAMILY_EXTRA_CALCULATORS: CalculatorEntry[] = [
   {
-    href: "/adult-family-home-costs", // was /afh-club/cost-by-location, which redirects here
-    title: "AFH Cost by City & County",
+    href: "/adult-family-home-costs",
+    title: "Adult Family Home Costs by City & County",
     blurb: "Medicaid daily rates and private-pay ranges for adult family homes anywhere in Washington.",
   },
 ];
@@ -65,7 +73,7 @@ export const HOME_CALCULATORS: CalculatorEntry[] = [
 /** Family-side calculators, one per care type. */
 export const FAMILY_CALCULATOR_HREFS: string[] = CARE_CALCULATORS.map((c) => `/cost-of-care-calculator/${c.slug}`);
 
-export const CALCULATOR_COUNT = HOME_CALCULATORS.length + AFH_CALCULATORS.length + CARE_CALCULATORS.length;
+export const CALCULATOR_COUNT = HOME_CALCULATORS.length + AFH_CALCULATORS.length + CARE_CALCULATORS.length + FAMILY_EXTRA_CALCULATORS.length;
 
 /** The homepage says "10+". This is the floor that claim depends on. */
 export const HOMEPAGE_CALCULATOR_CLAIM = 10;

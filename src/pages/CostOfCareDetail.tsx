@@ -11,6 +11,7 @@ import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
 import { findCareCalculator, careTypeFor } from "@/lib/careCalculators";
 import IntentCTA from "@/components/IntentCTA";
+import ResultSignup from "@/components/ResultSignup";
 
 /**
  * One calculator page per housing option, at
@@ -119,6 +120,8 @@ const CostOfCareDetail = () => {
               <div className="rpp-calcpage-calc">
                 <WhyIBuiltThis note={costOfCareNote(option.slug)} accent={option.color} style={{ marginBottom: 28 }} />
                 <CostOfCareEmbed careTypeId={option.careTypeId} />
+                {/* Checklist offer right after the result (Oct 18, 2026 audit). */}
+                <ResultSignup kind="care" />
               </div>
 
               <section aria-label="Other cost of care calculators">

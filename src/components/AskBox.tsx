@@ -45,7 +45,9 @@ const loadData = () => {
 
 const EXAMPLES = [
   "Can I sell my mother's house with power of attorney if she has dementia?",
-  "What is the license fee for an adult family home?",
+  /* Family-side examples only (Oct 18, 2026): AFH Club passes its own. The AFH
+     licence-fee example that sat here belonged to AFH Club, not the family homepage. */
+  "Should I fix up an inherited house before selling it?",
   "How long does probate take in Washington?",
 ];
 

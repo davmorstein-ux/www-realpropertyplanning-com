@@ -155,6 +155,7 @@ const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEsta
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
 const FamilyHomePlanning = lazy(() => import("./pages/FamilyHomePlanning"));
+const MyPlan = lazy(() => import("./pages/MyPlan"));
 const Newsletter = lazy(() => import("./pages/Newsletter"));
 const RemodelValue = lazy(() => import("./pages/RemodelValue"));
 const QuestionLibrary = lazy(() => import("./pages/QuestionLibrary"));
@@ -494,6 +495,7 @@ export const AppRoutes = () => (
       {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
       <Route path="/calculators" element={<Calculators />} />
       <Route path="/family-home-planning" element={<FamilyHomePlanning />} />
+      <Route path="/my-plan" element={<MyPlan />} />
       <Route path="/newsletter" element={<Newsletter />} />
       {/* What's My Remodel Worth? (Oct 13, 2026): King County remodel value calculator. */}
       <Route path="/whats-my-remodel-worth" element={<RemodelValue />} />

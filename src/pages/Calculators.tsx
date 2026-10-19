@@ -3,7 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
-import { AFH_CALCULATORS, CALCULATOR_COUNT, HOME_CALCULATORS } from "@/data/calculatorIndex";
+import { AFH_CALCULATORS, CALCULATOR_COUNT, FAMILY_EXTRA_CALCULATORS, HOME_CALCULATORS } from "@/data/calculatorIndex";
 import { CARE_CALCULATORS } from "@/lib/careCalculators";
 
 /**
@@ -52,7 +52,7 @@ const Calculators = () => (
   <>
     <SEOHead
       title="Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning"
-      description={`All ${CALCULATOR_COUNT} free calculators in one place. For King County homeowners: what a remodel is worth. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.`}
+      description={`All ${CALCULATOR_COUNT} free calculators in one place. For King, Snohomish and Pierce County homeowners: what a remodel is worth. For Washington families: what care costs by care type, and adult family home costs by city and county. For adult family home buyers, owners and investors: property score, ROI, valuation and financing.`}
       canonical="https://realpropertyplanning.com/calculators"
     />
     <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
@@ -98,6 +98,11 @@ const Calculators = () => (
           <Link to="/cost-of-care-calculator" className="rpp-calcs-more bg-transparent" style={{ color: "#0f5f57" }}>
             Compare all care options side by side
           </Link>
+          {FAMILY_EXTRA_CALCULATORS.map((c) => (
+            <p key={c.href} className="rpp-calcs-p" style={{ fontFamily: FONT, color: INK, paddingTop: 14 }}>
+              <Link to={c.href} style={{ color: "#0f5f57", fontWeight: 700, textDecoration: "underline" }}>{c.title}</Link>: {c.blurb}
+            </p>
+          ))}
           <p className="rpp-calcs-p" style={{ fontFamily: FONT, color: INK, paddingTop: 14 }}>
             Work with families? <Link to="/calculators/embed" style={{ color: "#0f5f57", fontWeight: 700, textDecoration: "underline" }}>Put the cost of care calculator on your own website</Link>, free.
           </p>
