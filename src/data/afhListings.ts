@@ -588,7 +588,7 @@ export const afhListings: AFHListing[] = [
     bathDetail: "3 full",
     sqft: "1,764",
     price: "$1,075,000",
-    photo: null,
+    photo: "/listing-photos/2540385_Monroe.webp",
     broker: "Zora Brzac",
     brokerage: "HomeSmart Real Estate Assoc",
     listingContactPhone: "(425) 381-7911",
