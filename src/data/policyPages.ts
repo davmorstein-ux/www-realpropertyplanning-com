@@ -142,7 +142,7 @@ export const POLICY_PAGES: PolicyPage[] = [
       {
         heading: "Private-pay estimates",
         paragraphs: [
-          "Private-pay adult family home prices are not published by any agency, and there is no public dataset of them. The ranges shown for King, Snohomish, Pierce, Spokane, Clark and Thurston counties are working estimates from the featured broker and appraiser's experience with operating homes, and they are labeled as estimates with a review date. Other counties show no private-pay estimate until there is enough information to publish one honestly.",
+          "Private-pay adult family home prices are not published by any agency, and there is no public dataset of them. The ranges shown for King, Snohomish, Pierce, Spokane, Clark, Thurston and Kitsap counties are working estimates from the featured broker and appraiser's experience with operating homes, and they are labeled as estimates with a review date. Other counties show no private-pay estimate until there is enough information to publish one honestly.",
         ],
       },
       {

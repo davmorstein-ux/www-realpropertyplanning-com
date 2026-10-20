@@ -30,6 +30,7 @@ export type PrivatePayMarket =
   | "spokane"
   | "clark"
   | "thurston"
+  | "kitsap"
   | "other";
 
 export interface PrivatePayTier {
@@ -79,14 +80,14 @@ const T = {
 } as const;
 
 /** Three care levels (basic, moderate, high acuity / memory care): the format David
- *  used for the Oct 19, 2026 review of Spokane, Clark and Thurston. */
+ *  used for the Oct 19, 2026 review of Spokane, Clark, Thurston and Kitsap. */
 const three = (basic: [number, number], typical: [number, number], acuity: [number, number]): PrivatePayTier[] => [
   { ...T.basic, low: basic[0], high: basic[1] },
   { ...T.typical, low: typical[0], high: typical[1] },
   { ...T.acuityMemory, low: acuity[0], high: acuity[1], openEnded: true },
 ];
 
-/** Second review: Spokane, Clark and Thurston counties, confirmed by David Oct 19, 2026. */
+/** Second review: Spokane, Clark, Thurston and Kitsap counties, confirmed by David Oct 19, 2026. */
 const REVIEWED_OCT = "2026-10-19";
 
 const four = (
@@ -232,6 +233,17 @@ export const PRIVATE_PAY_BANDS: PrivatePayBand[] = [
     low: 6000,
     high: 8000,
     tiers: three([5000, 6000], [6000, 8000], [8000, 10000]),
+    confirmed: true,
+    reviewed: REVIEWED_OCT,
+  },
+  {
+    market: "kitsap",
+    label: "Kitsap County",
+    county: "Kitsap",
+    counties: ["Kitsap"],
+    low: 4500,
+    high: 6000,
+    tiers: three([3500, 4500], [4500, 6000], [6000, 8500]),
     confirmed: true,
     reviewed: REVIEWED_OCT,
   },
