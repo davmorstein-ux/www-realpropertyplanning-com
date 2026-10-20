@@ -107,7 +107,8 @@ export const initSiteTracking = (): void => {
           return;
         }
         const tile = a.closest("[data-home-tile]");
-        if (tile) send("home_tile_click", { tile: tile.getAttribute("data-home-tile") || "unknown", tile_path: href });
+        // Extra clicks while the double pulse plays are ignored (PulseNavigator), so count them once.
+        if (tile && !tile.classList.contains("rpp-pulsing")) send("home_tile_click", { tile: tile.getAttribute("data-home-tile") || "unknown", tile_path: href });
         try {
           const url = new URL(href, window.location.origin);
           if (url.origin === window.location.origin && /^\/contact\/?$/.test(url.pathname) && path() !== "/contact") {

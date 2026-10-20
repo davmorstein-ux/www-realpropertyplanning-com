@@ -5735,3 +5735,33 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
   }
   main .rpp-m2 .rpp-m2-titlebox.rpp-m2-titlebox { min-height: 0 !important; }
 }
+
+/* ═══════════════════════════════════════════════
+   DOUBLE PULSE (Oct 20, 2026, David's spec)
+   Two gentle heartbeats when a tile or button is clicked, before the page
+   changes. THE ONE PLACE TO TUNE IT: the three variables below. The script
+   (src/components/PulseNavigator.tsx) reads --rpp-pulse-duration from here,
+   so the navigation delay always matches the animation.
+   Opt an element in with the attribute data-pulse. Scale only (transform):
+   no colour, glow or layout change, so neighbours never move.
+═══════════════════════════════════════════════ */
+:root {
+  --rpp-pulse-duration: 900ms;
+  --rpp-pulse-scale: 1.03;
+  --rpp-pulse-easing: ease-in-out;
+}
+@keyframes rpp-double-pulse {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(var(--rpp-pulse-scale)); }
+  50%  { transform: scale(1); }
+  75%  { transform: scale(var(--rpp-pulse-scale)); }
+  100% { transform: scale(1); }
+}
+html body [data-pulse].rpp-pulsing {
+  animation: rpp-double-pulse var(--rpp-pulse-duration) var(--rpp-pulse-easing) 1 both !important;
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body [data-pulse].rpp-pulsing { animation: none !important; }
+}

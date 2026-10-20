@@ -4,6 +4,7 @@ import { lazy } from "@/lib/chunkRecovery";
 import { BrowserRouter, StaticRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import ScrollToTop from "./components/ScrollToTop";
+import PulseNavigator from "./components/PulseNavigator";
 import RPPHomeV3 from "./pages/RPPHomeV3";
 import LanguageRoute from "./components/LanguageRoute";
 
@@ -800,6 +801,7 @@ const App = ({ location }: { location?: string } = {}) => (
     <Toasters />
     <Router location={location}>
       <ScrollToTop />
+      <PulseNavigator />
 
       {/* SiteChatWidget removed. It was not a chat widget — handleSubmit
           cleared the input and showed a confirmation, and the component made

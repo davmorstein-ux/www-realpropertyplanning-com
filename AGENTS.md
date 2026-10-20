@@ -42,6 +42,13 @@ npx tsc --noEmit -p tsconfig.app.json
 - Keys: public key in `src/lib/pushAlerts.ts` and `supabase/functions/_shared/vapid.ts` (must match); private key only in the Supabase secret `VAPID_PRIVATE_KEY`. Replacing the pair cancels every subscription.
 - More than 12 changes in one publish are saved without sending (treated as a data update). Adding a past sale for the sold page sends nothing.
 
+## Double-pulse click effect (Oct 20, 2026)
+
+- Add `data-pulse` to a tile or button and it gives two gentle heartbeats when clicked; internal links navigate after the pulse. One listener in `src/components/PulseNavigator.tsx` does it sitewide; never copy animation code into a component.
+- Timing and scale are set ONLY in `src/index.css` (`--rpp-pulse-duration` 900ms, `--rpp-pulse-scale` 1.03, `--rpp-pulse-easing`). The script reads the duration from there.
+- Not for text links, form fields, dropdowns, checkboxes or small controls. Reduced-motion visitors get no animation and no delay. Status Oct 20: on the four homepage tiles only, awaiting David's approval before it goes sitewide.
+- The site never speaks as "we" or "I" (David, Oct 20, 2026); see the wording rules before writing copy.
+
 ## My Real Property Plan (/my-plan, Oct 18, 2026)
 - Questions, rules, wording and every link: `src/data/myPlan.ts` only; `src/pages/MyPlan.tsx` just renders. `src/test/myPlan.test.ts` builds every answer combination and fails on any link that isn't a live route or that redirects.
 - No AI, never gated (owner's decisions). Answers live in the URL fragment only; never send them to analytics, MailerLite or anywhere (care and Medicaid answers). Family side only; AFH buyers go to AFH Club.
