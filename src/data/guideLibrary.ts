@@ -198,7 +198,6 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "Frequently Asked Questions About Probate Real Estate", href: "/faq" },
       { title: "Gray Divorce and Your Home — What Washington Couples Need to Know", href: "/gray-divorce" },
       { title: "How the Process Works", href: "/how-the-process-works" },
-      { title: "What Should We Do First?", href: "/what-should-we-do-first" },
     ],
   },
 ];

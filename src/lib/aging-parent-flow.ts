@@ -307,7 +307,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "HIPAA Authorization", body: "Allows healthcare providers to share medical information with named family members. Without this, providers may refuse to discuss your parent's condition with you." },
               { heading: "If documents aren't in place", body: "Act now, while your parent still has capacity to sign. An elder law attorney can prepare these documents quickly — often within days. If your parent has already lost capacity, guardianship or conservatorship through the courts may be necessary." },
             ],
-            closing: "Next step: Real Property Planning does not refer clients to attorneys; choose a Washington-licensed elder law attorney and confirm their license with the Washington State Bar Association (wsba.org).",
+            closing: "Next step: the site doesn't make referrals. The people listed below are ones the site's founder has met in person. Choose any Washington-licensed elder law attorney and check their license with the Washington State Bar Association (wsba.org).",
           },
         },
         {
@@ -348,7 +348,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Will and Trust", body: "A will directs how assets are distributed after death. A revocable living trust allows assets — including real property — to pass to beneficiaries without going through probate." },
               { heading: "What to do", body: "Schedule an appointment with an elder law or estate planning attorney. Many can prepare a basic package of documents — POA, healthcare directive, and will — for a reasonable flat fee. Don't rely on online forms for documents this important." },
             ],
-            closing: "Next step: Real Property Planning does not refer clients to attorneys; choose a Washington-licensed elder law attorney and confirm their license with the Washington State Bar Association (wsba.org).",
+            closing: "Next step: the site doesn't make referrals. The people listed below are ones the site's founder has met in person. Choose any Washington-licensed elder law attorney and check their license with the Washington State Bar Association (wsba.org).",
           },
         },
         {
@@ -362,7 +362,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Washington-specific considerations", body: "Washington is a community property state — how assets are titled matters for surviving spouses. Washington has its own estate tax, with an exclusion of $3,000,000 for deaths from July 1, 2026, per the Department of Revenue. Real property in the owner's name alone typically goes through probate unless it passes by a recorded transfer on death deed, joint tenancy with right of survivorship, a community property agreement, or a funded trust." },
               { heading: "When to involve an attorney", body: "Always. Estate planning documents are legal instruments and errors can cause real harm. An elder law or estate planning attorney in Washington will know the state-specific rules and can prepare documents that hold up." },
             ],
-            closing: "Next step: Real Property Planning does not refer clients to attorneys; choose a Washington-licensed estate planning attorney and confirm their license with the Washington State Bar Association (wsba.org).",
+            closing: "Next step: the site doesn't make referrals. The people listed below are ones the site's founder has met in person. Choose any Washington-licensed estate planning attorney and check their license with the Washington State Bar Association (wsba.org).",
           },
         },
         {

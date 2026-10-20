@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -7,6 +6,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import JourneyShortcuts from "@/components/JourneyShortcuts";
 
 const tiles = [
   {
@@ -71,6 +71,14 @@ const faqs = [
       "Understanding a home's current value is often a useful part of early planning, particularly for tax and estate purposes. An appraisal from a Washington State certified appraiser provides an independent, defensible figure to plan around.",
   },
   {
+    /* Moved here Oct 20, 2026 from the retired /what-should-we-do-first page
+       (three of its FAQs, same wording), so question PA-053 in the question
+       library still restates a live page. */
+    question: "How do we avoid costly mistakes with the house?",
+    answer:
+      "The most expensive mistakes come from acting before authority is confirmed, guessing at value, or making large repairs without input. Slow down and assemble the right team first — usually an attorney, a real estate professional, and often a CPA; senior situations may add a housing advisor and move manager. Families typically choose to sell, keep, rent, or transfer the home. The right answer depends on care costs, family goals, taxes, and timing.",
+  },
+  {
     question: "What actually happens if a family waits until a crisis hits?",
     answer:
       "Typically, less time to weigh options, more pressure to make fast decisions, and a higher chance of family disagreement — often while also navigating an emotional health event. Planning ahead doesn't remove the difficulty of these situations, but it gives families more room to think clearly when it matters most.",
@@ -111,15 +119,10 @@ const PlanningBeforeACrisis = () => {
               </h2>
             </div>
 
-            <p className="max-w-3xl mx-auto text-center text-navy/90 text-base leading-relaxed mb-8">
-              Not sure where to start?{" "}
-              <Link
-                to="/what-should-we-do-first"
-                className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
-              >
-                See the guided first steps.
-              </Link>
-            </p>
+            {/* Was "See the guided first steps" → /what-should-we-do-first, a
+                second copy of the homepage tiles with no planning-ahead option
+                (retired Oct 20, 2026). */}
+            <JourneyShortcuts plan="choose" questions="plan-ahead" />
 
             <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
           </div>

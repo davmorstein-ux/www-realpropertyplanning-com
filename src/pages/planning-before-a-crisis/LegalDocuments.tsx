@@ -54,7 +54,7 @@ const LegalDocuments = () => (
 
     <SubH2>Finding the Right Estate Planning Attorney</SubH2>
     <P>
-      The right professional to help with all four of these documents is a Washington State estate planning attorney. Real Property Planning does not refer clients to attorneys; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).
+      The right professional to help with all four of these documents is a Washington State estate planning attorney. The site doesn't make referrals. The people listed below are ones the site's founder has met in person. Choose any Washington-licensed attorney and check their license with the Washington State Bar Association (wsba.org).
     </P>
     <P>
       Once the legal documents are in place, the real estate side of planning becomes much smoother — because the right people have the authority to act when the time comes.

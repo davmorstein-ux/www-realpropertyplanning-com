@@ -42,4 +42,34 @@ describe("topic professionals", () => {
       if (keys.includes("realEstate")) expect(p, p).toMatch(/property|managing-the-home/);
     }
   });
+
+  /* Oct 20, 2026: "does not refer clients to attorneys" sat directly above a
+     box listing an attorney on four pages. Where an attorney is shown, the page
+     uses the wording that fits a listing ("The site doesn't make referrals.
+     The people listed below are ones the site's founder has met in person").
+     Pages that show no attorney keep the old line. */
+  it("a page that lists an attorney never says the site does not refer clients to attorneys", () => {
+    const ATTORNEY_KEYS = ["elderLaw", "familyLaw"];
+    const flow = readFileSync(path.resolve(__dirname, "../lib/aging-parent-flow.ts"), "utf8");
+    const pascal = (slug: string) => slug.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join("");
+    let checked = 0;
+    for (const [p, keys] of Object.entries(TOPIC_PROFESSIONALS)) {
+      if (!keys.some((k) => ATTORNEY_KEYS.includes(k))) continue;
+      let text: string;
+      if (p.startsWith("/helping-an-aging-parent/")) {
+        const start = flow.indexOf(`path: "${p}"`);
+        expect(start, p).toBeGreaterThan(-1);
+        const next = flow.indexOf('path: "', start + 10);
+        text = flow.slice(start, next === -1 ? undefined : next);
+      } else if (p.startsWith("/planning-before-a-crisis/")) {
+        const file = path.resolve(__dirname, `../pages/planning-before-a-crisis/${pascal(p.split("/").pop()!)}.tsx`);
+        text = readFileSync(file, "utf8");
+      } else {
+        continue;
+      }
+      expect(text, p).not.toMatch(/does not refer clients to attorneys/);
+      checked++;
+    }
+    expect(checked).toBeGreaterThanOrEqual(8);
+  });
 });

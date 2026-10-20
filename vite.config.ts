@@ -809,12 +809,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Estate, Probate & Inherited Property — Where to Begin",
     intro: "A guided journey for executors, trustees, and heirs handling probate, estate settlement, and inherited real estate — step by step.",
   },
-  "/what-should-we-do-first": {
-    title: "What Should We Do First? — Guided First Steps | Real Property Planning",
-    description: "A calm starting point for families facing housing, estate, or transition decisions. Plain-language first steps before any major move.",
-    h1: "What Should We Do First?",
-    intro: "When several decisions feel urgent at once, this guided journey helps families take a calm, ordered first step — before making any big move.",
-  },
   "/what-to-do-with-the-house": {
     title: "What To Do With the House — Sell, Keep, or Prepare | Real Property Planning",
     description: "A guided roadmap for families deciding what to do with a family or inherited home — sell, keep, repair, or prepare for transition.",

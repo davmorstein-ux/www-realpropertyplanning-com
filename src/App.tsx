@@ -19,7 +19,6 @@ const EPIPPropertyValue = lazy(() => import("./pages/estate-probate-inherited-pr
 const EPIPWhatToDo = lazy(() => import("./pages/estate-probate-inherited-property/WhatToDoWithTheProperty"));
 const EPIPPreparing = lazy(() => import("./pages/estate-probate-inherited-property/PreparingTheProperty"));
 const EPIPProfessionalTeam = lazy(() => import("./pages/estate-probate-inherited-property/ProfessionalTeam"));
-const WhatShouldWeDoFirst = lazy(() => import("./pages/WhatShouldWeDoFirst"));
 const WhatToDoWithTheHouse = lazy(() => import("./pages/WhatToDoWithTheHouse"));
 const UnderstandingHousingCareOptions = lazy(() => import("./pages/UnderstandingHousingCareOptions"));
 const UnderstandingSeniorTransitions = lazy(() => import("./pages/UnderstandingSeniorTransitions"));
@@ -360,7 +359,6 @@ export const AppRoutes = () => (
       <Route path="/estate-probate-inherited-property/what-to-do-with-the-property" element={<EPIPWhatToDo />} />
       <Route path="/estate-probate-inherited-property/preparing-the-property" element={<EPIPPreparing />} />
       <Route path="/estate-probate-inherited-property/professional-team" element={<EPIPProfessionalTeam />} />
-      <Route path="/what-should-we-do-first" element={<WhatShouldWeDoFirst />} />
       <Route path="/what-to-do-with-the-house" element={<WhatToDoWithTheHouse />} />
       <Route path="/understanding-housing-care-options" element={<UnderstandingHousingCareOptions />} />
       <Route path="/understanding-senior-transitions" element={<UnderstandingSeniorTransitions />} />

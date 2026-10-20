@@ -1485,10 +1485,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/what-should-we-do-first",
-    links: ["/contact"],
-  },
-  {
     path: "/what-to-do-with-the-house",
     links: [],
   },

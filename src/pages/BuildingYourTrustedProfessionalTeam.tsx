@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -313,6 +314,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
               Reach out and we'll help you figure out the right first step.
             </Link>
           </p>
+          <JourneyShortcuts lead="Want a quick answer first?" questions="professional" style={{ marginBottom: "1.5rem" }} />
           <RoadmapDropdown
             topics={[
               {

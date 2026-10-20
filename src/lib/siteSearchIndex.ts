@@ -252,7 +252,6 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/wahkiakum-county", label: "Wahkiakum County" },
   { path: "/resources/washington-executors-10-step-checklist", label: "Washington Executors Checklist" },
   { path: "/guides/what-executors-should-do", label: "What Executors Should Do" },
-  { path: "/what-should-we-do-first", label: "What Should We Do First" },
   { path: "/what-to-do-with-the-house", label: "What To Do With The House" },
   { path: "/whatcom-county", label: "Whatcom County" },
   {

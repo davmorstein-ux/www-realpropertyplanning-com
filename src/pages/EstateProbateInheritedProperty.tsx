@@ -11,6 +11,7 @@ import { articleSchema } from "@/lib/schema";
 import GuidanceGrid from "@/components/GuidanceGrid";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import IntentCTA from "@/components/IntentCTA";
+import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { Link } from "react-router-dom";
 
 /* Descriptions live here, not in the shared topic list, on purpose.
@@ -126,6 +127,7 @@ const EstateProbateInheritedProperty = () => {
                 .
               </p>
             </div>
+            <JourneyShortcuts plan="estate" questions="estate" />
 
             {/* Removed: "Not sure where to start? Reach out and we'll help you
                 figure out the right first step."

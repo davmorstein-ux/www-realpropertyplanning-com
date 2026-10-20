@@ -9,6 +9,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
 import NextQuestions from "@/components/NextQuestions";
 import MyPlanInvite from "@/components/MyPlanInvite";
+import JourneyShortcuts from "@/components/JourneyShortcuts";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import { professionalsForTopic } from "@/data/topicProfessionals";
 
@@ -109,6 +110,9 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                   </p>
                   <ChoiceGrid choices={node.children!} />
                   {isRoot && <MyPlanInvite situation="parent" style={{ marginTop: 40 }} />}
+                  {isRoot && (
+                    <JourneyShortcuts lead="Looking for a quick answer?" questions="aging-parent" style={{ margin: "28px auto 0" }} />
+                  )}
                 </>
               ) : node.content ? (
                 <>

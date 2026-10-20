@@ -289,6 +289,12 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/guides/estate-property-repairs-before-sale", to: "/guides/repairs-before-selling-probate-home-washington" },
   /* /senior-living/assisted-living-communities merged into /senior-living/assisted-living Oct 4, 2026 (the care-type page set keeps one assisted living page; its cost calculator moved over; Question Map step 8). */
   { from: "/senior-living/assisted-living-communities", to: "/senior-living/assisted-living" },
+  /* "What Should We Do First?" retired Oct 20, 2026 (David's go on the
+     visitor-journey review): a second copy of the homepage tiles with ten
+     options, two of them duplicates, and none for planning ahead, reached
+     only from the Plan Ahead hub's "Not sure where to start?". My Real
+     Property Plan answers that question; the hub now links there. */
+  { from: "/what-should-we-do-first", to: "/my-plan" },
 ];
 
 /** Where a path finally lands after redirects. Link to this, never to a retired

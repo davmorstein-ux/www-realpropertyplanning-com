@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import TopicProfessionals from "@/components/TopicProfessionals";
+import EstateReadNext from "@/components/EstateReadNext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -83,6 +84,7 @@ const EstateSubPageLayout = ({
             <article className="max-w-3xl mx-auto text-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
               {children}
               <TopicProfessionals path={canonicalPath} style={{ marginTop: 40 }} />
+              <EstateReadNext path={canonicalPath} style={{ marginTop: 32 }} />
             </article>
           </div>
         </section>

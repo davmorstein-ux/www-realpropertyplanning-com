@@ -25,6 +25,10 @@
  *                        which is only on ad landing pages (metaPixel.ts).
  *   planner_completed    the three questions on /family-home-planning were all
  *                        answered: page_path only, never the answers.
+ *   home_tile_click      one of the four homepage tiles under "What brings you
+ *                        here today?" (Oct 20, 2026): tile (planAhead |
+ *                        helpingParent | handlingEstate | needProfessional) and
+ *                        tile_path. Marked with data-home-tile in RPPHomeV3.tsx.
  *
  * WHAT IS NEVER COLLECTED: the visitor's name, email, phone number, what they type
  * into a calculator, or contact-form message text. The one typed text collected is
@@ -102,6 +106,8 @@ export const initSiteTracking = (): void => {
           }
           return;
         }
+        const tile = a.closest("[data-home-tile]");
+        if (tile) send("home_tile_click", { tile: tile.getAttribute("data-home-tile") || "unknown", tile_path: href });
         try {
           const url = new URL(href, window.location.origin);
           if (url.origin === window.location.origin && /^\/contact\/?$/.test(url.pathname) && path() !== "/contact") {
