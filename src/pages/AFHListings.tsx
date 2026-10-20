@@ -3,6 +3,7 @@ import AFHStepsBar from "@/components/AFHStepsBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { listingsPageMeta } from "@/data/afhListingsMeta";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
 import { liveListings, soldListings, AFH_TYPE_LABELS, type AFHListingType, type AFHMarketStatus } from "@/data/afhListings";
@@ -84,7 +85,8 @@ const VIEWS: Record<
 };
 
 const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
-  const copy = VIEWS[view];
+  // Title, description and heading: shared with the prerendered HTML (afhListingsMeta.ts).
+  const copy = { ...VIEWS[view], ...listingsPageMeta(view) };
   // Only listings currently on the market (active or pending); sold / expired records stay in the data file but never display here.
   const afhListings = liveListings();
   const [status, setStatus] = React.useState<"all" | AFHMarketStatus>("all");

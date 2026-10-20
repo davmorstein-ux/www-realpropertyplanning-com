@@ -10,6 +10,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { buildAfhDirectoryRoutes, loadAllFacilities } from "./src/data/afh/prerender";
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
+import { listingsPageMeta } from "./src/data/afhListingsMeta";
 import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
 import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { calculatorNoteForRoute, FOUNDER_SIGNATURE, WHY_HEADING } from "./src/data/calculatorNotes";
@@ -2079,11 +2080,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Legal Plans & Identity Protection",
   },
   "/afh-club/listings": {
-    title: "{{live}} Adult Family Homes for Sale in Washington State ({{cities}} cities) | AFH Club",
-    description: "{{live}} adult family homes for sale in Washington right now — {{active}} active and {{pending}} pending across {{cities}} cities — plus {{sold}} closed sales with prices. Licensed businesses, properties, and leases, independently researched from NWMLS, RMLS, BizBuySell and direct sources, with licensing status and $/bed.",
-    h1: "Adult Family Homes for Sale in Washington State",
+    // Title, description and h1 come from listingsPageMeta (shared with the live page).
+    ...listingsPageMeta("all"),
     afhInventory: {},
-    quickAnswerQ: "How many adult family homes are for sale in Washington right now?",
+    quickAnswerQ: "How many adult family homes (AFHs) are for sale in Washington right now?",
     quickAnswerA: "{{live}} at the moment — {{active}} active and {{pending}} pending across {{cities}} Washington cities, plus {{sold}} closed sales with prices. AFH Club maintains an independently researched directory of publicly marketed adult family home properties, businesses, and leases throughout Washington State, gathered from NWMLS, RMLS, BizBuySell, and direct-from-owner sources and regularly checked for status changes. It is organized in three groups: properties for sale (the real estate, whether licensed, formerly licensed, WABO-ready, or marketed for AFH use), operating AFH businesses for sale (the license history, residents, and contracts, sold with or without the building), and homes for lease to operators. Each listing shows its licensing status, whether the business conveys, the listing broker, and its source — NWMLS, RMLS, BizBuySell, or direct from the seller.",
     intro: "The DSHS license never transfers with a sale. Whatever is bought — house, business, or lease — the new operator qualifies for a license of their own through the Change of Ownership process. That is why each listing here carries a licensing-status label: an operating home with residents, a formerly licensed home, and a house that has merely passed the WABO checklist are three different purchases.",
     sections: [
@@ -2093,23 +2093,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/afh-club/listings/properties": {
-    title: "{{live}} Adult Family Home Properties for Sale in Washington | AFH Club",
-    description: "Houses currently for sale in Washington State that are licensed, formerly licensed, WABO-ready, or marketed as adult family home opportunities — with price, capacity, licensing status, and listing broker.",
-    h1: "Adult Family Home Properties for Sale",
+    ...listingsPageMeta("realEstate"),
     afhInventory: { type: "realEstate" },
     intro: "The real estate: houses that are operating adult family homes, formerly licensed, built to the WABO checklist, or marketed for AFH use across Western Washington and beyond. Every listing shows its licensing status and whether the operating business conveys with the sale. Buyers relicense through DSHS regardless.",
   },
   "/afh-club/listings/businesses": {
-    title: "{{live}} Adult Family Home Businesses for Sale in Washington | AFH Club",
-    description: "Operating adult family home businesses for sale in Washington State — the license history, residents, staff, and contracts — sold separately from, or together with, the real estate.",
-    h1: "Adult Family Home Businesses for Sale",
+    ...listingsPageMeta("business"),
     afhInventory: { type: "business" },
     intro: "The operation, not the house: an established adult family home business with residents in place, sold to a buyer who will qualify for their own DSHS license. Some include the real estate; most are paired with a lease or a separate property listing. Operating homes sold together with their real estate appear under Properties for sale.",
   },
   "/afh-club/listings/for-lease": {
-    title: "Adult Family Homes for Lease in Washington | AFH Club",
-    description: "Licensed and AFH-ready houses available for lease to adult family home operators in Washington State — monthly rent, term, and licensing status.",
-    h1: "Adult Family Homes for Lease",
+    ...listingsPageMeta("lease"),
     afhInventory: { type: "lease" },
     intro: "Houses available to lease for adult family home operation. Leasing lets an operator open without buying, and lets an owner keep the real estate while someone else runs the home. The lessee still holds their own DSHS license.",
   },
