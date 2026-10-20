@@ -36,8 +36,13 @@ export const MEDICAID_AND_THE_HOME = {
   PATH: "/long-term-care/medicaid-and-the-family-home",
   TITLE: "Medicaid and the Family Home in Washington",
   SHORT_TITLE: "Medicaid and the Family Home",
+  /** The search-result title (Oct 19, 2026). Search Console, Sept 20 – Oct 17:
+   *  position 4.9 but 1.7% click-through with the topic title above, so the
+   *  search title asks the question families type and the description answers
+   *  it in its first words. The page heading stays TITLE. */
+  SEO_TITLE: "Will Medicaid Take My Parent's House in Washington?",
   DESCRIPTION:
-    "What happens to a parent's house when they need Apple Health (Medicaid) for long-term care in Washington: when the home is protected, what changes if it sits empty or is sold, giving it to family, the spouse at home, and estate recovery after death.",
+    "Usually not while your parent is alive: Apple Health treats the home as exempt while they intend to return or a spouse lives there. What changes if it's sold, gifted, or after death.",
   PUBLISHED: "2026-10-04",
   REVIEWED: "2026-10-04",
   SHORT_ANSWER:

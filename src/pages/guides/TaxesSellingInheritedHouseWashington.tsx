@@ -15,6 +15,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import QuickAnswers from "@/components/QuickAnswers";
+import { TAXES_INHERITED_HOUSE as T } from "@/data/taxesInheritedHouse";
 
 const faqs = [
   { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis — meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington's capital gains tax does not apply to any sale of real estate (RCW 82.87.050), so a Washington house is not subject to it. Consult a tax professional for your specific situation." },
@@ -25,19 +26,19 @@ const faqs = [
 ];
 
 const jsonLd = articleSchema({
-  headline: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
-  description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
-  url: "/guides/taxes-selling-inherited-house-washington",
+  headline: T.TITLE,
+  description: T.DESCRIPTION,
+  url: T.PATH,
   datePublished: "2026-03-28",
-  dateModified: "2026-03-28",
+  dateModified: T.REVIEWED,
   about: ["Inherited property taxes", "Stepped-up basis", "Capital gains tax", "Washington estate tax", "Inherited house sale"],
 });
 
 const TaxesSellingInheritedHouseWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Taxes Do You Pay When Selling an Inherited House in Washington? | Real Property Planning"
-      description="Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State."
+      title={`${T.SEO_TITLE} | Real Property Planning`}
+      description={T.DESCRIPTION}
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -48,7 +49,7 @@ const TaxesSellingInheritedHouseWashington = () => (
     <main id="main-content">
       <ProbateStartHere />
 
-    <HeroBandTitle as="h1">What Taxes Do You Pay When Selling an Inherited House in Washington?</HeroBandTitle>
+    <HeroBandTitle as="h1">{T.TITLE}</HeroBandTitle>
 
         {/* Intro — moved out of the blue band so the band carries only the
             title. The text is the page's answer-style summary and is what
@@ -57,11 +58,35 @@ const TaxesSellingInheritedHouseWashington = () => (
         <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
+            {/* Answer first (Oct 19, 2026): the page sat at position 11.6 and opened
+                with two paragraphs about itself. Words: src/data/taxesInheritedHouse.ts. */}
+            <div className="taxes-answer" style={{ background: "#ffffff", border: "1px solid #d9d4cc", borderLeft: "5px solid #1B3A6B", borderRadius: 10, padding: "20px 22px", marginBottom: 24 }}>
+              <div role="heading" aria-level={2} style={{ fontSize: 22, fontWeight: 700, color: "#1B3A6B", margin: "0 0 8px" }}>
+                The short answer
+              </div>
+              <p style={{ fontSize: 18, lineHeight: 1.6, color: "#1c1917", margin: "0 0 14px" }}>{T.SHORT_ANSWER}</p>
+              <ul style={{ margin: 0, paddingLeft: 20, fontSize: 17, lineHeight: 1.55, color: "#1c1917" }}>
+                {T.POINTS.map((pt) => (
+                  <li key={pt.label} style={{ marginBottom: 8 }}>
+                    <strong>{pt.label}:</strong> {pt.text}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div role="heading" aria-level={2} style={{ fontSize: 21, fontWeight: 700, color: "#1c1917", margin: "0 0 10px" }}>
+              {T.EXAMPLE.heading}
+            </div>
+            <ol style={{ margin: "0 0 12px", paddingLeft: 22, fontSize: 18, lineHeight: 1.6, color: "#1c1917" }}>
+              {T.EXAMPLE.lines.map((l) => (
+                <li key={l} style={{ marginBottom: 6 }}>{l}</li>
+              ))}
+            </ol>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Written for heirs and families who need a plain-English overview of the federal and Washington State tax considerations involved in selling an inherited home. The short answer: it depends on timing, the property's value at the date of death, and how long you hold the property before selling. In many cases, the tax impact is smaller than people expect — thanks to what is called a "stepped-up basis."
+              {T.EXAMPLE.note}{" "}
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">Why the valuation matters</Link>.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              This guide explains the key tax concepts in plain language. It is not tax advice — always work with a qualified CPA or tax attorney for your specific situation.
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "16px" }}>
+              General information, not tax advice. Work with a CPA or tax attorney on your own situation.
             </p>
             </div>
           </div>

@@ -85,7 +85,7 @@ const Section = ({ bg, id, children }: { bg: string; id?: string; children: Reac
 const MedicaidAndTheHome = () => (
   <div className="ptx">
     <style dangerouslySetInnerHTML={{ __html: CSS }} />
-    <SEOHead title={`${TITLE} | Real Property Planning`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
+    <SEOHead title={`${MEDICAID_AND_THE_HOME.SEO_TITLE} | Real Property Planning`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },

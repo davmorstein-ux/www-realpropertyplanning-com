@@ -11,6 +11,7 @@ import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { buildAfhDirectoryRoutes, loadAllFacilities } from "./src/data/afh/prerender";
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
 import { listingsPageMeta } from "./src/data/afhListingsMeta";
+import { TAXES_INHERITED_HOUSE } from "./src/data/taxesInheritedHouse";
 import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
 import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { calculatorNoteForRoute, FOUNDER_SIGNATURE, WHY_HEADING } from "./src/data/calculatorNotes";
@@ -669,11 +670,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Can You Sell a House During Probate in Washington State?",
     intro: "Yes — once the executor has court-issued authority. How the process works, what to expect, and how to avoid common mistakes.",
   },
-  "/guides/taxes-selling-inherited-house-washington": {
-    title: "What Taxes Do You Pay When Selling an Inherited House in Washington? | Real Property Planning",
-    description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
-    h1: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
-    intro: "Capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+  [TAXES_INHERITED_HOUSE.PATH]: {
+    title: `${TAXES_INHERITED_HOUSE.SEO_TITLE} | Real Property Planning`,
+    description: TAXES_INHERITED_HOUSE.DESCRIPTION,
+    h1: TAXES_INHERITED_HOUSE.TITLE,
+    quickAnswerQ: "Do you pay tax when you sell an inherited house in Washington?",
+    quickAnswerA: TAXES_INHERITED_HOUSE.SHORT_ANSWER,
+    intro: TAXES_INHERITED_HOUSE.EXAMPLE.lines.join(" "),
   },
   [STAY_HOME.PATH]: {
     title: `${STAY_HOME.TITLE} | Real Property Planning`,
@@ -1785,7 +1788,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: SELL_PARENTS_HOUSE_DEMENTIA.PUBLISHED, dateModified: SELL_PARENTS_HOUSE_DEMENTIA.REVIEWED },
   },
   [MEDICAID_AND_THE_HOME.PATH]: {
-    title: `${MEDICAID_AND_THE_HOME.TITLE} | Real Property Planning`,
+    title: `${MEDICAID_AND_THE_HOME.SEO_TITLE} | Real Property Planning`,
     description: MEDICAID_AND_THE_HOME.DESCRIPTION,
     h1: MEDICAID_AND_THE_HOME.TITLE,
     quickAnswerQ: "What happens to my parent's house if they need Medicaid for long-term care in Washington?",
