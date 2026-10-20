@@ -246,8 +246,8 @@ const Privacy = () => {
               <h2>Contact</h2>
               <p>
                 Questions about this policy, or requests about your information, can be sent to{" "}
-                <a href="mailto:contact@realpropertyplanning.com">
-                  contact@realpropertyplanning.com
+                <a href="mailto:info@realpropertyplanning.com">
+                  info@realpropertyplanning.com
                 </a>
                 . Real estate brokerage services referenced on this site are provided by {FEATURED_BROKER.name}, a
                 licensed Washington real estate broker with {FEATURED_BROKER.brokerage}, and appraisal services by{" "}
