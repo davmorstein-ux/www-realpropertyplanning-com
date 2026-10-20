@@ -457,20 +457,20 @@
       "eyebrow": "Key Concept",
       "heading": "Why Washington Costs More Than the National Average",
       "paragraph1": "Washington State consistently ranks above the national median across nearly every category of senior care. Higher regional labor costs, a competitive caregiving job market, and higher costs of living in metropolitan areas all contribute to this gap.",
-      "paragraph2Before": "An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care — worth exploring through our",
+      "paragraph2Before": "An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care — worth exploring through",
       "afhClubLink": "AFH Club"
     }
   },
   "contactPage": {
     "seo": {
       "title": "Contact | Real Property Planning — WA Resource Hub",
-      "description": "Reach Real Property Planning, a free Washington State resource hub for elderly individuals, families, and professionals. Ask a question or join our network."
+      "description": "Reach Real Property Planning, a free Washington State resource hub for elderly individuals, families, and professionals. Ask a question or ask about joining the professional network."
     },
     "heroImageAlt": "Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact",
     "heroTitle": "Get Connected",
     "intro": {
       "paragraph1": "Real Property Planning is a free educational resource for older adults, their families, and the professionals who work with them across Washington State.",
-      "paragraph2": "Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals — we are here to help point you in the right direction. Use this page to reach out with questions, suggest a resource, or inquire about joining our professional network."
+      "paragraph2": "Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals — this page is the place to start. Use it to reach out with questions, suggest a resource, or inquire about joining the professional network."
     },
     "contactInfo": {
       "phoneLabel": "Phone",
@@ -480,7 +480,7 @@
     },
     "form": {
       "heading": "Send a Message",
-      "subtitle": "Tell us what you're dealing with and we'll point you to the right guide, tool, or professional.",
+      "subtitle": "Describe what you're dealing with and the reply will point you to the right guide, tool, or professional.",
       "companyWebsiteLabel": "Company Website",
       "nameLabel": "Name *",
       "namePlaceholder": "Your full name",
@@ -491,7 +491,7 @@
       "roleLabel": "I am a *",
       "roleSelectPlaceholder": "Select one",
       "messageLabel": "Message *",
-      "messagePlaceholder": "Share your question, suggest a resource, or ask about joining our professional network...",
+      "messagePlaceholder": "Share your question, suggest a resource, or ask about joining the professional network...",
       "privacyNote": "🔒 Your information is used only to respond to your inquiry — never sold or shared for marketing.",
       "sendButton": "Send My Question",
       "sendingButton": "Sending...",
@@ -514,7 +514,7 @@
       "verificationTitle": "Please complete the verification",
       "verificationDescription": "Check the verification box above the Send button, then try again.",
       "successTitle": "Thanks — Message Received",
-      "successDescription": "We will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
+      "successDescription": "A reply is on its way shortly. Need to talk sooner? Call (206) 900-3015.",
       "errorTitle": "Something went wrong",
       "errorDescription": "Your message wasn't sent. Please try again, or call (206) 900-3015."
     },

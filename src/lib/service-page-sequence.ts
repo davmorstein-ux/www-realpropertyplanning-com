@@ -27,7 +27,7 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/senior-living/independent-living", label: "Independent Living" },
 
   // ── Process & value pages ──
-  { path: "/how-we-work", label: "How We Work" },
+  { path: "/how-we-work", label: "How It Works" },
   { path: "/how-the-process-works", label: "How the Process Works" },
   { path: "/why-valuation-matters", label: "Why Valuation Matters" },
   { path: "/how-to-move-elderly-parents", label: "How to Move Elderly Parents" },
@@ -98,7 +98,7 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/insights/out-of-state-executor-case-study", label: "Out-of-State Executor" },
 
   // ── Counties ──
-  { path: "/counties", label: "Counties We Serve" },
+  { path: "/counties", label: "Counties Served" },
   { path: "/king-county", label: "King County" },
   { path: "/snohomish-county", label: "Snohomish County" },
   { path: "/pierce-county", label: "Pierce County" },
@@ -110,7 +110,7 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/benton-county-probate-estate-real-estate", label: "Benton County" },
 
   // ── Cities ──
-  { path: "/cities-we-serve", label: "Cities We Serve" },
+  { path: "/cities-we-serve", label: "Cities Served" },
   { path: "/seattle-probate-estate-real-estate", label: "Seattle" },
   { path: "/bellevue-probate-estate-real-estate", label: "Bellevue" },
   { path: "/tacoma-probate-estate-real-estate", label: "Tacoma" },

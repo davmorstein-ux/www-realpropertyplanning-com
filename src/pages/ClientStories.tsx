@@ -67,7 +67,7 @@ const ClientStories = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Every estate property situation is different. Here are a few examples of how we've helped.
+            Every estate property situation is different. Here are a few examples of how {FEATURED_BROKER.role} has helped.
           </p>
           </div>
         </div>

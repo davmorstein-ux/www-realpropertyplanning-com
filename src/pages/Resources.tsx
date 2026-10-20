@@ -138,7 +138,7 @@ const Resources = () => {
           <p className="font-serif text-[17px] text-foreground">
             Looking for a guide or article instead of a professional?{" "}
             <Link to="/guides-and-resources" className="text-gold font-bold underline">
-              Browse our Guides &amp; Articles →
+              Browse the Guides &amp; Articles →
             </Link>
           </p>
         </div>

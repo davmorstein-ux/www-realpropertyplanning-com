@@ -275,7 +275,7 @@ const NursingHomes = () => {
               Real Property Planning is a free educational resource for families navigating senior housing and care
               decisions.{" "}
               <Link to="/guides-and-resources" className={inlineLink}>
-                Explore our full library of resources
+                Explore the full library of resources
               </Link>{" "}
               or{" "}
               <Link to="/senior-living-advisors" className={inlineLink}>

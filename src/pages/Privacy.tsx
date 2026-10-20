@@ -103,28 +103,27 @@ const Privacy = () => {
 
               <h2>The short version</h2>
               <p>
-                We do not sell your information, and we do not share it with anyone for their own
-                marketing. Most visitors never give us any personal information at all. If you fill
-                in a form, we use what you send to reply to you.
+                Real Property Planning does not sell your information or share it with anyone for
+                their own marketing. Most visitors never give the site any personal information at
+                all. If you fill in a form, what you send is used to reply to you.
               </p>
 
-              <h2>Information you give us</h2>
+              <h2>Information you provide</h2>
               <p>
-                <strong>Contact form.</strong> If you use the contact form, we collect your name,
-                email address, phone number, and your message. This is sent to us by email so that
-                we can respond. We keep this correspondence so we have a record of what was
-                discussed.
+                <strong>Contact form.</strong> If you use the contact form, it collects your name,
+                email address, phone number, and your message. These are sent by email to the person
+                who will reply. The correspondence is kept as a record of what was discussed.
               </p>
               <p>
-                <strong>Testimonials.</strong> If you submit a testimonial, we collect what you
-                provide in that form. Submitting a testimonial does not publish it — nothing appears
+                <strong>Testimonials.</strong> If you submit a testimonial, the site collects what
+                you provide in that form. Submitting a testimonial does not publish it — nothing appears
                 on the site unless it is reviewed first.
               </p>
               <p>
-                <strong>Newsletter.</strong> If you subscribe, we collect your email address and
-                which page you subscribed from. Subscribing requires confirming through a link we
-                email you. Every message we send includes an unsubscribe link, and we act on
-                unsubscribe requests promptly.
+                <strong>Newsletter.</strong> If you subscribe, the site collects your email address
+                and which page you subscribed from. Subscribing requires confirming through a link
+                sent to your email. Every newsletter includes an unsubscribe link, and unsubscribe
+                requests are acted on promptly.
               </p>
 
               <h2>Information collected automatically</h2>
@@ -132,24 +131,24 @@ const Privacy = () => {
                 <strong>Analytics.</strong> This site uses Google Analytics to understand which
                 pages people find useful. It records things like which pages were viewed, roughly
                 where in the world the visitor is, and what kind of device was used. It sets cookies
-                in your browser to do this. We use this to improve the site, not to identify
+                in your browser to do this. It is used to improve the site, not to identify
                 individuals.
               </p>
               <p>
                 <strong>Referrals to professionals.</strong> When you tap a featured professional's
-                phone number, email address, or website link, we record that a link of that kind was
-                clicked, which professional it belonged to, and which page you were on. We use this
-                to tell each professional how much interest their listing received. It records the
+                phone number, email address, or website link, the site records that a link of that
+                kind was clicked, which professional it belonged to, and which page you were on. This
+                is used to tell each professional how much interest their listing received. It records the
                 click, not you — no name, no phone number, and nothing about what you go on to
                 say to them. Links to a professional's own website also carry a tag identifying this
                 site as the source, so they can see the referral in their own analytics.
               </p>
               <p>
-                <strong>Which pages lead somewhere.</strong> We also record when a phone number or
+                <strong>Which pages lead somewhere.</strong> The site also records when a phone number or
                 email link anywhere on the site is tapped, when a link to the contact page is
                 followed, when a calculator is first used, which of the four "What brings you here
                 today?" choices on the homepage is picked, and when a newsletter or alert signup
-                goes through, along with the page it happened on. This tells us which guides and
+                goes through, along with the page it happened on. This shows which guides and
                 tools people find useful enough to act on. It records the kind of action only:
                 never the number or address involved, anything you type into a calculator, or
                 your email address.
@@ -157,23 +156,23 @@ const Privacy = () => {
               <p>
                 <strong>Questions you ask.</strong> When you use the "Ask a question" box, the question
                 you type (its first 100 characters, with anything that looks like an email address or
-                phone number removed), whether our guides had an answer, and the page you asked from
-                are recorded in Google Analytics. We read them to see what visitors want to know and
-                which guides to write next. Please don't type names, health details or account numbers
+                phone number removed), whether the site's guides had an answer, and the page you asked
+                from are recorded in Google Analytics. They are read to see what visitors want to know
+                and which guides to write next. Please don't type names, health details or account numbers
                 into the box.
               </p>
               <p>
                 <strong>Contact form.</strong> When a message you send through the contact form goes
-                through, we record that a message was sent, its topic (for example "buying or selling
-                an adult family home"), which inbox it went to, and the page you were reading before
-                you opened the form. This tells us which pages people find useful enough to ask a
+                through, the site records that a message was sent, its topic (for example "buying or
+                selling an adult family home"), which inbox it went to, and the page you were reading
+                before you opened the form. This shows which pages people find useful enough to ask a
                 question about. It does not record your name, email address, phone number, or anything
                 you wrote.
               </p>
               <p>
-                <strong>Facebook advertising.</strong> We advertise some pages on Facebook. Those pages
+                <strong>Facebook advertising.</strong> Some pages of this site are advertised on Facebook. Those pages
                 only (currently the family home planning page) use Meta's pixel, which tells Meta that
-                someone arrived from an ad and whether they signed up, so we can see which ads are
+                someone arrived from an ad and whether they signed up, to show which ads are
                 useful. It records the page and the fact of a signup. It does not record your email
                 address, your answers to the questions on that page, or which other pages of this site
                 you go on to read, and it is not used on any page about health or care. If your browser
@@ -186,7 +185,7 @@ const Privacy = () => {
                 a page loads.
               </p>
               <p>
-                <strong>Spam prevention.</strong> Our forms use Cloudflare Turnstile to tell people
+                <strong>Spam prevention.</strong> The site's forms use Cloudflare Turnstile to tell people
                 apart from automated bots. It examines browser characteristics to make that
                 judgement.
               </p>
@@ -196,53 +195,52 @@ const Privacy = () => {
                 actually play the video.
               </p>
 
-              <h2>What we do not do</h2>
+              <h2>What the site does not do</h2>
               <ul>
-                <li>We do not sell your personal information.</li>
-                <li>We do not share your information with other businesses for their marketing.</li>
+                <li>It does not sell your personal information.</li>
+                <li>It does not share your information with other businesses for their marketing.</li>
                 <li>
-                  We do not use what you tell us in a form to target advertising to you.
+                  It does not use what you write in a form to target advertising to you.
                 </li>
               </ul>
               <p>
                 Real Property Planning lists professionals as an educational resource. If you decide
                 to contact one of them, that is your choice and you are giving your information to
-                them directly — we do not pass it along to them on your behalf.
+                them directly. The site does not pass it along to them on your behalf.
               </p>
 
               <h2>Health-related information</h2>
               <p>
                 Many people come to this site while making decisions about care for themselves or a
-                family member. If you tell us about a health condition or care need in a form, we
-                treat that as sensitive. We use it only to respond to you. We do not
-                sell it, and we do not use it for advertising. You are never required to share
-                health details to use this site, and we would encourage you to share only what is
-                necessary.
+                family member. If you mention a health condition or care need in a form, it is
+                treated as sensitive. It is used only to respond to you. It is never sold and never
+                used for advertising. You are never required to share health details to use this
+                site; please share only what is necessary.
               </p>
 
               <h2>Your choices</h2>
               <p>
-                You can ask us what information we hold about you, ask us to correct it, or ask us
-                to delete it. You can unsubscribe from the newsletter at any time using the link in
+                You can ask what information the site holds about you, ask for it to be corrected,
+                or ask for it to be deleted. You can unsubscribe from the newsletter at any time using the link in
                 any message. Most browsers let you block or delete cookies, and browser-level "Do
                 Not Track" or Global Privacy Control signals can limit analytics.
               </p>
               <p>
                 Washington residents have specific rights regarding consumer health data under
                 state law, including the right to withdraw consent and to have such data deleted.
-                To exercise any of these, contact us using the details below.
+                To exercise any of these, use the contact details below.
               </p>
 
               <h2>Children</h2>
               <p>
-                This site is intended for adults. We do not knowingly collect information from
+                This site is intended for adults. It does not knowingly collect information from
                 anyone under 16.
               </p>
 
               <h2>Changes to this policy</h2>
               <p>
-                If what we collect changes, this page changes with it, and the date at the top will
-                be updated.
+                If what the site collects changes, this page changes with it, and the date at the
+                top will be updated.
               </p>
 
               <h2>Contact</h2>

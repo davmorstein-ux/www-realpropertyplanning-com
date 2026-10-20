@@ -503,7 +503,7 @@ const PowerOfAttorneys = () => {
             <div className="max-w-[1100px] mx-auto">
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Practical Guidance</p>
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-8">
-                Real-World Situations We Help Navigate
+                Real-World Situations Families Navigate
               </h2>
               <div className="space-y-10">
                 <div>
@@ -535,7 +535,7 @@ const PowerOfAttorneys = () => {
                     these decisions can move forward without delay. When it isn't, families often face difficult legal
                     hurdles. I bring experience and structure to these time-sensitive situations, coordinating with
                     attorneys and title companies to keep things on track. Families managing an estate alongside these
-                    decisions may also benefit from our{" "}
+                    decisions may also benefit from the site's{" "}
                     <Link
                       to="/probate-estate-sales"
                       className="text-primary underline underline-offset-4 hover:text-accent transition-colors"

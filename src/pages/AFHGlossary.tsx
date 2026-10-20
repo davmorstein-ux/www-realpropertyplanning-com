@@ -175,7 +175,7 @@ const AFHGlossary = () => (
           ))}
           <p className="afhg-meta" style={{ margin: 0 }}>
             Missing a term, or found one that is out of date?{" "}
-            <Link className="afhg-link" to="/corrections-policy">Tell us how to fix it</Link>.
+            <Link className="afhg-link" to="/corrections-policy">Send a correction</Link>.
           </p>
         </div>
       </section>

@@ -101,7 +101,7 @@ const ProfessionalSignupForm = () => {
           Thank You
         </h3>
         <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto">
-          Thank you for submitting your information. We review all applications and will be in touch within 2–3 business days.
+          Thank you for submitting your information. Every application is reviewed, with a reply within 2–3 business days.
         </p>
       </div>
     );
@@ -339,7 +339,7 @@ const Professionals = () => {
               Know a Professional Who Should Be Listed?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              We welcome referrals from professionals serving families across Western Washington.
+              Referrals are welcome from professionals serving families across Western Washington.
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg">

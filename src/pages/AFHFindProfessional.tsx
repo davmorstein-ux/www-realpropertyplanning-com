@@ -686,7 +686,7 @@ const AFHFindProfessional = () => (
           >
             AFH Club lists independent professionals who serve adult family home owners, buyers, and operators
             throughout Washington State. If you work with Adult Family Homes and would like to be considered for a
-            listing in this directory, contact us to learn more.
+            listing in this directory, use the contact page to learn more.
           </p>
           <Link
             to="/join-the-network"

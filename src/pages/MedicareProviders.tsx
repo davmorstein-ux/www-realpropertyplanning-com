@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: "How do I find a Medicare specialist near me?",
-    a: "A licensed Medicare specialist or insurance broker can help you compare plans, understand costs, and enroll in the right coverage for your situation. Look for someone who is licensed in Washington State, represents multiple carriers, and has experience working with seniors in transition. We are building a directory of independent Medicare providers across Washington — check back soon.",
+    a: "A licensed Medicare specialist or insurance broker can help you compare plans, understand costs, and enroll in the right coverage for your situation. Look for someone who is licensed in Washington State, represents multiple carriers, and has experience working with seniors in transition. A directory of independent Medicare providers across Washington is being built — check back soon.",
   },
   {
     q: "Does Medicare cover senior living or memory care facilities?",
@@ -279,9 +279,9 @@ const MedicareProviders = () => (
               can feel confident the right decisions are being made.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              We believe Medicare planning belongs alongside the other essential services families need during times of
+              Medicare planning belongs alongside the other essential services families need during times of
               change — legal guidance, financial planning, real estate support, and senior care coordination. That is
-              why we are building a directory of independent Medicare providers who understand the unique needs of seniors and
+              why this site is building a directory of independent Medicare providers who understand the unique needs of seniors and
               families in Washington State.
             </p>
           </div>

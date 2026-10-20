@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import redSphere from "@/assets/property-accent-sphere-washington.webp";
 import { useLayoutEffect, useRef, useState, useCallback, useMemo } from "react";
 
@@ -13,7 +14,7 @@ const ALL: Record<string, RelatedLink> = {
   forAttorneys: {
     href: "/for-attorneys",
     label: "For Attorneys & Fiduciaries",
-    description: "How we support attorneys with the real estate workstream on probate, trust, and family-law matters.",
+    description: `How ${FEATURED_BROKER.role} supports attorneys with the real estate workstream on probate, trust, and family-law matters.`,
   },
   executors: {
     href: "/executors",
@@ -62,7 +63,7 @@ const ALL: Record<string, RelatedLink> = {
   },
   counties: {
     href: "/counties",
-    label: "Counties We Serve",
+    label: "Counties Served",
     description: "Service-area hubs across Washington State.",
   },
   transitionResources: {
@@ -77,7 +78,7 @@ const ALL: Record<string, RelatedLink> = {
   },
   contact: {
     href: "/contact",
-    label: "Contact us",
+    label: "Contact",
     description: "Start a confidential conversation about a specific property.",
   },
   resources: {

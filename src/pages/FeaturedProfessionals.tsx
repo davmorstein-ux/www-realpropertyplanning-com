@@ -45,7 +45,7 @@ const FeaturedProfessionals = () => (
               margin: "0 0 14px",
             }}
           >
-            Our Professional Network
+            The Professional Network
           </p>
           <p
             style={{

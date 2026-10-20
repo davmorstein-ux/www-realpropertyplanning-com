@@ -46,7 +46,7 @@ export default function ResultSignup({ kind, style }: { kind: Kind; style?: Reac
                 </a>
               </p>
               <p style={{ margin: 0, fontSize: 17, lineHeight: 1.55 }}>
-                <strong>One more step for the newsletter:</strong> we've emailed you a link to confirm your address. Nothing else is sent until you click it.
+                <strong>One more step for the newsletter:</strong> a link to confirm your address is on its way to your inbox. Nothing else is sent until you click it.
               </p>
             </>
           ) : undefined

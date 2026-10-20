@@ -137,7 +137,7 @@ const AFHManagementCompanies = () => {
 
             <h2 style={gs.h2}>Still to confirm with DSHS</h2>
             <p style={gs.p}>
-              <strong>Can the management company be the resident manager's employer?</strong> The rules do not say. They keep ultimate responsibility for "all personnel issues" with the licensed home (WAC 388-76-11060), so whoever signs the paycheck, the owner has to remain in charge of who is placed in the home. Ask DSHS before setting it up with the company as employer. We will update this page when DSHS answers in writing.
+              <strong>Can the management company be the resident manager's employer?</strong> The rules do not say. They keep ultimate responsibility for "all personnel issues" with the licensed home (WAC 388-76-11060), so whoever signs the paycheck, the owner has to remain in charge of who is placed in the home. Ask DSHS before setting it up with the company as employer. This page will be updated when DSHS answers in writing.
             </p>
 
             <div className="rpp-dark-surface" style={{ ...gs.callout, background: GREEN }}>

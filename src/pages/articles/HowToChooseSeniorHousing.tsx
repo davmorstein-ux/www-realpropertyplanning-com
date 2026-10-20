@@ -123,7 +123,7 @@ const HowToChooseSeniorHousing = () => {
                 A <Link to="/professionals/financial-planners" className={inlineLink}>financial planner</Link> who understands senior housing can be invaluable here, helping families map realistic scenarios before they commit to a community.
               </p>
               <p className={pClass}>
-                <em><Link to="/articles/senior-housing-costs" className={inlineLink}>See our full guide to senior housing costs →</Link></em>
+                <em><Link to="/articles/senior-housing-costs" className={inlineLink}>See the full guide to senior housing costs →</Link></em>
               </p>
 
               <hr className={hrClass} />
@@ -238,7 +238,7 @@ const HowToChooseSeniorHousing = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>These guides explain senior housing and care decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
+                <em>These guides explain senior housing and care decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources →</Link></em>
               </p>
 
             </article>

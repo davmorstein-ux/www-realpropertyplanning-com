@@ -137,7 +137,7 @@ const SeniorHousingCosts = () => {
                 For families who value long-term predictability and want to avoid the disruption of multiple moves, CCRCs can be a sound investment. But the contracts are complex, and careful review before signing is essential.
               </p>
               <p className={pClass}>
-                <em>Learn more in our <Link to="/articles/ccrc-costs" className={inlineLink}>guide to CCRC costs</Link>.</em>
+                <em>Learn more in the <Link to="/articles/ccrc-costs" className={inlineLink}>guide to CCRC costs</Link>.</em>
               </p>
 
               <hr className={hrClass} />
@@ -150,7 +150,7 @@ const SeniorHousingCosts = () => {
                 The tradeoff is availability. Waitlists are common, sometimes stretching months or years. If affordable senior housing is likely to be part of your plan, the time to apply is before the need becomes urgent.
               </p>
               <p className={pClass}>
-                <em>Learn more in our <Link to="/articles/affordable-senior-housing" className={inlineLink}>guide to affordable senior housing</Link>.</em>
+                <em>Learn more in the <Link to="/articles/affordable-senior-housing" className={inlineLink}>guide to affordable senior housing</Link>.</em>
               </p>
 
               <hr className={hrClass} />

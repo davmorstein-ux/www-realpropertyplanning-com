@@ -352,7 +352,7 @@ const FamilyHomePlanning = () => {
                       Download the 7-step checklist (PDF)
                     </a>
                     <p style={{ margin: 0, fontSize: 17, lineHeight: 1.55 }}>
-                      <strong>One more step for the newsletter:</strong> we have emailed you a link to confirm your address. Nothing
+                      <strong>One more step for the newsletter:</strong> a link to confirm your address has been emailed to you. Nothing
                       else is sent until you click it. If it isn't there in a few minutes, check your spam folder.
                     </p>
                   </>

@@ -490,7 +490,7 @@ const AFHBuyingSelling = () => (
                 textDecoration: "none",
               }}
             >
-              Contact Us About an AFH
+              Ask About an AFH
             </Link>
             <a
               href="https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx"
@@ -524,7 +524,7 @@ const AFHBuyingSelling = () => (
           >
             Retiring from operating your AFH?{" "}
             <Link to="/afh-club/selling-your-business-at-retirement" style={{ color: "#e8e2d9", fontWeight: 700 }}>
-              Read our guide to selling the business and the building.
+              Read the guide to selling the business and the building.
             </Link>
           </p>
         </div>

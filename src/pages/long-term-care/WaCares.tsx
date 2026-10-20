@@ -283,7 +283,7 @@ const WaCares = () => {
               <Link to="/senior-living-advisors" className={inlineLink}>
                 senior living advisors
               </Link>{" "}
-              who understand the full landscape of long-term care in Washington State. Explore our full library of
+              who understand the full landscape of long-term care in Washington State. Explore the full library of
               resources to start the conversation.
             </p>
           </div>

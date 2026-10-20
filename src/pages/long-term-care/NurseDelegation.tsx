@@ -172,7 +172,7 @@ const NurseDelegation = () => {
               Real Property Planning is a free educational resource for Washington families navigating senior care
               decisions.{" "}
               <Link to="/guides-and-resources" className={inlineLink}>
-                Explore our full library of resources
+                Explore the full library of resources
               </Link>{" "}
               or{" "}
               <Link to="/aging-life-care-managers" className={inlineLink}>

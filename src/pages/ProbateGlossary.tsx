@@ -186,7 +186,7 @@ const ProbateGlossary = () => (
           <p className="prg-meta" style={{ margin: 0 }}>
             General information, not legal advice. Real Property Planning does not refer clients to attorneys; confirm any lawyer's
             license with the Washington State Bar Association (wsba.org). Missing a term, or found one that is out of date?{" "}
-            <Link className="prg-link" to="/corrections-policy">Tell us how to fix it</Link>.
+            <Link className="prg-link" to="/corrections-policy">Send a correction</Link>.
           </p>
         </div>
       </section>

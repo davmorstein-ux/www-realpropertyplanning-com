@@ -105,7 +105,7 @@ const FacilityDetail = () => {
           <section className="py-12 bg-cream">
             <div className="container px-5 md:px-8">
               <p className="max-w-3xl mx-auto text-[18px] text-foreground">
-                We don't have a record for that home. It may have changed license
+                There is no record for that home. It may have changed license
                 status.{" "}
                 <Link
                   to={cityEntry ? `/afh-club/homes/${citySlug}` : "/afh-club/homes"}

@@ -51,7 +51,7 @@ const CPAsFinancialAdvisors = () => (
               </Link>{" "}
               that support tax and financial planning. Learn more about{" "}
               <Link to="/for-cpas" className="text-accent hover:text-gold underline underline-offset-4">
-                how We work with CPAs
+                how {FEATURED_BROKER.role} works with CPAs
               </Link>{" "}
               and{" "}
               <Link to="/for-financial-planners" className="text-accent hover:text-gold underline underline-offset-4">

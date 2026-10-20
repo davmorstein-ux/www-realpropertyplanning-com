@@ -91,7 +91,7 @@ const ShareYourExperience = () => {
     if (!consent) {
       toast({
         title: "Permission needed",
-        description: "Please confirm we may publish your words before sending.",
+        description: "Please confirm your words may be published before sending.",
         variant: "destructive",
       });
       return;
@@ -140,9 +140,9 @@ const ShareYourExperience = () => {
       }
 
       toast({
-        title: "Thank you — we received it",
+        title: "Thank you — it was received",
         description:
-          "Your words came through. Nothing is published automatically; we'll read it and be in touch before it appears anywhere.",
+          "Your words came through. Nothing is published automatically; it will be read, and you will hear back before it appears anywhere.",
       });
       form.reset();
       setCredit("");
@@ -151,7 +151,7 @@ const ShareYourExperience = () => {
       console.error(err);
       toast({
         title: "That didn't send",
-        description: "Something went wrong on our end. Please try again, or email info@realpropertyplanning.com.",
+        description: "Something went wrong on the site's end. Please try again, or email info@realpropertyplanning.com.",
         variant: "destructive",
       });
     } finally {
@@ -167,7 +167,7 @@ const ShareYourExperience = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Share Your Experience | Real Property Planning"
-        description={`Tell us how ${FEATURED_BROKER.role} helped. Your words may be published on our testimonials page, only with your permission and only as you asked to be credited.`}
+        description={`Share how ${FEATURED_BROKER.role} helped. Your words may be published on the testimonials page, only with your permission and only as you asked to be credited.`}
         canonical="https://realpropertyplanning.com/share-your-experience"
       />
       <BreadcrumbSchema
@@ -198,7 +198,7 @@ const ShareYourExperience = () => {
                 </h1>
                 <p className="text-foreground leading-relaxed">
                   If something here helped you — a guide, a calculator, a conversation, an introduction to the right
-                  professional — we'd be glad to hear about it. A few sentences is plenty.
+                  professional — hearing about it is always welcome. A few sentences is plenty.
                 </p>
               </div>
 
@@ -213,8 +213,8 @@ const ShareYourExperience = () => {
                   }}
                 >
                   <p className="text-foreground text-[16px] leading-relaxed" style={{ margin: 0 }}>
-                    <strong>Nothing is published automatically.</strong> What you write comes to us by email. We read it,
-                    and if we'd like to use it, we publish it exactly as you asked to be credited — never more.
+                    <strong>Nothing is published automatically.</strong> What you write arrives by email and is read first.
+                    If it is used, it is published exactly as you asked to be credited — never more.
                   </p>
                 </div>
 
@@ -290,9 +290,9 @@ const ShareYourExperience = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="credit">If we publish this, how should we credit you?</Label>
+                    <Label htmlFor="credit">If this is published, how should you be credited?</Label>
                     <Select value={credit} onValueChange={setCredit} required>
-                      <SelectTrigger id="credit" aria-label="How should we credit you">
+                      <SelectTrigger id="credit" aria-label="How should you be credited">
                         <SelectValue placeholder="Choose how you'd like to appear" />
                       </SelectTrigger>
                       <SelectContent>

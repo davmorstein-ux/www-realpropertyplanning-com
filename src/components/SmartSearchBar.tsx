@@ -180,7 +180,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
       toast.success(`Taking you to ${match.label}`, { duration: 2000 });
       navigate(match.path);
     } else if (query.trim()) {
-      toast.info("We couldn't find a perfect match. Here are some pages that might help.", {
+      toast.info("No perfect match was found. Here are some pages that might help.", {
         duration: 3000,
       });
       navigate("/services");
@@ -270,7 +270,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
           toast.success(`Taking you to ${match.label}`, { duration: 2500 });
           setTimeout(() => navigate(match.path), 800);
         } else {
-          toast.info(`We heard: "${transcript}". Showing related pages.`, { duration: 4000 });
+          toast.info(`Heard: "${transcript}". Showing related pages.`, { duration: 4000 });
           setSuggestions(findTopRoutes(transcript));
         }
       }
@@ -291,7 +291,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
         );
       } else if (errorType === "no-speech") {
         setVoiceError("No speech was detected.");
-        toast.warning("We didn't hear anything. Please try again and speak clearly.", {
+        toast.warning("Nothing was heard. Please try again and speak clearly.", {
           duration: 4000,
         });
       } else if (errorType === "network") {

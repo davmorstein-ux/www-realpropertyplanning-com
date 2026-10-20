@@ -231,7 +231,7 @@ const Wills = () => {
           <section className="py-16 sm:py-20 bg-background" data-nosnippet="true">
             <div className="mx-auto max-w-3xl px-6">
               <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6">
-                We Don't Provide Legal Advice — And Here's Why That Matters
+                This Site Doesn't Provide Legal Advice — And Here's Why That Matters
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Real Property Planning is a free educational resource. It is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.

@@ -76,7 +76,7 @@ const ShortTermNursingHomeStays = () => {
 
             <hr className={hrClass} />
 
-            <p className={pClass + " italic"}>Real Property Planning is a free educational resource for Washington families navigating senior care decisions. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources</Link> or <Link to="/senior-living-advisors" className={inlineLink}>learn what an independent senior living advisor does</Link> to start the conversation.</p>
+            <p className={pClass + " italic"}>Real Property Planning is a free educational resource for Washington families navigating senior care decisions. <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources</Link> or <Link to="/senior-living-advisors" className={inlineLink}>learn what an independent senior living advisor does</Link> to start the conversation.</p>
           </div>
         </section>
 

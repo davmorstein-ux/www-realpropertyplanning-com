@@ -46,7 +46,7 @@ const SeniorLivingCommunities = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                A list of senior living communities throughout Washington State is being compiled. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact us</Link> for a current referral.
+                A list of senior living communities throughout Washington State is being compiled. Check back soon, or use the <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact</Link> page for a current referral.
               </p>
             </div>
 

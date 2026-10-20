@@ -59,9 +59,9 @@ export const POLICY_PAGES: PolicyPage[] = [
       "Real Property Planning publishes free, Washington-specific guides for families, executors, and adult family home buyers, owners, and sellers. These are the rules every guide is held to.",
     sections: [
       {
-        heading: "What we publish, and what we do not",
+        heading: "What the site publishes, and what it does not",
         paragraphs: [
-          "We publish education: how Washington processes work, what the rules say, what things cost, and which questions to ask. We do not publish legal, tax, financial, medical, or licensing advice for anyone's particular situation, and nothing on the site creates a professional relationship.",
+          "The site publishes education: how Washington processes work, what the rules say, what things cost, and which questions to ask. It does not publish legal, tax, financial, medical, or licensing advice for anyone's particular situation, and nothing on the site creates a professional relationship.",
           "Real Property Planning does not provide professional services. When a guide describes work such as pricing a home, appraising it, or handling a probate filing, that work is done by an independently engaged licensed professional, never by the site.",
         ],
       },
@@ -69,7 +69,7 @@ export const POLICY_PAGES: PolicyPage[] = [
         heading: "Primary sources first",
         paragraphs: [
           "Statements about Washington law, rules, rates, and programs are checked against the primary source: the Revised Code of Washington (RCW), the Washington Administrative Code (WAC) and the Washington State Register, the Department of Social and Health Services (DSHS), the Health Care Authority (HCA), county courts and assessors, and the published text of agreements such as the adult family home collective bargaining agreement.",
-          "When a rule has recently changed, we read the section's history line and the filing that changed it, and cite the filing. A news article, a search result, or another website is never treated as proof that a rule says something.",
+          "When a rule has recently changed, the section's history line and the filing that changed it are read, and the filing is cited. A news article, a search result, or another website is never treated as proof that a rule says something.",
           "Guides link to their sources so readers can check them. Where a figure is an estimate rather than a published number, the page says so.",
         ],
       },
@@ -122,15 +122,15 @@ export const POLICY_PAGES: PolicyPage[] = [
         heading: "Adult family home directory",
         paragraphs: [
           "The directory of licensed adult family homes is built from the Department of Social and Health Services (DSHS) Adult Family Home Locator, using the county exports from its Advanced Lookup for all 39 Washington counties. Each home's page shows the date its data was retrieved.",
-          "For each home we keep the fields DSHS publishes: license number, name, address, county, contact name, phone, licensed capacity (beds), specialty designations (dementia, mental health, developmental disabilities), DSHS contracts, whether the home accepts Medicaid, and whether DSHS has inspection or investigation reports on file.",
-          "Processing is limited to cleaning: standardizing city names and ZIP codes, correcting obvious typos in city names, and merging records DSHS lists more than once for multiple contracts. We do not add, estimate, or infer any field. A home that does not appear in the DSHS locator is not listed as licensed.",
-          "Limits: the directory is a snapshot. Licenses are issued, changed, and closed every week, so always confirm a home's current status in the DSHS locator. We do not rate or rank homes, and a listing is not a recommendation.",
+          "For each home the directory keeps the fields DSHS publishes: license number, name, address, county, contact name, phone, licensed capacity (beds), specialty designations (dementia, mental health, developmental disabilities), DSHS contracts, whether the home accepts Medicaid, and whether DSHS has inspection or investigation reports on file.",
+          "Processing is limited to cleaning: standardizing city names and ZIP codes, correcting obvious typos in city names, and merging records DSHS lists more than once for multiple contracts. No field is added, estimated, or inferred. A home that does not appear in the DSHS locator is not listed as licensed.",
+          "Limits: the directory is a snapshot. Licenses are issued, changed, and closed every week, so always confirm a home's current status in the DSHS locator. Homes are not rated or ranked, and a listing is not a recommendation.",
         ],
       },
       {
         heading: "Inspection and enforcement history",
         paragraphs: [
-          "Real Property Planning does not republish or summarize DSHS inspection reports. Where DSHS has reports on file, the directory tells you so and links to DSHS, where the reports themselves are published. Our guide to reading violation history explains how to find and interpret them.",
+          "Real Property Planning does not republish or summarize DSHS inspection reports. Where DSHS has reports on file, the directory tells you so and links to DSHS, where the reports themselves are published. The site's guide to reading violation history explains how to find and interpret them.",
         ],
       },
       {
@@ -162,7 +162,7 @@ export const POLICY_PAGES: PolicyPage[] = [
       {
         heading: "Reporting a data problem",
         paragraphs: [
-          `If a home's details are wrong, check the DSHS locator first, since our data comes from it. If DSHS is correct and we are not, email ${INBOX} with the license number and we will fix it.`,
+          `If a home's details are wrong, check the DSHS locator first, since the directory's data comes from it. If DSHS is correct and the directory is not, email ${INBOX} with the license number and it will be fixed.`,
         ],
       },
     ],
@@ -176,7 +176,7 @@ export const POLICY_PAGES: PolicyPage[] = [
     description:
       "How to report an error on Real Property Planning and how corrections are made, dated, and disclosed.",
     intro:
-      "Getting Washington-specific facts right is the point of this site. When we get something wrong, we fix it and say so.",
+      "Getting Washington-specific facts right is the point of this site. When the site gets something wrong, it is corrected and says so.",
     sections: [
       {
         heading: "How to report an error",
@@ -187,9 +187,9 @@ export const POLICY_PAGES: PolicyPage[] = [
       {
         heading: "What happens next",
         paragraphs: [
-          "Every report is read. We check the claim against the primary source, not against another website. If the page is wrong, it is corrected, and the page's last-reviewed date is updated.",
+          "Every report is read. The claim is checked against the primary source, not against another website. If the page is wrong, it is corrected, and the page's last-reviewed date is updated.",
           "Substantive corrections, meaning anything that changes a fact, a figure, a requirement, or a conclusion a reader might act on, are noted on the page with the date and what changed. Spelling, grammar, and formatting fixes are made without a note.",
-          "If the report is about a professional's own listing, such as a phone number or a license, we update it once the professional confirms the change.",
+          "If the report is about a professional's own listing, such as a phone number or a license, it is updated once the professional confirms the change.",
         ],
       },
       {
@@ -289,8 +289,8 @@ export const POLICY_PAGES: PolicyPage[] = [
   {
     path: "/authors",
     navTitle: "Authors & Reviewers",
-    h1: "About Our Authors and Reviewers",
-    title: "About Our Authors and Reviewers | Real Property Planning",
+    h1: "About the Authors and Reviewers",
+    title: "About the Authors and Reviewers | Real Property Planning",
     description:
       "Who writes and reviews Real Property Planning's Washington guides, their licenses and experience, and how reviewers will be identified.",
     intro:

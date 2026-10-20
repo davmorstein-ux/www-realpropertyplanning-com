@@ -224,7 +224,7 @@ const Footer = () => {
               About
             </Link>
             <Link to="/how-the-process-works" className="rpp-footer-link">
-              How We Work
+              How the Process Works
             </Link>
             <Link to="/contact" className="rpp-footer-link">
               Contact

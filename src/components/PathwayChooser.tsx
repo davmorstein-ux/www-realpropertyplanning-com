@@ -40,7 +40,7 @@ const PathwayChooser = () => {
             Choose the topic that best fits your situation:
           </h2>
           <p className="text-foreground text-lg md:text-xl leading-relaxed">
-            Choose the situation that best fits you, and we'll guide you from there.
+            Choose the situation that best fits you to see where to start.
           </p>
         </div>
 

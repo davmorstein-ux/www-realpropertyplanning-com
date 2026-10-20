@@ -67,8 +67,8 @@ const PolicyPage = () => {
             ))}
 
             {/* A <div role="navigation">, not <nav>: index.css styles every <nav> as the header menu. */}
-            <div role="navigation" aria-label="Our standards" className="rpp-policy-nav" style={{ marginTop: 44 }}>
-              <h2 className="rpp-policy-h2" style={{ fontSize: 22 }}>Our standards</h2>
+            <div role="navigation" aria-label="Site standards" className="rpp-policy-nav" style={{ marginTop: 44 }}>
+              <h2 className="rpp-policy-h2" style={{ fontSize: 22 }}>Site standards</h2>
               <ul>
                 {POLICY_PAGES.map((p) => (
                   <li key={p.path}>

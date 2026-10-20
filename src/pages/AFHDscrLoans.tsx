@@ -122,7 +122,7 @@ const AFHDscrLoans = () => {
             </div>
 
             <h2 style={gs.h2}>How one Washington AFH lender counts income</h2>
-            <p style={gs.p}>A Washington lender that finances adult family homes described its method to us in October 2026:</p>
+            <p style={gs.p}>A Washington lender that finances adult family homes, interviewed for this page in October 2026, described its method:</p>
             <ul style={{ margin: "0 0 16px", paddingLeft: 22 }}>
               <li style={gs.li}><strong>What it counts:</strong> gross income, documented by the agreement each resident signs for their bed.</li>
               <li style={gs.li}><strong>Over what period:</strong> the average of the past two years.</li>

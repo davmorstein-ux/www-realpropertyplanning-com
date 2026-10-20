@@ -57,7 +57,7 @@ const GuidesAndResources = () => {
           <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#280a0c", margin: 0 }}>
             Looking for a professional instead of a guide?{" "}
             <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
-              Browse our Find a Professional directory →
+              Browse the Find a Professional directory →
             </Link>
           </p>
         </div>

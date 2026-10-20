@@ -208,7 +208,7 @@ const IndependentLivingCosts = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>These guides explain senior housing decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
+                <em>These guides explain senior housing decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources →</Link></em>
               </p>
 
             </article>

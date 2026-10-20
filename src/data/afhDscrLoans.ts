@@ -136,7 +136,7 @@ export const DSCR_FAQS = [
   {
     question: "Can a lender count the beds I plan to fill?",
     answer:
-      "Generally not. The Washington AFH lender we spoke with averages two years of actual gross income, and SBA rules for applications from October 1, 2026 do not allow projections to meet the minimum coverage ratio. A home that has been half empty is judged on its record, not its potential.",
+      "Generally not. A Washington AFH lender interviewed for this page averages two years of actual gross income, and SBA rules for applications from October 1, 2026 do not allow projections to meet the minimum coverage ratio. A home that has been half empty is judged on its record, not its potential.",
   },
   {
     question: "Does a DSCR loan work for converting a house into an adult family home?",

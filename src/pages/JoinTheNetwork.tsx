@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { articleSchema } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { Search, Handshake, Phone } from "lucide-react";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 
@@ -36,7 +37,7 @@ const inputClass =
 const jsonLd = articleSchema({
   headline: "Join the Real Property Planning Professional Network",
   description:
-    "We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, we want to know you.",
+    "Real Property Planning lists independent local professionals for seniors, families, executors, and attorneys. If you serve this community, introduce yourself.",
   url: "/join-network",
   datePublished: "2026-04-14",
   dateModified: "2026-05-05",
@@ -76,12 +77,12 @@ const membershipBenefits = [
   {
     icon: Handshake,
     title: "Referrals",
-    text: "When a family, executor, or attorney needs a professional in your specialty, we refer them to network members we know and trust.",
+    text: "Families, executors, and attorneys who need a professional in your specialty find listed members on the site's professional pages. Every listed professional has been met in person by the site's founder.",
   },
   {
     icon: Phone,
     title: "Collaboration",
-    text: "We work alongside attorneys, advisors, and care professionals regularly. Network members get a direct line to coordinate on shared clients when appropriate.",
+    text: `${FEATURED_BROKER.Role} works alongside attorneys, advisors, and care professionals regularly. Network members get a direct line to coordinate on shared clients when appropriate.`,
   },
 ];
 
@@ -137,7 +138,7 @@ const ApplicationForm = () => {
               Thank You for Applying
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              We review every submission personally and will be in touch soon.
+              Every submission is reviewed personally, and a reply follows soon.
             </p>
           </div>
         </div>
@@ -153,7 +154,7 @@ const ApplicationForm = () => {
             Apply to Join the Network
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10 text-center">
-            Tell us about your practice. There's no cost and no commitment — just a quick introduction so we can learn how your services fit.
+            Share a little about your practice. There's no cost and no commitment — just a quick introduction to show how your services fit.
           </p>
 
           <div className="bg-card border border-border rounded-xl p-7 md:p-10">
@@ -231,7 +232,7 @@ const ApplicationForm = () => {
 
               <div>
                 <label htmlFor="app-about" className="block text-base font-medium text-foreground mb-1.5">
-                  Tell us about your practice and the clients you serve <span className="text-destructive">*</span>
+                  Describe your practice and the clients you serve <span className="text-destructive">*</span>
                 </label>
                 <textarea
                   id="app-about"
@@ -259,7 +260,7 @@ const JoinTheNetwork = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Join the Network | Real Property Planning Professional Referral Network | Washington State"
-        description="We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, join the Real Property Planning referral network."
+        description="Real Property Planning lists independent local professionals for seniors, families, executors, and attorneys. If you serve this community, ask to be listed."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
@@ -276,7 +277,7 @@ const JoinTheNetwork = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, we want to know you.
+              Real Property Planning lists independent local professionals for seniors, families, executors, and attorneys. If you serve this community, introduce yourself.
             </p>
             </div>
           </div>
@@ -287,7 +288,7 @@ const JoinTheNetwork = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-                Who We're Looking For
+                Who Should Apply
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
                 Real Property Planning is a free resource for families and professionals navigating some of life's most complex transitions. It lists independent professionals who share a commitment to honest, client-centered service.

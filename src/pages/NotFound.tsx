@@ -18,7 +18,7 @@ const NotFound = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Page Not Found | Real Property Planning"
-        description="The page you're looking for doesn't exist. Return to the homepage or browse our guides and resources."
+        description="The page you're looking for doesn't exist. Return to the homepage or browse the guides and resources."
       />
       <Header />
       <main id="main-content" className="pt-32 pb-20 md:pt-40 md:pb-28">
@@ -28,7 +28,7 @@ const NotFound = () => {
               Page Not Found
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-foreground font-semibold leading-tight mb-6">
-              We couldn't find that page
+              That page couldn't be found
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-xl mx-auto">
               The page you're looking for may have been moved, renamed, or no longer exists. 

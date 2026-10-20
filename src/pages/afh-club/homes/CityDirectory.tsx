@@ -105,7 +105,7 @@ const CityDirectory = () => {
           <section className="py-12 md:py-16 bg-cream">
             <div className="container px-5 md:px-8">
               <p className="max-w-3xl mx-auto text-[18px] text-foreground">
-                We don't have a directory for that city yet.{" "}
+                There is no directory for that city yet.{" "}
                 <Link to="/afh-club/homes" className="underline underline-offset-4 text-accent">
                   Browse all cities with licensed adult family homes
                 </Link>

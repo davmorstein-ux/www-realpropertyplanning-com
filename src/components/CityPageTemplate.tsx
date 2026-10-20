@@ -13,43 +13,43 @@ import { Link } from "react-router-dom";
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 
 // Tone-specific FAQ sets — now meaningfully varied per tone, not generic per city
 const toneFaqSets: Record<string, (city: CityData) => { question: string; answer: string }[]> = {
   premium: (city) => [
-    { question: `What pricing approach works in a high-value ${city.name} estate?`, answer: `In a market where blocks and views can swing value by six figures, an automated estimate is not a starting point. We anchor pricing in a documented, appraisal-style condition adjustment — the same logic the buyer's lender appraiser will apply — so the number in the court file is the number the market will actually support.` },
-    { question: `How are sibling buyout valuations handled for a ${city.name} property?`, answer: `When one heir wants to keep the home and others want to be cashed out, the price has to be defensible to everyone — and to the attorney drafting the buyout. We provide a written, independent valuation that all parties can rely on, separate from any listing conversation.` },
-    { question: `Do the professionals in this network coordinate with high-net-worth advisors involved in the estate?`, answer: `Yes. Estate planning attorneys, CPAs, and trust officers are routinely part of these files in ${city.name}. We deliver written status updates so every advisor on the team is reading from the same page.` },
+    { question: `What pricing approach works in a high-value ${city.name} estate?`, answer: `In a market where blocks and views can swing value by six figures, an automated estimate is not a starting point. ${FEATURED_BROKER.Role} anchors pricing in a documented, appraisal-style condition adjustment — the same logic the buyer's lender appraiser will apply — so the number in the court file is the number the market will actually support.` },
+    { question: `How are sibling buyout valuations handled for a ${city.name} property?`, answer: `When one heir wants to keep the home and others want to be cashed out, the price has to be defensible to everyone — and to the attorney drafting the buyout. ${FEATURED_APPRAISER.Role} provides a written, independent valuation that all parties can rely on, separate from any listing conversation.` },
+    { question: `Do the professionals in this network coordinate with high-net-worth advisors involved in the estate?`, answer: `Yes. Estate planning attorneys, CPAs, and trust officers are routinely part of these files in ${city.name}. Written status updates keep every advisor on the team reading from the same page.` },
   ],
   urban: (city) => [
-    { question: `Can a ${city.name} estate property be listed before probate is fully open?`, answer: `Generally no — a personal representative needs Letters Testamentary or Letters of Administration before listing. We use the gap to handle the date-of-death valuation, secure the home, and prep the marketing file so listing day isn't day one of the work.` },
-    { question: `How does ${city.name}'s urban market affect inherited condos and townhomes?`, answer: `HOA estoppels, resale certificates, and special assessments routinely surface mid-transaction on urban estate sales. We pull these documents early and price the unit with the actual HOA reality factored in — not a generic per-square-foot comp.` },
-    { question: `What about long-vacant ${city.name} homes that have not been touched in years?`, answer: `Common, especially in older neighborhoods. We start with a condition triage — what is structural, what is cosmetic, what is buyer-pool eliminating — and only recommend repairs where the return on the estate's spend is documented in writing.` },
+    { question: `Can a ${city.name} estate property be listed before probate is fully open?`, answer: `Generally no — a personal representative needs Letters Testamentary or Letters of Administration before listing. ${FEATURED_BROKER.Role} uses the gap to handle the date-of-death valuation, secure the home, and prep the marketing file so listing day isn't day one of the work.` },
+    { question: `How does ${city.name}'s urban market affect inherited condos and townhomes?`, answer: `HOA estoppels, resale certificates, and special assessments routinely surface mid-transaction on urban estate sales. ${FEATURED_BROKER.Role} pulls these documents early and prices the unit with the actual HOA reality factored in — not a generic per-square-foot comp.` },
+    { question: `What about long-vacant ${city.name} homes that have not been touched in years?`, answer: `Common, especially in older neighborhoods. ${FEATURED_BROKER.Role} starts with a condition triage — what is structural, what is cosmetic, what is buyer-pool eliminating — and only recommends repairs where the return on the estate's spend is documented in writing.` },
   ],
   suburban: (city) => [
-    { question: `Where do most ${city.name} families start when a parent's house needs to sell?`, answer: `Usually with one practical question: do we sort the house first, or get a value first. We do the value walk-through first because it shapes every other decision — what to keep, what to repair, and how fast to move. The cleanout coordination follows.` },
+    { question: `Where do most ${city.name} families start when a parent's house needs to sell?`, answer: `Usually with one practical question: do we sort the house first, or get a value first. ${FEATURED_BROKER.Role} does the value walk-through first because it shapes every other decision — what to keep, what to repair, and how fast to move. The cleanout coordination follows.` },
     { question: `How are repair-vs-as-is decisions made on a ${city.name} suburban estate home?`, answer: `Each repair recommendation gets a documented return estimate. In ${city.name}'s buyer pool, certain updates pay back at sale and others do not — paint and flooring usually do, deeper kitchen and bath work usually does not. The goal is to leave money in the estate, not in the renovation.` },
     { question: `Can multiple adult children stay in the loop without one person carrying all the calls?`, answer: `Yes. Updates go to a single email thread that includes every named heir and the estate attorney, so no one feels behind and no one has to be the messenger.` },
   ],
   waterfront: (city) => [
-    { question: `What makes valuing a ${city.name} waterfront estate different?`, answer: `Shoreline classification, view corridors, bulkhead condition, dock or buoy rights, and tidelands all materially shift value — and most are invisible to automated estimates. We document each on-site so the price the estate brings to the table can defend itself.` },
+    { question: `What makes valuing a ${city.name} waterfront estate different?`, answer: `Shoreline classification, view corridors, bulkhead condition, dock or buoy rights, and tidelands all materially shift value — and most are invisible to automated estimates. ${FEATURED_BROKER.Role} documents each on-site so the price the estate brings to the table can defend itself.` },
     { question: `How are out-of-town heirs kept informed during a ${city.name} waterfront sale?`, answer: `Photo and video walk-throughs of dock, bulkhead, and shoreline conditions, plus written summaries of every offer. Heirs who haven't been to the property in years can still make confident decisions.` },
-    { question: `Are there preparation items unique to ${city.name} waterfront listings?`, answer: `Often: bulkhead inspection records, septic compliance for shoreline lots, and any HPA or shoreline permit history. We surface these before listing so buyer due diligence does not derail the sale.` },
+    { question: `Are there preparation items unique to ${city.name} waterfront listings?`, answer: `Often: bulkhead inspection records, septic compliance for shoreline lots, and any HPA or shoreline permit history. ${FEATURED_BROKER.Role} surfaces these before listing so buyer due diligence does not derail the sale.` },
   ],
   smalltown: (city) => [
-    { question: `Will a ${city.name} estate home actually sell — or sit on the market for months?`, answer: `Smaller markets are unforgiving of overpricing. We price to the actual ${city.name} buyer pool — based on closed comps and condition — rather than to a wider regional average that won't materialize as showings.` },
-    { question: `What if the ${city.name} home has been in the family for forty years and barely updated?`, answer: `Very common here. We separate the "needs to be done before listing" items from the "buyer is going to redo this anyway" items, so the estate isn't paying for renovation a buyer wouldn't pay extra for.` },
+    { question: `Will a ${city.name} estate home actually sell — or sit on the market for months?`, answer: `Smaller markets are unforgiving of overpricing. ${FEATURED_BROKER.Role} prices to the actual ${city.name} buyer pool — based on closed comps and condition — rather than to a wider regional average that won't materialize as showings.` },
+    { question: `What if the ${city.name} home has been in the family for forty years and barely updated?`, answer: `Very common here. ${FEATURED_BROKER.Role} separates the "needs to be done before listing" items from the "buyer is going to redo this anyway" items, so the estate isn't paying for renovation a buyer wouldn't pay extra for.` },
     { question: `Can the whole ${city.name} sale be handled without family driving out repeatedly?`, answer: `Yes. On-site coordination, vendor management, and offer review are all handled locally with written and video updates to the family.` },
   ],
   military: (city) => [
-    { question: `What do military families in ${city.name} need to know about an inherited home?`, answer: `Distance and timeline are usually the binding constraints — PCS dates rarely line up with probate timelines. We work to whatever window you actually have, handling on-site work and reporting back in the format your schedule allows.` },
-    { question: `How is pricing handled for ${city.name} homes near base?`, answer: `Buyer demand near military communities is more cyclical than the broader market. We track active listing absorption in the specific submarket and price the estate property to where the buyers actually are right now, not where they were last quarter.` },
+    { question: `What do military families in ${city.name} need to know about an inherited home?`, answer: `Distance and timeline are usually the binding constraints — PCS dates rarely line up with probate timelines. ${FEATURED_BROKER.Role} works to whatever window you actually have, handling on-site work and reporting back in the format your schedule allows.` },
+    { question: `How is pricing handled for ${city.name} homes near base?`, answer: `Buyer demand near military communities is more cyclical than the broader market. ${FEATURED_BROKER.Role} tracks active listing absorption in the specific submarket and prices the estate property to where the buyers actually are right now, not where they were last quarter.` },
     { question: `Can the professionals in this network coordinate the entire ${city.name} sale while I'm stationed elsewhere?`, answer: `Yes — full on-site coordination, vendor management, showings, and offer review with structured written updates to wherever you are.` },
   ],
   rural: (city) => [
-    { question: `How do you value acreage and outbuildings on a property near ${city.name}?`, answer: `Rural valuation requires looking at acreage usability, well and septic age and condition, outbuilding utility, and access. We document each on-site rather than relying on automated estimates that treat rural parcels like suburban lots.` },
-    { question: `What surfaces most often on inherited rural properties around ${city.name}?`, answer: `Deferred maintenance, unrecorded fence-line and access agreements, and wells or septics nearing end of service life. We flag these before listing so they become disclosure items, not deal-killers.` },
+    { question: `How do you value acreage and outbuildings on a property near ${city.name}?`, answer: `Rural valuation requires looking at acreage usability, well and septic age and condition, outbuilding utility, and access. ${FEATURED_BROKER.Role} documents each on-site rather than relying on automated estimates that treat rural parcels like suburban lots.` },
+    { question: `What surfaces most often on inherited rural properties around ${city.name}?`, answer: `Deferred maintenance, unrecorded fence-line and access agreements, and wells or septics nearing end of service life. ${FEATURED_BROKER.Role} flags these before listing so they become disclosure items, not deal-killers.` },
     { question: `Can a ${city.name}-area rural estate sale be coordinated remotely?`, answer: `Yes. On-site walk-throughs, vendor coordination for property cleanup, and structured updates make remote rural estate sales workable for out-of-area heirs.` },
   ],
 };
@@ -130,9 +130,9 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
                 `Most ${city.name} calls start with a property the heirs haven't been inside in months — or years — and a personal representative trying to sort court timing, repairs, and pricing all at once. The first conversation is short and concrete: who has authority, what condition the home is actually in, and what's already been touched.`}
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              From there, we run the date-of-death walk-through, line up cleanout and pre-list work that{" "}
+              From there, {FEATURED_BROKER.role} runs the date-of-death walk-through, lines up cleanout and pre-list work that{" "}
               <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold underline underline-offset-4">{city.county}</Link>{" "}
-              buyers actually pay extra for, build a written pricing analysis the estate file can defend, and handle the sale through closing. If you're earlier than that — still figuring out what was inherited — start with the{" "}
+              buyers actually pay extra for, builds a written pricing analysis the estate file can defend, and handles the sale through closing. If you're earlier than that — still figuring out what was inherited — start with the{" "}
               <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold underline underline-offset-4">inherited house in Washington guide</Link>{" "}
               or the{" "}
               <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executor roadmap</Link>.
@@ -176,7 +176,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
           },
           smalltown: {
             h2: `Need Help with an Inherited Home in ${city.name}?`,
-            body: `Smaller markets reward accurate pricing and patient preparation. We'll talk through condition, timing, and what's worth doing before the home is listed.`,
+            body: `Smaller markets reward accurate pricing and patient preparation. ${FEATURED_BROKER.Role} will talk through condition, timing, and what's worth doing before the home is listed.`,
             cta: `Call About ${city.name}`,
           },
           military: {

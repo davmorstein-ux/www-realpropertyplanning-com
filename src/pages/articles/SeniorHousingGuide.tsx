@@ -299,7 +299,7 @@ const SeniorHousingGuide = () => {
                 <em>
                   These guides explain senior housing and care decisions in plain language.{" "}
                   <Link to="/guides-and-resources" className={inlineLink}>
-                    Explore our full library of resources →
+                    Explore the full library of resources →
                   </Link>
                 </em>
               </p>

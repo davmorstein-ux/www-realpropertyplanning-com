@@ -595,7 +595,7 @@ export const homepageFaqSchema = {
       name: "Is there a cost to consult with Real Property Planning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Initial consultations are free and carry no obligation. We typically respond within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started.",
+        text: "Initial consultations are free and carry no obligation. Responses typically come within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started.",
       },
     },
   ],

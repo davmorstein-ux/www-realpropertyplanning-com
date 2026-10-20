@@ -226,7 +226,7 @@ const AgingInPlace = () => {
 
               <p className={pClass + " italic text-center"}>
                 These guides explain senior housing and care decisions in plain language.{" "}
-                <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link>
+                <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources →</Link>
               </p>
 
             </article>

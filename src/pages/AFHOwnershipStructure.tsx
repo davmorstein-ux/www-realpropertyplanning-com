@@ -626,7 +626,7 @@ const AFHOwnershipStructure = () => (
                 textDecoration: "none",
               }}
             >
-              Contact Us About an AFH
+              Ask About an AFH
             </Link>
             <a
               href="https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx"

@@ -69,7 +69,7 @@ const PAGE_CSS = `
 
 const NOTE: Record<Library["id"], string> = {
   family:
-    "These are short answers to help you get oriented. Each one comes from one of our guides; follow the link for the full explanation and its sources. This is general information for Washington families, not legal, tax, financial or medical advice.",
+    "These are short answers to help you get oriented. Each one comes from one of the site's guides; follow the link for the full explanation and its sources. This is general information for Washington families, not legal, tax, financial or medical advice.",
   afh:
     "These are short answers to help you get oriented. Each one comes from an AFH Club guide; follow the link for the full explanation and its sources. DSHS rules and rates change: confirm current requirements with DSHS. This is general information, not legal, tax, lending or licensing advice.",
 };
@@ -128,7 +128,7 @@ function JourneyPage({ lib, journey }: { lib: Library; journey: Journey }) {
         <Link to={lib.basePath} className="rpp-qa-back">← All {lib.id === "afh" ? "AFH Club " : ""}questions &amp; answers</Link>
         <h1 className="rpp-qa-h1">{journey.title}: Questions &amp; Answers</h1>
         <div className="rpp-qa-intro">
-          Short answers to {entries.length} common questions, each from {lib.id === "afh" ? "an AFH Club guide" : "one of our guides"} and linked to it. {journey.blurb}{" "}
+          Short answers to {entries.length} common questions, each from {lib.id === "afh" ? "an AFH Club guide" : "one of the site's guides"} and linked to it. {journey.blurb}{" "}
           Prefer the step-by-step guide? Start at <Link to={journey.start} className="rpp-qa-start">{journey.title}</Link>.
         </div>
         <div className="rpp-qa-ask">

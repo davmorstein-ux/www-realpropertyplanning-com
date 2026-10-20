@@ -59,7 +59,7 @@ const placeholderProfessional: Professional = {
   name: "Your Name Here",
   firm: "Your Firm Name",
   counties: ["King County"],
-  bio: "Featured professionals will appear here. If you serve Western Washington families in this field, we'd love to hear from you.",
+  bio: "Featured professionals will appear here. If you serve Western Washington families in this field, please get in touch.",
 };
 
 const ProfessionPageTemplate = ({
@@ -294,7 +294,7 @@ const ProfessionPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-xl mx-auto text-center">
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Not sure who you need? We're happy to help point you in the right direction.
+              Not sure who you need? Get in touch for help finding the right direction.
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg">
@@ -314,7 +314,7 @@ const ProfessionPageTemplate = ({
               Are you a {professionLabel.toLowerCase()} serving Western Washington families?
             </p>
             <p className="text-base text-muted-foreground/70 mb-4">
-              If you work with families navigating estate settlement, inherited property, or senior housing transitions, we'd like to learn more about your practice.
+              If you work with families navigating estate settlement, inherited property, or senior housing transitions, please share a little about your practice.
             </p>
             <Link
               to={`/contact?subject=Professional+Listing+Inquiry+—+${encodeURIComponent(title)}`}

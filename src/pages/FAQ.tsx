@@ -88,7 +88,7 @@ const faqs = [
     answer: `Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. ${FEATURED_BROKER.Role} is not a tax advisor, but ${FEATURED_BROKER.pronoun.subject} coordinates closely with your CPA or estate attorney and can produce the valuation documentation they need.\n\n${softCta}`,
   },
   {
-    question: "Can you start working with us before the estate attorney is even hired?",
+    question: `Can ${FEATURED_BROKER.role} start working with you before the estate attorney is even hired?`,
     answer: `Yes. Many families call ${FEATURED_BROKER.role} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.Role} will tell you honestly whether you need an attorney (almost always yes for Washington probate). Real Property Planning does not refer clients to attorneys; choose a Washington-licensed probate attorney and confirm their license with the Washington State Bar Association (wsba.org). Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
   },
   {

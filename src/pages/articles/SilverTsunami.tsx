@@ -61,7 +61,7 @@ const SilverTsunami = () => {
                 The Silver Tsunami Is Here
               </div>
               <h3 className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 italic">
-                America's aging population is reshaping housing, care, and the future of our communities — ready or not
+                America's aging population is reshaping housing, care, and the future of communities — ready or not
               </h3>
 
               <hr className="my-8 border-border" />
@@ -82,7 +82,7 @@ const SilverTsunami = () => {
               <p className={pClass}>Let that number settle for a moment.</p>
               <p className={pClass}>
                 Not per week. Not per month. Every day from 2024 through 2027, more than 11,000 Americans cross the
-                threshold into what we still call "retirement age" — more than 4.1 million a year, according to the
+                threshold into what is still called "retirement age" — more than 4.1 million a year, according to the
                 Alliance for Lifetime Income's Peak 65 research. "Retirement age" is a term that increasingly fails to
                 capture the complexity of what follows.
               </p>
@@ -94,7 +94,7 @@ const SilverTsunami = () => {
               <p className={pClass}>
                 By 2030, when all Boomers will be older than 65, about 1 in 5 Americans will be 65 or older, according
                 to the U.S. Census Bureau. This is not
-                a temporary surge. It is a permanent restructuring of who we are as a country.
+                a temporary surge. It is a permanent restructuring of the country itself.
               </p>
 
               <hr className="my-8 border-border" />
@@ -110,7 +110,7 @@ const SilverTsunami = () => {
                 Every day, families sit down at kitchen tables and try to figure out what comes next for a parent who
                 can no longer drive, a spouse whose memory is slipping, a sibling who lives alone three states away.
                 They are not failing to plan because they don't care. They're failing to plan because the landscape is
-                genuinely complicated — and because most of us spend our lives avoiding the conversation until
+                genuinely complicated — and because most people spend their lives avoiding the conversation until
                 circumstances force it.
               </p>
               <p className={pClass}>The Silver Tsunami makes that avoidance increasingly costly.</p>
@@ -233,7 +233,7 @@ const SilverTsunami = () => {
                 rising.
               </p>
               <p className={pClass}>
-                The question is whether we are ready — as families, as communities, as a country — to meet it with the
+                The question is whether families, communities, and the country are ready to meet it with the
                 planning, the resources, and the compassion it demands.
               </p>
 
@@ -242,7 +242,7 @@ const SilverTsunami = () => {
               <p className={pClass + " italic"}>
                 These guides explain senior housing and transition decisions in plain language.{" "}
                 <Link to="/guides-and-resources" className={inlineLink}>
-                  Explore our resources
+                  Explore the resources
                 </Link>{" "}
                 or{" "}
                 <Link to="/senior-living-advisors" className={inlineLink}>

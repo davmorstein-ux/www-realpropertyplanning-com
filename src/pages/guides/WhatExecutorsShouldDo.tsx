@@ -157,7 +157,7 @@ const WhatExecutorsShouldDo = () => (
             {FEATURED_BROKER.Role} acts as a single point of contact for the real estate side of the equation — communicating clearly with all parties, providing regular updates, and ensuring that decisions are documented and defensible. This reduces the executor's communication burden and keep the process moving forward.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Learn more about how We work with <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys and fiduciaries</Link> or explore the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">full sale process from consultation to closing</Link>.
+            Learn more about how {FEATURED_BROKER.role} works with <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys and fiduciaries</Link> or explore the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">full sale process from consultation to closing</Link>.
           </p>
         </div>
       </div>

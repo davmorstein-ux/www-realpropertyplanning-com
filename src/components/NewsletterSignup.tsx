@@ -202,7 +202,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
        rejected has no way to argue. MailerLite validates properly, and double
        opt-in catches anything that gets through. */
     if (!trimmed || !trimmed.includes("@") || trimmed.length < 5) {
-      setError("Please enter an email address so we know where to send it.");
+      setError("Please enter an email address to receive it.");
       setStatus("error");
       return;
     }
@@ -230,7 +230,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
     } catch {
       /* Never surface the raw error — meaningless to the reader, and it can
          leak provider detail. */
-      setError("Something went wrong on our end. Please try again in a moment.");
+      setError("Something went wrong. Please try again in a moment.");
       setStatus("error");
     }
   };
@@ -370,8 +370,8 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
            step is stated plainly — otherwise someone who never clicks the
            confirmation link believes they subscribed. */
         <p className="rpp-news-done" role="status">
-          <strong>Please check your email.</strong> We have sent a message asking you to
-          confirm your address — we will not add you to the list until you do. If it does
+          <strong>Please check your email.</strong> A message has been sent asking you to
+          confirm your address — you will not be added to the list until you do. If it does
           not arrive within a few minutes, it may be in your spam folder.
         </p>
       ) : (
@@ -446,7 +446,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
 
           {/* This claim is only true because /privacy exists and says so. */}
           <p className="rpp-news-fine">
-            We will not sell or share your information. Unsubscribe at any time.{" "}
+            Your information is never sold or shared. Unsubscribe at any time.{" "}
             <a href="/privacy">Privacy policy</a>
           </p>
         </form>

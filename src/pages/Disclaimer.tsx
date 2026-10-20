@@ -9,7 +9,7 @@ const Disclaimer = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Disclaimer | Real Property Planning"
-        description="Real Property Planning is an independent educational hub. We do not provide professional services; featured professionals are independent and not affiliates of Real Property Planning."
+        description="Real Property Planning is an independent educational hub. It does not provide professional services; featured professionals are independent and not affiliates of Real Property Planning."
       />
       <BreadcrumbSchema items={[{ name: "Disclaimer", url: "/disclaimer" }]} />
       <Header />
@@ -67,7 +67,7 @@ const Disclaimer = () => {
                   No Guarantees
                 </h2>
                 <p>
-                  While Real Property Planning strives to provide accurate and up-to-date information, we make no representations or warranties of any kind regarding the completeness, accuracy, or reliability of any content on this site. Laws, regulations, and professional standards change frequently and may vary by location.
+                  While Real Property Planning strives to provide accurate and up-to-date information, it makes no representations or warranties of any kind regarding the completeness, accuracy, or reliability of any content on this site. Laws, regulations, and professional standards change frequently and may vary by location.
                 </p>
               </div>
 

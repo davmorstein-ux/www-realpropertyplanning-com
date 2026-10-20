@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How do I get notified when a new Seattle AFH listing comes on the market?",
     answer:
-      "The fastest way is to reach out directly — we track new Seattle-area AFH listings as they hit the market and can notify you when something matching your criteria becomes available, often before it's widely marketed.",
+      `The fastest way is to reach out directly — ${FEATURED_BROKER.role} tracks new Seattle-area AFH listings as they hit the market and can notify you when something matching your criteria becomes available, often before it's widely marketed.`,
   },
 ];
 

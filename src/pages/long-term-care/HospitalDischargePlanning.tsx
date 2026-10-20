@@ -317,7 +317,7 @@ const HospitalDischargePlanning = () => {
               </Link>{" "}
               who understand the full landscape of care in Washington State.{" "}
               <Link to="/guides-and-resources" className={inlineLink}>
-                Explore our full library of resources
+                Explore the full library of resources
               </Link>{" "}
               to start the conversation.
             </p>

@@ -188,7 +188,7 @@ const HomepageLeadForm = () => {
       </form>
 
       <p className="text-muted-foreground text-base text-center mt-4">
-        We respond personally.
+        Every message gets a personal reply.
       </p>
     </div>
   );

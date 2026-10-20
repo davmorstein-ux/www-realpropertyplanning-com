@@ -164,7 +164,7 @@ export const LIBRARIES: Record<Library["id"], Library> = {
     id: "family",
     basePath: QUESTIONS_PATH,
     title: "Questions & Answers",
-    intro: "Short answers to the questions families ask most, grouped the same way as the rest of the site. Every answer comes from one of our guides and links to it, so you can read the full explanation and its sources.",
+    intro: "Short answers to the questions families ask most, grouped the same way as the rest of the site. Every answer comes from one of the site's guides and links to it, so you can read the full explanation and its sources.",
     accent: "#1B3A6B",
     journeys: JOURNEYS,
     entries: (slug) => LIBRARY[slug as keyof typeof LIBRARY] ?? [],

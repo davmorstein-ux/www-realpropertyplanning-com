@@ -102,7 +102,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
     <div className={`rpp-ask${bare ? " rpp-ask-bare" : ""}`} style={{ ["--ask" as string]: accent }}>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <h2 className="rpp-ask-h" id={`${id}-h`}>{title}</h2>
-      <p className="rpp-ask-sub">Type your question in plain words. You'll get the closest answer from our guides and the page to read next. Please leave out names and personal details.</p>
+      <p className="rpp-ask-sub">Type your question in plain words. You'll get the closest answer from the site's guides and the page to read next. Please leave out names and personal details.</p>
       <form
         className="rpp-ask-form"
         role="search"
@@ -146,7 +146,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
           <>
             {res.answer ? (
               <div className="rpp-ask-answer">
-                <div className="rpp-ask-label">Closest answer on our site</div>
+                <div className="rpp-ask-label">Closest answer on the site</div>
                 <div className="rpp-ask-q">{res.answer.q}</div>
                 <p className="rpp-ask-a">{res.answer.a}</p>
                 <p className="rpp-ask-read">
@@ -157,7 +157,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
               <div className="rpp-ask-answer">
                 <div className="rpp-ask-label">No direct answer yet</div>
                 <p className="rpp-ask-a">
-                  We don't have a short answer to “{asked}” yet.
+                  There is no short answer to “{asked}” on the site yet.
                   {res.more.length > 0 ? " These pages are the closest:" : ""}
                 </p>
               </div>
@@ -178,7 +178,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
             )}
             <p className="rpp-ask-foot">
               Not what you needed?{" "}
-              <Link className="rpp-ask-link" to={`/contact?reason=${encodeURIComponent(contactReason)}`}>Ask us directly</Link>.
+              <Link className="rpp-ask-link" to={`/contact?reason=${encodeURIComponent(contactReason)}`}>Ask directly</Link>.
               {" "}General information, not legal, tax or financial advice.
             </p>
           </>

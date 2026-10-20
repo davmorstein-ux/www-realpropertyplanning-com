@@ -36,7 +36,7 @@ const ARTICLES = [
     minutes: 5,
     listenMinutes: 7,
     img: "/The_Silver_Tsunami.webp",
-    description: "The surge of seniors is reshaping housing, care, and the future of our communities — ready or not.",
+    description: "The surge of seniors is reshaping housing, care, and the future of communities — ready or not.",
   },
   {
     title: "The Senior Housing Guide",
