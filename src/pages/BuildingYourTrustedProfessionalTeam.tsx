@@ -306,12 +306,15 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         <div className="container px-6 lg:px-8 pt-8">
           <p className="max-w-3xl mx-auto text-center text-navy/90 text-base leading-relaxed mb-6">
-            Not sure where to start?{" "}
+            {/* Was "Reach out and we'll help you figure out the right first
+                step." The site provides no services, so it never speaks as
+                "we" (David, Oct 20, 2026). */}
+            Not sure which professional you need?{" "}
             <Link
               to="/contact"
               className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
             >
-              Reach out and we'll help you figure out the right first step.
+              Ask a question through the contact form.
             </Link>
           </p>
           <JourneyShortcuts lead="Want a quick answer first?" questions="professional" style={{ marginBottom: "1.5rem" }} />

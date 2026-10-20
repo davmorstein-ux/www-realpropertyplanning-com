@@ -276,7 +276,7 @@ const ComingSoon = () => (
   <div className="bg-white border-2 border-gold/25 rounded-2xl p-8 md:p-10 text-center shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]">
     <p className="text-navy text-lg md:text-xl leading-relaxed mb-2 font-semibold">Content coming soon.</p>
     <p className="text-navy/90 text-base md:text-lg leading-relaxed">
-      We're putting together clear, helpful guidance for this step. Check back shortly.
+      Guidance for this step is being written. Check back shortly.
     </p>
   </div>
 );
