@@ -5742,20 +5742,24 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
    changes. THE ONE PLACE TO TUNE IT: the three variables below. The script
    (src/components/PulseNavigator.tsx) reads --rpp-pulse-duration from here,
    so the navigation delay always matches the animation.
-   Opt an element in with the attribute data-pulse. Scale only (transform):
-   no colour, glow or layout change, so neighbours never move.
+   Opt an element in with the attribute data-pulse (or list its class in
+   src/lib/pulseTargets.ts). Scale only: no colour, glow or layout change, so
+   neighbours never move.
 ═══════════════════════════════════════════════ */
 :root {
   --rpp-pulse-duration: 900ms;
   --rpp-pulse-scale: 1.03;
   --rpp-pulse-easing: ease-in-out;
 }
+/* Animates the separate `scale` property, not `transform`: several tiles and
+   buttons set transform with !important (hover lifts), which would silently
+   cancel a transform animation. `scale` combines with them instead. */
 @keyframes rpp-double-pulse {
-  0%   { transform: scale(1); }
-  25%  { transform: scale(var(--rpp-pulse-scale)); }
-  50%  { transform: scale(1); }
-  75%  { transform: scale(var(--rpp-pulse-scale)); }
-  100% { transform: scale(1); }
+  0%   { scale: 1; }
+  25%  { scale: var(--rpp-pulse-scale); }
+  50%  { scale: 1; }
+  75%  { scale: var(--rpp-pulse-scale); }
+  100% { scale: 1; }
 }
 html body [data-pulse].rpp-pulsing {
   animation: rpp-double-pulse var(--rpp-pulse-duration) var(--rpp-pulse-easing) 1 both !important;

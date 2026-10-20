@@ -44,9 +44,9 @@ npx tsc --noEmit -p tsconfig.app.json
 
 ## Double-pulse click effect (Oct 20, 2026)
 
-- Add `data-pulse` to a tile or button and it gives two gentle heartbeats when clicked; internal links navigate after the pulse. One listener in `src/components/PulseNavigator.tsx` does it sitewide; never copy animation code into a component.
+- Add `data-pulse` to a tile or button (or list its class in `src/lib/pulseTargets.ts`, the one list of existing tile/button classes) and it gives two gentle heartbeats when clicked; internal links navigate after the pulse. The shared `<Button>` adds `data-pulse` itself for full-size variants. One listener in `src/components/PulseNavigator.tsx` does it sitewide; never copy animation code into a component. `data-no-pulse` opts an element out; header and footer never pulse.
 - Timing and scale are set ONLY in `src/index.css` (`--rpp-pulse-duration` 900ms, `--rpp-pulse-scale` 1.03, `--rpp-pulse-easing`). The script reads the duration from there.
-- Not for text links, form fields, dropdowns, checkboxes or small controls. Reduced-motion visitors get no animation and no delay. Status Oct 20: on the four homepage tiles only, awaiting David's approval before it goes sitewide.
+- Not for text links, form fields, dropdowns, checkboxes or small controls. Reduced-motion visitors get no animation and no delay. Approved by David on the homepage tiles and rolled out sitewide Oct 20, 2026. The keyframes animate the `scale` property, not `transform`, because several tiles set transform with !important.
 - The site never speaks as "we" or "I" (David, Oct 20, 2026); see the wording rules before writing copy.
 
 ## My Real Property Plan (/my-plan, Oct 18, 2026)

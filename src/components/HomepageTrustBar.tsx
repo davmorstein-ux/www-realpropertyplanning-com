@@ -26,7 +26,7 @@ const HomepageTrustBar = () => (
     <ul>
       {STATS.map((s) => (
         <li key={s.href}>
-          <Link to={s.href} className="bg-transparent">
+          <Link to={s.href} data-pulse className="bg-transparent">
             <strong>{s.value}</strong>
             <span>{s.label}</span>
             <span className="rpp-trustbar-arrow" aria-hidden="true">→</span>

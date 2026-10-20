@@ -47,6 +47,7 @@ export default function MyPlanInvite({ situation, style }: { situation: "estate"
       <p style={{ margin: "0 0 16px", fontSize: 18, lineHeight: 1.55 }}>{c.body}</p>
       <Link
         to={`/my-plan#${situation}:`}
+        data-pulse
         style={{
           display: "inline-block",
           background: "#1B3A6B",

@@ -65,6 +65,7 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
         <p style={{ fontSize: 17, lineHeight: 1.5, color: dark ? "rgba(255,255,255,0.9)" : "#3a3531", margin: "0 auto 1.25rem", maxWidth: 640 }}>{body}</p>
         <Link
           to={`/contact?reason=${reason}`}
+          data-pulse
           className="bg-transparent"
           style={{
             display: "inline-block",

@@ -77,8 +77,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ) : (
       children
     );
+    /* Double pulse on click (src/components/PulseNavigator.tsx): full-size
+       buttons only; never icon buttons, ghost or text-link variants.
+       Pass data-no-pulse to opt one out. */
+    const pulses = size !== "icon" && variant !== "link" && variant !== "ghost";
     return (
-      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...(pulses ? { "data-pulse": "" } : {})}
+        {...props}
+      >
         {content}
       </Comp>
     );
