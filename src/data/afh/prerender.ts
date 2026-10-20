@@ -21,6 +21,7 @@ import path from "node:path";
 import { listingsForFacility } from "../afhAddressMatch";
 import { afhListings, formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
 import { directoryNextSteps } from "./nextSteps";
+import { cityGuide, type Seg } from "./cityGuide";
 import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "./inspectionRecord";
 
 /* ------------------------------------------------------------------ */
@@ -241,6 +242,34 @@ export function citySummarySentence(
   );
 }
 
+/** The same local guide as AFHCityGuide.tsx (cost, dementia care, nearby cities), for the static HTML. */
+function cityGuideHtml(entry: CityIndexEntry, s: ReturnType<typeof cityStats>, index: CityIndexEntry[]): string {
+  const g = cityGuide(
+    {
+      city: entry.city,
+      citySlug: entry.citySlug,
+      county: entry.county,
+      facilityCount: entry.facilityCount,
+      medicaid: s.medicaid,
+      dementia: s.dementia,
+      mentalHealth: s.mental,
+    },
+    index,
+  );
+  const segs = (xs: Seg[]) => xs.map((x) => (typeof x === "string" ? esc(x) : a(x.href.replace(/#.*$/, ""), x.text))).join("");
+  let out = h2(g.heading);
+  for (const sec of g.sections) {
+    out += `<h3 style="font-size:18px;margin:16px 0 8px">${esc(sec.heading)}</h3>` + sec.paragraphs.map((p_) => p(segs(p_))).join("");
+  }
+  if (g.nearby.length) {
+    out +=
+      `<h3 style="font-size:18px;margin:16px 0 8px">Adult family homes near ${esc(entry.city)}</h3>` +
+      p(g.nearby.map((n) => a(n.href, n.text)).join(" · ")) +
+      p(a(g.countyLink.href, `${g.countyLink.text} →`));
+  }
+  return out;
+}
+
 /** The same "Where to go next" links as AFHDirectoryNextSteps.tsx, for the static HTML. */
 function nextStepsHtml(city: string): string {
   return (
@@ -256,7 +285,7 @@ function nextStepsHtml(city: string): string {
   );
 }
 
-function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (typeof FILTERS)[number]): PrerenderedRoute {
+function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (typeof FILTERS)[number], index?: CityIndexEntry[]): PrerenderedRoute {
   const { city, citySlug } = entry;
   const shown = filter ? facilities.filter(filter.matches) : facilities;
   const route = filter ? `/afh-club/homes/${citySlug}/${filter.slug}` : `/afh-club/homes/${citySlug}`;
@@ -315,6 +344,7 @@ function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (
 
   parts.push(h2(`${shown.length} ${plural(shown.length, "home", "homes")}${filter ? ` of ${entry.facilityCount}` : ""}`));
   parts.push(`<ul style="list-style:none;padding:0;margin:0">${shown.map(facilityRow).join("")}</ul>`);
+  if (!filter && index) parts.push(cityGuideHtml(entry, s, index));
   parts.push(nextStepsHtml(city));
   parts.push(h2("About this data"));
   parts.push(sourceNote(s.retrievedAt));
@@ -689,7 +719,7 @@ export function buildAfhDirectoryRoutes(dataDir: string): PrerenderedRoute[] {
     }
     for (const f of facilities) if (f.retrievedAt > latest) latest = f.retrievedAt;
 
-    out.push(buildCityPage(entry, facilities));
+    out.push(buildCityPage(entry, facilities, undefined, index));
     for (const filter of FILTERS) {
       if (facilities.some(filter.matches)) out.push(buildCityPage(entry, facilities, filter));
     }

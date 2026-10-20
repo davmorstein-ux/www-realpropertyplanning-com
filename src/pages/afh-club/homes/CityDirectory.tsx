@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AFHDirectoryNextSteps from "@/components/AFHDirectoryNextSteps";
+import AFHCityGuide from "@/components/AFHCityGuide";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -307,6 +308,20 @@ const CityDirectory = () => {
                     facilities={shown}
                     emptyMessage={`No ${city} homes currently match this. Try another filter, or view all ${cityEntry.facilityCount} homes in ${city}.`}
                   />
+                  {!filter && stats && (
+                    <AFHCityGuide
+                      input={{
+                        city,
+                        citySlug: cityEntry.citySlug,
+                        county: cityEntry.county,
+                        facilityCount: cityEntry.facilityCount,
+                        medicaid: medicaidCount,
+                        dementia: stats.dementia,
+                        mentalHealth: stats.mentalHealth,
+                      }}
+                      style={{ marginTop: 44 }}
+                    />
+                  )}
                   <AFHDirectoryNextSteps city={city} style={{ marginTop: 40 }} />
                 </>
               )}
