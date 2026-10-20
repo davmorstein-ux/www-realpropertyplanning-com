@@ -1,7 +1,6 @@
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
 import ProfessionalNetworkCard from "@/components/ProfessionalNetworkCard";
 import { professionalNetworkCategories } from "@/components/professional-network-tiles-data";
-import professionalTeamHero from "@/assets/professional-team-hero.webp";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";
@@ -32,8 +31,7 @@ const ProfessionalTeam = () => (
     breadcrumbName="Building Your Professional Team"
     bandTitle="BUILDING YOUR PROFESSIONAL TEAM"
     disclaimer={DISCLAIMER}
-    heroImageOverride={professionalTeamHero}
-    heroAltOverride="Coordinated professional team supporting estate, probate, and senior transitions in Washington State"
+    hideHero
   >
     <SubH2>The Right Team Makes Everything Easier.</SubH2>
     <P>
@@ -53,9 +51,13 @@ const ProfessionalTeam = () => (
 
     <Divider />
 
-    {/* Professional team tiles — same premium card used on the homepage / professional network */}
-    <div className="not-prose -mx-4 md:-mx-16 lg:-mx-32">
-      <div className="rpp-m2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+    {/* Professional team tiles — same card as the professional network.
+        Oct 20, 2026 (David: "too large"): kept inside the text column instead
+        of breaking out of it with negative margins (the grid ran 1,344px wide
+        on a 1,280px screen, each tile 432 x 400). Two across on phones,
+        three on tablets and desktop. */}
+    <div className="not-prose">
+      <div className="rpp-m2 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5" style={{ maxWidth: 720, margin: "0 auto" }}>
         {teamTiles.map((tile) => (
           <ProfessionalNetworkCard key={tile.title} tile={tile} />
         ))}
