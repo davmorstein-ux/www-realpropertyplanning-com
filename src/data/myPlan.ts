@@ -220,7 +220,7 @@ function estatePlan(a: Answers): PlanStep[] {
     steps.push({
       id: "authority",
       title: "Use your authority: the first 30 days",
-      why: "With the case open you can act for the estate. The first weeks are about securing assets, notifying people, and keeping records of everything you do.",
+      why: "With the case open, you can act for the estate. The first weeks are about securing assets, notifying people, and keeping records of everything you do.",
       links: [
         { title: "An executor's first 30 days", href: "/executor-responsibilities-first-steps/first-30-days" },
         { title: "An executor's legal duties", href: "/executor-responsibilities-first-steps/legal-duties" },
@@ -315,7 +315,7 @@ function estatePlan(a: Answers): PlanStep[] {
       id: "decide",
       title: "Plan the sale",
       why: probate
-        ? "In Washington an estate house can often be sold during probate. Know the steps and how long it usually takes."
+        ? "In Washington, an estate house can often be sold during probate. Know the steps and how long it usually takes."
         : "A sale outside probate is usually simpler, but the steps and timing still need planning.",
       links: probate
         ? [
@@ -461,7 +461,7 @@ function parentPlan(a: Answers): PlanStep[] {
       id: "authority",
       title: crisis ? "Sort out who can sign, quickly" : "Put a durable power of attorney in place",
       why: crisis
-        ? "Without one, the family may need a court guardianship before anyone can act on the house or accounts."
+        ? "Without a power of attorney, the family may need a court guardianship before anyone can act on the house or accounts."
         : "While your parent can still sign, a durable power of attorney avoids a court guardianship later.",
       links: crisis
         ? [
