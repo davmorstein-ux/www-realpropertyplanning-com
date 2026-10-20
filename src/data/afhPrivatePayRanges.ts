@@ -27,6 +27,9 @@ export type PrivatePayMarket =
   | "king-lakeside"
   | "snohomish"
   | "pierce"
+  | "spokane"
+  | "clark"
+  | "thurston"
   | "other";
 
 export interface PrivatePayTier {
@@ -72,7 +75,19 @@ const T = {
   personal: { label: "Personal care", note: "private room, standard assistance with daily living" },
   memory: { label: "Memory care", note: "dementia support; heavier care sits at the top or above" },
   highEnd: { label: "Higher-end / memory care", note: "premium homes and memory-care beds in this submarket" },
+  acuityMemory: { label: "High acuity / memory care", note: "extensive hands-on help, advanced dementia, complex mobility or higher staffing" },
 } as const;
+
+/** Three care levels (basic, moderate, high acuity / memory care): the format David
+ *  used for the Oct 19, 2026 review of Spokane, Clark and Thurston. */
+const three = (basic: [number, number], typical: [number, number], acuity: [number, number]): PrivatePayTier[] => [
+  { ...T.basic, low: basic[0], high: basic[1] },
+  { ...T.typical, low: typical[0], high: typical[1] },
+  { ...T.acuityMemory, low: acuity[0], high: acuity[1], openEnded: true },
+];
+
+/** Second review: Spokane, Clark and Thurston counties, confirmed by David Oct 19, 2026. */
+const REVIEWED_OCT = "2026-10-19";
 
 const four = (
   basic: [number, number],
@@ -186,6 +201,39 @@ export const PRIVATE_PAY_BANDS: PrivatePayBand[] = [
     note: "Tacoma homes cluster in the lower half of the band; Gig Harbor and specialized memory-care homes can exceed $10,000.",
     confirmed: true,
     reviewed: REVIEWED,
+  },
+  {
+    market: "spokane",
+    label: "Spokane County",
+    county: "Spokane",
+    counties: ["Spokane"],
+    low: 5500,
+    high: 7500,
+    tiers: three([4500, 5500], [5500, 7500], [7500, 10000]),
+    confirmed: true,
+    reviewed: REVIEWED_OCT,
+  },
+  {
+    market: "clark",
+    label: "Clark County",
+    county: "Clark",
+    counties: ["Clark"],
+    low: 6000,
+    high: 8000,
+    tiers: three([5000, 6000], [6000, 8000], [8000, 11000]),
+    confirmed: true,
+    reviewed: REVIEWED_OCT,
+  },
+  {
+    market: "thurston",
+    label: "Thurston County",
+    county: "Thurston",
+    counties: ["Thurston"],
+    low: 6000,
+    high: 8000,
+    tiers: three([5000, 6000], [6000, 8000], [8000, 10000]),
+    confirmed: true,
+    reviewed: REVIEWED_OCT,
   },
   {
     market: "other",

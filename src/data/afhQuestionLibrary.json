@@ -2036,7 +2036,7 @@
     "Should I count my Medicaid contract as income in the estimator?",
     "Which Medicaid rates does the AFH valuation estimator use?"
    ],
-   "a": "Partly. Without the P&L, the estimator can build gross revenue from market rates: pick the market (King, Snohomish or Pierce County areas), enter how many beds you expect at each care level, and it fills in revenue using per-resident private-pay ranges and the DSHS Medicaid rate for that county, from the schedule effective July 1, 2026. Count only beds with a Medicaid resident today; a Medicaid contract alone is not income. The value estimate itself still needs the home's annual net income.",
+   "a": "Partly. Without the P&L, the estimator can build gross revenue from market rates: pick the market (King, Snohomish, Pierce, Spokane, Clark or Thurston County areas), enter how many beds you expect at each care level, and it fills in revenue using per-resident private-pay ranges and the DSHS Medicaid rate for that county, from the schedule effective July 1, 2026. Count only beds with a Medicaid resident today; a Medicaid contract alone is not income. The value estimate itself still needs the home's annual net income.",
    "path": "/afh-club/afh-valuation-estimator",
    "pathTitle": "AFH Valuation Estimator"
   },

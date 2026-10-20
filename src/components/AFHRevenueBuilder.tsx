@@ -258,8 +258,8 @@ const AFHRevenueBuilder = ({
         Use this revenue in the calculator
       </button>
       <p style={{ fontSize: 16, lineHeight: 1.5, color: "#1f2933", margin: "12px 0 0" }}>
-        Private-pay ranges are {FEATURED_APPRAISER.name}'s working bands from brokerage and appraisal experience (reviewed September
-        2026); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
+        Private-pay ranges are {FEATURED_APPRAISER.name}'s working bands from brokerage and appraisal experience (this market reviewed{" "}
+        {new Date(`${band.reviewed}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
         below if you have the actual P&amp;L.{" "}
         <Link to="/adult-family-home-costs" style={{ color: accent, fontWeight: 700 }}>
           See the full rate lookup by city and county
