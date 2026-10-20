@@ -7,6 +7,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import { trackPlannerCompleted } from "@/lib/siteTracking";
 import {
   CHECKLIST_PDF,
+  OFFICIAL_SOURCES,
   SITUATIONS,
   buildPlan,
   decodePlan,
@@ -79,6 +80,10 @@ const PAGE_CSS = `
   .mp-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 22px; }
   .mp button.mp-action { min-height: 52px; padding: 10px 18px !important; border-radius: 8px !important; font-family: ${FONT} !important; font-size: 18px !important; font-weight: 700 !important; cursor: pointer; border: 2px solid ${NAVY} !important; background: #fff !important; color: ${NAVY} !important; }
   .mp button.mp-action.mp-primary { background: ${NAVY} !important; color: #fff !important; }
+  .mp-sources { background: #fff; border: 1px solid #c9d3e3; border-radius: 10px; padding: 18px 18px 16px; margin-top: 8px; }
+  .mp-srclist { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 10px; }
+  .mp-srclist li { font-size: 17px; line-height: 1.5; }
+  .mp-srcnote { color: #3d3833; }
   .mp-print-only { display: none; }
   @media print {
     header, footer, nav, .mp-noprint, .rpp-news { display: none !important; }
@@ -87,6 +92,8 @@ const PAGE_CSS = `
     .mp a.mp-link { border: none; padding: 2px 0; font-size: 14px !important; }
     .mp a.mp-link::after { content: " — realpropertyplanning.com" attr(data-href); font-weight: 400; color: #444; }
     .mp-plan > li { break-inside: avoid; }
+    .mp-sources { border: 1px solid #999; break-inside: avoid; }
+    .mp-srclist a.mp-inline::after { content: " (" attr(data-href) ")"; font-weight: 400; color: #444; font-size: 13px; word-break: break-all; }
   }
 `;
 
@@ -310,10 +317,31 @@ const MyPlan = () => {
                       </li>
                     ))}
                   </ol>
-                  <p className="mp-small">
-                    General information, not legal, tax or financial advice. Every situation differs; the guides explain when it's worth
-                    calling a professional.
-                  </p>
+                  {/* Official sources (Oct 20, 2026): src/data/myPlan.ts OFFICIAL_SOURCES. */}
+                  <div className="mp-sources">
+                    <h3 className="mp-h3" style={{ marginTop: 0 }}>Where to confirm this</h3>
+                    <p className="mp-p" style={{ marginBottom: 10 }}>
+                      These plans follow Washington law and agency rules. The official sources:
+                    </p>
+                    <ul className="mp-srclist">
+                      {OFFICIAL_SOURCES[situation!].map((src) => (
+                        <li key={src.title}>
+                          {src.href ? (
+                            <a className="mp-inline" href={src.href} target="_blank" rel="noopener noreferrer" data-href={src.href}>
+                              {src.title}
+                            </a>
+                          ) : (
+                            <strong>{src.title}</strong>
+                          )}
+                          <span className="mp-srcnote">: {src.note}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mp-small" style={{ marginBottom: 0 }}>
+                      General information, not legal, tax or financial advice. Rules and figures change; confirm with these sources or a
+                      professional before acting. The guides explain when it's worth calling one.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="mp-noprint" style={{ marginTop: 28 }}>

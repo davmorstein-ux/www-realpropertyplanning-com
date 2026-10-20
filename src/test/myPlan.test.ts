@@ -9,6 +9,7 @@ import path from "node:path";
 import { REDIRECTS } from "@/data/redirects";
 import agingRoutes from "@/data/agingParentRoutes.json";
 import {
+  OFFICIAL_SOURCES,
   QUESTIONS,
   SITUATIONS,
   buildPlan,
@@ -91,6 +92,14 @@ describe("My Real Property Plan", () => {
     const keep = buildPlan("estate", { ...base, goal: "keep" }).flatMap((p) => p.links.map((l) => l.href));
     expect(sell).toContain("/whats-my-remodel-worth");
     expect(keep).not.toContain("/whats-my-remodel-worth");
+  });
+
+  it("official sources: every situation has some, and every link is an official https site", () => {
+    const official = /^https:\/\/(www\.)?(courts\.wa\.gov|app\.leg\.wa\.gov|irs\.gov|dor\.wa\.gov|dshs\.wa\.gov|hca\.wa\.gov|wacaresfund\.wa\.gov)\//;
+    for (const { value: s } of SITUATIONS) {
+      expect(OFFICIAL_SOURCES[s].length).toBeGreaterThanOrEqual(4);
+      for (const src of OFFICIAL_SOURCES[s]) if (src.href) expect(src.href, src.title).toMatch(official);
+    }
   });
 
   it("junk in the fragment is ignored", () => {

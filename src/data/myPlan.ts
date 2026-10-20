@@ -572,6 +572,86 @@ function parentPlan(a: Answers): PlanStep[] {
   return steps;
 }
 
+/**
+ * "Where to confirm this": official sources shown under each plan (Oct 20,
+ * 2026, David's request). One box per situation rather than a footnote per
+ * step; the guides each step links to cite their own sources. Every link is
+ * one the site already cites or one confirmed in a search of the agency's own
+ * domain on Oct 20, 2026. Agencies move pages: recheck these each January.
+ * `href` is omitted where there is no single statewide page (county records).
+ */
+export interface OfficialSource {
+  title: string;
+  note: string;
+  href?: string;
+}
+
+export const OFFICIAL_SOURCES: Record<Situation, OfficialSource[]> = {
+  estate: [
+    {
+      title: "Washington State Courts: court forms",
+      note: "The state's probate forms and case cover sheets.",
+      href: "https://www.courts.wa.gov/forms/?fa=forms.static&staticID=14",
+    },
+    {
+      title: "Washington's probate law (RCW Title 11)",
+      note: "The statutes on wills, probate, trusts and the personal representative.",
+      href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11",
+    },
+    {
+      title: "Your county recorder or auditor",
+      note: "A copy of the recorded deed shows how the house was owned and who is on title.",
+    },
+    {
+      title: "IRS Publication 551: Basis of Assets",
+      note: "How inherited property gets its tax basis.",
+      href: "https://www.irs.gov/publications/p551",
+    },
+    {
+      title: "Washington Department of Revenue: estate tax tables",
+      note: "The current Washington estate tax exclusion and rates.",
+      href: "https://dor.wa.gov/taxes-rates/other-taxes/estate-tax-tables",
+    },
+    {
+      title: "DSHS: Estate Recovery (form 14-454)",
+      note: "If Medicaid paid for your parent's long-term care.",
+      href: "https://www.dshs.wa.gov/sites/default/files/forms/pdf/14-454lp.pdf",
+    },
+  ],
+  parent: [
+    {
+      title: "DSHS: Getting started with long-term care",
+      note: "The state's starting point, including free local help through Community Living Connections.",
+      href: "https://www.dshs.wa.gov/adult-and-aging-services/getting-started-long-term-care",
+    },
+    {
+      title: "Washington Apple Health: long-term care and hospice",
+      note: "How Medicaid covers care at home, in adult family homes, assisted living and nursing homes.",
+      href: "https://www.hca.wa.gov/free-or-low-cost-health-care/i-need-medical-dental-or-vision-care/long-term-care-and-hospice",
+    },
+    {
+      title: "How Medicaid treats the home (WAC 182-513-1350)",
+      note: "The rule on when the house is an exempt asset.",
+      href: "https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1350",
+    },
+    {
+      title: "DSHS: Estate Recovery (form 14-454)",
+      note: "What the state may recover after death, and when it waits.",
+      href: "https://www.dshs.wa.gov/sites/default/files/forms/pdf/14-454lp.pdf",
+    },
+    {
+      title: "Washington's power of attorney law (RCW 11.125)",
+      note: "What a durable power of attorney must say to cover real estate.",
+      href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.125",
+    },
+    {
+      title: "WA Cares Fund",
+      note: "Washington's long-term care benefit: who qualifies and what it pays.",
+      href: "https://wacaresfund.wa.gov/",
+    },
+  ],
+};
+
 export function buildPlan(s: Situation, a: Answers): PlanStep[] {
   return s === "estate" ? estatePlan(a) : parentPlan(a);
 }
