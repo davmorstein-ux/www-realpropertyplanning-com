@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import TopicProfessionals from "@/components/TopicProfessionals";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -88,6 +89,7 @@ const PlanningSubPageLayout = ({
             </div>
             <article className="max-w-3xl mx-auto text-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
               {children}
+              <TopicProfessionals path={canonicalPath} style={{ marginTop: 40 }} />
             </article>
           </div>
         </section>

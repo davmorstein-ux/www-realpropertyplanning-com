@@ -9,6 +9,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
 import NextQuestions from "@/components/NextQuestions";
 import MyPlanInvite from "@/components/MyPlanInvite";
+import TopicProfessionals from "@/components/TopicProfessionals";
+import { professionalsForTopic } from "@/data/topicProfessionals";
 
 /** Same rule as scripts/build-aging-parent-routes.mjs, so the prerendered
  *  description and the live one agree. */
@@ -114,7 +116,8 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                   <p className="text-center text-navy/90 text-base mb-8">
                     You've made it — here's the guidance for your situation.
                   </p>
-                  <ContentBlock content={node.content} />
+                  <ContentBlock content={node.content} hideProsButton={professionalsForTopic(normalized).length > 0} />
+                  <TopicProfessionals path={normalized} style={{ maxWidth: 768, margin: "32px auto 0" }} />
                 </>
               ) : (
                 <ComingSoon />
@@ -274,7 +277,7 @@ const ComingSoon = () => (
   </div>
 );
 
-const ContentBlock = ({ content }: { content: NonNullable<FlowNode["content"]> }) => (
+const ContentBlock = ({ content, hideProsButton }: { content: NonNullable<FlowNode["content"]>; hideProsButton?: boolean }) => (
   <div className="space-y-6 max-w-3xl mx-auto">
     <p className="text-navy/80 text-lg leading-relaxed">{content.intro}</p>
     {content.sections.map((section, i) => (
@@ -285,12 +288,16 @@ const ContentBlock = ({ content }: { content: NonNullable<FlowNode["content"]> }
     ))}
     <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-8">
       <p className="text-navy/80 text-base leading-relaxed">{content.closing}</p>
+      {/* The named people for this topic follow below (TopicProfessionals), so
+          the generic directory button only shows where no list is mapped. */}
+      {!hideProsButton && (
       <a
         href="/featured-professionals"
         className="inline-block mt-4 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors"
       >
         Find a Professional
       </a>
+      )}
     </div>
   </div>
 );

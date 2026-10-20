@@ -23,7 +23,7 @@ const REWIRED = [
   "src/pages/AFHRealEstateBroker.tsx",
   "src/pages/Realtor.tsx",
   "src/pages/RealEstateAppraiser.tsx",
-  "src/pages/FeaturedProfessionals.tsx",
+  "src/data/familyProfessionals.ts",
   "src/pages/attorneys/ForProbateAttorneys.tsx",
   "src/pages/attorneys/ForFamilyLawAttorneys.tsx",
   "src/pages/attorneys/ForRealEstateAttorneys.tsx",
