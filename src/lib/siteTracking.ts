@@ -25,6 +25,12 @@
  *                        which is only on ad landing pages (metaPixel.ts).
  *   planner_completed    the three questions on /family-home-planning were all
  *                        answered: page_path only, never the answers.
+ *   next_step_click      a link in a related-reading or professionals block
+ *                        (Oct 20, 2026): block (next_questions | read_next |
+ *                        journey_shortcuts | my_plan_invite | people_who_help),
+ *                        link_path (the page it opens, or the site's host name
+ *                        for an outside link) and page_path. Blocks are marked
+ *                        with data-track-block.
  *   home_tile_click      one of the four homepage tiles under "What brings you
  *                        here today?" (Oct 20, 2026): tile (planAhead |
  *                        helpingParent | handlingEstate | needProfessional) and
@@ -105,6 +111,23 @@ export const initSiteTracking = (): void => {
             });
           }
           return;
+        }
+        // Related-reading and professional blocks (Oct 20, 2026): which block,
+        // where the link went, and the page it was on. Nothing about the visitor.
+        const block = a.closest("[data-track-block]");
+        if (block && !a.classList.contains("rpp-pulsing")) {
+          send("next_step_click", {
+            block: block.getAttribute("data-track-block") || "unknown",
+            link_path: (() => {
+              try {
+                const u = new URL(href, window.location.origin);
+                return u.origin === window.location.origin ? u.pathname + u.hash : u.hostname;
+              } catch {
+                return "unknown";
+              }
+            })(),
+            page_path: path(),
+          });
         }
         const tile = a.closest("[data-home-tile]");
         // Extra clicks while the double pulse plays are ignored (PulseNavigator), so count them once.

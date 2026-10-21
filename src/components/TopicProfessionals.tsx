@@ -27,6 +27,7 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
 
   return (
     <aside
+      data-track-block="people_who_help"
       className="topic-pros"
       aria-label="People who help with this"
       style={{

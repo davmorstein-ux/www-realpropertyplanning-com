@@ -49,7 +49,7 @@ import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
 import {
-  buildAiPages, buildAiGlossary, buildAiRuleChanges, buildAiDirectory, buildAiStats,
+  buildAiPages, sectionsFromRenderedHtml, RENDERED_TEXT_PREFIXES, buildAiGlossary, buildAiRuleChanges, buildAiDirectory, buildAiStats,
   buildAiListingsOverview, buildAiGuideLibrary, buildLlmsTxt, buildLlmsFullTxt, AI_DATA_VERSION, DSHS_RECORDS_URL_PATTERN,
 } from "./src/lib/aiData";
 
@@ -2896,13 +2896,28 @@ const loadAfhProfessionalsForAi = async () => {
   }));
 };
 
-const writeAiData = async (distDir: string) => {
+const writeAiData = async (distDir: string, rendered?: Map<string, RenderedPage>) => {
   const dataDir = path.resolve(__dirname, "src/data/afh");
   const dir = path.join(distDir, "ai");
   await mkdir(dir, { recursive: true });
   const generated = new Date().toISOString();
   const wrap = (data: unknown) => JSON.stringify({ version: AI_DATA_VERSION, generated, data });
   const pages = buildAiPages(ROUTE_METADATA);
+  /* The guided paths keep their text in components, not in ROUTE_METADATA, so
+     their entries carried only a title and description; AI tools, the site's
+     MCP server and the Ask box saw nothing of the answers (Oct 20, 2026). Fill
+     them from the page as rendered for crawlers above. */
+  let filled = 0;
+  for (const pg of pages) {
+    if (pg.sections?.length || !RENDERED_TEXT_PREFIXES.some((x) => pg.path.startsWith(x))) continue;
+    const html = rendered?.get(pg.path)?.html;
+    const sections = html ? sectionsFromRenderedHtml(html) : [];
+    if (sections.length) {
+      pg.sections = sections;
+      filled++;
+    }
+  }
+  if (rendered) console.log(`ai-data: page text added from the rendered page for ${filled} guided-path pages`);
   const glossary = buildAiGlossary();
   const stats = buildAiStats(dataDir);
   const listings = buildAiListingsOverview();
@@ -3133,7 +3148,7 @@ const routeMetadataPlugin = {
     /* AI-readable data (Oct 1, 2026): dist/ai/*.json, dist/llms.txt, dist/llms-full.txt.
        Built from the same data the pages use; the public MCP server fetches the
        JSON from the live site. See src/lib/aiData.ts (and its NWMLS note). */
-    await writeAiData(distDir);
+    await writeAiData(distDir, rendered);
 
     /* AFH listing push alerts (Oct 18, 2026): the feed the push-check function
        compares every 15 minutes. Written by the build so it only changes when

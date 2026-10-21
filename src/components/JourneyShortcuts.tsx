@@ -34,6 +34,7 @@ export default function JourneyShortcuts({
   const link = { color: "#1B3A6B", fontWeight: 700 } as const;
   return (
     <p
+      data-track-block="journey_shortcuts"
       className="journey-shortcuts"
       style={{
         maxWidth: 768,

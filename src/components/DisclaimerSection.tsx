@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import GuideProfessionals from "@/components/GuideProfessionals";
 import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
 /**
@@ -23,6 +24,10 @@ import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfe
  */
 const DisclaimerSection = () => {
   return (
+    <>
+    {/* "People who help with this" for guides listed in topicProfessionals.ts;
+        renders nothing on other pages (Oct 20, 2026). */}
+    <GuideProfessionals />
     <section className="py-8 lg:py-10 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
@@ -61,6 +66,7 @@ const DisclaimerSection = () => {
         }
       ` }} />
     </section>
+    </>
   );
 };
 

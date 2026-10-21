@@ -49,6 +49,12 @@ npx tsc --noEmit -p tsconfig.app.json
 - Not for text links, form fields, dropdowns, checkboxes or small controls. Reduced-motion visitors get no animation and no delay. Approved by David on the homepage tiles and rolled out sitewide Oct 20, 2026. The keyframes animate the `scale` property, not `transform`, because several tiles set transform with !important.
 - The site never speaks as "we" or "I" (David, Oct 20, 2026); see the wording rules before writing copy.
 
+## Page endings and professionals (Oct 20, 2026)
+
+- "People who help with this": `src/data/topicProfessionals.ts` is the one map (page path → 1-3 categories). The three homepage paths place the box in their own layouts; every other guide gets it from `GuideProfessionals`, placed once in `DisclaimerSection` and `ExecutorSubPageLayout`, so listing a path is enough. Rules (tests enforce): no attorneys on estate/probate pages until a probate attorney is listed; real estate & appraisal only on property topics; a page that lists an attorney must not say "does not refer clients to attorneys" (use "The site doesn't make referrals. The people listed below are ones the site's founder has met in person.").
+- `/ai/pages.json` text for the guided paths comes from the page as rendered at build (`sectionsFromRenderedHtml` in `src/lib/aiData.ts`), because their text lives in components, not ROUTE_METADATA. Hubs and choice pages stay without sections on purpose.
+- GA4 `next_step_click`: mark a related-reading or professionals block with `data-track-block="<name>"` and its link clicks are counted (siteTracking.ts; keep the privacy page in step).
+
 ## My Real Property Plan (/my-plan, Oct 18, 2026)
 - Questions, rules, wording and every link: `src/data/myPlan.ts` only; `src/pages/MyPlan.tsx` just renders. `src/test/myPlan.test.ts` builds every answer combination and fails on any link that isn't a live route or that redirects.
 - No AI, never gated (owner's decisions). Answers live in the URL fragment only; never send them to analytics, MailerLite or anywhere (care and Medicaid answers). Family side only; AFH buyers go to AFH Club.

@@ -30,6 +30,7 @@ export default function EstateReadNext({ path, style }: { path: string; style?: 
        side in a narrow column on phones. */
     <div
       role="navigation"
+      data-track-block="read_next"
       className="estate-readnext"
       aria-label="What to read next"
       style={{

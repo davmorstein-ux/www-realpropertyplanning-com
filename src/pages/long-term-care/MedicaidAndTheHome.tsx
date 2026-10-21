@@ -149,7 +149,7 @@ const MedicaidAndTheHome = () => (
         <div className="ptx-note" style={{ marginTop: 24 }}>
           <p style={{ marginBottom: 0 }}>
             General information, not legal advice. Medicaid figures change every year; DSHS and an elder law attorney can say how the rules apply to your family.
-            Real Property Planning does not refer clients to attorneys.
+            The site doesn't make referrals; the people listed below are ones the site's founder has met in person.
           </p>
         </div>
       </Section>

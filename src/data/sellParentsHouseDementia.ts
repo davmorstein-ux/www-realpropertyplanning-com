@@ -183,5 +183,5 @@ export const SPHD_FAQS = [
 export const SPHD_PRERENDER_SECTIONS: string[] = [
   ...SPHD_SECTIONS.map((s) => `${s.heading} — ${s.paras.join(" ")}${s.cites.length ? ` (${s.cites.map((c) => c.label).join("; ")})` : ""}`),
   `Checklist — ${SPHD_CHECKLIST.join(" ")}`,
-  "General information, not legal or tax advice. Real Property Planning does not refer clients to attorneys.",
+  "General information, not legal or tax advice. The site does not make referrals.",
 ];

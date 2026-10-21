@@ -27,9 +27,10 @@ describe("topic professionals", () => {
     }
   });
 
-  it("no attorneys on the estate pages until a probate attorney is listed", () => {
+  it("no attorneys on the estate and probate pages until a probate attorney is listed", () => {
+    const ESTATE = /^\/(estate-probate-inherited-property|washington-probate-guide|executor-responsibilities-first-steps|probate-glossary)|^\/guides\/(inherited-house|probate-|what-executors|executor-|taxes-selling-inherited|mortgage-after-death)/;
     for (const [p, keys] of Object.entries(TOPIC_PROFESSIONALS)) {
-      if (p.startsWith("/estate-probate-inherited-property/")) {
+      if (ESTATE.test(p)) {
         expect(keys, p).not.toContain("elderLaw");
         expect(keys, p).not.toContain("familyLaw");
         expect(keys, p).not.toContain("legalPlans");
@@ -65,11 +66,16 @@ describe("topic professionals", () => {
         const file = path.resolve(__dirname, `../pages/planning-before-a-crisis/${pascal(p.split("/").pop()!)}.tsx`);
         text = readFileSync(file, "utf8");
       } else {
-        continue;
+        // Any other mapped guide: find its page file through App.tsx.
+        const route = app.match(new RegExp(`path="${p.replace(/[/-]/g, "\\$&")}"\\s*element=\\{<(\\w+)`));
+        expect(route, `${p} route`).toBeTruthy();
+        const imp = app.match(new RegExp(`const ${route![1]} = lazy\\(\\s*\\(\\) => import\\("\\./([^"]+)"\\)`));
+        expect(imp, `${p} import`).toBeTruthy();
+        text = readFileSync(path.resolve(__dirname, `../${imp![1]}.tsx`), "utf8");
       }
       expect(text, p).not.toMatch(/does not refer clients to attorneys/);
       checked++;
     }
-    expect(checked).toBeGreaterThanOrEqual(8);
+    expect(checked).toBeGreaterThanOrEqual(14);
   });
 });

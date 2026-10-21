@@ -15,7 +15,7 @@ interface NextStepBlockProps {
 }
 
 const NextStepBlock = ({ heading = "What to Read Next", steps, background = "bg-secondary", columns = 1 }: NextStepBlockProps) => (
-  <section className={`py-14 lg:py-20 ${background}`}>
+  <section data-track-block="next_questions" className={`py-14 lg:py-20 ${background}`}>
     <div className="container px-6 lg:px-8">
       <div className="max-w-[1140px] mx-auto">
         <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-foreground">{heading}</h2>

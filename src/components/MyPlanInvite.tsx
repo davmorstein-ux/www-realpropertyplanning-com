@@ -28,6 +28,7 @@ export default function MyPlanInvite({ situation, style }: { situation: "estate"
   const c = COPY[situation];
   return (
     <aside
+      data-track-block="my_plan_invite"
       className="myplan-invite"
       aria-label="My Real Property Plan"
       style={{

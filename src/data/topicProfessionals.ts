@@ -1,6 +1,7 @@
 /**
  * Which featured-professional categories appear at the end of each topic page
- * in the three homepage paths (Oct 20, 2026, approved by David):
+ * in the three homepage paths, and on the guides listed at the bottom
+ * (Oct 20, 2026, approved by David):
  *   Helping an Aging Parent  /helping-an-aging-parent/<category>/<leaf>
  *   Planning Before a Crisis /planning-before-a-crisis/<leaf>
  *   Estate & Probate         /estate-probate-inherited-property/<leaf>
@@ -60,6 +61,38 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   [`${EP}/property-value`]: ["realEstate"],
   [`${EP}/what-to-do-with-the-property`]: ["realEstate", "cpas", "mortgage"],
   [`${EP}/preparing-the-property`]: ["estateLiquidation", "moveManagers"],
+
+  /* Guides outside the three paths (Oct 20, 2026, David's go): each names
+     these kinds of professional in its text but linked to none of them
+     (found by checking all 106 family guides). Shown by GuideProfessionals,
+     placed once in DisclaimerSection and ExecutorSubPageLayout. Estate and
+     probate guides get no attorneys, same rule as the estate path. */
+  // Probate and estate
+  "/probate-glossary": ["cpas", "estateLiquidation"],
+  "/washington-probate-guide/deadlines-and-key-rules": ["cpas"],
+  "/washington-probate-guide/selling-the-house": ["estateLiquidation"],
+  "/guides/mortgage-after-death-washington": ["mortgage"],
+  "/guides/taxes-selling-inherited-house-washington": ["cpas"],
+  "/guides/inherited-house-washington": ["cpas"],
+  "/guides/probate-costs-washington": ["cpas"],
+  "/guides/what-executors-should-do": ["estateLiquidation"],
+  "/guides/executor-first-steps-house": ["cpas"],
+  "/executor-responsibilities-first-steps/legal-duties": ["cpas"],
+  "/executor-responsibilities-first-steps/working-with-professionals": ["cpas", "financialPlanning"],
+  "/executor-responsibilities-first-steps/when-you-need-extra-help": ["moveManagers", "estateLiquidation", "financialPlanning"],
+  // A parent's housing, care and money
+  "/power-of-attorney": ["elderLaw", "legalPlans", "moveManagers"],
+  "/senior-transitions": ["moveManagers", "seniorLiving", "estateLiquidation"],
+  "/senior-living-and-relocation": ["moveManagers", "seniorLiving"],
+  "/guides/out-of-state-families": ["elderLaw", "moveManagers", "estateLiquidation"],
+  "/sell-house-fund-senior-living": ["financialPlanning", "elderLaw", "cpas"],
+  "/guides/sell-parents-house-dementia-washington": ["elderLaw", "cpas"],
+  "/senior-transitions/can-parent-afford-to-stay-home": ["financialPlanning", "mortgage"],
+  "/long-term-care/medicaid-and-the-family-home": ["elderLaw"],
+  "/long-term-care/nursing-homes": ["careManagers", "elderLaw", "financialPlanning"],
+  "/long-term-care/hospital-discharge-planning": ["careManagers", "seniorLiving"],
+  "/long-term-care/short-term-nursing-home-stays": ["careManagers"],
+  "/gray-divorce": ["familyLaw", "financialPlanning", "cpas"],
 };
 
 export const professionalsForTopic = (path: string): ProfessionalCategoryKey[] =>

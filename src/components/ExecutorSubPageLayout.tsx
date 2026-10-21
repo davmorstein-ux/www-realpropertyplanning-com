@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/executor-trustee-hero-washington.webp";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import NextQuestions from "@/components/NextQuestions";
+import GuideProfessionals from "@/components/GuideProfessionals";
 
 interface ExecutorSubPageLayoutProps {
   seoTitle: string;
@@ -70,6 +71,7 @@ const ExecutorSubPageLayout = ({
             </article>
           </div>
         </section>
+        <GuideProfessionals />
 
         {/* Removed: a "Have Questions? We're Here to Help." band carrying the
             office phone, the info@ address and a "Get in Touch" button.

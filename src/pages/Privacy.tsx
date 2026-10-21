@@ -30,7 +30,9 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *                           interaction with a calculator: its path), sign_up
  *                           (newsletter or alert signup confirmed: form tag),
  *                           home_tile_click (which homepage tile: its key and
- *                           path; Oct 20, 2026).
+ *                           path; Oct 20, 2026), next_step_click (which
+ *                           related-reading or professionals box, the page it
+ *                           opened, page path; Oct 20, 2026).
  *                           Never a number, address, typed value or message.
  *   Ask-box questions       AskBox.tsx / siteTracking.ts (Oct 8, 2026) — ask_question:
  *                           the typed question (100 chars, emails and phone numbers
@@ -147,7 +149,9 @@ const Privacy = () => {
                 <strong>Which pages lead somewhere.</strong> The site also records when a phone number or
                 email link anywhere on the site is tapped, when a link to the contact page is
                 followed, when a calculator is first used, which of the four "What brings you here
-                today?" choices on the homepage is picked, and when a newsletter or alert signup
+                today?" choices on the homepage is picked, which suggested next page or listed
+                professional's page is opened from the "next questions", "what to read next"
+                and "people who help with this" boxes, and when a newsletter or alert signup
                 goes through, along with the page it happened on. This shows which guides and
                 tools people find useful enough to act on. It records the kind of action only:
                 never the number or address involved, anything you type into a calculator, or

@@ -177,6 +177,83 @@ export function buildAiPages(routes: Record<string, RouteMetaLike>): AiPage[] {
     .sort((a, b) => a.path.localeCompare(b.path));
 }
 
+/* ------------------------------------------------------------------ */
+/* Page text from the rendered page (Oct 20, 2026)                     */
+/* ------------------------------------------------------------------ */
+
+/** Paths whose page text lives in components rather than in ROUTE_METADATA,
+ *  so their /ai/pages.json entry used to carry only a title and description
+ *  (the guided paths behind the homepage tiles). Their sections are taken
+ *  from the page as rendered at build time, so they always match the page. */
+export const RENDERED_TEXT_PREFIXES = ["/planning-before-a-crisis", "/helping-an-aging-parent", "/estate-probate-inherited-property"];
+
+const BOILERPLATE = [
+  /^Pick the option below/i,
+  /^You've made it/i,
+  /^Not sure where to start\?/i,
+  /^Looking for a quick answer\?/i,
+  /^New to probate\?/i,
+];
+const SECTION_MAX = 1500;
+const PAGE_MAX = 12000;
+
+const textOf = (html: string) =>
+  (clean(html.replace(/<br\s*\/?>/gi, " ")) ?? "")
+    .replace(/&#x27;|&#039;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#x2F;/g, "/")
+    .replace(/\s+/g, " ")
+    .trim();
+
+/** "Heading — text" sections from a page's rendered HTML: the headings and the
+ *  paragraphs and list items under them, inside <main>. Leaves out the
+ *  progress steps, the "People who help with this" box, "What to read next",
+ *  "Your next questions" and the professional disclosure. */
+export function sectionsFromRenderedHtml(html: string): string[] {
+  const start = html.indexOf("<main");
+  if (start === -1) return [];
+  let main = html.slice(start, html.indexOf("</main>", start) === -1 ? undefined : html.indexOf("</main>", start));
+  main = main
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<aside\b[\s\S]*?<\/aside>/gi, " ")
+    .replace(/<nav\b[\s\S]*?<\/nav>/gi, " ")
+    .replace(/<ol\b[^>]*aria-label="Your progress[\s\S]*?<\/ol>/gi, " ")
+    // Tiles and cards (a link wrapping headings or paragraphs) are navigation.
+    .replace(/<a\b[^>]*>(?:(?!<\/a>)[\s\S])*?<(?:h2|h3|h4|p|li|div)\b[\s\S]*?<\/a>/gi, " ");
+  // Everything from these blocks on is navigation, not page content.
+  for (const marker of ['class="estate-readnext"', ">Your next questions<", "rpp-disclaimer-eyebrow", ">Professional Disclosure<"]) {
+    const i = main.indexOf(marker);
+    if (i !== -1) main = main.slice(0, i);
+  }
+  const sections: { heading: string; text: string[] }[] = [];
+  let current = { heading: "", text: [] as string[] };
+  const re = /<(h2|h3|p|li)\b[^>]*>([\s\S]*?)<\/\1>/gi;
+  for (let m = re.exec(main); m; m = re.exec(main)) {
+    const t = textOf(m[2]);
+    if (!t) continue;
+    if (m[1].toLowerCase() === "h2" || m[1].toLowerCase() === "h3") {
+      if (current.heading || current.text.length) sections.push(current);
+      current = { heading: t, text: [] };
+    } else if (!BOILERPLATE.some((b) => b.test(t)) && t.split(" ").length >= 6) {
+      current.text.push(t);
+    }
+  }
+  if (current.heading || current.text.length) sections.push(current);
+  const out: string[] = [];
+  let total = 0;
+  for (const s of sections) {
+    if (s.text.join(" ").split(" ").length < 12) continue; // labels and taglines, not content
+    let line = s.heading ? `${s.heading} — ${s.text.join(" ")}` : s.text.join(" ");
+    if (line.length > SECTION_MAX) line = line.slice(0, line.lastIndexOf(" ", SECTION_MAX)) + "…";
+    if (total + line.length > PAGE_MAX) break;
+    out.push(line);
+    total += line.length;
+  }
+  // A hub or choice page (mostly tiles) has no real text of its own: leave it as it was.
+  return out.join(" ").split(" ").length >= 80 ? out : [];
+}
+
 export function buildAiGlossary(): AiTerm[] {
   const probate: AiTerm[] = PROBATE_GLOSSARY_A_TO_Z.map((t) => ({
     term: t.term,
