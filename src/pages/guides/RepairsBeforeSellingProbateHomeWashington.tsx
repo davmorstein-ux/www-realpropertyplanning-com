@@ -19,6 +19,7 @@ import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import RemodelWorthCallout from "@/components/RemodelWorthCallout";
+import ShortAnswer from "@/components/ShortAnswer";
 
 const payOff = [
   {
@@ -186,6 +187,9 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-6">
               A practical guide to deciding which improvements are worth the investment — and which ones to skip.
             </p>
+            {/* The short answer first, inside the title band so it is on the first
+                phone screen (Oct 21, 2026). Text: src/data/shortAnswers.ts. */}
+            <ShortAnswer path="/guides/repairs-before-selling-probate-home-washington" style={{ margin: "0 0 24px" }} />
             <p className="text-lg text-gold font-bold leading-relaxed mb-6">
               {/* Was "Real Property Planning — Licensed Real Estate Broker & Certified
                   Residential Appraiser". The site provides no services; it lists

@@ -83,6 +83,15 @@ export const featuredProfessionalPerson = {
       "@type": "Organization",
       name: FEATURED_BROKER.brokerage,
       url: FEATURED_BROKER.brokerageUrl,
+      ...(FEATURED_BROKER.officeAddress
+        ? {
+            address: {
+              "@type": "PostalAddress",
+              ...FEATURED_BROKER.officeAddress,
+              addressCountry: "US",
+            },
+          }
+        : {}),
       description: `License broker only — ${FEATURED_BROKER.name}'s Washington State real estate license is held under ${FEATURED_BROKER.brokerage}. ${FEATURED_BROKER.brokerage} is not an owner, partner, or affiliate of Real Property Planning.`,
     },
     {
@@ -278,18 +287,9 @@ export const hubOrganizationSchema = {
         postalCode: "98072",
         addressCountry: "US",
       },
-      location: {
-        "@type": "Place",
-        name: "Real Property Planning — Seattle Office",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "1455 NW Leary Way",
-          addressLocality: "Seattle",
-          addressRegion: "WA",
-          postalCode: "98107",
-          addressCountry: "US",
-        },
-      },
+      // No office: the PO Box is where mail for the site goes. 1455 NW Leary
+      // Way is the featured broker's brokerage office (eXp Realty), so it sits
+      // on the brokerage below, not on the hub (David, Oct 21, 2026).
       areaServed: areaServed,
       // No founder/employee here: the featured broker is a Person node in the
       // graph, affiliated with the hub, not staff. No hasOfferCatalog: the hub

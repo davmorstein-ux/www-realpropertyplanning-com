@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import ShortAnswer from "@/components/ShortAnswer";
 import CareCostCallout from "@/components/CareCostCallout";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
@@ -33,6 +34,9 @@ const NursingHomes = () => {
               When a nursing home becomes part of the conversation, most families aren't ready. Here is what to know
               before the moment arrives.
             </p>
+            {/* The short answer first (Oct 21, 2026): pages that open with a plain
+                answer are the ones searchers click. Text: src/data/shortAnswers.ts. */}
+            <ShortAnswer path="/long-term-care/nursing-homes" style={{ marginBottom: 24 }} />
 
             <div className="mb-6">
               <ArticleAudioPlayer audioSrc="/audio/nursing-homes.mp3" />

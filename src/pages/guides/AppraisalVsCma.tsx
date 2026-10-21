@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ShortAnswer from "@/components/ShortAnswer";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -54,6 +55,9 @@ const AppraisalVsCma = () => (
     <section className="py-10 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
+        {/* The short answer first (Oct 21, 2026): pages that open with a plain
+            answer are the ones searchers click. Text: src/data/shortAnswers.ts. */}
+        <ShortAnswer path="/guides/appraisal-vs-cma" style={{ marginBottom: 24 }} />
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
           Written for executors, attorneys, and families who need to understand which kind of valuation a probate or estate file actually requires. A formal appraisal and a comparative market analysis (CMA) both aim to estimate property value — but they serve different purposes, carry different weight, and are produced differently. When a property is part of a probate case, trust, or estate, understanding this distinction helps executors, attorneys, and families make better-informed decisions.
         </p>

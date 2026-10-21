@@ -27,6 +27,8 @@ export interface FeaturedBroker {
   brokerageUrl: string;
   /** Washington State DOL real estate broker license number. */
   licenseNumber: string;
+  /** The brokerage office the broker works from (not the hub's address). */
+  officeAddress?: { streetAddress: string; addressLocality: string; addressRegion: string; postalCode: string };
   phone: string;
   /** tel: href form of `phone`. */
   phoneTel: string;
@@ -78,6 +80,7 @@ export const FEATURED_BROKER: FeaturedBroker = {
   brokerage: "eXp Realty",
   brokerageUrl: "https://www.exprealty.com",
   licenseNumber: "133972",
+  officeAddress: { streetAddress: "1455 NW Leary Way", addressLocality: "Seattle", addressRegion: "WA", postalCode: "98107" },
   phone: "(206) 900-3015",
   phoneTel: "+12069003015",
   email: "dave.stein@exprealty.com",

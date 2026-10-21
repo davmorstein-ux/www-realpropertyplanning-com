@@ -30,6 +30,7 @@ import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySa
 import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
 import { FIFTY_FIVE, FP_PRERENDER_SECTIONS, FP_FAQS } from "./src/data/fiftyFivePlus";
 import { CARE_CALCULATORS, careTypeFor } from "./src/lib/careCalculators";
+import { SHORT_ANSWERS } from "./src/data/shortAnswers";
 import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
@@ -617,6 +618,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Step-by-step guidance for executors and personal representatives — securing the property, confirming authority, pricing, preparing, and managing the sale.",
   },
   "/guides/appraisal-vs-cma": {
+    quickAnswerQ: SHORT_ANSWERS["/guides/appraisal-vs-cma"].q,
+    quickAnswerA: SHORT_ANSWERS["/guides/appraisal-vs-cma"].a,
     title: "Appraisal vs. CMA for Probate & Estate Property | Real Property Planning",
     description: "Understand the difference between a formal appraisal and a CMA — and why it matters when selling probate, estate, or inherited property in Washington State.",
     h1: "Appraisal vs. CMA: What's the Difference for Estate Property?",
@@ -647,6 +650,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "When an executor can — and cannot — sell estate property in Washington State, and what to do while waiting for legal authority.",
   },
   "/guides/appraisal-before-selling-inherited-property": {
+    quickAnswerQ: SHORT_ANSWERS["/guides/appraisal-before-selling-inherited-property"].q,
+    quickAnswerA: SHORT_ANSWERS["/guides/appraisal-before-selling-inherited-property"].a,
     title: "Do I Need an Appraisal Before Selling Inherited Property? | Real Property Planning",
     description: "When a formal appraisal is needed for inherited property — and when a professional market assessment may be enough. A practical guide for executors and families.",
     h1: "Do I Need an Appraisal Before Selling Inherited Property?",
@@ -1803,6 +1808,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "The Nurse Delegation Program in Washington State: What Families Need to Know",
   },
   "/long-term-care/nursing-homes": {
+    quickAnswerQ: SHORT_ANSWERS["/long-term-care/nursing-homes"].q,
+    quickAnswerA: SHORT_ANSWERS["/long-term-care/nursing-homes"].a,
     title: "Nursing Homes in Washington State: What Families Need to Know",
     description: "A comprehensive guide to nursing homes in Washington State — costs, staffing standards, how to research quality, Medicaid, WA Cares, and how to find the right fit for your family.",
     h1: "Nursing Homes in Washington State: What Families Need to Know",
@@ -2341,6 +2348,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Working With Professionals",
   },
   "/guides/repairs-before-selling-probate-home-washington": {
+    quickAnswerQ: SHORT_ANSWERS["/guides/repairs-before-selling-probate-home-washington"].q,
+    quickAnswerA: SHORT_ANSWERS["/guides/repairs-before-selling-probate-home-washington"].a,
     title: "What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning",
     description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip.",
     h1: "What Repairs Should Be Made Before Selling a Probate Home?",
@@ -2542,11 +2551,12 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:info@realpropertyplanning.com" style="color:#1a365d">info@realpropertyplanning.com</a></p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
-  ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
+  // 1455 NW Leary Way is the featured broker's brokerage office, not the hub's (David, Oct 21, 2026).
+  ssgParts.push(`<p style="margin:4px 0;color:#555">Featured broker's brokerage office (eXp Realty): 1455 NW Leary Way, Seattle, WA 98107</p>`);
   ssgParts.push(`</div>`);
 
   ssgParts.push(`<div style="margin-top:28px">`);
-  ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Service Areas</h2>`);
+  ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington Counties Covered</h2>`);
   if (cities && cities.length > 0) {
     ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
   }

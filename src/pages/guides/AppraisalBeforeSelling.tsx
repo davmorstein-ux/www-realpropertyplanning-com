@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ShortAnswer from "@/components/ShortAnswer";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -55,6 +56,9 @@ const AppraisalBeforeSelling = () => (
     <section className="py-10 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
+        {/* The short answer first (Oct 21, 2026): pages that open with a plain
+            answer are the ones searchers click. Text: src/data/shortAnswers.ts. */}
+        <ShortAnswer path="/guides/appraisal-before-selling-inherited-property" style={{ marginBottom: 24 }} />
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
           Written for executors, trustees, and families weighing whether to order a formal appraisal on an inherited or estate property in Washington State. It depends on your situation. A formal appraisal is not always legally required, but understanding the property's true value before making decisions is almost always essential — especially for estate and inherited properties where condition, deferred maintenance, and emotional pricing can lead to costly mistakes.
         </p>
