@@ -44,11 +44,10 @@ const CSS = `
     max-width: 100%;
     padding: 11px 26px;
     box-sizing: border-box;
-    background: linear-gradient(180deg, #16335a 0%, #0f2547 55%, #0b1c35 100%);
-    border: 2px solid #c9a84c;
-    border-radius: 3px;
-    box-shadow: 0 0 0 1px #8a7233, 0 3px 9px rgba(0,0,0,0.22),
-                inset 0 0 0 1px rgba(201,168,76,0.4);
+    background: #1B3A6B;
+    border: 2px solid #1B3A6B;
+    border-radius: 10px;
+    box-shadow: none;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
     font-size: 21px;
     font-weight: 700;

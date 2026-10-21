@@ -59,3 +59,15 @@ npx tsc --noEmit -p tsconfig.app.json
 - Questions, rules, wording and every link: `src/data/myPlan.ts` only; `src/pages/MyPlan.tsx` just renders. `src/test/myPlan.test.ts` builds every answer combination and fails on any link that isn't a live route or that redirects.
 - No AI, never gated (owner's decisions). Answers live in the URL fragment only; never send them to analytics, MailerLite or anywhere (care and Medicaid answers). Family side only; AFH buyers go to AFH Club.
 - Newsletter offers after results: `src/components/ResultSignup.tsx` (care-cost and remodel pages). Keep source tags generic (no care type).
+
+## Buttons: flat navy (Oct 21, 2026)
+
+One look for every button: solid #1B3A6B, white text, gently rounded, no
+gradient, shine or shadow. Hover #142c52. Secondary buttons: white with a
+navy outline and navy text (`variant="outline3d"`, `.article-resource-btn`).
+On a dark band, a button is white with navy text, never navy on navy.
+`variant="gold"` and `"navy3d"` in src/components/ui/button.tsx are the flat
+navy style (names kept for the call sites). The global
+`main a[class*="btn"]` / `[class*="cta"]` rule in index.css is navy too, so a
+class name holding "btn" on a dark band needs its own white override.
+Maroon (#6b1b22 / #7f1d1d) is retired; do not bring it back for buttons.

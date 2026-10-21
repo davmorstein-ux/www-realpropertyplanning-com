@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 import NextQuestions from "@/components/NextQuestions";
-const navy = "#6b1b22";
+const navy = "#1B3A6B";
 const gold = "#c3525c";
 const crimson = "#8B0000";
 const cream = "#FAF8F4";

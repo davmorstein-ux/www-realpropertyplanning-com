@@ -208,7 +208,7 @@ const ForAttorneysHowItWorks = () => (
               <Link to="/for-attorneys">
                 <Button
                   size="lg"
-                  className="px-7 py-4 h-auto rounded-lg bg-[hsl(215,60%,38%)] text-white hover:bg-[hsl(215,60%,32%)]"
+                  className="px-7 py-4 h-auto rounded-lg bg-[#1B3A6B] text-white hover:bg-[#142c52]"
                 >
                   ← Back to For Attorneys
                 </Button>

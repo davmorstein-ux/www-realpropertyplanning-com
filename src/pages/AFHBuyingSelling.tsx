@@ -475,6 +475,7 @@ const AFHBuyingSelling = () => (
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
+              className="rpp-ask-afh"
               to="/contact?reason=afh-buy-sell"
               style={{
                 display: "inline-block",
@@ -483,8 +484,8 @@ const AFHBuyingSelling = () => (
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                color: "#e8e2d9",
-                background: "#b13a44",
+                color: "#1B3A6B",
+                background: "#ffffff",
                 padding: "14px 28px",
                 borderRadius: 4,
                 textDecoration: "none",

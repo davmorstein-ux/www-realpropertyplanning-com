@@ -82,8 +82,8 @@ const RolesAndResponsibilities = () => {
         .r2-card:hover .r2-arrow { background: #6b1a21; }
         .r2-arrow svg { width: 11px; height: 11px; stroke: #6b1a21; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.25s; }
         .r2-card:hover .r2-arrow svg { stroke: #fff; }
-        .r2-bar { max-width: 1300px; margin: 36px auto 0; background: #6b1a21; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-        .r2-bar-text { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 14px !important; color: #e8c8cb; line-height: 1.6; }
+        .r2-bar { max-width: 1300px; margin: 36px auto 0; background: #1B3A6B; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .r2-bar-text { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 14px !important; color: #ffffff; line-height: 1.6; }
         .r2-bar-btn { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.08em; background: #b35f66; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; }
       ` }} />
       <div className="r2-section">

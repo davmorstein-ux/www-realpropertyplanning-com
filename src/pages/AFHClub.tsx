@@ -177,8 +177,13 @@ const PAGE_CSS = `
      above — the solid one would become white on white. */
   .rpp-afh-marketplace .rpp-afh-btn-solid,
   .rpp-afh-marketplace .rpp-afh-btn-solid span {
-    color: #1F4A34 !important;
+    color: #1B3A6B !important;
   }
+  /* White on the dark band (flat navy buttons, Oct 2026). The class holds
+     "btn", so the global button rule would paint it navy into the band. */
+  html body .rpp-afh-marketplace a.rpp-afh-btn-solid.rpp-afh-btn-solid,
+  html body .rpp-afh-marketplace a.rpp-afh-btn-solid.rpp-afh-btn-solid span { background-color: #ffffff !important; color: #1B3A6B !important; box-shadow: none !important; }
+  html body .rpp-afh-marketplace a.rpp-afh-btn-outline.rpp-afh-btn-outline { background-color: transparent !important; border: 2px solid #ffffff !important; }
   .rpp-afh-marketplace .rpp-afh-btn-outline,
   .rpp-afh-marketplace .rpp-afh-btn-outline span {
     color: #ffffff !important;
@@ -1085,9 +1090,9 @@ const AFHClub = () => {
                   gap: 10,
                   minHeight: 50,
                   padding: "12px 24px",
-                  border: "2px solid #3f3a35",
-                  borderRadius: 999,
-                  background: "#3f3a35",
+                  border: "2px solid #1B3A6B",
+                  borderRadius: 10,
+                  background: "#1B3A6B",
                   color: "#fff",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: 18,
@@ -1170,7 +1175,7 @@ const AFHClub = () => {
                 to="/afh-club/listings"
                 style={{
                   display: "inline-block",
-                  background: "#302b26",
+                  background: "#1B3A6B",
                   color: "#fff",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 700,
@@ -1188,7 +1193,7 @@ const AFHClub = () => {
                 style={{
                   display: "inline-block",
                   background: "transparent",
-                  color: "#1c1917",
+                  color: "#1B3A6B",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
@@ -1196,7 +1201,7 @@ const AFHClub = () => {
                   padding: "14px 32px",
                   borderRadius: 3,
                   textDecoration: "none",
-                  border: "2px solid #302b26",
+                  border: "2px solid #1B3A6B",
                 }}
               >
                 {t("afhClubPage.marketplace.submitListing")}

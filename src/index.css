@@ -1791,28 +1791,21 @@ a:hover .gold-cta::after,
    SECURE WILL CTA BUTTON — 3D electric-blue
 ═══════════════════════════════════════════════ */
 .secure-will-cta {
-  background: linear-gradient(180deg, #d53b48 0%, #ca2b38 60%, #8a1e27 100%);
-  box-shadow:
-    0 4px 0 0 #8a1e27,
-    0 6px 16px rgba(30, 58, 138, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 2px solid hsl(42 55% 62% / 0.5);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transform: translateY(0);
+  /* Flat navy (Oct 21, 2026). */
+  background: #1B3A6B;
+  box-shadow: none;
+  border: 2px solid #1B3A6B;
+  text-shadow: none;
+  transform: none;
 }
 .secure-will-cta:hover {
-  transform: translateY(2px);
-  box-shadow:
-    0 2px 0 0 #8a1e27,
-    0 3px 8px rgba(30, 58, 138, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: #142c52;
+  transform: none;
+  box-shadow: none;
 }
 .secure-will-cta:active {
-  transform: translateY(3px);
-  box-shadow:
-    0 1px 0 0 #8a1e27,
-    0 1px 4px rgba(30, 58, 138, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: none;
+  box-shadow: none;
 }
 
 /* Floating animation for will vault icon */
@@ -3047,7 +3040,7 @@ main .coc-divider-label {
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
   font-size: 22px !important;
   font-weight: 800 !important;
-  color: #0047ab !important; /* cobalt blue */
+  color: #1B3A6B !important; /* navy (was cobalt) */
   white-space: nowrap;
   text-align: center;
   line-height: 1.2 !important;
@@ -4773,7 +4766,7 @@ main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
 main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
 main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
 main .rpp-answer-cta {
-  background-color: #6b1b22 !important;
+  background-color: #1B3A6B !important;
   color: #ffffff !important;
   font-weight: 700 !important;
   text-decoration: none !important;
@@ -4808,15 +4801,15 @@ html body a.article-resource-btn.article-resource-btn.article-resource-btn {
   padding: 12px 22px !important;
   min-height: 44px !important;
   border-radius: 6px !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  /* CHARCOAL, not the maroon these inherit from the global
+  border: 2px solid #1B3A6B !important;
+  /* Oct 21, 2026: navy outline (secondary button). Was CHARCOAL, not the maroon these inherit from the global
      main a[class*="btn"] rule. There were 13 of these stacked under one
      heading and, in maroon, they competed with the actual call to action
      above them. Charcoal keeps them legible and obviously clickable while
      leaving red to mean "this is the thing to click".
      The "Back to ..." return buttons deliberately stay maroon. */
-  background-color: #302b26 !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #1B3A6B !important;
   font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif !important;
   font-size: 17px !important;
   font-weight: 700 !important;
@@ -4824,7 +4817,7 @@ html body a.article-resource-btn.article-resource-btn.article-resource-btn {
   line-height: 1.25 !important;
   text-align: center !important;
   text-decoration: none !important;
-  box-shadow: 0 1px 2px rgba(39, 36, 33, 0.16) !important;
+  box-shadow: none !important;
   transition:
     background-color 0.18s ease,
     transform 0.18s ease,
@@ -4832,12 +4825,12 @@ html body a.article-resource-btn.article-resource-btn.article-resource-btn {
 }
 html body main a.article-resource-btn.article-resource-btn.article-resource-btn:hover,
 html body a.article-resource-btn.article-resource-btn.article-resource-btn:hover {
-  background-color: #4a443c !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(39, 36, 33, 0.22) !important;
+  background-color: #eef2f8 !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 html body main a.article-resource-btn.article-resource-btn.article-resource-btn:focus-visible {
-  outline: 3px solid #6b1b22 !important;
+  outline: 3px solid #1B3A6B !important;
   outline-offset: 3px !important;
 }
 /* The old hover underline was drawn as a 3px bar across the bottom of the
@@ -4874,7 +4867,7 @@ main a[class*="cta"]:not([class*="bg-white"]):hover,
 main button[class*="btn"]:not([class*="bg-white"]):hover,
 main button[class*="cta"]:not([class*="bg-white"]):hover,
 main .rpp-answer-cta:hover {
-  background-color: #501419 !important;
+  background-color: #142c52 !important;
 }
 
 /* ------------------------------------------------------------
@@ -4896,7 +4889,7 @@ main .article-resource-btn,
 main .article-resource-btn * {
   background: none !important;
   background-color: transparent !important;
-  color: #6b1b22 !important;
+  color: #1B3A6B !important;
   font-weight: 700 !important;
   font-size: 15px !important;
   padding: 0 !important;
@@ -5769,3 +5762,52 @@ html body [data-pulse].rpp-pulsing {
 @media (prefers-reduced-motion: reduce) {
   html body [data-pulse].rpp-pulsing { animation: none !important; }
 }
+
+/* ============================================================
+   FLAT NAVY BUTTONS (Oct 21, 2026, David: "Go")
+   One look: solid #1B3A6B, white text, gently rounded, no gradient,
+   shine or shadow (src/components/ui/button.tsx). Labels inside the
+   button are forced white because the card rule repaints spans dark.
+   On a dark band the same button turns white with navy text, so it
+   never disappears into the band. html body + doubled class beats the
+   (0,3,2) global btn/cta rule above.
+   ============================================================ */
+html body .rpp-btn-navy.rpp-btn-navy,
+html body .rpp-btn-navy.rpp-btn-navy :where(span, p, strong, em, svg) {
+  color: #ffffff !important;
+}
+html body .rpp-btn-navy.rpp-btn-navy { background-image: none !important; box-shadow: none !important; }
+html body .rpp-btn-outline.rpp-btn-outline,
+html body .rpp-btn-outline.rpp-btn-outline :where(span, p, strong, em, svg) {
+  color: #1B3A6B !important;
+}
+html body .rpp-btn-outline.rpp-btn-outline { background-color: #ffffff !important; background-image: none !important; box-shadow: none !important; }
+html body .rpp-btn-outline.rpp-btn-outline:hover { background-color: #eef2f8 !important; }
+:is(.bg-primary, .rpp-dark-surface, [data-dark-band]) .rpp-btn-navy.rpp-btn-navy.rpp-btn-navy {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+:is(.bg-primary, .rpp-dark-surface, [data-dark-band]) .rpp-btn-navy.rpp-btn-navy.rpp-btn-navy,
+:is(.bg-primary, .rpp-dark-surface, [data-dark-band]) .rpp-btn-navy.rpp-btn-navy.rpp-btn-navy :where(span, p, strong, em, svg) {
+  color: #1B3A6B !important;
+}
+:is(.bg-primary, .rpp-dark-surface, [data-dark-band]) .rpp-btn-navy.rpp-btn-navy.rpp-btn-navy:hover {
+  background-color: #eef2f8 !important;
+}
+
+/* Buttons on the navy bars (Planning, Professionals, Roles). Their class
+   names hold "btn", so the global rule above would paint them navy into
+   the navy bar. White with navy text instead. */
+html body button.p1bar-btn.p1bar-btn.p1bar-btn,
+html body button.p3bar-btn.p3bar-btn.p3bar-btn,
+html body button.r2-bar-btn.r2-bar-btn.r2-bar-btn {
+  background-color: #ffffff !important;
+  color: #1B3A6B !important;
+}
+html body button.p1bar-btn.p1bar-btn.p1bar-btn:hover,
+html body button.p3bar-btn.p3bar-btn.p3bar-btn:hover,
+html body button.r2-bar-btn.r2-bar-btn.r2-bar-btn:hover { background-color: #eef2f8 !important; }
+
+/* "Ask About an AFH" sits on the dark AFH band: white button, navy text. */
+html body main a.rpp-ask-afh.rpp-ask-afh { background-color: #ffffff !important; color: #1B3A6B !important; }
+html body main a.rpp-ask-afh.rpp-ask-afh:hover { background-color: #eef2f8 !important; }

@@ -150,8 +150,8 @@ const CSS = `
 .cafh-table thead th { background: #481216; color: #fff; font-weight: 700; }
 .cafh-table tbody th { font-weight: 600; width: 40%; background: #faf8f4; }
 .cafh-table td { height: 46px; }
-.cafh-print { display: inline-flex; align-items: center; gap: 8px; background: #481216; color: #fff; border: 0; border-radius: 8px; padding: 11px 18px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; }
-.cafh-print:hover { background: #2e0b0e; }
+.cafh-print { display: inline-flex; align-items: center; gap: 8px; background: #1B3A6B; color: #fff; border: 0; border-radius: 8px; padding: 11px 18px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; }
+.cafh-print:hover { background: #142c52; }
 .cafh-note { background: #fff; border-left: 5px solid #1f4058; border-radius: 8px; padding: 16px 20px; }
 .cafh-src.cafh-src { font-size: 14px !important; color: #3d4a55 !important; line-height: 1.6 !important; }
 @media print {

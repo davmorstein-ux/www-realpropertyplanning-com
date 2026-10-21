@@ -494,7 +494,7 @@ const AFHRealEstateBroker = () => (
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: "#ffffff",
-                background: "#ca2b38",
+                background: "#1B3A6B",
                 padding: "14px 32px",
                 borderRadius: 4,
                 textDecoration: "none",
