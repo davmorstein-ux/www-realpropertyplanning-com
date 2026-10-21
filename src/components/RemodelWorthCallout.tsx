@@ -10,6 +10,7 @@
  *   /selling-an-inherited-home
  *   /guides/inherited-house-washington
  *   /washington-probate-guide/selling-the-house
+ *   /guides/repairs-before-selling-probate-home-washington (Oct 20, 2026)
  * The homepage keeps its own link for general homeowners.
  *
  * Coverage: the calculator has data for King, Snohomish and Pierce counties
@@ -23,6 +24,7 @@ export default function RemodelWorthCallout({ style }: { style?: React.CSSProper
   return (
     <aside
       aria-labelledby="remodel-worth-callout"
+      data-track-block="remodel_callout"
       style={{
         maxWidth: 760,
         margin: "32px auto",

@@ -18,6 +18,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 
 const payOff = [
   {
@@ -233,6 +234,9 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                 A $3,000 interior paint job might add $8,000 to the sale price. A $40,000 kitchen renovation might add only $20,000. These distinctions matter enormously when estate funds are limited and fiduciary duties require defensible decision-making.
               </p>
             </div>
+            {/* Oct 20, 2026: the page asks "will this repair pay for itself?" and
+                the site has a calculator for exactly that. */}
+            <RemodelWorthCallout style={{ margin: "32px 0 0" }} />
           </div>
         </div>
       </section>

@@ -27,7 +27,8 @@
  *                        answered: page_path only, never the answers.
  *   next_step_click      a link in a related-reading or professionals block
  *                        (Oct 20, 2026): block (next_questions | read_next |
- *                        journey_shortcuts | my_plan_invite | people_who_help),
+ *                        journey_shortcuts | my_plan_invite | people_who_help |
+ *                        care_cost_callout | remodel_callout),
  *                        link_path (the page it opens, or the site's host name
  *                        for an outside link) and page_path. Blocks are marked
  *                        with data-track-block.

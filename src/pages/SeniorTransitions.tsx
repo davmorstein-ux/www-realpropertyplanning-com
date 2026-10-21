@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import CareCostCallout from "@/components/CareCostCallout";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -28,7 +29,7 @@ const tileMeta = [
 ] as const;
 
 const SeniorTransitions = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const jsonLd = articleSchema({
     headline: t("seniorTransitions.seo.jsonLdHeadline"),
     description: t("seniorTransitions.seo.jsonLdDescription"),
@@ -137,6 +138,16 @@ const SeniorTransitions = () => {
             </div>
           </div>
         </section>
+
+        {/* Cost-of-care calculators (Oct 20, 2026). English text only, so it is
+            shown on the English page and not on the translated versions. */}
+        {i18n.language?.startsWith("en") && (
+          <section className="pt-4 pb-2 bg-background">
+            <div className="container px-6 lg:px-8">
+              <CareCostCallout />
+            </div>
+          </section>
+        )}
 
         {/* Not Sure Where to Start */}
         <section className="py-16 lg:py-20 bg-background">

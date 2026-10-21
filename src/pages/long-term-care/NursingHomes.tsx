@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import CareCostCallout from "@/components/CareCostCallout";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
@@ -228,6 +229,8 @@ const NursingHomes = () => {
               understands long-term care costs — can make an enormous difference in what options remain available when
               the time comes.
             </p>
+            {/* Oct 20, 2026: the guide had no link to the calculator for its own topic. */}
+            <CareCostCallout slug="nursing-home" />
 
             <hr className={hrClass} />
 
