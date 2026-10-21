@@ -114,11 +114,11 @@ const REVIEWS = [
 const StarRating = () => (
   <div style={{ display: "flex", gap: 3, alignItems: "center", marginBottom: 8 }}>
     {[1, 2, 3, 4, 5].map((i) => (
-      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#ca2b38">
+      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#1B3A6B">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
       </svg>
     ))}
-    <span style={{ fontSize: 16, fontWeight: 700, color: "#ca2b38", marginLeft: 6 }}>5.0</span>
+    <span style={{ fontSize: 16, fontWeight: 700, color: "#1B3A6B", marginLeft: 6 }}>5.0</span>
   </div>
 );
 
@@ -139,7 +139,7 @@ const AFHRealEstateBroker = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -180,7 +180,7 @@ const AFHRealEstateBroker = () => (
                   fontWeight: 600,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
-                  color: "#481216",
+                  color: "#142c52",
                   margin: "0 0 14px",
                 }}
               >
@@ -191,7 +191,7 @@ const AFHRealEstateBroker = () => (
                   fontSize: "clamp(24px, 3.5vw, 36px)",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontWeight: 700,
-                  color: "#280a0c",
+                  color: "#142c52",
                   lineHeight: 1.2,
                   margin: "0 0 20px",
                 }}
@@ -274,7 +274,7 @@ const AFHRealEstateBroker = () => (
                   fontWeight: 600,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
-                  color: "#481216",
+                  color: "#142c52",
                   margin: "0 0 14px",
                 }}
               >
@@ -285,7 +285,7 @@ const AFHRealEstateBroker = () => (
                   fontSize: "clamp(22px, 2.5vw, 30px)",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontWeight: 700,
-                  color: "#280a0c",
+                  color: "#142c52",
                   lineHeight: 1.2,
                   margin: "0 0 20px",
                 }}
@@ -316,7 +316,7 @@ const AFHRealEstateBroker = () => (
                     style={{
                       background: "#fff",
                       border: "1px solid #dfc9cb",
-                      borderLeft: "4px solid #b13a44",
+                      borderLeft: "4px solid #1B3A6B",
                       borderRadius: 6,
                       padding: "20px 22px",
                     }}
@@ -326,7 +326,7 @@ const AFHRealEstateBroker = () => (
                         fontSize: 18,
                         fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontWeight: 700,
-                        color: "#280a0c",
+                        color: "#142c52",
                         margin: "0 0 8px",
                       }}
                     >
@@ -361,7 +361,7 @@ const AFHRealEstateBroker = () => (
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "#7f2028",
+                color: "#1B3A6B",
                 margin: "0 0 14px",
               }}
             >
@@ -372,7 +372,7 @@ const AFHRealEstateBroker = () => (
                 fontSize: "clamp(28px, 3.5vw, 40px)",
                 fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
-                color: "#280a0c",
+                color: "#142c52",
                 margin: "0 0 16px",
                 lineHeight: 1.2,
               }}
@@ -394,12 +394,12 @@ const AFHRealEstateBroker = () => (
             >
               <div style={{ display: "flex", gap: 4 }}>
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="#ca2b38">
+                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="#1B3A6B">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
               </div>
-              <span style={{ fontSize: 20, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
+              <span style={{ fontSize: 20, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52" }}>5.0</span>
               <span style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917" }}>
                 · 16 Reviews on Zillow
               </span>
@@ -413,7 +413,7 @@ const AFHRealEstateBroker = () => (
                 style={{
                   background: "#ffffff",
                   border: "1px solid #dfc9cb",
-                  borderTop: "3px solid #ca2b38",
+                  borderTop: "3px solid #1B3A6B",
                   borderRadius: 6,
                   padding: "24px 22px 26px",
                   display: "flex",
@@ -438,7 +438,7 @@ const AFHRealEstateBroker = () => (
                     fontSize: 17,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#280a0c",
+                    color: "#142c52",
                     margin: 0,
                     lineHeight: 1.3,
                   }}
@@ -466,7 +466,7 @@ const AFHRealEstateBroker = () => (
                         fontWeight: 600,
                         letterSpacing: "0.08em",
                         background: "#edf2ff",
-                        color: "#ca2b38",
+                        color: "#1B3A6B",
                         padding: "3px 10px",
                         borderRadius: 20,
                       }}

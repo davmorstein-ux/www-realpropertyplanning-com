@@ -157,10 +157,10 @@ const Header = () => {
         display: block;
         white-space: nowrap;
       }
-      .rpp-top-link:hover { color: #7f1d1d; }
-      .rpp-top-link.is-active { border-bottom-color: #7f1d1d; }
+      .rpp-top-link:hover { color: #1B3A6B; }
+      .rpp-top-link.is-active { border-bottom-color: #1B3A6B; }
       .rpp-top-link:focus-visible {
-        outline: 2px solid #7f1d1d;
+        outline: 2px solid #1B3A6B;
         outline-offset: 3px;
         border-radius: 3px;
       }

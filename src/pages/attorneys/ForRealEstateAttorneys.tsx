@@ -241,9 +241,9 @@ const ForRealEstateAttorneys = () => (
             <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. A brief conversation is usually the most efficient way to determine how he can support your client's situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+12069003015">
+            <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
               <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-                Call (206) 900-3015
+                Call {FEATURED_BROKER.phone}
               </Button>
             </a>
             <Link to="/contact?reason=join-network">

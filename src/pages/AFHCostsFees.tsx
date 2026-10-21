@@ -149,7 +149,7 @@ const AFHCostsFees = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-costs-fees-v2.webp" alt="Cover art: AFH Costs & Fees" width={1024} height={1365} />
           <p
@@ -159,7 +159,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -195,8 +195,8 @@ const AFHCostsFees = () => (
           <div
             style={{
               background: "#fdf3e8",
-              border: "1px solid #b13a44",
-              borderLeft: "4px solid #b13a44",
+              border: "1px solid #1B3A6B",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "16px 20px",
               maxWidth: 680,
@@ -236,7 +236,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -247,7 +247,7 @@ const AFHCostsFees = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -288,7 +288,7 @@ const AFHCostsFees = () => (
                   }}
                 >
                   <h3
-                    style={{ fontSize: 17, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: 0 }}
+                    style={{ fontSize: 17, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: 0 }}
                   >
                     {item.category}
                   </h3>
@@ -297,7 +297,7 @@ const AFHCostsFees = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
-                      color: "#481216",
+                      color: "#142c52",
                       whiteSpace: "nowrap",
                     }}
                   >
@@ -344,7 +344,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -355,7 +355,7 @@ const AFHCostsFees = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -428,7 +428,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -439,7 +439,7 @@ const AFHCostsFees = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -481,7 +481,7 @@ const AFHCostsFees = () => (
                       fontSize: 18,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 4px",
                     }}
                   >
@@ -504,7 +504,7 @@ const AFHCostsFees = () => (
                     fontSize: 18,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#481216",
+                    color: "#142c52",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -530,8 +530,8 @@ const AFHCostsFees = () => (
           <div
             style={{
               background: "#e8f2f9",
-              border: "1px solid #9e2c35",
-              borderLeft: "4px solid #9e2c35",
+              border: "1px solid #1B3A6B",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -558,11 +558,11 @@ const AFHCostsFees = () => (
       <section style={{ background: "#edf0f3", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
-            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: "0 0 8px" }}
+            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: "0 0 8px" }}
           >
             Key Resources
           </h2>
-          <div style={{ width: 36, height: 2, background: "#b13a44", marginBottom: 24, borderRadius: 1 }} />
+          <div style={{ width: 36, height: 2, background: "#1B3A6B", marginBottom: 24, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               {
@@ -600,7 +600,7 @@ const AFHCostsFees = () => (
                   fontSize: 17,
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
-                  color: "#9e2c35",
+                  color: "#1B3A6B",
                   textDecoration: "underline",
                 }}
               >

@@ -18,7 +18,7 @@ const CSS = `
 .dod-list { list-style: none; margin: 1rem 0 1.25rem; padding: 0; display: grid; gap: 0.7rem; }
 .dod-list li { background: #faf8f4; border: 1px solid #e3d9cc; border-left: 4px solid #25597e; border-radius: 8px; padding: 0.85rem 1.1rem; font-size: 17px; line-height: 1.6; color: #1f2933; }
 .dod-src.dod-src { font-size: 14px !important; color: #3d4a55 !important; }
-.dod-sec a { color: #9e1f2b; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.dod-sec a { color: #1B3A6B; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 `;
 
 const DateOfDeathEssentials = () => (

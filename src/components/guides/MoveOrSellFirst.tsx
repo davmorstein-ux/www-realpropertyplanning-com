@@ -41,7 +41,7 @@ const CSS = `
 .mos-ex p { font-size: 17.5px; line-height: 1.65; color: #1c1917; margin: 0 0 0.7rem; }
 .mos-ex p:last-child { margin-bottom: 0; }
 .mos-src { font-size: 14px !important; color: #3d4a55 !important; margin-top: 0.8rem !important; }
-.mos-sec a { color: #9e1f2b; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.mos-sec a { color: #1B3A6B; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 `;
 
 export const MoveOrSellFirst = () => (

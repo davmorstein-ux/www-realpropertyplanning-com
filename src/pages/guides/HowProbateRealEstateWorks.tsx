@@ -56,7 +56,7 @@ const jsonLd = articleSchema({
   ],
 });
 
-const GOLD = "#7f2028";
+const GOLD = "#1B3A6B";
 
 const HowProbateRealEstateWorks = () => (
   <div className="min-h-screen bg-background">
@@ -85,7 +85,7 @@ const HowProbateRealEstateWorks = () => (
       <section style={{ padding: "56px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
           <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#142c52", marginBottom: 12 }}>
               What Is Probate Real Estate?
             </h2>
             <p style={{ fontSize: 17, color: "#1c1917", lineHeight: 1.8, margin: 0 }}>
@@ -96,7 +96,7 @@ const HowProbateRealEstateWorks = () => (
           </div>
 
           <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#142c52", marginBottom: 12 }}>
               Who Has Authority to Sell?
             </h2>
             <p style={{ fontSize: 17, color: "#1c1917", lineHeight: 1.8, margin: 0 }}>
@@ -107,7 +107,7 @@ const HowProbateRealEstateWorks = () => (
           </div>
 
           <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>Why Timing Matters</h2>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#142c52", marginBottom: 12 }}>Why Timing Matters</h2>
             <p style={{ fontSize: 17, color: "#1c1917", lineHeight: 1.8, margin: 0 }}>
               Probate properties often sit vacant while legal authority is being established, accumulating carrying
               costs — utilities, insurance, maintenance, and property taxes. Coordinating the real estate timeline with
@@ -117,7 +117,7 @@ const HowProbateRealEstateWorks = () => (
           </div>
 
           <div style={{ marginBottom: 0 }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#142c52", marginBottom: 12 }}>
               Why Work With a Specialist?
             </h2>
             <p style={{ fontSize: 17, color: "#1c1917", lineHeight: 1.8, margin: 0 }}>

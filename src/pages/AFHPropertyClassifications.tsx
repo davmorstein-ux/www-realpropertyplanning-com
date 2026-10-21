@@ -19,14 +19,14 @@ const label = {
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
-  color: "#481216",
+  color: "#142c52",
   margin: "0 0 14px",
 };
 const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
-  color: "#280a0c",
+  color: "#142c52",
   lineHeight: 1.2,
   margin: "0 0 20px",
 };
@@ -121,7 +121,7 @@ const AFHPropertyClassifications = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={wrap}>
           <ArticleCover src="/afh-property-classifications-cover.webp" alt="Cover art: Is It Really an Adult Family Home?" width={1024} height={1365} />
           <p style={label}>AFH Club · Buyer's Guide · Last reviewed September 2026</p>

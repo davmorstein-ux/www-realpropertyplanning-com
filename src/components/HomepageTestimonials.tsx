@@ -27,8 +27,8 @@ const HomepageTestimonials = () => {
           font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 18px;
           font-weight: 700;
-          color: #7f1d1d;
-          border-bottom: 2px solid #7f1d1d;
+          color: #1B3A6B;
+          border-bottom: 2px solid #1B3A6B;
           padding-bottom: 2px;
           text-decoration: none !important;
         }
@@ -55,7 +55,7 @@ const HomepageTestimonials = () => {
               style={{
                 background: "#ffffff",
                 border: "1px solid #dfd3d4",
-                borderTop: "4px solid #7f1d1d",
+                borderTop: "4px solid #1B3A6B",
                 borderRadius: 12,
                 padding: "1.5rem 1.5rem 1.25rem",
                 display: "flex",

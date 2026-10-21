@@ -936,14 +936,14 @@ const CSS = `
 .afhdd section.afhdd-herosec > .afhdd-wrap { padding-top: 36px; }
 .afhdd .afhdd-wrap { max-width: 800px; margin: 0 auto; }
 .afhdd p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.75 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
-.afhdd .afhdd-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.2em !important; text-transform: uppercase; color: #7f2028 !important; margin: 0 0 12px !important; }
-.afhdd h1.afhdd-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #280a0c !important; margin: 0 0 18px !important; text-wrap: balance; }
-.afhdd h2.afhdd-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 32px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #280a0c !important; margin: 0 0 16px !important; text-wrap: balance; }
+.afhdd .afhdd-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.2em !important; text-transform: uppercase; color: #1B3A6B !important; margin: 0 0 12px !important; }
+.afhdd h1.afhdd-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #142c52 !important; margin: 0 0 18px !important; text-wrap: balance; }
+.afhdd h2.afhdd-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 32px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #142c52 !important; margin: 0 0 16px !important; text-wrap: balance; }
 .afhdd h3.afhdd-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(19px, 2.4vw, 22px) !important; line-height: 1.3 !important; font-weight: 700 !important; color: #1c1917 !important; margin: 0 0 10px !important; }
 .afhdd .afhdd-lede { font-size: 20px !important; }
 .afhdd .afhdd-three { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); margin: 8px 0 20px; }
 @media (min-width: 720px) { .afhdd .afhdd-three { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.afhdd .afhdd-three > div { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid #7f2028; border-radius: 10px; padding: 14px 16px; }
+.afhdd .afhdd-three > div { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid #1B3A6B; border-radius: 10px; padding: 14px 16px; }
 .afhdd .afhdd-three p { font-size: 16px !important; margin: 0 !important; }
 .afhdd .afhdd-note { background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #1B3A6B; border-radius: 10px; padding: 16px 20px; }
 .afhdd .afhdd-note p { font-size: 16px !important; margin: 0 !important; }
@@ -955,10 +955,10 @@ const CSS = `
 .afhdd .afhdd-pair { display: grid; gap: 14px; }
 .afhdd .afhdd-point { background: #ffffff; border: 1px solid #ddd6cc; border-radius: 10px; padding: 18px 20px 8px; }
 .afhdd .afhdd-point.is-do { border-left: 6px solid #1d6b43; }
-.afhdd .afhdd-point.is-dont { border-left: 6px solid #a3262f; }
+.afhdd .afhdd-point.is-dont { border-left: 6px solid #1B3A6B; }
 .afhdd .afhdd-verb { display: inline-block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin: 0 0 10px; color: #ffffff; }
 .afhdd .is-do .afhdd-verb { background: #1d6b43; }
-.afhdd .is-dont .afhdd-verb { background: #a3262f; }
+.afhdd .is-dont .afhdd-verb { background: #1B3A6B; }
 .afhdd .afhdd-kind { font-size: 14px !important; font-weight: 600 !important; color: #4a443e !important; margin: 4px 0 14px !important; letter-spacing: 0.02em; }
 .afhdd ul.afhdd-ul, .afhdd ol.afhdd-ol { margin: 0 0 14px !important; padding-left: 24px !important; }
 .afhdd ul.afhdd-ul { list-style: disc !important; }
@@ -968,7 +968,7 @@ const CSS = `
 .afhdd .afhdd-check { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 720px) { .afhdd .afhdd-check { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .afhdd .afhdd-check > div { background: #ffffff; border: 1px solid #ddd6cc; border-radius: 10px; padding: 16px 18px 6px; }
-.afhdd .afhdd-key { background: #280a0c; border-radius: 12px; padding: 26px 24px; }
+.afhdd .afhdd-key { background: #142c52; border-radius: 12px; padding: 26px 24px; }
 .afhdd .afhdd-key p { color: #ffffff !important; }
 .afhdd .afhdd-key .afhdd-eyebrow { color: #f0b7bc !important; }
 .afhdd .afhdd-cover { width: 100%; max-width: 360px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(40,10,12,0.22); }
@@ -1004,7 +1004,7 @@ const AFHDosAndDonts = () => (
     />
     <Header />
     <main id="main-content">
-      <section className="afhdd-herosec" style={{ background: "#edf0f3", padding: "56px 16px 48px", borderBottom: "3px solid #b13a44" }}>
+      <section className="afhdd-herosec" style={{ background: "#edf0f3", padding: "56px 16px 48px", borderBottom: "3px solid #1B3A6B" }}>
         <div className="afhdd-wrap" style={{ maxWidth: 1040 }}>
           <div className="afhdd-hero">
             <div>

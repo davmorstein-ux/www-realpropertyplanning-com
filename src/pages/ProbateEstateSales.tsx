@@ -416,7 +416,7 @@ const ProbateEstateSales = () => {
                           strokeLinecap="round"
                         />
                         {/* Center cap */}
-                        <circle cx="32" cy="32" r="2.5" fill="#c3525c" stroke="#87353b" strokeWidth="0.5" />
+                        <circle cx="32" cy="32" r="2.5" fill="#6b84ad" stroke="#87353b" strokeWidth="0.5" />
                       </svg>
                       <div>
                         <h3 className="font-serif text-lg text-foreground font-semibold mb-1">{title}</h3>

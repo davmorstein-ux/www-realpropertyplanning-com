@@ -91,7 +91,7 @@ const AFHOwnershipStructure = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-ownership-img.webp" alt="Cover art: AFH Ownership: Individual or LLC?" width={1024} height={1536} />
           <p
@@ -101,7 +101,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -154,7 +154,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -165,7 +165,7 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -203,8 +203,8 @@ const AFHOwnershipStructure = () => (
           <div
             style={{
               background: "#e8f2f9",
-              border: "1px solid #9e2c35",
-              borderLeft: "4px solid #9e2c35",
+              border: "1px solid #1B3A6B",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -235,7 +235,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -246,7 +246,7 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -260,7 +260,7 @@ const AFHOwnershipStructure = () => (
                 style={{
                   background: "#fff",
                   border: "1px solid #dccdce",
-                  borderLeft: "4px solid #b13a44",
+                  borderLeft: "4px solid #1B3A6B",
                   borderRadius: 6,
                   padding: "22px",
                 }}
@@ -270,7 +270,7 @@ const AFHOwnershipStructure = () => (
                     fontSize: 17,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#280a0c",
+                    color: "#142c52",
                     margin: "0 0 10px",
                   }}
                 >
@@ -303,7 +303,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -314,7 +314,7 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -348,7 +348,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -359,7 +359,7 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -430,7 +430,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -441,7 +441,7 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 16px",
             }}
@@ -498,7 +498,7 @@ const AFHOwnershipStructure = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 6px",
                     }}
                   >
@@ -532,7 +532,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -543,7 +543,7 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -577,7 +577,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#b13a44",
+              color: "#1B3A6B",
               margin: "0 0 16px",
             }}
           >
@@ -595,7 +595,7 @@ const AFHOwnershipStructure = () => (
           >
             Planning an AFH Purchase?
           </h2>
-          <div style={{ width: 40, height: 2, background: "#b13a44", margin: "0 auto 24px", borderRadius: 1 }} />
+          <div style={{ width: 40, height: 2, background: "#1B3A6B", margin: "0 auto 24px", borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,

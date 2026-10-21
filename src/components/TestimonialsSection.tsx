@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
               <div key={t.id} className="bg-background rounded-xl p-7 border border-border relative">
                 <Quote
                   className="w-8 h-8 absolute top-6 right-6"
-                  style={{ color: "#7f1d1d", opacity: 0.15 }}
+                  style={{ color: "#1B3A6B", opacity: 0.15 }}
                   aria-hidden="true"
                 />
                 <blockquote className="text-foreground leading-[1.75] mb-5" style={{ fontSize: 17 }}>

@@ -151,7 +151,7 @@ const EstateProbateInheritedProperty = () => {
                 reader was not on, while the other five stayed burgundy. On a
                 hub, nothing in the list is current; the prop is optional and
                 omitting it leaves every topic in its resting state. */}
-            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" />
+            <RoadmapDropdown topics={tiles} accentColor="#1B3A6B" mode="list" />
           </div>
         </section>
 

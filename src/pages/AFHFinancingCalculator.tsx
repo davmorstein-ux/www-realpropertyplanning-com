@@ -589,7 +589,7 @@ const AFHFinancingCalculator = () => {
           </CalcShell>
         </div>
         <style dangerouslySetInnerHTML={{ __html: `
-          .ck .fin-warn { background: #fef2f2; border: 1px solid #e3a1a1; border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; font-size: 16px; line-height: 1.5; color: #7f1d1d; }
+          .ck .fin-warn { background: #fef2f2; border: 1px solid #e3a1a1; border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; font-size: 16px; line-height: 1.5; color: #1B3A6B; }
           .ck .fin-warn ul { margin: 6px 0 0; padding-left: 20px; }
           .ck .fin-tablewrap { overflow-x: auto; border: 1px solid #e1e7ec; border-radius: 12px; }
           .ck table.fin-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: ${INK}; }

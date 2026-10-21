@@ -131,18 +131,18 @@ export default function ArticlesCarousel() {
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "#7f2028",
+            color: "#1B3A6B",
             marginBottom: 12,
           }}
         >
           Real Property Planning
         </span>
         <h2
-          style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: "#280a0c", margin: 0, lineHeight: 1.15 }}
+          style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: "#142c52", margin: 0, lineHeight: 1.15 }}
         >
           Featured Articles
         </h2>
-        <div style={{ width: 48, height: 2, background: "#7f2028", margin: "16px auto 0", borderRadius: 1 }} />
+        <div style={{ width: 48, height: 2, background: "#1B3A6B", margin: "16px auto 0", borderRadius: 1 }} />
       </div>
 
       {/* Carousel viewport with arrows on either side */}

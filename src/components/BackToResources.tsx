@@ -55,7 +55,7 @@ const CSS = `
     text-transform: uppercase;
     text-align: center;
     line-height: 1.2;
-    /* Gold ants — the .marquee-hover default is #7f1d1d burgundy, which is
+    /* Gold ants — the .marquee-hover default is #1B3A6B burgundy, which is
        nearly invisible against this navy plate. */
     --marquee-color: #d1a847;
     transition: background 0.25s ease, box-shadow 0.25s ease;

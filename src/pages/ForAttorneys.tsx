@@ -41,7 +41,7 @@ const ForAttorneys = () => (
             ["Real Estate Attorneys", "Advise on title, contracts, disputes, ownership rights, and transaction-related legal risk."],
           ].map(([title, desc]) => (
             <p key={title} className="text-2xl md:text-[1.7rem] leading-relaxed">
-              <strong className="text-[#7f2028]">{title}</strong>
+              <strong className="text-[#1B3A6B]">{title}</strong>
               <span className="text-[#292420]"> — </span>
               <span className="text-[#292420]">{desc}</span>
             </p>
@@ -65,7 +65,7 @@ const ForAttorneys = () => (
     <section className="py-6 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-attorneys/how-it-works" className="text-[#7f2028] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
+          <Link to="/for-attorneys/how-it-works" className="text-[#1B3A6B] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
             How the process works for attorneys →
           </Link>
         </div>

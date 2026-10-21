@@ -17,7 +17,7 @@ const label = {
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
-  color: "#481216",
+  color: "#142c52",
   margin: "0 0 14px",
 };
 
@@ -25,7 +25,7 @@ const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
-  color: "#280a0c",
+  color: "#142c52",
   lineHeight: 1.2,
   margin: "0 0 20px",
 };
@@ -90,7 +90,7 @@ const AFHWaboGuide = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={wrap}>
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc="/audio/wabo-overview.mp3" />
@@ -148,7 +148,7 @@ const AFHWaboGuide = () => (
             style={{
               background: "#f7f4ef",
               border: "1px solid #dfc9cb",
-              borderLeft: "4px solid #9e2c35",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "24px 28px",
               margin: "24px 0",
@@ -280,7 +280,7 @@ const AFHWaboGuide = () => (
           </p>
           <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: "20px 0 0" }}>
             Ready for the technical details?{" "}
-            <Link to="/afh-club/wabo-technical-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
+            <Link to="/afh-club/wabo-technical-guide" style={{ color: "#1B3A6B", fontWeight: 600, textDecoration: "underline" }}>
               WABO Checklist & Technical Requirements →
             </Link>
           </p>

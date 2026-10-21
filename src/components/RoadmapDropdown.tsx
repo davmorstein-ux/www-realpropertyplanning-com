@@ -33,7 +33,7 @@ const ACTIVE_COLOR = "#17578f";
 const RoadmapDropdown = ({
   topics,
   itemLabel = "topics",
-  accentColor = "#721d24",
+  accentColor = "#1B3A6B",
   currentPath,
   mode = "dropdown",
 }: RoadmapDropdownProps) => {
@@ -76,7 +76,7 @@ const RoadmapDropdown = ({
           {activeIndex + 1}
         </span>
         <span
-          style={{ fontSize: 17, fontWeight: 700, color: "#280a0c", lineHeight: 1.4, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}
+          style={{ fontSize: 17, fontWeight: 700, color: "#142c52", lineHeight: 1.4, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}
         >
           {activeTopic.title}
         </span>
@@ -192,7 +192,7 @@ const RoadmapDropdown = ({
           textAlign: "left",
         }}
       >
-        <span style={{ fontSize: 17, fontWeight: 700, color: "#280a0c", lineHeight: 1.4 }}>
+        <span style={{ fontSize: 17, fontWeight: 700, color: "#142c52", lineHeight: 1.4 }}>
           This guide covers {topics.length} {itemLabel} — tap to jump to any of them
         </span>
         <span
@@ -254,7 +254,7 @@ const RoadmapDropdown = ({
             );
             const label = (
               <span style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <span style={{ fontSize: 18, fontWeight: 600, color: "#280a0c", lineHeight: 1.4 }}>{topic.title}</span>
+                <span style={{ fontSize: 18, fontWeight: 600, color: "#142c52", lineHeight: 1.4 }}>{topic.title}</span>
                 {topic.description && (
                   <span style={{ fontSize: 16, fontWeight: 400, color: "#5a5a5a", lineHeight: 1.5 }}>
                     {topic.description}

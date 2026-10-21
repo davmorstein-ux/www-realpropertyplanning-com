@@ -21,7 +21,7 @@ const actionLinkStyle: CSSProperties = {
   fontWeight: 700,
   letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
-  color: "#7f2028",
+  color: "#1B3A6B",
   display: "inline-flex",
   alignItems: "center",
   gap: 7,
@@ -160,14 +160,14 @@ const Articles = () => {
             style={{
               fontSize: "clamp(22px, 3vw, 32px)",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               marginBottom: 8,
               letterSpacing: "-0.01em",
             }}
           >
             All Articles
           </h2>
-          <div style={{ width: 48, height: 2, background: "#7f2028", marginBottom: 40, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 2, background: "#1B3A6B", marginBottom: 40, borderRadius: 1 }} />
 
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {ARTICLES.map((article, i) => (
@@ -227,7 +227,7 @@ const Articles = () => {
                     style={{
                       fontSize: 18,
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 4px",
                       lineHeight: 1.3,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",

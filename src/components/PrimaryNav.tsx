@@ -222,14 +222,14 @@ const PrimaryNav = () => {
           cursor: pointer;
           text-decoration: none !important;
         }
-        .rpp-pn-trigger.rpp-pn-trigger:hover { color: #7f1d1d; }
+        .rpp-pn-trigger.rpp-pn-trigger:hover { color: #1B3A6B; }
         .rpp-pn-trigger.rpp-pn-trigger[aria-expanded="true"],
         .rpp-pn-trigger.rpp-pn-trigger.is-active {
-          border-bottom-color: #7f1d1d;
-          color: #7f1d1d;
+          border-bottom-color: #1B3A6B;
+          color: #1B3A6B;
         }
         .rpp-pn-trigger.rpp-pn-trigger:focus-visible {
-          outline: 2px solid #7f1d1d;
+          outline: 2px solid #1B3A6B;
           outline-offset: 3px;
           border-radius: 3px;
         }

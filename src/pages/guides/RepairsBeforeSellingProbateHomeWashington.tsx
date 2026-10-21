@@ -212,9 +212,9 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                 }
                 main a.rpp-repairs-contact.rpp-repairs-contact.rpp-repairs-contact:hover { background: #e8eef6 !important; }
               ` }} />
-              <a href="tel:2069003015">
+              <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  Call (206) 900-3015
+                  Call {FEATURED_BROKER.phone}
                 </Button>
               </a>
             </div>
@@ -396,9 +396,9 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               {FEATURED_BROKER.Role} evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="tel:2069003015">
+              <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
                 <Button variant="gold" size="lg" className="rounded-lg">
-                  Call (206) 900-3015
+                  Call {FEATURED_BROKER.phone}
                 </Button>
               </a>
               <Link to="/contact?reason=estate-property">

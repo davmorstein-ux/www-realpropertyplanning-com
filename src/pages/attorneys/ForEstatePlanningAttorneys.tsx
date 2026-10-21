@@ -173,9 +173,9 @@ const ForEstatePlanningAttorneys = () => (
               Washington State.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+12069003015">
+              <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
                 <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-                  Call (206) 900-3015
+                  Call {FEATURED_BROKER.phone}
                 </Button>
               </a>
               <Link to="/contact?reason=join-network">

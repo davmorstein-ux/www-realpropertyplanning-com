@@ -53,7 +53,7 @@ const DirectAnswerBlock = ({
         <div className="max-w-3xl mx-auto">
           {/* Card wrapper */}
           <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
-            <p className="font-bold tracking-[0.14em] uppercase mb-2" style={{ color: "#6b1b22", fontSize: "15px" }}>
+            <p className="font-bold tracking-[0.14em] uppercase mb-2" style={{ color: "#1B3A6B", fontSize: "15px" }}>
               Quick Answer
             </p>
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">{question}</h2>
@@ -66,7 +66,7 @@ const DirectAnswerBlock = ({
               <ul className="mt-6 pt-5 border-t border-border space-y-3">
                 {supportBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: "#6b1b22" }} />
+                    <span className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: "#1B3A6B" }} />
                     <span className="text-lg leading-relaxed" style={{ color: "#1c1917" }}>
                       {bullet}
                     </span>
@@ -89,7 +89,7 @@ const DirectAnswerBlock = ({
                         fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: "32px",
                         fontWeight: 900,
-                        color: "#6b1b22",
+                        color: "#1B3A6B",
                         display: "block",
                         marginBottom: "4px",
                       }}
@@ -120,10 +120,10 @@ const DirectAnswerBlock = ({
 
             {/* Optional page-specific CTA
                 CONTRAST FIX — three layers of defence against the global rule
-                  main a:not([class*="bg-"]):not(.btn):not([class*="button"]) { color: #ca2b38 }
+                  main a:not([class*="bg-"]):not(.btn):not([class*="button"]) { color: #1B3A6B }
                 which was repainting this label dark red on burgundy:
                   1. `btn` class            -> matches the rule's :not(.btn) exclusion
-                  2. `bg-[#6b1b22]` class   -> matches the :not([class*="bg-"]) exclusion
+                  2. `bg-[#1B3A6B]` class   -> matches the :not([class*="bg-"]) exclusion
                   3. inline color           -> inline styles beat any non-!important rule
                 Any one of these is sufficient; all three make it robust against
                 future edits to the global stylesheet. */}
@@ -131,9 +131,9 @@ const DirectAnswerBlock = ({
               <div className="mt-6 pt-5 border-t border-border">
                 <Link
                   to={ctaHref}
-                  className="rpp-answer-cta btn bg-[#6b1b22] inline-flex items-center gap-2 rounded-lg font-bold text-white no-underline"
+                  className="rpp-answer-cta btn bg-[#1B3A6B] inline-flex items-center gap-2 rounded-lg font-bold text-white no-underline"
                   style={{
-                    background: "#6b1b22",
+                    background: "#1B3A6B",
                     color: "#ffffff",
                     padding: "13px 26px",
                     fontSize: 17,

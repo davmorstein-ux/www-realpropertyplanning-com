@@ -320,9 +320,9 @@ const ProbateVsTrustSaleWashington = () => (
               {FEATURED_BROKER.Role} works with executors, trustees, and attorneys throughout Washington State.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="tel:2069003015">
+              <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
                 <Button variant="gold" size="lg" className="rounded-lg">
-                  Call (206) 900-3015
+                  Call {FEATURED_BROKER.phone}
                 </Button>
               </a>
               <Link to="/contact?reason=estate-property">

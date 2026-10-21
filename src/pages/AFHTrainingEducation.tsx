@@ -113,7 +113,7 @@ const AFHTrainingEducation = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-training-education.webp" alt="Cover art: AFH Training & Education" width={1024} height={1536} />
           <p
@@ -123,7 +123,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -171,7 +171,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -182,7 +182,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -224,7 +224,7 @@ const AFHTrainingEducation = () => (
                   }}
                 >
                   <h3
-                    style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: 0 }}
+                    style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: 0 }}
                   >
                     {item.title}
                   </h3>
@@ -279,7 +279,7 @@ const AFHTrainingEducation = () => (
                     fontWeight: 600,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#481216",
+                    color: "#142c52",
                     margin: 0,
                   }}
                 >
@@ -301,7 +301,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -312,7 +312,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -365,8 +365,8 @@ const AFHTrainingEducation = () => (
           <div
             style={{
               background: "#e8f2f9",
-              border: "1px solid #9e2c35",
-              borderLeft: "4px solid #9e2c35",
+              border: "1px solid #1B3A6B",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -399,7 +399,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -410,7 +410,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -440,7 +440,7 @@ const AFHTrainingEducation = () => (
                 style={{
                   background: "#fff",
                   border: "1px solid #dccdce",
-                  borderLeft: "4px solid #b13a44",
+                  borderLeft: "4px solid #1B3A6B",
                   borderRadius: 6,
                   padding: "18px 22px",
                   display: "flex",
@@ -454,7 +454,7 @@ const AFHTrainingEducation = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#b13a44",
+                    background: "#1B3A6B",
                     marginTop: 7,
                   }}
                 />
@@ -464,7 +464,7 @@ const AFHTrainingEducation = () => (
                       fontSize: 18,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 4px",
                     }}
                   >
@@ -497,9 +497,9 @@ const AFHTrainingEducation = () => (
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               textDecoration: "none",
-              borderBottom: "1px solid #b13a44",
+              borderBottom: "1px solid #1B3A6B",
               paddingBottom: 2,
             }}
           >
@@ -518,7 +518,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -529,7 +529,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -604,7 +604,7 @@ const AFHTrainingEducation = () => (
                   fontSize: 17,
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
-                  color: "#9e2c35",
+                  color: "#1B3A6B",
                   textDecoration: "underline",
                 }}
               >

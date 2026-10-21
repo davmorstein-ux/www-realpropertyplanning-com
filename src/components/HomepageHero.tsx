@@ -104,7 +104,7 @@ const HomepageFunnel = () => (
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
-        color: #6f2a30 !important;
+        color: #1B3A6B !important;
         margin: 0 0 0.75rem 0 !important;
       }
       .rpp-section-heading {

@@ -64,7 +64,7 @@ const EstateSubPageLayout = ({
             <div className="max-w-3xl mx-auto mb-10 md:mb-14">
               <RoadmapDropdown
                 topics={estateProbateTopics}
-                accentColor="#721d24"
+                accentColor="#1B3A6B"
                 currentPath={canonicalPath}
                 mode="list"
               />

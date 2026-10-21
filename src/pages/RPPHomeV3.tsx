@@ -765,23 +765,23 @@ const RPPHomeV3 = () => {
                 font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
                 font-size: 15px !important;
                 font-weight: 700;
-                color: #7f1d1d;
+                color: #1B3A6B;
                 background: transparent;
-                border: 2px solid #7f1d1d;
+                border: 2px solid #1B3A6B;
                 border-radius: 6px;
                 cursor: pointer;
               }
-              .rpp-coc-pause:hover { background: rgba(127,29,29,0.06); }
+              .rpp-coc-pause:hover { background: rgba(27, 58, 107,0.06); }
               .rpp-coc-pause:focus-visible { outline: 3px solid #d1a847; outline-offset: 2px; }
               .rpp-coc-dots { display: inline-flex; gap: 7px; }
               .rpp-coc-dot {
                 width: 11px; height: 11px; padding: 0;
                 border-radius: 50%;
-                border: 1px solid #7f1d1d;
+                border: 1px solid #1B3A6B;
                 background: transparent;
                 cursor: pointer;
               }
-              .rpp-coc-dot.is-current { background: #7f1d1d; }
+              .rpp-coc-dot.is-current { background: #1B3A6B; }
 
               /* Remodel calculator card: the cost-of-care heading size comes from
                  index.css rules keyed to that card's href, so this one sets its own. */

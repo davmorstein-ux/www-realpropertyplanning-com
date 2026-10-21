@@ -79,7 +79,7 @@ const LongTermCareOptions = () => {
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "#7f2028",
+                color: "#1B3A6B",
                 marginBottom: 12,
               }}
             >
@@ -105,7 +105,7 @@ const LongTermCareOptions = () => {
                 lineHeight: 1.75,
                 color: "hsl(220 35% 18%)",
                 marginBottom: 24,
-                borderLeft: "4px solid #c3525c",
+                borderLeft: "4px solid #6b84ad",
                 paddingLeft: 20,
               }}
             >
@@ -138,7 +138,7 @@ const LongTermCareOptions = () => {
               fontSize: "clamp(24px, 3vw, 34px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               marginBottom: 8,
             }}
           >
@@ -199,7 +199,7 @@ const LongTermCareOptions = () => {
                     style={{
                       fontSize: "clamp(18px, 2vw, 22px)",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 12px",
                       lineHeight: 1.3,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",

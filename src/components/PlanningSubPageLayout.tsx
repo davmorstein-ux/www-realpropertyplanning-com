@@ -67,7 +67,7 @@ const PlanningSubPageLayout = ({
             <div className="max-w-3xl mx-auto mb-10 md:mb-14">
               <RoadmapDropdown
                 topics={planningBeforeACrisisTopics}
-                accentColor="#721d24"
+                accentColor="#1B3A6B"
                 currentPath={canonicalPath}
                 mode="list"
               />

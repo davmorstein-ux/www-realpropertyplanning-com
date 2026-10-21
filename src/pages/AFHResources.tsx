@@ -205,7 +205,7 @@ const AFHResources = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-resources-v3.webp" alt="Cover art: AFH Resource Library" width={1024} height={1365} />
           <p
@@ -422,7 +422,7 @@ const AFHResources = () => (
             fontSize: "clamp(24px, 3.5vw, 36px)",
             fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontWeight: 700,
-            color: "#280a0c",
+            color: "#142c52",
             lineHeight: 1.2,
             margin: "0 0 16px",
           }}
@@ -471,7 +471,7 @@ const AFHResources = () => (
                     fontSize: 20,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#280a0c",
+                    color: "#142c52",
                     margin: "0 0 8px",
                   }}
                 >

@@ -16,7 +16,7 @@ interface PageFAQProps {
 }
 
 const NAVY = "#272421";
-const ACCENTS = ["#7f1d1d", "#883f20", "#25597e", "#662D56"];
+const ACCENTS = ["#1B3A6B", "#883f20", "#25597e", "#662D56"];
 
 const PageFAQ = ({
   faqs,
@@ -50,7 +50,7 @@ const PageFAQ = ({
       <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
         <p
           style={{
-            color: "#6b1b22",
+            color: "#1B3A6B",
             fontWeight: 700,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
@@ -109,7 +109,7 @@ const PageFAQ = ({
                     </span>
                     <ChevronDown
                       size={22}
-                      color="#6b1b22"
+                      color="#1B3A6B"
                       strokeWidth={2.25}
                       style={{
                         flexShrink: 0,

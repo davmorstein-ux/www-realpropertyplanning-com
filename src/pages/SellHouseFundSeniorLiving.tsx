@@ -157,7 +157,7 @@ const SellHouseFundSeniorLiving = () => {
                       <div
                         style={{
                           background: 'radial-gradient(circle at 38% 38%, #655a50, #3b0c10 70%)',
-                          border: '2px solid #c3525c',
+                          border: '2px solid #6b84ad',
                           borderRadius: '50%',
                           width: '52px',
                           height: '52px',
@@ -166,7 +166,7 @@ const SellHouseFundSeniorLiving = () => {
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          color: '#c3525c',
+                          color: '#6b84ad',
                           fontSize: '20px',
                           fontWeight: 700,
                           textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
@@ -294,9 +294,9 @@ const SellHouseFundSeniorLiving = () => {
                 Most families start with a single question. {FEATURED_BROKER.Role} is happy to hear it — no pressure, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:2069003015">
+                <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
                   <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Call (206) 900-3015
+                    Call {FEATURED_BROKER.phone}
                   </Button>
                 </a>
                 <Link to="/contact?reason=aging-parent">

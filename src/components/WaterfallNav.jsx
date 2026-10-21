@@ -259,7 +259,7 @@ const CSS = `
   .wf-what-label {
     font-size: 13px;
     font-weight: 600;
-    color: #280a0c;
+    color: #142c52;
     letter-spacing: 0.02em;
   }
   .wf-close-x {
@@ -300,7 +300,7 @@ const CSS = `
     padding: 13px 16px;
     font-size: 13.5px;
     font-weight: 800;
-    color: #280a0c;
+    color: #142c52;
     letter-spacing: 0.04em;
     background: var(--cat-bg-rest, transparent);
     border: none;
@@ -319,13 +319,13 @@ const CSS = `
     width: 11px;
     height: 11px;
     border-radius: 50%;
-    background: var(--cat-color, #7f2028);
+    background: var(--cat-color, #1B3A6B);
     flex-shrink: 0;
   }
   .wf-rail-btn:hover { background: var(--cat-bg-active, rgba(0,0,0,0.08)); }
   .wf-rail-btn.wf-active {
     background: var(--cat-bg-active, rgba(0,0,0,0.08));
-    color: var(--cat-color, #7f2028);
+    color: var(--cat-color, #1B3A6B);
   }
   .wf-rail-chevron {
     font-size: 13px;
@@ -349,7 +349,7 @@ const CSS = `
     padding: 8px 20px 12px;
     font-size: 13px;
     font-weight: 800;
-    color: var(--cat-color, #7f2028);
+    color: var(--cat-color, #1B3A6B);
     letter-spacing: 0.13em;
     text-transform: uppercase;
   }
@@ -360,7 +360,7 @@ const CSS = `
     padding: 9px 20px;
     font-size: 14px;
     font-weight: 700;
-    color: #280a0c;
+    color: #142c52;
     background: none;
     border: none;
     border-left: 2px solid transparent;
@@ -371,8 +371,8 @@ const CSS = `
     transition: color 0.2s, border-color 0.2s, background 0.2s;
   }
   .wf-item:hover {
-    color: #280a0c;
-    border-left-color: var(--cat-color, #7f2028);
+    color: #142c52;
+    border-left-color: var(--cat-color, #1B3A6B);
     background: rgba(0,0,0,0.05);
   }
 
@@ -385,7 +385,7 @@ const CSS = `
   .wf-close-btn {
     width: 100%;
     padding: 11px;
-    background: #280a0c;
+    background: #142c52;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -397,7 +397,7 @@ const CSS = `
     font-family: inherit;
     transition: background 0.4s ease;
   }
-  .wf-close-btn:hover { background: #7f2028; color: #ffffff; }
+  .wf-close-btn:hover { background: #1B3A6B; color: #ffffff; }
 
   /* Quick-links strip — mobile/tablet only, mirrors the header bar links
      that the 1100px media query hides. */
@@ -411,7 +411,7 @@ const CSS = `
   .wf-quick-label {
     font-size: 12px;
     font-weight: 800;
-    color: #7f2028;
+    color: #1B3A6B;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     margin: 0 0 10px 2px;
@@ -428,10 +428,10 @@ const CSS = `
     padding: 11px 12px;
     font-size: 15px;
     font-weight: 800;
-    color: #280a0c;
+    color: #142c52;
     background: #ffffff;
     border: 1px solid #d2b2b4;
-    border-left: 4px solid #7f2028;
+    border-left: 4px solid #1B3A6B;
     border-radius: 6px;
     text-align: left;
     cursor: pointer;
@@ -441,7 +441,7 @@ const CSS = `
   }
   .wf-quick-btn:hover { background: #f7f4ef; }
   .wf-quick-btn:focus-visible {
-    outline: 2px solid #7f2028;
+    outline: 2px solid #1B3A6B;
     outline-offset: 2px;
   }
   @media (max-width: 1100px) {

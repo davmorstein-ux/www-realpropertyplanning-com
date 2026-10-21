@@ -290,8 +290,8 @@ const PowerOfAttorney = () => {
                 A short conversation is usually the fastest way to get clarity. There is no obligation — just a practical talk about your situation and what makes sense next.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:2069003015" className="rpp-poa-call no-underline inline-flex items-center justify-center gap-2 bg-white hover:bg-[#eef2f8] text-[#1B3A6B] font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
-                  Call (206) 900-3015
+                <a href={`tel:${FEATURED_BROKER.phoneTel}`} className="rpp-poa-call no-underline inline-flex items-center justify-center gap-2 bg-white hover:bg-[#eef2f8] text-[#1B3A6B] font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
+                  Call {FEATURED_BROKER.phone}
                 </a>
                 <Link to="/contact" className="rpp-dark-surface no-underline inline-flex items-center justify-center bg-transparent hover:bg-white/10 text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-colors border-2 border-white">
                   Send a Message

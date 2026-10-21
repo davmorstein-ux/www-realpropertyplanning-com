@@ -95,7 +95,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
        a footer link. Sept 2026. */
     lines: ["AFH Club"],
     href: "/afh-club",
-    color: "#7f2028",
+    color: "#1B3A6B",
     items: [
       { name: "AFH Club Home", href: "/afh-club" },
       { name: "Washington AFH Guide (Start Here)", href: "/afh-club/washington-adult-family-home-guide" },
@@ -151,7 +151,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
        for the client who thinks of it three months later. */
     lines: ["About"],
     href: "/about",
-    color: "#721d24",
+    color: "#1B3A6B",
     items: [
       { name: "About Real Property Planning", href: "/about" },
       { name: "How the Process Works", href: "/how-the-process-works" },

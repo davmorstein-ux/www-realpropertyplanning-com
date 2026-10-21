@@ -61,7 +61,7 @@ const DisclaimerSection = () => {
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
           text-transform: uppercase !important;
-          color: #6b1b22 !important;
+          color: #1B3A6B !important;
           margin: 0 0 8px 0 !important;
         }
       ` }} />

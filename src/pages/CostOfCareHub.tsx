@@ -70,7 +70,7 @@ const CostOfCareHub = () => (
 
             {/* Hospice is a service, not a setting, so it is deliberately not a
                 seventh card with a price. */}
-            <div className="mt-8 rounded-xl border-2 border-dashed" style={{ borderColor: "#7f1d1d", padding: "1.25rem 1.5rem", background: "#fff8f6" }}>
+            <div className="mt-8 rounded-xl border-2 border-dashed" style={{ borderColor: "#1B3A6B", padding: "1.25rem 1.5rem", background: "#fff8f6" }}>
               <p className="font-serif text-[22px] md:text-[26px] font-semibold text-navy leading-tight mb-2">What about hospice care?</p>
               <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-3">
                 Hospice isn't a housing option, so it isn't a card above. It is end-of-life care that comes to wherever

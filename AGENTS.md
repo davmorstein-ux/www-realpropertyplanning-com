@@ -87,3 +87,14 @@ The marching-ants hover is retired sitewide (index.css "CALM HOVER" block
 switches off every ant ::before). Clickable tiles lift 2px on hover, computers
 only, and a bordered tile's border turns navy with a soft shadow. The double
 pulse is the click feedback. Do not add dashed or animated borders to tiles.
+
+## Colour: maroon fully retired (Oct 21, 2026)
+
+The retired maroon family (#6b1b22, #7f1d1d, #7f2028, #721d24, #481216 and
+relatives) was switched to navy #1B3A6B (deep #142c52) in text, borders and
+accents across ~100 files, and the `--gold` theme variable (which held the
+maroon despite its name) is now navy, so `text-gold` / `border-gold` render
+navy. Light accent text on dark bands is pale blue #c9d6ea. Kept on purpose:
+the brick-red door colour #B0352A (brand), the category colours (#8A4214,
+#246044, #25597e, #662D56, #883f20), the calculators' own accents, and the
+deep reds that mean "sold", "no" or a warning.

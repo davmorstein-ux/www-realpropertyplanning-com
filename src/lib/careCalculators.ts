@@ -55,7 +55,7 @@ export const CARE_CALCULATORS: CareCalculatorOption[] = [
     careTypeId: "independent-living",
     shortLabel: "Independent Living",
     blurb: "Own apartment, community amenities, no personal care included.",
-    color: "#7f1d1d",
+    color: "#1B3A6B",
   },
   {
     slug: "in-home-care",

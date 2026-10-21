@@ -215,9 +215,9 @@ const GrayDivorce = () => {
                     Schedule a Consultation
                   </Button>
                 </Link>
-                <a href="tel:2069003015">
+                <a href={`tel:${FEATURED_BROKER.phoneTel}`}>
                   <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Call (206) 900-3015
+                    Call {FEATURED_BROKER.phone}
                   </Button>
                 </a>
               </div>

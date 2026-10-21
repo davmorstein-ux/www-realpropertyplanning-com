@@ -403,7 +403,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
       <button onClick={handleSubmit} aria-label="Search"
         className="relative overflow-hidden flex-shrink-0 w-10 h-10 rounded-full text-primary-foreground flex items-center justify-center mr-1.5 transition-all duration-200 hover:-translate-y-[1px] active:translate-y-[1px]"
         style={{
-          background: "linear-gradient(180deg, #5e544a 0%, #3f3831 60%, #400f13 100%)",
+          background: "linear-gradient(180deg, #5e544a 0%, #3f3831 60%, #142c52 100%)",
           border: "1px solid rgba(10,20,40,0.55)",
           boxShadow:
             "inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 3px rgba(0,0,0,0.30), 0 2px 4px rgba(15,30,55,0.35), 0 6px 14px rgba(15,30,55,0.25)",

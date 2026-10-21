@@ -144,7 +144,7 @@ const Section = ({
   heading,
   cards,
   bg = "bg-background",
-  color = "#c3525c",
+  color = "#6b84ad",
 }: {
   heading: string;
   cards: Card[];
@@ -346,7 +346,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
               },
             ]}
             itemLabel="categories of professionals"
-            accentColor="#721d24"
+            accentColor="#1B3A6B"
           />
         </div>
 
@@ -355,7 +355,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
             <div className="container px-6 lg:px-8">
               <h2
                 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center"
-                style={{ color: "#721d24" }}
+                style={{ color: "#1B3A6B" }}
               >
                 Legal Professionals
               </h2>
@@ -394,7 +394,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                               fontSize: 18,
                               fontWeight: 700,
-                              color: "#721d24",
+                              color: "#1B3A6B",
                               lineHeight: 1.3,
                               marginBottom: 6,
                             }}
@@ -406,7 +406,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                         <div style={{ padding: "12px 20px 16px" }}>
                           <div
                             style={{
-                              background: "#721d24",
+                              background: "#1B3A6B",
                               borderRadius: 8,
                               padding: "10px 16px",
                               display: "flex",

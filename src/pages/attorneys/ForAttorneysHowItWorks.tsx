@@ -97,7 +97,7 @@ const ForAttorneysHowItWorks = () => (
                 >
                   <div
                     aria-hidden="true"
-                    className="flex-none w-12 h-12 rounded-full bg-[#39332d] text-[#c3525c] font-serif font-bold text-xl flex items-center justify-center"
+                    className="flex-none w-12 h-12 rounded-full bg-[#39332d] text-[#6b84ad] font-serif font-bold text-xl flex items-center justify-center"
                   >
                     {n}
                   </div>
@@ -136,7 +136,7 @@ const ForAttorneysHowItWorks = () => (
                 >
                   <span
                     aria-hidden="true"
-                    className="flex-none mt-2 w-2.5 h-2.5 rounded-full bg-[#c3525c]"
+                    className="flex-none mt-2 w-2.5 h-2.5 rounded-full bg-[#6b84ad]"
                   />
                   <span>{item}</span>
                 </li>
@@ -156,7 +156,7 @@ const ForAttorneysHowItWorks = () => (
             <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
               Plain language you can use verbatim or adapt — written for elderly clients and grieving families.
             </p>
-            <blockquote className="p-6 md:p-8 rounded-xl border-l-4 border-[#c3525c] bg-[#FAF7EE]">
+            <blockquote className="p-6 md:p-8 rounded-xl border-l-4 border-[#6b84ad] bg-[#FAF7EE]">
               <p className="text-[#39332d] text-xl md:text-2xl leading-[1.8] font-serif italic">
                 &ldquo;For the house, I&rsquo;d like to introduce you to a licensed real estate broker who handles homes tied to estates, trusts, and family transitions across Washington State. I found them through Real Property Planning, a free resource for families in situations like yours. The broker is calm, experienced, and used to working with families during difficult times, and will take care of the property side from start to finish — assessing the home, coordinating any preparation, pricing it appropriately, and managing the sale — and will keep me informed along the way. You will have one steady point of contact. There is no pressure and no rush.&rdquo;
               </p>
@@ -178,24 +178,24 @@ const ForAttorneysHowItWorks = () => (
 
             <div className="space-y-5 mb-8">
               <p className="text-[#39332d] text-xl md:text-2xl leading-relaxed">
-                <strong className="text-[#7f2028]">Direct Line</strong>
+                <strong className="text-[#1B3A6B]">Direct Line</strong>
                 <span> — </span>
-                <a href="tel:2069003015" className="underline underline-offset-4 hover:text-[#7f2028]">
-                  (206) 900-3015
+                <a href={`tel:${FEATURED_BROKER.phoneTel}`} className="underline underline-offset-4 hover:text-[#1B3A6B]">
+                  {FEATURED_BROKER.phone}
                 </a>
               </p>
               <p className="text-[#39332d] text-xl md:text-2xl leading-relaxed">
-                <strong className="text-[#7f2028]">Email</strong>
+                <strong className="text-[#1B3A6B]">Email</strong>
                 <span> — </span>
                 <a
                   href="mailto:info@realpropertyplanning.com"
-                  className="underline underline-offset-4 hover:text-[#7f2028] break-words"
+                  className="underline underline-offset-4 hover:text-[#1B3A6B] break-words"
                 >
                   info@realpropertyplanning.com
                 </a>
               </p>
               <p className="text-[#39332d] text-lg md:text-xl leading-[1.8]">
-                <strong className="text-[#7f2028]">What to include:</strong> client name, property address (or county), the legal posture of the matter (probate stage, trust, family law), and whether you need a sale, a valuation, or both. One paragraph is enough.
+                <strong className="text-[#1B3A6B]">What to include:</strong> client name, property address (or county), the legal posture of the matter (probate stage, trust, family law), and whether you need a sale, a valuation, or both. One paragraph is enough.
               </p>
             </div>
 

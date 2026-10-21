@@ -29,7 +29,7 @@ import { AFH_QUICK_LINKS, isAFHClubPath, isActiveQuickLink } from "@/lib/afhQuic
 const GREEN = "#192A19";
 const CREAM = "#F3F0EA";
 const CSS = `
-.afhq { background: ${GREEN}; border-bottom: 3px solid #7f2028; }
+.afhq { background: ${GREEN}; border-bottom: 3px solid #1B3A6B; }
 .afhq .afhq-in { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .afhq .afhq-in::-webkit-scrollbar { display: none; }
 .afhq a.afhq-brand { flex: 0 0 auto; display: inline-flex !important; align-items: center; gap: 8px; height: auto !important; margin-right: 6px; padding: 0 16px 0 0 !important; border-right: 1px solid rgba(243,240,234,0.35); text-decoration: none !important; }

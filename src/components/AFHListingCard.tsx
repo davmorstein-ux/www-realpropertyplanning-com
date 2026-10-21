@@ -332,7 +332,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
       {/* CTAs */}
       <div style={{ display: "flex", gap: "8px", alignItems: "center", flexWrap: "wrap" }}>
         <a
-          href="tel:+12069003015"
+          href={`tel:${FEATURED_BROKER.phoneTel}`}
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -348,7 +348,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
           }}
         >
           <Phone size={13} />
-          (206) 900-3015
+          {FEATURED_BROKER.phone}
         </a>
         <a
           href={`mailto:dave.stein@exprealty.com?subject=${encodeURIComponent(

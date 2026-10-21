@@ -242,7 +242,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           className="rpp-carousel-arrow"
           style={{
             background: "#fff",
-            border: "1.5px solid #c58d92",
+            border: "1.5px solid #b9c6dc",
             borderRadius: "50%",
             width: 48,
             height: 48,
@@ -250,7 +250,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#481216",
+            color: "#142c52",
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
@@ -258,17 +258,17 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
-            el.style.background = "#b13a44";
+            el.style.background = "#1B3A6B";
             el.style.color = "#fff";
-            el.style.borderColor = "#b13a44";
+            el.style.borderColor = "#1B3A6B";
             el.style.transform = "scale(1.1)";
             el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
             el.style.background = "#fff";
-            el.style.color = "#481216";
-            el.style.borderColor = "#c58d92";
+            el.style.color = "#142c52";
+            el.style.borderColor = "#b9c6dc";
             el.style.transform = "scale(1)";
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}
@@ -298,7 +298,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
             fontSize: 16,
             fontWeight: 700,
-            color: "#481216",
+            color: "#142c52",
             minWidth: 72,
             textAlign: "center",
           }}
@@ -330,7 +330,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 <span
                   style={{
                     display: "block",
-                    background: isActive ? "#b13a44" : "#d2b2b4",
+                    background: isActive ? "#1B3A6B" : "#d2b2b4",
                     borderRadius: 2,
                     width: isActive ? 24 : 8,
                     height: 4,
@@ -348,7 +348,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           className="rpp-carousel-arrow"
           style={{
             background: "#fff",
-            border: "1.5px solid #c58d92",
+            border: "1.5px solid #b9c6dc",
             borderRadius: "50%",
             width: 48,
             height: 48,
@@ -356,7 +356,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#481216",
+            color: "#142c52",
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
@@ -364,17 +364,17 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
-            el.style.background = "#b13a44";
+            el.style.background = "#1B3A6B";
             el.style.color = "#fff";
-            el.style.borderColor = "#b13a44";
+            el.style.borderColor = "#1B3A6B";
             el.style.transform = "scale(1.1)";
             el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
             el.style.background = "#fff";
-            el.style.color = "#481216";
-            el.style.borderColor = "#c58d92";
+            el.style.color = "#142c52";
+            el.style.borderColor = "#b9c6dc";
             el.style.transform = "scale(1)";
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}

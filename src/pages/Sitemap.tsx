@@ -46,7 +46,7 @@ const Sitemap = () => (
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <style dangerouslySetInnerHTML={{ __html: `
             .smap-intro p.smap-lead { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 19px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 18px !important; max-width: 760px; }
-            .smap-intro .smap-afh { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #7f2028; border-radius: 10px; padding: 16px 20px; margin: 0 0 28px; }
+            .smap-intro .smap-afh { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #1B3A6B; border-radius: 10px; padding: 16px 20px; margin: 0 0 28px; }
             .smap-intro .smap-afh span { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.45; color: #1c1917; flex: 1 1 320px; }
             .smap-intro a.smap-afh-link { display: inline-flex; align-items: center; min-height: 48px; padding: 10px 20px !important; background: #1B3A6B !important; color: #ffffff !important; border-radius: 6px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; font-weight: 700 !important; text-decoration: none !important; }
             .smap-intro a.smap-afh-link::after { content: none !important; display: none !important; }

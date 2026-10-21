@@ -54,7 +54,7 @@ const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 const FLAG_COLOR: Record<FlagLevel, { fg: string; bg: string; dot: string }> = {
   green: { fg: "#14532d", bg: "#f0fdf4", dot: "#16a34a" },
   yellow: { fg: "#713f12", bg: "#fefce8", dot: "#ca8a04" },
-  red: { fg: "#7f1d1d", bg: "#fef2f2", dot: "#dc2626" },
+  red: { fg: "#1B3A6B", bg: "#fef2f2", dot: "#dc2626" },
 };
 
 const PAGE_CSS = `

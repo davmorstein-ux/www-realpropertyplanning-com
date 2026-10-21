@@ -149,7 +149,7 @@ const Resources = () => {
             <div className="max-w-4xl mx-auto space-y-8">
               {groups.map((group) => (
                 <div key={group.label}>
-                  <h2 className="font-serif text-xl md:text-2xl font-semibold text-red-800 mb-3">
+                  <h2 className="font-serif text-xl md:text-2xl font-semibold text-[#1B3A6B] mb-3">
                     {group.label}
                   </h2>
                   <div className="grid gap-2">

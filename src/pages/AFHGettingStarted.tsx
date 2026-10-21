@@ -105,7 +105,7 @@ const AFHGettingStarted = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-getting-started.webp" alt="Cover art: Getting Started with Adult Family Homes" width={1086} height={1448} />
           <p
@@ -115,7 +115,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -178,7 +178,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -189,7 +189,7 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -247,7 +247,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -258,7 +258,7 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -334,7 +334,7 @@ const AFHGettingStarted = () => (
                   padding: "16px 20px",
                   background: "#fff",
                   border: "1px solid #dccdce",
-                  borderLeft: "4px solid #b13a44",
+                  borderLeft: "4px solid #1B3A6B",
                   borderRadius: 6,
                 }}
               >
@@ -344,7 +344,7 @@ const AFHGettingStarted = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#b13a44",
+                    background: "#1B3A6B",
                     marginTop: 8,
                   }}
                 />
@@ -354,7 +354,7 @@ const AFHGettingStarted = () => (
                       fontSize: 18,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 4px",
                     }}
                   >
@@ -379,8 +379,8 @@ const AFHGettingStarted = () => (
             style={{
               marginTop: 28,
               background: "#e8f2f9",
-              border: "1px solid #9e2c35",
-              borderLeft: "4px solid #9e2c35",
+              border: "1px solid #1B3A6B",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -403,7 +403,7 @@ const AFHGettingStarted = () => (
                 href="https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/information/AFH%20Information%20Sheet%20-%20What%20You%20Need%20to%20Understand.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#9e2c35" }}
+                style={{ color: "#1B3A6B" }}
               >
                 "What You Need to Understand Before Becoming a Licensed Adult Family Home Provider"
               </a>{" "}
@@ -423,7 +423,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -434,7 +434,7 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -469,7 +469,7 @@ const AFHGettingStarted = () => (
                     fontSize: 17,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#280a0c",
+                    color: "#142c52",
                     margin: "0 0 10px",
                   }}
                 >
@@ -502,7 +502,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -513,7 +513,7 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -550,7 +550,7 @@ const AFHGettingStarted = () => (
                     fontSize: 19,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#280a0c",
+                    color: "#142c52",
                     margin: "0 0 12px",
                   }}
                 >
@@ -574,7 +574,7 @@ const AFHGettingStarted = () => (
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#481216",
+                    color: "#142c52",
                     margin: "0 0 8px",
                   }}
                 >
@@ -602,7 +602,7 @@ const AFHGettingStarted = () => (
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#481216",
+                    color: "#142c52",
                     margin: "16px 0 8px",
                   }}
                 >
@@ -631,7 +631,7 @@ const AFHGettingStarted = () => (
               marginTop: 24,
               background: "#fff",
               border: "1px solid #dccdce",
-              borderLeft: "4px solid #b13a44",
+              borderLeft: "4px solid #1B3A6B",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -663,7 +663,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -674,7 +674,7 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -749,7 +749,7 @@ const AFHGettingStarted = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 6px",
                     }}
                   >
@@ -801,7 +801,7 @@ const AFHGettingStarted = () => (
                   fontSize: 16,
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
-                  color: "#9e2c35",
+                  color: "#1B3A6B",
                   textDecoration: "underline",
                   lineHeight: 1.5,
                 }}

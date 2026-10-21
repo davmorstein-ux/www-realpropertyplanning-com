@@ -20,8 +20,8 @@ const CSS = `
 .smap-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 720px) { .smap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .smap-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; } }
-.smap-section { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid var(--smap-accent, #7f2028); border-radius: 10px; padding: 20px 22px 16px; min-width: 0; }
-.smap-root h2.smap-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 22px !important; line-height: 1.25 !important; font-weight: 700 !important; color: var(--smap-accent, #280a0c) !important; margin: 0 0 6px !important; }
+.smap-section { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid var(--smap-accent, #1B3A6B); border-radius: 10px; padding: 20px 22px 16px; min-width: 0; }
+.smap-root h2.smap-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 22px !important; line-height: 1.25 !important; font-weight: 700 !important; color: var(--smap-accent, #142c52) !important; margin: 0 0 6px !important; }
 .smap-root p.smap-blurb { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; margin: 0 0 12px !important; }
 .smap-root h3.smap-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 14px !important; line-height: 1.3 !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; color: #1c1917 !important; margin: 16px 0 4px !important; }
 .smap-root ul.smap-list { list-style: none !important; margin: 0 !important; padding: 0 !important; }
@@ -29,8 +29,8 @@ const CSS = `
 .smap-root ul.smap-list li:last-child { border-bottom: 0; }
 .smap-root a.smap-link { display: block; padding: 8px 0 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.35 !important; font-weight: 500 !important; color: #1c1917 !important; text-decoration: none !important; }
 .smap-root a.smap-link::after { content: none !important; display: none !important; }
-@media (hover: hover) { .smap-root a.smap-link:hover { color: var(--smap-accent, #7f2028) !important; text-decoration: underline !important; text-underline-offset: 3px; } }
-.smap-root a.smap-link:focus-visible { outline: 3px solid var(--smap-accent, #7f2028); outline-offset: 2px; border-radius: 3px; }
+@media (hover: hover) { .smap-root a.smap-link:hover { color: var(--smap-accent, #1B3A6B) !important; text-decoration: underline !important; text-underline-offset: 3px; } }
+.smap-root a.smap-link:focus-visible { outline: 3px solid var(--smap-accent, #1B3A6B); outline-offset: 2px; border-radius: 3px; }
 @media (max-width: 719px) { .smap-root a.smap-link { min-height: 44px; display: flex; align-items: center; } }
 `;
 

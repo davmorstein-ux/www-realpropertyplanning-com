@@ -124,7 +124,7 @@ const PlanningBeforeACrisis = () => {
                 (retired Oct 20, 2026). */}
             <JourneyShortcuts plan="choose" questions="plan-ahead" />
 
-            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
+            <RoadmapDropdown topics={tiles} accentColor="#1B3A6B" mode="list" currentPath={tiles[0].href} />
           </div>
         </section>
 

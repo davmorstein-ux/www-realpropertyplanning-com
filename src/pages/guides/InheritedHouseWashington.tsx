@@ -128,7 +128,7 @@ const InheritedHouseWashington = () => (
             content: none !important;
           }
           .inherited-tile-outline .tile-white__face {
-            border: 2px solid #721d24 !important;
+            border: 2px solid #1B3A6B !important;
             padding: 22px 22px 20px !important;
             box-sizing: border-box !important;
           }

@@ -32,7 +32,7 @@ const FeaturedProfessionals = () => (
 <HeroBandTitle as="h1">Featured Professionals</HeroBandTitle>
         </div>
       </section>
-      <section style={{ background: "#edf0f3", padding: "40px 24px 56px", borderBottom: "3px solid #7f1d1d" }}>
+      <section style={{ background: "#edf0f3", padding: "40px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={wrap}>
           <p
             style={{
@@ -41,7 +41,7 @@ const FeaturedProfessionals = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -147,7 +147,7 @@ const FeaturedProfessionals = () => (
                         >
                           {pro.name}
                         </p>
-                        <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                        <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#1B3A6B", margin: 0 }}>
                           {pro.role}
                         </p>
                       </div>
@@ -176,7 +176,7 @@ const FeaturedProfessionals = () => (
                           >
                             {pro.name2}
                           </p>
-                          <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                          <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#1B3A6B", margin: 0 }}>
                             {pro.role2}
                           </p>
                         </div>
@@ -210,7 +210,7 @@ const FeaturedProfessionals = () => (
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontSize: 14,
                       fontWeight: 700,
-                      color: "#7f1d1d",
+                      color: "#1B3A6B",
                       margin: "14px 0 0",
                       marginTop: "auto",
                       paddingTop: 14,

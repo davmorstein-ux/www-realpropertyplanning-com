@@ -110,7 +110,7 @@ const AFHLicensingCertification = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc={audioAsset.url} />
@@ -123,7 +123,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -169,7 +169,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -180,7 +180,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -216,7 +216,7 @@ const AFHLicensingCertification = () => (
             style={{
               background: "#fff",
               border: "1px solid #dccdce",
-              borderTop: "3px solid #b13a44",
+              borderTop: "3px solid #1B3A6B",
               borderRadius: 6,
               padding: "24px",
             }}
@@ -226,7 +226,7 @@ const AFHLicensingCertification = () => (
                 fontSize: 17,
                 fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
-                color: "#280a0c",
+                color: "#142c52",
                 margin: "0 0 16px",
               }}
             >
@@ -251,7 +251,7 @@ const AFHLicensingCertification = () => (
                     width: 7,
                     height: 7,
                     borderRadius: "50%",
-                    background: "#b13a44",
+                    background: "#1B3A6B",
                     marginTop: 8,
                   }}
                 />
@@ -294,7 +294,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -305,7 +305,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -362,7 +362,7 @@ const AFHLicensingCertification = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
-                      color: "#280a0c",
+                      color: "#142c52",
                       margin: "0 0 6px",
                     }}
                   >
@@ -396,7 +396,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -407,7 +407,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -477,7 +477,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               margin: "0 0 14px",
             }}
           >
@@ -488,7 +488,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#280a0c",
+              color: "#142c52",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -547,9 +547,9 @@ const AFHLicensingCertification = () => (
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#481216",
+              color: "#142c52",
               textDecoration: "none",
-              borderBottom: "1px solid #b13a44",
+              borderBottom: "1px solid #1B3A6B",
               paddingBottom: 2,
             }}
           >
@@ -562,11 +562,11 @@ const AFHLicensingCertification = () => (
       <section style={{ background: "#f7f4ef", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
-            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#280a0c", margin: "0 0 8px" }}
+            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: "0 0 8px" }}
           >
             Key DSHS Resources
           </h2>
-          <div style={{ width: 36, height: 2, background: "#b13a44", marginBottom: 24, borderRadius: 1 }} />
+          <div style={{ width: 36, height: 2, background: "#1B3A6B", marginBottom: 24, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               { label: "DSHS Online License Application", url: "https://baau.dshs.wa.gov/" },
@@ -601,7 +601,7 @@ const AFHLicensingCertification = () => (
                   fontSize: 17,
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
-                  color: "#9e2c35",
+                  color: "#1B3A6B",
                   textDecoration: "underline",
                 }}
               >

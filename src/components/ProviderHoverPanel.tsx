@@ -214,7 +214,7 @@ export default function ProviderHoverPanel({
               {/* Panel header */}
               <div
                 style={{
-                  background: "#280a0c",
+                  background: "#142c52",
                   padding: "20px 24px",
                   borderRadius: "8px 8px 0 0",
                   display: "flex",
@@ -233,7 +233,7 @@ export default function ProviderHoverPanel({
                           height: 64,
                           borderRadius: "50%",
                           objectFit: "cover",
-                          border: "2px solid #c3525c",
+                          border: "2px solid #6b84ad",
                         }}
                         decoding="async"
                       />
@@ -256,7 +256,7 @@ export default function ProviderHoverPanel({
                           height: 64,
                           borderRadius: "50%",
                           objectFit: "cover",
-                          border: "2px solid #c3525c",
+                          border: "2px solid #6b84ad",
                         }}
                         decoding="async"
                       />
@@ -324,7 +324,7 @@ export default function ProviderHoverPanel({
                 {/*
                 White chip behind the logo. Several partner logos are dark
                 burgundy on transparent (ALLSTAR Financial Insurance in
-                particular), which is invisible against the #280a0c header.
+                particular), which is invisible against the #142c52 header.
                 The chip guarantees contrast for every logo regardless of its
                 own colors, so no per-provider special-casing is needed.
               */}
@@ -394,7 +394,7 @@ export default function ProviderHoverPanel({
                     style={{
                       padding: "12px 14px",
                       background: "#f7f4ef",
-                      borderLeft: "3px solid #7f2028",
+                      borderLeft: "3px solid #1B3A6B",
                       borderRadius: "0 4px 4px 0",
                       marginBottom: 0,
                     }}
@@ -406,7 +406,7 @@ export default function ProviderHoverPanel({
                         fontWeight: 700,
                         letterSpacing: "0.18em",
                         textTransform: "uppercase",
-                        color: "#7f2028",
+                        color: "#1B3A6B",
                         marginBottom: 5,
                       }}
                     >

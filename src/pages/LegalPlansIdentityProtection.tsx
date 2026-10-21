@@ -213,7 +213,7 @@ const LegalPlansIdentityProtection = () => (
             */}
             <div
               className="max-w-3xl mx-auto mt-10 rounded-lg p-6"
-              style={{ background: "#ffffff", borderLeft: "4px solid #7f2028" }}
+              style={{ background: "#ffffff", borderLeft: "4px solid #1B3A6B" }}
             >
               <p className="text-foreground text-base leading-relaxed m-0">
                 <strong>Please note:</strong> LegalShield is a legal service plan provider, not a law firm. Its

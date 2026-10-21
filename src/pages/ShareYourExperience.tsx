@@ -205,7 +205,7 @@ const ShareYourExperience = () => {
               <div className="bg-card rounded-lg border border-border p-6 sm:p-8 lg:p-10">
                 <div
                   style={{
-                    borderLeft: "4px solid #7f1d1d",
+                    borderLeft: "4px solid #1B3A6B",
                     background: "#faf7f2",
                     borderRadius: 8,
                     padding: "14px 18px",

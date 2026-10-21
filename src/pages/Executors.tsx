@@ -199,7 +199,7 @@ const Executors = () => (
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         textAlign: "center",
-                        color: "#6b1b22",
+                        color: "#1B3A6B",
                         marginBottom: 10,
                         lineHeight: 1.2,
                       }}

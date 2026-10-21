@@ -44,7 +44,7 @@ const FeaturedAttorneys = () => (
                     <div className="rpp-m2-pad relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                       <span
                         className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase"
-                        style={{ color: "#8a3a42", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}
+                        style={{ color: "#1B3A6B", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}
                       >
                         {s.pill}
                       </span>

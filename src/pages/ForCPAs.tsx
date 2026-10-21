@@ -108,7 +108,7 @@ const ForCPAs = () => (
               index.css carries
                 main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])
               which matches the substring "cta" in "gold-cta" and forces a
-              #6b1b22 fill with white text at (0,3,2) specificity. But .gold-cta
+              #1B3A6B fill with white text at (0,3,2) specificity. But .gold-cta
               itself sets padding: 0 0 5px 0, so the fill lands as a tight
               maroon box around bare text — small, dark, and not obviously a
               control. It is the same defect index.css documents for
