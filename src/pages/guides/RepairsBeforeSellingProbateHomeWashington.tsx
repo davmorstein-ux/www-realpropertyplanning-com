@@ -187,7 +187,11 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               A practical guide to deciding which improvements are worth the investment — and which ones to skip.
             </p>
             <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
+              {/* Was "Real Property Planning — Licensed Real Estate Broker & Certified
+                  Residential Appraiser". The site provides no services; it lists
+                  featured professionals (David, Oct 20, 2026). */}
+              Featured professional: {FEATURED_BROKER.name}, licensed real estate broker
+              {SAME_PERSON ? " and certified residential appraiser" : ""} — {FEATURED_BROKER.phone}
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact?reason=estate-property">

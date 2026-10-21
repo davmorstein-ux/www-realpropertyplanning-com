@@ -1,7 +1,7 @@
 // Central data layer for all counties, cities, and services
 // This powers templates, routing, navigation, and internal linking
 import { getCityServiceOverride } from "@/lib/city-service-overrides";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 /** Community tone classification — shapes connecting language throughout templates */
 export type CommunityTone = 
@@ -105,7 +105,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Kirkland, WA | Real Property Planning",
     seoDescription: "Estate property sales, inherited home guidance, and senior transitions in Kirkland, Washington. Local expertise from Real Property Planning, based in Kirkland.",
     heroHeading: "Probate & Estate Real Estate in Kirkland, Washington",
-    heroIntro: `Kirkland is home to Real Property Planning — which means ${FEATURED_BROKER.role}'s knowledge of this market goes beyond professional research. From the waterfront neighborhoods near Lake Washington to the established communities of North Kirkland and Totem Lake, ${FEATURED_BROKER.role} has worked with properties across the full range of Kirkland's housing landscape. For families navigating a probate sale, senior transition, or inherited property in Kirkland, that local depth translates directly into better pricing, more targeted preparation, and a smoother process.`,
+    heroIntro: `${FEATURED_BROKER.Role} is based in Kirkland, so ${FEATURED_BROKER.pronoun.possessive} knowledge of this market goes beyond professional research. From the waterfront neighborhoods near Lake Washington to the established communities of North Kirkland and Totem Lake, ${FEATURED_BROKER.role} has worked with properties across the full range of Kirkland's housing landscape. For families navigating a probate sale, senior transition, or inherited property in Kirkland, that local depth translates directly into better pricing, more targeted preparation, and a smoother process.`,
     localKnowledge: "Kirkland's neighborhoods range from the boutique waterfront of Moss Bay and Houghton to the larger-lot homes of Juanita, Finn Hill, and Totem Lake. Each area attracts different buyers with different expectations. Selling an estate or inherited property in Kirkland requires understanding which improvements matter, how waterfront proximity affects value, and how to position a home that may not be in move-in condition against newer or recently updated listings.",
     brokerAppraiserValue: `Kirkland's appeal lies in its location, walkability, and neighborhood character — but those qualities can be difficult to quantify with automated tools. ${FEATURED_BROKER.Role} evaluates each property based on its actual condition, lot characteristics, and realistic buyer demand in Kirkland. ${FEATURED_BROKER.Role}'s appraisal background provides an analytical foundation that supports confident pricing decisions, especially for properties that need preparation or have deferred maintenance.`,
     localSituations: [
@@ -325,7 +325,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoDescription: "Estate property sales, probate guidance, and inherited home support in Renton, Washington — serving families and executors in south King County.",
     heroHeading: "Probate & Estate Real Estate in Renton, Washington",
     heroIntro: `Renton's real estate market spans a wide range — from established neighborhoods near downtown to newer construction in the Highlands and communities bordering Bellevue and Newcastle. Estate properties in Renton require local pricing knowledge that accounts for this variation. ${FEATURED_BROKER.Role} works with executors and families throughout Renton, providing honest, condition-adjusted guidance that reflects the specific neighborhood, not just broad county trends.`,
-    localKnowledge: "Renton's market includes everything from lakefront properties and Kennydale mid-century homes to newer developments in the Highlands and established neighborhoods in Benson Hill. The city's proximity to major employers and ongoing development make it a dynamic market where pricing accuracy is especially important. Real Property Planning's appraiser credentials help clients understand how Renton's different submarkets and the city's growth trajectory affect their specific property.",
+    localKnowledge: "Renton's market includes everything from lakefront properties and Kennydale mid-century homes to newer developments in the Highlands and established neighborhoods in Benson Hill. The city's proximity to major employers and ongoing development make it a dynamic market where pricing accuracy is especially important. The featured appraiser's credentials help clients understand how Renton's different submarkets and the city's growth trajectory affect their specific property.",
     brokerAppraiserValue: `Renton's rapid transformation means neighborhood-level pricing shifts faster here than in more stable markets. A Kennydale lakefront home, a Highlands rambler, and a Benson Hill split-level each operate in different micro-markets despite sharing a city name. ${FEATURED_BROKER.Role}'s appraisal credentials and familiarity with Renton's evolving landscape provide the condition-specific, neighborhood-aware analysis that estate, probate, and transition clients need in a city where yesterday's comparables may already be outdated.`,
     localSituations: [
       "A longtime family home in Kennydale where Lake Washington proximity creates a significant premium that generic tools may understate or overstate",
@@ -1376,7 +1376,7 @@ export const services: ServiceData[] = [
     slug: "valuation-guidance",
     shortName: "Valuation Guidance",
     description: "Providing evidence-based pricing insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical.",
-    cityIntroTemplate: "Accurate property valuation in {city} matters for estate settlements, trust administration, and transition planning. Real Property Planning combines licensed broker and certified appraiser credentials to provide clear, condition-based guidance for properties in {city} and {county}.",
+    cityIntroTemplate: `Accurate property valuation in {city} matters for estate settlements, trust administration, and transition planning. ${SAME_PERSON ? `${FEATURED_BROKER.Role} is both a licensed broker and a certified appraiser, and provides` : `The featured broker and featured appraiser provide`} clear, condition-based guidance for properties in {city} and {county}.`,
     targetAudience: [
       "Executors and trustees who need an accurate understanding of property value",
       "Attorneys who need reliable real estate valuation support for legal proceedings",
@@ -1740,7 +1740,7 @@ export function getWhyLocalMatters(cityName: string, countyName: string, cityDat
 /** Why broker/appraiser — uses city-specific if available */
 export function getWhyBrokerAppraiser(cityName: string, cityData?: CityData): string {
   if (cityData?.brokerAppraiserValue) return cityData.brokerAppraiserValue;
-  return `Most real estate brokers can list a property. What sets Real Property Planning apart is the combination of licensed brokerage experience and state-certified appraisal expertise. For clients in ${cityName} managing estate, probate, trust, or transition-related property decisions, this dual perspective means more accurate pricing, better preparation decisions, and a clearer understanding of what drives value in the local market. Real Property Planning does not rely on automated estimates — ${FEATURED_BROKER.Role} assesses each property based on its actual condition, location, and realistic buyer demand.`;
+  return `Most real estate brokers can list a property. What sets ${FEATURED_BROKER.role} apart${SAME_PERSON ? " is the combination of licensed brokerage experience and state-certified appraisal expertise" : " is licensed brokerage experience with estate property"}. For clients in ${cityName} managing estate, probate, trust, or transition-related property decisions, this dual perspective means more accurate pricing, better preparation decisions, and a clearer understanding of what drives value in the local market. Real Property Planning does not rely on automated estimates — ${FEATURED_BROKER.Role} assesses each property based on its actual condition, location, and realistic buyer demand.`;
 }
 
 /** Service-specific how-we-help items for city+service pages */
