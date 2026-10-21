@@ -1,24 +1,24 @@
 import ListenButton from "@/components/ListenButton";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 const steps = [
   {
     number: "1",
     title: "Initial Conversation",
     description:
-      "It usually starts with a phone call. You tell Real Property Planning what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and the conversation starts with listening, before any direction is offered.",
+      `It usually starts with a phone call. You tell ${FEATURED_BROKER.role} what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and the conversation starts with listening, before any direction is offered.`,
   },
   {
     number: "2",
     title: "Property Review & Assessment",
     description:
-      "Real Property Planning visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. With both broker and certified appraiser credentials in-house, the assessment goes deeper than a typical walkthrough.",
+      `${FEATURED_BROKER.Role} visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby.${SAME_PERSON ? ` With both broker and certified appraiser credentials, ${FEATURED_BROKER.pronoun.possessive} assessment goes deeper than a typical walkthrough.` : ""}`,
   },
   {
     number: "3",
     title: "Strategy & Pricing",
     description:
-      "Based on what's found at the property, Real Property Planning puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
+      `Based on what's found at the property, ${FEATURED_BROKER.role} puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.`,
   },
   {
     number: "4",

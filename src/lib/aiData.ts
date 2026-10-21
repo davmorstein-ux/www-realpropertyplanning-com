@@ -440,7 +440,7 @@ export function buildLlmsTxt({ pages, stats, listings, mcpUrl }: LlmsInput): str
   const list = (ps: AiPage[]) => ps.map((p) => `- [${p.h1 || p.title}](${p.url}): ${p.description}`).join("\n");
   return `# Real Property Planning
 
-> A free, independent educational hub for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes (AFH Club). The hub holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer clients to attorneys. Not legal advice.
+> A free, independent educational hub for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes (AFH Club). The hub holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer anyone to attorneys. Not legal advice.
 
 ${authorLine()} Each guide shows its review date and sources; corrections go to info@realpropertyplanning.com.
 

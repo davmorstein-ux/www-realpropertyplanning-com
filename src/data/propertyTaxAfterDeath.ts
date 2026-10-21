@@ -176,5 +176,5 @@ export const PTX_PRERENDER_SECTIONS: string[] = [
   `A reader's story — ${PTX_STORY}`,
   ...PTX_SECTIONS.map((s) => `${s.heading} — ${s.paras.join(" ")}`),
   `Checklist for the executor — ${PTX_CHECKLIST.join(" ")}`,
-  "General information, not legal or tax advice. Real Property Planning does not refer clients to attorneys.",
+  "General information, not legal or tax advice. Real Property Planning does not refer anyone to attorneys.",
 ];

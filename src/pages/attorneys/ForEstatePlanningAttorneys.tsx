@@ -165,7 +165,7 @@ const ForEstatePlanningAttorneys = () => (
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               If you work with clients who hold real property as part of their estate plan — and who will eventually
-              need to sell, transfer, or make decisions about that property — {FEATURED_BROKER.Role} welcomes the opportunity to
+              need to sell, transfer, or make decisions about that property — {FEATURED_BROKER.role} welcomes the opportunity to
               be a resource for your practice.
             </p>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">

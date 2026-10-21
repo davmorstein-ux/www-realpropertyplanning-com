@@ -159,10 +159,10 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Service Areas | Probate Real Estate Across Puget Sound | Real Property Planning"
-        description="Probate real estate, inherited home sales, and senior transition guidance across Washington State — serving King, Snohomish, Pierce, Kitsap, Skagit, Whatcom, Clark, Thurston, Spokane, Benton, Cowlitz, Grays Harbor, Island, Jefferson, Lewis, Mason, Pacific, San Juan, Skamania, Wahkiakum, Yakima, Franklin and surrounding counties."
+        title="Counties | Probate Real Estate Across Puget Sound | Real Property Planning"
+        description="Probate real estate, inherited home sales, and senior transition guidance across Washington State — covering King, Snohomish, Pierce, Kitsap, Skagit, Whatcom, Clark, Thurston, Spokane, Benton, Cowlitz, Grays Harbor, Island, Jefferson, Lewis, Mason, Pacific, San Juan, Skamania, Wahkiakum, Yakima, Franklin and surrounding counties."
       />
-      <BreadcrumbSchema items={[{ name: "Service Areas", url: "/counties" }]} />
+      <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />
       <main id="main-content">
 
@@ -175,7 +175,7 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. {FEATURED_BROKER.Role} provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning now serves families, executors, attorneys, and professionals across more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
+            Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. {FEATURED_BROKER.Role} provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning's guides now cover more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             As a licensed broker and state-certified residential appraiser, {FEATURED_BROKER.role} evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.

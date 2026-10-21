@@ -8,7 +8,7 @@ const points = [
   "You'll get regular updates with photos and clear communication. No guessing about what's happening.",
   `${FEATURED_BROKER.Role} coordinates directly with local attorneys, cleanout crews, contractors, and other professionals on your behalf.`,
   "Pricing is honest and defensible, so you can make confident decisions even from 2,000 miles away.",
-  "Real Property Planning regularly works with executors, trustees, and family members who are managing things from out of state — it's one of the most common situations handled.",
+  `${FEATURED_BROKER.Role} regularly works with executors, trustees, and family members who are managing things from out of state — it's one of the most common situations ${FEATURED_BROKER.pronoun.subject} handles.`,
 ];
 
 const OutOfStateBlock = () => (
@@ -22,7 +22,7 @@ const OutOfStateBlock = () => (
           Managing Washington Property From a Distance?
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
-          This is one of the situations Real Property Planning sees most often: someone inherits a Washington property but lives in another state. The logistics feel impossible — you can't be there to check on the house, manage vendors, or oversee the sale. {FEATURED_BROKER.Role} steps in as your local point of contact and handles the details on the ground so you don't have to fly back and forth.
+          This is one of the situations {FEATURED_BROKER.role} sees most often: someone inherits a Washington property but lives in another state. The logistics feel impossible — you can't be there to check on the house, manage vendors, or oversee the sale. {FEATURED_BROKER.Role} steps in as your local point of contact and handles the details on the ground so you don't have to fly back and forth.
         </p>
 
         <ul className="space-y-4 mb-10">

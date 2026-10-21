@@ -47,8 +47,8 @@ const RealEstateAppraiser = () => (
             />
           </div>
           <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
-            {FEATURED_APPRAISER.name} is Real Property Planning's featured appraiser and a member of its professional
-            network. His appraisal services are provided independently through {FEATURED_APPRAISER.firm} — not
+            {FEATURED_APPRAISER.name} is the featured appraiser listed on Real Property Planning.{" "}
+            {FEATURED_APPRAISER.pronoun.Possessive} appraisal services are provided independently through {FEATURED_APPRAISER.firm} — not
             through Real Property Planning.
           </p>
         </div>

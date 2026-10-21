@@ -128,7 +128,7 @@ const SeattleProbateEstate = () => {
               When Families in Seattle Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Most people don't plan for the moment they inherit a property or become responsible for selling one. These are some of the situations that bring families and professionals to Real Property Planning:
+              Most people don't plan for the moment they inherit a property or become responsible for selling one. These are some of the situations that bring families and professionals to {FEATURED_BROKER.role}:
             </p>
             <ul className="space-y-4">
               {[

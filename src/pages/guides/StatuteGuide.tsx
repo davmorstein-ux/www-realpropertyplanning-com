@@ -154,7 +154,7 @@ function Page({ g }: { g: Guide }) {
             <div className="stg-note" style={{ marginTop: 20 }}>
               <p style={{ marginBottom: 0 }}>
                 General information about Washington law, not legal or tax advice. Laws change, and how they apply depends on the facts; a Washington {g.slug === "choosing-a-trustee" ? "estate planning attorney can advise on a particular trust" : "probate attorney can advise on a particular estate"}.
-                Real Property Planning does not refer clients to attorneys.
+                Real Property Planning does not refer anyone to attorneys.
               </p>
             </div>
           </Band>

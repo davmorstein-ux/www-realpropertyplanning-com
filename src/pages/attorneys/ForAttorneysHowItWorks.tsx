@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 const STEPS: { n: string; title: string; body: string }[] = [
   {
@@ -19,12 +19,12 @@ const STEPS: { n: string; title: string; body: string }[] = [
   {
     n: "2",
     title: "Property assessment",
-    body: `${FEATURED_BROKER.Role} conducts an on-site condition review and produces a date-of-death or current-market valuation supported by appraisal-grade analysis — defensible if the file ever requires it.`,
+    body: `${FEATURED_BROKER.Role} conducts an on-site condition review${SAME_PERSON ? " and produces" : `, and ${FEATURED_APPRAISER.role} produces`} a date-of-death or current-market valuation supported by appraisal-grade analysis — defensible if the file ever requires it.`,
   },
   {
     n: "3",
     title: "Coordination with the estate or probate timeline",
-    body: "Real Property Planning aligns property work — securing, cleanout, vendor scheduling, and listing readiness — with letters testamentary, court calendars, and beneficiary timing as you direct.",
+    body: `${FEATURED_BROKER.Role} aligns property work — securing, cleanout, vendor scheduling, and listing readiness — with letters testamentary, court calendars, and beneficiary timing as you direct.`,
   },
   {
     n: "4",
@@ -51,7 +51,7 @@ const HANDLED: string[] = [
 const ForAttorneysHowItWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Real Property Planning Works With Attorneys | Referral Process"
+      title={`How Attorneys Work With ${FEATURED_BROKER.roleTitle} | Referral Process`}
       description="A clear, document-style walkthrough of how Washington estate, probate, and family law attorneys can work with a featured licensed broker from referral through closing — what the broker handles, what Real Property Planning does and does not do, and how to make a referral."
       canonical="https://realpropertyplanning.com/for-attorneys/how-it-works"
     />
@@ -65,7 +65,7 @@ const ForAttorneysHowItWorks = () => (
     <main id="main-content">
 
       {/* Hero — clean, no video ribbon */}
-      <HeroBandTitle as="h1">How Real Property Planning Works With Attorneys</HeroBandTitle>
+      <HeroBandTitle as="h1">{`How Attorneys Work With ${FEATURED_BROKER.roleTitle}`}</HeroBandTitle>
 
       {/* Intro — relocated out of the title band. The band carries the
           page title and nothing else, sitewide. */}

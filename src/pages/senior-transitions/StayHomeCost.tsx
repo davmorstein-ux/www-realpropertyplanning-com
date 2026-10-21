@@ -153,7 +153,7 @@ const StayHomeCost = () => (
         <div className="ptx-note" style={{ marginTop: 24 }}>
           <p style={{ marginBottom: 0 }}>
             General information, not financial advice. A financial planner can turn this worksheet into a longer-term plan.
-            Real Property Planning does not refer clients to attorneys.
+            Real Property Planning does not refer anyone to attorneys.
           </p>
         </div>
       </Section>

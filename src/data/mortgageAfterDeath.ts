@@ -159,5 +159,5 @@ export const MAD_FAQS = [
 export const MAD_PRERENDER_SECTIONS: string[] = [
   ...MAD_SECTIONS.map((s) => `${s.heading} — ${s.paras.join(" ")}`),
   `Checklist — ${MAD_CHECKLIST.join(" ")}`,
-  "General information, not legal or financial advice. Real Property Planning does not refer clients to attorneys.",
+  "General information, not legal or financial advice. Real Property Planning does not refer anyone to attorneys.",
 ];

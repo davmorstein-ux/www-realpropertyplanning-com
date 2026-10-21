@@ -11,7 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import JamesJacksonCard from "@/components/JamesJacksonCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER} from "@/data/featuredProfessionals";
+import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER, SAME_PERSON} from "@/data/featuredProfessionals";
 
 /*
   ATTRIBUTION NOTE — do not reintroduce "our team" / "we" / "Real Property Planning"
@@ -41,7 +41,11 @@ const services = [
     title: "Accurate, Defensible Valuation",
     description: (
       <>
-        As a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>, {FEATURED_BROKER.role} provides condition-adjusted market analysis that goes beyond a standard comparative market analysis. The result is a pricing position that holds up to scrutiny — from co-heirs, from the court, and from the estate attorney reviewing the documentation.
+        {SAME_PERSON ? (
+          <>As a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>, {FEATURED_BROKER.role} provides</>
+        ) : (
+          <>{FEATURED_BROKER.Role} provides</>
+        )} condition-adjusted market analysis that goes beyond a standard comparative market analysis. The result is a pricing position that holds up to scrutiny — from co-heirs, from the court, and from the estate attorney reviewing the documentation.
       </>
     ),
   },
@@ -79,7 +83,7 @@ const faqs = [
   },
   {
     question: `What is the difference between a CMA and the valuation analysis ${FEATURED_BROKER.role} provides?`,
-    answer: `A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. ${FEATURED_BROKER.Role}'s condition-based pricing combines his certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), ${FEATURED_BROKER.role} can discuss appropriate referral resources.`,
+    answer: `A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. ${FEATURED_BROKER.Role}'s condition-based pricing combines ${SAME_PERSON ? `${FEATURED_BROKER.pronoun.possessive} certified appraisal training` : "documented condition adjustments"} with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), ${FEATURED_BROKER.role} can discuss appropriate referral resources.`,
   },
   {
     question: "Can you help when heirs disagree about value or timing?",
@@ -87,7 +91,7 @@ const faqs = [
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",
-    answer: `${FEATURED_BROKER.Role}'s service area is all of Washington State. For clients outside Washington, ${FEATURED_BROKER.role} can connect attorneys and clients with a licensed broker anywhere in the country through his eXp Realty network.`,
+    answer: `${FEATURED_BROKER.Role}'s service area is all of Washington State. For clients outside Washington, ${FEATURED_BROKER.role} can connect attorneys and clients with a licensed broker anywhere in the country through ${FEATURED_BROKER.pronoun.possessive} ${FEATURED_BROKER.brokerage} network.`,
   },
 ];
 
@@ -95,7 +99,7 @@ const ForProbateAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Probate Attorneys in Washington State | Real Property Planning"
-      description={`${FEATURED_BROKER.Role} — a Washington State licensed real estate broker and certified residential appraiser — provides property assessment, valuation, preparation, and sale coordination for probate attorneys and their clients throughout Washington State.`}
+      description={`${FEATURED_BROKER.Role} — a Washington State licensed real estate broker${SAME_PERSON ? " and certified residential appraiser" : ""} — provides property assessment, valuation, preparation, and sale coordination for probate attorneys and their clients throughout Washington State.`}
     />
     <BreadcrumbSchema
       items={[

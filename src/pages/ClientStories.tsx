@@ -54,7 +54,7 @@ const ClientStories = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Situations. Real Outcomes. | Real Property Planning"
-      description="See how Real Property Planning has helped executors, families, and trustees navigate real probate and estate property situations across Washington State."
+      description={`See how ${FEATURED_BROKER.role} has helped executors, families, and trustees navigate real probate and estate property situations across Washington State.`}
     />
     <BreadcrumbSchema items={[{ name: "Client Stories", url: "/testimonials" }]} />
     <Header />

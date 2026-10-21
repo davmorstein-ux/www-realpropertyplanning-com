@@ -160,6 +160,6 @@ export const PROBATE_PILLAR_SECTIONS: string[] = [
   "Debts and Medicaid — Debts are paid from the estate, not by heirs personally, though a nonprobate beneficiary can be required to contribute (RCW 11.18.200). The notice to creditors is also mailed to the DSHS Office of Financial Recovery (RCW 11.40.020); the state can recover Medicaid long-term care received at 55 or older, and state-funded long-term care at any age, from the estate and from nonprobate assets such as a house passing by transfer on death deed (RCW 43.20B.080, 74.39A.170).",
   "When heirs disagree — An appraisal everyone relies on, a buyout, or a binding agreement under TEDRA (chapter 11.96A RCW). A will contest must be filed within four months of the will being admitted (RCW 11.24.010).",
   `Paths — ${PROBATE_PATHS.map((p) => `${p.title}: ${p.steps.map((s) => s.label).join(", ")}.`).join(" ")} Glossary: /probate-glossary`,
-  "Not legal advice. Real Property Planning does not refer clients to attorneys; confirm any lawyer's license with the Washington State Bar Association (wsba.org).",
+  "Not legal advice. Real Property Planning does not refer anyone to attorneys; confirm any lawyer's license with the Washington State Bar Association (wsba.org).",
 ];
 

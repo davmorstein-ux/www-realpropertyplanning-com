@@ -130,7 +130,7 @@ describe("MCP server", () => {
     const { data } = await call("get_contact_info");
     expect(data.featured_broker).toContain(FEATURED_BROKER.licenseNumber);
     expect(data.featured_appraiser).toContain(FEATURED_APPRAISER.licenseNumber);
-    expect(data.what).toMatch(/does not refer clients to attorneys/);
+    expect(data.what).toMatch(/does not refer (clients|anyone) to attorneys/);
   });
 });
 

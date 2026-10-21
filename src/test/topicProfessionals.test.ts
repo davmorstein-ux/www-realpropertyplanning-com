@@ -73,7 +73,7 @@ describe("topic professionals", () => {
         expect(imp, `${p} import`).toBeTruthy();
         text = readFileSync(path.resolve(__dirname, `../${imp![1]}.tsx`), "utf8");
       }
-      expect(text, p).not.toMatch(/does not refer clients to attorneys/);
+      expect(text, p).not.toMatch(/does not refer (clients|anyone) to attorneys/);
       checked++;
     }
     expect(checked).toBeGreaterThanOrEqual(14);

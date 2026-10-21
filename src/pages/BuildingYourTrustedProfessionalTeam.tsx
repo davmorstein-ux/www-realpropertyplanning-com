@@ -461,7 +461,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                 Not Sure Who You Need?
               </h2>
               <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                Real Property Planning can help point you toward the right kinds of independent professionals for your
+                Real Property Planning's guides explain which kinds of independent professionals fit each
                 situation. It is an educational hub and connection point — the professionals referenced are independent
                 and are not employees or affiliates of Real Property Planning.
               </p>

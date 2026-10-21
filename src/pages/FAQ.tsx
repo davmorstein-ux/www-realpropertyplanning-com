@@ -8,7 +8,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import {
   Accordion,
   AccordionContent,
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     question: "How is a sale price determined for estate property?",
-    answer: `Pricing estate property requires understanding condition, location, market trends, buyer demand, and comparable sales. Properties with deferred maintenance, vacancy, or unusual characteristics need more careful analysis. ${FEATURED_BROKER.Role}'s dual background as a broker and state certified residential appraiser helps clients avoid the costly mistakes of overpricing or underpricing.\n\n${softCta}`,
+    answer: `Pricing estate property requires understanding condition, location, market trends, buyer demand, and comparable sales. Properties with deferred maintenance, vacancy, or unusual characteristics need more careful analysis. ${FEATURED_BROKER.Role}'s ${SAME_PERSON ? "dual background as a broker and state certified residential appraiser" : "background as a broker"} helps clients avoid the costly mistakes of overpricing or underpricing.\n\n${softCta}`,
   },
   {
     question: "What does an executor need to know before listing a property?",
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     question: `Can ${FEATURED_BROKER.role} start working with you before the estate attorney is even hired?`,
-    answer: `Yes. Many families call ${FEATURED_BROKER.role} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.Role} will tell you honestly whether you need an attorney (almost always yes for Washington probate). Real Property Planning does not refer clients to attorneys; choose a Washington-licensed probate attorney and confirm their license with the Washington State Bar Association (wsba.org). Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
+    answer: `Yes. Many families call ${FEATURED_BROKER.role} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.Role} will tell you honestly whether you need an attorney (almost always yes for Washington probate). Real Property Planning does not refer anyone to attorneys; choose a Washington-licensed probate attorney and confirm their license with the Washington State Bar Association (wsba.org). Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
   },
   {
     question: "What areas does the featured broker work in?",
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     question: "Do I need an appraisal before selling inherited property?",
-    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker who is also a certified appraiser, such as the featured broker, can provide condition-based pricing analysis. A broker's pricing analysis is not an appraisal: when value must be documented for estate tax, a stepped-up basis, a court, or a dispute among heirs, ask the estate attorney or CPA whether a formal appraisal is needed.\n\n${softCta}`,
+    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. ${SAME_PERSON ? `A broker who is also a certified appraiser, such as ${FEATURED_BROKER.role}, can provide condition-based pricing analysis.` : "A broker can provide condition-based pricing analysis."} A broker's pricing analysis is not an appraisal: when value must be documented for estate tax, a stepped-up basis, a court, or a dispute among heirs, ask the estate attorney or CPA whether a formal appraisal is needed.\n\n${softCta}`,
   },
   {
     question: "Can an executor sell a house before probate is complete?",
@@ -109,7 +109,7 @@ const faqs = [
   },
   {
     question: "What repairs should be done before selling an estate property?",
-    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. ${FEATURED_BROKER.Role} evaluates each situation using ${FEATURED_BROKER.pronoun.possessive} appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
+    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. ${FEATURED_BROKER.Role} evaluates each situation${SAME_PERSON ? ` using ${FEATURED_BROKER.pronoun.possessive} appraisal background` : ""} to recommend only the improvements worth making.\n\n${softCta}`,
   },
   {
     question: "How do siblings decide what to do with an inherited house?",
@@ -117,7 +117,7 @@ const faqs = [
   },
   {
     question: "What should an attorney look for in a probate real estate broker?",
-    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. ${FEATURED_BROKER.Role}'s dual credentials as a broker and certified residential appraiser, combined with estate-focused experience, make ${FEATURED_BROKER.pronoun.object} a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
+    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. ${FEATURED_BROKER.Role}'s ${SAME_PERSON ? "dual credentials as a broker and certified residential appraiser, combined with estate-focused experience, make" : "estate-focused experience as a broker makes"} ${FEATURED_BROKER.pronoun.object} a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
   },
   {
     question: "How do you prepare a senior's home for sale during a move?",

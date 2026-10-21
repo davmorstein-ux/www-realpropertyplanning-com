@@ -11,7 +11,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER} from "@/data/featuredProfessionals";
+import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER, SAME_PERSON} from "@/data/featuredProfessionals";
 
 /*
   ATTRIBUTION NOTE — do not reintroduce "our team" / "we" / "Real Property Planning"
@@ -51,7 +51,7 @@ const services = [
   },
   {
     title: "Neutral, Professional Coordination",
-    description: `${FEATURED_BROKER.Role}'s role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.`,
+    description: `${FEATURED_BROKER.Role}'s role is not to represent either party's interests — it's to handle the property professionally and move the process forward. ${FEATURED_BROKER.pronoun.Subject} maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.`,
   },
   {
     title: "Structured Process Guidance",
@@ -66,11 +66,11 @@ const services = [
 const faqs = [
   {
     question: `Can ${FEATURED_BROKER.role} work with both parties in a family law property situation?`,
-    answer: `Yes — ${FEATURED_BROKER.Role}'s role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.`,
+    answer: `Yes — ${FEATURED_BROKER.Role}'s role is explicitly neutral. ${FEATURED_BROKER.pronoun.Subject} provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.`,
   },
   {
     question: "How does valuation work when parties disagree on what the home is worth?",
-    answer: `${FEATURED_BROKER.Role} provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.`,
+    answer: `${FEATURED_BROKER.Role} provides a condition-adjusted, comparable-supported market analysis${SAME_PERSON ? ` grounded in ${FEATURED_BROKER.pronoun.possessive} certified appraisal training` : ""}. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.`,
   },
   {
     question: "Can the home be sold during active legal proceedings?",
@@ -82,7 +82,7 @@ const ForFamilyLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning"
-      description={`${FEATURED_BROKER.Role} — a Washington State licensed real estate broker and certified residential appraiser — provides experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.`}
+      description={`${FEATURED_BROKER.Role} — a Washington State licensed real estate broker${SAME_PERSON ? " and certified residential appraiser" : ""} — provides experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.`}
     />
     <BreadcrumbSchema
       items={[

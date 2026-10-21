@@ -43,7 +43,7 @@ const jsonLd = articleSchema({
   dateModified: "2026-05-05",
   about: [
     "Professional network",
-    "Referral network",
+    "Professional directory",
     "Senior services",
     "Estate professionals",
   ],
@@ -259,7 +259,7 @@ const JoinTheNetwork = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Join the Network | Real Property Planning Professional Referral Network | Washington State"
+        title="Join the Network | Real Property Planning Professional Network | Washington State"
         description="Real Property Planning lists independent local professionals for seniors, families, executors, and attorneys. If you serve this community, ask to be listed."
         jsonLd={jsonLd}
       />

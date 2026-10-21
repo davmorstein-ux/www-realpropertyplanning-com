@@ -22,7 +22,7 @@ export default function ProbateFlowPage({ slug }: { slug: string }) {
       accent="#25597e"
       heroBg="#eef3f7"
       extra={slug === "heir" ? <ExecutorNotActing /> : slug === "selling-the-house" ? <div style={{ padding: "0 16px" }}><RemodelWorthCallout /></div> : undefined}
-      disclaimer="General information, not legal advice; Real Property Planning does not refer clients to attorneys."
+      disclaimer="General information, not legal advice; Real Property Planning does not refer anyone to attorneys."
     />
   );
 }

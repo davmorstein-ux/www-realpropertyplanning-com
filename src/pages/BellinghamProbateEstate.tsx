@@ -125,7 +125,7 @@ const BellinghamProbateEstate = () => {
               When Families With Bellingham Property Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Bellingham sits apart from the Puget Sound metro — and the families who own property here often live somewhere else entirely. These are some of the situations that bring people to Real Property Planning:
+              Bellingham sits apart from the Puget Sound metro — and the families who own property here often live somewhere else entirely. These are some of the situations that bring people to {FEATURED_BROKER.role}:
             </p>
             <ul className="space-y-4">
               {[

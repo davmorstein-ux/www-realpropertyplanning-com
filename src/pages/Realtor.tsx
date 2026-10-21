@@ -158,8 +158,8 @@ const Realtor = () => (
             />
           </div>
           <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
-            {FEATURED_BROKER.name} is Real Property Planning's featured real estate broker and a member of its
-            professional network. His real estate brokerage services are provided independently through{" "}
+            {FEATURED_BROKER.name} is the featured real estate broker listed on Real Property Planning.{" "}
+            {FEATURED_BROKER.pronoun.Possessive} real estate brokerage services are provided independently through{" "}
             {FEATURED_BROKER.brokerage} — not through Real Property Planning.
           </p>
           {/* The featured broker's professional memberships belong on HIS card,

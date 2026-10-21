@@ -227,9 +227,9 @@ const WhoHasAuthoritySellProbateProperty = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Works Within This Framework</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How {FEATURED_BROKER.roleTitle} Works Within This Framework</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Real Property Planning regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. {FEATURED_BROKER.Role} understands exactly what documentation is required before a sale can proceed — and {FEATURED_BROKER.pronoun.subject} coordinates directly with legal counsel to ensure every step is properly authorized.
+              {FEATURED_BROKER.Role} regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. {FEATURED_BROKER.pronoun.Subject} understands exactly what documentation is required before a sale can proceed — and {FEATURED_BROKER.pronoun.subject} coordinates directly with legal counsel to ensure every step is properly authorized.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               {FEATURED_BROKER.Role} can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.

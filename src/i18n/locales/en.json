@@ -475,8 +475,8 @@
     "contactInfo": {
       "phoneLabel": "Phone",
       "emailLabel": "Email",
-      "serviceAreasLabel": "Service Areas",
-      "serviceAreasText": "Throughout Washington State, with a strong focus in Western WA & Puget Sound"
+      "serviceAreasLabel": "Coverage",
+      "serviceAreasText": "Guides cover all of Washington State, with a strong focus in Western WA & Puget Sound"
     },
     "form": {
       "heading": "Send a Message",

@@ -22,7 +22,7 @@ const faqs = [
       `Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Many Everett inherited homes have years of deferred maintenance. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.`,
   },
   {
-    question: "How does a team help with homes that need a lot of work?",
+    question: `How does ${FEATURED_BROKER.role} help with homes that need a lot of work?`,
     answer:
       `${FEATURED_BROKER.Role} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.`,
   },
@@ -126,7 +126,7 @@ const EverettProbateEstate = () => {
               When Everett Families Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Most families don't plan for the moment they inherit a home or become responsible for selling one. These are some of the situations that bring Everett families to Real Property Planning:
+              Most families don't plan for the moment they inherit a home or become responsible for selling one. These are some of the situations that bring Everett families to {FEATURED_BROKER.role}:
             </p>
             <ul className="space-y-4">
               {[

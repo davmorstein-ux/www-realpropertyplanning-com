@@ -71,7 +71,7 @@ const commonSituations = [
 
 const faqs = [
   {
-    question: "Do you provide legal advice?",
+    question: `Does Real Property Planning or ${FEATURED_BROKER.role} provide legal advice?`,
     answer: `No. Neither Real Property Planning nor ${FEATURED_BROKER.role} provides legal advice. When legal questions arise, clients should consult a qualified real estate attorney. ${FEATURED_BROKER.Role} helps with the real estate, valuation, and practical property side of the situation.`,
   },
   {
@@ -83,7 +83,7 @@ const faqs = [
     answer: "Yes. Real estate attorneys often help clients address title problems, ownership disputes, deed questions, easements, boundary issues, and other legal matters tied to property rights.",
   },
   {
-    question: "Can you work with my attorney?",
+    question: `Can ${FEATURED_BROKER.role} work with my attorney?`,
     answer: `Yes. ${FEATURED_BROKER.Role} can work alongside your attorney and other advisors to help with pricing, valuation insight, sale preparation, and practical coordination related to the property.`,
   },
   {

@@ -52,7 +52,7 @@ const WhenYouNeedExtraHelp = () => (
     </UL>
     <P>As executor, you are caught in the middle — legally obligated to administer the estate fairly while personally connected to the people involved.</P>
     <P>
-      In these situations, an experienced probate attorney is essential. In some cases, a mediator can help resolve disputes without litigation. Real Property Planning does not refer clients to attorneys or mediators; choose them yourself, and confirm an attorney's license with the Washington State Bar Association (wsba.org).
+      In these situations, an experienced probate attorney is essential. In some cases, a mediator can help resolve disputes without litigation. Real Property Planning does not refer anyone to attorneys or mediators; choose them yourself, and confirm an attorney's license with the Washington State Bar Association (wsba.org).
     </P>
 
     <Divider />
@@ -108,7 +108,7 @@ const WhenYouNeedExtraHelp = () => (
       Real Property Planning is an educational resource, not a service provider — it holds no licenses and does not handle estates. What it offers is this library of guidance and a directory of independent Washington professionals: probate attorneys, CPAs, fiduciaries, senior move managers, and estate liquidators.
     </P>
     <P>
-      If the estate includes a home, {FEATURED_BROKER.name}, the featured broker on this site, can answer questions about the property directly. {brokerCredentialSentence.replace(/\.$/, "")} — so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would actually require are ones he can speak to himself. Legal, tax, and care decisions belong with the professionals listed throughout this site.
+      If the estate includes a home, {FEATURED_BROKER.name}, the featured broker on this site, can answer questions about the property directly. {brokerCredentialSentence.replace(/\.$/, "")} — so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would actually require are ones {FEATURED_BROKER.pronoun.subject} can speak to directly. Legal, tax, and care decisions belong with the professionals listed throughout this site.
     </P>
   </ExecutorSubPageLayout>
 );

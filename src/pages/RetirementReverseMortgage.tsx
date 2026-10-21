@@ -54,10 +54,10 @@ const RetirementReverseMortgage = () => (
             Real estate decisions are often closely tied to financing, retirement planning, and long-term financial strategy.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            In some situations, selling a home is the right decision. In others, financing solutions may provide flexibility and allow clients to remain in their home.
+            In some situations, selling a home is the right decision. In others, financing solutions may provide flexibility and allow homeowners to remain in their home.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Real Property Planning lists independent lending professionals who can help clients explore their options clearly and without pressure.
+            Real Property Planning lists independent lending professionals who can help homeowners explore their options clearly and without pressure.
           </p>
         </div>
       </div>

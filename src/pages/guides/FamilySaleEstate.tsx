@@ -151,7 +151,7 @@ const FamilySaleEstate = () => (
         <div className="ptx-note" style={{ marginTop: 24 }}>
           <p style={{ marginBottom: 0 }}>
             General information, not legal advice. A sale by an executor or trustee to themselves or family is worth having the estate's attorney handle.
-            Real Property Planning does not refer clients to attorneys.
+            Real Property Planning does not refer anyone to attorneys.
           </p>
         </div>
       </Section>

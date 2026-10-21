@@ -141,5 +141,5 @@ export const FS_FAQS = [
 export const FS_PRERENDER_SECTIONS: string[] = [
   ...FS_SECTIONS.map((s) => `${s.heading} — ${s.paras.join(" ")}`),
   `Checklist — ${FS_CHECKLIST.join(" ")}`,
-  "General information, not legal advice. Real Property Planning does not refer clients to attorneys.",
+  "General information, not legal advice. Real Property Planning does not refer anyone to attorneys.",
 ];

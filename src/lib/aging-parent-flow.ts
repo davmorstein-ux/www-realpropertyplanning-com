@@ -34,7 +34,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
   path: "/helping-an-aging-parent",
   label: "Helping an Aging Parent",
   icon: HeartHandshake,
-  subtext: "Let's help you find the right guidance. Where are you in this journey?",
+  subtext: "Find the guidance that fits. Where are you in this journey?",
   children: [
     {
       path: "/helping-an-aging-parent/living-independently",

@@ -103,7 +103,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     tone: "suburban",
     descriptor: "Waterfront charm and growing neighborhoods",
     seoTitle: "Probate & Estate Real Estate in Kirkland, WA | Real Property Planning",
-    seoDescription: "Estate property sales, inherited home guidance, and senior transitions in Kirkland, Washington. Local expertise from Real Property Planning, based in Kirkland.",
+    seoDescription: `Estate property sales, inherited home guidance, and senior transitions in Kirkland, Washington. Local expertise from ${FEATURED_BROKER.role}, who is based in Kirkland.`,
     heroHeading: "Probate & Estate Real Estate in Kirkland, Washington",
     heroIntro: `${FEATURED_BROKER.Role} is based in Kirkland, so ${FEATURED_BROKER.pronoun.possessive} knowledge of this market goes beyond professional research. From the waterfront neighborhoods near Lake Washington to the established communities of North Kirkland and Totem Lake, ${FEATURED_BROKER.role} has worked with properties across the full range of Kirkland's housing landscape. For families navigating a probate sale, senior transition, or inherited property in Kirkland, that local depth translates directly into better pricing, more targeted preparation, and a smoother process.`,
     localKnowledge: "Kirkland's neighborhoods range from the boutique waterfront of Moss Bay and Houghton to the larger-lot homes of Juanita, Finn Hill, and Totem Lake. Each area attracts different buyers with different expectations. Selling an estate or inherited property in Kirkland requires understanding which improvements matter, how waterfront proximity affects value, and how to position a home that may not be in move-in condition against newer or recently updated listings.",
@@ -128,7 +128,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: `Kirkland's market is driven by proximity to Lake Washington, the Eastside tech corridor, and a community character that attracts buyers from across the region. Estate properties here can perform extremely well when priced and presented correctly — and underperform when condition issues aren't addressed honestly upfront. ${FEATURED_BROKER.Role}'s approach starts with an accurate, condition-adjusted picture of what the property is worth in today's market, then develops a preparation strategy that maximizes outcome without over-spending estate funds.`,
     localFaqs: [
       { question: "What makes Kirkland estate sales different from other Eastside markets?", answer: `Kirkland's waterfront and near-waterfront properties carry significant premiums that require careful comparable analysis — properties just a few blocks from the lake can vary by hundreds of thousands of dollars in value. ${FEATURED_BROKER.Role}'s certified appraisal background ensures these distinctions are reflected accurately in the pricing strategy.` },
-      { question: `Does ${FEATURED_BROKER.role} work with senior transitions in Kirkland?`, answer: `Yes — senior housing transitions are one of Real Property Planning's core services, and Kirkland has a significant population of longtime homeowners who are navigating this decision. ${FEATURED_BROKER.Role} coordinates with senior move managers and care professionals throughout the area to ensure the real estate timeline fits the broader transition plan.` },
+      { question: `Does ${FEATURED_BROKER.role} work with senior transitions in Kirkland?`, answer: `Yes — senior housing transitions are one of ${FEATURED_BROKER.role}'s core areas of work, and Kirkland has a significant population of longtime homeowners who are navigating this decision. ${FEATURED_BROKER.Role} coordinates with senior move managers and care professionals throughout the area to ensure the real estate timeline fits the broader transition plan.` },
     ],
   },
   redmond: {
@@ -170,7 +170,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Bothell, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Bothell, Washington — serving both King and Snohomish County portions of Bothell and surrounding communities.",
     heroHeading: "Probate & Estate Real Estate in Bothell, Washington",
-    heroIntro: "Bothell straddles the King and Snohomish County line — which means estate properties here may fall under different county probate processes depending on which side of the border they sit on. Real Property Planning is familiar with both county systems and serves the full Bothell area, including Canyon Park, the downtown core, and the surrounding communities of Kenmore and Woodinville. For executors managing an estate property in Bothell, this cross-county expertise matters.",
+    heroIntro: `Bothell straddles the King and Snohomish County line — which means estate properties here may fall under different county probate processes depending on which side of the border they sit on. ${FEATURED_BROKER.Role} is familiar with both county systems and serves the full Bothell area, including Canyon Park, the downtown core, and the surrounding communities of Kenmore and Woodinville. For executors managing an estate property in Bothell, this cross-county expertise matters.`,
     localKnowledge: `Bothell's real estate spans mid-century homes in the original downtown core, newer construction near Canyon Park and the University of Washington Bothell campus, and properties along the river corridor. The city's position across two counties means comparable sales may come from either side of the boundary, and buyer demographics can shift meaningfully between neighborhoods. ${FEATURED_BROKER.Role}'s experience with Bothell's specific market dynamics helps clients price and position properties accurately.`,
     brokerAppraiserValue: `Bothell's dual-county position creates a valuation challenge that most brokers don't encounter — comparable sales from King County and Snohomish County may support different pricing conclusions for the same property. ${FEATURED_BROKER.Role}'s certified appraisal credentials allow ${FEATURED_BROKER.pronoun.object} to evaluate which comparables truly apply based on the property's specific location, buyer pool, and neighborhood context. This cross-county analytical foundation is especially valuable for estate and transition properties where defensible pricing is essential.`,
     localSituations: [
@@ -285,7 +285,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Seattle, WA | Real Property Planning",
     seoDescription: "Probate sales, inherited home guidance, and senior transitions throughout Seattle's neighborhoods. Serving Capitol Hill, Ballard, West Seattle, Magnolia, and more.",
     heroHeading: "Probate & Estate Real Estate in Seattle, Washington",
-    heroIntro: `Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. ${FEATURED_BROKER.Role} provides the localized, practical, evidence-based guidance that Seattle's complex market demands. Real Property Planning has worked with estate properties across Seattle's neighborhoods — understanding not just the broad market but the specific buyer expectations, zoning considerations, and pricing dynamics that vary block by block in a city this complex. From a mid-century craftsman in Ballard that needs a full cleanout to a Capitol Hill condo requiring HOA coordination, the approach is always the same: honest assessment, realistic pricing, and full management of the process.`,
+    heroIntro: `Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. ${FEATURED_BROKER.Role} provides the localized, practical, evidence-based guidance that Seattle's complex market demands. ${FEATURED_BROKER.Role} has worked with estate properties across Seattle's neighborhoods — understanding not just the broad market but the specific buyer expectations, zoning considerations, and pricing dynamics that vary block by block in a city this complex. From a mid-century craftsman in Ballard that needs a full cleanout to a Capitol Hill condo requiring HOA coordination, the approach is always the same: honest assessment, realistic pricing, and full management of the process.`,
     localKnowledge: `Seattle encompasses over 80 distinct neighborhoods, each with its own character, pricing trends, and buyer expectations. A mid-century rambler in Wedgwood presents a very different sale scenario than a Capitol Hill condo or a Craftsman in Wallingford. ${FEATURED_BROKER.Role}'s appraisal background and broker experience across Seattle's neighborhoods allow ${FEATURED_BROKER.pronoun.object} to develop pricing and preparation strategies that reflect actual local conditions rather than citywide averages.`,
     brokerAppraiserValue: `Seattle's market complexity makes generic pricing approaches especially risky for estate and inherited properties. Automated estimates often miss critical factors like lot potential, view corridors, ADU feasibility, and condition-based adjustments that vary block by block. ${FEATURED_BROKER.Role}'s certified appraisal credentials and hands-on broker experience provide the granular analysis Seattle properties require for confident decision-making.`,
     localSituations: [
@@ -450,9 +450,9 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     tone: "rural",
     descriptor: "Wine country character with estate-style properties",
     seoTitle: "Probate & Estate Real Estate in Woodinville, WA | Real Property Planning",
-    seoDescription: "Estate property sales, probate guidance, and senior transitions in Woodinville, Washington. Local expertise from Real Property Planning — mailing address in Woodinville.",
+    seoDescription: `Estate property sales, probate guidance, and senior transitions in Woodinville, Washington. Local expertise from ${FEATURED_BROKER.role}.`,
     heroHeading: "Probate & Estate Real Estate in Woodinville, Washington",
-    heroIntro: `Woodinville is home to Real Property Planning's mailing address — and it's a community ${FEATURED_BROKER.role} knows well. From the wine country properties along the Sammamish River corridor to established neighborhoods in Hollywood Hill and Bear Creek, Woodinville's real estate market rewards local knowledge. Estate properties here often include larger lots, horse properties, and rural-adjacent parcels that require specific expertise to price and position correctly. ${FEATURED_BROKER.Role} works with families and executors throughout the Woodinville area with the local familiarity that only comes from being part of the community.`,
+    heroIntro: `Woodinville is a community ${FEATURED_BROKER.role} knows well. From the wine country properties along the Sammamish River corridor to established neighborhoods in Hollywood Hill and Bear Creek, Woodinville's real estate market rewards local knowledge. Estate properties here often include larger lots, horse properties, and rural-adjacent parcels that require specific expertise to price and position correctly. ${FEATURED_BROKER.Role} works with families and executors throughout the Woodinville area with the local familiarity that only comes from being part of the community.`,
     localKnowledge: `Woodinville's housing market includes everything from newer townhomes and condos near the town center to larger-lot properties and homes with acreage in the surrounding areas. The Sammamish River corridor, wine district proximity, and equestrian properties all create niche market segments. ${FEATURED_BROKER.Role}'s appraisal credentials are especially valuable here, where property characteristics like land area, outbuildings, and rural features can meaningfully affect value.`,
     brokerAppraiserValue: `Woodinville's wine-country character and rural-residential properties create a market where automated tools trained on suburban data consistently fall short. Estate-style lots, equestrian properties, and wine-district-adjacent homes each require fundamentally different valuation approaches. ${FEATURED_BROKER.Role}'s certified appraisal credentials provide the property-specific analysis Woodinville clients need when acreage, outbuildings, and rural character are primary value drivers.`,
     localSituations: [
@@ -1419,7 +1419,7 @@ export const services: ServiceData[] = [
     slug: "trust-estate-property-sales",
     shortName: "Trust Property Sales",
     description: "Assisting trustees and fiduciaries with the valuation, preparation, and sale of trust-owned residential real estate.",
-    cityIntroTemplate: "Managing a trust-owned property sale in {city} involves specific fiduciary responsibilities and practical coordination. Real Property Planning assists trustees and fiduciaries with trust property sales in {city}, providing clear communication and structured, evidence-based strategy.",
+    cityIntroTemplate: `Managing a trust-owned property sale in {city} involves specific fiduciary responsibilities and practical coordination. ${FEATURED_BROKER.Role} assists trustees and fiduciaries with trust property sales in {city}, providing clear communication and structured, evidence-based strategy.`,
     targetAudience: [
       "Trustees managing trust-owned residential real estate",
       "Successor trustees who have recently assumed responsibility",
@@ -1740,7 +1740,7 @@ export function getWhyLocalMatters(cityName: string, countyName: string, cityDat
 /** Why broker/appraiser — uses city-specific if available */
 export function getWhyBrokerAppraiser(cityName: string, cityData?: CityData): string {
   if (cityData?.brokerAppraiserValue) return cityData.brokerAppraiserValue;
-  return `Most real estate brokers can list a property. What sets ${FEATURED_BROKER.role} apart${SAME_PERSON ? " is the combination of licensed brokerage experience and state-certified appraisal expertise" : " is licensed brokerage experience with estate property"}. For clients in ${cityName} managing estate, probate, trust, or transition-related property decisions, this dual perspective means more accurate pricing, better preparation decisions, and a clearer understanding of what drives value in the local market. Real Property Planning does not rely on automated estimates — ${FEATURED_BROKER.Role} assesses each property based on its actual condition, location, and realistic buyer demand.`;
+  return `Most real estate brokers can list a property. What sets ${FEATURED_BROKER.role} apart${SAME_PERSON ? " is the combination of licensed brokerage experience and state-certified appraisal expertise" : " is licensed brokerage experience with estate property"}. For clients in ${cityName} managing estate, probate, trust, or transition-related property decisions, ${SAME_PERSON ? "this dual perspective" : "this experience"} means more accurate pricing, better preparation decisions, and a clearer understanding of what drives value in the local market. ${FEATURED_BROKER.Role} does not rely on automated estimates and assesses each property based on its actual condition, location, and realistic buyer demand.`;
 }
 
 /** Service-specific how-we-help items for city+service pages */
@@ -1980,7 +1980,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Guiding Your Estate Sale, Step by Step";
         case "military": return "Practical Probate Sale Guidance";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Helps With Estate Property Sales`;
-        default: return "How Real Property Planning Supports Estate Sales";
+        default: return `How ${FEATURED_BROKER.roleTitle} Supports Estate Sales`;
       }
     case "senior-transitions":
       switch (t) {
@@ -1990,7 +1990,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Walking With You Through the Transition";
         case "military": return "Practical Senior Transition Guidance";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Helps Families in Transition`;
-        default: return "How Real Property Planning Supports Senior Transitions";
+        default: return `How ${FEATURED_BROKER.roleTitle} Supports Senior Transitions`;
       }
     case "downsizing-services":
       switch (t) {
@@ -2000,7 +2000,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Steady Guidance for Your Next Chapter";
         case "military": return "Clear, Practical Downsizing Support";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Helps You Downsize`;
-        default: return "How Real Property Planning Helps With Downsizing";
+        default: return `How ${FEATURED_BROKER.roleTitle} Helps With Downsizing`;
       }
     case "executor-support":
       switch (t) {
@@ -2010,7 +2010,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Guiding Executors Through Each Step";
         case "military": return "Clear Guidance for Executor Responsibilities";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Helps With Executor Duties`;
-        default: return "How Real Property Planning Supports Executors";
+        default: return `How ${FEATURED_BROKER.roleTitle} Supports Executors`;
       }
     case "attorney-fiduciary-support":
       switch (t) {
@@ -2020,7 +2020,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Working With Your Legal Team";
         case "military": return "Practical Support for Legal Professionals";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Partners With Attorneys`;
-        default: return "How Real Property Planning Works With Legal Professionals";
+        default: return `How ${FEATURED_BROKER.roleTitle} Works With Legal Professionals`;
       }
     case "valuation-guidance":
       switch (t) {
@@ -2030,7 +2030,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Honest, Grounded Valuation Guidance";
         case "military": return "Clear Property Valuation Support";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Provides Honest Valuation`;
-        default: return "How Real Property Planning Delivers Valuation Insight";
+        default: return `How ${FEATURED_BROKER.roleTitle} Delivers Valuation Insight`;
       }
     case "preparing-home-for-sale":
       switch (t) {
@@ -2040,7 +2040,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Getting Your Home Ready, Practically";
         case "military": return "Efficient Home Preparation Guidance";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Coordinates Property Preparation`;
-        default: return "How Real Property Planning Prepares Homes for Sale";
+        default: return `How ${FEATURED_BROKER.roleTitle} Prepares Homes for Sale`;
       }
     case "divorce-related-home-sales":
       switch (t) {
@@ -2050,7 +2050,7 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Discreet, Professional Sale Guidance";
         case "military": return "Clear Guidance for Divorce-Related Sales";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Manages Divorce Property Sales`;
-        default: return "How Real Property Planning Supports Divorce Sales";
+        default: return `How ${FEATURED_BROKER.roleTitle} Supports Divorce Sales`;
       }
     case "trust-estate-property-sales":
       switch (t) {
@@ -2060,16 +2060,16 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
         case "smalltown": return "Guiding Trustees Through the Sale Process";
         case "military": return "Practical Trust Property Sale Support";
         case "rural": return `How ${FEATURED_BROKER.roleTitle} Helps Sell Trust-Owned Property`;
-        default: return "How Real Property Planning Supports Trust Sales";
+        default: return `How ${FEATURED_BROKER.roleTitle} Supports Trust Sales`;
       }
     default:
       // Fallback by tone only
       switch (t) {
         case "smalltown":
         case "rural":
-          return "How Real Property Planning Helps";
+          return `How ${FEATURED_BROKER.roleTitle} Helps`;
         default:
-          return "How Real Property Planning Helps";
+          return `How ${FEATURED_BROKER.roleTitle} Helps`;
       }
   }
 }
@@ -3240,7 +3240,7 @@ const deepWhyLocalBank: Record<string, Partial<Record<CommunityTone, string>>> =
     waterfront: `Downsizing from a waterfront property in {city} carries unique valuation considerations. The water premium is real, but it depends on specific factors — view quality, access type, shoreline condition — that vary property by property. ${FEATURED_BROKER.Role}'s appraisal credentials provide the precise, waterfront-specific analysis that {city} homeowners need for confident pricing decisions.`,
     smalltown: `In {city}, homeowners who have lived in the same home for decades may have a strong sense of their property's value — but the market may see it differently. ${FEATURED_BROKER.Role} provides honest, condition-based guidance that helps homeowners in {city}'s smaller market understand realistic pricing without the uncomfortable surprise that sometimes comes with listing a well-loved but dated home.`,
     military: `Military families downsizing in {city} often have practical, timeline-driven priorities. The sale needs to happen efficiently, pricing needs to be realistic, and the process needs to work within the constraints of a military transition. ${FEATURED_BROKER.Role}'s practical approach to valuation and sale coordination aligns well with the no-nonsense expectations of military-connected homeowners.`,
-    rural: `Rural downsizing in {city} often means selling a property with characteristics that standard pricing models can't evaluate — acreage, outbuildings, septic systems, or mixed-use potential. Real Property Planning's on-the-ground assessment accounts for the full scope of a rural property's features, providing the honest valuation guidance that {city} homeowners need for this important decision.`,
+    rural: `Rural downsizing in {city} often means selling a property with characteristics that standard pricing models can't evaluate — acreage, outbuildings, septic systems, or mixed-use potential. ${FEATURED_BROKER.Role}'s on-the-ground assessment accounts for the full scope of a rural property's features, providing the honest valuation guidance that {city} homeowners need for this important decision.`,
   },
   "executor-support": {
     premium: `Executors managing property in {city}'s premium market face heightened responsibility — the property's value is often significant, beneficiaries may have strong opinions, and mispricing can have real financial consequences. ${FEATURED_BROKER.Role}'s dual credentials as a broker and certified appraiser provide executors with the defensible, property-specific pricing guidance that high-value estate situations require.`,
@@ -3254,7 +3254,7 @@ const deepWhyLocalBank: Record<string, Partial<Record<CommunityTone, string>>> =
   "attorney-fiduciary-support": {
     premium: `Attorneys and fiduciaries managing property matters in {city}'s premium market need a real estate partner who provides defensible pricing opinions, not aspirational estimates. ${FEATURED_BROKER.Role}'s certified appraisal background produces documentation that withstands court scrutiny and beneficiary challenge — the kind of property-specific analysis that premium estate and trust situations demand.`,
     urban: `Legal professionals with property matters in {city}'s diverse urban market need a broker who can navigate different property types, neighborhood contexts, and market dynamics. ${FEATURED_BROKER.Role}'s experience across {city}'s neighborhoods — combined with ${FEATURED_BROKER.role}'s appraisal credentials — provides the versatile, defensible real estate support that attorneys and fiduciaries need for their client matters.`,
-    suburban: `In {city}'s suburban market, attorneys and fiduciaries need a broker who delivers consistent, reliable service — clear communication, defensible pricing, and professional follow-through on every engagement. Real Property Planning's practice is built on exactly this kind of dependability, which is why legal professionals in {city} refer clients with confidence.`,
+    suburban: `In {city}'s suburban market, attorneys and fiduciaries need a broker who delivers consistent, reliable service — clear communication, defensible pricing, and professional follow-through on every engagement. ${FEATURED_BROKER.Role}'s practice is built on exactly this kind of dependability, which is why legal professionals in {city} refer clients with confidence.`,
     waterfront: `Waterfront property matters in {city} require specialized valuation knowledge that most brokers don't have. View premiums, shoreline access quality, marine condition factors, and seasonal demand patterns all affect defensible pricing. ${FEATURED_BROKER.Role}'s appraisal background provides attorneys and fiduciaries with the waterfront-specific analysis these situations require.`,
     smalltown: `In {city}'s smaller market, the relationship between legal professionals and their real estate partners carries weight — both professionally and within the community. ${FEATURED_BROKER.Role} provides the kind of dependable, locally informed service that earns trust over time, handling property matters with the care and discretion that {city}'s community context requires.`,
     military: `Attorneys serving military families in {city} need a real estate partner who understands PCS timelines, VA loan considerations, and the practical realities of military-connected property transitions. ${FEATURED_BROKER.Role}'s familiarity with {city}'s military-influenced market dynamics allows him to provide the efficient, knowledgeable support these situations require.`,
@@ -3285,7 +3285,7 @@ const deepWhyLocalBank: Record<string, Partial<Record<CommunityTone, string>>> =
     waterfront: `Waterfront divorce sales in {city} are inherently complex — the water premium is real but varies significantly by specific view, access, and condition. Both parties need defensible pricing that accurately reflects these factors. ${FEATURED_BROKER.Role}'s appraisal credentials provide the objective, waterfront-specific analysis that fair settlement requires.`,
     smalltown: `Divorce-related property sales in {city} add a layer of community sensitivity. Both parties benefit from a broker who can handle the situation with discretion and professionalism while providing honest, defensible pricing in a market where comparable sales may be limited. ${FEATURED_BROKER.Role} brings that combination of objectivity and local understanding.`,
     military: `Military divorce sales in {city} may involve unique considerations — BAH calculations, PCS timing, VA loan assumptions, and service-related scheduling constraints. ${FEATURED_BROKER.Role}'s familiarity with {city}'s military-connected market dynamics helps both parties and their attorneys navigate these factors alongside the standard property sale process.`,
-    rural: `Rural divorce sales in {city} often involve properties with features that make standard valuation complicated — acreage, outbuildings, water rights, or mixed-use potential. Real Property Planning's on-the-ground assessment captures these rural-specific factors, providing both parties with the defensible, comprehensive property analysis that fair settlement requires.`,
+    rural: `Rural divorce sales in {city} often involve properties with features that make standard valuation complicated — acreage, outbuildings, water rights, or mixed-use potential. ${FEATURED_BROKER.Role}'s on-the-ground assessment captures these rural-specific factors, providing both parties with the defensible, comprehensive property analysis that fair settlement requires.`,
   },
   "trust-estate-property-sales": {
     premium: `Trust property sales in {city}'s premium market require pricing that meets fiduciary standards — defensible, well-documented, and grounded in actual property analysis. ${FEATURED_BROKER.Role}'s dual credentials provide trustees with the professional-grade valuation and sale coordination that premium trust properties require, supporting both sound decision-making and clear beneficiary communication.`,

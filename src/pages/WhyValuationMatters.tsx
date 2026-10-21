@@ -12,7 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
@@ -65,10 +65,14 @@ const faqs = [
     question: "We've already had two agents give us very different prices. How do we know which one to trust?",
     answer: "Ask both agents to show you the comparables they used and the specific dollar adjustments they made for condition, age, and features. A defensible price has math behind it. A guess has a number behind it. A third opinion that walks you through the actual adjustments will show you whether either of the first two was right.",
   },
-  {
-    question: "If you're an appraiser, can you also be the listing agent — isn't that a conflict?",
-    answer: `${FEATURED_BROKER.Role} provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules — not bundled with the listing.`,
-  },
+  ...(SAME_PERSON
+    ? [
+        {
+          question: `If ${FEATURED_BROKER.role} is also an appraiser, can ${FEATURED_BROKER.pronoun.subject} be the listing agent — isn't that a conflict?`,
+          answer: `${FEATURED_BROKER.Role} provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules — not bundled with the listing.`,
+        },
+      ]
+    : []),
 ];
 
 const WhyValuationMatters = () => {
@@ -76,7 +80,7 @@ const WhyValuationMatters = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Estate Property Valuation in Washington State"
-        description="Defensible pricing for probate, trust, and inherited Washington homes — from a licensed broker and Washington State Certified Residential Appraiser."
+        description="How defensible pricing works for probate, trust, and inherited Washington homes, and what a licensed broker or certified residential appraiser adds."
         jsonLd={articleSchema({
           headline: "Why Pricing & Valuation Matter in Estate Property Sales",
           description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
@@ -119,7 +123,7 @@ const WhyValuationMatters = () => {
       ` }} />
 
       {/* HERO */}
-      <HeroBandTitle as="h1">Pricing &amp; Valuation Expertise</HeroBandTitle>
+      <HeroBandTitle as="h1">Why Pricing &amp; Valuation Matter</HeroBandTitle>
 
       {/* Quick Answer accordion */}
       <section className="py-10 lg:py-14 bg-background">
@@ -238,7 +242,7 @@ const WhyValuationMatters = () => {
 
       <MidPageCTA
         heading="Need Help Pricing an Estate or Inherited Property?"
-        body={`${FEATURED_BROKER.Role} provides valuation-informed pricing strategy grounded in dual broker and appraiser experience.`}
+        body={`${FEATURED_BROKER.Role} provides valuation-informed pricing strategy${SAME_PERSON ? " grounded in dual broker and appraiser experience" : ""}.`}
         buttonText="Discuss a Property"
         microcopy="No pressure. Just honest, market-grounded guidance."
       />

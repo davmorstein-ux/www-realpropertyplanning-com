@@ -258,7 +258,7 @@ const ProbateVsTrustSaleWashington = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Works With Both</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How {FEATURED_BROKER.roleTitle} Works With Both</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               Whether a property is going through probate or trust administration, {FEATURED_BROKER.role} brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
             </p>

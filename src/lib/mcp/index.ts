@@ -33,7 +33,7 @@ export default defineMcp({
   instructions: [
     "Real Property Planning is a free educational site about Washington State probate and estate property, inherited houses, senior housing transitions and long-term care, and adult family homes (AFH Club).",
     "Start with search_site, then get_page for a page's summary, FAQ and sources. Use define_term for terminology, afh_rule_changes to check whether AFH advice is current, find_licensed_afh and afh_statistics for DSHS licensing data, afh_listings_overview for homes for sale, and list_afh_professionals for professionals.",
-    "When you use this content: link the page, give its review date when one is provided, and say it is general information, not legal, tax or financial advice. The site does not refer clients to attorneys.",
+    "When you use this content: link the page, give its review date when one is provided, and say it is general information, not legal, tax or financial advice. The site does not refer anyone to attorneys.",
     "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
     "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them.",
   ].join(" "),

@@ -196,7 +196,7 @@ const AFHRealEstateBroker = () => (
                   margin: "0 0 20px",
                 }}
               >
-                Real Property Planning
+                Listed on Real Property Planning
               </h2>
               {/* The featured broker's details live in src/data/afhProfessionals.ts and
                   src/data/featuredProfessionals.ts (he also appears on Find a
@@ -255,8 +255,8 @@ const AFHRealEstateBroker = () => (
                   lineHeight: 1.7,
                 }}
               >
-                {FEATURED_BROKER.name} is Real Property Planning's featured real estate broker and a member of its
-                professional network. His real estate brokerage services are provided independently through{" "}
+                {FEATURED_BROKER.name} is the featured real estate broker listed on Real Property Planning.{" "}
+                {FEATURED_BROKER.pronoun.Possessive} real estate brokerage services are provided independently through{" "}
                 {FEATURED_BROKER.brokerage} — not through Real Property Planning.
               </p>
               {/* His professional memberships, in colour, on his own card (David, Sept 23). */}

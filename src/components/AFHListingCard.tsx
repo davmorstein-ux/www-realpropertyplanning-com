@@ -436,7 +436,7 @@ export const AFHListingsDisclaimer = ({ sources = ["nwmls"] }: { sources?: AFHLi
       ? "Listings marked RMLS, BizBuySell, or direct are summarized from public sources and link to the listing brokerage; photos and remarks are not reproduced. "
       : ""}
     Information deemed reliable but not guaranteed. Real Property Planning is an
-    independent educational hub and does not represent buyers or sellers on these properties directly — contact{" "}
+    independent educational hub and does not represent buyers or sellers — contact{" "}
     {FEATURED_BROKER.name}, Washington State Licensed Real Estate Broker ({FEATURED_BROKER.brokerage} · License #
     {FEATURED_BROKER.licenseNumber}), for all inquiries, showings, and full listing details.
   </div>

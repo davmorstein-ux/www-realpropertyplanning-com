@@ -44,7 +44,7 @@ const highlightText = (text: string, highlights?: string[]) => {
 const ClientReviewsSection = ({
   reviews,
   heading = "Client Reviews & Experiences",
-  subheading = "Real feedback from clients and professionals who have worked with Real Property Planning during probate, estate, and senior transition situations.",
+  subheading = `Real feedback from clients and professionals who have worked with ${FEATURED_BROKER.role} during probate, estate, and senior transition situations.`,
   background = "bg-secondary",
   showZillowLink = true,
 }: ClientReviewsSectionProps) => (

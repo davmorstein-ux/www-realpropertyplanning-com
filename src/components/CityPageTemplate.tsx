@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
-import { FEATURED_BROKER, FEATURED_APPRAISER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 // Tone-specific FAQ sets — now meaningfully varied per tone, not generic per city
 const toneFaqSets: Record<string, (city: CityData) => { question: string; answer: string }[]> = {
@@ -66,7 +66,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
   const faqs = city.localFaqs || faqGenerator(city);
 
   const heroIntro = city.heroIntro ||
-    `Experienced real estate guidance for probate, estate, and senior transitions in ${city.name}, ${city.county}. Licensed broker and certified appraiser.`;
+    `Experienced real estate guidance for probate, estate, and senior transitions in ${city.name}, ${city.county}, from ${FEATURED_BROKER.role}${SAME_PERSON ? ", a licensed broker and certified appraiser" : ""}.`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -74,7 +74,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         title={city.seoTitle || `Probate & Estate Real Estate in ${city.name}, WA | Real Property Planning`}
         description={city.seoDescription || (city.descriptor
           ? `${city.descriptor} — Probate, estate, and senior transition guidance in ${city.name}, ${city.county}.`
-          : `Probate, estate, and senior transition real estate guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser Real Property Planning.`
+          : `Probate, estate, and senior transition real estate guidance in ${city.name}, ${city.county}. Information from Real Property Planning and ${FEATURED_BROKER.role}${SAME_PERSON ? ", a licensed broker and certified appraiser" : ""}.`
         )}
         noindex={!tier1}
       />
@@ -108,7 +108,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       <DirectAnswerBlock
         question={city.aeoQuestion || `How do probate and estate property sales work in ${city.name}?`}
-        answer={city.aeoAnswer || `${FEATURED_BROKER.Role} provides hands-on guidance for executors, trustees, attorneys, and families selling property in ${city.name}. Each property is carefully evaluated, and the full sale process is coordinated with licensed broker and certified appraiser expertise.`}
+        answer={city.aeoAnswer || `${FEATURED_BROKER.Role} provides hands-on guidance for executors, trustees, attorneys, and families selling property in ${city.name}. Each property is carefully evaluated, and the full sale process is coordinated with licensed broker${SAME_PERSON ? " and certified appraiser" : ""} expertise.`}
         supportBullets={city.aeoSupportBullets}
         supportFaqs={city.aeoSupportFaqs}
         supportSteps={!city.aeoSupportBullets && !city.aeoSupportFaqs ? [

@@ -7,7 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 
 interface AttorneyPageProps {
@@ -118,10 +118,12 @@ const AttorneyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How Real Property Planning Helps
+              {`How ${FEATURED_BROKER.roleTitle} Helps`}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.Role} brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
+              {SAME_PERSON
+                ? `${FEATURED_BROKER.Role} brings dual credentials as a licensed broker and certified residential appraiser to every engagement:`
+                : `${FEATURED_BROKER.Role} brings a broker's license and experience to every engagement:`}
             </p>
             <ul className="space-y-4">
               {howWeHelp.map((item, i) => (
@@ -162,7 +164,7 @@ const AttorneyPageTemplate = ({
               Ready to Discuss a Client Situation?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Confidential conversations are always welcome. The professionals in this network will follow up promptly — no pressure, no obligation.
+              Confidential conversations are always welcome. The professionals listed here will follow up promptly — no pressure, no obligation.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

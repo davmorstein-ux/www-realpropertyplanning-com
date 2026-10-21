@@ -555,12 +555,14 @@ export const homepageFaqSchema = {
       name: "How is Real Property Planning different from a regular real estate agent?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: `${FEATURED_BROKER.name} brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser. That means properties can be valued with professional appraisal standards and sold with integrated guidance — under one platform families can trust.`,
+        text: SAME_PERSON
+          ? `Real Property Planning is a free educational site, not a real estate practice. The broker it features brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser. That means properties can be valued with professional appraisal standards and sold with integrated guidance.`
+          : `Real Property Planning is a free educational site, not a real estate practice. It lists ${FEATURED_BROKER.role}, a licensed real estate broker, and ${FEATURED_APPRAISER.role}, a Washington State Certified Residential Appraiser, whom you contact directly.`,
       },
     },
     {
       "@type": "Question",
-      name: "What areas does Real Property Planning serve?",
+      name: "What areas does Real Property Planning cover?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Real Property Planning's guides cover all of Washington State, and its featured broker and appraiser work statewide.",
@@ -571,12 +573,12 @@ export const homepageFaqSchema = {
       name: "How do I get started?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.",
+        text: `Start with the free guides. To talk with ${FEATURED_BROKER.role}, call ${FEATURED_BROKER.phone}; questions about the site go to info@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.`,
       },
     },
     {
       "@type": "Question",
-      name: "Can Real Property Planning help out-of-state executors?",
+      name: `Can ${FEATURED_BROKER.role} help out-of-state executors?`,
       acceptedAnswer: {
         "@type": "Answer",
         text: `Yes — this is one of the most common situations ${FEATURED_BROKER.name} works with. ${FEATURED_BROKER.pronoun.Subject} manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step.`,
@@ -592,10 +594,10 @@ export const homepageFaqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is there a cost to consult with Real Property Planning?",
+      name: `Is there a cost to consult with ${FEATURED_BROKER.role}?`,
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Initial consultations are free and carry no obligation. Responses typically come within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started.",
+        text: `Real Property Planning's guides are free. An initial consultation with ${FEATURED_BROKER.role} is free and carries no obligation. Call ${FEATURED_BROKER.phone} to get started.`,
       },
     },
   ],

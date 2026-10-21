@@ -46,7 +46,7 @@ const PropertyPreparationServices = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                A list of property preparation services throughout Washington State is being compiled. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">use the contact page</Link> for a current referral.
+                A list of property preparation services throughout Washington State is being compiled. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">use the contact page</Link> with a question.
               </p>
             </div>
 

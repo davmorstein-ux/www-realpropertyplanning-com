@@ -250,7 +250,7 @@ export default function ProbateDeadlines() {
         <div className="prp-narrow prp-note">
           <p style={{ marginBottom: 0 }}>
             General information, not legal advice. The personal representative is usually well served by a Washington-licensed probate
-            attorney. Real Property Planning does not refer clients to attorneys; confirm any lawyer's license with the Washington State
+            attorney. Real Property Planning does not refer anyone to attorneys; confirm any lawyer's license with the Washington State
             Bar Association (wsba.org).
           </p>
         </div>

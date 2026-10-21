@@ -180,7 +180,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
         label: "For professionals",
         links: [
           { title: "For Probate & Estate Attorneys", href: "/for-attorneys" },
-          { title: "How Real Property Planning Works With Attorneys", href: "/for-attorneys/how-it-works" },
+          { title: "How Attorneys Work With the Featured Broker", href: "/for-attorneys/how-it-works" },
           { title: "For Financial Planners", href: "/for-financial-planners" },
           { title: "Join the Professional Network", href: "/join-the-network" },
         ],

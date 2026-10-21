@@ -104,7 +104,7 @@ const ProbatePillarGuide = () => (
           <p>{PROBATE_PILLAR.SHORT_ANSWER}</p>
           <p className="prp-small" style={{ marginBottom: 0 }}>
             Every deadline, with its statute, is on <Link className="prp-link" to={DEADLINES_PATH}>Deadlines &amp; key rules</Link>.
-            General information, not legal advice. Real Property Planning does not refer clients to attorneys.
+            General information, not legal advice. Real Property Planning does not refer anyone to attorneys.
           </p>
         </div>
       </section>

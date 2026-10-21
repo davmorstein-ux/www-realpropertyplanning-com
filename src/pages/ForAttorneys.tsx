@@ -12,8 +12,8 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Partner for Washington Estate, Probate & Family Law Attorneys"
-      description="A single, valuation-trained real estate point of contact for Washington attorneys — handling property, pricing, and coordination so legal counsel stays focused on the file."
+      title="Real Estate Professionals for Washington Estate, Probate & Family Law Attorneys"
+      description={`${FEATURED_BROKER.Role} is a single, valuation-trained real estate point of contact for Washington attorneys — handling property, pricing, and coordination so legal counsel stays focused on the file.`}
     />
     <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
     <Header />

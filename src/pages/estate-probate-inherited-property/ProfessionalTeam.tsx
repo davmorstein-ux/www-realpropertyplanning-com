@@ -65,7 +65,7 @@ const ProfessionalTeam = () => (
 
     <Divider />
 
-    <SubH2>How Real Property Planning Can Help</SubH2>
+    <SubH2>Finding Independent Professionals</SubH2>
     <P>
       Real Property Planning is a free resource for families navigating estate administration. It explains what each of these professionals does. Its Find a Professional page lists independent professionals the site's owner has met with personally; you contact and hire them directly, and you are free to choose anyone.
     </P>

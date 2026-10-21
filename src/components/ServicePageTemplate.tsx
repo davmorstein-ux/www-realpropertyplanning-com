@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { counties, isTier1City } from "@/lib/service-areas-data";
 import type { ServiceData } from "@/lib/service-areas-data";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 interface ServicePageTemplateProps {
   service: ServiceData;
@@ -31,7 +31,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`${service.name} in Washington State | Real Property Planning`}
-        description={`${service.description} ${FEATURED_BROKER.role} provides ${service.name.toLowerCase()} throughout Washington State with licensed broker and certified appraiser credentials.`}
+        description={`${service.description} ${FEATURED_BROKER.Role} provides ${service.name.toLowerCase()} throughout Washington State with ${SAME_PERSON ? "licensed broker and certified appraiser credentials" : "a Washington real estate broker license"}.`}
       />
       <BreadcrumbSchema
         items={[
@@ -64,7 +64,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-              How Real Property Planning Helps
+              How {FEATURED_BROKER.roleTitle} Helps
             </h2>
             <ul className="space-y-3">
               {benefits.slice(0, 5).map((item, i) => (

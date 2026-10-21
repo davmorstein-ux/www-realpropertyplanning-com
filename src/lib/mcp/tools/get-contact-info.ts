@@ -3,7 +3,7 @@ import { FEATURED_BROKER, FEATURED_APPRAISER } from "../../../data/featuredProfe
 
 export const ABOUT = {
   name: "Real Property Planning (with AFH Club)",
-  what: "A free, independent educational site for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes. It holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer clients to attorneys.",
+  what: "A free, independent educational site for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes. It holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer anyone to attorneys.",
   area: "All of Washington State.",
   website: "https://realpropertyplanning.com",
   phone: "(206) 900-3015",

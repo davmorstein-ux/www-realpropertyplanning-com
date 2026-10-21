@@ -18,7 +18,7 @@
  * say the same thing. No "@/" imports: vite.config.ts loads this at build time.
  */
 import { privatePayBandForPlace } from "../afhPrivatePayRanges";
-import { FEATURED_APPRAISER } from "../featuredProfessionals";
+import { FEATURED_APPRAISER, SAME_PERSON } from "../featuredProfessionals";
 import { AFH_MEDICAID_RATES, medicaidRange, monthly, rateRegionForCounty } from "../afhMedicaidRates";
 
 /** A run of text, or a link. */
@@ -76,7 +76,7 @@ export function cityGuide(c: CityGuideInput, index: CityIndexLike[]): CityGuide 
       memory
         ? ` Memory care usually starts around ${usd(memory.low)} and can run ${memory.openEnded ? `past ${usd(memory.high)}` : `to ${usd(memory.high)}`}.`
         : "",
-      ` Each home sets its own rate, so ask every home for its rate sheet. These ranges come from Real Property Planning founder ${FEATURED_APPRAISER.name}'s brokerage and appraisal work with operating homes (reviewed ${monthYear(band.reviewed)}).`,
+      ` Each home sets its own rate, so ask every home for its rate sheet. These ranges come from ${FEATURED_APPRAISER.role}'s ${SAME_PERSON ? "brokerage and appraisal" : "appraisal"} work with operating homes (reviewed ${monthYear(band.reviewed)}).`,
     ]);
   }
   cost.push([

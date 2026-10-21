@@ -152,7 +152,7 @@ const MortgageAfterDeath = () => (
         <div className="ptx-note" style={{ marginTop: 24 }}>
           <p style={{ marginBottom: 0 }}>
             General information, not legal or financial advice. The loan servicer can answer questions about a specific account.
-            Real Property Planning does not refer clients to attorneys.
+            Real Property Planning does not refer anyone to attorneys.
           </p>
         </div>
       </Section>

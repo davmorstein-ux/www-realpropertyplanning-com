@@ -34,7 +34,7 @@ const EstatePlanningPowersOfAttorney = () => (
       </p>
 
       <p className="attorney-role-description">
-        Real Property Planning does not refer clients to attorneys; choose a Washington-licensed estate planning attorney and confirm their license with the Washington State Bar Association (wsba.org). For a plain-language overview of the documents involved, see <Link to="/planning-before-a-crisis/legal-documents">The Legal Documents That Matter Most</Link>.
+        Real Property Planning does not refer anyone to attorneys; choose a Washington-licensed estate planning attorney and confirm their license with the Washington State Bar Association (wsba.org). For a plain-language overview of the documents involved, see <Link to="/planning-before-a-crisis/legal-documents">The Legal Documents That Matter Most</Link>.
       </p>
 
       <div className="flex justify-center my-8">

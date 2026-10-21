@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washington.webp";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 import NextQuestions from "@/components/NextQuestions";
 import QuickAnswers from "@/components/QuickAnswers";
 import MoveOrSellFirst from "@/components/guides/MoveOrSellFirst";
@@ -22,7 +22,7 @@ import MoveOrSellFirst from "@/components/guides/MoveOrSellFirst";
 const steps = [
   {
     title: "Understand what the home is actually worth",
-    body: "A dual credential as a Licensed Broker and Certified Residential Appraiser means families get a professional valuation — not a listing pitch. That number becomes the foundation for every financial decision that follows.",
+    body: `${SAME_PERSON ? `${FEATURED_BROKER.Role}'s dual credential as a Licensed Broker and Certified Residential Appraiser means families get a professional valuation — not a listing pitch.` : `${FEATURED_APPRAISER.Role} can provide a professional valuation — not a listing pitch.`} That number becomes the foundation for every financial decision that follows.`,
   },
   {
     title: "Figure out the timeline",
@@ -34,7 +34,7 @@ const steps = [
   },
   {
     title: "Price it correctly for its condition",
-    body: "Overpricing causes the home to sit and carrying costs to pile up. Underpricing leaves money on the table that could have funded months of additional care. An appraisal background means the price is set based on methodology — not optimism.",
+    body: `Overpricing causes the home to sit and carrying costs to pile up. Underpricing leaves money on the table that could have funded months of additional care. ${SAME_PERSON ? `${FEATURED_BROKER.Role}'s appraisal background means` : "A certified appraiser's valuation means"} the price is set based on methodology — not optimism.`,
   },
   {
     title: "Close and fund the care plan",

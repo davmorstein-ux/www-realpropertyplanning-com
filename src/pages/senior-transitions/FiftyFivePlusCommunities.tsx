@@ -154,7 +154,7 @@ const FiftyFivePlusCommunities = () => (
           <p style={{ marginBottom: 0 }}>
             General information, not legal advice. Community age policies, fees and rules change; confirm them with the
             community, its homeowners' association or its manager before making a housing decision. This site does not
-            rate or recommend communities, and Real Property Planning does not refer clients to attorneys.
+            rate or recommend communities, and Real Property Planning does not refer anyone to attorneys.
           </p>
         </div>
       </Section>

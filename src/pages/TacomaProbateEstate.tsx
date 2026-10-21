@@ -90,7 +90,7 @@ const TacomaProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Tacoma, WA"
-        description="Guidance for executors, trustees, and families with inherited property in Tacoma, WA. Local Pierce County expertise from start to finish."
+        description={`Guidance for executors, trustees, and families with inherited property in Tacoma, WA. Local Pierce County expertise from ${FEATURED_BROKER.role}, from start to finish.`}
       />
       <BreadcrumbSchema
         items={[
@@ -126,7 +126,7 @@ const TacomaProbateEstate = () => {
               When Families in Tacoma Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Inheriting a property or becoming responsible for selling one is rarely something families plan for. These are some of the situations that bring Tacoma families and professionals to Real Property Planning:
+              Inheriting a property or becoming responsible for selling one is rarely something families plan for. These are some of the situations that bring Tacoma families and professionals to {FEATURED_BROKER.role}:
             </p>
             <ul className="space-y-4">
               {[
