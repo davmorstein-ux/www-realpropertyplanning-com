@@ -295,6 +295,8 @@ export const REDIRECTS: SiteRedirect[] = [
      only from the Plan Ahead hub's "Not sure where to start?". My Real
      Property Plan answers that question; the hub now links there. */
   { from: "/what-should-we-do-first", to: "/my-plan" },
+  // Oct 21, 2026: renamed the same day it was added (David: no "hoarding").
+  { from: "/hoarding-biohazard-cleanup", to: "/water-mold-fire-cleanup" },
 ];
 
 /** Where a path finally lands after redirects. Link to this, never to a retired

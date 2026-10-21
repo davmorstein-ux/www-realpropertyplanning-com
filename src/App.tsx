@@ -167,7 +167,7 @@ const CostOfCareEmbedPage = lazy(() => import("./pages/embed/CostOfCareEmbedPage
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const BookkeepingServices = lazy(() => import("./pages/BookkeepingServices"));
-const HoardingBiohazardCleanup = lazy(() => import("./pages/HoardingBiohazardCleanup"));
+const WaterMoldFireCleanup = lazy(() => import("./pages/WaterMoldFireCleanup"));
 const MedicareProviders = lazy(() => import("./pages/MedicareProviders"));
 const LegalPlansIdentityProtection = lazy(() => import("./pages/LegalPlansIdentityProtection"));
 const TitleAndEscrow = lazy(() => import("./pages/TitleAndEscrow"));
@@ -435,7 +435,7 @@ export const AppRoutes = () => (
       <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
       <Route path="/gray-divorce" element={<GrayDivorce />} />
       <Route path="/bookkeeping-services" element={<BookkeepingServices />} />
-      <Route path="/hoarding-biohazard-cleanup" element={<HoardingBiohazardCleanup />} />
+      <Route path="/water-mold-fire-cleanup" element={<WaterMoldFireCleanup />} />
       <Route path="/medicare-providers" element={<MedicareProviders />} />
       <Route path="/legal-plans-identity-protection" element={<LegalPlansIdentityProtection />} />
       <Route path="/title-and-escrow" element={<TitleAndEscrow />} />

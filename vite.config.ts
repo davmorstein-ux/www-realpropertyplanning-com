@@ -2078,16 +2078,18 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Connect with independent bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions.",
     h1: "Bookkeeping Services in Washington State",
   },
-  "/hoarding-biohazard-cleanup": {
-    title: "Hoarding & Biohazard Cleanup in Washington State | Real Property Planning",
-    description: "What hoarding and biohazard cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly.",
-    h1: "Hoarding & Biohazard Cleanup in Washington State",
-    intro: "Hoarding and biohazard cleanup restores a house to a clean, sanitary and livable condition while protecting the health of everyone who lives in it or works on it. Executors sometimes find an inherited house far fuller, or far less sanitary, than the family knew, and it has to be made safe before it can be appraised, shown or sold.",
+  "/water-mold-fire-cleanup": {
+    title: "Water, Mold & Fire Cleanup in Washington State | Real Property Planning",
+    description: "What water damage, mold, fire damage and moisture cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly.",
+    h1: "Water, Mold & Fire Cleanup in Washington State",
+    intro: "Water, mold and fire cleanup deals with the damage itself and with what caused it, restoring the home to a clean, sanitary and livable condition. An inherited house that has sat empty is where this usually comes up: a leak nobody saw, a damp crawl space, mold behind a wall, or a musty smell.",
     sections: [
-      "Assessment and safety — The crew first looks for what makes the house unsafe: blocked exits, mold, pests, sewage, sharp objects or structural damage.",
-      "Sorting and removal — Belongings are removed room by room; papers, photographs, valuables and anything the family asked to keep are set aside first.",
-      "Cleaning and disinfection — Contaminated surfaces are cleaned and disinfected, and odors are treated at their source.",
-      "Safe disposal — Biohazard material is bagged, transported and disposed of under the rules that apply to it, not put out with household trash.",
+      "Water damage and cleanup — Standing water is removed and the structure is dried, with moisture readings taken until walls, floors and framing are dry.",
+      "Mold removal and remediation — The area is contained, mold is removed and treated, and the moisture that caused it is found.",
+      "Air duct and coil cleaning — Dust, debris, smoke residue and mold are cleaned out of the ducts and the heating and cooling coils.",
+      "Sanitizing — Surfaces are cleaned and disinfected after water damage, sewage, illness or a long vacancy.",
+      "Fire damage cleanup — Soot and smoke residue are cleaned, and smoke odor is treated at its source.",
+      "Moisture control — Crawl spaces, attics and basements are corrected for the dampness and poor ventilation that lead to mold and rot.",
     ],
   },
   "/legal-plans-identity-protection": {

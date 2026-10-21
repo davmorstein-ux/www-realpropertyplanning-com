@@ -1217,7 +1217,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/hoarding-biohazard-cleanup",
+    path: "/water-mold-fire-cleanup",
     links: [],
   },
   {

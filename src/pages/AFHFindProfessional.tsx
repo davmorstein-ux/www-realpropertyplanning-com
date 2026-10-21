@@ -213,15 +213,15 @@ const PROFESSIONAL_CATEGORIES = [
     link: null,
   },
   {
-    title: "Hoarding & Biohazard Cleanup",
-    icon: "🧤",
+    title: "Water, Mold & Fire Cleanup",
+    icon: "🧽",
     description:
-      "A house bought for conversion can come out of a hoarding situation, and an operating home can face a biohazard after an unattended death, a sewage backup or a medical emergency. A trained cleanup crew removes the material safely, disposes of it properly, and leaves the home sanitary enough for residents and an inspector.",
+      "After a leak, a fire or a long stretch of damp, an operating home needs the damage cleaned up and its cause found while residents stay safe. Mold, moisture and smoke are hard on older lungs, so ducts and coils are often cleaned as well.",
     lookFor: [
-      "Trained crews with protective equipment and proper disposal of biohazard material",
-      "Discretion and respect for residents, families and neighbors",
-      "Written documentation of the work, for DSHS, a lender or an insurer",
-      "Availability for urgent calls, since a biohazard cannot wait",
+      "Moisture readings and written documentation, for DSHS, an insurer or a lender",
+      "Containment that keeps mold and dust out of residents' rooms during the work",
+      "Air duct and coil cleaning after water or fire damage",
+      "Availability for urgent calls, since water and smoke damage spread",
     ],
     link: null,
   },

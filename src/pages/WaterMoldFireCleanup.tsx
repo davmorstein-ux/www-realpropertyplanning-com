@@ -34,7 +34,7 @@ const providers: Provider[] = [
   {
     ...LYNN_LIEDLE,
     title: "Owner",
-    specialty: "Safe removal and cleanup of homes affected by hoarding and biohazard materials, restoring them to a clean, sanitary, livable condition.",
+    specialty: "Water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
     alt: LYNN_LIEDLE.photoAlt,
     href: LYNN_LIEDLE.website,
   },
@@ -45,44 +45,44 @@ const providers: Provider[] = [
    no services. Keep any future additions to that standard, and never "we". */
 const faqs = [
   {
-    q: "What is biohazard cleanup?",
-    a: "Biohazard cleanup is the removal and disinfection of material that can carry disease, such as blood and other bodily fluids, sewage, animal waste, or the aftermath of an unattended death. It is done by crews trained to work with protective equipment, contain the area, dispose of the material properly, and disinfect the surfaces and air that ordinary cleaning would leave contaminated.",
+    q: "What is mold remediation?",
+    a: "Mold remediation is more than wiping mold off a surface. The affected area is contained so spores do not spread through the house, moldy materials that cannot be cleaned are removed, the rest is cleaned and treated, and the moisture that let mold grow is found and fixed. Without that last step, it comes back.",
   },
   {
-    q: "How is hoarding cleanup different from an ordinary cleanout?",
-    a: "A cleanout moves belongings out of a house. Hoarding cleanup often has to deal with what has built up underneath them as well: mold, pests, spoiled food, animal waste, and blocked exits or utilities. It usually goes room by room, sorts what the family wants to keep from what has to go, and ends with sanitizing and deodorizing so the house is safe to live in, show or sell.",
+    q: "Why do inherited and vacant houses so often have water damage or mold?",
+    a: "Nobody is there to notice a slow leak, a failed water heater or a damp crawl space, and a house that sits with the heat turned down holds more moisture. By the time the family walks in, a small problem can have spread. A prompt inspection and dry-out keeps the damage, and the cost, from growing while the estate is being settled.",
   },
   {
-    q: "Can the family keep belongings during a hoarding cleanup?",
-    a: "Usually, yes. Families commonly ask the crew to set aside papers, photographs, valuables and anything on a list before items are discarded. Agree on the list, and on who decides when something is unclear, before the work begins.",
+    q: "Does insurance pay for water, fire or mold cleanup?",
+    a: "Often for sudden events, such as a burst pipe or a fire, and less often for damage that built up slowly or for mold. Many policies also limit coverage once a house has been vacant for a while. Call the insurer before the work starts, and keep the cleanup company's written documentation for the claim and for the estate's records.",
   },
   {
-    q: "Does insurance pay for this kind of cleanup?",
-    a: "Sometimes. A homeowner's policy may cover biohazard cleanup after a covered event, and hoarding cleanup is less often covered. Check the policy and call the insurer before the work starts, and keep the cleanup company's written documentation for the claim and for the estate's records.",
+    q: "Should the problem be fixed before the house is sold?",
+    a: "Active water damage, mold and smoke odor tend to worry buyers, inspectors and lenders more than almost anything else, and some loans cannot close until they are dealt with. Once the house is clean, dry and sanitary, the broker can advise whether further preparation is worth the cost or whether to sell it as it is.",
   },
   {
-    q: "Should the house be cleaned before it is sold?",
-    a: "If the condition is a health hazard, yes: buyers, inspectors and lenders will all react to it, and some loans cannot close on a house that is not safe to occupy. Once the house is clean and sanitary, the broker can advise whether further preparation is worth the cost or whether to sell it as it is.",
+    q: "Why clean the air ducts or the heating and cooling coils?",
+    a: "Ducts and coils collect dust, debris, smoke residue and sometimes mold, and the system then blows it through every room. Cleaning them is common after water or fire damage, after a long vacancy, and before a parent with breathing problems moves into a home.",
   },
 ];
 
-const HoardingBiohazardCleanup = () => (
+const WaterMoldFireCleanup = () => (
   <>
     <SEOHead
-      title="Hoarding & Biohazard Cleanup in Washington State | Real Property Planning"
-      description="What hoarding and biohazard cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly."
-      canonical="https://realpropertyplanning.com/hoarding-biohazard-cleanup"
+      title="Water, Mold & Fire Cleanup in Washington State | Real Property Planning"
+      description="What water damage, mold, fire damage and moisture cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly."
+      canonical="https://realpropertyplanning.com/water-mold-fire-cleanup"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Hoarding & Biohazard Cleanup", url: "https://realpropertyplanning.com/hoarding-biohazard-cleanup" },
+        { name: "Water, Mold & Fire Cleanup", url: "https://realpropertyplanning.com/water-mold-fire-cleanup" },
       ]}
     />
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <HeroBandTitle as="h1">Hoarding &amp; Biohazard Cleanup in Washington State</HeroBandTitle>
+      <HeroBandTitle as="h1">Water, Mold &amp; Fire Cleanup in Washington State</HeroBandTitle>
 
       {/* Featured cleanup professional */}
       <section className="pt-10 md:pt-12 pb-12 md:pb-16 bg-secondary">
@@ -192,42 +192,47 @@ const HoardingBiohazardCleanup = () => (
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">What the Cleanup Involves</h2>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">What the Work Covers</h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Hoarding and biohazard cleanup restores a house to a clean, sanitary and livable condition while
-              protecting the health of everyone who lives in it or works on it.
+              Water, mold and fire cleanup deals with the damage itself and with what caused it, restoring the home to
+              a clean, sanitary and livable condition.
             </p>
 
             <div className="space-y-6">
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Assessment and Safety</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Water Damage &amp; Cleanup</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  The crew first looks for what makes the house unsafe: blocked exits, mold, pests, sewage, sharp
-                  objects or structural damage. The plan, and the protective equipment, follow from that.
+                  Standing water is removed and the structure is dried with fans and dehumidifiers, with moisture readings taken until the walls, floors and framing are dry.
                 </p>
               </div>
-
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Sorting and Removal</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Mold Removal &amp; Remediation</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Belongings are removed room by room. Papers, photographs, valuables and anything the family has
-                  asked to keep are set aside before the rest goes.
+                  The affected area is contained, mold is removed and treated, and the moisture that caused it is found so it does not come back.
                 </p>
               </div>
-
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Cleaning and Disinfection</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Air Duct &amp; Coil Cleaning</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Contaminated surfaces are cleaned and disinfected, and odors are treated at their source rather
-                  than covered up.
+                  Dust, debris, smoke residue and mold are cleaned out of the ducts and the heating and cooling coils, so the system stops spreading them through the house.
                 </p>
               </div>
-
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Safe Disposal</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Sanitizing</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Biohazard material is bagged, transported and disposed of under the rules that apply to it, not
-                  put out with the household trash.
+                  Surfaces are cleaned and disinfected after water damage, sewage, illness or a long vacancy.
+                </p>
+              </div>
+              <div className="bg-secondary rounded-lg p-6">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Fire Damage Cleanup</h3>
+                <p className="text-foreground text-base leading-relaxed">
+                  Soot and smoke residue are cleaned from surfaces and contents, and smoke odor is treated at its source rather than covered up.
+                </p>
+              </div>
+              <div className="bg-secondary rounded-lg p-6">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Moisture Control</h3>
+                <p className="text-foreground text-base leading-relaxed">
+                  Crawl spaces, attics and basements are checked and corrected for the dampness, poor ventilation and drainage that lead to mold and rot.
                 </p>
               </div>
             </div>
@@ -243,18 +248,18 @@ const HoardingBiohazardCleanup = () => (
               When Families Need It
             </h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Executors sometimes open the door of an inherited house and find it far fuller, or far less sanitary,
-              than anyone in the family knew. Before it can be appraised, shown or sold, it has to be made safe to
-              walk through.
+              An inherited house that has sat empty is where this usually comes up: a leak nobody saw, a damp crawl
+              space, mold behind a wall, or a stale, musty smell. Before the house can be appraised, shown or sold,
+              the damage has to be found, dried out and cleaned up.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              The same can happen when a parent moves to assisted living or an adult family home and the house they
-              leave behind has to be emptied, or after an unattended death, when the cleanup is too much, and too
-              personal, for the family to do themselves.
+              It also comes up when a parent moves to assisted living or an adult family home and the house they leave
+              behind needs to be made ready, and after a fire or a burst pipe, when the work has to start quickly to
+              keep the damage from spreading.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              A trained crew does the work safely and discreetly, so the family can focus on the decisions that are
-              theirs to make: what to keep, and what happens to the house next.
+              A trained crew does the work and documents it, so the family has a clear record for the insurer, the
+              estate and a future buyer, and can focus on what happens to the house next.
             </p>
           </div>
         </div>
@@ -294,4 +299,4 @@ const HoardingBiohazardCleanup = () => (
   </>
 );
 
-export default HoardingBiohazardCleanup;
+export default WaterMoldFireCleanup;

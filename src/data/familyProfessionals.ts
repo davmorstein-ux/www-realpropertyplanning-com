@@ -65,7 +65,7 @@ export type ProfessionalCategoryKey =
   | "medicare"
   | "cpas"
   | "bookkeeping"
-  | "hoardingCleanup";
+  | "cleanupRemediation";
 
 export interface CategoryGroup {
   key: ProfessionalCategoryKey;
@@ -348,16 +348,16 @@ const groupsAsWritten: CategoryGroup[] = [
   /* Added Oct 21, 2026. Lynn also appears on AFH Club; her details live once,
      in src/data/afhProfessionals.ts (LYNN_LIEDLE). */
   {
-    key: "hoardingCleanup",
-    category: "Hoarding & Biohazard Cleanup",
+    key: "cleanupRemediation",
+    category: "Water, Mold & Fire Cleanup",
     professionals: [
       {
         name: LYNN_LIEDLE.name,
         role: "Owner",
         company: LYNN_LIEDLE.company,
-        specialty: "Safe removal and cleanup of homes affected by hoarding and biohazard materials, restoring them to a clean, sanitary, livable condition.",
+        specialty: "Water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
         photo: LYNN_LIEDLE.photo,
-        href: "/hoarding-biohazard-cleanup",
+        href: "/water-mold-fire-cleanup",
       },
     ],
   },

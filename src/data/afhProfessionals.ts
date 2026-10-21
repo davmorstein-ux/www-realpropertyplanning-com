@@ -31,7 +31,7 @@ import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from
  *   - /afh-club/find-a-professional   everyone, grouped by role
  *   - /afh-club/real-estate-broker    the featured broker
  *   - /bookkeeping-services           Nicole Guzman Johnson
- *   - /hoarding-biohazard-cleanup     Lynn Liedle
+ *   - /water-mold-fire-cleanup        Lynn Liedle
  * Change a phone number, email, photo or bio HERE and all of them update.
  *
  * THE STANDARD FOR BEING LISTED, in the site owner's words: people he has met
@@ -196,7 +196,7 @@ export const LYNN_LIEDLE: AFHProfessional = {
   phone: "(425) 649-0600",
   email: "Ac.east-side@advantaclean.com",
   website: "https://www.advantaclean.com",
-  specialty: "Safe removal and cleanup of homes affected by hoarding and biohazard materials, putting the health and safety of occupants and workers first and restoring the property to a clean, sanitary, livable condition",
+  specialty: "Water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition",
   bio: "",
 };
 
@@ -366,11 +366,11 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     people: [KATE_WILLIAMS],
   },
   {
-    id: "hoarding-biohazard",
-    label: "Hoarding & biohazard cleanup",
-    profession: "Hoarding & Biohazard Cleanup",
-    professionLines: ["Hoarding &", "Biohazard Cleanup"],
-    why: "A house bought for conversion can come out of a hoarding situation, and an operating home can face a biohazard after an unattended death, a sewage backup or a medical emergency. That cleanup needs a trained crew, protective equipment and proper disposal, and the home has to end up sanitary enough for residents and an inspector.",
+    id: "cleanup-remediation",
+    label: "Water, mold & fire cleanup",
+    profession: "Water, Mold & Fire Cleanup",
+    professionLines: ["Water, Mold &", "Fire Cleanup"],
+    why: "Residents cannot simply move out while a home dries, and mold, moisture and smoke are hard on older lungs. After a leak or a fire, an operating home needs the damage cleaned up, the cause found, and the air ducts and coils cleaned, so the home is sanitary for residents and passes the next DSHS inspection. A house bought for conversion may need the same before it can be licensed.",
     people: [LYNN_LIEDLE],
   },
   {
@@ -435,7 +435,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
  *                (photography and SBA lending join here once someone is listed)
  *   Operate      management, insurance, website & marketing, bookkeeping
  *   Maintain     house cleaning, water damage restoration, restoration contractor (Oct 14, 2026),
- *                hoarding & biohazard cleanup (Oct 21, 2026)
+ *                water, mold & fire cleanup (Oct 21, 2026)
  * This replaces the Oct 9 "five groups lead, then A to Z" order.
  */
 export interface AFHProfessionalSection {
@@ -463,7 +463,7 @@ export const AFH_PROFESSIONAL_SECTIONS: AFHProfessionalSection[] = [
     id: "maintain",
     title: "Maintain",
     lead: "Keeping the house itself clean, safe, and in good repair.",
-    groupIds: ["house-cleaning", "water-damage", "restoration-contractor", "hoarding-biohazard"],
+    groupIds: ["house-cleaning", "water-damage", "restoration-contractor", "cleanup-remediation"],
   },
 ];
 
