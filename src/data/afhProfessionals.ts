@@ -6,6 +6,8 @@ import ruslanBagaveevPhoto from "@/assets/providers/ruslan-bagaveev-dryout-heads
 import dryoutLogo from "@/assets/providers/dryout-water-damage-restoration-logo.webp";
 import kateWilliamsPhoto from "@/assets/providers/kate-williams-paul-davis-headshot.webp";
 import paulDavisLogo from "@/assets/providers/paul-davis-restoration-logo.webp";
+import lynnLiedlePhoto from "@/assets/providers/lynn-liedle-advantaclean-headshot.webp";
+import advantaCleanLogo from "@/assets/providers/advantaclean-logo.webp";
 import kaylinPhoto from "@/assets/providers/kaylin-cottingham-wilson-griffith-insurance-headshot.webp";
 import griffithLogo from "@/assets/providers/griffith-insurance-group-logo.webp";
 import exaelPhoto from "@/assets/providers/exael-zuniga-invision-marketing-headshot.webp";
@@ -29,6 +31,7 @@ import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from
  *   - /afh-club/find-a-professional   everyone, grouped by role
  *   - /afh-club/real-estate-broker    the featured broker
  *   - /bookkeeping-services           Nicole Guzman Johnson
+ *   - /hoarding-biohazard-cleanup     Lynn Liedle
  * Change a phone number, email, photo or bio HERE and all of them update.
  *
  * THE STANDARD FOR BEING LISTED, in the site owner's words: people he has met
@@ -176,6 +179,25 @@ export const KATE_WILLIAMS: AFHProfessional = {
   specialty: "Property restoration and rebuilding after water, fire and storm damage. Everett, Whidbey Island and Mount Vernon, WA",
   bio: "",
   note: "Cell: (360) 939-8638",
+};
+
+/* Added Oct 21, 2026 (owner met her in person; on both the family side and AFH Club).
+   Title "Owner" per the site owner. Website is the national advantaclean.com she gave.
+   Specialty is her own description, rewritten in the third person (the site never says "we"). */
+export const LYNN_LIEDLE: AFHProfessional = {
+  id: "lynn-liedle",
+  name: "Lynn Liedle",
+  title: "Owner, AdvantaClean",
+  company: "AdvantaClean",
+  photo: lynnLiedlePhoto,
+  photoAlt: "Photo of Lynn Liedle, Owner of AdvantaClean",
+  logo: advantaCleanLogo,
+  logoAlt: "AdvantaClean logo",
+  phone: "(425) 649-0600",
+  email: "Ac.east-side@advantaclean.com",
+  website: "https://www.advantaclean.com",
+  specialty: "Safe removal and cleanup of homes affected by hoarding and biohazard materials, putting the health and safety of occupants and workers first and restoring the property to a clean, sanitary, livable condition",
+  bio: "",
 };
 
 /* Added Sept 28, 2026. License number OE20486 (owner clarified the same day that
@@ -344,6 +366,14 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     people: [KATE_WILLIAMS],
   },
   {
+    id: "hoarding-biohazard",
+    label: "Hoarding & biohazard cleanup",
+    profession: "Hoarding & Biohazard Cleanup",
+    professionLines: ["Hoarding &", "Biohazard Cleanup"],
+    why: "A house bought for conversion can come out of a hoarding situation, and an operating home can face a biohazard after an unattended death, a sewage backup or a medical emergency. That cleanup needs a trained crew, protective equipment and proper disposal, and the home has to end up sanitary enough for residents and an inspector.",
+    people: [LYNN_LIEDLE],
+  },
+  {
     id: "business-insurance",
     label: "Insurance broker",
     profession: "Insurance Broker",
@@ -404,7 +434,8 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
  *   Buy & Sell   the AFH real estate broker, the mortgage lender, the business broker
  *                (photography and SBA lending join here once someone is listed)
  *   Operate      management, insurance, website & marketing, bookkeeping
- *   Maintain     house cleaning, water damage restoration, restoration contractor (Oct 14, 2026)
+ *   Maintain     house cleaning, water damage restoration, restoration contractor (Oct 14, 2026),
+ *                hoarding & biohazard cleanup (Oct 21, 2026)
  * This replaces the Oct 9 "five groups lead, then A to Z" order.
  */
 export interface AFHProfessionalSection {
@@ -432,7 +463,7 @@ export const AFH_PROFESSIONAL_SECTIONS: AFHProfessionalSection[] = [
     id: "maintain",
     title: "Maintain",
     lead: "Keeping the house itself clean, safe, and in good repair.",
-    groupIds: ["house-cleaning", "water-damage", "restoration-contractor"],
+    groupIds: ["house-cleaning", "water-damage", "restoration-contractor", "hoarding-biohazard"],
   },
 ];
 

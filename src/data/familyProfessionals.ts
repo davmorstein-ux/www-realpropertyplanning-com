@@ -32,6 +32,7 @@ import anthonyUpchurchPhoto from "@/assets/providers/anthony-upchurch-legal-plan
    Nicole Amico Kane at Aging Wisdom. Two different Nicoles are listed on this
    page; keep the surnames in the variable names so nobody wires the wrong
    photo to the wrong person. */
+import { LYNN_LIEDLE } from "@/data/afhProfessionals";
 import nicoleJohnsonPhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-books-on-the-rock.webp";
 
 const jennipherPhoto = jennipherPhotoAsset.url;
@@ -63,7 +64,8 @@ export type ProfessionalCategoryKey =
   | "mortgage"
   | "medicare"
   | "cpas"
-  | "bookkeeping";
+  | "bookkeeping"
+  | "hoardingCleanup";
 
 export interface CategoryGroup {
   key: ProfessionalCategoryKey;
@@ -340,6 +342,22 @@ const groupsAsWritten: CategoryGroup[] = [
         specialty: "Bookkeeping and QuickBooks Online support for small- and medium-sized business owners. Hablo español.",
         photo: nicoleJohnsonPhoto,
         href: "/bookkeeping-services",
+      },
+    ],
+  },
+  /* Added Oct 21, 2026. Lynn also appears on AFH Club; her details live once,
+     in src/data/afhProfessionals.ts (LYNN_LIEDLE). */
+  {
+    key: "hoardingCleanup",
+    category: "Hoarding & Biohazard Cleanup",
+    professionals: [
+      {
+        name: LYNN_LIEDLE.name,
+        role: "Owner",
+        company: LYNN_LIEDLE.company,
+        specialty: "Safe removal and cleanup of homes affected by hoarding and biohazard materials, restoring them to a clean, sanitary, livable condition.",
+        photo: LYNN_LIEDLE.photo,
+        href: "/hoarding-biohazard-cleanup",
       },
     ],
   },

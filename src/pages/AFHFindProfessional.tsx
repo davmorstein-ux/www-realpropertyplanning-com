@@ -213,6 +213,19 @@ const PROFESSIONAL_CATEGORIES = [
     link: null,
   },
   {
+    title: "Hoarding & Biohazard Cleanup",
+    icon: "🧤",
+    description:
+      "A house bought for conversion can come out of a hoarding situation, and an operating home can face a biohazard after an unattended death, a sewage backup or a medical emergency. A trained cleanup crew removes the material safely, disposes of it properly, and leaves the home sanitary enough for residents and an inspector.",
+    lookFor: [
+      "Trained crews with protective equipment and proper disposal of biohazard material",
+      "Discretion and respect for residents, families and neighbors",
+      "Written documentation of the work, for DSHS, a lender or an insurer",
+      "Availability for urgent calls, since a biohazard cannot wait",
+    ],
+    link: null,
+  },
+  {
     title: "Business Insurance",
     icon: "🛡️",
     description:
