@@ -73,7 +73,7 @@ const RPPHomeV3 = () => {
       <SEOHead title={t("seo.title")} description={t("seo.description")} canonical="https://realpropertyplanning.com" />
       <Header />
 
-      <main id="main-content">
+      <main id="main-content" data-calm-hover>
         {/* ── Hero ── height driven by content, image is a background layer ── */}
         <div
           className="rpp-hero-figure"

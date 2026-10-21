@@ -5811,3 +5811,48 @@ html body button.r2-bar-btn.r2-bar-btn.r2-bar-btn:hover { background-color: #eef
 /* "Ask About an AFH" sits on the dark AFH band: white button, navy text. */
 html body main a.rpp-ask-afh.rpp-ask-afh { background-color: #ffffff !important; color: #1B3A6B !important; }
 html body main a.rpp-ask-afh.rpp-ask-afh:hover { background-color: #eef2f8 !important; }
+
+/* ============================================================
+   CALM HOVER (Oct 21, 2026, David: "Go") — TRIAL ON THE HOMEPAGE
+   The marching ants are retired. One hover for every tile, computers
+   only: the border turns navy and the tile lifts 2px with a soft navy
+   shadow. The double pulse on click (PulseNavigator) is the one bit of
+   motion. Lift is translate, not scale, so it never stacks on the
+   pulse's own 3% growth.
+   Scoped to main[data-calm-hover] (set on the homepage <main>) until
+   David approves it sitewide; then drop the attribute scope.
+   ============================================================ */
+main[data-calm-hover] .marquee-hover::before,
+main[data-calm-hover] .interior-tile::before,
+main[data-calm-hover] a[class*="btn"]::before,
+main[data-calm-hover] a[class*="cta"]::before,
+main[data-calm-hover] button[class*="btn"]::before,
+main[data-calm-hover] button[class*="cta"]::before,
+main[data-calm-hover] .rpp-answer-cta::before,
+main[data-calm-hover] .rpp-coc-cta::before,
+main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse::before {
+  content: none !important;
+  display: none !important;
+  animation: none !important;
+}
+main[data-calm-hover] :is(.rpp-coc-card, .rpp-afh-strip, .rpp-pr-card).rpp-calm,
+main[data-calm-hover] :is(.rpp-coc-card, .rpp-afh-strip, .rpp-pr-card) {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease !important;
+}
+@media (hover: hover) {
+  html body main[data-calm-hover] .group:hover .rpp-tile3d {
+    transform: translateY(-2px);
+  }
+  html body main[data-calm-hover] :is(.rpp-coc-card, .rpp-afh-strip):hover {
+    transform: translateY(-2px) !important;
+    border-color: #1B3A6B !important;
+    box-shadow: 0 10px 24px -14px rgba(27, 58, 107, 0.55) !important;
+  }
+  /* The AFH Club strip keeps its own green border on hover. */
+  html body main[data-calm-hover] .rpp-afh-strip.rpp-afh-strip:hover { border-color: #0a5648 !important; }
+}
+/* Browse all: navy on hover, matching the flat navy buttons. */
+html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse { border-color: #1B3A6B !important; color: #1B3A6B !important; box-shadow: none !important; }
+html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse * { color: inherit !important; }
+html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse:hover,
+html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse:focus-visible { background-color: #1B3A6B !important; border-color: #1B3A6B !important; color: #ffffff !important; }
