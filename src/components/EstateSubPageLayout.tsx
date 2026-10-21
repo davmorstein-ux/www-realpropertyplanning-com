@@ -8,7 +8,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
-import heroImage from "@/assets/managing-estate-probate-inherited-property-hero-washington.webp";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 interface EstateSubPageLayoutProps {
@@ -19,11 +18,6 @@ interface EstateSubPageLayoutProps {
   bandTitle: string;
   children: ReactNode;
   disclaimer: string;
-  heroImageOverride?: string;
-  heroAltOverride?: string;
-  /** Leave out the photo above the title band (David, Oct 20, 2026: the
-   *  Professional Team page). The sitewide rule is one hero, on the homepage. */
-  hideHero?: boolean;
 }
 
 const EstateSubPageLayout = ({
@@ -34,9 +28,6 @@ const EstateSubPageLayout = ({
   bandTitle,
   children,
   disclaimer,
-  heroImageOverride,
-  heroAltOverride,
-  hideHero = false,
 }: EstateSubPageLayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -54,18 +45,9 @@ const EstateSubPageLayout = ({
       <Header />
       <main id="main-content">
         <ProbateStartHere />
-        {!hideHero && (
-        <section className="bg-white">
-          <img
-            src={heroImageOverride ?? heroImage}
-            alt={heroAltOverride ?? "Managing an estate, probate, or inherited property in Washington State"}
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-          />
-        </section>
-        )}
+        {/* The photo that sat here above the title band was removed from all
+            six estate topic pages (David, Oct 20, 2026): the sitewide rule is
+            one hero image, on the homepage. */}
 
         {/* `as="h1"` is load-bearing twice over. Without it HeroBandTitle
             defaults to `as="div"`, so all six pages using this layout shipped

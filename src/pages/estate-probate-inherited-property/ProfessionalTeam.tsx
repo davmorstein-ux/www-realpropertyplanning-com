@@ -31,7 +31,6 @@ const ProfessionalTeam = () => (
     breadcrumbName="Building Your Professional Team"
     bandTitle="BUILDING YOUR PROFESSIONAL TEAM"
     disclaimer={DISCLAIMER}
-    hideHero
   >
     <SubH2>The Right Team Makes Everything Easier.</SubH2>
     <P>
