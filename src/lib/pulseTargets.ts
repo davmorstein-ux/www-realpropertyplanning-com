@@ -1,5 +1,5 @@
 /**
- * Which existing tiles and buttons get the double pulse (Oct 20, 2026,
+ * Which tiles and buttons get the double pulse (Oct 20, 2026,
  * approved by David on the homepage tiles first). One list, read by
  * src/components/PulseNavigator.tsx. Anything matching here (or carrying a
  * `data-pulse` attribute) pulses when clicked; the script adds `data-pulse`
@@ -69,3 +69,65 @@ export const PULSE_TARGETS: string[] = [
 ];
 
 export const PULSE_SELECTOR = ["[data-pulse]", ...PULSE_TARGETS].join(", ");
+
+/* ── Everything else: the shape rule (Oct 20, 2026) ──────────────────────
+   A class list alone missed unclassed tiles (David found /afh-club: the
+   buyer steps, destination cards, city buttons and listing buttons did not
+   pulse). So any other link or button inside <main> that LOOKS like a tile
+   or button pulses too: not a text link inside a sentence, at least
+   MIN_W x MIN_H on screen, and not a form, menu, accordion or toggle control.
+   The class list above still wins (it covers choice tiles such as role=radio
+   buttons that the shape rule would skip). */
+const MIN_W = 100;
+const MIN_H = 32;
+const NEVER = [
+  "header", "footer", "[data-no-pulse]",
+  "input", "select", "textarea", "label", "option", "summary",
+  "[role='combobox']", "[role='checkbox']", "[role='radio']", "[role='switch']",
+  "[role='tab']", "[role='menuitem']", "[role='option']", "[role='slider']",
+  "[aria-expanded]", "[aria-haspopup]", "[class*='chip']",
+].join(", ");
+
+/** The element that should pulse for a click on `target`, or null. */
+export function pulseHost(target: Element): HTMLElement | null {
+  const listed = target.closest(PULSE_SELECTOR) as HTMLElement | null;
+  if (listed) return listed.closest("header, footer, [data-no-pulse]") ? null : listed;
+
+  const el = target.closest("a[href], button, [role='button']") as HTMLElement | null;
+  if (!el || !el.closest("main")) return null;
+  if (el.matches(NEVER) || el.closest("header, footer, [data-no-pulse], [role='menu'], [role='listbox'], [role='tablist']")) return null;
+  const cs = getComputedStyle(el);
+  if (cs.display === "inline") return null; // a link inside a sentence
+  const r = el.getBoundingClientRect();
+  if (r.width < MIN_W || r.height < MIN_H) return null; // arrows, steppers, small toggles
+  if (!looksLikeTileOrButton(el)) return null; // a plain text link set on its own line (site map, email)
+  return el;
+}
+
+const visible = (cs: CSSStyleDeclaration) =>
+  (cs.backgroundColor !== "rgba(0, 0, 0, 0)" && cs.backgroundColor !== "transparent") ||
+  cs.backgroundImage !== "none" ||
+  cs.boxShadow !== "none" ||
+  ["Top", "Right", "Bottom", "Left"].some(
+    (side) =>
+      parseFloat(cs.getPropertyValue(`border-${side.toLowerCase()}-width`)) > 0 &&
+      cs.getPropertyValue(`border-${side.toLowerCase()}-style`) !== "none",
+  );
+
+/** A tile or button has a fill, border, shadow or picture of its own (or on
+ *  the box just inside it); a text link has only words. */
+function looksLikeTileOrButton(el: HTMLElement): boolean {
+  if (el.tagName === "BUTTON") return true;
+  if (visible(getComputedStyle(el))) return true;
+  const inner = [...el.querySelectorAll<HTMLElement>(":scope > *, :scope > * > *")].slice(0, 24);
+  for (const child of inner) {
+    if (child.matches("img, picture, video")) {
+      const b = child.getBoundingClientRect();
+      if (b.width >= 40 && b.height >= 40) return true;
+    } else if (visible(getComputedStyle(child))) {
+      const b = child.getBoundingClientRect();
+      if (b.width >= 32 && b.height >= 32) return true;
+    }
+  }
+  return false;
+}

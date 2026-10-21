@@ -4,9 +4,11 @@
  * two gentle heartbeats when clicked. One document-level listener does it for
  * the whole site, so components never carry their own animation code.
  *
- * WHAT PULSES: anything with a `data-pulse` attribute, plus the existing tile
- * and button classes listed in src/lib/pulseTargets.ts (one list). Anything
- * inside the header or footer, or carrying `data-no-pulse`, never pulses.
+ * WHAT PULSES: decided by pulseHost() in src/lib/pulseTargets.ts: anything
+ * with `data-pulse`, the listed tile and button classes, and any other link or
+ * button in <main> shaped like a tile or button (not a text link in a
+ * sentence, not a small or form/menu/accordion control). Header, footer and
+ * `data-no-pulse` never pulse.
  *
  * TIMING AND SCALE live in index.css (--rpp-pulse-duration, --rpp-pulse-scale,
  * --rpp-pulse-easing). This script reads the duration from there, so changing
@@ -35,7 +37,7 @@
  */
 import { startTransition, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { PULSE_SELECTOR } from "@/lib/pulseTargets";
+import { pulseHost } from "@/lib/pulseTargets";
 
 const FALLBACK_MS = 900;
 /** Navigate at this fraction of the pulse duration (see the click handler). */
@@ -80,9 +82,8 @@ export default function PulseNavigator({ preload }: { preload?: (path: string) =
       if (e.defaultPrevented) return;
       const target = e.target as Element | null;
       if (!target || typeof target.closest !== "function") return;
-      const host = target.closest(PULSE_SELECTOR) as HTMLElement | null;
+      const host = pulseHost(target);
       if (!host) return;
-      if (host.closest("header, footer, [data-no-pulse]")) return;
       if (host.matches("input, select, textarea, label, option")) return;
       if (host.matches(":disabled, [aria-disabled='true']")) return;
       if (reducedMotion()) return;
