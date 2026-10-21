@@ -5813,46 +5813,64 @@ html body main a.rpp-ask-afh.rpp-ask-afh { background-color: #ffffff !important;
 html body main a.rpp-ask-afh.rpp-ask-afh:hover { background-color: #eef2f8 !important; }
 
 /* ============================================================
-   CALM HOVER (Oct 21, 2026, David: "Go") — TRIAL ON THE HOMEPAGE
-   The marching ants are retired. One hover for every tile, computers
-   only: the border turns navy and the tile lifts 2px with a soft navy
-   shadow. The double pulse on click (PulseNavigator) is the one bit of
-   motion. Lift is translate, not scale, so it never stacks on the
-   pulse's own 3% growth.
-   Scoped to main[data-calm-hover] (set on the homepage <main>) until
-   David approves it sitewide; then drop the attribute scope.
+   CALM HOVER (Oct 21, 2026, David) — SITEWIDE
+   The marching ants are retired everywhere. Every ::before the ant
+   rules above attach (tiles, buttons, Browse all) is switched off here;
+   none of those selectors carries any other ::before content.
+   One hover for every clickable tile, computers only: the border turns
+   navy and the tile lifts 2px with a soft navy shadow. The double pulse
+   on click (PulseNavigator) is the one bit of motion. Lift is
+   translate, not scale, so it never stacks on the pulse's own 3%.
+   Buttons don't lift; they just darken (flat navy rules above).
    ============================================================ */
-main[data-calm-hover] .marquee-hover::before,
-main[data-calm-hover] .interior-tile::before,
-main[data-calm-hover] a[class*="btn"]::before,
-main[data-calm-hover] a[class*="cta"]::before,
-main[data-calm-hover] button[class*="btn"]::before,
-main[data-calm-hover] button[class*="cta"]::before,
-main[data-calm-hover] .rpp-answer-cta::before,
-main[data-calm-hover] .rpp-coc-cta::before,
-main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse::before {
+html body .marquee-hover.marquee-hover::before,
+html body .interior-tile.interior-tile::before,
+html body main a[class*="btn"]::before,
+html body main a[class*="cta"]::before,
+html body main button[class*="btn"]::before,
+html body main button[class*="cta"]::before,
+html body main .rpp-answer-cta::before,
+html body main .rpp-coc-cta::before,
+html body .rpp-pr-browse.rpp-pr-browse::before {
   content: none !important;
   display: none !important;
   animation: none !important;
 }
-main[data-calm-hover] :is(.rpp-coc-card, .rpp-afh-strip, .rpp-pr-card).rpp-calm,
-main[data-calm-hover] :is(.rpp-coc-card, .rpp-afh-strip, .rpp-pr-card) {
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease !important;
+.marquee-hover:not([class*="btn"]):not([class*="cta"]),
+.interior-tile:not(.interior-tile--static),
+.rpp-coc-card, .rpp-afh-strip {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 @media (hover: hover) {
-  html body main[data-calm-hover] .group:hover .rpp-tile3d {
+  html body main .group:hover .rpp-tile3d {
     transform: translateY(-2px);
   }
-  html body main[data-calm-hover] :is(.rpp-coc-card, .rpp-afh-strip):hover {
+  html body main .marquee-hover:not([class*="btn"]):not([class*="cta"]):not(:has(> .rpp-tile3d)):hover {
     transform: translateY(-2px) !important;
+    border-color: #1B3A6B !important; /* no effect when the tile has no border */
+  }
+  /* Navy border + soft shadow go on whichever box is visible: the tile
+     itself when it draws a border, or the card inside a bare link
+     wrapper (a shadow on the transparent wrapper drew a grey ghost box). */
+  html body main .marquee-hover:is([class*="border"], [style*="border"]):not([class*="btn"]):not([class*="cta"]):hover,
+  html body main .marquee-hover:not([class*="border"]):not([style*="border"]):hover > [class*="border"]:first-child {
     border-color: #1B3A6B !important;
     box-shadow: 0 10px 24px -14px rgba(27, 58, 107, 0.55) !important;
   }
+  html body main :is(.rpp-coc-card, .rpp-afh-strip):hover {
+    border-color: #1B3A6B !important;
+    box-shadow: 0 10px 24px -14px rgba(27, 58, 107, 0.55) !important;
+  }
+  /* Picture tiles (.interior-tile) carry their own frame and shadow; a
+     second shadow drew a grey ghost box under them, so they only lift. */
+  html body main .interior-tile:not(.interior-tile--static):hover {
+    transform: translateY(-2px) !important;
+  }
   /* The AFH Club strip keeps its own green border on hover. */
-  html body main[data-calm-hover] .rpp-afh-strip.rpp-afh-strip:hover { border-color: #0a5648 !important; }
+  html body main .rpp-afh-strip.rpp-afh-strip.rpp-afh-strip:hover { border-color: #0a5648 !important; }
 }
 /* Browse all: navy on hover, matching the flat navy buttons. */
-html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse { border-color: #1B3A6B !important; color: #1B3A6B !important; box-shadow: none !important; }
-html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse * { color: inherit !important; }
-html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse:hover,
-html body main[data-calm-hover] .rpp-pr-browse.rpp-pr-browse:focus-visible { background-color: #1B3A6B !important; border-color: #1B3A6B !important; color: #ffffff !important; }
+html body main .rpp-pr-browse.rpp-pr-browse { border-color: #1B3A6B !important; color: #1B3A6B !important; box-shadow: none !important; }
+html body main .rpp-pr-browse.rpp-pr-browse * { color: inherit !important; }
+html body main .rpp-pr-browse.rpp-pr-browse:hover,
+html body main .rpp-pr-browse.rpp-pr-browse:focus-visible { background-color: #1B3A6B !important; border-color: #1B3A6B !important; color: #ffffff !important; }

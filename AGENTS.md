@@ -80,3 +80,10 @@ stays). Oct 21, 2026: the last full-width heroes were removed from the shared
 layouts for Planning Before a Crisis, Serving as Executor & Trustee, the six
 senior-living housing pages and the probate attorney resource page. Do not add
 a hero image to a layout or page.
+
+## Tile hover: no marching ants (Oct 21, 2026)
+
+The marching-ants hover is retired sitewide (index.css "CALM HOVER" block
+switches off every ant ::before). Clickable tiles lift 2px on hover, computers
+only, and a bordered tile's border turns navy with a soft shadow. The double
+pulse is the click feedback. Do not add dashed or animated borders to tiles.
