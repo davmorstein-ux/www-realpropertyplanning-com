@@ -1,7 +1,8 @@
 import { REDIRECTS } from "./data/redirects";
 import { Suspense } from "react";
 import { lazy } from "@/lib/chunkRecovery";
-import { BrowserRouter, StaticRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, StaticRouter, Routes, Route, Navigate, createRoutesFromChildren, matchRoutes, type RouteObject } from "react-router-dom";
+import { isValidElement, type ReactElement } from "react";
 import { useEffect, useState, type ReactNode } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import PulseNavigator from "./components/PulseNavigator";
@@ -772,6 +773,35 @@ export const AppRoutes = () => (
   </Suspense>
 );
 
+/** Start downloading the code for the page at `path` without showing it
+ *  (Oct 20, 2026). The double pulse (PulseNavigator) calls this the moment a
+ *  tile is clicked, so the page is ready when the pulse ends. Reads the same
+ *  <Routes> as AppRoutes, so it can never disagree with where a link goes. */
+let routeObjects: RouteObject[] | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const preloadOf = (el: unknown): (() => void) | undefined => {
+  if (!isValidElement(el)) return undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const own = (el.type as any)?.preload;
+  if (typeof own === "function") return own;
+  // A page wrapped in another component (e.g. a language wrapper): look one level in.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return preloadOf((el.props as any)?.children);
+};
+export const preloadRoute = (path: string): void => {
+  try {
+    if (!routeObjects) {
+      const suspense = AppRoutes() as ReactElement<{ children: ReactElement<{ children: ReactNode }> }>;
+      routeObjects = createRoutesFromChildren(suspense.props.children.props.children);
+    }
+    const matches = matchRoutes(routeObjects, path);
+    const leaf = matches?.[matches.length - 1]?.route;
+    preloadOf(leaf?.element)?.();
+  } catch {
+    /* preloading is an optimisation only */
+  }
+};
+
 /** `location` is set only by the build-time renderer (src/entry-server.tsx); the
  * browser uses BrowserRouter. Both render the same tree, so the browser can
  * hydrate the prerendered HTML instead of replacing it. */
@@ -801,7 +831,7 @@ const App = ({ location }: { location?: string } = {}) => (
     <Toasters />
     <Router location={location}>
       <ScrollToTop />
-      <PulseNavigator />
+      <PulseNavigator preload={preloadRoute} />
 
       {/* SiteChatWidget removed. It was not a chat widget — handleSubmit
           cleared the input and showed a confirmation, and the component made

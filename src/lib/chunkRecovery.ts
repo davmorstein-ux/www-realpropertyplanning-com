@@ -40,10 +40,14 @@ const looksLikeChunkError = (err: unknown) =>
     String((err as Error)?.message ?? err)
   );
 
-/** React.lazy that reloads to the fresh build when the page's file is gone. */
+/** React.lazy that reloads to the fresh build when the page's file is gone.
+ *  `.preload()` starts downloading the page's code without showing it
+ *  (Oct 20, 2026): the double pulse calls it at click time, so the next page
+ *  is ready when the pulse ends instead of loading after it. A failed preload
+ *  is ignored; the real load handles errors as above. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function lazy<T extends ComponentType<any>>(factory: () => Promise<{ default: T }>) {
-  return reactLazy(() =>
+  const Component = reactLazy(() =>
     factory().catch((err) => {
       if (looksLikeChunkError(err) && recoverFromChunkError()) {
         // Keep the current screen until the reload takes over.
@@ -52,4 +56,9 @@ export function lazy<T extends ComponentType<any>>(factory: () => Promise<{ defa
       throw err;
     })
   );
+  return Object.assign(Component, {
+    preload: (): void => {
+      factory().catch(() => {});
+    },
+  });
 }

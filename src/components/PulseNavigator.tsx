@@ -33,11 +33,13 @@
  * siteTracking's listener was installed earlier, so analytics still see the
  * click.
  */
-import { useEffect } from "react";
+import { startTransition, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { PULSE_SELECTOR } from "@/lib/pulseTargets";
 
 const FALLBACK_MS = 900;
+/** Navigate at this fraction of the pulse duration (see the click handler). */
+const SETTLE = 0.94;
 const FILE_PATH = /\.(pdf|docx?|xlsx?|csv|zip|png|jpe?g|webp|gif|svg|mp3|mp4|ics|txt|xml|json)$/i;
 
 const pulseMs = (): number => {
@@ -68,7 +70,7 @@ const playPulse = (el: HTMLElement, ms: number) => {
   window.setTimeout(() => el.classList.remove("rpp-pulsing"), ms + 50);
 };
 
-export default function PulseNavigator() {
+export default function PulseNavigator({ preload }: { preload?: (path: string) => void }) {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -127,15 +129,27 @@ export default function PulseNavigator() {
       if (busy.has(host)) return;
       busy.add(host);
       playPulse(host, ms);
+      // Fetch the next page's code during the pulse, so the page changes the
+      // moment the second pulse ends (David, Oct 20, 2026: the wait after
+      // the pulse was the page's code loading). The transition keeps the
+      // current page on screen, never a blank one, if the code is still
+      // arriving on a slow connection.
+      const dest = url.pathname + url.search + url.hash;
+      preload?.(url.pathname);
+      // The last ~6% of the second pulse is the ease-out settling under 0.3%
+      // of size, which reads as stillness; navigating there means the page
+      // changes as the second pulse visibly ends, not after a pause.
       window.setTimeout(() => {
         busy.delete(host);
-        navigate(url.pathname + url.search + url.hash);
-      }, ms);
+        startTransition(() => {
+          navigate(dest);
+        });
+      }, Math.round(ms * SETTLE));
     };
 
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);
-  }, [navigate]);
+  }, [navigate, preload]);
 
   return null;
 }
