@@ -70,13 +70,13 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
           style={{
             display: "inline-block",
             padding: "14px 30px",
-            borderRadius: 999,
+            borderRadius: 10, /* matches the flat navy buttons sitewide */
             background: dark ? "#fff" : "#1B3A6B",
             color: dark ? "#1B3A6B" : "#fff",
             fontWeight: 700,
             fontSize: 17,
             textDecoration: "none",
-            boxShadow: "0 2px 10px rgba(27, 58, 107, 0.25)",
+            boxShadow: "none",
           }}
         >
           {buttonText}
