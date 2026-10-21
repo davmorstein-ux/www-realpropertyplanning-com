@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NextQuestions from "@/components/NextQuestions";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
 import { COST_SOURCE_LINE, COST_SOURCE_URL } from "@/lib/careTypes";
 
@@ -126,6 +127,8 @@ const CostOfCareHub = () => (
         </div>
       </section>
 
+      {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+      <NextQuestions />
       <DisclaimerSection />
     </main>
     <Footer />

@@ -230,6 +230,17 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/long-term-care/nurse-delegation": [Q.careSettings, Q.findAfh, Q.chooseAfh, Q.afhCost],
   "/afh-club/violation-history-lookup": [Q.chooseAfh, Q.findAfh, Q.afhCost, Q.medicaid],
   "/senior-living/choosing-an-adult-family-home": [Q.findAfh, Q.inspections, Q.afhCost, Q.medicaid, Q.careSettings],
+  /* Thin endings found in the Search Console review (Oct 21, 2026) */
+  "/long-term-care/nursing-homes": [Q.rehab, Q.careSettings, Q.medicaid, Q.houseForCare, Q.careManagers],
+  "/senior-transitions": [Q.stayHome, Q.careSettings, Q.houseForCare, Q.downsizing, Q.moveManagers],
+  "/adult-family-home-costs": [Q.chooseAfh, Q.findAfh, Q.inspections, Q.medicaid, Q.careSettings],
+  "/cost-of-care-calculator": [Q.careSettings, Q.medicaid, Q.houseForCare, Q.afhCost, Q.stayHome],
+  ...Object.fromEntries(
+    ["memory-care", "independent-living", "in-home-care", "nursing-home", "assisted-living", "adult-family-home"].map((slug) => [
+      `/cost-of-care-calculator/${slug}`,
+      [Q.careSettings, Q.medicaid, Q.houseForCare, Q.afhCost, Q.stayHome],
+    ]),
+  ),
 
   /* Death → authority → the house */
   "/trustees": [Q.familySale, Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.heirsDisagree],
@@ -238,12 +249,29 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/senior-transitions/can-parent-afford-to-stay-home": [Q.careSettings, Q.careCost, Q.medicaid, Q.houseForCare, Q.fiftyFive],
   "/senior-transitions/55-plus-communities-washington": [Q.stayHome, Q.careSettings, Q.houseForCare, Q.authority],
   "/guides/mortgage-after-death-washington": [Q.authority, Q.propertyTaxes, Q.heirsDisagree, Q.dateOfDeath],
+  "/resources/washington-executors-10-step-checklist": [Q.authority, Q.deadlines, Q.propertyTaxes, Q.heirsDisagree, Q.dateOfDeath],
   "/executor-responsibilities-first-steps/first-30-days": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/legal-duties": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/property-decisions": [Q.authority, Q.heirsDisagree, Q.asIsOrFix, Q.propertyTaxes, Q.dateOfDeath],
   "/executor-responsibilities-first-steps/common-mistakes": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/working-with-professionals": [Q.authority, Q.dateOfDeath, Q.deadlines, Q.outOfState],
   "/executor-responsibilities-first-steps/when-you-need-extra-help": [Q.authority, Q.heirsDisagree, Q.outOfState, Q.deadlines],
+
+  /* Guides that ended without a next step (page-ending guard, Oct 21, 2026) */
+  "/guides/how-probate-real-estate-works": [Q.authority, Q.deadlines, Q.dateOfDeath, Q.asIsOrFix, Q.heirsDisagree],
+  "/probate-estate-sales": [Q.authority, Q.deadlines, Q.dateOfDeath, Q.asIsOrFix, Q.outOfState],
+  "/selling-an-inherited-home": [Q.authority, Q.asIsOrFix, Q.heirsDisagree, Q.propertyTaxes, Q.mortgage],
+  "/what-to-do-with-the-house": [Q.asIsOrFix, Q.heirsDisagree, Q.familySale, Q.houseForCare, Q.dateOfDeath],
+  "/guides/debts-after-death-washington": [Q.deadlines, Q.propertyTaxes, Q.mortgage, Q.authority],
+  "/guides/contest-will-washington": [Q.deadlines, Q.heirsDisagree, Q.authority],
+  "/guides/choosing-a-trustee-washington": [Q.trustVsProbate, Q.pricingTrust, Q.familySale, Q.wills],
+  "/executors/executors-guide": [Q.authority, Q.deadlines, Q.propertyTaxes, Q.heirsDisagree, Q.outOfState],
+  "/date-of-death-valuation-property-appraisals": [Q.authority, Q.pricingTrust, Q.heirsDisagree, Q.familySale],
+  "/preparing-home-for-sale-during-transition": [Q.asIsOrFix, Q.downsizing, Q.moveManagers, Q.houseForCare],
+  "/estate-planning-powers-of-attorney": [Q.legalDocs, Q.wills, Q.poa, Q.giftingRisks],
+  "/downsizing-preparing-for-transition": [Q.moveManagers, Q.houseForCare, Q.stayHome, Q.fiftyFive],
+  "/understanding-senior-transitions": [Q.stayHome, Q.careSettings, Q.houseForCare, Q.downsizing, Q.fiftyFive],
+  "/understanding-housing-care-options": [Q.careSettings, Q.careCost, Q.afhCost, Q.chooseAfh, Q.medicaid],
 
   /* County pages → their city estate pages (previously reachable only from the sitemap) */
   "/pierce-county": [Q.tacoma],

@@ -93,6 +93,12 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   "/long-term-care/hospital-discharge-planning": ["careManagers", "seniorLiving"],
   "/long-term-care/short-term-nursing-home-stays": ["careManagers"],
   "/gray-divorce": ["familyLaw", "financialPlanning", "cpas"],
+  // Adult family homes, family side (Oct 21, 2026)
+  "/senior-living/choosing-an-adult-family-home": ["seniorLiving", "careManagers"],
+  "/adult-family-home-costs": ["seniorLiving", "careManagers"],
+  // The two appraisal guides show the appraiser (David, Oct 21, 2026: "Yes, for now").
+  "/guides/appraisal-vs-cma": ["realEstate"],
+  "/guides/appraisal-before-selling-inherited-property": ["realEstate"],
 };
 
 export const professionalsForTopic = (path: string): ProfessionalCategoryKey[] =>

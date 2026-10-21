@@ -14,6 +14,7 @@ import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
+import NextQuestions from "@/components/NextQuestions";
 interface Pathway {
   letter: string;
   title: string;
@@ -253,6 +254,8 @@ const UnderstandingHousingCareOptions = () => {
           }
         ` }} />
 
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
       </main>
       <Footer />

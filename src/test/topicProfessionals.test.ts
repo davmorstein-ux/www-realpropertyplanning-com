@@ -38,9 +38,9 @@ describe("topic professionals", () => {
     }
   });
 
-  it("real estate & appraisal (the founder) appears only on property topics", () => {
+  it("real estate & appraisal (the founder) appears only on property and appraisal topics", () => {
     for (const [p, keys] of Object.entries(TOPIC_PROFESSIONALS)) {
-      if (keys.includes("realEstate")) expect(p, p).toMatch(/property|managing-the-home/);
+      if (keys.includes("realEstate")) expect(p, p).toMatch(/property|managing-the-home|appraisal/);
     }
   });
 

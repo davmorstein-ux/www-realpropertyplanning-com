@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+import NextQuestions from "@/components/NextQuestions";
 const navy = "#6b1b22";
 const gold = "#c3525c";
 const crimson = "#8B0000";
@@ -365,6 +366,8 @@ const ExecutorsGuide = () => (
     </main>
 
     <Footer />
+    {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+    <NextQuestions />
     <DisclaimerSection />
   </div>
 );

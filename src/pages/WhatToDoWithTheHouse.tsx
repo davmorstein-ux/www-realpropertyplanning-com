@@ -15,6 +15,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+import NextQuestions from "@/components/NextQuestions";
 interface Decision {
   letter: string;
   title: string;
@@ -194,6 +195,8 @@ const WhatToDoWithTheHouse = () => {
         <GuidanceGrid page="what-to-do-with-the-house" />
 
         </main>
+      {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+      <NextQuestions />
       <Footer />
     </div>
   );

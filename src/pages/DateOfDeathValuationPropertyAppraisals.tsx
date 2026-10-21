@@ -20,6 +20,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+import NextQuestions from "@/components/NextQuestions";
 interface Pathway {
   letter: string;
   title: string;
@@ -315,6 +316,8 @@ const DateOfDeathValuationPropertyAppraisals = () => {
             filtered by this slug — do not paste them inline. */}
         <GuidanceGrid page="date-of-death-valuation-property-appraisals" />
 
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
         <BackToProfessionals />
       </main>

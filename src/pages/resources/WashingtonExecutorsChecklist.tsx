@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NextQuestions from "@/components/NextQuestions";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -174,6 +175,8 @@ const WashingtonExecutorsChecklist = () => {
         </section>
 
         <RelatedServices currentPath="/resources/washington-executors-10-step-checklist" />
+          {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+          <NextQuestions />
           <DisclaimerSection />
       </main>
 

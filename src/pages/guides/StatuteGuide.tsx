@@ -11,6 +11,7 @@ import BackToPreviousPage from "@/components/BackToPreviousPage";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import MiniMarkdown from "@/components/MiniMarkdown";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
+import NextQuestions from "@/components/NextQuestions";
 import {
   STATUTE_GUIDES,
   STATUTE_GUIDES_PUBLISHED,
@@ -168,6 +169,8 @@ function Page({ g }: { g: Guide }) {
         </div>
       </main>
       <AuthorByline context="estate" />
+      {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+      <NextQuestions />
       <DisclaimerSection />
       <Footer />
     </div>

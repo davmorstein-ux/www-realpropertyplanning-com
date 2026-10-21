@@ -19,6 +19,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
+import NextQuestions from "@/components/NextQuestions";
 interface Pathway {
   letter: string;
   title: string;
@@ -480,6 +481,8 @@ const DownsizingPreparingForTransition = () => {
             Deliberately NOT replaced with a softer CTA. The footer and
             /contact remain available to anyone who goes looking. */}
 
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
       </main>
       <Footer />

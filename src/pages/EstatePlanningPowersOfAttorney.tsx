@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
+import NextQuestions from "@/components/NextQuestions";
 const EstatePlanningPowersOfAttorney = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
@@ -46,6 +47,8 @@ const EstatePlanningPowersOfAttorney = () => (
       <SiteDisclaimerBlock />
       <BackToProfessionals />
     </main>
+    {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+    <NextQuestions />
     <Footer />
   </div>
 );

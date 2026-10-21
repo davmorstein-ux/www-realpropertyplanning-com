@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+import NextQuestions from "@/components/NextQuestions";
 // ── Data ── (images, hrefs — text pulled via t() in the component)
 
 const whatMakesDifferentMeta = [
@@ -465,6 +466,8 @@ const ProbateEstateSales = () => {
           ]}
         />
       </main>
+      {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+      <NextQuestions />
       <Footer />
     </div>
   );

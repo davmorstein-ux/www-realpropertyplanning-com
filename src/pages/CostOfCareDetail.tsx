@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NextQuestions from "@/components/NextQuestions";
 import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
 import { findCareCalculator, careTypeFor } from "@/lib/careCalculators";
@@ -140,6 +141,8 @@ const CostOfCareDetail = () => {
           </div>
         </section>
 
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
         <IntentCTA heading="Working out how to pay for care?" body="The home is usually the largest part of the answer — what it is worth, whether to sell before or after the move, and how the proceeds fit the monthly number above. Talk through the housing and property options." buttonText="Talk through the housing and property options" reason="aging-parent" professional="broker" />
       </main>

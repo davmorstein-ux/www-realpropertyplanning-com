@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NextQuestions from "@/components/NextQuestions";
 import ShortAnswer from "@/components/ShortAnswer";
 import CareCostCallout from "@/components/CareCostCallout";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -294,6 +295,8 @@ const NursingHomes = () => {
         </section>
 
         <BackToLongTermCare />
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
       </main>
       <Footer />

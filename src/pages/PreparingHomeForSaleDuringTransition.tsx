@@ -20,6 +20,7 @@ import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
 
+import NextQuestions from "@/components/NextQuestions";
 interface Pathway {
   letter: string;
   title: string;
@@ -527,6 +528,8 @@ const PreparingHomeForSaleDuringTransition = () => {
             filtered by this slug — do not paste them inline. */}
         <GuidanceGrid page="preparing-home-for-sale-during-transition" />
 
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
       </main>
       <Footer />

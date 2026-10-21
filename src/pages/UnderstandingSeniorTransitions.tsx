@@ -17,6 +17,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import JourneyOrientation from "@/components/JourneyOrientation";
 import IntentCTA from "@/components/IntentCTA";
 
+import NextQuestions from "@/components/NextQuestions";
 interface Pathway {
   letter: string;
   title: string;
@@ -464,6 +465,8 @@ const UnderstandingSeniorTransitions = () => {
           reason="aging-parent"
           professional="broker"
         />
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
       </main>
       <Footer />

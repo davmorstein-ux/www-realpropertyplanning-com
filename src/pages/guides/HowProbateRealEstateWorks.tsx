@@ -11,6 +11,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+import NextQuestions from "@/components/NextQuestions";
 const faqs = [
   {
     question: "How long does it take to sell a house in probate in Washington?",
@@ -133,6 +134,8 @@ const HowProbateRealEstateWorks = () => (
 
       <BackToResources />
       <AuthorByline context="estate" />
+      {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+      <NextQuestions />
       <DisclaimerSection />
     </main>
     <Footer />

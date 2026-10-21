@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NextQuestions from "@/components/NextQuestions";
 import CareCostCallout from "@/components/CareCostCallout";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
@@ -201,6 +202,8 @@ const SeniorTransitions = () => {
           reason="aging-parent"
           professional="broker"
         />
+        {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+        <NextQuestions />
         <DisclaimerSection />
       </main>
       <Footer />

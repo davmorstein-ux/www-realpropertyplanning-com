@@ -198,9 +198,20 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               {SAME_PERSON ? " and certified residential appraiser" : ""} — {FEATURED_BROKER.phone}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/contact?reason=estate-property">
-                <Button variant="gold" size="lg" className="rounded-lg">Contact</Button>
+              {/* Was the "gold" button, which renders in the retired maroon. On this
+                  navy band the site's navy would disappear, so it is white with
+                  navy text, like the dark IntentCTA (Oct 21, 2026). */}
+              <Link to="/contact?reason=estate-property" data-pulse className="rpp-repairs-contact no-underline">
+                Contact
               </Link>
+              <style dangerouslySetInnerHTML={{ __html: `
+                main a.rpp-repairs-contact.rpp-repairs-contact.rpp-repairs-contact {
+                  display: inline-flex; align-items: center; min-height: 44px; padding: 10px 28px;
+                  border-radius: 8px; background: #ffffff !important; color: #1B3A6B !important;
+                  font-size: 18px !important; font-weight: 700 !important; text-decoration: none !important;
+                }
+                main a.rpp-repairs-contact.rpp-repairs-contact.rpp-repairs-contact:hover { background: #e8eef6 !important; }
+              ` }} />
               <a href="tel:2069003015">
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
                   Call (206) 900-3015

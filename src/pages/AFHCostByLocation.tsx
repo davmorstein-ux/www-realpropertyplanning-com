@@ -9,6 +9,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NextQuestions from "@/components/NextQuestions";
 import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange, monthly } from "@/data/afhMedicaidRates";
 import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
@@ -126,6 +127,8 @@ const CostByLocation = () => {
           professional="broker"
         />
       </main>
+      {/* "Your next questions" (Oct 21, 2026): entries in src/data/nextQuestions.ts. */}
+      <NextQuestions />
       <DisclaimerSection />
       <Footer />
     </div>

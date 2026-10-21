@@ -3,11 +3,15 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { NEXT_QUESTIONS, nextQuestionsFor } from "@/data/nextQuestions";
 import { PROBATE_GLOSSARY } from "@/data/probateGlossary";
+import { CARE_CALCULATORS } from "@/lib/careCalculators";
 
 const app = readFileSync(resolve(__dirname, "../App.tsx"), "utf8");
 const flowRoutes = readFileSync(resolve(__dirname, "../components/ChoiceFlowPage.tsx"), "utf8");
+const CALC_PAGES = new Set(CARE_CALCULATORS.map((c) => `/cost-of-care-calculator/${c.slug}`));
 const isRoute = (path: string) =>
-  app.includes(`path="${path}"`) || (path.startsWith("/helping-an-aging-parent/") && app.includes('path="/helping-an-aging-parent/*"'));
+  app.includes(`path="${path}"`) ||
+  (path.startsWith("/helping-an-aging-parent/") && app.includes('path="/helping-an-aging-parent/*"')) ||
+  (CALC_PAGES.has(path) && app.includes('path="/cost-of-care-calculator/:careSlug"'));
 
 describe("decision-path links (src/data/nextQuestions.ts)", () => {
   for (const [page, questions] of Object.entries(NEXT_QUESTIONS)) {
