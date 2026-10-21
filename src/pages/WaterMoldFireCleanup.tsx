@@ -34,7 +34,7 @@ const providers: Provider[] = [
   {
     ...LYNN_LIEDLE,
     title: "Owner",
-    specialty: "Water damage cleanup, mold removal and remediation, biohazard cleanup, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
+    specialty: "Biohazard cleanup, water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
     alt: LYNN_LIEDLE.photoAlt,
     href: LYNN_LIEDLE.website,
   },
@@ -44,6 +44,10 @@ const providers: Provider[] = [
    works, not any service Real Property Planning performs: the site provides
    no services. Keep any future additions to that standard, and never "we". */
 const faqs = [
+  {
+    q: "What is biohazard cleanup?",
+    a: "Biohazard cleanup is the removal and disinfection of material that can carry disease, such as blood and other bodily fluids, sewage or animal waste. It is done by crews trained to work in protective equipment, contain the area, dispose of the material properly, and disinfect surfaces that ordinary cleaning would leave contaminated.",
+  },
   {
     q: "What is mold remediation?",
     a: "Mold remediation is more than wiping mold off a surface. The affected area is contained so spores do not spread through the house, moldy materials that cannot be cleaned are removed, the rest is cleaned and treated, and the moisture that let mold grow is found and fixed. Without that last step, it comes back.",
@@ -61,10 +65,6 @@ const faqs = [
     a: "Active water damage, mold and smoke odor tend to worry buyers, inspectors and lenders more than almost anything else, and some loans cannot close until they are dealt with. Once the house is clean, dry and sanitary, the broker can advise whether further preparation is worth the cost or whether to sell it as it is.",
   },
   {
-    q: "What is biohazard cleanup?",
-    a: "Biohazard cleanup is the removal and disinfection of material that can carry disease, such as blood and other bodily fluids, sewage or animal waste. It is done by crews trained to work in protective equipment, contain the area, dispose of the material properly, and disinfect surfaces that ordinary cleaning would leave contaminated.",
-  },
-  {
     q: "Why clean the air ducts or the heating and cooling coils?",
     a: "Ducts and coils collect dust, debris, smoke residue and sometimes mold, and the system then blows it through every room. Cleaning them is common after water or fire damage, after a long vacancy, and before a parent with breathing problems moves into a home.",
   },
@@ -73,20 +73,20 @@ const faqs = [
 const WaterMoldFireCleanup = () => (
   <>
     <SEOHead
-      title="Water, Mold, Fire & Biohazard Cleanup in Washington State | Real Property Planning"
+      title="Biohazard, water, mold & fire cleanup in Washington State | Real Property Planning"
       description="What water damage, mold, fire damage, biohazard and moisture cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly."
       canonical="https://realpropertyplanning.com/water-mold-fire-cleanup"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Water, Mold, Fire & Biohazard Cleanup", url: "https://realpropertyplanning.com/water-mold-fire-cleanup" },
+        { name: "Biohazard, water, mold & fire cleanup", url: "https://realpropertyplanning.com/water-mold-fire-cleanup" },
       ]}
     />
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <HeroBandTitle as="h1">Water, Mold, Fire &amp; Biohazard Cleanup in Washington State</HeroBandTitle>
+      <HeroBandTitle as="h1">Biohazard, water, mold &amp; fire cleanup in Washington State</HeroBandTitle>
 
       {/* Featured cleanup professional */}
       <section className="pt-10 md:pt-12 pb-12 md:pb-16 bg-secondary">
@@ -198,11 +198,18 @@ const WaterMoldFireCleanup = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">What the Work Covers</h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Water, mold, fire and biohazard cleanup deals with the damage itself and with what caused it, restoring the home to
+              Biohazard, water, mold and fire cleanup deals with the damage itself and with what caused it, restoring the home to
               a clean, sanitary and livable condition.
             </p>
 
             <div className="space-y-6">
+              <div className="bg-secondary rounded-lg p-6">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Biohazard Cleanup</h3>
+                <p className="text-foreground text-base leading-relaxed">
+                  Blood, bodily fluids, sewage and other material that can carry disease are removed by a crew in
+                  protective equipment, disposed of under the rules that apply to it, and the area is disinfected.
+                </p>
+              </div>
               <div className="bg-secondary rounded-lg p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">Water Damage &amp; Cleanup</h3>
                 <p className="text-foreground text-base leading-relaxed">
@@ -213,13 +220,6 @@ const WaterMoldFireCleanup = () => (
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">Mold Removal &amp; Remediation</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   The affected area is contained, mold is removed and treated, and the moisture that caused it is found so it does not come back.
-                </p>
-              </div>
-              <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Biohazard Cleanup</h3>
-                <p className="text-foreground text-base leading-relaxed">
-                  Blood, bodily fluids, sewage and other material that can carry disease are removed by a crew in
-                  protective equipment, disposed of under the rules that apply to it, and the area is disinfected.
                 </p>
               </div>
               <div className="bg-secondary rounded-lg p-6">
