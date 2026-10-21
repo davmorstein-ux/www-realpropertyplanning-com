@@ -349,13 +349,13 @@ const groupsAsWritten: CategoryGroup[] = [
      in src/data/afhProfessionals.ts (LYNN_LIEDLE). */
   {
     key: "cleanupRemediation",
-    category: "Water, Mold & Fire Cleanup",
+    category: "Water, Mold, Fire & Biohazard Cleanup",
     professionals: [
       {
         name: LYNN_LIEDLE.name,
         role: "Owner",
         company: LYNN_LIEDLE.company,
-        specialty: "Water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
+        specialty: "Water damage cleanup, mold removal and remediation, biohazard cleanup, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
         photo: LYNN_LIEDLE.photo,
         href: "/water-mold-fire-cleanup",
       },

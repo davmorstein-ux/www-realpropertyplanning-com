@@ -149,7 +149,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Title & Escrow Services", href: "/title-and-escrow" },
           { title: "Featured Senior Move Managers", href: "/featured-senior-move-managers" },
           { title: "Bookkeeping Services", href: "/bookkeeping-services" },
-          { title: "Water, Mold & Fire Cleanup", href: "/water-mold-fire-cleanup" },
+          { title: "Water, Mold, Fire & Biohazard Cleanup", href: "/water-mold-fire-cleanup" },
           { title: "Financing & Long-Term Planning", href: "/lenders-and-financing-specialists" },
           { title: "Reverse Mortgages & Retirement Financing", href: "/retirement-reverse-mortgage" },
           { title: "Building Your Professional Team", href: "/professionals" },

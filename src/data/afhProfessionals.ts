@@ -196,7 +196,7 @@ export const LYNN_LIEDLE: AFHProfessional = {
   phone: "(425) 649-0600",
   email: "Ac.east-side@advantaclean.com",
   website: "https://www.advantaclean.com",
-  specialty: "Water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition",
+  specialty: "Water damage cleanup, mold removal and remediation, biohazard cleanup, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition",
   bio: "",
 };
 

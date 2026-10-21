@@ -161,7 +161,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/long-term-care", label: "Long Term Care Options" },
   { path: "/mason-county", label: "Mason County" },
   { path: "/bookkeeping-services", label: "Bookkeeping Services" },
-  { path: "/water-mold-fire-cleanup", label: "Water, Mold & Fire Cleanup" },
+  { path: "/water-mold-fire-cleanup", label: "Water, Mold, Fire & Biohazard Cleanup" },
   { path: "/medicare-providers", label: "Medicare Providers" },
   { path: "/senior-living/memory-care", label: "Memory Care" },
   { path: "/articles/memory-care-costs", label: "Memory Care Costs" },

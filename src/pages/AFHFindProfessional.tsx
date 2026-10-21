@@ -216,10 +216,11 @@ const PROFESSIONAL_CATEGORIES = [
     title: "Adult Family Home Biohazard Cleanup",
     icon: "🧽",
     description:
-      "After a leak, a fire or a long stretch of damp, an operating home needs the damage cleaned up and its cause found while residents stay safe. Mold, moisture and smoke are hard on older lungs, so ducts and coils are often cleaned as well.",
+      "After a leak, a fire, a sewage backup or a medical emergency, an operating home needs the damage or biohazard cleaned up and its cause found while residents stay safe. Mold, moisture and smoke are hard on older lungs, so ducts and coils are often cleaned as well.",
     lookFor: [
       "Moisture readings and written documentation, for DSHS, an insurer or a lender",
       "Containment that keeps mold and dust out of residents' rooms during the work",
+      "Trained crews with protective equipment and proper disposal of biohazard material",
       "Air duct and coil cleaning after water or fire damage",
       "Availability for urgent calls, since water and smoke damage spread",
     ],
