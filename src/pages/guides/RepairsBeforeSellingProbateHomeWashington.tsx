@@ -15,7 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import RemodelWorthCallout from "@/components/RemodelWorthCallout";
@@ -227,7 +227,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               Every potential improvement to a probate property should be evaluated through one lens: will this investment return more than it costs at closing?
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. {FEATURED_BROKER.Role} evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
+              {SAME_PERSON ? `${FEATURED_BROKER.Role} is both a licensed broker and a certified residential appraiser, so` : `${FEATURED_BROKER.Role} is a licensed broker, so`} every repair recommendation is grounded in methodology — not guesswork. {FEATURED_BROKER.Role} evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
             </p>
             <div className="rounded-lg bg-background border-l-4 border-gold p-6 shadow-sm">
               <p className="text-foreground text-base md:text-lg leading-relaxed">
@@ -312,13 +312,15 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
         </div>
       </section>
 
-      {/* Section 7: How David evaluates */}
+      {/* Section 7: How the featured broker evaluates repairs (heading said
+          "How Real Property Planning Evaluates Repairs" until Oct 20, 2026; the
+          site provides no services, so licensed work is the broker's) */}
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Evaluates Repairs</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How {FEATURED_BROKER.roleTitle} Evaluates Repairs</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in comparable sales data and current buyer behavior — not general contractor estimates or guesswork.
+              {SAME_PERSON ? `${FEATURED_BROKER.Role}'s background as both a licensed broker and a certified residential appraiser means` : `${FEATURED_BROKER.Role}'s experience as a licensed broker means`} every repair recommendation is grounded in comparable sales data and current buyer behavior — not general contractor estimates or guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               {FEATURED_BROKER.Role} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.
