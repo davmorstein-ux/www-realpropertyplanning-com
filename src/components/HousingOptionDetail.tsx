@@ -6,7 +6,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import housingOptionsHero from "@/assets/housing_options_hero.webp";
 import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 
 export interface HousingOptionDetailProps {
@@ -72,19 +71,9 @@ const HousingOptionDetail = ({
       />
       <Header />
       <main id="main-content">
-        {/* Hero stack */}
+        {/* Title band (no hero image: only the homepage has one) */}
         <section className="pt-0 pb-0 bg-transparent">
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={housingOptionsHero}
-              alt={`${title} — senior housing option in Washington State`}
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-              loading="eager"
-              sizes="100vw"
-              decoding="async"
-              width={1920}
-              height={595}
-            />
             {/* ADDED as="h1". Without it these six senior-living pages had no
                 H1 at all — the page title rendered as a plain band with no
                 heading semantics. Screen readers had no top-level landmark

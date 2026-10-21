@@ -71,3 +71,12 @@ navy style (names kept for the call sites). The global
 `main a[class*="btn"]` / `[class*="cta"]` rule in index.css is navy too, so a
 class name holding "btn" on a dark band needs its own white override.
 Maroon (#6b1b22 / #7f1d1d) is retired; do not bring it back for buttons.
+
+## Hero images: homepage only
+
+Only the homepage has a hero image; every other page opens with its title band
+and goes straight to content (AFH Club's photo hero is its own landing page and
+stays). Oct 21, 2026: the last full-width heroes were removed from the shared
+layouts for Planning Before a Crisis, Serving as Executor & Trustee, the six
+senior-living housing pages and the probate attorney resource page. Do not add
+a hero image to a layout or page.

@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/executor-trustee-hero-washington.webp";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import NextQuestions from "@/components/NextQuestions";
 import GuideProfessionals from "@/components/GuideProfessionals";
@@ -44,14 +43,6 @@ const ExecutorSubPageLayout = ({
       <Header />
       <main id="main-content">
         <ProbateStartHere />
-        <section className="bg-white">
-          <img
-            src={heroImage}
-            alt="Serving as executor and trustee — guidance for Washington families"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async" width={1806} height={820} />
-        </section>
-
         {/* `as="h1"` is load-bearing twice over. Without it HeroBandTitle
             defaults to `as="div"`, so all six pages using this layout shipped
             with NO h1 at all — a WCAG 1.3.1 / 2.4.6 failure and a real

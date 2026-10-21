@@ -8,7 +8,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import { planningBeforeACrisisTopics } from "@/lib/planningBeforeACrisisTopics";
-import heroImage from "@/assets/planning-before-a-crisis-hero-washington.webp";
 import { FEATURED_BROKER, brokerCredentialSentence } from "@/data/featuredProfessionals";
 
 interface PlanningSubPageLayoutProps {
@@ -54,20 +53,6 @@ const PlanningSubPageLayout = ({
       />
       <Header />
       <main id="main-content">
-        {/* HERO IMAGE */}
-        <section className="bg-white">
-          <img
-            src={heroImage}
-            alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1920}
-            height={487}
-          />
-        </section>
-
         {/* BLUE BAND — `as="h1"` is load-bearing twice over. Without it
             HeroBandTitle defaults to `as="div"`, so all twelve pages using
             this layout shipped with NO h1 at all — a WCAG 1.3.1 / 2.4.6
