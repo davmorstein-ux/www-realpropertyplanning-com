@@ -106,7 +106,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                     fontSize: 11,
                     letterSpacing: "0.12em",
-                    color: "#e0828a",
+                    color: "#c9d6ea",
                     textTransform: "uppercase",
                   }}
                 >

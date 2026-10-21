@@ -197,7 +197,8 @@ export const LYNN_LIEDLE: AFHProfessional = {
   email: "Ac.east-side@advantaclean.com",
   website: "https://www.advantaclean.com",
   specialty: "Biohazard cleanup, water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition",
-  bio: "",
+  /* Her own wording, supplied Oct 21, 2026. Shown on her page (hover the headshot), as with Nicole. */
+  bio: "With many years of industry experience, and relevant industry certifications, Lynn and her team are experienced professionals who offer safe hazardous waste removal and sanitization with discretion and respect.",
 };
 
 /* Added Sept 28, 2026. License number OE20486 (owner clarified the same day that
