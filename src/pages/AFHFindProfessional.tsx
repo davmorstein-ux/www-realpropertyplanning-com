@@ -213,7 +213,7 @@ const PROFESSIONAL_CATEGORIES = [
     link: null,
   },
   {
-    title: "Water, Mold & Fire Cleanup",
+    title: "Adult Family Home Biohazard Cleanup",
     icon: "🧽",
     description:
       "After a leak, a fire or a long stretch of damp, an operating home needs the damage cleaned up and its cause found while residents stay safe. Mold, moisture and smoke are hard on older lungs, so ducts and coils are often cleaned as well.",
