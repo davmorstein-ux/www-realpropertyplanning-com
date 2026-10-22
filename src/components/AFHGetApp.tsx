@@ -116,7 +116,7 @@ const STYLES = `
 }
 .rpp-getapp .rpp-getapp-install.rpp-getapp-install:hover { background: #07443a !important; }
 .rpp-getapp .rpp-getapp-install:focus-visible { outline: 3px solid #272421 !important; outline-offset: 3px !important; }
-.rpp-getapp .rpp-getapp-fine.rpp-getapp-fine { font-size: 16px !important; line-height: 1.5 !important; color: #3d3833 !important; margin: 0 !important; }
+.rpp-getapp .rpp-getapp-fine.rpp-getapp-fine { font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; margin: 0 !important; }
 .rpp-getapp .rpp-getapp-fine a { color: #0a5648 !important; text-decoration: underline; font-size: 16px !important; }
 @media (max-width: 520px) {
   .rpp-getapp.rpp-getapp { flex-direction: column; gap: 12px; padding: 20px 18px; }

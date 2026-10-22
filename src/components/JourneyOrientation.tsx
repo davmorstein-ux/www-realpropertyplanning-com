@@ -91,7 +91,7 @@ const JourneyOrientation = ({
     <section className={`${cfg.section} ${className}`}>
       <div className="container px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className={cfg.title}>{heading}</h2>
+          <h2 className={`${cfg.title} rpp-jo-title`}>{heading}</h2>
           {showLeadIn && (
             <p className={`text-navy text-center mb-7 md:mb-9 ${tone === "valuation" ? "text-[20px] md:text-[22px]" : "text-[18px] md:text-[19px]"}`}>
               {cfg.leadIn}

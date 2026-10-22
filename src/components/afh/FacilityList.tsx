@@ -41,16 +41,16 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
             {facility.displayName}
           </Link>
         </h3>
-        <p style={{ margin: 0, fontSize: "16px", color: "#4b5563", whiteSpace: "nowrap" }}>
+        <p style={{ margin: 0, fontSize: "16px", color: "#1c1917", whiteSpace: "nowrap" }}>
           Licensed for {facility.licensedBeds}
         </p>
       </div>
 
-      <p style={{ margin: "6px 0 0", fontSize: "17px", color: "#374151" }}>
+      <p style={{ margin: "6px 0 0", fontSize: "17px", color: "#1c1917" }}>
         {a.street}, {a.city}, WA {a.zip}
       </p>
 
-      <p style={{ margin: "8px 0 0", fontSize: "16px", color: "#4b5563" }}>
+      <p style={{ margin: "8px 0 0", fontSize: "16px", color: "#1c1917" }}>
         {facility.specialties.length > 0
           ? facility.specialties.map((s) => SPECIALTY_LABELS[s]).join(" · ")
           : "No specialty designations on file"}
@@ -58,7 +58,7 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
         {facility.acceptsMedicaid ? "accepts Medicaid" : facility.contracts.length ? "no Medicaid contract" : "private pay only"}
       </p>
 
-      <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#4b5563" }}>
+      <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#1c1917" }}>
         DSHS license {facility.licenseNumber} ·{" "}
         <a
           href={dshsReportsUrl(facility.licenseNumber)}
@@ -88,7 +88,7 @@ export const FacilityList = ({ facilities, emptyMessage }: FacilityListProps) =>
       <p
         style={{
           fontSize: "18px",
-          color: "#374151",
+          color: "#1c1917",
           borderLeft: `4px solid ${GREEN}`,
           paddingLeft: "16px",
         }}

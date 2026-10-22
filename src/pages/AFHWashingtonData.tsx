@@ -164,7 +164,7 @@ const CSS = `
 .afhd a.afhd-link { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhd .afhd-note { background: #faf8f4; border-left: 4px solid #0a5648; border-radius: 8px; padding: 14px 18px; margin: 12px 0 0; }
 .afhd .afhd-note p { font-size: 16px !important; margin: 0 !important; }
-.afhd .afhd-small { font-size: 15px !important; color: #3f3a35 !important; }
+.afhd .afhd-small { font-size: 15px !important; color: #1c1917 !important; }
 `;
 
 const Bar = ({ value, max }: { value: number; max: number }) => (

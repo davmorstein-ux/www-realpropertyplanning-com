@@ -46,7 +46,7 @@ const CSS = `
 .tg-tiles { list-style: none; margin: 1.25rem 0; padding: 0; display: grid; gap: 0.75rem; }
 .tg-tiles li { background: #fff; border: 1px solid #e3d9cc; border-left: 4px solid #8a4214; border-radius: 8px; padding: 0.9rem 1.15rem; font-size: 17px; line-height: 1.6; color: #1f2933; }
 .tg-note { background: #fff; border-left: 5px solid #1f4058; border-radius: 8px; padding: 1rem 1.25rem; }
-.tg-src.tg-src { font-size: 14px !important; color: #3d4a55 !important; margin-top: 0.5rem !important; }
+.tg-src.tg-src { font-size: 14px !important; color: #1c1917 !important; margin-top: 0.5rem !important; }
 .tg-sec a { color: #1B3A6B; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 `;
 

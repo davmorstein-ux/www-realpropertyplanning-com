@@ -69,10 +69,10 @@ const CSS = `
 .afhg .afhg-term:last-child { border-bottom: 0; }
 .afhg .afhg-term:target { background: #f3f6f4; box-shadow: -12px 0 0 #f3f6f4, 12px 0 0 #f3f6f4; }
 .afhg dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 21px; font-weight: 700; color: #192A19; line-height: 1.3; }
-.afhg dt .afhg-aka { display: block; font-size: 16px; font-weight: 500; color: #4a443e; margin-top: 2px; }
+.afhg dt .afhg-aka { display: block; font-size: 16px; font-weight: 500; color: #1c1917; margin-top: 2px; }
 .afhg dd { margin: 8px 0 0; }
 .afhg dd p.afhg-def { margin: 0 0 8px !important; }
-.afhg .afhg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #3f3a35; line-height: 1.6; }
+.afhg .afhg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #1c1917; line-height: 1.6; }
 .afhg a.afhg-link, .afhg .afhg-meta a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhg .afhg-cats { display: grid; gap: 18px 28px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .afhg .afhg-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

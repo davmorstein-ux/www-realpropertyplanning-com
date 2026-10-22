@@ -77,10 +77,10 @@ const CSS = `
 .prg .prg-term:last-child { border-bottom: 0; }
 .prg .prg-term:target { background: #eef3f7; box-shadow: -12px 0 0 #eef3f7, 12px 0 0 #eef3f7; }
 .prg dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 21px; font-weight: 700; color: #14283a; line-height: 1.3; }
-.prg dt .prg-aka { display: block; font-size: 16px; font-weight: 500; color: #4a443e; margin-top: 2px; }
+.prg dt .prg-aka { display: block; font-size: 16px; font-weight: 500; color: #1c1917; margin-top: 2px; }
 .prg dd { margin: 8px 0 0; }
 .prg dd p.prg-def { margin: 0 0 8px !important; }
-.prg .prg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #3f3a35; line-height: 1.6; }
+.prg .prg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #1c1917; line-height: 1.6; }
 .prg a.prg-link, .prg .prg-meta a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .prg .prg-cats { display: grid; gap: 18px 28px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .prg .prg-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

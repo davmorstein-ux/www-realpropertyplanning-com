@@ -46,7 +46,7 @@ const CSS = `
 .afa table.afa-table th, .afa table.afa-table td { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; line-height: 1.45; padding: 10px 14px; text-align: left; border-bottom: 1px solid #e3ece9; color: #1c1917; }
 .afa table.afa-table th { background: #edf5f3; font-weight: 700; color: #10231f; }
 .afa .afa-note { background: #f7f4ef; border: 1px solid #e2ddd5; border-radius: 10px; padding: 16px 20px; }
-.afa .afa-small { font-size: 15px !important; color: #3f3a35 !important; }
+.afa .afa-small { font-size: 15px !important; color: #1c1917 !important; }
 .afa .afa-toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
 .afa .afa-toc li { list-style: none; }
 .afa .afa-toc a { display: inline-block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; font-weight: 600; color: ${G} !important; border: 1.5px solid ${G}; border-radius: 999px; padding: 6px 14px; text-decoration: none !important; background: #fff; }

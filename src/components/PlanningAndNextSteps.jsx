@@ -17,7 +17,7 @@ const styles = `
   .p3body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .p3pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #1B3A6B; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .p3title { font-family: 'DM Sans', 'DM Sans Fallback', serif; font-weight: 700; font-size: 22px; color: #3f1216; line-height: 1.15; margin-bottom: 4px; }
-  .p3tagline { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 500; font-size: 14px; color: #4e3f41; line-height: 1.5; }
+  .p3tagline { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 500; font-size: 14px; color: #1c1917; line-height: 1.5; }
   .p3footer { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
   .p3label { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1B3A6B; line-height: 1.4; flex: 1; }
   .p3arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1B3A6B; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }

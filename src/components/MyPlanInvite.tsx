@@ -62,7 +62,7 @@ export default function MyPlanInvite({ situation, style }: { situation: "estate"
       >
         Make my free plan →
       </Link>
-      <div style={{ margin: "12px 0 0", fontSize: 16, lineHeight: 1.5, color: "#44403c" }}>Takes about two minutes. Your answers stay on your device.</div>
+      <div style={{ margin: "12px 0 0", fontSize: 16, lineHeight: 1.5, color: "#1c1917" }}>Takes about two minutes. Your answers stay on your device.</div>
     </aside>
   );
 }

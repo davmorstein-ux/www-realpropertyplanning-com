@@ -17,7 +17,7 @@ const LenderCard = ({ lender: l, why }: { lender: Lender; why?: string }) => (
   <div style={{ background: "#faf8f4", border: "1px solid #dccdce", borderRadius: 10, padding: "14px 16px" }}>
     <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, alignItems: "baseline" }}>
       <div style={{ fontSize: 20, fontWeight: 700, color: NAVY }}>
-        {l.name} <span style={{ fontSize: 16, fontWeight: 600, color: "#3b3733" }}>· {l.location}</span>
+        {l.name} <span style={{ fontSize: 16, fontWeight: 600, color: "#1c1917" }}>· {l.location}</span>
       </div>
       <div style={{ fontSize: 15, fontWeight: 700, color: l.verified ? "#15803d" : "#7a4a00", background: l.verified ? "#dcfce7" : "#fef3c7", borderRadius: 999, padding: "3px 10px" }}>
         {l.verified ? `Confirmed ${fmtLenderDate(l.verified)}` : "From published information — not yet confirmed"}
@@ -26,7 +26,7 @@ const LenderCard = ({ lender: l, why }: { lender: Lender; why?: string }) => (
     {why && <div style={{ fontSize: 17, lineHeight: 1.55, color: INK, marginTop: 8, fontWeight: 700 }}>{why}</div>}
     {l.publishedTerms && (
       <div style={{ fontSize: 17, lineHeight: 1.55, color: INK, marginTop: 8 }}>
-        {l.publishedTerms} <span style={{ color: "#3b3733" }}>(lender's published terms as of {fmtLenderDate(l.termsAsOf)})</span>
+        {l.publishedTerms} <span style={{ color: "#1c1917" }}>(lender's published terms as of {fmtLenderDate(l.termsAsOf)})</span>
       </div>
     )}
     <div style={{ fontSize: 17, lineHeight: 1.55, color: INK, marginTop: 6 }}><strong>Best fit:</strong> {l.bestFit}</div>

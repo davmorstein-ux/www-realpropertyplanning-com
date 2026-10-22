@@ -54,7 +54,7 @@ const PAGE_CSS = `
   .mp-panel { background: #fff; border: 1px solid #d9d2c7; border-radius: 12px; padding: 24px 20px; }
   .mp-q + .mp-q { margin-top: 26px; padding-top: 22px; border-top: 1px solid #ebe5dc; }
   .mp p.mp-qtext { font-size: 20px !important; font-weight: 700 !important; line-height: 1.35 !important; margin: 0 0 6px !important; }
-  .mp p.mp-hint { font-size: 16px !important; line-height: 1.45 !important; margin: 0 0 10px !important; color: #3d3833 !important; }
+  .mp p.mp-hint { font-size: 16px !important; line-height: 1.45 !important; margin: 0 0 10px !important; color: #1c1917 !important; }
   .mp-qnum { color: ${NAVY}; margin-right: 6px; }
   .mp-choices { display: grid; gap: 10px; grid-template-columns: 1fr; margin-top: 10px; }
   @media (min-width: 700px) { .mp-choices.mp-two { grid-template-columns: 1fr 1fr; } }
@@ -66,7 +66,7 @@ const PAGE_CSS = `
   .mp button.mp-choice:focus-visible, .mp button.mp-action:focus-visible { outline: 3px solid ${NAVY} !important; outline-offset: 2px !important; }
   .mp button.mp-big { flex-direction: column; align-items: flex-start; gap: 4px; padding: 18px 18px !important; min-height: 96px; }
   .mp button.mp-big .mp-big-t { font-size: 20px; font-weight: 700; }
-  .mp button.mp-big .mp-big-s { font-size: 16px; font-weight: 400; line-height: 1.45; color: #3d3833; }
+  .mp button.mp-big .mp-big-s { font-size: 16px; font-weight: 400; line-height: 1.45; color: #1c1917; }
   .mp-plan { list-style: none; counter-reset: mp; margin: 0; padding: 0; }
   .mp-plan > li { counter-increment: mp; position: relative; padding: 0 0 0 52px; margin: 0 0 26px; }
   .mp-plan > li::before { content: counter(mp); position: absolute; left: 0; top: -2px; width: 36px; height: 36px; border-radius: 50%; background: ${NAVY}; color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; }
@@ -83,7 +83,7 @@ const PAGE_CSS = `
   .mp-sources { background: #fff; border: 1px solid #c9d3e3; border-radius: 10px; padding: 18px 18px 16px; margin-top: 8px; }
   .mp-srclist { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 10px; }
   .mp-srclist li { font-size: 17px; line-height: 1.5; }
-  .mp-srcnote { color: #3d3833; }
+  .mp-srcnote { color: #1c1917; }
   .mp-print-only { display: none; }
   @media print {
     header, footer, nav, .mp-noprint, .rpp-news { display: none !important; }

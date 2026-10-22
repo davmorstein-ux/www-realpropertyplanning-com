@@ -14,7 +14,7 @@ const label: React.CSSProperties = {
   fontWeight: 700,
   letterSpacing: "0.12em",
   textTransform: "uppercase",
-  color: "#4a443e",
+  color: "#1c1917",
   margin: "18px 0 8px",
 };
 const text: React.CSSProperties = { margin: 0, fontSize: 16, lineHeight: 1.65, color: "#2b2825" };

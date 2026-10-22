@@ -243,7 +243,7 @@ const STYLES = `
 .rpp-push .rpp-push-submit:disabled, .rpp-push .rpp-push-select:disabled { opacity: 0.65; cursor: default !important; }
 .rpp-push .rpp-push-fine.rpp-push-fine {
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-  font-size: 16px !important; line-height: 1.5 !important; color: #3d3833 !important; margin: 14px 0 0 !important;
+  font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; margin: 14px 0 0 !important;
 }
 .rpp-push .rpp-push-error.rpp-push-error {
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;

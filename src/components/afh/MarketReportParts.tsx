@@ -29,7 +29,7 @@ export const MKT_CSS = `
 .mkt table.mkt-table th, .mkt table.mkt-table td { border-bottom: 1px solid #e3ddd3; padding: 10px 12px; text-align: left; font-size: 16px !important; color: #1c1917; }
 .mkt table.mkt-table th { background: #f1f6f4; font-weight: 700; color: #14283a; }
 .mkt table.mkt-table td.n, .mkt table.mkt-table th.n { text-align: right; }
-.mkt .mkt-small { font-size: 15px !important; color: #3f3a35 !important; }
+.mkt .mkt-small { font-size: 15px !important; color: #1c1917 !important; }
 .mkt a.mkt-link { color: ${GREEN} !important; font-weight: 700; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .mkt ul.mkt-list { margin: 0 0 0 22px !important; padding: 0 !important; }
 .mkt ul.mkt-list li { list-style: disc !important; display: list-item !important; margin-bottom: 6px; }

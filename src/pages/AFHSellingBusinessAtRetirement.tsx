@@ -308,7 +308,7 @@ const AFHSellingBusinessAtRetirement = () => (
               </Link>
               .
             </p>
-            <p className="text-[15px]" style={{ color: "#3f3a35" }}>
+            <p className="text-[15px]" style={{ color: "#1c1917" }}>
               Source: written answers from DSHS Residential Care Services licensing staff, October 2026, and the WAC
               sections linked above. General information, not legal advice.
             </p>

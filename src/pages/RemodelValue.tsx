@@ -85,7 +85,7 @@ const CSS = `
 .rmv { background: #fff; font-family: ${FONT}; color: ${INK}; }
 .rmv .rmv-wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
 .rmv p { font-family: ${FONT} !important; font-size: 18px !important; line-height: 1.65 !important; color: ${INK} !important; margin: 0 0 14px !important; }
-.rmv p.rmv-small { font-size: 15.5px !important; color: #3f3a35 !important; }
+.rmv p.rmv-small { font-size: 15.5px !important; color: #1c1917 !important; }
 .rmv ul.rmv-how { list-style: disc outside !important; padding-left: 24px !important; margin: 0 0 8px !important; max-width: 720px; }
 .rmv ul.rmv-how li { display: list-item !important; font-family: ${FONT}; font-size: 18px; line-height: 1.6; color: ${INK}; margin: 0 0 10px; }
 .rmv details.rmv-details { margin: 22px 0 20px; border: 1px solid #d9d4cc; border-radius: 10px; background: #fff; }
@@ -120,17 +120,17 @@ const CSS = `
 .rmv .rmv-picks { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 6px; }
 .rmv .rmv-pick { font-family: ${FONT}; font-size: 15.5px; font-weight: 600; padding: 7px 13px; border-radius: 999px; border: 1.5px solid #c9c2b6; background: #fff; color: #2b2825; cursor: pointer; min-height: 38px; }
 .rmv .rmv-pick[aria-pressed="true"] { background: ${NAVY}; border-color: ${NAVY}; color: #fff; }
-.rmv .rmv-ex { font-size: 15.5px; color: #4a443d; line-height: 1.5; }
+.rmv .rmv-ex { font-size: 15.5px; color: #1c1917; line-height: 1.5; }
 .rmv .rmv-results { display: grid; gap: 12px; grid-template-columns: 1fr; margin-top: 8px; }
 @media (min-width: 760px) { .rmv .rmv-results { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .rmv .rmv-val { background: #fff; border: 1px solid #ddd8cf; border-top: 5px solid #8a8378; border-radius: 12px; padding: 16px 18px; }
 .rmv .rmv-val.rmv-val-a { border-top-color: #0f5f57; }
 .rmv .rmv-val.rmv-val-b { border-top-color: ${NAVY}; }
-.rmv .rmv-val-k { font-size: 14px !important; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #4a443d; }
+.rmv .rmv-val-k { font-size: 14px !important; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #1c1917; }
 .rmv .rmv-val-n { font-size: clamp(30px, 4vw, 38px) !important; font-weight: 700 !important; line-height: 1.15 !important; margin: 6px 0 4px !important; color: ${INK} !important; font-variant-numeric: tabular-nums; }
 .rmv .rmv-val-d { font-size: 17px !important; font-weight: 700 !important; }
-.rmv .rmv-val-r { font-size: 15px !important; font-weight: 600; color: #4a443d; margin: 0 0 6px; }
-.rmv .rmv-val-s { font-size: 15px; color: #4a443d; line-height: 1.5; margin-top: 6px; }
+.rmv .rmv-val-r { font-size: 15px !important; font-weight: 600; color: #1c1917; margin: 0 0 6px; }
+.rmv .rmv-val-s { font-size: 15px; color: #1c1917; line-height: 1.5; margin-top: 6px; }
 .rmv .rmv-warn { background: #fff7e6; border: 1px solid #f0d9a8; border-radius: 10px; padding: 14px 18px; margin-top: 14px; }
 .rmv .rmv-spendname { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .rmv img.rmv-ico, .rmv .rmv-ico { width: 52px; height: 52px; flex: 0 0 52px; border-radius: 10px; object-fit: contain; background: #fff; }
@@ -146,7 +146,7 @@ const CSS = `
 .rmv table.rmv-table th, .rmv table.rmv-table td { font-family: ${FONT}; font-size: 16px; padding: 9px 12px; text-align: left; border-bottom: 1px solid #eee9e0; color: ${INK}; vertical-align: top; }
 .rmv table.rmv-table thead th { background: #f1f4f9; font-weight: 700; font-size: 15px; }
 .rmv table.rmv-table tbody th { font-weight: 600; }
-.rmv .rmv-th-sub { font-weight: 500; font-size: 13px; color: #4a443d; }
+.rmv .rmv-th-sub { font-weight: 500; font-size: 13px; color: #1c1917; }
 .rmv td.rmv-over { color: #8a3b12; font-weight: 700; }
 .rmv tr.rmv-total th, .rmv tr.rmv-total td { font-weight: 700; background: #faf8f4; }
 .rmv .rmv-ratebox { background: #fff; border: 1px solid #ddd8cf; border-radius: 12px; padding: 14px 20px; margin: 0 0 14px; }
@@ -157,7 +157,7 @@ const CSS = `
 .rmv .rmv-totalrow { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .rmv .rmv-totallabel { font-family: ${FONT}; font-size: 20px !important; font-weight: 700; color: ${INK}; }
 .rmv .rmv-totalnum { font-family: ${FONT}; font-size: clamp(28px, 4vw, 36px) !important; font-weight: 700; color: ${NAVY}; font-variant-numeric: tabular-nums; }
-.rmv .rmv-totalparts { font-family: ${FONT}; font-size: 15.5px !important; color: #4a443d; line-height: 1.5; margin-top: 6px; }
+.rmv .rmv-totalparts { font-family: ${FONT}; font-size: 15.5px !important; color: #1c1917; line-height: 1.5; margin-top: 6px; }
 .rmv .rmv-toggle { display: flex; gap: 8px; align-items: center; min-height: 46px; font-size: 17px; }
 .rmv .rmv-toggle input { width: 20px; height: 20px; }
 `;

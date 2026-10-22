@@ -175,7 +175,7 @@ const AFHBuildingInspection = () => (
               fontSize: 18,
               fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
-              color: "#342e28",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -539,7 +539,7 @@ const AFHBuildingInspection = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                color: "#2f2a25",
+                color: "#1c1917",
                 lineHeight: 1.75,
                 margin: 0,
               }}

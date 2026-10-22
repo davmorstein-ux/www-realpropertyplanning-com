@@ -72,7 +72,7 @@ const GuidesAndResources = () => {
             {categories.map((c) => (
               <li key={c.id}>
                 <a href={`#${c.id}`} className="rpp-lib-chip bg-transparent">
-                  {c.label} <span style={{ fontWeight: 400, color: "#5b4446" }}>({c.articles.length})</span>
+                  {c.label} <span style={{ fontWeight: 400, color: "#1c1917" }}>({c.articles.length})</span>
                 </a>
               </li>
             ))}

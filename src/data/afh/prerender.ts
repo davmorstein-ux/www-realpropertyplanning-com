@@ -199,13 +199,13 @@ const facilityRow = (f: Facility) => {
   return (
     `<li style="border-top:1px solid #d9dede;padding:14px 0">` +
     `<h3 style="margin:0;font-size:1.1rem">${a(url, f.displayName)}</h3>` +
-    `<p style="margin:4px 0 0;color:#374151">${esc(f.address.street)}, ${esc(f.address.city)}, WA ${esc(
+    `<p style="margin:4px 0 0;color:#1c1917">${esc(f.address.street)}, ${esc(f.address.city)}, WA ${esc(
       f.address.zip,
     )} — licensed for ${f.licensedBeds}</p>` +
-    `<p style="margin:4px 0 0;color:#4b5563">${esc(spec)} — ${
+    `<p style="margin:4px 0 0;color:#1c1917">${esc(spec)} — ${
       f.acceptsMedicaid ? "accepts Medicaid" : f.contracts.length ? "no Medicaid contract" : "private pay only"
     }</p>` +
-    `<p style="margin:4px 0 0;color:#4b5563;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)} · <a href="${attr(dshsReportsUrl(f.licenseNumber))}" rel="noopener" style="color:#1a365d">DSHS inspection record</a>${f.hasReports ? " (documents posted)" : " (none posted when checked)"}</p>` +
+    `<p style="margin:4px 0 0;color:#1c1917;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)} · <a href="${attr(dshsReportsUrl(f.licenseNumber))}" rel="noopener" style="color:#1a365d">DSHS inspection record</a>${f.hasReports ? " (documents posted)" : " (none posted when checked)"}</p>` +
     `</li>`
   );
 };
@@ -405,7 +405,7 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility, cityHomes: Facili
       rows
         .map(
           ([k, v]) =>
-            `<tr><th scope="row" style="text-align:left;padding:8px 12px 8px 0;border-top:1px solid #d9dede;color:#4b5563;font-weight:600;width:40%">${esc(
+            `<tr><th scope="row" style="text-align:left;padding:8px 12px 8px 0;border-top:1px solid #d9dede;color:#1c1917;font-weight:600;width:40%">${esc(
               k,
             )}</th><td style="padding:8px 0;border-top:1px solid #d9dede">${esc(v)}</td></tr>`,
         )
@@ -489,7 +489,7 @@ const pill = (href: string, label: string, count: number, empty: boolean) =>
 
 const countyPills = (checked: CountyChecked[], currentSlug?: string) => {
   const label = (t: string) =>
-    `<p style="margin:12px 0 6px;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#4b5563">${t}</p>`;
+    `<p style="margin:12px 0 6px;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#1c1917">${t}</p>`;
   const row = (list: CountyChecked[], name: string) =>
     `<nav aria-label="${name}" style="margin:0 0 8px">` +
     list.map((c) => pill(`/afh-club/homes/county/${c.slug}`, c.county, c.facilityCount, c.facilityCount === 0)).join("") +
@@ -631,7 +631,7 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string, checked: Cou
   for (const { county, cities } of byCounty) {
     const n = cities.reduce((s, c) => s + c.facilityCount, 0);
     parts.push(
-      `<h2 style="font-size:1.9rem;font-weight:800;color:#0a5648;margin:40px 0 4px;padding-top:14px;border-top:4px solid #0a5648">${a(`/afh-club/homes/county/${county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, `${county} County`)}</h2><p style="margin:0 0 10px;font-weight:600;color:#374151">${num(n)} ${plural(n, "home", "homes")} in ${cities.length} ${plural(cities.length, "city", "cities")}</p>`,
+      `<h2 style="font-size:1.9rem;font-weight:800;color:#0a5648;margin:40px 0 4px;padding-top:14px;border-top:4px solid #0a5648">${a(`/afh-club/homes/county/${county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, `${county} County`)}</h2><p style="margin:0 0 10px;font-weight:600;color:#1c1917">${num(n)} ${plural(n, "home", "homes")} in ${cities.length} ${plural(cities.length, "city", "cities")}</p>`,
     );
     parts.push(
       `<ul style="columns:2;padding-left:20px">` +

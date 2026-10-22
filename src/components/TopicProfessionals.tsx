@@ -45,7 +45,7 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
       <div role="heading" aria-level={2} style={{ fontSize: 22, fontWeight: 700, color: NAVY, lineHeight: 1.3, margin: "0 0 6px" }}>
         People who help with this
       </div>
-      <div style={{ fontSize: 16, lineHeight: 1.5, color: "#44403c", margin: "0 0 16px" }}>
+      <div style={{ fontSize: 16, lineHeight: 1.5, color: "#1c1917", margin: "0 0 16px" }}>
         Independent professionals the site's founder has met in person. You contact and hire them directly; nobody pays to be listed.
       </div>
       {groups.map((g) => (
@@ -70,7 +70,7 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
                     {p.name}
                     {p.name2 ? ` & ${p.name2}` : ""}
                   </Link>
-                  <div style={{ fontSize: 15, color: "#44403c" }}>
+                  <div style={{ fontSize: 15, color: "#1c1917" }}>
                     {p.role2 ? `${p.role} & ${p.role2}` : p.role}, {p.company}
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
         </div>
       ))}
       {showsFounder && (
-        <div style={{ fontSize: 15, lineHeight: 1.5, color: "#44403c", margin: "0 0 12px" }}>
+        <div style={{ fontSize: 15, lineHeight: 1.5, color: "#1c1917", margin: "0 0 12px" }}>
           {FEATURED_BROKER.name}, listed under Real Estate &amp; Appraisal, is the founder of Real Property Planning.
         </div>
       )}

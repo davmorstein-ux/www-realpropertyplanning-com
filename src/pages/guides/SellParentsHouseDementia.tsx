@@ -69,7 +69,7 @@ const CSS = `
 .ptx ul.ptx-related { list-style: disc !important; margin: 0 0 0 22px; padding: 0; }
 .ptx ul.ptx-related li { display: list-item !important; list-style: disc !important; margin-bottom: 8px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; }
 .ptx a.ptx-link { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
-.ptx .ptx-small { font-size: 15px !important; color: #3f3a35 !important; }
+.ptx .ptx-small { font-size: 15px !important; color: #1c1917 !important; }
 .ptx .ptx-note { background: #f7f4ef; border: 1px solid #e2ddd5; border-radius: 10px; padding: 16px 20px; }
 `;
 

@@ -277,10 +277,10 @@ const LOOKUP_CSS = `
 .ck details.ck-fold > summary { cursor: pointer; padding: 12px 0; font-size: 16px; font-weight: 700; color: var(--deep); }
 .ck .ck-tablewrap { overflow-x: auto; margin: 0 0 10px; }
 .ck table.ck-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #14283a; }
-.ck table.ck-table th { text-align: left; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #2b3640; padding: 6px 8px; border-bottom: 1px solid #dfe5ea; }
+.ck table.ck-table th { text-align: left; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #1c1917; padding: 6px 8px; border-bottom: 1px solid #dfe5ea; }
 .ck table.ck-table td { padding: 8px; border-bottom: 1px solid #eef1f4; vertical-align: top; }
 .ck table.ck-table td.ck-num { white-space: nowrap; font-weight: 700; color: var(--deep); font-variant-numeric: tabular-nums; }
-.ck .ck-tablenote { color: #2b3640; font-size: 14px; }
+.ck .ck-tablenote { color: #1c1917; font-size: 14px; }
 .ck .ck-links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 16px; margin: 6px 0 12px; }
 `;
 

@@ -37,7 +37,7 @@ section.acd-sec.acd-listsec { padding-bottom: 48px !important; }
 .acd-top.acd-top { padding: 16px 0 14px; }
 .acd-top p.acd-figures.acd-figures { font-size: 19px !important; line-height: 1.45 !important; color: #1c1917 !important; margin: 0 !important; }
 .acd-top p.acd-figures strong { font-size: 19px !important; color: ${GREEN} !important; }
-.acd-top p.acd-asof.acd-asof { font-size: 15px !important; color: #3f3a35 !important; margin: 4px 0 0 !important; }
+.acd-top p.acd-asof.acd-asof { font-size: 15px !important; color: #1c1917 !important; margin: 4px 0 0 !important; }
 .acd-top p.acd-explain.acd-explain { font-size: 17px !important; line-height: 1.55 !important; color: #1c1917 !important; margin: 10px 0 0 !important; }
 .acd-filters.acd-filters { display: block !important; padding: 14px 0 12px; }
 .acd-filters select.acd-pick { display: none; width: 100%; min-height: 50px; padding: 10px 14px; border: 2px solid ${GREEN}; border-radius: 10px; background: #fff; color: #1c1917; font-family: inherit; font-size: 18px !important; font-weight: 600; }
@@ -46,7 +46,7 @@ section.acd-sec.acd-listsec { padding-bottom: 48px !important; }
 .acd-filters a.acd-chip.acd-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 14px; border: 2px solid #c9d2cf; border-radius: 999px; background: #fff; color: #1c1917 !important; font-size: 16px !important; font-weight: 600; text-decoration: none !important; line-height: 1.2; }
 @media (hover: hover) { .acd-filters a.acd-chip.acd-chip:hover { border-color: ${GREEN}; } }
 .acd-filters a.acd-chip.acd-chip.is-on { background: ${GREEN}; border-color: ${GREEN}; color: #fff !important; }
-.acd-filters a.acd-chip span.acd-count { font-weight: 400; color: #3f3a35 !important; font-size: 15px !important; }
+.acd-filters a.acd-chip span.acd-count { font-weight: 400; color: #1c1917 !important; font-size: 15px !important; }
 .acd-filters a.acd-chip.is-on span.acd-count { color: #fff !important; }
 h2.acd-abouthead.acd-abouthead { font-size: 22px !important; line-height: 1.3 !important; margin: 0 0 10px !important; color: #1c1917 !important; }
 @media (max-width: 640px) {

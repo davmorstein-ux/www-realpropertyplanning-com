@@ -116,7 +116,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 16px !important;
           font-weight: 400;
-          color: #4a4540 !important;
+          color: #1c1917 !important;
           line-height: 1.4;
           margin-top: 2px;
         }

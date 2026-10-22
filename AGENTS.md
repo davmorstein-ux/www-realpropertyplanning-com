@@ -106,3 +106,13 @@ index.css sets h1-h4 `margin-bottom: 0.5em !important` (was 0.4rem) and p
 Tailwind margins on headings and paragraphs, so a component that needs tight
 rows must opt out with its own class (see `li.rpp-dir-row` on the AFH
 directory). Body text in main keeps line-height 1.7.
+
+## Readable text (Oct 22, 2026, David: "Nowhere on the site should small light grey text be the case")
+
+Reading text in main is at least 16px and near-black (#1c1917). index.css
+"READABLE TEXT FLOOR" raises inline 10-15.5px sizes, small Tailwind sizes,
+fine-print class patterns (*-small, *-fine, *-meta) and listed component
+classes; dark-grey text colours in the source were changed to #1c1917. Do not
+add grey body text or text under 16px. Short uppercase eyebrow labels (14px,
+bold, navy) are the one exception. The card rule that shrinks headings inside
+"card"/"tile" classes now skips headings that set their own size.

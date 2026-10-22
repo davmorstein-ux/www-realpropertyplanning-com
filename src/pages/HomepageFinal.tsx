@@ -239,7 +239,7 @@ const HomepageFinal = () => {
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 16,
                       fontWeight: 500,
-                      color: "#443e38",
+                      color: "#1c1917",
                       margin: 0,
                     }}
                   >

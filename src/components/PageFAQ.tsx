@@ -125,7 +125,7 @@ const PageFAQ = ({
                         paddingBottom: "1rem",
                         fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: "18px",
-                        color: "#413b36",
+                        color: "#1c1917",
                         lineHeight: 1.7,
                       }}
                     >
@@ -193,7 +193,7 @@ const PageFAQ = ({
                       paddingTop: "1rem",
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: "18px",
-                      color: "#413b36",
+                      color: "#1c1917",
                       lineHeight: 1.7,
                     }}
                   >

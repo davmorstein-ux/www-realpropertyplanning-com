@@ -22,7 +22,7 @@ interface BackToResourcesProps {
  * WHY COLOURS LIVE IN A CLASS, NOT INLINE
  *
  * index.css contains attribute-matching rules such as
- *     main [style*="rgb(15"] { color: #3D3833 !important; }
+ *     main [style*="rgb(15"] { color: #1c1917 !important; }
  * intended to catch light grey inline TEXT colours. But [style*=...] tests
  * the whole style attribute, so a navy background containing rgb(15, 37, 71)
  * matched and forced the label to dark grey on a dark plate. Colours in a

@@ -51,7 +51,7 @@ const FeaturedAttorneys = () => (
                       <h3 className="rpp-m2-title font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
                         {s.title}
                       </h3>
-                      <p className="rpp-m2-text text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#5c474a" }}>
+                      <p className="rpp-m2-text text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917" }}>
                         {s.tagline}
                       </p>
                       <span className="gold-cta mt-auto">

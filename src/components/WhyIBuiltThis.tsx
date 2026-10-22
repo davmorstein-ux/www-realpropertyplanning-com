@@ -18,7 +18,7 @@ const CSS = `
 .rpp-why .rpp-why-text{min-width:0;flex:1 1 auto}
 .rpp-why p.rpp-why-heading{font-size:20px !important;font-weight:700;color:#1c1917;margin:0 0 6px !important;line-height:1.3 !important}
 .rpp-why p.rpp-why-body{font-size:18px !important;color:#1c1917;margin:0 0 10px !important;line-height:1.6 !important}
-.rpp-why p.rpp-why-sign{font-size:17px !important;font-weight:600;color:#3f3a35;margin:0 !important;line-height:1.4 !important}
+.rpp-why p.rpp-why-sign{font-size:17px !important;font-weight:600;color:#1c1917;margin:0 !important;line-height:1.4 !important}
 @media (max-width:520px){
   .rpp-why{padding:18px 18px;display:block}
   .rpp-why img.rpp-why-photo{width:56px;height:56px;float:left;margin:0 14px 4px 0}

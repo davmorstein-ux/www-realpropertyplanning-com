@@ -50,7 +50,7 @@ export default function EstateReadNext({ path, style }: { path: string; style?: 
       </div>
       {next ? (
         <>
-          <div style={{ fontSize: 16, color: "#44403c", margin: "0 0 4px" }}>
+          <div style={{ fontSize: 16, color: "#1c1917", margin: "0 0 4px" }}>
             Step {i + 2} of {total}
           </div>
           <Link to={next.href} className="rpp-link-large" style={{ color: NAVY }}>

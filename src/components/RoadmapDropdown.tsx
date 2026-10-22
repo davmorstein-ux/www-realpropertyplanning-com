@@ -138,7 +138,7 @@ const RoadmapDropdown = ({
                     style={{
                       fontSize: 16,
                       fontWeight: 400,
-                      color: "#3a3a3a",
+                      color: "#1c1917",
                       lineHeight: 1.5,
                       textDecoration: "none",
                     }}
@@ -256,7 +256,7 @@ const RoadmapDropdown = ({
               <span style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                 <span style={{ fontSize: 18, fontWeight: 600, color: "#142c52", lineHeight: 1.4 }}>{topic.title}</span>
                 {topic.description && (
-                  <span style={{ fontSize: 16, fontWeight: 400, color: "#5a5a5a", lineHeight: 1.5 }}>
+                  <span style={{ fontSize: 16, fontWeight: 400, color: "#1c1917", lineHeight: 1.5 }}>
                     {topic.description}
                   </span>
                 )}

@@ -222,7 +222,7 @@ export const CK_CSS = `
 .ck input.ck-input.ck-input, .ck select.ck-input.ck-input { width: 100%; min-height: 48px; box-sizing: border-box; padding: 10px 14px !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; font-weight: 500 !important; color: #14283a !important; background: #ffffff !important; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; font-variant-numeric: tabular-nums; }
 .ck input.ck-input.ck-input:focus, .ck select.ck-input.ck-input:focus { outline: none; border-color: var(--c) !important; box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
 .ck .ck-suffix.ck-suffix { flex: 0 0 auto; font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.ck .ck-hint.ck-hint { font-size: 14px !important; line-height: 1.45 !important; color: #2b3640 !important; margin-top: 6px !important; }
+.ck .ck-hint.ck-hint { font-size: 14px !important; line-height: 1.45 !important; color: #1c1917 !important; margin-top: 6px !important; }
 .ck .ck-seg { display: inline-flex; flex: 0 0 auto; border: 1px solid #c9d7e2; border-radius: 10px; overflow: hidden; }
 .ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #eef3f7 !important; color: #1f2933 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
 .ck button.ck-segopt.ck-segopt.ck-on { background: var(--deep) !important; color: #ffffff !important; }
@@ -235,7 +235,7 @@ export const CK_CSS = `
 .ck .ck-bad.ck-bad { color: #9b1c1c !important; }
 .ck .ck-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 16px; }
 .ck .ck-stat { border: 1px solid #e1e7ec; border-radius: 12px; padding: 12px 14px; text-align: center; background: #ffffff; }
-.ck .ck-statlabel.ck-statlabel { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #2b3640 !important; }
+.ck .ck-statlabel.ck-statlabel { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #1c1917 !important; }
 .ck .ck-statval.ck-statval { font-size: 22px !important; font-weight: 700 !important; color: var(--deep) !important; margin-top: 4px !important; font-variant-numeric: tabular-nums; }
 .ck .ck-bars { margin: 0 0 16px; }
 .ck .ck-barrow { display: grid; grid-template-columns: 170px minmax(0, 1fr) 104px; align-items: center; gap: 12px; margin-bottom: 8px; }

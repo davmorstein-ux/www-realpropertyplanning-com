@@ -959,7 +959,7 @@ const CSS = `
 .afhdd .afhdd-verb { display: inline-block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin: 0 0 10px; color: #ffffff; }
 .afhdd .is-do .afhdd-verb { background: #1d6b43; }
 .afhdd .is-dont .afhdd-verb { background: #1B3A6B; }
-.afhdd .afhdd-kind { font-size: 14px !important; font-weight: 600 !important; color: #4a443e !important; margin: 4px 0 14px !important; letter-spacing: 0.02em; }
+.afhdd .afhdd-kind { font-size: 14px !important; font-weight: 600 !important; color: #1c1917 !important; margin: 4px 0 14px !important; letter-spacing: 0.02em; }
 .afhdd ul.afhdd-ul, .afhdd ol.afhdd-ol { margin: 0 0 14px !important; padding-left: 24px !important; }
 .afhdd ul.afhdd-ul { list-style: disc !important; }
 .afhdd ol.afhdd-ol { list-style: decimal !important; }

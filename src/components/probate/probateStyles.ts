@@ -55,9 +55,9 @@ export const PROBATE_CSS = `
 .prp .prp-paths { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 820px) { .prp .prp-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .prp .prp-path { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid ${A}; border-radius: 10px; padding: 20px 22px; scroll-margin-top: 180px; }
-.prp .prp-path .prp-who { font-size: 16px !important; color: #4a443e !important; margin: 0 0 12px !important; }
+.prp .prp-path .prp-who { font-size: 16px !important; color: #1c1917 !important; margin: 0 0 12px !important; }
 .prp ol.prp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; }
-.prp ol.prp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #3f3a35; }
+.prp ol.prp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #1c1917; }
 .prp ol.prp-steps li::marker { color: ${A}; font-weight: 700; }
 .prp ol.prp-steps a { display: inline; color: #1B3A6B !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .prp ol.prp-steps span { display: block; font-size: 16px !important; line-height: 1.45; margin-top: 2px; }
@@ -66,21 +66,21 @@ export const PROBATE_CSS = `
 .prp dl.prp-terms { display: grid; gap: 14px 28px; grid-template-columns: minmax(0, 1fr); margin: 0 0 16px; }
 @media (min-width: 760px) { .prp dl.prp-terms { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .prp dl.prp-terms dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700; font-size: 18px; color: #14283a; }
-.prp dl.prp-terms dt span { font-weight: 500; color: #4a443e; font-size: 15px; }
+.prp dl.prp-terms dt span { font-weight: 500; color: #1c1917; font-size: 15px; }
 .prp dl.prp-terms dd { margin: 4px 0 0; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
-.prp .prp-small { font-size: 15px !important; color: #3f3a35 !important; }
+.prp .prp-small { font-size: 15px !important; color: #1c1917 !important; }
 .prp .prp-note { background: #f7f4ef; border: 1px solid #e2ddd5; border-radius: 10px; padding: 16px 20px; }
 `;
 
 export const PROBATE_CSS_EXTRA = `
-.prp .prp-trail { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 14px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #3f4a54; }
+.prp .prp-trail { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 14px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #1c1917; }
 .prp .prp-trail a { color: #1B3A6B !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 .prp .prp-trail .prp-sep { color: #8a97a3; }
 .prp ol.prp-big { list-style: none !important; margin: 0; padding: 0; counter-reset: prpstep; display: grid; gap: 12px; }
 .prp ol.prp-big li { counter-increment: prpstep; display: grid !important; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; background: #ffffff; border: 1px solid #d3dfe8; border-radius: 12px; padding: 14px 16px; }
 .prp ol.prp-big li::before { content: counter(prpstep); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: ${A}; color: #ffffff; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700; font-size: 19px; }
 .prp ol.prp-big a { display: inline; color: #1B3A6B !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700 !important; font-size: 19px !important; line-height: 1.35; text-decoration: underline !important; text-underline-offset: 3px; }
-.prp ol.prp-big span { display: block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; line-height: 1.45; color: #3f3a35; margin-top: 4px; }
+.prp ol.prp-big span { display: block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; line-height: 1.45; color: #1c1917; margin-top: 4px; }
 .prp .prp-watch { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 820px) { .prp .prp-watch { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .prp .prp-watch > div { background: #fffaf0; border: 1px solid #ecd9a8; border-top: 4px solid #d9a521; border-radius: 10px; padding: 14px 16px; }

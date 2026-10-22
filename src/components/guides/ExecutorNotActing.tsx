@@ -36,7 +36,7 @@ const CSS = `
 .ena-steps li { counter-increment: s; position: relative; background: #fff; border: 1px solid #e3d9cc; border-radius: 10px; padding: 1rem 1.25rem 1rem 3.4rem; font-size: 17px; line-height: 1.6; color: #1f2933; }
 .ena-steps li::before { content: counter(s); position: absolute; left: 1rem; top: 1rem; width: 1.7rem; height: 1.7rem; border-radius: 999px; background: #25597e; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
 .ena-note { background: #f7f4ef; border-left: 5px solid #25597e; border-radius: 8px; padding: 1rem 1.25rem; }
-.ena-src.ena-src { font-size: 14px !important; color: #3d4a55 !important; }
+.ena-src.ena-src { font-size: 14px !important; color: #1c1917 !important; }
 .ena-sec a { color: #1B3A6B; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 `;
 

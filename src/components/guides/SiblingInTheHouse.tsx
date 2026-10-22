@@ -21,7 +21,7 @@ const CSS = `
 .sib-steps li { counter-increment: s; position: relative; background: #fff; border: 1px solid #e3d9cc; border-radius: 10px; padding: 1rem 1.25rem 1rem 3.4rem; font-size: 17px; line-height: 1.6; color: #1f2933; }
 .sib-steps li::before { content: counter(s); position: absolute; left: 1rem; top: 1rem; width: 1.7rem; height: 1.7rem; border-radius: 999px; background: #1f4058; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
 .sib-note { background: #fff; border-left: 5px solid #8a4214; border-radius: 8px; padding: 1rem 1.25rem; }
-.sib-src.sib-src { font-size: 14px !important; color: #3d4a55 !important; }
+.sib-src.sib-src { font-size: 14px !important; color: #1c1917 !important; }
 .sib-sec a { color: #1B3A6B; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 `;
 

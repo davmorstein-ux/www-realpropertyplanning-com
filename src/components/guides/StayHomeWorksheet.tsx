@@ -19,7 +19,7 @@ const CSS = `
 .shw-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 10px; }
 .shw-row label { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; flex: 1 1 auto; }
 .shw-in { display: inline-flex; align-items: center; border: 1px solid #b9c9d6; border-radius: 8px; background: #fff; flex: 0 0 130px; }
-.shw-in span { padding: 0 0 0 10px; color: #4b5563; font-size: 16px; }
+.shw-in span { padding: 0 0 0 10px; color: #1c1917; font-size: 16px; }
 .shw-in input { width: 100%; border: 0; background: transparent; padding: 9px 10px; font-size: 16px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-variant-numeric: tabular-nums; color: #14283a; outline: none; }
 .shw-in:focus-within { border-color: #25597e; box-shadow: 0 0 0 3px rgba(37,89,126,0.18); }
 .shw-out { margin-top: 22px; border-top: 1px solid #e2e8ee; padding-top: 18px; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -30,7 +30,7 @@ const CSS = `
 .shw-n { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; color: #14283a; font-variant-numeric: tabular-nums; line-height: 1.15; }
 .shw-l { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 14px; color: #2b2825; margin-top: 4px; line-height: 1.35; }
 .shw-say { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px; line-height: 1.6; color: #1c1917; margin: 16px 0 0; }
-.shw-note { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13.5px; color: #3f3a35; margin: 10px 0 0; }
+.shw-note { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 13.5px; color: #1c1917; margin: 10px 0 0; }
 .shw-reset { margin-top: 12px; background: none; border: 1px solid #b9c9d6; border-radius: 8px; padding: 7px 14px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 14px; color: #14283a; cursor: pointer; }
 `;
 

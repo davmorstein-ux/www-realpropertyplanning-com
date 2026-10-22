@@ -75,7 +75,7 @@ const RolesAndResponsibilities = () => {
         .r2-body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
         .r2-pill { display: block !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em; text-transform: uppercase; color: #1B3A6B !important; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .r2-title { font-family: 'DM Sans', 'DM Sans Fallback', serif !important; font-weight: 700 !important; font-size: 26px !important; color: #3f1216 !important; line-height: 1.15; margin-bottom: 4px; }
-        .r2-tagline { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-weight: 500 !important; font-size: 14px !important; color: #4e3f41 !important; line-height: 1.5; }
+        .r2-tagline { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-weight: 500 !important; font-size: 14px !important; color: #1c1917 !important; line-height: 1.5; }
         .r2-footer { height: 52px !important; flex-shrink: 0 !important; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,0.28); background: #FDFAF5; gap: 8px; justify-content: space-between; }
         .r2-label { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.04em; text-transform: uppercase; color: #1B3A6B !important; line-height: 1.4; flex: 1; }
         .r2-arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1B3A6B; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.25s; flex-shrink: 0; }

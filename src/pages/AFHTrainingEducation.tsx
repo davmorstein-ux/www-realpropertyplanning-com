@@ -149,7 +149,7 @@ const AFHTrainingEducation = () => (
               fontSize: 18,
               fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
-              color: "#342e28",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -252,7 +252,7 @@ const AFHTrainingEducation = () => (
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         background: "#edf0f3",
-                        color: "#3f3a35",
+                        color: "#1c1917",
                         padding: "3px 10px",
                         borderRadius: 3,
                       }}
@@ -375,7 +375,7 @@ const AFHTrainingEducation = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                color: "#2f2a25",
+                color: "#1c1917",
                 lineHeight: 1.75,
                 margin: 0,
               }}

@@ -184,7 +184,7 @@ const SellingAnInheritedHome = () => {
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
                 Guided Roadmap
               </p>
-              <p className="text-lg md:text-xl leading-relaxed mb-7 max-w-2xl" style={{ color: "#3f3a35" }}>
+              <p className="text-lg md:text-xl leading-relaxed mb-7 max-w-2xl" style={{ color: "#1c1917" }}>
                 A guided roadmap for heirs, executors, trustees, and families
                 navigating inherited property decisions, probate questions, valuation
                 concerns, property preparation, and major life transitions.

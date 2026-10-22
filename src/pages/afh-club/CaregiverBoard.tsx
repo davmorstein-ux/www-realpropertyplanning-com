@@ -53,7 +53,7 @@ const CSS = `
 .cgb .cgb-form { background: #fff; border: 1px solid #d9d2c6; border-radius: 12px; padding: 22px 20px; margin-top: 18px; display: grid; gap: 18px; }
 .cgb .cgb-field { display: grid; gap: 6px; }
 .cgb .cgb-q { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 700; color: #14283a; }
-.cgb .cgb-hint { font-size: 15px !important; color: #3f3a35 !important; margin: 0 !important; }
+.cgb .cgb-hint { font-size: 15px !important; color: #1c1917 !important; margin: 0 !important; }
 .cgb input.cgb-in, .cgb select.cgb-in, .cgb textarea.cgb-in { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; padding: 12px 14px; border: 1px solid #9a9183; border-radius: 8px; background: #fff; color: #1c1917; width: 100%; min-height: 48px; box-sizing: border-box; }
 .cgb textarea.cgb-in { min-height: 96px; }
 .cgb fieldset.cgb-set { border: 0; margin: 0; padding: 0; display: grid; gap: 6px; }
@@ -70,7 +70,7 @@ const CSS = `
 .cgb .cgb-list { display: grid; gap: 14px; margin-top: 8px; }
 .cgb .cgb-post { background: #fff; border: 1px solid #d9d2c6; border-radius: 12px; padding: 18px 20px; }
 .cgb .cgb-post p { margin: 0 0 6px !important; font-size: 17px !important; }
-.cgb .cgb-meta { font-size: 15px !important; color: #3f3a35 !important; }
+.cgb .cgb-meta { font-size: 15px !important; color: #1c1917 !important; }
 .cgb button.cgb-contact { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; background: #fff; color: ${GREEN}; border: 2px solid ${GREEN}; border-radius: 10px; padding: 10px 18px; min-height: 48px; font-weight: 700; cursor: pointer; margin-top: 8px; }
 .cgb .cgb-empty { background: #fff; border: 1px dashed #b9b1a4; border-radius: 12px; padding: 18px 20px; }
 .cgb a.cgb-link { color: ${GREEN} !important; font-weight: 700; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }

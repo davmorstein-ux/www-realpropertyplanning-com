@@ -197,7 +197,7 @@ const ExecutorsGuide = () => (
                       fontFamily: raleway,
                       fontSize: 24,
                       fontWeight: 800,
-                      color: gold,
+                      color: "#1B3A6B",
                       lineHeight: 1,
                       flexShrink: 0,
                       width: 40,
@@ -299,7 +299,7 @@ const ExecutorsGuide = () => (
                       fontWeight: 700,
                       textTransform: "uppercase",
                       letterSpacing: "0.1em",
-                      color: gold,
+                      color: "#1B3A6B",
                       textDecoration: "none",
                     }}
                   >

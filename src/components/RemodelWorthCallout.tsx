@@ -72,5 +72,5 @@ export default function RemodelWorthCallout({ style }: { style?: React.CSSProper
 const CSS = `
 .rpp-remodel-callout-h.rpp-remodel-callout-h { font-size: 24px !important; font-weight: 600 !important; line-height: 1.25 !important; color: #272421 !important; margin: 0 0 10px !important; }
 .rpp-remodel-callout-p.rpp-remodel-callout-p { font-size: 18px !important; line-height: 1.55 !important; color: #1c1917 !important; margin: 0 0 18px !important; }
-.rpp-remodel-callout-fine.rpp-remodel-callout-fine { font-size: 16px !important; line-height: 1.5 !important; color: #3d3833 !important; margin: 14px 0 0 !important; }
+.rpp-remodel-callout-fine.rpp-remodel-callout-fine { font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; margin: 14px 0 0 !important; }
 `;

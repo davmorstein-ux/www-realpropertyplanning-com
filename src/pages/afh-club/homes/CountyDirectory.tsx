@@ -162,7 +162,7 @@ const CountyDirectory = () => {
                 };
                 return (
                   <>
-                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4b5563" }}>
+                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1c1917" }}>
                       Largest markets
                     </p>
                     <nav aria-label="Largest counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "20px" }}>
@@ -170,7 +170,7 @@ const CountyDirectory = () => {
                         <Pill key={c.slug} c={c} />
                       ))}
                     </nav>
-                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4b5563" }}>
+                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1c1917" }}>
                       All counties, A to Z
                     </p>
                     <nav aria-label="All counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
@@ -210,7 +210,7 @@ const CountyDirectory = () => {
                     </h2>
                   )}
                   {countyGroups.length > 1 && (
-                    <p style={{ margin: "0 0 14px", fontSize: "18px", fontWeight: 600, color: "#374151" }}>
+                    <p style={{ margin: "0 0 14px", fontSize: "18px", fontWeight: 600, color: "#1c1917" }}>
                       {group.facilityCount.toLocaleString()} homes · {group.totalBeds.toLocaleString()} beds ·{" "}
                       {group.cityCount} cities ·{" "}
                       <Link
@@ -261,14 +261,14 @@ const CountyDirectory = () => {
                             style={{
                               margin: 0,
                               fontSize: "17px",
-                              color: "#374151",
+                              color: "#1c1917",
                               whiteSpace: "nowrap",
                             }}
                           >
                             {c.facilityCount} {c.facilityCount === 1 ? "home" : "homes"} · {c.totalBeds} beds
                           </p>
                         </div>
-                        <p style={{ margin: "4px 0 0", fontSize: "16px", color: "#4b5563" }}>
+                        <p style={{ margin: "4px 0 0", fontSize: "16px", color: "#1c1917" }}>
                           {c.developmentalDisabilities} serving developmental disabilities · {c.behaviorSupport} with
                           behavior support · {c.privatePay} private pay
                         </p>

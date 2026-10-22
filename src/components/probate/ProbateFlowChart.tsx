@@ -28,24 +28,24 @@ export const FLOW_CHART_CSS = `
 .pfc .pfc-branches { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; position: relative; }
 .pfc .pfc-col { display: flex; flex-direction: column; align-items: stretch; }
 .pfc .pfc-col + .pfc-col { margin-top: 8px; }
-.pfc .pfc-col + .pfc-col::before { content: "or"; display: block; text-align: center; font-size: 15px; font-weight: 700; color: #3d4a55; margin: 0 0 8px; }
+.pfc .pfc-col + .pfc-col::before { content: "or"; display: block; text-align: center; font-size: 15px; font-weight: 700; color: #1c1917; margin: 0 0 8px; }
 .pfc a.pfc-go { display: block; text-decoration: none !important; background: #ffffff; border: 2px solid ${A}; border-radius: 12px; padding: 14px 16px; text-align: center; color: ${INK} !important; transition: background .15s, color .15s; }
 .pfc a.pfc-go b { display: block; font-size: 18px !important; font-weight: 700 !important; line-height: 1.3; color: inherit !important; }
-.pfc a.pfc-go span { display: block; font-size: 15px !important; font-weight: 400 !important; line-height: 1.4; margin-top: 4px; color: #3f4a54 !important; }
+.pfc a.pfc-go span { display: block; font-size: 15px !important; font-weight: 400 !important; line-height: 1.4; margin-top: 4px; color: #1c1917 !important; }
 .pfc a.pfc-go em { display: inline-block; font-style: normal; font-size: 15px !important; font-weight: 700 !important; margin-top: 8px; color: ${A} !important; }
 @media (hover: hover) { .pfc a.pfc-go:hover { background: ${A}; color: #ffffff !important; } .pfc a.pfc-go:hover span, .pfc a.pfc-go:hover em { color: #ffffff !important; } }
 .pfc a.pfc-go:focus-visible { outline: 3px solid #d9a521; outline-offset: 2px; }
 .pfc a.pfc-go.pfc-here { background: ${A}; color: #ffffff !important; }
 .pfc a.pfc-go.pfc-here span, .pfc a.pfc-go.pfc-here em { color: #ffffff !important; }
 .pfc .pfc-note { background: #eef3f7; border: 1px dashed #9fb4c4; border-radius: 12px; padding: 12px 14px; text-align: center; font-size: 16px; font-weight: 700; }
-.pfc .pfc-note small { display: block; font-size: 14px; font-weight: 500; color: #3f4a54; margin-top: 2px; }
+.pfc .pfc-note small { display: block; font-size: 14px; font-weight: 500; color: #1c1917; margin-top: 2px; }
 .pfc .pfc-roles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
 .pfc .pfc-merge { margin-top: 26px; }
 .pfc .pfc-sell { max-width: 520px; margin: 0 auto; border-width: 3px; }
 .pfc .pfc-always { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
 .pfc .pfc-always a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 18px; border-radius: 999px; border: 1px solid #b7cbd9; background: #ffffff; color: ${A} !important; font-size: 16px !important; font-weight: 700 !important; text-decoration: none !important; }
 @media (hover: hover) { .pfc .pfc-always a:hover { background: ${A}; color: #ffffff !important; } }
-.pfc .pfc-always-label { width: 100%; text-align: center; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3d4a55; }
+.pfc .pfc-always-label { width: 100%; text-align: center; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1c1917; }
 @media (min-width: 900px) {
   .pfc .pfc-branches { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding-top: 26px; }
   .pfc .pfc-branches::before { content: ""; position: absolute; top: 0; left: calc(100% / 6); right: calc(100% / 6); height: 3px; background: #9fb4c4; }

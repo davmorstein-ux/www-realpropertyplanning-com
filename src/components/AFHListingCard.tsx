@@ -7,10 +7,10 @@ import { financingRouteFor } from "@/data/afhLenders";
 
 const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
-const SLATE = "#443e38";
+const SLATE = "#1c1917";
 const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";
-const GRAY_TEXT = "#3a2d2f";
+const GRAY_TEXT = "#1c1917";
 const WHITE = "#ffffff";
 
 const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) => (
@@ -385,7 +385,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         .afhl-attr, .afhl-attr * { font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; }
         .afhl-attr { font-weight: 600 !important; }
         .afhl-attr a { text-decoration: underline !important; text-underline-offset: 3px; font-weight: 600 !important; }
-        .afhl-src, .afhl-src * { font-size: 14px !important; color: #3a2d2f !important; }
+        .afhl-src, .afhl-src * { font-size: 14px !important; color: #1c1917 !important; }
       ` }} />
       <p className="afhl-attr" style={{ margin: 0, overflowWrap: "anywhere" }}>
         Listing Broker:{" "}

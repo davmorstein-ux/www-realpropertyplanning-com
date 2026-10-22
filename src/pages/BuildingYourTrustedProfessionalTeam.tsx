@@ -217,7 +217,7 @@ const Section = ({
                     {s.title}
                   </h3>
                 </div>
-                <p className="rpp-m2-text" style={{ fontSize: 14, color: "#5c474a", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
+                <p className="rpp-m2-text" style={{ fontSize: 14, color: "#1c1917", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
               </div>
 
               {/* CTA bar */}
@@ -401,7 +401,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                           >
                             {s.title}
                           </h3>
-                          <p style={{ fontSize: 14, color: "#5c474a", lineHeight: 1.6 }}>{s.description}</p>
+                          <p style={{ fontSize: 14, color: "#1c1917", lineHeight: 1.6 }}>{s.description}</p>
                         </div>
                         <div style={{ padding: "12px 20px 16px" }}>
                           <div

@@ -120,7 +120,7 @@ const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
                 padding: "18px 16px",
                 fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                 fontSize: 16,
-                color: "#5c474a",
+                color: "#1c1917",
               }}
             >
               No pages match "{query}"

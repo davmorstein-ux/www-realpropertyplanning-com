@@ -15,14 +15,14 @@ const CSS = `
 .qa-item { background: #fff; border: 1px solid #e3d9cc; border-left: 4px solid #1f4058; border-radius: 10px; padding: 1.15rem 1.35rem 1.1rem; margin: 0 0 0.9rem; }
 .qa-q.qa-q { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 20px !important; font-weight: 700; color: #1c1917 !important; line-height: 1.3; margin: 0 0 0.45rem !important; }
 .qa-a.qa-a { font-size: 17px !important; line-height: 1.65 !important; color: #1f2933 !important; margin: 0 !important; }
-.qa-meta.qa-meta { font-size: 14.5px !important; color: #3d4a55 !important; margin: 0.55rem 0 0 !important; display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.qa-meta.qa-meta { font-size: 14.5px !important; color: #1c1917 !important; margin: 0.55rem 0 0 !important; display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
 .qa-meta a { color: #1B3A6B !important; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .qa-table-wrap { overflow-x: auto; margin: 0.4rem 0 0; }
 .qa-table { width: 100%; border-collapse: collapse; font-size: 16px; background: #fff; border: 1px solid #e3d9cc; border-radius: 10px; overflow: hidden; }
 .qa-table th, .qa-table td { text-align: left; padding: 0.6rem 0.9rem; border-bottom: 1px solid #efe7dc; color: #1f2933; }
 .qa-table th { background: #f3eee5; font-weight: 700; color: #1c1917; }
 .qa-table td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
-.qa-note.qa-note { font-size: 13.5px !important; color: #3d4a55 !important; margin: 0.5rem 0 0 !important; }
+.qa-note.qa-note { font-size: 13.5px !important; color: #1c1917 !important; margin: 0.5rem 0 0 !important; }
 `;
 
 const QuickAnswers = () => {

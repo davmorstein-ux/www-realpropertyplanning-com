@@ -54,7 +54,7 @@ export default function AFHDirectoryNextSteps({ city, style }: { city?: string; 
                   <Link to={l.href} className="afh-next-link" style={{ color: NAVY }}>
                     {l.label}
                   </Link>
-                  <div style={{ fontSize: 16, lineHeight: 1.5, color: "#44403c", marginTop: 2 }}>{l.note}</div>
+                  <div style={{ fontSize: 16, lineHeight: 1.5, color: "#1c1917", marginTop: 2 }}>{l.note}</div>
                 </li>
               ))}
             </ul>

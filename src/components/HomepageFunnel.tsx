@@ -95,7 +95,7 @@ const HomepageFunnel = () => (
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
         font-size: 16px !important;
         font-weight: 500 !important;
-        color: #443e38 !important;
+        color: #1c1917 !important;
         line-height: 1.5 !important;
         margin: 0 !important;
         opacity: 1 !important;

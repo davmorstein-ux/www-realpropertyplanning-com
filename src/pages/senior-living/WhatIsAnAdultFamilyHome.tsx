@@ -82,7 +82,7 @@ const articleSchema = {
 const bodyText: React.CSSProperties = {
   fontSize: 18,
   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-  color: "#342e28",
+  color: "#1c1917",
   lineHeight: 1.85,
   margin: "0 0 16px",
 };

@@ -394,7 +394,7 @@ export default function ProviderTile({
                   <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 14, fontWeight: 700, color: "#142c52" }}>
                     {name}
                   </div>
-                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 10, color: "#444444" }}>{title}</div>
+                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 10, color: "#1c1917" }}>{title}</div>
                 </div>
               )}
               {photo2 && (
@@ -418,7 +418,7 @@ export default function ProviderTile({
                   <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 14, fontWeight: 700, color: "#142c52" }}>
                     {name2}
                   </div>
-                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 10, color: "#444444" }}>{title2}</div>
+                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 10, color: "#1c1917" }}>{title2}</div>
                 </div>
               )}
             </div>
@@ -496,7 +496,7 @@ export default function ProviderTile({
                 width: "100%",
               }}
             >
-              <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 11, color: "#444444" }}>{title}</div>
+              <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 11, color: "#1c1917" }}>{title}</div>
             </div>
           </>
         )}
@@ -538,7 +538,7 @@ export default function ProviderTile({
               style={{
                 fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontSize: 13,
-                color: "#5c474a",
+                color: "#1c1917",
                 fontStyle: "italic",
                 lineHeight: 1.5,
               }}

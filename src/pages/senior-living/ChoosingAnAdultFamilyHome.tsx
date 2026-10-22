@@ -153,7 +153,7 @@ const CSS = `
 .cafh-print { display: inline-flex; align-items: center; gap: 8px; background: #1B3A6B; color: #fff; border: 0; border-radius: 8px; padding: 11px 18px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; }
 .cafh-print:hover { background: #142c52; }
 .cafh-note { background: #fff; border-left: 5px solid #1f4058; border-radius: 8px; padding: 16px 20px; }
-.cafh-src.cafh-src { font-size: 14px !important; color: #3d4a55 !important; line-height: 1.6 !important; }
+.cafh-src.cafh-src { font-size: 14px !important; color: #1c1917 !important; line-height: 1.6 !important; }
 @media print {
   #root > *:not(#main-content), header, footer, nav, .cafh-noprint { display: none !important; }
   .cafh { -webkit-print-color-adjust: exact; print-color-adjust: exact; }

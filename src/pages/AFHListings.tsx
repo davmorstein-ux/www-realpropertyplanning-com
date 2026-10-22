@@ -18,10 +18,10 @@ import ArticleCover from "@/components/ArticleCover";
 
 const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
-const SLATE = "#443e38";
+const SLATE = "#1c1917";
 const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";
-const GRAY_TEXT = "#3a2d2f";
+const GRAY_TEXT = "#1c1917";
 const WHITE = "#ffffff";
 
 const BackButton = () => (

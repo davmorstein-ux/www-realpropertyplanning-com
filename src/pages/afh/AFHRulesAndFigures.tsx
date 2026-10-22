@@ -152,9 +152,9 @@ const CSS = `
 .afhp .afhp-paths { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 820px) { .afhp .afhp-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .afhp .afhp-path { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid #0a5648; border-radius: 10px; padding: 20px 22px; scroll-margin-top: 180px; }
-.afhp .afhp-path .afhp-who { font-size: 16px !important; color: #4a443e !important; margin: 0 0 12px !important; }
+.afhp .afhp-path .afhp-who { font-size: 16px !important; color: #1c1917 !important; margin: 0 0 12px !important; }
 .afhp ol.afhp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; }
-.afhp ol.afhp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #3f3a35; }
+.afhp ol.afhp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #1c1917; }
 .afhp ol.afhp-steps li::marker { color: #0a5648; font-weight: 700; }
 .afhp ol.afhp-steps a { display: inline; color: #1B3A6B !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhp ol.afhp-steps span { display: block; font-size: 16px !important; line-height: 1.45; margin-top: 2px; }
@@ -163,13 +163,13 @@ const CSS = `
 .afhp dl.afhp-terms { display: grid; gap: 14px 28px; grid-template-columns: minmax(0, 1fr); margin: 0 0 16px; }
 @media (min-width: 760px) { .afhp dl.afhp-terms { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .afhp dl.afhp-terms dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700; font-size: 18px; color: #192A19; }
-.afhp dl.afhp-terms dt span { font-weight: 500; color: #4a443e; font-size: 15px; }
+.afhp dl.afhp-terms dt span { font-weight: 500; color: #1c1917; font-size: 15px; }
 .afhp dl.afhp-terms dd { margin: 4px 0 0; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
 .afhp ul.afhp-recent { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid #e2ddd5; }
 .afhp ul.afhp-recent li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid #e2ddd5; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 17px; }
-.afhp ul.afhp-recent li span { color: #4a443e; font-size: 15px; }
-.afhp .afhp-small { font-size: 15px !important; color: #3f3a35 !important; }
-.afhp .afhp-trail { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #3f4a54; margin: 0 0 14px; }
+.afhp ul.afhp-recent li span { color: #1c1917; font-size: 15px; }
+.afhp .afhp-small { font-size: 15px !important; color: #1c1917 !important; }
+.afhp .afhp-trail { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #1c1917; margin: 0 0 14px; }
 .afhp .afhp-trail a { color: #1B3A6B !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhp details.afhp-fold { background: #ffffff; border: 1px solid #d5ddd9; border-radius: 12px; scroll-margin-top: 180px; }
 .afhp details.afhp-fold + details.afhp-fold { margin-top: 10px; }

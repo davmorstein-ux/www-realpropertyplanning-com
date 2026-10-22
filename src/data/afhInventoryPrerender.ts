@@ -236,11 +236,11 @@ const listingCard = (l: AFHListing): string => {
   const priceLabel = l.priceLabel || (l.listingType === "business" ? "Business asking price" : "Asking price");
   if (l.marketStatus === "sold" && l.soldPrice) {
     p.push(
-      `<p style="margin:0 0 6px;font-size:1.1rem"><strong>Sold ${esc(l.soldPrice)}</strong>${l.soldDate ? ` on ${formatVerifiedDate(l.soldDate)}` : ""} <span style="color:#444444;font-size:0.9rem">— last listed at ${esc(l.price)}</span></p>`
+      `<p style="margin:0 0 6px;font-size:1.1rem"><strong>Sold ${esc(l.soldPrice)}</strong>${l.soldDate ? ` on ${formatVerifiedDate(l.soldDate)}` : ""} <span style="color:#1c1917;font-size:0.9rem">— last listed at ${esc(l.price)}</span></p>`
     );
   } else {
     p.push(
-      `<p style="margin:0 0 6px;font-size:1.1rem"><strong>${esc(l.price)}</strong> <span style="color:#444444;font-size:0.9rem">— ${esc(priceLabel)}</span> · <strong>${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong></p>`
+      `<p style="margin:0 0 6px;font-size:1.1rem"><strong>${esc(l.price)}</strong> <span style="color:#1c1917;font-size:0.9rem">— ${esc(priceLabel)}</span> · <strong>${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong></p>`
     );
   }
   p.push(
@@ -266,7 +266,7 @@ const listingCard = (l: AFHListing): string => {
     );
   }
   p.push(
-    `<p style="margin:0;color:#444444;font-size:0.85rem">Last verified ${formatVerifiedDate(l.lastVerified)}${
+    `<p style="margin:0;color:#1c1917;font-size:0.85rem">Last verified ${formatVerifiedDate(l.lastVerified)}${
       l.statusChanged ? ` · status changed ${formatVerifiedDate(l.statusChanged)}` : ""
     }</p>`
   );
@@ -278,7 +278,7 @@ const disclaimer = (listings: AFHListing[]): string => {
   const hasNwmls = listings.some((l) => l.source === "nwmls");
   const hasOther = listings.some((l) => l.source !== "nwmls");
   return (
-    `<p style="margin:16px 0 0;padding:14px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa;font-size:0.8rem;color:#444444;line-height:1.7;text-align:center">` +
+    `<p style="margin:16px 0 0;padding:14px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa;font-size:0.8rem;color:#1c1917;line-height:1.7;text-align:center">` +
     (hasNwmls ? "NWMLS listings are provided courtesy of the Northwest Multiple Listing Service. " : "") +
     (hasOther
       ? "Listings marked RMLS, BizBuySell, or direct are summarized from public sources and link to the listing brokerage; photos and remarks are not reproduced. "
@@ -368,7 +368,7 @@ export function renderAfhInventory(
   if (scope.sold && listings.length > 0) {
     const st = soldStats(listings);
     const cell = (k: string, v: string) =>
-      `<div style="padding:12px 14px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa"><div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#444444">${k}</div><div style="font-size:1.3rem;font-weight:700;color:#1B3A6B">${v}</div></div>`;
+      `<div style="padding:12px 14px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa"><div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#1c1917">${k}</div><div style="font-size:1.3rem;font-weight:700;color:#1B3A6B">${v}</div></div>`;
     html.push(`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 8px">`);
     if (st.medianSold !== null) html.push(cell("Median sold price", money0(st.medianSold)));
     if (st.medianPerBed !== null) html.push(cell("Median sold $ per bedroom", money0(st.medianPerBed)));
@@ -377,11 +377,11 @@ export function renderAfhInventory(
     if (st.medianDaysOnMarket !== null) html.push(cell("Median days on market", String(Math.round(st.medianDaysOnMarket))));
     html.push(`</div>`);
     html.push(
-      `<p style="color:#444444;font-size:0.9rem;margin:0 0 12px">By classification at sale: ${st.byStatus.map((b) => `${esc(b.label)} (${b.count})`).join(" · ")}. Per-bedroom figures use the listed bedroom count, not licensed capacity. Verified ${verified ? formatVerifiedDate(verified) : ""}.</p>`
+      `<p style="color:#1c1917;font-size:0.9rem;margin:0 0 12px">By classification at sale: ${st.byStatus.map((b) => `${esc(b.label)} (${b.count})`).join(" · ")}. Per-bedroom figures use the listed bedroom count, not licensed capacity. Verified ${verified ? formatVerifiedDate(verified) : ""}.</p>`
     );
   } else if (verified) {
     html.push(
-      `<p style="color:#444444;font-size:0.9rem;margin:0 0 12px">Listings last verified ${formatVerifiedDate(verified)}. Sold, expired, and withdrawn listings are removed from this list.</p>`
+      `<p style="color:#1c1917;font-size:0.9rem;margin:0 0 12px">Listings last verified ${formatVerifiedDate(verified)}. Sold, expired, and withdrawn listings are removed from this list.</p>`
     );
   }
   if (scope.sold) {
@@ -627,7 +627,7 @@ export function buildAfhListingRoutes(cityRoutes: Record<string, string>, facili
     const b: string[] = [];
     b.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
     b.push(
-      `<p style="font-size:0.9rem;color:#444444;margin:0 0 12px"><a href="/afh-club" style="color:#1a365d">AFH Club</a> › <a href="/afh-club/listings" style="color:#1a365d">Listings</a>${
+      `<p style="font-size:0.9rem;color:#1c1917;margin:0 0 12px"><a href="/afh-club" style="color:#1a365d">AFH Club</a> › <a href="/afh-club/listings" style="color:#1a365d">Listings</a>${
         cityRoute ? ` › <a href="${cityRoute}" style="color:#1a365d">${esc(l.city)}</a>` : ""
       } › ${esc(sourceRef(l))}</p>`
     );

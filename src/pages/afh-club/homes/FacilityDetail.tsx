@@ -26,7 +26,7 @@ const Row = ({ label, value }: { label: string; value: string }) => (
         borderTop: `1px solid ${BORDER}`,
         fontSize: "16px",
         fontWeight: 600,
-        color: "#374151",
+        color: "#1c1917",
         width: "42%",
       }}
     >

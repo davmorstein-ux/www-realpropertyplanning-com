@@ -213,7 +213,7 @@ const AFHResources = () => (
               fontSize: 18,
               fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontWeight: 400,
-              color: "#342e28",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: 0,
               maxWidth: 680,
@@ -224,7 +224,7 @@ const AFHResources = () => (
           </p>
           <p
             className="rpp-afhres-start"
-            style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#342e28", lineHeight: 1.7, margin: "16px 0 0" }}
+            style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", lineHeight: 1.7, margin: "16px 0 0" }}
           >
             <strong>New here?</strong> Start with{" "}
             <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
@@ -481,7 +481,7 @@ const AFHResources = () => (
                   style={{
                     fontSize: 16,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                    color: "#5a5a5a",
+                    color: "#1c1917",
                     lineHeight: 1.6,
                     margin: "0 0 10px",
                   }}

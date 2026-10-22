@@ -136,13 +136,16 @@ nav [class*="dropdown"] button svg {
   margin-top: auto !important;
 }
 
-/* Tile headings — maximum 2 lines */
-.card h2,
-.card h3,
-[class*="card"] h2,
-[class*="card"] h3,
-[class*="tile"] h2,
-[class*="tile"] h3 {
+/* Tile headings — maximum 2 lines.
+   Oct 22, 2026: skips headings that set their own size (inline font-size or a
+   text-[2x/3x px] class). "card" also matches the bg-card background utility,
+   so whole sections were shrinking their headings to 17.6px. */
+.card h2:where(:not([style*="font-size"]):not([class*="text-[2"]):not([class*="text-[3"])),
+.card h3:where(:not([style*="font-size"]):not([class*="text-[2"]):not([class*="text-[3"])),
+[class*="card"] h2:where(:not([style*="font-size"]):not([class*="text-[2"]):not([class*="text-[3"])),
+[class*="card"] h3:where(:not([style*="font-size"]):not([class*="text-[2"]):not([class*="text-[3"])),
+[class*="tile"] h2:where(:not([style*="font-size"]):not([class*="text-[2"]):not([class*="text-[3"])),
+[class*="tile"] h3:where(:not([style*="font-size"]):not([class*="text-[2"]):not([class*="text-[3"])) {
   font-size: 1.1rem !important;
   line-height: 1.2 !important;
   overflow: hidden !important;
@@ -610,7 +613,7 @@ main,
   background-color: rgba(201, 168, 76, 0.06) !important;
 }
 .homepage-faq-trigger {
-  color: #463f37 !important;
+  color: #1c1917 !important;
   font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
   font-size: 16px !important;
   font-weight: 700 !important;
@@ -653,7 +656,7 @@ main,
   border: 1px solid #b9c6dc !important;
   padding: 20px 24px !important;
   text-decoration: none !important;
-  color: #463f37 !important;
+  color: #1c1917 !important;
 }
 .accordion-trigger-styled:hover {
   color: hsl(var(--gold-dark)) !important;
@@ -4390,7 +4393,7 @@ hr[class*="opacity-"],
 
 ::placeholder {
   /* Kept lighter than body text on purpose, so a hint is never mistaken for a typed answer. */
-  color: #5b5753 !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 
@@ -5636,7 +5639,7 @@ main .rpp-hero-cta .rpp-hero-cta-lead {
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
   font-size: clamp(16px, 1.3vw, 19px);
   line-height: 1.45 !important;
-  color: #3a3531;
+  color: #1c1917;
   max-width: 760px;
   margin: 0 auto 1rem !important;
 }
@@ -5927,3 +5930,137 @@ html body main li.rpp-hero-point.rpp-hero-point::marker { content: none !importa
    by the global heading/paragraph margins, which grew with the Oct 21, 2026
    spacing pass and doubled the length of the 172-city list. */
 html body main li.rpp-dir-row :is(h3, p) { margin-bottom: 0 !important; }
+
+/* ============================================================
+   READABLE TEXT FLOOR (Oct 22, 2026, David: "Nowhere on the site
+   should small light grey text be the case.")
+   1. No reading text under 16px in main. Inline sizes 10-15.5px and the
+      small Tailwind sizes are raised to 16px. Uppercase / letter-spaced
+      eyebrow labels are left alone (short labels, not reading text).
+   2. No grey text: inline greys lighter than near-black become #1c1917.
+   Component classes with their own small or grey CSS are listed below.
+   Checked with a rendered scan of every page (desktop and phone).
+   ============================================================ */
+html body main [style*="font-size: 10px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 10.5px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 11px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 11.5px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 12px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 12.5px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 13px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 13.5px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 14px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 14.5px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 15px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main [style*="font-size: 15.5px"]:not([style*="uppercase"]):not([style*="letter-spacing"]),
+html body main .text-xs,
+html body main .text-\[10px\],
+html body main .text-\[11px\],
+html body main .text-\[12px\],
+html body main .text-\[13px\],
+html body main .text-\[14px\],
+html body main .text-\[15px\] {
+  font-size: 16px !important;
+}
+html body main [style*="color: rgb(68, 64, 60)"],
+html body main [style*="color: rgb(52, 46, 40)"],
+html body main [style*="color: rgb(61, 56, 51)"],
+html body main [style*="color: rgb(58, 45, 47)"],
+html body main [style*="color: rgb(70, 63, 55)"],
+html body main [style*="color: rgb(63, 58, 53)"],
+html body main [style*="color: rgb(74, 69, 64)"],
+html body main [style*="color: rgb(68, 62, 56)"],
+html body main [style*="color: rgb(68, 68, 68)"],
+html body main [style*="color: rgb(59, 55, 51)"],
+html body main [style*="color: rgb(63, 74, 84)"],
+html body main [style*="color: rgb(107, 114, 128)"],
+html body main [style*="color: rgb(75, 85, 99)"],
+html body main [style*="color: rgb(55, 65, 81)"],
+html body main [style*="color: rgb(87, 83, 78)"],
+html body main [style*="color: rgb(120, 113, 108)"],
+html body main [style*="color: rgb(68, 64, 59)"],
+html body main [style*="color: rgb(82, 82, 91)"],
+html body main [style*="color: rgb(113, 113, 122)"],
+html body main [style*="color: rgb(100, 116, 139)"],
+html body main [style*="color: rgb(71, 85, 105)"],
+html body main [style*="color: rgb(51, 65, 85)"],
+html body main [style*="color: rgb(64, 64, 64)"],
+html body main [style*="color: rgb(85, 85, 85)"],
+html body main [style*="color: rgb(102, 102, 102)"],
+html body main [style*="color: rgb(119, 119, 119)"],
+html body main [style*="color: rgb(136, 136, 136)"],
+html body main [style*="color: rgb(92, 86, 80)"],
+html body main [style*="color: rgb(80, 74, 68)"],
+html body main [style*="color: rgb(90, 84, 78)"],
+html body main [style*="color: rgb(105, 98, 92)"],
+html body main [style*="color: rgb(74, 68, 62)"],
+html body main [style*="color: rgb(58, 53, 48)"],
+html body main [style*="color: rgb(77, 72, 66)"],
+html body main [style*="color: rgb(61, 57, 53)"],
+html body main [style*="color: rgb(65, 60, 55)"],
+html body main [style*="color: rgb(55, 52, 48)"] {
+  color: #1c1917 !important;
+}
+
+/* Readable text floor, part 2 (Oct 22, 2026): component classes that set
+   their own small size or grey colour with !important. Each selector repeats
+   the class four times so it outranks the component's own doubled/tripled
+   class rules. Plus the site's naming patterns for fine print
+   (*-small, *-fine, *-meta), which are reading text, not labels. */
+html body main .pfc-then.pfc-then.pfc-then.pfc-then,
+html body main .afhl-src.afhl-src.afhl-src.afhl-src,
+html body main .ck-label.ck-label.ck-label.ck-label,
+html body main .ck-hint.ck-hint.ck-hint.ck-hint,
+html body main .ck-source.ck-source.ck-source.ck-source,
+html body main .ck-barname.ck-barname.ck-barname.ck-barname,
+html body main .ck-barval.ck-barval.ck-barval.ck-barval,
+html body main .coc2-source.coc2-source.coc2-source.coc2-source,
+html body main .coc2-note.coc2-note.coc2-note.coc2-note,
+html body main .coc2-afhhead.coc2-afhhead.coc2-afhhead.coc2-afhhead,
+html body main .coc2-reslabel.coc2-reslabel.coc2-reslabel.coc2-reslabel,
+html body main .coc2-figlabel.coc2-figlabel.coc2-figlabel.coc2-figlabel,
+html body main .rpp-news-label.rpp-news-label.rpp-news-label.rpp-news-label,
+html body main .cafh-src.cafh-src.cafh-src.cafh-src,
+html body main .afhdd-kind.afhdd-kind.afhdd-kind.afhdd-kind,
+html body main .rpp-afhsteps-hint.rpp-afhsteps-hint.rpp-afhsteps-hint.rpp-afhsteps-hint,
+html body main .rpp-calcswitch-per.rpp-calcswitch-per.rpp-calcswitch-per.rpp-calcswitch-per,
+html body main .afhp-fig-l.afhp-fig-l.afhp-fig-l.afhp-fig-l,
+html body main .afhd-fig-l.afhd-fig-l.afhd-fig-l.afhd-fig-l,
+html body main .afhg-aka.afhg-aka.afhg-aka.afhg-aka,
+html body main .rpp-m2-text.rpp-m2-text.rpp-m2-text.rpp-m2-text,
+html body main .pfc-then.pfc-then.pfc-then.pfc-then :where(a, span, strong, em),
+html body main .afhl-src.afhl-src.afhl-src.afhl-src :where(a, span, strong, em),
+html body main .ck-source.ck-source.ck-source.ck-source :where(a, span, strong, em),
+html body main .coc2-source.coc2-source.coc2-source.coc2-source :where(a, span, strong, em),
+html body main [class*="-small"][class*="-small"][class*="-small"][class*="-small"],
+html body main [class*="-fine"][class*="-fine"][class*="-fine"][class*="-fine"],
+html body main [class*="-meta"][class*="-meta"][class*="-meta"][class*="-meta"] {
+  font-size: 16px !important;
+}
+html body main .rpp-push-fine.rpp-push-fine.rpp-push-fine.rpp-push-fine,
+html body main .rpp-why-sign.rpp-why-sign.rpp-why-sign.rpp-why-sign,
+html body main .rpp-policy-meta.rpp-policy-meta.rpp-policy-meta.rpp-policy-meta,
+html body main .rpp-calcswitch-blurb.rpp-calcswitch-blurb.rpp-calcswitch-blurb.rpp-calcswitch-blurb,
+html body main .mp-big-s.mp-big-s.mp-big-s.mp-big-s,
+html body main .cafh-src.cafh-src.cafh-src.cafh-src,
+html body main .afhdd-kind.afhdd-kind.afhdd-kind.afhdd-kind,
+html body main .accordion-trigger-styled.accordion-trigger-styled.accordion-trigger-styled.accordion-trigger-styled,
+html body main .text-slate-700.text-slate-700.text-slate-700.text-slate-700,
+html body main .text-slate-600.text-slate-600.text-slate-600.text-slate-600,
+html body main .text-gray-600.text-gray-600.text-gray-600.text-gray-600,
+html body main .text-gray-500.text-gray-500.text-gray-500.text-gray-500,
+html body main .text-stone-600.text-stone-600.text-stone-600.text-stone-600,
+html body main .text-stone-500.text-stone-500.text-stone-500.text-stone-500,
+html body main .text-neutral-600.text-neutral-600.text-neutral-600.text-neutral-600,
+html body main .afhg-aka.afhg-aka.afhg-aka.afhg-aka,
+html body main .rpp-m2-text.rpp-m2-text.rpp-m2-text.rpp-m2-text,
+html body main [class*="-small"][class*="-small"][class*="-small"][class*="-small"],
+html body main [class*="-fine"][class*="-fine"][class*="-fine"][class*="-fine"],
+html body main [class*="-meta"][class*="-meta"][class*="-meta"][class*="-meta"] {
+  color: #1c1917 !important;
+}
+
+/* "This Guidance Is Right For You If…" heading (JourneyOrientation): the card
+   rules make headings inside bg-card sections display:flex, which drops
+   text-center. Keep it a centred block. */
+html body main h2.rpp-jo-title.rpp-jo-title { display: block !important; text-align: center !important; }
