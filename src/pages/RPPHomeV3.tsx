@@ -827,7 +827,9 @@ const RPPHomeV3 = () => {
             ` }} />
 
             {/* ── Ask a question (Oct 8, 2026): answers from the guides themselves ── */}
-            <div style={{ margin: "0 0 4.5rem" }}>
+            {/* Top margin (Oct 21, 2026, David): the box sat ~16px under the
+                tiles, and the tile pulse grows them 3% into that gap. */}
+            <div style={{ margin: "clamp(40px, 4vw, 56px) 0 4.5rem" }}>
               <AskBox />
               {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
               <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "18px auto 0", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 19, lineHeight: 1.5, color: "#1c1917" }}>
