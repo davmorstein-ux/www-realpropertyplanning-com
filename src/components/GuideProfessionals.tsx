@@ -22,7 +22,7 @@ export default function GuideProfessionals() {
   if (OWN_PLACEMENT.some((p) => path.startsWith(p))) return null;
   if (professionalsForTopic(path).length === 0) return null;
   return (
-    <div className="container px-6 lg:px-8" style={{ paddingTop: 8 }}>
+    <div className="container px-6 lg:px-8" style={{ paddingTop: 32 /* was 8; on guides with an author box the two boxes looked stuck together (Oct 21, 2026) */ }}>
       <TopicProfessionals path={path} style={{ maxWidth: 768, margin: "0 auto" }} />
     </div>
   );

@@ -579,7 +579,9 @@ const RelatedServices = ({
         <div className="max-w-[1140px] mx-auto">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-lg">{heading}</p>
           {intro && <p className="text-muted-foreground text-xl mb-8 max-w-2xl">{intro}</p>}
-          <div className="relative">
+          {/* Inline top margin: the global p rule's !important margin-bottom
+              overrides mb-8 on the intro, which left the cards ~10px under it. */}
+          <div className="relative" style={{ marginTop: 22 }}>
             <div ref={gridRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {links.map((link, index) => (
                 <Link

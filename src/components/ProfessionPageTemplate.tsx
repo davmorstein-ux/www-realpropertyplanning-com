@@ -272,7 +272,9 @@ const ProfessionPageTemplate = ({
             <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
               Families Often Also Work With
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Inline top margin: the global h2 rule's !important margin-bottom
+                overrides mb-6, which left the cards ~6px under the heading. */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ marginTop: 20 }}>
               {relatedProfessions.map((rp) => (
                 <Link
                   key={rp.href}
