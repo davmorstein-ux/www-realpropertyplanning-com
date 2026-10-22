@@ -230,7 +230,7 @@ const CountyDirectory = () => {
                     }}
                   >
                     {group.cities.map((c) => (
-                      <li key={c.citySlug} style={{ borderTop: `1px solid ${BORDER}`, padding: "18px 0" }}>
+                      <li key={c.citySlug} className="rpp-dir-row" style={{ borderTop: `1px solid ${BORDER}`, padding: "18px 0" }}>
                         <div
                           style={{
                             display: "flex",

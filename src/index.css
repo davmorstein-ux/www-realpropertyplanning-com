@@ -16,7 +16,10 @@ h4 {
   font-family: "DM Sans", "DM Sans Fallback", system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.2 !important;
-  margin-bottom: 0.4rem !important;
+  /* 0.5em, was 0.4rem (~6px) (Oct 21, 2026, David's spacing pass): scales
+     with the heading, so an h2 gets ~18px before its text and a card
+     heading ~10px. */
+  margin-bottom: 0.5em !important;
 }
 body,
 p,
@@ -31,7 +34,9 @@ body {
 }
 p {
   line-height: 1.4 !important;
-  margin-bottom: 0.6rem !important;
+  /* 1rem, was 0.6rem (~10px) (Oct 21, 2026): paragraphs read as one block.
+     Body text in main keeps its own 1.7 line-height (rule 2 below). */
+  margin-bottom: 1rem !important;
 }
 button,
 .btn,
@@ -5917,3 +5922,8 @@ html body main li.rpp-hero-point.rpp-hero-point::marker { content: none !importa
     font-size: clamp(24px, 6.4vw, 34px) !important;
   }
 }
+
+/* AFH directory city rows: compact rows. Their inline margin: 0 is overridden
+   by the global heading/paragraph margins, which grew with the Oct 21, 2026
+   spacing pass and doubled the length of the 172-city list. */
+html body main li.rpp-dir-row :is(h3, p) { margin-bottom: 0 !important; }

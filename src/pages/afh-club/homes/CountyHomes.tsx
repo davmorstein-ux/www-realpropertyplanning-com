@@ -113,7 +113,7 @@ const CountyHomes = () => {
                 </h2>
                 <ul style={{ listStyle: "none", margin: 0, padding: 0, borderBottom: `1px solid ${BORDER}` }}>
                   {cities.map((c) => (
-                    <li key={c.citySlug} style={{ borderTop: `1px solid ${BORDER}`, padding: "16px 0" }}>
+                    <li key={c.citySlug} className="rpp-dir-row" style={{ borderTop: `1px solid ${BORDER}`, padding: "16px 0" }}>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 16px", alignItems: "baseline" }}>
                         <h3 style={{ margin: 0, flex: "1 1 200px", fontSize: "20px" }}>
                           <Link to={`/afh-club/homes/${c.citySlug}`} className="rpp-heading-link rpp-city-link text-accent underline underline-offset-4 font-semibold">

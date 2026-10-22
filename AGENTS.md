@@ -98,3 +98,11 @@ navy. Light accent text on dark bands is pale blue #c9d6ea. Kept on purpose:
 the brick-red door colour #B0352A (brand), the category colours (#8A4214,
 #246044, #25597e, #662D56, #883f20), the calculators' own accents, and the
 deep reds that mean "sold", "no" or a warning.
+
+## Global spacing (Oct 21, 2026)
+
+index.css sets h1-h4 `margin-bottom: 0.5em !important` (was 0.4rem) and p
+`margin-bottom: 1rem !important` (was 0.6rem). These still override inline and
+Tailwind margins on headings and paragraphs, so a component that needs tight
+rows must opt out with its own class (see `li.rpp-dir-row` on the AFH
+directory). Body text in main keeps line-height 1.7.
