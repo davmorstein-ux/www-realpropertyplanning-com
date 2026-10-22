@@ -132,7 +132,12 @@ const RPPHomeV3 = () => {
                102 KB and 76 KB. */
             src={heroDesktop}
             srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroDesktop} 1920w`}
-            sizes="100vw"
+            /* Above 900px always the full desktop artwork (Oct 21, 2026). With
+               sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
+               crop, which has no plain wall on the left, so the headline sat
+               on the mirror. Below 900px the headline stacks under the image,
+               so the tighter crops are fine there. */
+            sizes="(min-width: 901px) 1920px, 100vw"
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
@@ -306,13 +311,20 @@ const RPPHomeV3 = () => {
           </div>
         </div>
 
-        {/* ── Lead line under the artwork ───────────────────────────
-            One sentence saying what the site is. The "Get Connected" button
-            that sat here (Sept 23 2026) is gone: the header carries the same
-            button on every page, so it appeared twice on the homepage. */}
-        <div className="rpp-hero-cta">
-          <p className="rpp-hero-cta-lead">{t("hero.ctaLead")}</p>
-        </div>
+        {/* ── Three short points under the artwork (Oct 21, 2026, David chose
+            "Option 2" over a sentence): replaced the beige box holding a
+            two-line lead sentence, which read weak. Brick-red checks echo the
+            door. The class names avoid "btn"/"cta" substrings on purpose. */}
+        <ul className="rpp-hero-points" aria-label="What the site offers">
+          {[t("hero.point1"), t("hero.point2"), t("hero.point3")].map((pt) => (
+            <li key={pt} className="rpp-hero-point">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B0352A" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              {pt}
+            </li>
+          ))}
+        </ul>
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
         {/* Sections from here down sit on a lighter cream (#faf8f4, David Sept 23:
@@ -337,14 +349,11 @@ const RPPHomeV3 = () => {
               >
                 {t("funnel.heading")}
               </h2>
-              {/* Plain text, not a link: it used to be a hero link that only
-                  scrolled to the tiles directly beneath it (David, Sept 23). */}
-              <p className="rpp-funnel-sub hidden sm:block">{t("hero.ctaSecondary")}</p>
+              {/* "Choose where to begin" (and the phone-only "Select a topic to
+                  get started") removed Oct 21, 2026 at David's call: the
+                  question and the four tiles say it already. */}
             </div>
 
-            <p className="block sm:hidden text-center text-base text-navy font-medium mb-4 tracking-wide">
-              {t("funnel.mobileHint")}
-            </p>
 
             {/* Tiles sit in a narrower column with wider gaps so the row reads
                 as four objects with air around them, not a strip (David, Sept 23). */}

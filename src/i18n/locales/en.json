@@ -5,15 +5,15 @@
   },
   "hero": {
     "imageAlt": "Real Property Planning — serving Washington families through senior transitions, probate, and estate sales",
-    "taglineLine1": "Probate, estate & senior transition guidance",
-    "taglineLine2": "for Washington families.",
+    "taglineLine1": "Probate, estate & senior transition",
+    "taglineLine2": "guidance for Washington families.",
     "ctaPrimary": "Get Connected",
-    "ctaSecondary": "Choose where to begin",
-    "ctaLead": "Washington's resource for navigating probate, inherited property, senior housing, and adult family homes — practical guidance, calculators, statewide data, and a path to experienced licensed professionals."
+    "point1": "Free guides",
+    "point2": "Calculators",
+    "point3": "A path to licensed professionals"
   },
   "funnel": {
     "heading": "What brings you here today?",
-    "mobileHint": "Select a topic to get started",
     "exploreBadge": "Explore →",
     "tiles": {
       "planAhead": {
