@@ -3875,7 +3875,9 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   /* One soft, offset shadow only. The first version stacked a light edge and
      two dark edges; at normal (1x) screen resolution they blurred the letter
      edges ("does not look very clean"). Crisp letters, lifted by the glow. */
-  text-shadow: 0 3px 12px rgba(15, 32, 46, 0.28) !important;
+  /* Oct 22, 2026: shadow removed. David found the edges fuzzy; the navy
+     lettering measures 7.3:1 on the wall without it. */
+  text-shadow: none !important;
 }
 /* Short rule under the tagline, in the front door's brick red (#B0352A, the
    AFH Club logo door). The only red allowed near the headline: the text stays
