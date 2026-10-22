@@ -5759,8 +5759,16 @@ html body [data-pulse].rpp-pulsing {
   transform-origin: center center;
   backface-visibility: hidden;
 }
+/* Homepage tile wave (HomeTileIntro.tsx): the same double pulse, played
+   once per tile in order when the row first comes into view. */
+html body [data-home-tile].rpp-intro-pulse {
+  animation: rpp-double-pulse var(--rpp-pulse-duration) var(--rpp-pulse-easing) 1 both !important;
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
 @media (prefers-reduced-motion: reduce) {
   html body [data-pulse].rpp-pulsing { animation: none !important; }
+  html body [data-home-tile].rpp-intro-pulse { animation: none !important; }
 }
 
 /* ============================================================

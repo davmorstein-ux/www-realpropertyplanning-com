@@ -36,6 +36,7 @@ const TILE_SMALL: Record<string, string> = {
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
+import HomeTileIntro from "@/components/HomeTileIntro";
 import AboutTheHub from "@/components/AboutTheHub";
 import HomepageTrustBar from "@/components/HomepageTrustBar";
 import { formatCurrency } from "@/lib/careTypes";
@@ -71,6 +72,7 @@ const RPPHomeV3 = () => {
   return (
     <>
       <SEOHead title={t("seo.title")} description={t("seo.description")} canonical="https://realpropertyplanning.com" />
+      <HomeTileIntro />
       <Header />
 
       <main id="main-content">
