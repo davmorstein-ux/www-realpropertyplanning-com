@@ -7,11 +7,13 @@ import AskBox from "@/components/AskBox";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2031.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2031-mobile.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2032.webp";
+import heroDesktop3840 from "@/assets/hero/rpp-hero-2032-3840.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2032-mobile.webp";
+import heroMobile1800 from "@/assets/hero/rpp-hero-2032-mobile-1800.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2031-mobile-900.webp";
+import heroMobile900 from "@/assets/hero/rpp-hero-2032-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -87,7 +89,17 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2031 (Oct 18, 2026): the owner's new entryway render with
+            /* rpp-hero-2032 (Oct 22, 2026): the same 2031 render, upscaled by the
+               owner to 8000px because the hero looked soft on high-resolution
+               screens. Same crops (aligned to 2031 by image matching), the same
+               55% cream blend on the left wall (tagline contrast 6.2:1 at the
+               1st percentile, 7.4:1 median), and the left window's garbled view
+               replaced with the right window's. A 3840px desktop file serves
+               high-DPI screens and an 1800px phone file serves large phones
+               (with only 1200w, a 430px phone at 3x picked the DESKTOP crop).
+               sizes stays "(min-width: 901px) 1920px, 100vw".
+
+               rpp-hero-2031 (Oct 18, 2026): the owner's new entryway render with
                a magenta door matching the logo, and (same evening, his idea) a navy
                accent wall behind the door to echo the logo's A — regenerated in
                ChatGPT so the wall carries the room's light rather than a flat fill.
@@ -133,7 +145,7 @@ const RPPHomeV3 = () => {
                beneath the image instead of sitting on it.
                102 KB and 76 KB. */
             src={heroDesktop}
-            srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroDesktop} 1920w`}
+            srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroMobile1800} 1800w, ${heroDesktop} 1920w, ${heroDesktop3840} 3840w`}
             /* Above 900px always the full desktop artwork (Oct 21, 2026). With
                sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
                crop, which has no plain wall on the left, so the headline sat
