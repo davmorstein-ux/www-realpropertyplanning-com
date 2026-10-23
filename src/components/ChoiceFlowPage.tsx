@@ -105,7 +105,7 @@ const ChoiceGrid = ({ node, isRoot }: { node: FlowNode; isRoot: boolean }) => {
   }));
   if (isRoot) items.push(NOT_SURE_CHOICE);
   return (
-    <ul className="apf-grid">
+    <ul className={`apf-grid apf-grid-${items.length}`}>
       {items.map((it) => (
         <li key={it.to}>
           <Link to={it.to} className="apf-pick">

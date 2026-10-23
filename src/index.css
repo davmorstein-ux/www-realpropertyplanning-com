@@ -6098,6 +6098,14 @@ html body main.apf a.apf-pick.apf-pick:focus-visible { outline: 3px solid #1B3A6
   .apf-arrow svg { width: 16px; height: 16px; }
 }
 @media (max-width: 340px) { .apf-grid { grid-template-columns: 1fr; } }
+/* Computers: the four topics of a section sit on one line; the hub's six
+   sit in two rows of three (Oct 22, 2026, David: tiles still too large). */
+@media (min-width: 900px) {
+  .apf-grid.apf-grid-4 { max-width: 1000px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .apf-grid.apf-grid-6 { max-width: 860px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  html body main.apf .apf-grid-4 .apf-pick-label.apf-pick-label { font-size: 17px; padding: 10px 10px 10px 14px; gap: 8px; }
+  .apf-grid-4 .apf-arrow { width: 26px; height: 26px; }
+}
 
 /* Topic pages */
 .apf-topic { max-width: 760px; margin: 0 auto; }
