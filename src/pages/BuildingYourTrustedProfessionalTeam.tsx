@@ -3,15 +3,14 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
-import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import RoadmapDropdown from "@/components/RoadmapDropdown";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 import GuidanceGrid from "@/components/GuidanceGrid";
+import SimpleHubChoices from "@/components/SimpleHubChoices";
+import { TEAM_HUB_CHOICES, TEAM_NOT_SURE } from "@/lib/team-simple";
 
 type Card = {
   title: string;
@@ -140,138 +139,9 @@ const property: Card[] = [
   },
 ];
 
-const Section = ({
-  heading,
-  cards,
-  bg = "bg-background",
-  color = "#6b84ad",
-}: {
-  heading: string;
-  cards: Card[];
-  bg?: string;
-  color?: string;
-}) => (
-  <section className={`py-10 lg:py-12 ${bg}`}>
-    <div className="container px-6 lg:px-8">
-      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: color }}>
-        {heading}
-      </h2>
-
-      <div className="rpp-m2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {cards.map((s) => (
-          <Link
-            key={s.title + s.href}
-            to={s.href}
-            aria-label={`${s.title} — ${s.description}`}
-            style={{ textDecoration: "none" }}
-          >
-            <div
-              className="marquee-hover"
-              style={{
-                background: "#fff",
-                borderRadius: 16,
-                border: "1px solid rgba(0,0,0,0.08)",
-                overflow: "hidden",
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              {/* Photo */}
-
-              <div className="rpp-m2-photo" style={{ width: "100%", height: "180px", overflow: "hidden" }}>
-                <img
-                  src={s.image}
-                  alt={s.alt}
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-
-                    height: "100%",
-
-                    objectFit: "cover",
-
-                    objectPosition: "center",
-
-                    display: "block",
-                  }}
-                  sizes="100vw"
-                  decoding="async"
-                />
-              </div>
-
-              {/* Card body */}
-
-              <div className="rpp-m2-pad" style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
-                <div className="rpp-m2-titlebox" style={{ minHeight: 72 }}>
-                  <h3
-                    className="rpp-m2-title"
-                    style={{
-                      fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                      fontSize: 18,
-                      fontWeight: 700,
-                      color: color,
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                </div>
-                <p className="rpp-m2-text" style={{ fontSize: 14, color: "#1c1917", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
-              </div>
-
-              {/* CTA bar */}
-
-              <div className="rpp-m2-pad" style={{ padding: "12px 20px 16px" }}>
-                <div
-                  style={{
-                    background: color,
-
-                    borderRadius: 8,
-
-                    padding: "10px 16px",
-
-                    display: "flex",
-
-                    alignItems: "center",
-
-                    justifyContent: "center",
-
-                    gap: 6,
-
-                    fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-
-                    fontSize: 13,
-
-                    fontWeight: 700,
-
-                    color: "#fff",
-
-                    letterSpacing: "0.04em",
-                  }}
-                >
-                  {s.cta}
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="13"
-                    height="13"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </section>
+/** Every card above, A to Z, for the plain list under the buttons. */
+const ALL_PROFESSIONALS = [...legal, ...financial, ...housing, ...property].sort((x, y) =>
+  x.title.localeCompare(y.title),
 );
 
 const jsonLd = articleSchema({
@@ -296,7 +166,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
         items={[{ name: "Building Your Professional Team", url: "/building-your-professional-team" }]}
       />
       <Header />
-      <main id="main-content">
+      <main id="main-content" className="apf">
         
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
@@ -304,173 +174,29 @@ const BuildingYourTrustedProfessionalTeam = () => {
           </div>
         </section>
 
-        <div className="container px-6 lg:px-8 pt-8">
-          <p className="max-w-3xl mx-auto text-center text-navy/90 text-base leading-relaxed mb-6">
-            {/* Was "Reach out and we'll help you figure out the right first
-                step." The site provides no services, so it never speaks as
-                "we" (David, Oct 20, 2026). */}
-            Not sure which professional you need?{" "}
-            <Link
-              to="/contact"
-              className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
-            >
-              Ask a question through the contact form.
-            </Link>
-          </p>
-          <JourneyShortcuts lead="Want a quick answer first?" questions="professional" style={{ marginBottom: "1.5rem" }} />
-          <RoadmapDropdown
-            topics={[
-              {
-                title: "Legal Professionals",
-                href: "#legal-professionals",
-                description:
-                  "Attorneys covering estate planning, probate, elder law, family law, and real estate — matched to what your situation requires.",
-              },
-              {
-                title: "Financial & Valuation Professionals",
-                href: "#financial-professionals",
-                description:
-                  "CPAs, financial planners, mortgage lenders, and certified appraisers who help make sense of the numbers.",
-              },
-              {
-                title: "Senior Housing & Care",
-                href: "#senior-housing-care",
-                description:
-                  "Advisors and care managers who help evaluate housing options, benefits, and the details of a move.",
-              },
-              {
-                title: "Property & Transition Support",
-                href: "#property-transition-support",
-                description:
-                  "Brokers, liquidators, and closing professionals who handle the property itself, from listing to closing.",
-              },
-            ]}
-            itemLabel="categories of professionals"
-            accentColor="#1B3A6B"
-          />
-        </div>
+        {/* Simplified (Oct 23, 2026, same pattern as the other three homepage
+            paths): six photo buttons that ask by need rather than job title,
+            a full-width "Not sure who you need?" bar, then every kind of
+            professional A-Z as a plain list, so no page loses its link. This
+            replaced the four groups of 13 cards, the group dropdown and the
+            closing "Not Sure Who You Need?" band. Labels and images:
+            src/lib/team-simple.ts. */}
+        <section className="py-10 md:py-14 bg-cream">
+          <div className="container px-5 md:px-8">
+            <p className="apf-ask">What do you need help with?</p>
+            <SimpleHubChoices choices={TEAM_HUB_CHOICES} notSure={TEAM_NOT_SURE} />
+            <JourneyShortcuts lead="Want a quick answer first?" questions="professional" style={{ margin: "32px auto 0" }} />
 
-        <div id="legal-professionals" className="scroll-mt-20 bg-background">
-          <section className="py-10 lg:py-12 bg-background">
-            <div className="container px-6 lg:px-8">
-              <h2
-                className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center"
-                style={{ color: "#1B3A6B" }}
-              >
-                Legal Professionals
-              </h2>
-              <div className="flex justify-center">
-                <div style={{ width: "100%", maxWidth: 360 }}>
-                  {legal.map((s) => (
-                    <a key={s.title} href={s.href} style={{ textDecoration: "none", display: "block" }}>
-                      <div
-                        className="marquee-hover"
-                        style={{
-                          background: "#fff",
-                          borderRadius: 16,
-                          border: "1px solid rgba(0,0,0,0.08)",
-                          overflow: "hidden",
-                        }}
-                      >
-                        <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
-                          <img
-                            src={s.image}
-                            alt={s.alt}
-                            loading="lazy"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "cover",
-                              objectPosition: "center top",
-                              display: "block",
-                            }}
-                            sizes="100vw"
-                            decoding="async"
-                          />
-                        </div>
-                        <div style={{ padding: "16px 20px 0" }}>
-                          <h3
-                            style={{
-                              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                              fontSize: 18,
-                              fontWeight: 700,
-                              color: "#1B3A6B",
-                              lineHeight: 1.3,
-                              marginBottom: 6,
-                            }}
-                          >
-                            {s.title}
-                          </h3>
-                          <p style={{ fontSize: 14, color: "#1c1917", lineHeight: 1.6 }}>{s.description}</p>
-                        </div>
-                        <div style={{ padding: "12px 20px 16px" }}>
-                          <div
-                            style={{
-                              background: "#1B3A6B",
-                              borderRadius: 8,
-                              padding: "10px 16px",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              gap: 6,
-                              fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                              fontSize: 13,
-                              fontWeight: 700,
-                              color: "#fff",
-                              letterSpacing: "0.04em",
-                            }}
-                          >
-                            {s.cta}
-                            <svg
-                              viewBox="0 0 24 24"
-                              width="13"
-                              height="13"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polyline points="9 18 15 12 9 6" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div id="financial-professionals" className="scroll-mt-20">
-          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" color="#246044" />
-        </div>
-        <div id="senior-housing-care" className="scroll-mt-20">
-          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" color="#25597e" />
-        </div>
-        <div id="property-transition-support" className="scroll-mt-20">
-          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" color="#662D56" />
-        </div>
-
-        {/* Closing CTA */}
-        <section className="py-12 lg:py-16 bg-primary">
-          <div className="px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-                Not Sure Who You Need?
-              </h2>
-              <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                Real Property Planning's guides explain which kinds of independent professionals fit each
-                situation. It is an educational hub and connection point — the professionals referenced are independent
-                and are not employees or affiliates of Real Property Planning.
-              </p>
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  Start a Conversation
-                  <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-                </Button>
-              </Link>
+            <div className="apf-az">
+              <h2 className="apf-h2">Every kind of professional, A to Z</h2>
+              <ul className="apf-az-list">
+                {ALL_PROFESSIONALS.map((c) => (
+                  <li key={c.href}>
+                    <Link to={c.href}>{c.title}</Link>
+                    <span>{c.description}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
