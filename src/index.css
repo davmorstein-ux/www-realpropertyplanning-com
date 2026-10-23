@@ -6082,7 +6082,7 @@ html body main.apf .apf-ask.apf-ask { text-align: center; font-size: 24px !impor
 /* Photo buttons */
 .apf-grid { list-style: none; padding: 0; margin: 0 auto 24px; max-width: 620px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .apf-grid > li { display: flex; }
-html body main.apf a.apf-pick.apf-pick { display: flex !important; flex-direction: column; width: 100%; background: #fff !important; border: 1px solid #cfd8e6; border-radius: 14px; overflow: hidden; text-decoration: none !important; box-shadow: 0 2px 6px rgba(27, 58, 107, .12); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+html body main.apf a.apf-pick.apf-pick { display: flex !important; flex-direction: column; width: 100%; background: #fff !important; border: 1px solid #9fb0c8; border-radius: 14px; overflow: hidden; text-decoration: none !important; box-shadow: 0 2px 6px rgba(27, 58, 107, .12); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
 html body main.apf a.apf-pick.apf-pick img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
 html body main.apf .apf-pick-label.apf-pick-label { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 12px 11px 16px; font-size: 18px; font-weight: 700; line-height: 1.3; color: #1B3A6B !important; }
 .apf-arrow { flex: none; width: 30px; height: 30px; border-radius: 50%; background: #e8edf5; color: #1B3A6B; display: grid; place-items: center; transition: background .15s ease, color .15s ease; }
