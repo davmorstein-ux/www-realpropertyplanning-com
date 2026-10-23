@@ -341,8 +341,8 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v11-640.webp"
-                    srcSet="/rpp-logo-v11-640.webp 640w, /rpp-logo-v11.webp 1608w"
+                    src="/rpp-logo-v12-640.webp"
+                    srcSet="/rpp-logo-v12-640.webp 640w, /rpp-logo-v12.webp 1608w"
                     alt=""
                     style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="185px"
@@ -486,8 +486,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v11-640.webp"
-                    srcSet="/rpp-logo-v11-640.webp 640w, /rpp-logo-v11.webp 1608w"
+                    src="/rpp-logo-v12-640.webp"
+                    srcSet="/rpp-logo-v12-640.webp 640w, /rpp-logo-v12.webp 1608w"
                     alt=""
                     style={{
                       width: "100%",
