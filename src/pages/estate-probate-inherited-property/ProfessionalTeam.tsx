@@ -20,7 +20,15 @@ const teamTiles = [
   { ...findTile("Elder Law Attorneys"), title: "Elder Law Attorney" },
   { ...findTile("Senior Move Managers"), title: "Senior Move Manager" },
   { ...findTile("Financial Planners"), title: "Financial Planner or CPA" },
-  { ...findTile("Senior Living Advisors"), title: "Senior Living Advisor" },
+  // Oct 23, 2026: Senior Living Advisor removed (this page is about a property
+  // after a death, not placing a parent); the estate liquidator works with the
+  // senior move manager and the broker.
+  {
+    title: "Estate Liquidator",
+    href: "/estate-liquidators",
+    imageSrc: "/tiles/set1/estate-liquidators-tile.webp?v=20260602b",
+    altText: "Estate liquidators Washington State",
+  },
 ];
 
 const ProfessionalTeam = () => (
