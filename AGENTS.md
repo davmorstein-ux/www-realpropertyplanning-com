@@ -116,3 +116,11 @@ classes; dark-grey text colours in the source were changed to #1c1917. Do not
 add grey body text or text under 16px. Short uppercase eyebrow labels (14px,
 bold, navy) are the one exception. The card rule that shrinks headings inside
 "card"/"tile" classes now skips headings that set their own size.
+
+## Helping an Aging Parent: simplified layout (Oct 22, 2026)
+- Wording and images approved by the site owner: `src/lib/aging-parent-simple.ts` (plain title, short answer, three steps per topic page; plain label and photo per hub choice; the sixth hub button "Not sure where to start?" goes to /my-plan).
+- Images: `src/assets/aging-parent/` — no people, faces, hands or lettering in any of them. Step images 480px WebP, hub images 800x600 WebP.
+- `ChoiceFlowPage.tsx` renders photo buttons (two per row) and topic pages as: short answer, "What to do now" steps, one Next button + "Or talk to someone", the professionals box, then "More on this" with the full original text in `<details>` (kept in the HTML for search engines and AI tools). The 1-2-3 stepper is gone.
+- Styles: "AGING PARENT SIMPLE LAYOUT" at the end of index.css. Class names start `apf-` and must not contain card/cta/btn/tile/section.
+- After editing either flow file, run `node scripts/build-aging-parent-routes.mjs` (h1 = plain title, description = short answer).
+- Same pattern is planned next for the Estate, Plan Ahead and Professional paths.

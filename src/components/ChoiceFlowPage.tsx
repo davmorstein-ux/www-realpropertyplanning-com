@@ -1,14 +1,13 @@
-import { Fragment } from "react";
 import { useLocation, Link, Navigate } from "react-router-dom";
-import { Check } from "lucide-react";
+import { ArrowRight, ChevronRight, ChevronDown } from "lucide-react";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
+import { SIMPLE_TOPICS, SIMPLE_HUB, NOT_SURE_CHOICE } from "@/lib/aging-parent-simple";
 import NextQuestions from "@/components/NextQuestions";
-import MyPlanInvite from "@/components/MyPlanInvite";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import { professionalsForTopic } from "@/data/topicProfessionals";
@@ -16,13 +15,26 @@ import { professionalsForTopic } from "@/data/topicProfessionals";
 /** Same rule as scripts/build-aging-parent-routes.mjs, so the prerendered
  *  description and the live one agree. */
 const metaDescription = (node: FlowNode) => {
-  const s = node.content?.intro || node.subtext || node.label;
+  const s = SIMPLE_TOPICS[node.path]?.short || node.content?.intro || node.subtext || node.label;
   return s.length <= 158 ? s : s.slice(0, s.lastIndexOf(" ", 157)) + "…";
 };
 
+/** Page heading: the plain title where one was approved, else the band title. */
+export const flowHeading = (node: FlowNode, isRoot: boolean) =>
+  SIMPLE_TOPICS[node.path]?.title || node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label);
+
 /**
  * Renders a single page in the guided choice flow based on the current pathname.
- * Reusable: a future flow can swap the lookup map for another topic tree.
+ *
+ * Simplified layout (Oct 22, 2026, approved by the site owner after a reader
+ * said the site had too much text and too many choices):
+ *  - Choice pages: photo buttons, two per row.
+ *  - Topic pages: plain title, "The short answer", three steps with photos,
+ *    one next button, the professionals box, then "More on this" with the
+ *    full original text in fold-open sections (kept in the HTML for search
+ *    engines and AI tools).
+ * Class names start "apf-" and avoid card/cta/btn/tile/section, which
+ * index.css restyles sitewide. Styles: "AGING PARENT SIMPLE LAYOUT" in index.css.
  */
 const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGING_PARENT_LOOKUP }) => {
   const { pathname } = useLocation();
@@ -37,7 +49,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   const { node, parent, trail } = entry;
   const hasChildren = !!node.children?.length;
   const isRoot = parent === null;
-  const activeStep = trail.length; // 1 = root, 2 = category, 3 = your guidance
+  const simple = SIMPLE_TOPICS[normalized];
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -45,90 +57,37 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
 
-      <main id="main-content" className="flex-1">
-        <section className="pt-8 pb-10 lg:pt-10 lg:pb-16 bg-cream">
-          <div className="container px-6 lg:px-8">
-            {/* No header-height padding: that offset dated from a FIXED
-                header that floated over content. The header is sticky now and
-                occupies its own space, so the old padding just inserted ~100px
-                of dead cream above the band on every flow view. */}
+      <main id="main-content" className="flex-1 apf">
+        <div className="pt-8 pb-10 lg:pt-10 lg:pb-16 bg-cream">
+          <div className="container px-5 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              {/* Title band only — the illustrated hero was removed under the
-                  sitewide rule (one hero, and it is the homepage). The 100vw
-                  wrapper stays so the band runs full-bleed like every other
-                  page's band instead of being inset by this container.
-                  as="h1": this IS the page heading — without it the band
-                  rendered the compact 15px eyebrow variant, which is why this
-                  band was visibly thinner than every other page's. */}
-              {(isRoot || node.heroImage || node.heroBandTitle) && (
-                <>
-                  <div
-                    style={{
-                      width: "100vw",
-                      position: "relative",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                    }}
-                  >
-                    <HeroBandTitle as="h1">
-                      {node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}
-                    </HeroBandTitle>
-                  </div>
-                  <div style={{ marginBottom: "40px" }} />
-                </>
-              )}
+              {/* Full-bleed title band, as on every other page. */}
+              <div style={{ width: "100vw", position: "relative", left: "50%", transform: "translateX(-50%)" }}>
+                <HeroBandTitle as="h1">{flowHeading(node, isRoot)}</HeroBandTitle>
+              </div>
 
-              {!isRoot && (
-                <div className="mb-6 text-center">
-                  <Link
-                    to="/helping-an-aging-parent"
-                    className="inline-flex items-center gap-2 text-navy font-semibold text-base hover:text-[#17578f] transition-colors underline underline-offset-2"
-                  >
-                    ← Back to Start
+              {!isRoot && parent && (
+                <p className="apf-back">
+                  <Link to={parent.path}>
+                    ← Back to {parent.path === "/helping-an-aging-parent" ? "all choices" : parent.heroBandTitle || parent.label}
                   </Link>
-                </div>
+                </p>
               )}
 
-              {/* Heading */}
-              <header className="mb-10 text-center">
-                {!isRoot && !node.heroImage && !node.heroBandTitle && (
-                  <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
-                    {node.label}
-                  </h1>
-                )}
-                {node.subtext && (
-                  <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">{node.subtext}</p>
-                )}
-              </header>
-
-              {/* Choice cards or placeholder */}
               {hasChildren ? (
                 <>
-                  <RoadmapSteps activeStep={activeStep} trail={trail} />
-                  <p className="text-center text-navy/90 text-base mb-8">
-                    Pick the option below that best matches your situation to get started.
-                  </p>
-                  <ChoiceGrid choices={node.children!} />
-                  {isRoot && <MyPlanInvite situation="parent" style={{ marginTop: 40 }} />}
+                  {node.subtext && <p className="apf-ask">{isRoot ? "Where are you right now?" : node.subtext}</p>}
+                  <ChoiceGrid node={node} isRoot={isRoot} />
                   {isRoot && (
-                    <JourneyShortcuts lead="Looking for a quick answer?" questions="aging-parent" style={{ margin: "28px auto 0" }} />
+                    <JourneyShortcuts lead="Looking for a quick answer?" questions="aging-parent" style={{ margin: "40px auto 0" }} />
                   )}
                 </>
               ) : node.content ? (
-                <>
-                  <RoadmapSteps activeStep={activeStep} trail={trail} />
-                  <p className="text-center text-navy/90 text-base mb-8">
-                    You've made it — here's the guidance for your situation.
-                  </p>
-                  <ContentBlock content={node.content} hideProsButton={professionalsForTopic(normalized).length > 0} />
-                  <TopicProfessionals path={normalized} style={{ maxWidth: 768, margin: "32px auto 0" }} />
-                </>
-              ) : (
-                <ComingSoon />
-              )}
+                <TopicBody node={node} parent={parent} path={normalized} simple={simple} />
+              ) : null}
             </div>
           </div>
-        </section>
+        </div>
         <NextQuestions />
       </main>
 
@@ -137,173 +96,106 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   );
 };
 
-const ROADMAP_LABELS = ["Where you are", "What you need", "Your guidance"];
-const CURRENT_COLOR = "#17578f";
-
-const RoadmapSteps = ({ activeStep, trail }: { activeStep: number; trail: FlowNode[] }) => (
-  <ol className="flex items-start justify-center mb-5 max-w-md mx-auto" aria-label="Your progress through this guide">
-    {ROADMAP_LABELS.map((label, i) => {
-      const stepNum = i + 1;
-      const isDone = stepNum < activeStep;
-      const isCurrent = stepNum === activeStep;
-      const stepPath = trail[i]?.path;
-
-      const circle = (
-        <span
-          aria-current={isCurrent ? "step" : undefined}
-          className={`w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 transition-colors ${
-            isCurrent
-              ? "text-white shadow-[0_0_0_4px_rgba(31,111,178,0.25)]"
-              : isDone
-                ? "bg-navy border-navy text-white"
-                : "bg-white border-navy/40 text-navy/70"
-          }`}
-          style={isCurrent ? { background: CURRENT_COLOR, borderColor: CURRENT_COLOR } : undefined}
-        >
-          {isDone ? <Check className="w-6 h-6" aria-hidden="true" /> : stepNum}
-        </span>
-      );
-
-      return (
-        <Fragment key={label}>
-          <li className="flex flex-col items-center text-center" style={{ width: 100 }}>
-            {isDone && stepPath ? (
-              <Link
-                to={stepPath}
-                className="flex flex-col items-center group"
-                aria-label={`Back to step ${stepNum}: ${label}`}
-              >
-                <span className="group-hover:opacity-80 transition-opacity">{circle}</span>
-                <span className="mt-2 text-base leading-snug font-medium text-navy underline underline-offset-2">
-                  {label}
-                </span>
-              </Link>
-            ) : (
-              <>
-                {circle}
-                <span
-                  className={`mt-2 text-base leading-snug ${isCurrent ? "font-bold" : "font-medium text-navy/80"}`}
-                  style={isCurrent ? { color: CURRENT_COLOR } : undefined}
-                >
-                  {label}
-                </span>
-              </>
-            )}
-          </li>
-          {stepNum < ROADMAP_LABELS.length && (
-            <div className={`flex-1 h-0.5 mt-6 ${isDone ? "bg-navy" : "bg-navy/25"}`} aria-hidden="true" />
-          )}
-        </Fragment>
-      );
-    })}
-  </ol>
-);
-
-const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
-  // Up to 5 cards: 1 col mobile, 2 cols tablet, 3 cols desktop so all 5 fit above the fold.
+/** Photo buttons, two per row (one per row on narrow phones). */
+const ChoiceGrid = ({ node, isRoot }: { node: FlowNode; isRoot: boolean }) => {
+  const items = node.children!.map((c) => ({
+    to: c.path,
+    label: SIMPLE_HUB[c.path]?.label || SIMPLE_TOPICS[c.path]?.title || c.label,
+    image: SIMPLE_HUB[c.path]?.image || SIMPLE_TOPICS[c.path]?.steps[0]?.image,
+  }));
+  if (isRoot) items.push(NOT_SURE_CHOICE);
   return (
-    <ul
-      className={`grid gap-5 sm:gap-6 lg:gap-7 grid-cols-1 sm:grid-cols-2 items-stretch ${
-        choices.length >= 5 ? "lg:grid-cols-3" : ""
-      }`}
-    >
-      {choices.map((choice) => {
-        const Icon = choice.icon;
-        return (
-          <li key={choice.path} className="h-full">
-            <Link
-              to={choice.path}
-              className="tile-white marquee-hover group block h-full min-h-[280px] sm:min-h-[300px] no-underline rounded-xl"
-            >
-              <div className="tile-white__inner h-full">
-                <div className="tile-white__face h-full">
-                  <div className="flex h-full flex-col justify-between px-7 pb-7 pt-8 sm:px-8 sm:pb-8 sm:pt-9">
-                    <div className="flex items-center gap-5">
-                      {choice.image ? (
-                        <img
-                          src={choice.image}
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          style={{ width: 56, height: 56 }}
-                          className="shrink-0 object-contain"
-                          sizes="100vw"
-                          decoding="async"
-                        />
-                      ) : (
-                        <span
-                          style={{ width: 56, height: 56 }}
-                          className="shrink-0 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center"
-                        >
-                          <Icon className="w-7 h-7" aria-hidden="true" />
-                        </span>
-                      )}
-                      <h3 className="font-serif text-[19px] sm:text-xl font-bold text-navy leading-snug flex-1 no-underline group-hover:text-accent transition-colors">
-                        {choice.label}
-                      </h3>
-                    </div>
-                    {choice.children?.length ? (
-                      <ul className="mt-4 space-y-1.5" aria-label={`Topics under ${choice.label}`}>
-                        {choice.children.slice(0, 4).map((child) => (
-                          <li key={child.path} className="text-base text-navy/90 leading-snug">
-                            {child.label}
-                          </li>
-                        ))}
-                        {choice.children.length > 4 && (
-                          <li className="text-base text-navy/90">+{choice.children.length - 4} more</li>
-                        )}
-                      </ul>
-                    ) : null}
-
-                    <div className="mt-5 flex items-center gap-1.5 text-base font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                      <span>Learn more</span>
-                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                        →
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-        );
-      })}
+    <ul className="apf-grid">
+      {items.map((it) => (
+        <li key={it.to}>
+          <Link to={it.to} className="apf-pick">
+            {it.image && <img src={it.image} alt="" width={800} height={600} loading="lazy" decoding="async" />}
+            <span className="apf-pick-label">
+              <span>{it.label}</span>
+              <span className="apf-arrow" aria-hidden="true"><ChevronRight size={20} strokeWidth={2.5} /></span>
+            </span>
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };
 
-const ComingSoon = () => (
-  <div className="bg-white border-2 border-gold/25 rounded-2xl p-8 md:p-10 text-center shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]">
-    <p className="text-navy text-lg md:text-xl leading-relaxed mb-2 font-semibold">Content coming soon.</p>
-    <p className="text-navy/90 text-base md:text-lg leading-relaxed">
-      Guidance for this step is being written. Check back shortly.
-    </p>
-  </div>
-);
+const TopicBody = ({
+  node, parent, path, simple,
+}: {
+  node: FlowNode; parent: FlowNode | null; path: string; simple?: (typeof SIMPLE_TOPICS)[string];
+}) => {
+  const content = node.content!;
+  const hasPros = professionalsForTopic(path).length > 0;
+  const siblings = parent?.children ?? [];
+  const idx = siblings.findIndex((s) => s.path === node.path);
+  const next = idx >= 0 && idx < siblings.length - 1 ? siblings[idx + 1] : null;
+  const nextLabel = next ? SIMPLE_TOPICS[next.path]?.title || next.label : null;
 
-const ContentBlock = ({ content, hideProsButton }: { content: NonNullable<FlowNode["content"]>; hideProsButton?: boolean }) => (
-  <div className="space-y-6 max-w-3xl mx-auto">
-    <p className="text-navy/80 text-lg leading-relaxed">{content.intro}</p>
-    {content.sections.map((section, i) => (
-      <div key={i}>
-        <h2 className="font-serif text-xl font-semibold text-navy mb-2">{section.heading}</h2>
-        <p className="text-navy/90 text-base leading-relaxed whitespace-pre-line">{section.body}</p>
-      </div>
-    ))}
-    <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-8">
-      <p className="text-navy/80 text-base leading-relaxed">{content.closing}</p>
-      {/* The named people for this topic follow below (TopicProfessionals), so
-          the generic directory button only shows where no list is mapped. */}
-      {!hideProsButton && (
-      <a
-        href="/featured-professionals"
-        className="inline-block mt-4 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors"
-      >
-        Find a Professional
-      </a>
+  return (
+    <div className="apf-topic">
+      {simple && (
+        <>
+          <div className="apf-answer">
+            <p className="apf-answer-label">The short answer</p>
+            <p className="apf-answer-text">{simple.short}</p>
+          </div>
+
+          <h2 className="apf-h2">What to do now</h2>
+          <ol className="apf-steps">
+            {simple.steps.map((s) => (
+              <li key={s.title} className="apf-step">
+                <img src={s.image} alt="" width={480} height={480} loading="lazy" decoding="async" />
+                <div>
+                  <p className="apf-step-title">{s.title}</p>
+                  <p className="apf-step-text">{s.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <div className="apf-next">
+            {next ? (
+              <Link to={next.path} className="apf-next-link">
+                Next: {nextLabel} <ArrowRight size={20} aria-hidden="true" />
+              </Link>
+            ) : (
+              <Link to="/helping-an-aging-parent" className="apf-next-link">
+                Back to all choices <ArrowRight size={20} aria-hidden="true" />
+              </Link>
+            )}
+            {hasPros ? (
+              <a href="#people-who-help" className="apf-talk">Or talk to someone</a>
+            ) : (
+              <Link to="/featured-professionals" className="apf-talk">Or talk to someone</Link>
+            )}
+          </div>
+        </>
       )}
+
+      <div id="people-who-help" style={{ scrollMarginTop: 96 }}>
+        <TopicProfessionals path={path} style={{ margin: "36px 0 0" }} />
+      </div>
+
+      {/* The full original guidance, folded. <details> keeps every word in
+          the HTML, so search engines and AI tools still read all of it. */}
+      <div className="apf-more">
+        <h2 className="apf-h2">More on this</h2>
+        <details className="apf-fold">
+          <summary>Overview <ChevronDown size={22} aria-hidden="true" /></summary>
+          <p className="apf-fold-text">{content.intro}</p>
+        </details>
+        {content.sections.map((s) => (
+          <details key={s.heading} className="apf-fold">
+            <summary>{s.heading} <ChevronDown size={22} aria-hidden="true" /></summary>
+            <p className="apf-fold-text">{s.body}</p>
+          </details>
+        ))}
+        <p className="apf-closing">{content.closing}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ChoiceFlowPage;

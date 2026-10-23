@@ -19,7 +19,10 @@ import { pathToFileURL } from "node:url";
 const root = resolve(import.meta.dirname, "..");
 const out = join(mkdtempSync(join(tmpdir(), "apf-")), "flow.mjs");
 await build({
-  entryPoints: [join(root, "src/lib/aging-parent-flow.ts")],
+  stdin: {
+    contents: 'export * from "@/lib/aging-parent-flow"; export * from "@/lib/aging-parent-simple";',
+    resolveDir: root, loader: "ts",
+  },
   bundle: true, format: "esm", platform: "node", outfile: out, logLevel: "error",
   plugins: [{
     name: "stub",
@@ -32,13 +35,14 @@ await build({
   }],
   alias: { "@": join(root, "src") },
 });
-const { AGING_PARENT_LOOKUP } = await import(pathToFileURL(out).href);
+const { AGING_PARENT_LOOKUP, SIMPLE_TOPICS } = await import(pathToFileURL(out).href);
 const clip = (s, n = 158) => (s.length <= n ? s : s.slice(0, s.lastIndexOf(" ", n - 1)) + "…");
-const routes = [...AGING_PARENT_LOOKUP.values()].map(({ node }) => ({
+const routes = [...AGING_PARENT_LOOKUP.values()].map(({ node, parent }) => ({
   path: node.path,
   title: `${node.label} | Real Property Planning`,
-  h1: node.heroBandTitle || node.label,
-  description: clip(node.content?.intro || node.subtext || node.label),
+  // Same rules as ChoiceFlowPage (flowHeading, metaDescription).
+  h1: SIMPLE_TOPICS[node.path]?.title || node.heroBandTitle || (parent ? node.label : "Helping an Aging Parent"),
+  description: clip(SIMPLE_TOPICS[node.path]?.short || node.content?.intro || node.subtext || node.label),
 }));
 writeFileSync(join(root, "src/data/agingParentRoutes.json"), JSON.stringify(routes, null, 2) + "\n");
 console.log(`wrote ${routes.length} aging-parent routes`);
