@@ -45,13 +45,14 @@ const RELATED_BLOCKS = [
   "RelatedResourcesSection",
   "WhichGuide",
   "flow/FlowBranchPage",
-  "EstateSubPageLayout", // ends with "What to read next"
+  "EstateSubPageLayout", // ends with "What to read next" (simplified pages: a Next button)
   "HousingOptionDetail",
   "AFHBuyerGuides",
   // Hubs whose page is a list of topic pages (estate hub, professional team,
   // the Helping an Aging Parent start page).
   "RoadmapDropdown",
   "ChoiceFlowPage",
+  "EstateHubChoices", // the estate hub's six photo buttons (Oct 23, 2026)
 ];
 const RELATED_HEADINGS = /Related Resources|Continue Learning|Related guides|Related Guides|More on this|Keep reading/;
 

@@ -39,6 +39,19 @@ const ProfessionalTeam = () => (
     breadcrumbName="Building Your Professional Team"
     bandTitle="BUILDING YOUR PROFESSIONAL TEAM"
     disclaimer={DISCLAIMER}
+    afterSteps={
+      /* Professional team tiles. Oct 20, 2026 (David: "too large"): kept
+         inside the text column. Oct 23: shown right after the steps, not
+         folded under "More on this". */
+      <div className="not-prose">
+        <h2 className="apf-h2">Who does what</h2>
+        <div className="rpp-m2 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5" style={{ maxWidth: 720, margin: "0 auto" }}>
+          {teamTiles.map((tile) => (
+            <ProfessionalNetworkCard key={tile.title} tile={tile} />
+          ))}
+        </div>
+      </div>
+    }
   >
     <SubH2>The Right Team Makes Everything Easier.</SubH2>
     <P>
@@ -58,20 +71,6 @@ const ProfessionalTeam = () => (
 
     <Divider />
 
-    {/* Professional team tiles — same card as the professional network.
-        Oct 20, 2026 (David: "too large"): kept inside the text column instead
-        of breaking out of it with negative margins (the grid ran 1,344px wide
-        on a 1,280px screen, each tile 432 x 400). Two across on phones,
-        three on tablets and desktop. */}
-    <div className="not-prose">
-      <div className="rpp-m2 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5" style={{ maxWidth: 720, margin: "0 auto" }}>
-        {teamTiles.map((tile) => (
-          <ProfessionalNetworkCard key={tile.title} tile={tile} />
-        ))}
-      </div>
-    </div>
-
-    <Divider />
 
     <SubH2>Finding Independent Professionals</SubH2>
     <P>

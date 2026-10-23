@@ -3,47 +3,15 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import RoadmapDropdown from "@/components/RoadmapDropdown";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 
 import { articleSchema } from "@/lib/schema";
 import GuidanceGrid from "@/components/GuidanceGrid";
-import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import IntentCTA from "@/components/IntentCTA";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { Link } from "react-router-dom";
-
-/* Descriptions live here, not in the shared topic list, on purpose.
-   RoadmapDropdown's "list" mode switches its grid from two columns to one
-   as soon as ANY topic carries a description. The six sub-pages render the
-   same list as a compact two-column rail and should stay that way, so the
-   descriptions belong to the hub alone.
-
-   Titles and hrefs, though, are now derived from estateProbateTopics rather
-   than retyped. Those two lists were maintained separately and were one
-   careless edit away from the hub and its own sub-pages disagreeing about
-   what the six topics are called. Keyed by href so a reordering in the lib
-   cannot silently pair the wrong blurb with the wrong topic. */
-const DESCRIPTIONS: Record<string, string> = {
-  "/estate-probate-inherited-property/first-steps":
-    "Calm, practical actions to take in the early days — before any major decisions need to be made.",
-  "/estate-probate-inherited-property/probate-and-legal-authority":
-    "Who has the authority to make decisions — and what probate actually means for your family.",
-  "/estate-probate-inherited-property/property-value":
-    "Estate valuation has unique requirements. Here's what a date-of-death appraisal is and why it matters.",
-  "/estate-probate-inherited-property/what-to-do-with-the-property":
-    "Sell, keep, rent, or transfer — how to think through the options carefully.",
-  "/estate-probate-inherited-property/preparing-the-property":
-    "From cleanout to repairs — what to handle before the home goes to market.",
-  "/estate-probate-inherited-property/professional-team":
-    "Who you need, when to engage them, and how a coordinated team protects everyone.",
-};
-
-const tiles = estateProbateTopics.map((topic) => ({
-  ...topic,
-  description: DESCRIPTIONS[topic.href],
-}));
+import EstateHubChoices from "@/components/EstateHubChoices";
 
 const faqs = [
   {
@@ -102,56 +70,26 @@ const EstateProbateInheritedProperty = () => {
         ]}
       />
       <Header />
-      <main id="main-content">
+      <main id="main-content" className="apf">
         <HeroBandTitle as="h1">Estate, Probate & Inherited Property</HeroBandTitle>
 
-        {/* TOPICS TO EXPLORE */}
-        <section className="py-14 md:py-20 bg-cream">
+        {/* Simplified hub (Oct 23, 2026, same pattern as Helping an Aging
+            Parent): six photo buttons, two per row on phones and three per
+            row on computers, then one full-width "Not sure where to start?"
+            bar. Labels and images: src/lib/estate-simple.ts. The old topic
+            list (RoadmapDropdown) and the removed "Not sure? Reach out and
+            we'll help" line are gone; see git history for the reasons the
+            latter was removed. */}
+        <section className="py-10 md:py-14 bg-cream">
           <div className="container px-5 md:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
-              <p className="text-gold font-bold tracking-[0.25em] uppercase text-sm md:text-[15px] mb-4">
-                Topics to Explore
-              </p>
-              <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[44px] font-semibold text-navy leading-tight">
-                Six areas most families need to think through
-              </h2>
-              <p className="mt-5 text-lg text-foreground">
-                New to probate?{" "}
-                <Link to="/washington-probate-guide" className="font-semibold text-navy underline underline-offset-4">
-                  Start with the Washington Probate &amp; Estate Property Guide
-                </Link>{" "}
-                or look up a word in the{" "}
-                <Link to="/probate-glossary" className="font-semibold text-navy underline underline-offset-4">
-                  Probate &amp; Estate Glossary
-                </Link>
-                .
-              </p>
-            </div>
-            <JourneyShortcuts plan="estate" questions="estate" />
-
-            {/* Removed: "Not sure where to start? Reach out and we'll help you
-                figure out the right first step."
-
-                Two problems. It attributed the help to Real Property Planning,
-                which is a neutral educational hub and does not provide
-                services — the same misattribution corrected in
-                ForAttorneysHowItWorks. And it was an unbounded promise of
-                individual guidance to every visitor on a page about probate
-                and inherited property, where readers arrive in distress and at
-                all hours.
-
-                Deliberately not replaced with a softer version. The topic list
-                below is the page doing its job; a call to action here would be
-                asking for contact at the moment of highest vulnerability. The
-                footer and /contact remain available to anyone who wants them. */}
-
-            {/* No currentPath. This previously passed tiles[0].href, which told
-                RoadmapDropdown the reader was standing on "First Steps" — so
-                that one entry rendered in active blue (#17578f) on a page the
-                reader was not on, while the other five stayed burgundy. On a
-                hub, nothing in the list is current; the prop is optional and
-                omitting it leaves every topic in its resting state. */}
-            <RoadmapDropdown topics={tiles} accentColor="#1B3A6B" mode="list" />
+            <p className="apf-ask">What do you need to know?</p>
+            <EstateHubChoices />
+            <p className="apf-more-links">
+              New to probate? Read the{" "}
+              <Link to="/washington-probate-guide">Washington Probate &amp; Estate Property Guide</Link> or look up a
+              word in the <Link to="/probate-glossary">Probate &amp; Estate Glossary</Link>.
+            </p>
+            <JourneyShortcuts lead="Looking for a quick answer?" questions="estate" style={{ margin: "32px auto 0" }} />
           </div>
         </section>
 

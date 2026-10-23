@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode, Children, isValidElement } from "react";
+import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import EstateReadNext from "@/components/EstateReadNext";
 import Header from "@/components/Header";
@@ -9,6 +11,9 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import SimpleTopicTop from "@/components/SimpleTopicTop";
+import { ESTATE_SIMPLE_TOPICS, ESTATE_HUB_PATH } from "@/lib/estate-simple";
+import { professionalsForTopic } from "@/data/topicProfessionals";
 
 interface EstateSubPageLayoutProps {
   seoTitle: string;
@@ -18,6 +23,8 @@ interface EstateSubPageLayoutProps {
   bandTitle: string;
   children: ReactNode;
   disclaimer: string;
+  /** Simplified pages only: shown right after the steps (e.g. the team tiles). */
+  afterSteps?: ReactNode;
 }
 
 const EstateSubPageLayout = ({
@@ -28,7 +35,23 @@ const EstateSubPageLayout = ({
   bandTitle,
   children,
   disclaimer,
+  afterSteps,
 }: EstateSubPageLayoutProps) => {
+  const simple = ESTATE_SIMPLE_TOPICS[canonicalPath];
+  if (simple) {
+    return (
+      <SimpleEstatePage
+        seoTitle={seoTitle}
+        seoDescription={seoDescription}
+        canonicalPath={canonicalPath}
+        breadcrumbName={breadcrumbName}
+        disclaimer={disclaimer}
+        afterSteps={afterSteps}
+      >
+        {children}
+      </SimpleEstatePage>
+    );
+  }
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -111,6 +134,108 @@ const EstateSubPageLayout = ({
     </div>
   );
 };
+
+/**
+ * Simplified layout (Oct 23, 2026, same pattern as Helping an Aging Parent):
+ * plain title, short answer, three steps with photos, one Next button, the
+ * people-who-help box, then "More on this" with the page's full original text
+ * folded into one <details> per heading. <details> keeps every word in the
+ * HTML, so search engines and AI tools still read all of it. Wording and
+ * images: src/lib/estate-simple.ts. Styles: the "apf-" rules in index.css.
+ */
+const SimpleEstatePage = ({
+  seoTitle,
+  seoDescription,
+  canonicalPath,
+  breadcrumbName,
+  disclaimer,
+  afterSteps,
+  children,
+}: Omit<EstateSubPageLayoutProps, "bandTitle">) => {
+  const topic = ESTATE_SIMPLE_TOPICS[canonicalPath];
+  const i = estateProbateTopics.findIndex((t) => t.href === canonicalPath);
+  const nextTopic = i >= 0 ? estateProbateTopics[i + 1] : undefined;
+  const next = nextTopic
+    ? { to: nextTopic.href, label: `Next: ${ESTATE_SIMPLE_TOPICS[nextTopic.href]?.title ?? nextTopic.title}` }
+    : { to: ESTATE_HUB_PATH, label: "Back to all estate topics" };
+  const hasPros = professionalsForTopic(canonicalPath).length > 0;
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+        canonical={`https://realpropertyplanning.com${canonicalPath}`}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Managing an Estate, Probate, or Inherited Property", url: ESTATE_HUB_PATH },
+          { name: breadcrumbName, url: canonicalPath },
+        ]}
+      />
+      <Header />
+      <main id="main-content" className="apf">
+        <ProbateStartHere />
+        <HeroBandTitle as="h1">{topic.title}</HeroBandTitle>
+
+        <section className="py-8 md:py-12 bg-cream">
+          <div className="container px-5 md:px-8">
+            <div className="apf-topic">
+              <p className="apf-back">
+                <Link to={ESTATE_HUB_PATH}>← Back to all estate topics</Link>
+              </p>
+
+              <SimpleTopicTop topic={topic} next={next} talkHref={hasPros ? "#people-who-help" : "/featured-professionals"} />
+
+              {afterSteps && <div style={{ marginTop: 36 }}>{afterSteps}</div>}
+
+              <div id="people-who-help" style={{ scrollMarginTop: 96 }}>
+                <TopicProfessionals path={canonicalPath} style={{ margin: "36px 0 0" }} />
+              </div>
+
+              <div className="apf-more">
+                <h2 className="apf-h2">More on this</h2>
+                {foldByHeading(children).map((g, n) => (
+                  <details key={n} className="apf-fold">
+                    <summary>
+                      {g.heading} <ChevronDown size={22} aria-hidden="true" />
+                    </summary>
+                    <div className="apf-fold-body">{g.nodes}</div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 bg-cream">
+          <div className="container px-5 md:px-8">
+            <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm italic leading-relaxed">
+              {disclaimer}
+            </p>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+/** Splits a page body into one group per <SubH2>; dividers are dropped. */
+function foldByHeading(children: ReactNode) {
+  const groups: { heading: ReactNode; nodes: ReactNode[] }[] = [];
+  let cur: { heading: ReactNode; nodes: ReactNode[] } = { heading: "Overview", nodes: [] };
+  Children.toArray(children).forEach((child) => {
+    if (isValidElement(child) && child.type === SubH2) {
+      if (cur.nodes.length) groups.push(cur);
+      cur = { heading: (child.props as { children: ReactNode }).children, nodes: [] };
+    } else if (!(isValidElement(child) && child.type === Divider)) {
+      cur.nodes.push(child);
+    }
+  });
+  if (cur.nodes.length) groups.push(cur);
+  return groups;
+}
 
 export default EstateSubPageLayout;
 

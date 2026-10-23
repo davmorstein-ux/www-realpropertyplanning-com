@@ -1644,32 +1644,32 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/estate-probate-inherited-property/first-steps": {
     title: "First Steps After a Death | Real Property Planning",
     description: "The early days after a loved one passes are overwhelming. Here are the calm, practical first steps to take — before any major decisions need to be made.",
-    h1: "First Steps After a Death",
-    intro: "The early days after a loved one passes are overwhelming. Here are the calm, practical first steps to take — before any major decisions need to be made.",
+    h1: "The First Weeks After a Death",
+    intro: "Most things can wait. In the first weeks, secure the house, find the important papers and order death certificates. Don't sell, close or give away anything yet.",
   },
   "/estate-probate-inherited-property/preparing-the-property": {
     title: "Preparing the Property for Sale | Real Property Planning",
     description: "From cleanout to repairs to occupancy concerns — what to handle before an estate home goes to market, and how to make smart decisions about what's worth doing.",
-    h1: "Preparing the Property for Sale",
-    intro: "From cleanout to repairs to occupancy concerns — what to handle before an estate home goes to market, and how to make smart decisions about what's worth doing.",
+    h1: "Getting the House Ready",
+    intro: "The house doesn't need to be perfect. Clear it out, see what it needs, and fix only what pays off: safety items and anything an inspection or a lender will flag.",
   },
   "/estate-probate-inherited-property/professional-team": {
     title: "Your Estate Administration Team: Who You Need and Why | Real Property Planning",
     description: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
-    h1: "Building Your Professional Team",
-    intro: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
+    h1: "The People Who Can Help",
+    intro: "An estate involves legal, money and real estate questions. Bring in the right people in the right order, and keep them talking to each other.",
   },
   "/estate-probate-inherited-property/property-value": {
     title: "Understanding the Property's Value | Real Property Planning",
     description: "Estate property valuation has unique requirements. Here's what a date-of-death appraisal is, why it matters, and how it differs from a standard market estimate.",
-    h1: "Understanding the Property's Value",
-    intro: "Estate property valuation has unique requirements. Here's what a date-of-death appraisal is, why it matters, and how it differs from a standard market estimate.",
+    h1: "What the House Is Worth",
+    intro: "The estate needs the home's value as of the date of death. It sets the heirs' tax basis and goes into the estate inventory. A certified appraisal holds up better than an online estimate.",
   },
   "/estate-probate-inherited-property/what-to-do-with-the-property": {
     title: "Deciding What to Do With the Property | Real Property Planning",
     description: "Sell, keep, rent, or transfer — there's no single right answer for estate property. Here's how to think through the options carefully.",
-    h1: "Deciding What to Do With the Property",
-    intro: "Sell, keep, rent, or transfer — there's no single right answer for estate property. Here's how to think through the options carefully.",
+    h1: "Sell, Keep or Rent the House",
+    intro: "There's no single right answer. Start with the facts: what the house is worth, what it needs, what is owed and what the will says. Selling is the most common choice. Keeping or renting brings real costs and work.",
   },
   "/everett-probate-estate-real-estate": {
     title: "Probate & Estate Real Estate in Everett, WA",
@@ -2349,7 +2349,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/estate-probate-inherited-property/probate-and-legal-authority": {
     title: "Understanding Probate & Legal Authority | Real Property Planning",
     description: "What is probate, and do you need it? Who has legal authority to make decisions about the estate? Plain-language answers for Washington State families.",
-    h1: "Understanding Probate & Legal Authority",
+    h1: "Probate and Who's in Charge",
+    intro: "Probate is the court process that puts someone in charge of the estate. In Washington, a house in the person's name alone usually needs it. Unless the house is in a trust, no one can sell it until the court appoints that person. Being named in the will isn't enough.",
   },
   "/executor-responsibilities-first-steps/when-you-need-extra-help": {
     title: "When Executors Need Extra Help | Real Property Planning",
