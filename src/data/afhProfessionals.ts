@@ -371,7 +371,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     label: "Adult family home biohazard cleanup",
     profession: "Adult Family Home Biohazard Cleanup",
     professionLines: ["Adult Family Home", "Biohazard Cleanup"],
-    why: "Residents cannot simply move out while a home dries, and mold, moisture and smoke are hard on older lungs. After a leak or a fire, an operating home needs the damage cleaned up, the cause found, and the air ducts and coils cleaned, so the home is sanitary for residents and passes the next DSHS inspection. A house bought for conversion may need the same before it can be licensed.",
+    why: "Residents cannot simply move out while a home dries, and mold, moisture and smoke are hard on older lungs. After a leak or a fire, an operating home needs the damage cleaned up and the cause found, so the home is sanitary for residents and passes the next DSHS inspection. A house bought for conversion may need the same before it can be licensed.",
     people: [LYNN_LIEDLE],
   },
   {

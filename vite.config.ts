@@ -2087,7 +2087,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Biohazard cleanup — Blood, bodily fluids, sewage and other material that can carry disease are removed in protective equipment, disposed of properly, and the area disinfected.",
       "Water damage and cleanup — Standing water is removed and the structure is dried, with moisture readings taken until walls, floors and framing are dry.",
       "Mold removal and remediation — The area is contained, mold is removed and treated, and the moisture that caused it is found.",
-      "Air duct and coil cleaning — Dust, debris, smoke residue and mold are cleaned out of the ducts and the heating and cooling coils.",
       "Sanitizing — Surfaces are cleaned and disinfected after water damage, sewage, illness or a long vacancy.",
       "Fire damage cleanup — Soot and smoke residue are cleaned, and smoke odor is treated at its source.",
       "Moisture control — Crawl spaces, attics and basements are corrected for the dampness and poor ventilation that lead to mold and rot.",

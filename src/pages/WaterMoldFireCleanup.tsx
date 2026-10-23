@@ -64,10 +64,6 @@ const faqs = [
     q: "Should the problem be fixed before the house is sold?",
     a: "Active water damage, mold and smoke odor tend to worry buyers, inspectors and lenders more than almost anything else, and some loans cannot close until they are dealt with. Once the house is clean, dry and sanitary, the broker can advise whether further preparation is worth the cost or whether to sell it as it is.",
   },
-  {
-    q: "Why clean the air ducts or the heating and cooling coils?",
-    a: "Ducts and coils collect dust, debris, smoke residue and sometimes mold, and the system then blows it through every room. Cleaning them is common after water or fire damage, after a long vacancy, and before a parent with breathing problems moves into a home.",
-  },
 ];
 
 const WaterMoldFireCleanup = () => (
@@ -220,12 +216,6 @@ const WaterMoldFireCleanup = () => (
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">Mold Removal &amp; Remediation</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   The affected area is contained, mold is removed and treated, and the moisture that caused it is found so it does not come back.
-                </p>
-              </div>
-              <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Air Duct &amp; Coil Cleaning</h3>
-                <p className="text-foreground text-base leading-relaxed">
-                  Dust, debris, smoke residue and mold are cleaned out of the ducts and the heating and cooling coils, so the system stops spreading them through the house.
                 </p>
               </div>
               <div className="bg-secondary rounded-lg p-6">
