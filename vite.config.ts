@@ -1851,26 +1851,38 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/planning-before-a-crisis/conversations-to-have": {
     title: "The Conversations Worth Having Now | Real Property Planning",
     description: "Most families never ask an aging parent what they actually want. These are the questions worth asking — before circumstances force the answer.",
+    h1: "Starting the Conversation",
+    intro: "Most families never ask a parent what they actually want. Start with one gentle question, listen, and write down what they say.",
   },
-  "/planning-before-a-crisis/how-we-can-help": {
-    title: "How This Resource Helps | Real Property Planning",
+  "/planning-before-a-crisis/how-this-site-helps": {
+    title: "How This Site Helps | Real Property Planning",
     description: "Real Property Planning is an educational resource hub for seniors, families, executors, and professionals navigating housing transitions and estate property in Washington State.",
+    h1: "How This Site Helps",
+    intro: "Real Property Planning is a free guide. It explains your options and lists independent professionals you contact and hire directly. It provides no services itself.",
   },
   "/planning-before-a-crisis/legal-documents": {
     title: "The Legal Documents That Matter Most | Real Property Planning",
     description: "Four documents that protect your family's ability to act when it matters most — explained in plain language for Washington State families.",
+    h1: "The Papers That Matter Most",
+    intro: "Four documents let family act when a parent can't. They must be signed while your parent can still sign.",
   },
   "/planning-before-a-crisis/property-questions": {
     title: "The Property Questions to Think Through | Real Property Planning",
     description: "What is the home worth? What condition is it in? Who inherits it — and what happens if they disagree? The property questions families wish they'd thought through earlier.",
+    h1: "Questions About the House",
+    intro: "The house is usually the biggest asset. Know what it's worth, what it needs and what should happen to it, before anyone has to decide in a hurry.",
   },
   "/planning-before-a-crisis/when-a-move-is-coming": {
     title: "When a Move Seems Like It's Coming | Real Property Planning",
     description: "You can see the signs. A parent is struggling at home. A health event has changed things. Here's what to do when the question is no longer 'if' but 'when.'",
+    h1: "When a Move Is Coming",
+    intro: "If you can see a move ahead, use the time. Visit places now, have the house evaluated, and get legal papers signed before health or memory makes that harder.",
   },
   "/planning-before-a-crisis/why-planning-early": {
     title: "Why Planning Early Makes Such a Difference | Real Property Planning",
     description: "When housing and property decisions are made under pressure, families pay the price — financially and emotionally. Here's what's at stake when planning is left too late.",
+    h1: "Why Plan Before a Crisis",
+    intro: "Decisions made in a hurry cost families money and peace. Planning while everyone is well keeps choices open, can avoid a court process, and lets your parent decide for themselves.",
   },
   "/professionals": {
     title: "Find a Professional | Real Property Planning | Western Washington",

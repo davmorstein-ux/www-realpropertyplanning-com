@@ -34,6 +34,9 @@ export const REDIRECTS: SiteRedirect[] = [
      featured one company, whose owner is now listed in the Find a Professional
      grid under AFH Management. */
   { from: "/afh-club/management-companies", to: "/afh-club/find-a-professional" },
+  /* Plan Ahead page renamed Oct 23, 2026 (owner's decision): the site never
+     speaks as "we", and that now includes its addresses. */
+  { from: "/planning-before-a-crisis/how-we-can-help", to: "/planning-before-a-crisis/how-this-site-helps" },
   /* RoomAndCare.com page removed Sept 30, 2026 (owner's decision): it was only ever a
      "coming soon" placeholder that search engines could index. */
   { from: "/long-term-care/finding-care-roomandcare", to: "/long-term-care" },

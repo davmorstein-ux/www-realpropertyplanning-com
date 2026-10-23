@@ -1253,7 +1253,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/planning-before-a-crisis/how-we-can-help",
+    path: "/planning-before-a-crisis/how-this-site-helps",
     links: [],
   },
   {

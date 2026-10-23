@@ -11,7 +11,8 @@ import GuidanceGrid from "@/components/GuidanceGrid";
 import IntentCTA from "@/components/IntentCTA";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { Link } from "react-router-dom";
-import EstateHubChoices from "@/components/EstateHubChoices";
+import SimpleHubChoices from "@/components/SimpleHubChoices";
+import { ESTATE_HUB_CHOICES, ESTATE_NOT_SURE } from "@/lib/estate-simple";
 
 const faqs = [
   {
@@ -83,7 +84,7 @@ const EstateProbateInheritedProperty = () => {
         <section className="py-10 md:py-14 bg-cream">
           <div className="container px-5 md:px-8">
             <p className="apf-ask">What do you need to know?</p>
-            <EstateHubChoices />
+            <SimpleHubChoices choices={ESTATE_HUB_CHOICES} notSure={ESTATE_NOT_SURE} />
             <p className="apf-more-links">
               New to probate? Read the{" "}
               <Link to="/washington-probate-guide">Washington Probate &amp; Estate Property Guide</Link> or look up a

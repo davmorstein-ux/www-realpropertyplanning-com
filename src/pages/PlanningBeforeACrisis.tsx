@@ -3,46 +3,11 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import RoadmapDropdown from "@/components/RoadmapDropdown";
+import SimpleHubChoices from "@/components/SimpleHubChoices";
+import { PLAN_HUB_CHOICES, PLAN_NOT_SURE } from "@/lib/plan-ahead-simple";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
-
-const tiles = [
-  {
-    title: "Why Planning Early Makes Such a Difference",
-    description:
-      "Avoid rushed real estate decisions, legal gaps, family conflict, and missed options when time is short.",
-    href: "/planning-before-a-crisis/why-planning-early",
-  },
-  {
-    title: "The Conversations Worth Having Now",
-    description: "The questions families wish they'd asked sooner — about home, care, authority, and wishes.",
-    href: "/planning-before-a-crisis/conversations-to-have",
-  },
-  {
-    title: "The Legal Documents That Matter Most",
-    description:
-      "Powers of attorney, healthcare directives, wills, trusts, and beneficiary designations explained simply.",
-    href: "/planning-before-a-crisis/legal-documents",
-  },
-  {
-    title: "The Property Questions to Think Through",
-    description:
-      "Valuation, condition, co-ownership, and tax considerations to weigh well before any decision is made.",
-    href: "/planning-before-a-crisis/property-questions",
-  },
-  {
-    title: "When a Move Seems Like It's Coming",
-    description: "Practical steps when months — not years — separate today from a likely housing transition.",
-    href: "/planning-before-a-crisis/when-a-move-is-coming",
-  },
-  {
-    title: "How This Resource Helps",
-    description: "What these free guides cover, and how to find independent professionals you contact and hire directly.",
-    href: "/planning-before-a-crisis/how-we-can-help",
-  },
-];
 
 const faqs = [
   {
@@ -95,7 +60,7 @@ const PlanningBeforeACrisis = () => {
       />
       <BreadcrumbSchema items={[{ name: "Planning Before a Crisis", url: "/planning-before-a-crisis" }]} />
       <Header />
-      <main id="main-content">
+      <main id="main-content" className="apf">
         {/* PanoramaHero was removed here. This page was the last one in the
             codebase still rendering it — every other page dropped its hero in
             the sweep that left only the homepage with one, and this file was
@@ -107,24 +72,16 @@ const PlanningBeforeACrisis = () => {
             mismatch against Featured Professionals and the rest of the site. */}
         <HeroBandTitle as="h1">Planning Before a Crisis</HeroBandTitle>
 
-        {/* THINGS TO CONSIDER */}
-        <section className="py-14 md:py-20 bg-cream">
+        {/* Simplified hub (Oct 23, 2026, same pattern as Helping an Aging
+            Parent and Handling an Estate): six photo buttons, then one
+            full-width "Not sure where to start?" bar. Labels and images:
+            src/lib/plan-ahead-simple.ts. Replaced the "Six things worth
+            thinking through" heading and the RoadmapDropdown list. */}
+        <section className="py-10 md:py-14 bg-cream">
           <div className="container px-5 md:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
-              <p className="text-gold font-bold tracking-[0.25em] uppercase text-sm md:text-[15px] mb-4">
-                Things to Consider
-              </p>
-              <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[44px] font-semibold text-navy leading-tight">
-                Six things worth thinking through — before you have to
-              </h2>
-            </div>
-
-            {/* Was "See the guided first steps" → /what-should-we-do-first, a
-                second copy of the homepage tiles with no planning-ahead option
-                (retired Oct 20, 2026). */}
-            <JourneyShortcuts plan="choose" questions="plan-ahead" />
-
-            <RoadmapDropdown topics={tiles} accentColor="#1B3A6B" mode="list" currentPath={tiles[0].href} />
+            <p className="apf-ask">Where would you like to start?</p>
+            <SimpleHubChoices choices={PLAN_HUB_CHOICES} notSure={PLAN_NOT_SURE} />
+            <JourneyShortcuts lead="Looking for a quick answer?" questions="plan-ahead" style={{ margin: "32px auto 0" }} />
           </div>
         </section>
 

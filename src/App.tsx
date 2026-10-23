@@ -31,7 +31,7 @@ const PBCConversationsToHave = lazy(() => import("./pages/planning-before-a-cris
 const PBCLegalDocuments = lazy(() => import("./pages/planning-before-a-crisis/LegalDocuments"));
 const PBCPropertyQuestions = lazy(() => import("./pages/planning-before-a-crisis/PropertyQuestions"));
 const PBCWhenAMoveIsComing = lazy(() => import("./pages/planning-before-a-crisis/WhenAMoveIsComing"));
-const PBCHowWeCanHelp = lazy(() => import("./pages/planning-before-a-crisis/HowWeCanHelp"));
+const PBCHowThisSiteHelps = lazy(() => import("./pages/planning-before-a-crisis/HowThisSiteHelps"));
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
 const AgingLifeCareManagers = lazy(() => import("./pages/AgingLifeCareManagers"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
@@ -372,7 +372,7 @@ export const AppRoutes = () => (
       <Route path="/planning-before-a-crisis/legal-documents" element={<PBCLegalDocuments />} />
       <Route path="/planning-before-a-crisis/property-questions" element={<PBCPropertyQuestions />} />
       <Route path="/planning-before-a-crisis/when-a-move-is-coming" element={<PBCWhenAMoveIsComing />} />
-      <Route path="/planning-before-a-crisis/how-we-can-help" element={<PBCHowWeCanHelp />} />
+      <Route path="/planning-before-a-crisis/how-this-site-helps" element={<PBCHowThisSiteHelps />} />
       <Route path="/building-your-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
       <Route path="/aging-life-care-managers" element={<AgingLifeCareManagers />} />
       <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />

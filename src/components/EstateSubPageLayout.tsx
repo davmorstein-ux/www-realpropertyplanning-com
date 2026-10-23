@@ -1,6 +1,4 @@
-import { ReactNode, Children, isValidElement } from "react";
-import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ReactNode } from "react";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import EstateReadNext from "@/components/EstateReadNext";
 import Header from "@/components/Header";
@@ -11,9 +9,8 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import ProbateStartHere from "@/components/ProbateStartHere";
-import SimpleTopicTop from "@/components/SimpleTopicTop";
+import SimpleTopicBody from "@/components/SimpleTopicBody";
 import { ESTATE_SIMPLE_TOPICS, ESTATE_HUB_PATH } from "@/lib/estate-simple";
-import { professionalsForTopic } from "@/data/topicProfessionals";
 
 interface EstateSubPageLayoutProps {
   seoTitle: string;
@@ -153,12 +150,6 @@ const SimpleEstatePage = ({
   children,
 }: Omit<EstateSubPageLayoutProps, "bandTitle">) => {
   const topic = ESTATE_SIMPLE_TOPICS[canonicalPath];
-  const i = estateProbateTopics.findIndex((t) => t.href === canonicalPath);
-  const nextTopic = i >= 0 ? estateProbateTopics[i + 1] : undefined;
-  const next = nextTopic
-    ? { to: nextTopic.href, label: `Next: ${ESTATE_SIMPLE_TOPICS[nextTopic.href]?.title ?? nextTopic.title}` }
-    : { to: ESTATE_HUB_PATH, label: "Back to all estate topics" };
-  const hasPros = professionalsForTopic(canonicalPath).length > 0;
 
   return (
     <div className="min-h-screen bg-background">
@@ -180,31 +171,18 @@ const SimpleEstatePage = ({
 
         <section className="py-8 md:py-12 bg-cream">
           <div className="container px-5 md:px-8">
-            <div className="apf-topic">
-              <p className="apf-back">
-                <Link to={ESTATE_HUB_PATH}>← Back to all estate topics</Link>
-              </p>
-
-              <SimpleTopicTop topic={topic} next={next} talkHref={hasPros ? "#people-who-help" : "/featured-professionals"} />
-
-              {afterSteps && <div style={{ marginTop: 36 }}>{afterSteps}</div>}
-
-              <div id="people-who-help" style={{ scrollMarginTop: 96 }}>
-                <TopicProfessionals path={canonicalPath} style={{ margin: "36px 0 0" }} />
-              </div>
-
-              <div className="apf-more">
-                <h2 className="apf-h2">More on this</h2>
-                {foldByHeading(children).map((g, n) => (
-                  <details key={n} className="apf-fold">
-                    <summary>
-                      {g.heading} <ChevronDown size={22} aria-hidden="true" />
-                    </summary>
-                    <div className="apf-fold-body">{g.nodes}</div>
-                  </details>
-                ))}
-              </div>
-            </div>
+            <SimpleTopicBody
+              path={canonicalPath}
+              topics={ESTATE_SIMPLE_TOPICS}
+              order={estateProbateTopics}
+              hubPath={ESTATE_HUB_PATH}
+              hubLabel="all estate topics"
+              afterSteps={afterSteps}
+              headingType={SubH2}
+              dividerType={Divider}
+            >
+              {children}
+            </SimpleTopicBody>
           </div>
         </section>
 
@@ -220,22 +198,6 @@ const SimpleEstatePage = ({
     </div>
   );
 };
-
-/** Splits a page body into one group per <SubH2>; dividers are dropped. */
-function foldByHeading(children: ReactNode) {
-  const groups: { heading: ReactNode; nodes: ReactNode[] }[] = [];
-  let cur: { heading: ReactNode; nodes: ReactNode[] } = { heading: "Overview", nodes: [] };
-  Children.toArray(children).forEach((child) => {
-    if (isValidElement(child) && child.type === SubH2) {
-      if (cur.nodes.length) groups.push(cur);
-      cur = { heading: (child.props as { children: ReactNode }).children, nodes: [] };
-    } else if (!(isValidElement(child) && child.type === Divider)) {
-      cur.nodes.push(child);
-    }
-  });
-  if (cur.nodes.length) groups.push(cur);
-  return groups;
-}
 
 export default EstateSubPageLayout;
 

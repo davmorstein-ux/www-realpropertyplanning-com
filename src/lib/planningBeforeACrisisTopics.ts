@@ -9,5 +9,5 @@ export const planningBeforeACrisisTopics: PlanningTopic[] = [
   { title: "The Legal Documents That Matter Most", href: "/planning-before-a-crisis/legal-documents" },
   { title: "The Property Questions to Think Through", href: "/planning-before-a-crisis/property-questions" },
   { title: "When a Move Seems Like It's Coming", href: "/planning-before-a-crisis/when-a-move-is-coming" },
-  { title: "How This Resource Helps", href: "/planning-before-a-crisis/how-we-can-help" },
+  { title: "How This Site Helps", href: "/planning-before-a-crisis/how-this-site-helps" },
 ];

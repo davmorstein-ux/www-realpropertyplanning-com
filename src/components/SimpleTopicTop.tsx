@@ -1,5 +1,5 @@
 /**
- * Top of a simplified topic page (Estate path, Oct 23, 2026): the short
+ * Top of a simplified topic page (Estate and Plan Ahead paths, Oct 23, 2026): the short
  * answer, "What to do now" with three steps (photo + words), one Next button
  * and "Or talk to someone". Same look as the Aging Parent topic pages
  * (ChoiceFlowPage.tsx); styles are the "apf-" rules in index.css, so the
@@ -10,7 +10,7 @@
  */
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import type { SimpleTopic } from "@/lib/estate-simple";
+import type { SimpleTopic } from "@/lib/simple-topics";
 
 interface Props {
   topic: SimpleTopic;

@@ -36,17 +36,8 @@ import professionalTeam1 from "@/assets/estate/professional-team-1.webp";
 import professionalTeam2 from "@/assets/estate/professional-team-2.webp";
 import professionalTeam3 from "@/assets/estate/professional-team-3.webp";
 
-export interface SimpleStep {
-  title: string;
-  text: string;
-  image?: string;
-}
-
-export interface SimpleTopic {
-  title: string;
-  short: string;
-  steps: SimpleStep[];
-}
+import type { SimpleTopic, SimpleChoice, NotSureBar } from "@/lib/simple-topics";
+export type { SimpleTopic } from "@/lib/simple-topics";
 
 export const ESTATE_HUB_PATH = "/estate-probate-inherited-property";
 
@@ -114,7 +105,7 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
 };
 
 /** Hub photo buttons, in page order (the six topics). */
-export const ESTATE_HUB_CHOICES: { to: string; label: string; image: string }[] = [
+export const ESTATE_HUB_CHOICES: SimpleChoice[] = [
   { to: "/estate-probate-inherited-property/first-steps", label: "Someone just passed away", image: hubFirstSteps },
   { to: "/estate-probate-inherited-property/probate-and-legal-authority", label: "Who's in charge, and is probate needed?", image: hubProbate },
   { to: "/estate-probate-inherited-property/property-value", label: "What is the house worth?", image: hubPropertyValue },
@@ -124,4 +115,4 @@ export const ESTATE_HUB_CHOICES: { to: string; label: string; image: string }[] 
 ];
 
 /** Full-width bar under the six buttons. */
-export const ESTATE_NOT_SURE = { to: "/my-plan#estate:", label: "Not sure where to start?", sub: "Make a free step-by-step plan" };
+export const ESTATE_NOT_SURE: NotSureBar = { to: "/my-plan#estate:", label: "Not sure where to start?", sub: "Make a free step-by-step plan" };

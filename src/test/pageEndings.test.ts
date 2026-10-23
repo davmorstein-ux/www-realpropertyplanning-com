@@ -52,7 +52,7 @@ const RELATED_BLOCKS = [
   // the Helping an Aging Parent start page).
   "RoadmapDropdown",
   "ChoiceFlowPage",
-  "EstateHubChoices", // the estate hub's six photo buttons (Oct 23, 2026)
+  "SimpleHubChoices", // the Estate and Plan Ahead hubs' photo buttons (Oct 23, 2026)
 ];
 const RELATED_HEADINGS = /Related Resources|Continue Learning|Related guides|Related Guides|More on this|Keep reading/;
 

@@ -171,7 +171,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/olympia-probate-estate-real-estate", label: "Olympia Probate Estate" },
   { path: "/guides/out-of-state-families", label: "Out Of State Families" },
   { path: "/planning-before-a-crisis/conversations-to-have", label: "The Conversations Worth Having Now" },
-  { path: "/planning-before-a-crisis/how-we-can-help", label: "How This Resource Helps" },
+  { path: "/planning-before-a-crisis/how-this-site-helps", label: "How This Site Helps" },
   { path: "/planning-before-a-crisis/legal-documents", label: "The Legal Documents That Matter Most" },
   { path: "/planning-before-a-crisis/property-questions", label: "The Property Questions to Think Through" },
   { path: "/planning-before-a-crisis/when-a-move-is-coming", label: "When a Move Seems Like It's Coming" },

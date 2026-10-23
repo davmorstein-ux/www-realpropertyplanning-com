@@ -111,7 +111,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "10 Steps Every Executor Should Know", href: "/resources/washington-executors-10-step-checklist" },
           { title: "Roles & Responsibilities", href: "/roles" },
           { title: "Planning & Next Steps", href: "/planning" },
-          { title: "Planning Before a Crisis: How This Resource Helps", href: "/planning-before-a-crisis/how-we-can-help" },
+          { title: "Planning Before a Crisis: How This Site Helps", href: "/planning-before-a-crisis/how-this-site-helps" },
           { title: "What Will Happen to the Family Home? (Free Checklist)", href: "/family-home-planning" },
           { title: "My Real Property Plan (Free Step-by-Step Plan)", href: "/my-plan" },
         ],

@@ -14,7 +14,7 @@
  *     listed yet, and an elder law attorney is not one. Add "probateLaw" here
  *     once one is listed.
  *
- * Pages not listed show no box: the hubs, how-we-can-help (about the site
+ * Pages not listed show no box: the hubs, how-this-site-helps (about the site
  * itself) and professional-team (it already shows the network).
  */
 import type { ProfessionalCategoryKey } from "./familyProfessionals";

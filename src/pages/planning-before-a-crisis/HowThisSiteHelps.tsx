@@ -5,13 +5,13 @@ import PlanningSubPageLayout, {
   Divider,
 } from "@/components/PlanningSubPageLayout";
 
-const HowWeCanHelp = () => (
+const HowThisSiteHelps = () => (
   <PlanningSubPageLayout
-    seoTitle="How This Resource Helps | Real Property Planning"
+    seoTitle="How This Site Helps | Real Property Planning"
     seoDescription="Real Property Planning is an educational resource hub for seniors, families, executors, and professionals navigating housing transitions and estate property in Washington State."
-    canonicalPath="/planning-before-a-crisis/how-we-can-help"
-    breadcrumbName="How This Resource Helps"
-    bandTitle="HOW THIS RESOURCE HELPS"
+    canonicalPath="/planning-before-a-crisis/how-this-site-helps"
+    breadcrumbName="How This Site Helps"
+    bandTitle="HOW THIS SITE HELPS"
     disclaimer="Real Property Planning is an educational resource hub. It does not employ professionals or provide legal, tax, financial, real estate, or care services directly. Information on this site is for general guidance only and is not a substitute for advice from licensed professionals."
   >
     <SubH2>What This Site Is</SubH2>
@@ -64,4 +64,4 @@ const HowWeCanHelp = () => (
   </PlanningSubPageLayout>
 );
 
-export default HowWeCanHelp;
+export default HowThisSiteHelps;
