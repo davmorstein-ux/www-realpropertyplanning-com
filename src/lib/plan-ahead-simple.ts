@@ -34,6 +34,7 @@ import house3 from "@/assets/plan-ahead/house-3.webp";
 import move1 from "@/assets/plan-ahead/move-1.webp";
 import move2 from "@/assets/plan-ahead/move-2.webp";
 import move3 from "@/assets/plan-ahead/move-3.webp";
+import thisSite1 from "@/assets/plan-ahead/this-site-1.webp";
 import thisSite2 from "@/assets/plan-ahead/this-site-2.webp";
 import thisSite3 from "@/assets/plan-ahead/this-site-3.webp";
 
@@ -96,7 +97,7 @@ export const PLAN_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
     short:
       "Real Property Planning is a free guide. It explains your options and lists independent professionals you contact and hire directly. It provides no services itself.",
     steps: [
-      { title: "Read the guide for your situation", text: "Short, plain-language guides for Washington families." },
+      { title: "Read the guide for your situation", text: "Short, plain-language guides for Washington families.", image: thisSite1 },
       { title: "Make a free plan", text: "Answer a few questions and get your next steps in order.", image: thisSite2 },
       { title: "Contact a professional directly", text: "Every person listed is someone the site's owner has met in person.", image: thisSite3 },
     ],
