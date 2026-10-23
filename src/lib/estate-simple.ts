@@ -7,8 +7,7 @@
 // engines or AI tools.
 //
 // Images: src/assets/estate/ — no people, faces, hands or lettering. Hub
-// images 800x500 WebP, step images 480x480 WebP. A step without an image
-// renders text only until its image arrives.
+// images 800x500 WebP, step images 480x480 WebP (all 18 in place Oct 23).
 //
 // Wording rule: the site never speaks as "we", and never refers anyone to an
 // attorney (it explains what an attorney does; readers choose their own).
@@ -25,6 +24,17 @@ import probate1 from "@/assets/estate/probate-1.webp";
 import probate2 from "@/assets/estate/probate-2.webp";
 import probate3 from "@/assets/estate/probate-3.webp";
 import propertyValue1 from "@/assets/estate/property-value-1.webp";
+import propertyValue2 from "@/assets/estate/property-value-2.webp";
+import propertyValue3 from "@/assets/estate/property-value-3.webp";
+import whatToDo1 from "@/assets/estate/what-to-do-1.webp";
+import whatToDo2 from "@/assets/estate/what-to-do-2.webp";
+import whatToDo3 from "@/assets/estate/what-to-do-3.webp";
+import preparing1 from "@/assets/estate/preparing-1.webp";
+import preparing2 from "@/assets/estate/preparing-2.webp";
+import preparing3 from "@/assets/estate/preparing-3.webp";
+import professionalTeam1 from "@/assets/estate/professional-team-1.webp";
+import professionalTeam2 from "@/assets/estate/professional-team-2.webp";
+import professionalTeam3 from "@/assets/estate/professional-team-3.webp";
 
 export interface SimpleStep {
   title: string;
@@ -67,8 +77,8 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
       "The estate needs the home's value as of the date of death. It sets the heirs' tax basis and goes into the estate inventory. A certified appraisal holds up better than an online estimate.",
     steps: [
       { title: "Order a date-of-death appraisal", text: "A certified appraiser values the home as it stood on the date of death.", image: propertyValue1 },
-      { title: "Do it soon", text: "The value is easiest to support when the appraisal is done soon after the death." },
-      { title: "Share it with the heirs and the attorney", text: "It goes into the inventory and gives everyone one number to work from." },
+      { title: "Do it soon", text: "The value is easiest to support when the appraisal is done soon after the death.", image: propertyValue2 },
+      { title: "Share it with the heirs and the attorney", text: "It goes into the inventory and gives everyone one number to work from.", image: propertyValue3 },
     ],
   },
   "/estate-probate-inherited-property/what-to-do-with-the-property": {
@@ -76,9 +86,9 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
     short:
       "There's no single right answer. Start with the facts: what the house is worth, what it needs, what is owed and what the will says. Selling is the most common choice. Keeping or renting brings real costs and work.",
     steps: [
-      { title: "Get the facts first", text: "The value, the condition, any mortgage or liens, and what the will says." },
-      { title: "Ask each heir what they want", text: "If one heir wants to keep the house, they usually buy out the others at the appraised value." },
-      { title: "Price out keeping or renting", text: "Taxes, insurance, repairs and landlord work add up. Renting is a business, not passive income." },
+      { title: "Get the facts first", text: "The value, the condition, any mortgage or liens, and what the will says.", image: whatToDo1 },
+      { title: "Ask each heir what they want", text: "If one heir wants to keep the house, they usually buy out the others at the appraised value.", image: whatToDo2 },
+      { title: "Price out keeping or renting", text: "Taxes, insurance, repairs and landlord work add up. Renting is a business, not passive income.", image: whatToDo3 },
     ],
   },
   "/estate-probate-inherited-property/preparing-the-property": {
@@ -86,9 +96,9 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
     short:
       "The house doesn't need to be perfect. Clear it out, see what it needs, and fix only what pays off: safety items and anything an inspection or a lender will flag.",
     steps: [
-      { title: "Clear out the belongings", text: "Family takes keepsakes first, then an estate sale, donation or haul-away." },
-      { title: "Walk through and list what it needs", text: "Safety issues, worn systems like the roof and furnace, and cosmetic wear." },
-      { title: "Fix what pays, skip the rest", text: "Fresh paint and clean carpets usually pay off. Big remodels usually don't." },
+      { title: "Clear out the belongings", text: "Family takes keepsakes first, then an estate sale, donation or haul-away.", image: preparing1 },
+      { title: "Walk through and list what it needs", text: "Safety issues, worn systems like the roof and furnace, and cosmetic wear.", image: preparing2 },
+      { title: "Fix what pays, skip the rest", text: "Fresh paint and clean carpets usually pay off. Big remodels usually don't.", image: preparing3 },
     ],
   },
   "/estate-probate-inherited-property/professional-team": {
@@ -96,9 +106,9 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
     short:
       "An estate involves legal, money and real estate questions. Bring in the right people in the right order, and keep them talking to each other.",
     steps: [
-      { title: "Start with a probate attorney", text: "They confirm who has authority and what the court needs." },
-      { title: "Get an appraisal before listing", text: "Know the value first, then make decisions." },
-      { title: "Add others as needed", text: "A CPA for taxes, a broker to sell, an estate liquidator for the contents." },
+      { title: "Start with a probate attorney", text: "They confirm who has authority and what the court needs.", image: professionalTeam1 },
+      { title: "Get an appraisal before listing", text: "Know the value first, then make decisions.", image: professionalTeam2 },
+      { title: "Add others as needed", text: "A CPA for taxes, a broker to sell, an estate liquidator for the contents.", image: professionalTeam3 },
     ],
   },
 };
