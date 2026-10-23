@@ -17,7 +17,7 @@ const findTile = (title: string) => {
 const teamTiles = [
   { ...findTile("Real Estate Brokers"), title: "Real Estate Broker" },
   { ...findTile("Real Estate Appraisers"), title: "Certified Residential Appraiser" },
-  { ...findTile("Elder Law Attorneys"), title: "Elder Law Attorney" },
+  { ...findTile("Probate Attorneys"), title: "Probate Attorney" },
   { ...findTile("Senior Move Managers"), title: "Senior Move Manager" },
   { ...findTile("Financial Planners"), title: "Financial Planner or CPA" },
   // Oct 23, 2026: Senior Living Advisor removed (this page is about a property
