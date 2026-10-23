@@ -34,7 +34,7 @@ const providers: Provider[] = [
   {
     ...LYNN_LIEDLE,
     title: "Owner",
-    specialty: "Biohazard cleanup, water damage cleanup, mold removal and remediation, air duct and coil cleaning, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
+    specialty: "Biohazard cleanup, water damage cleanup, mold removal and remediation, sanitizing, fire damage cleanup and moisture control, restoring the home to a clean, sanitary and livable condition.",
     alt: LYNN_LIEDLE.photoAlt,
     href: LYNN_LIEDLE.website,
   },
