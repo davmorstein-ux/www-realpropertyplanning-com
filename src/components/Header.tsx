@@ -657,7 +657,9 @@ const Header = () => {
                 marginTop: 8,
                 paddingTop: 8,
                 paddingBottom: 8,
-                borderTop: "1px solid rgba(39,36,33,0.10)",
+                /* Divider rule removed Oct 24, 2026: on the marble it read as a
+                   stray line under the logo's "PLANNING". The header is one
+                   stone slab now; the spacing alone separates the two tiers. */
                 ["--pn-phone-slot" as string]: `${phoneWidth}px`,
                 display: "flex",
                 alignItems: "center",
