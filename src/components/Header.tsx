@@ -433,7 +433,11 @@ const Header = () => {
                     ...NAV_FONT,
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                     color: "#fff",
-                    background: "#17578f",
+                    /* Same flat navy as Get Connected (Oct 24, 2026). It was #17578f, a
+                       second, brighter blue left over from before the Oct 21
+                       sitewide navy decision, so the two buttons side by side
+                       read as two different blues. */
+                    background: "#1B3A6B",
                     /* Square icon button, sized to sit level with the language
                        switcher beside it. Height comes from the row (the parent
                        stretches its children) so the two stay matched if either
@@ -611,7 +615,11 @@ const Header = () => {
                   className="rpp-header-phone"
                   style={{
                     color: "#fff",
-                    background: "#17578f",
+                    /* Same flat navy as Get Connected (Oct 24, 2026). It was #17578f, a
+                       second, brighter blue left over from before the Oct 21
+                       sitewide navy decision, so the two buttons side by side
+                       read as two different blues. */
+                    background: "#1B3A6B",
                     borderRadius: 6,
                     textDecoration: "none",
                     /* Square icon button matching the LanguageSwitcher beside

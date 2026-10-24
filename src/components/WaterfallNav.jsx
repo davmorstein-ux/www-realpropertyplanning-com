@@ -139,21 +139,25 @@ const QUICK_LINKS = [
 const PANEL_FADE_MS = 260;
 const PANEL_HOVER_CLOSE_DELAY = 400;
 
-/* Hamburger bars in the same finish as "PLANNING" in the 3D logo
-   (Oct 24, 2026). David asked for them to look chiselled like PLANNING; in
-   the v14 logo PLANNING is charcoal stone lit from above with a soft shadow
-   falling below it, so the bars copy that exactly rather than a carved
-   groove, which would have looked like a different material next to it:
-   lighter top edge, darker underside, a thin highlight on top and a soft
-   shadow under each bar. 5px rather than 4px so the finish reads on a phone. */
+/* Hamburger bars etched INTO the header's stone (Oct 24, 2026, second pass).
+   David's notes on the first pass: the icon overpowered the logo on a phone,
+   and the bars looked like they floated above the stone. So:
+   - smaller: a 26x19 icon (was 32x24) with 3.5px bars, quieter than the
+     logo beside it while the button itself keeps its 48px tap target;
+   - recessed, not raised: a mid stone-grey floor only somewhat darker than
+     the marble, a shadow along the TOP inside edge (the lip of the cut
+     shades the floor) and a light line along the BOTTOM outside edge (the
+     far wall of the cut catching light). Light from above + shadow at the
+     top = a groove; shadow below = something floating. Do not add an outer
+     shadow below the bars, which is what made the first pass float. */
 const CHISELED_BAR = {
   display: "block",
-  height: "5px",
+  height: "3.5px",
   width: "100%",
-  borderRadius: "1.5px",
-  background: "linear-gradient(180deg, #6a655f 0%, #4a4540 45%, #2c2926 100%)",
+  borderRadius: "2px",
+  background: "linear-gradient(180deg, #4f4a45 0%, #6b655f 60%, #7d7770 100%)",
   boxShadow:
-    "inset 0 1px 0 rgba(255,255,255,0.35), 0 1.5px 1.5px rgba(39,36,33,0.45), 0 3px 4px rgba(39,36,33,0.18)",
+    "inset 0 1.25px 1px rgba(20,18,16,0.7), 0 1px 0 rgba(255,255,255,0.95)",
 };
 
 const CSS = `
@@ -711,8 +715,8 @@ export default function WaterfallNav() {
               display: "inline-flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              width: "32px",
-              height: "24px",
+              width: "26px",
+              height: "19px",
               padding: 0,
               flexShrink: 0,
             }}
