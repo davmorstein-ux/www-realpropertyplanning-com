@@ -3870,7 +3870,11 @@ main #rpp-tagline .rpp-tagline-line-v2 {
      soft cast shadow lift the words off the wall without a cartoon
      extrusion. Colour deepened from denim #2E5368 to #1F4058 and weight to
      800 so the lettering holds its own against the sunlit wall. */
-  color: #1F4058 !important;
+  /* Oct 24, 2026: charcoal #272421, was navy #1F4058. With the navy 3D
+     logo, navy buttons and the blue accent wall in the photo, a navy
+     headline made four blue elements in one view; David compared the two in
+     a mock and chose charcoal. It now matches the funnel heading below. */
+  color: #272421 !important;
   font-weight: 800 !important;
   /* One soft, offset shadow only. The first version stacked a light edge and
      two dark edges; at normal (1x) screen resolution they blurred the letter

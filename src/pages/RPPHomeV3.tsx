@@ -268,7 +268,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  color: "#1B3A6B",
+                  color: "#272421",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   /* No text shadow. This white glow existed to lift NAVY text
@@ -303,7 +303,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  color: "#1B3A6B",
+                  color: "#272421",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   /* No text shadow. This white glow existed to lift NAVY text
