@@ -36,14 +36,15 @@ const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-s
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x239 (rpp-logo-v13: the 3D navy stone mark with a
+/* The logo file is 1280x240 (rpp-logo-v14: the 3D navy stone mark with a
    charcoal "PLANNING" under PROPERTY and a garnet door, on a transparent
-   background, Oct 24, 2026; it replaced the flat v11 at 1608x331).
+   background; v14 has slimmer, more widely spaced REAL PROPERTY letters than
+   v13. Oct 24, 2026; replaced the flat v11 at 1608x331).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
    here would silently break that alignment. */
-const LOGO_ASPECT = 1280 / 239;
+const LOGO_ASPECT = 1280 / 240;
 const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 
 /* Search field width. It shares the nav tier now rather than sitting beneath
@@ -371,14 +372,14 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v13-640.webp"
-                    srcSet="/rpp-logo-v13-640.webp 640w, /rpp-logo-v13-1280.webp 1280w"
+                    src="/rpp-logo-v14-640.webp"
+                    srcSet="/rpp-logo-v14-640.webp 640w, /rpp-logo-v14-1280.webp 1280w"
                     alt=""
                     style={{ height: 35, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="185px"
                     decoding="async"
                     width={1280}
-                    height={239}
+                    height={240}
                   />
                 </Link>
               </div>
@@ -516,8 +517,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v13-640.webp"
-                    srcSet="/rpp-logo-v13-640.webp 640w, /rpp-logo-v13-1280.webp 1280w"
+                    src="/rpp-logo-v14-640.webp"
+                    srcSet="/rpp-logo-v14-640.webp 640w, /rpp-logo-v14-1280.webp 1280w"
                     alt=""
                     style={{
                       width: "100%",
@@ -530,7 +531,7 @@ const Header = () => {
                     sizes="292px"
                     decoding="async"
                     width={1280}
-                    height={239}
+                    height={240}
                   />
                 </Link>
               </div>
