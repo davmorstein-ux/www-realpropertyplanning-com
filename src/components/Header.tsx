@@ -34,11 +34,13 @@ const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-s
    and clipped its own placeholder. Every point here widens the search. */
 const DESKTOP_LOGO_HEIGHT = 60;
 
-/* The logo file is 1608x331. Deriving its rendered width from the height above
+/* The logo file is 1280x285 (rpp-logo-v12: the 3D marble-style mark on a
+   transparent background, Oct 24, 2026; it replaced the flat v11 at 1608x331).
+   Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
    here would silently break that alignment. */
-const LOGO_ASPECT = 1608 / 331;
+const LOGO_ASPECT = 1280 / 285;
 const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 
 /* Search field width. It shares the nav tier now rather than sitting beneath
@@ -270,14 +272,27 @@ const Header = () => {
              inside had to flip from light to dark when this changed — nav
              labels, carets, underlines, the divider and the hamburger. If this
              ever goes back to a dark colour, all of those flip back too. */
-          backgroundColor: isMobile ? "#F5F0E8" : "rgba(245, 240, 232, 0.96)",
+          backgroundColor: "#F5F0E8",
+          /* Subtle warm marble behind the whole header (Oct 24, 2026), to sit
+             under the 3D logo. The marble is a separate image on purpose — the
+             logo file is transparent — so the stone never shows a seam or a
+             mismatched rectangle at any screen width. "cover" anchored top-left
+             keeps the veins still as the header changes height. The cream
+             colour above shows while the image loads. Opaque now, so the
+             desktop backdrop blur below no longer has anything to blur. */
+          backgroundImage: isMobile
+            ? "url(/rpp-header-marble-mobile.webp)"
+            : "url(/rpp-header-marble.webp)",
+          backgroundSize: "cover",
+          backgroundPosition: "left top",
+          backgroundRepeat: "no-repeat",
           /* Blur is dropped on mobile. backdrop-filter on a sticky element is
              one of the most expensive things a mobile browser can be asked to
              do — it re-samples what is behind the header on every scroll frame.
              The background opacity is raised to compensate, so the header still
              reads as solid. Desktop keeps the blur, where it is affordable. */
-          backdropFilter: isMobile ? "none" : "blur(10px)",
-          WebkitBackdropFilter: isMobile ? "none" : "blur(10px)",
+          backdropFilter: "none",
+          WebkitBackdropFilter: "none",
           /* Own compositing layer, so scrolling repaints the page beneath it
              without repainting the header itself. DESKTOP ONLY.
 
@@ -341,14 +356,14 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v11-640.webp"
-                    srcSet="/rpp-logo-v11-640.webp 640w, /rpp-logo-v11.webp 1608w"
+                    src="/rpp-logo-v12-640.webp"
+                    srcSet="/rpp-logo-v12-640.webp 640w, /rpp-logo-v12-1280.webp 1280w"
                     alt=""
                     style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="185px"
                     decoding="async"
-                    width={1608}
-                    height={331}
+                    width={1280}
+                    height={285}
                   />
                 </Link>
               </div>
@@ -486,8 +501,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v11-640.webp"
-                    srcSet="/rpp-logo-v11-640.webp 640w, /rpp-logo-v11.webp 1608w"
+                    src="/rpp-logo-v12-640.webp"
+                    srcSet="/rpp-logo-v12-640.webp 640w, /rpp-logo-v12-1280.webp 1280w"
                     alt=""
                     style={{
                       width: "100%",
@@ -499,8 +514,8 @@ const Header = () => {
                        screens (Oct 6, 2026; the 1608px original was 36 KB). */
                     sizes="292px"
                     decoding="async"
-                    width={1608}
-                    height={331}
+                    width={1280}
+                    height={285}
                   />
                 </Link>
               </div>
