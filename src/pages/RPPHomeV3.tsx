@@ -328,11 +328,12 @@ const RPPHomeV3 = () => {
         {/* ── Three short points under the artwork (Oct 21, 2026, David chose
             "Option 2" over a sentence): replaced the beige box holding a
             two-line lead sentence, which read weak. Brick-red checks echo the
+            door; made larger and thicker Oct 23, 2026 (David: "a bit weak").
             door. The class names avoid "btn"/"cta" substrings on purpose. */}
         <ul className="rpp-hero-points" aria-label="What the site offers">
           {[t("hero.point1"), t("hero.point2"), t("hero.point3")].map((pt) => (
             <li key={pt} className="rpp-hero-point">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B0352A" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B0352A" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               {pt}
