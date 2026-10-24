@@ -329,7 +329,7 @@ const Header = () => {
              Charcoal at low opacity rather than a fixed colour, so it holds up
              over the photograph on the homepage and over cream on interior
              pages without needing a second rule. */
-          borderBottom: "1px solid rgba(39,36,33,0.38)",
+          borderBottom: "1px solid rgba(39,36,33,0.5)",
           /* Oct 24, 2026: the marble reads as a stone slab projecting out over
              the hero. Three parts, all subtle: a thin light line just above the
              bottom edge (the slab's top face catching light), a short tight
@@ -338,7 +338,10 @@ const Header = () => {
              too, where it reads as the same ledge over the cream page. If this
              ever looks heavy, lower the last two alphas, not the offsets. */
           boxShadow:
-            "inset 0 -2px 0 rgba(255,255,255,0.55), 0 2px 3px rgba(39,36,33,0.22), 0 10px 22px -4px rgba(39,36,33,0.22)",
+            /* Strengthened Oct 24, 2026 after David found the first pass too
+               faint: brighter top-face line, a shaded band inside the bottom
+               edge that reads as the slab's thickness, and deeper shadows. */
+            "inset 0 -2px 0 rgba(255,255,255,0.8), inset 0 -10px 10px -8px rgba(39,36,33,0.22), 0 3px 4px rgba(39,36,33,0.36), 0 16px 30px -6px rgba(39,36,33,0.38)",
           ...NAV_FONT,
           color: "#272421",
         }}
