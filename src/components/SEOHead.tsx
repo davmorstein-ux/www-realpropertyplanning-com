@@ -18,7 +18,11 @@ interface SEOHeadProps {
 }
 
 const SITE_URL = "https://realpropertyplanning.com";
-const DEFAULT_OG_IMAGE = "https://realpropertyplanning.com/logo.webp";
+/* Oct 24, 2026: 1200x630 share card (the 3D logo on the header marble).
+   Before this, every page pointed at /logo.webp, which did not exist, so
+   shared links had no preview picture. /logo.webp now exists too and is the
+   plain transparent logo used by the Organization schema in schema.ts. */
+const DEFAULT_OG_IMAGE = "https://realpropertyplanning.com/og-share.jpg";
 
 const SEOHead = ({
   title,
