@@ -139,6 +139,23 @@ const QUICK_LINKS = [
 const PANEL_FADE_MS = 260;
 const PANEL_HOVER_CLOSE_DELAY = 400;
 
+/* Hamburger bars in the same finish as "PLANNING" in the 3D logo
+   (Oct 24, 2026). David asked for them to look chiselled like PLANNING; in
+   the v14 logo PLANNING is charcoal stone lit from above with a soft shadow
+   falling below it, so the bars copy that exactly rather than a carved
+   groove, which would have looked like a different material next to it:
+   lighter top edge, darker underside, a thin highlight on top and a soft
+   shadow under each bar. 5px rather than 4px so the finish reads on a phone. */
+const CHISELED_BAR = {
+  display: "block",
+  height: "5px",
+  width: "100%",
+  borderRadius: "1.5px",
+  background: "linear-gradient(180deg, #6a655f 0%, #4a4540 45%, #2c2926 100%)",
+  boxShadow:
+    "inset 0 1px 0 rgba(255,255,255,0.35), 0 1.5px 1.5px rgba(39,36,33,0.45), 0 3px 4px rgba(39,36,33,0.18)",
+};
+
 const CSS = `
   .wf-wrap {
     position: relative;
@@ -701,13 +718,13 @@ export default function WaterfallNav() {
             }}
           >
             <span
-              style={{ display: "block", height: "4px", background: "#272421", borderRadius: "2px", width: "100%" }}
+              style={CHISELED_BAR}
             />
             <span
-              style={{ display: "block", height: "4px", background: "#272421", borderRadius: "2px", width: "100%" }}
+              style={CHISELED_BAR}
             />
             <span
-              style={{ display: "block", height: "4px", background: "#272421", borderRadius: "2px", width: "100%" }}
+              style={CHISELED_BAR}
             />
           </span>
         </button>
