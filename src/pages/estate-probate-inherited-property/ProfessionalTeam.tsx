@@ -16,7 +16,7 @@ const findTile = (title: string) => {
 
 const teamTiles = [
   { ...findTile("Real Estate Brokers"), title: "Real Estate Broker" },
-  { ...findTile("Real Estate Appraisers"), title: "Certified Residential Appraiser" },
+  { ...findTile("Real Estate Appraisers"), title: "Certified Appraiser" },
   { ...findTile("Probate Attorneys"), title: "Probate Attorney" },
   { ...findTile("Senior Move Managers"), title: "Senior Move Manager" },
   { ...findTile("Financial Planners"), title: "Financial Planner or CPA" },
