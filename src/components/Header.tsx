@@ -290,7 +290,7 @@ const Header = () => {
           /* -v2 (Oct 24, 2026): veins about 55% stronger; David found the
              first marble too subtle. */
           backgroundImage: isMobile
-            ? "url(/rpp-header-marble-mobile-v2.webp)"
+            ? "url(/rpp-header-marble-mobile-v3.webp)"
             : "url(/rpp-header-marble-v2.webp)",
           backgroundSize: "cover",
           backgroundPosition: "left top",
@@ -417,9 +417,14 @@ const Header = () => {
                     minWidth: 44,
                     height: 44,
                     borderRadius: 6,
-                    border: "1px solid rgba(39,36,33,0.25)",
+                    /* Phones (Oct 24, 2026): no box. The magnifier is etched
+                       into the header stone like the hamburger bars, so the
+                       three marks on the left of the bar read as one family.
+                       The 44px tap target is unchanged; it still fills
+                       charcoal while the search row is open. */
+                    border: "none",
                     background: searchOpen ? "#272421" : "transparent",
-                    color: searchOpen ? "#fff" : "#272421",
+                    color: searchOpen ? "#fff" : "#625c56",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -427,9 +432,32 @@ const Header = () => {
                     padding: 0,
                   }}
                 >
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="11" cy="11" r="7" />
-                    <path d="m20 20-3.5-3.5" />
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" style={{ overflow: "visible" }}>
+                    {/* Etched-in look, same lighting as the hamburger bars:
+                        a dark shadow along the TOP inside edge of each stroke
+                        and a thin light line just BELOW it. Off while open,
+                        where the icon is white on charcoal. */}
+                    <defs>
+                      <filter id="rpp-etch-search" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
+                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
+                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
+                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
+                        <feComposite in2="lip" operator="in" result="highlight" />
+                        <feOffset in="SourceAlpha" dy="1" result="down2" />
+                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
+                        <feFlood floodColor="#141210" floodOpacity="0.8" />
+                        <feComposite in2="topEdge" operator="in" result="shade" />
+                        <feMerge>
+                          <feMergeNode in="highlight" />
+                          <feMergeNode in="SourceGraphic" />
+                          <feMergeNode in="shade" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <g filter={searchOpen ? undefined : "url(#rpp-etch-search)"}>
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="m20 20-3.5-3.5" />
+                    </g>
                   </svg>
                 </button>
                 <a href="tel:2069003015"
@@ -437,12 +465,16 @@ const Header = () => {
                   style={{
                     ...NAV_FONT,
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
-                    color: "#fff",
+                    /* Phones (Oct 24, 2026): the handset is etched into the
+                       header stone like the hamburger and search marks, in the
+                       logo's navy so it still reads as THE call button. The
+                       44px tap target and the aria-label are unchanged. */
+                    color: "#1B3A6B",
                     /* Same flat navy as Get Connected (Oct 24, 2026). It was #17578f, a
                        second, brighter blue left over from before the Oct 21
                        sitewide navy decision, so the two buttons side by side
                        read as two different blues. */
-                    background: "#1B3A6B",
+                    background: "transparent",
                     /* Square icon button, sized to sit level with the language
                        switcher beside it. Height comes from the row (the parent
                        stretches its children) so the two stay matched if either
@@ -473,13 +505,33 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2.1"
+                    strokeWidth="2.4"
+                    width={26}
+                    height={26}
+                    style={{ overflow: "visible", width: 26, height: 26 }}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     aria-hidden="true"
                     focusable="false"
                   >
-                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
+                    <defs>
+                      <filter id="rpp-etch-phone" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
+                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
+                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
+                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
+                        <feComposite in2="lip" operator="in" result="highlight" />
+                        <feOffset in="SourceAlpha" dy="1" result="down2" />
+                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
+                        <feFlood floodColor="#0b1830" floodOpacity="0.85" />
+                        <feComposite in2="topEdge" operator="in" result="shade" />
+                        <feMerge>
+                          <feMergeNode in="highlight" />
+                          <feMergeNode in="SourceGraphic" />
+                          <feMergeNode in="shade" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <path filter="url(#rpp-etch-phone)" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
                   </svg>
                 </a>
               </div>
