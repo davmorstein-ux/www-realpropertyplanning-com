@@ -13,11 +13,15 @@ import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
  * of the points and About is in the menu).
  *
  * Each point is a link. Garnet check badge (the logo door's colour) says "this
- * is included"; the navy arrow at the end says "go here". The arrows give one
- * short double nudge to the right soon after the page loads, staggered, then
- * stay still: no endless pulse (distracting for older readers, and WCAG 2.2.2
- * requires a way to stop motion that runs past 5 seconds). Nothing moves under
- * prefers-reduced-motion. Styles are in index.css under .rpp-hero-points.
+ * is included". The text arrows that used to end each line were removed (David,
+ * Oct 25, 2026: "look cheap"); instead the check itself turns into an arrow:
+ * the check rotates a quarter-turn and fades as a white arrow in the same
+ * stroke turns into place. It does this once soon after the page loads,
+ * staggered across the four badges, then turns back to a check; on hover or
+ * keyboard focus it turns to the arrow and stays while the pointer is there.
+ * No endless motion (distracting for older readers; WCAG 2.2.2). Under
+ * prefers-reduced-motion the load demo is skipped and hover swaps instantly.
+ * Styles are in index.css under .rpp-hero-points.
  *
  * The guide and calculator figures come from their data files, each with a
  * test that fails if the site holds fewer than the homepage claims — never
@@ -41,21 +45,20 @@ export default function HomepagePoints() {
         const last = text.slice(cut);
         return (
           <li key={p.to} className="rpp-hero-point">
-            <Link to={p.to} className="rpp-hero-point-link" style={{ ["--rpp-nudge-delay" as string]: `${900 + i * 140}ms` }}>
+            <Link to={p.to} className="rpp-hero-point-link" style={{ ["--rpp-nudge-delay" as string]: `${1000 + i * 220}ms` }}>
               <svg className="rpp-hero-badge" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
                 <circle cx="15" cy="15" r="15" fill="#9E1F3A" />
-                <polyline points="9 15.5 13.2 19.6 21.2 10.8" fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
+                <g fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline className="rpp-badge-check" points="9 15.5 13.2 19.6 21.2 10.8" />
+                  <g className="rpp-badge-arrow">
+                    <line x1="8.5" y1="15" x2="21" y2="15" />
+                    <polyline points="16 10 21 15 16 20" />
+                  </g>
+                </g>
               </svg>
-              {/* The arrow sits inside the text, kept on one line with the last
-                  word, so when a point wraps on a narrow phone the
-                  arrow follows the text instead of floating at the far edge.
-                  It is inline-block, so the text's underline skips it. */}
               <span className="rpp-hero-point-text">
                 {head}
-                <span className="rpp-hero-point-last">
-                  {last}
-                  <span className="rpp-hero-arrow" aria-hidden="true">→</span>
-                </span>
+                <span className="rpp-hero-point-last">{last}</span>
               </span>
             </Link>
           </li>
