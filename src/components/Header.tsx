@@ -291,10 +291,13 @@ const Header = () => {
              first marble too subtle. -v3/-v4 (same day): veins redrawn as
              long hand-placed strokes spread evenly across the whole bar and
              kept at ~40% behind the logo; the earlier pattern bunched most
-             veins up behind the logo. */
+             veins up behind the logo. -v4/-v5 (Oct 25, 2026): replaced the
+             generated pattern with a real marble photograph David supplied,
+             warmed to the cream and softened (veins at ~90% of the photo's
+             own depth) so it stays subtle and evenly spread. */
           backgroundImage: isMobile
-            ? "url(/rpp-header-marble-mobile-v4.webp)"
-            : "url(/rpp-header-marble-v3.webp)",
+            ? "url(/rpp-header-marble-mobile-v5.webp)"
+            : "url(/rpp-header-marble-v4.webp)",
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
