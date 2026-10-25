@@ -36,11 +36,11 @@ const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-s
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x240 (rpp-logo-v19: the 3D navy stone mark with a
+/* The logo file is 1280x240 (rpp-logo-v20: the 3D navy stone mark with a
    charcoal "PLANNING" under PROPERTY and a garnet door, on a transparent
    background; v14 has slimmer, more widely spaced REAL PROPERTY letters than
    v13, and v15 adds back the chimney on the A's left slope (top level with
-   the E), which ChatGPT had dropped; v18 keeps its right side, widens it to the left, and blends its base into the roof so the chimney and A read as one piece; v19 removes a soft ghost fringe on its left edge and casts its shadow left like the letters. Oct 24, 2026; replaced the flat v11).
+   the E), which ChatGPT had dropped; v18 keeps its right side, widens it to the left, and blends its base into the roof so the chimney and A read as one piece; v19 removes a soft ghost fringe on its left edge and casts its shadow left like the letters; v20 squares its top-left corner. Oct 24, 2026; replaced the flat v11).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
@@ -375,8 +375,8 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v19-640.webp"
-                    srcSet="/rpp-logo-v19-640.webp 640w, /rpp-logo-v19-1280.webp 1280w"
+                    src="/rpp-logo-v20-640.webp"
+                    srcSet="/rpp-logo-v20-640.webp 640w, /rpp-logo-v20-1280.webp 1280w"
                     alt=""
                     style={{ height: 35, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="185px"
@@ -524,8 +524,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v19-640.webp"
-                    srcSet="/rpp-logo-v19-640.webp 640w, /rpp-logo-v19-1280.webp 1280w"
+                    src="/rpp-logo-v20-640.webp"
+                    srcSet="/rpp-logo-v20-640.webp 640w, /rpp-logo-v20-1280.webp 1280w"
                     alt=""
                     style={{
                       width: "100%",
