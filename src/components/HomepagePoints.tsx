@@ -29,8 +29,9 @@ import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
 const POINTS = [
   { key: "hero.point1", n: HOMEPAGE_GUIDE_CLAIM, to: "/guides-and-resources" },
   { key: "hero.point2", n: HOMEPAGE_CALCULATOR_CLAIM, to: "/calculators" },
-  { key: "hero.point3", to: "/featured-professionals" },
+  // Newsletter before professionals (David, Oct 25, 2026).
   { key: "hero.point4", to: "/newsletter" },
+  { key: "hero.point3", to: "/featured-professionals" },
 ] as const;
 
 export default function HomepagePoints() {
