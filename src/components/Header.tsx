@@ -287,9 +287,11 @@ const Header = () => {
              keeps the veins still as the header changes height. The cream
              colour above shows while the image loads. Opaque now, so the
              desktop backdrop blur below no longer has anything to blur. */
+          /* -v2 (Oct 24, 2026): veins about 55% stronger; David found the
+             first marble too subtle. */
           backgroundImage: isMobile
-            ? "url(/rpp-header-marble-mobile.webp)"
-            : "url(/rpp-header-marble.webp)",
+            ? "url(/rpp-header-marble-mobile-v2.webp)"
+            : "url(/rpp-header-marble-v2.webp)",
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
