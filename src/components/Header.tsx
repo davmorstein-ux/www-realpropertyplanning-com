@@ -435,7 +435,11 @@ const Header = () => {
                     padding: 0,
                   }}
                 >
-                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" style={{ overflow: "visible" }}>
+                  {/* viewBox cropped to the glyph's own edges so the magnifier is drawn
+                      at exactly the same height as the phone handset beside it
+                      (22px each); stroke 2 here renders ~2.4px, matching the
+                      handset's line weight. */}
+                  <svg viewBox="2.9 2.9 18.2 18.2" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" style={{ overflow: "visible" }}>
                     {/* Etched-in look, same lighting as the hamburger bars:
                         a dark shadow along the TOP inside edge of each stroke
                         and a thin light line just BELOW it. Off while open,
@@ -505,13 +509,13 @@ const Header = () => {
                       not announced twice. */}
                   <svg
                     className="rpp-header-phone-icon"
-                    viewBox="0 0 24 24"
+                    viewBox="0.8 0.8 22.4 22.4"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2.4"
-                    width={26}
-                    height={26}
-                    style={{ overflow: "visible", width: 26, height: 26 }}
+                    width={22}
+                    height={22}
+                    style={{ overflow: "visible", width: 22, height: 22 }}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     aria-hidden="true"
