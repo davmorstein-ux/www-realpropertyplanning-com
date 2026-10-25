@@ -329,12 +329,20 @@ const RPPHomeV3 = () => {
             "Option 2" over a sentence): replaced the beige box holding a
             two-line lead sentence, which read weak. Brick-red checks echo the
             door; made larger and thicker Oct 23, 2026 (David: "a bit weak").
+            Oct 24, 2026: David said the strip still looked weak (words nearly
+            invisible, ticks cheap) — now charcoal bold text, garnet badge
+            checks, hairline dividers, and its own solid cream so the faint
+            logo wallpaper no longer shows through behind the words.
             door. The class names avoid "btn"/"cta" substrings on purpose. */}
         <ul className="rpp-hero-points" aria-label="What the site offers">
           {[t("hero.point1"), t("hero.point2"), t("hero.point3")].map((pt) => (
             <li key={pt} className="rpp-hero-point">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B0352A" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12" />
+              {/* Garnet badge with a white check (Oct 24, 2026). The bare
+                  brick-red tick read as cheap; a filled disc in the logo
+                  door's garnet reads as a finished mark. */}
+              <svg className="rpp-hero-badge" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+                <circle cx="15" cy="15" r="15" fill="#9E1F3A" />
+                <polyline points="9 15.5 13.2 19.6 21.2 10.8" fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {pt}
             </li>

@@ -5899,28 +5899,59 @@ html body main .rpp-pr-browse.rpp-pr-browse:focus-visible { background-color: #1
 
 /* Homepage: three short points under the hero artwork (Oct 21, 2026).
    Doubled classes: index.css floors li/span sizes in main and repaints text
-   in rounded boxes. */
+   in rounded boxes.
+   Oct 24, 2026 (David: "looks weak... almost invisible... checks look
+   cheap"): charcoal 700 text (was navy #1F4058 600, which blended with the
+   cream and the blue everywhere else), garnet badge checks in the markup,
+   hairline dividers between items on wide screens, hairlines top and
+   bottom, and a solid background so the 2% logo wallpaper (.bg-*::before)
+   stops ghosting behind the words. */
 html body main ul.rpp-hero-points.rpp-hero-points {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 12px 44px;
+  gap: 14px 0;
   list-style: none !important;
   margin: 0 !important;
-  padding: 22px 24px !important;
-  border-bottom: 1px solid #e4ddd1;
+  padding: 24px 24px !important;
+  position: relative;
+  z-index: 0;
+  background-color: #faf8f4;
+  border-top: 1px solid #ddd4c7;
+  border-bottom: 1px solid #ddd4c7;
 }
 html body main li.rpp-hero-point.rpp-hero-point {
   display: inline-flex !important;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 28px !important;
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-  font-size: clamp(17px, 1.35vw, 20px) !important;
-  font-weight: 600 !important;
+  font-size: clamp(18px, 1.45vw, 21px) !important;
+  font-weight: 700 !important;
   line-height: 1.3 !important;
-  color: #1F4058 !important;
+  letter-spacing: 0 !important;
+  color: #272421 !important;
+}
+html body main li.rpp-hero-point.rpp-hero-point + li.rpp-hero-point {
+  border-left: 1px solid #d8cfc2;
+}
+html body main .rpp-hero-point .rpp-hero-badge { flex-shrink: 0; display: block; }
+/* Phones: the three points wrap onto separate lines, where side dividers
+   would hang off the ends; stack them left-aligned in one column instead. */
+@media (max-width: 760px) {
+  html body main ul.rpp-hero-points.rpp-hero-points {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px !important;
+  }
+  /* One shared width, centred, so the badges line up down the left edge. */
+  html body main li.rpp-hero-point.rpp-hero-point {
+    padding: 0 !important;
+    width: min(100%, 22rem);
+  }
+  html body main li.rpp-hero-point.rpp-hero-point + li.rpp-hero-point { border-left: 0; }
 }
 html body main li.rpp-hero-point.rpp-hero-point::before,
 html body main li.rpp-hero-point.rpp-hero-point::marker { content: none !important; display: none !important; }
