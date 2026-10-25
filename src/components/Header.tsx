@@ -270,7 +270,9 @@ const Header = () => {
              by the sticky offset instead. */
           padding: isMobile
             ? "10px 12px 6px"
-            : "calc(env(safe-area-inset-top, 0px) + 8px) 24px 4px",
+            /* Oct 24, 2026: 16px top (was 8px); the logo touched the top
+               edge of the header. */
+            : "calc(env(safe-area-inset-top, 0px) + 16px) 24px 4px",
           /* Cream, matching the page background, so the header reads as part
              of the page rather than a bar sitting on top of it. Everything
              inside had to flip from light to dark when this changed — nav

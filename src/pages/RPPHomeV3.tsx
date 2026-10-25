@@ -235,7 +235,13 @@ const RPPHomeV3 = () => {
                  the image is too short there to hold four lines. */
               position: "absolute",
               left: "4.2%",
-              top: "6%",
+              /* Oct 24, 2026: 17% (was 6%). The header now casts a stone
+                 ledge shadow onto the photo, and at 6% the headline sat ~30px
+                 under it, crowding it. 17% gives ~70px of air at full width
+                 and still ends well above the dappled lower wall (block ends
+                 near 50%; the clean column ends at 64%). Still top-anchored —
+                 centring would put it over the busy sunlight. */
+              top: "17%",
               maxWidth: "43.75%",
               display: "flex",
               flexDirection: "column",
