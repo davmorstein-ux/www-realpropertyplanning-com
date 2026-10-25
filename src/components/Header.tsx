@@ -36,11 +36,11 @@ const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-s
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x240 (rpp-logo-v25: the 3D navy stone mark with a
+/* The logo file is 1280x240 (rpp-logo-v26: the 3D navy stone mark with a
    charcoal "PLANNING" under PROPERTY and a garnet door, on a transparent
    background; v14 has slimmer, more widely spaced REAL PROPERTY letters than
    v13, and v15 adds back the chimney on the A's left slope (top level with
-   the E), which ChatGPT had dropped; v18 keeps its right side, widens it to the left, and blends its base into the roof so the chimney and A read as one piece; v19 removes a soft ghost fringe on its left edge and casts its shadow left like the letters; v20 squares its top-left corner; v22 sets it to 1.5x the v20 width (right side fixed); v23 gives its top edge the same thickness as the L's; v24 moves the door left so its tightest gaps to each leg of the A are equal (22/23px at full size) and it touches neither; v25 removes a dark smudge left between the door's top-right corner and the A. Oct 24, 2026; replaced the flat v11).
+   the E), which ChatGPT had dropped; v18 keeps its right side, widens it to the left, and blends its base into the roof so the chimney and A read as one piece; v19 removes a soft ghost fringe on its left edge and casts its shadow left like the letters; v20 squares its top-left corner; v22 sets it to 1.5x the v20 width (right side fixed); v23 gives its top edge the same thickness as the L's; v24 moves the door left so its tightest gaps to each leg of the A are equal (22/23px at full size) and it touches neither; v25 removes a dark smudge left between the door's top-right corner and the A; v26 shrinks the keyhole to ~60%. Oct 24, 2026; replaced the flat v11).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
@@ -288,10 +288,13 @@ const Header = () => {
              colour above shows while the image loads. Opaque now, so the
              desktop backdrop blur below no longer has anything to blur. */
           /* -v2 (Oct 24, 2026): veins about 55% stronger; David found the
-             first marble too subtle. */
+             first marble too subtle. -v3/-v4 (same day): veins redrawn as
+             long hand-placed strokes spread evenly across the whole bar and
+             kept at ~40% behind the logo; the earlier pattern bunched most
+             veins up behind the logo. */
           backgroundImage: isMobile
-            ? "url(/rpp-header-marble-mobile-v3.webp)"
-            : "url(/rpp-header-marble-v2.webp)",
+            ? "url(/rpp-header-marble-mobile-v4.webp)"
+            : "url(/rpp-header-marble-v3.webp)",
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
@@ -377,8 +380,8 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v25-640.webp"
-                    srcSet="/rpp-logo-v25-640.webp 640w, /rpp-logo-v25-1280.webp 1280w"
+                    src="/rpp-logo-v26-640.webp"
+                    srcSet="/rpp-logo-v26-640.webp 640w, /rpp-logo-v26-1280.webp 1280w"
                     alt=""
                     style={{ height: 35, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="185px"
@@ -578,8 +581,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v25-640.webp"
-                    srcSet="/rpp-logo-v25-640.webp 640w, /rpp-logo-v25-1280.webp 1280w"
+                    src="/rpp-logo-v26-640.webp"
+                    srcSet="/rpp-logo-v26-640.webp 640w, /rpp-logo-v26-1280.webp 1280w"
                     alt=""
                     style={{
                       width: "100%",
