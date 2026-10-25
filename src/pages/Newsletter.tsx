@@ -77,10 +77,11 @@ const Newsletter = () => (
           <NewsletterSignup
             list="family"
             source="newsletter-page:family"
+            checklist
             copy={{
-              heading: "Sign up for the family newsletter",
-              body: "Occasional, plain-English notes. No sales pressure.",
-              cta: "Subscribe",
+              heading: "Sign up and get the free checklist",
+              body: "The 7-step checklist for Washington families arrives as soon as you sign up, then occasional plain-English notes. No sales pressure.",
+              cta: "Send me the checklist",
             }}
           />
         </div>
@@ -100,7 +101,7 @@ const Newsletter = () => (
             source="newsletter-page:afh"
             copy={{
               heading: "Sign up for the AFH Club newsletter",
-              body: "Occasional updates, written for operators and buyers rather than families.",
+              body: "New listings, sold prices and DSHS changes, written for operators and buyers rather than families. Occasional.",
               cta: "Subscribe to AFH Club",
             }}
           />

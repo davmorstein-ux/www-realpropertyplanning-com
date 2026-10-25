@@ -200,10 +200,10 @@ const Contact = () => {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Contact Info */}
               <div>
-                <p className="font-serif text-2xl text-foreground mb-4 leading-snug">
-                  {t("contactPage.intro.paragraph1")}
-                </p>
-                <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
+                {/* One-sentence intro (Oct 25, 2026). paragraph1, the site
+                    description, was dropped here because it repeats the
+                    homepage; the key stays in the locale files unused. */}
+                <p className="font-serif text-2xl text-foreground mb-8 leading-snug">
                   {t("contactPage.intro.paragraph2")}
                 </p>
 

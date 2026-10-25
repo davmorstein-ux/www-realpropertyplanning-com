@@ -3,6 +3,7 @@ import { useId, useState, useEffect, useRef } from "react";
 import { trackSignup } from "@/lib/siteTracking";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { CHECKLIST_PDF } from "@/data/myPlan";
 
 /**
  * Newsletter signup.
@@ -45,35 +46,42 @@ type Variant = "general" | "probate" | "senior" | "footer" | "afh" | "afhFooter"
 /** Which MailerLite list a signup joins (Oct 16, 2026). The edge function maps this to a group from a fixed whitelist. */
 export type NewsletterList = "family" | "afh";
 
+/* Oct 25, 2026 (October audit, item 1): every family-side box now leads with
+   the free 7-step checklist, a concrete reason to sign up today, and the AFH
+   boxes lead with what actually arrives (listings, sold prices, DSHS changes).
+   A family-list signup with variant copy hands over the checklist link on
+   success (CHECKLIST_DONE below), so the promise in the heading is kept. */
+const CHECKLIST_LINE = "the 7-step checklist for Washington families: who can sign, how the home is owned, and when to sell";
+
 const COPY: Record<Variant, { heading: string; body: string; cta: string }> = {
   general: {
-    heading: "Stay informed, without the noise",
-    body: "Occasional practical notes for Washington families facing property, estate, probate, and senior-transition decisions.",
-    cta: "Subscribe",
+    heading: "Free: the family home planning checklist",
+    body: `Get ${CHECKLIST_LINE}. You'll also get occasional plain-English notes on inherited homes, probate, senior moves and the cost of care. Unsubscribe any time.`,
+    cta: "Send me the checklist",
   },
   probate: {
-    heading: "Planning an estate property sale?",
-    body: "Occasional Washington-focused guidance on probate, inherited homes, preparation, timing, and family decision-making.",
-    cta: "Get Probate Property Updates",
+    heading: "Selling an inherited house? Start with the checklist",
+    body: `Get ${CHECKLIST_LINE}. You'll also get occasional Washington notes on probate, inherited homes and timing a sale. Unsubscribe any time.`,
+    cta: "Send me the checklist",
   },
   senior: {
-    heading: "Clear guidance for the next move",
-    body: "Occasional resources on downsizing, senior living decisions, relocation planning, and preparing a longtime home for sale.",
-    cta: "Send Me Senior Transition Resources",
+    heading: "Helping a parent move? Start with the checklist",
+    body: `Get ${CHECKLIST_LINE}. You'll also get occasional notes on downsizing, senior living decisions and preparing a longtime home for sale. Unsubscribe any time.`,
+    cta: "Send me the checklist",
   },
   footer: {
-    heading: "Get the Real Property Planning newsletter",
-    body: "Occasional, plain-English notes for Washington families on inherited homes, probate, senior moves and the cost of care. No sales pressure.",
-    cta: "Subscribe",
+    heading: "Free: the family home planning checklist",
+    body: `Get ${CHECKLIST_LINE}, plus the occasional Real Property Planning newsletter. No sales pressure. Unsubscribe any time.`,
+    cta: "Send me the checklist",
   },
   afh: {
-    heading: "The AFH Club newsletter",
-    body: "Occasional updates for adult family home buyers, owners and investors in Washington: new listings and sales, DSHS rate and rule changes, and new tools.",
+    heading: "New AFH listings and DSHS changes, by email",
+    body: "Adult family homes and AFH businesses as they come up for sale in Washington, recent sold prices, and DSHS rate and rule changes that affect owners and buyers. Occasional, never daily. Unsubscribe any time.",
     cta: "Subscribe to AFH Club",
   },
   afhFooter: {
-    heading: "Get the AFH Club newsletter",
-    body: "Occasional updates for adult family home buyers, owners and investors: listings, sales, and DSHS rate and rule changes.",
+    heading: "New AFH listings and DSHS changes, by email",
+    body: "Adult family homes for sale, recent sold prices, and DSHS rate and rule changes. Occasional. Unsubscribe any time.",
     cta: "Subscribe",
   },
 };
@@ -94,6 +102,9 @@ interface NewsletterSignupProps {
      download the signup was for (/family-home-planning). Keep the
      confirm-your-address sentence in whatever replaces it. */
   doneMessage?: React.ReactNode;
+  /* Hand over the checklist PDF on success. Defaults to on for family-list
+     boxes using the built-in copy; pass true when custom copy promises it. */
+  checklist?: boolean;
 }
 
 /* The edge function holds the MailerLite key and pins the group; this only
@@ -110,7 +121,7 @@ async function subscribeRequest(payload: {
   if (error) throw error;
 }
 
-const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, list: listProp, doneMessage }: NewsletterSignupProps) => {
+const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, list: listProp, doneMessage, checklist }: NewsletterSignupProps) => {
   const { pathname } = useLocation();
   const list: NewsletterList = listProp ?? (pathname.startsWith("/afh-club") ? "afh" : "family");
   /* Accent by list: navy for the family side, AFH Club hunter green. The old
@@ -144,6 +155,9 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
   const errorId = `${inputId}-error`;
   const hpId = `${inputId}-hp`;
   const copy = copyOverride ?? COPY[variant];
+  /* Family-list boxes using the built-in copy promise the checklist, so they
+     hand it over. Pages with their own copy decide for themselves (checklist prop). */
+  const checklistDone = checklist ?? (list === "family" && !copyOverride);
   const tag = source || `${variant}:${pathname}`;
 
   useEffect(() => {
@@ -363,8 +377,22 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
         }
       ` }} />
 
-      {status === "done" && doneMessage ? (
-        <div className="rpp-news-done" role="status">{doneMessage}</div>
+      {status === "done" && (doneMessage || checklistDone) ? (
+        <div className="rpp-news-done" role="status">
+          {doneMessage ?? (
+            <>
+              <p style={{ margin: "0 0 12px", fontWeight: 700 }}>Your checklist is ready.</p>
+              <p style={{ margin: "0 0 12px" }}>
+                <a href={CHECKLIST_PDF} target="_blank" rel="noopener" style={{ fontWeight: 700, color: accent, textDecoration: "underline" }}>
+                  Download the 7-step checklist (PDF)
+                </a>
+              </p>
+              <p style={{ margin: 0 }}>
+                <strong>One more step for the newsletter:</strong> a link to confirm your address is on its way to your inbox. Nothing else is sent until you click it.
+              </p>
+            </>
+          )}
+        </div>
       ) : status === "done" ? (
         /* role="status" announces without stealing focus. The confirmation
            step is stated plainly — otherwise someone who never clicks the

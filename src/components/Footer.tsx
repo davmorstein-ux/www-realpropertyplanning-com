@@ -13,7 +13,9 @@ const Footer = () => {
      get the AFH list; everything else the family list. Not shown on
      /newsletter itself, which carries both forms. */
   const isAFH = pathname.startsWith("/afh-club");
-  const showNews = pathname !== "/newsletter";
+  /* Hidden where the page has its own signup offering the same checklist
+     (Oct 25, 2026), so a visitor never sees the offer twice. */
+  const showNews = !["/newsletter", "/my-plan", "/family-home-planning"].includes(pathname.replace(/\/$/, ""));
   return (
     <footer data-nosnippet="true" style={{ backgroundColor: "#23211f", padding: "2.5rem 0 1.5rem" }}>
       <style dangerouslySetInnerHTML={{ __html: `

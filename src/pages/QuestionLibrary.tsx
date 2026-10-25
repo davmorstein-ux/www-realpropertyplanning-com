@@ -85,7 +85,7 @@ function Hub({ lib }: { lib: Library }) {
         <h1 className="rpp-qa-h1">{lib.title}</h1>
         <div className="rpp-qa-intro">{lib.intro}</div>
         <div className="rpp-qa-ask">
-          {lib.id === "afh" ? <AskBox title="Ask an AFH question" accent={lib.accent} contactReason="afh-question" examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]} /> : <AskBox />}
+          {lib.id === "afh" ? <AskBox title="Ask an AFH question" accent={lib.accent} contactReason="afh-question" placeholder="For example: How do I buy an adult family home?" examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]} /> : <AskBox />}
         </div>
         <div className="rpp-qa-journeys">
           {lib.journeys.map((j) => (
@@ -132,7 +132,7 @@ function JourneyPage({ lib, journey }: { lib: Library; journey: Journey }) {
           Prefer the step-by-step guide? Start at <Link to={journey.start} className="rpp-qa-start">{journey.title}</Link>.
         </div>
         <div className="rpp-qa-ask">
-          {lib.id === "afh" ? <AskBox title="Ask an AFH question" accent={lib.accent} contactReason="afh-question" examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]} /> : <AskBox />}
+          {lib.id === "afh" ? <AskBox title="Ask an AFH question" accent={lib.accent} contactReason="afh-question" placeholder="For example: How do I buy an adult family home?" examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]} /> : <AskBox />}
         </div>
         <nav aria-label="Topics on this page">
           <ul className="rpp-qa-jump">

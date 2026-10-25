@@ -203,7 +203,9 @@ const About = () => {
         {/* Contact — this section exists because Contact was removed from the
             top navigation. It is the only place in the header-level structure
             where contact details now live, so do not delete it without first
-            restoring the nav link. Details match the footer exactly. */}
+            restoring the nav link. The card holds only the two actions; the
+            written-out phone and email live on the Contact page (/contact),
+            so they are not repeated here. */}
         <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
@@ -215,27 +217,6 @@ const About = () => {
               </div>
 
               <div className="mt-8 bg-card border border-border rounded-xl px-7 py-7">
-                <dl className="space-y-5">
-                  <div>
-                    <dt className="text-foreground font-semibold text-lg mb-1">Phone</dt>
-                    <dd>
-                      <a href="tel:2069003015" className="text-accent text-xl font-semibold underline underline-offset-4">
-                        (206) 900-3015
-                      </a>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-foreground font-semibold text-lg mb-1">Email</dt>
-                    <dd>
-                      
-                        <a href="mailto:info@realpropertyplanning.com"
-                        className="text-accent text-xl font-semibold underline underline-offset-4 break-words"
-                      >
-                        info@realpropertyplanning.com
-                      </a>
-                    </dd>
-                  </div>
-                </dl>
 
                <style dangerouslySetInnerHTML={{ __html: `
                   .rpp-contact-btn.rpp-contact-btn {
@@ -276,7 +257,7 @@ const About = () => {
                     outline-offset: 3px;
                   }
                 ` }} />
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <a href="tel:2069003015" className="rpp-contact-btn rpp-contact-btn rpp-contact-btn--solid rpp-contact-btn--solid bg-transparent w-full sm:w-auto">
                     Call (206) 900-3015
                   </a>

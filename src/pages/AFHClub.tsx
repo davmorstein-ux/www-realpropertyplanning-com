@@ -780,6 +780,7 @@ const AFHClub = () => {
             title="Ask an AFH question"
             accent="#0a5648"
             contactReason="afh-question"
+            placeholder="For example: How do I buy an adult family home?"
             examples={["What is the license fee for an adult family home?", "Does the license transfer when I buy the home?", "What is a CHOW?"]}
           />
           {/* Question library link (Oct 11, 2026). */}

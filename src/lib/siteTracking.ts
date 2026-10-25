@@ -23,8 +23,13 @@
  *                        NewsletterSignup.tsx via trackSignup). Also sends a
  *                        Meta Pixel "Lead" (no data) when the pixel is running,
  *                        which is only on ad landing pages (metaPixel.ts).
- *   planner_completed    the three questions on /family-home-planning were all
- *                        answered: page_path only, never the answers.
+ *   planner_started      first answer on a planner page (/my-plan or
+ *                        /family-home-planning), once per visit (Oct 25, 2026):
+ *                        page_path only. Compared with planner_completed it
+ *                        shows how many people start a plan and stop.
+ *   planner_completed    every question on a planner page answered: page_path
+ *                        only, never the answers. A saved plan reopened from its
+ *                        link is not counted again (Oct 25, 2026).
  *   next_step_click      a link in a related-reading or professionals block
  *                        (Oct 20, 2026): block (next_questions | read_next |
  *                        journey_shortcuts | my_plan_invite | people_who_help |
@@ -179,6 +184,10 @@ export const trackSignup = (source: string): void => {
   trackMetaLead();
 };
 
-/** All three questions on a planner page answered. The answers are never sent. */
+/** First answer on a planner page. The answer itself is never sent. */
+export const trackPlannerStarted = (): void =>
+  send("planner_started", { page_path: typeof window === "undefined" ? "" : path() });
+
+/** All questions on a planner page answered. The answers are never sent. */
 export const trackPlannerCompleted = (): void =>
   send("planner_completed", { page_path: typeof window === "undefined" ? "" : path() });

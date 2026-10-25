@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import { trackPlannerCompleted } from "@/lib/siteTracking";
+import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
 import {
   CHECKLIST_PDF,
   OFFICIAL_SOURCES,
@@ -124,6 +124,7 @@ const MyPlan = () => {
   const [copied, setCopied] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
   const reported = useRef(false);
+  const started = useRef(false);
 
   // A saved or shared plan arrives in the URL fragment (on load, or when a
   // link to a different plan is followed while already on this page).
@@ -131,6 +132,9 @@ const MyPlan = () => {
     const load = () => {
       const saved = decodePlan(window.location.hash);
       if (saved) {
+        // A reopened saved plan is not a new start or a new completion.
+        started.current = true;
+        reported.current = true;
         setSituation(saved.situation);
         setAnswers(saved.answers);
       }
@@ -175,6 +179,10 @@ const MyPlan = () => {
   };
 
   const choose = (s: Situation) => {
+    if (!started.current) {
+      started.current = true;
+      trackPlannerStarted(); // once per visit; never the answer
+    }
     setSituation(s);
     setAnswers({});
     setCopied(false);

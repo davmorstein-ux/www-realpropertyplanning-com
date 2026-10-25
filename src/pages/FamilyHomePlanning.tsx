@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { loadMetaPixel } from "@/lib/metaPixel";
-import { trackPlannerCompleted } from "@/lib/siteTracking";
+import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
 
 /**
  * /family-home-planning (Oct 17, 2026): the first Facebook ad landing page.
@@ -216,6 +216,15 @@ const FamilyHomePlanning = () => {
   const [topic, setTopic] = useState<Topic | null>(null);
   const [need, setNeed] = useState<Need | null>(null);
   const done = discussed !== null && topic !== null && need !== null;
+
+  /* planner_started once per visit, on the first answer (Oct 25, 2026). */
+  const started = useRef(false);
+  useEffect(() => {
+    if (!started.current && (discussed !== null || topic !== null || need !== null)) {
+      started.current = true;
+      trackPlannerStarted();
+    }
+  }, [discussed, topic, need]);
 
   /* Which ad brought the visitor, for the MailerLite source tag. Letters,
      digits, dash and underscore only: it comes from the URL. */

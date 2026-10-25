@@ -60,11 +60,13 @@ interface Props {
   contactReason?: string;
   /** Example questions under the box. */
   examples?: string[];
+  /** Text shown inside the empty box. AFH Club passes an AFH example (Oct 25, 2026). */
+  placeholder?: string;
   /** Render without the outer card (when a page supplies its own). */
   bare?: boolean;
 }
 
-export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, bare = false }: Props) {
+export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "For example: How long does probate take?", bare = false }: Props) {
   const id = useId();
   const [q, setQ] = useState("");
   const [asked, setAsked] = useState("");
@@ -122,7 +124,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
           onFocus={() => {
             loadData().catch(() => {});
           }}
-          placeholder="For example: How long does probate take?"
+          placeholder={placeholder}
           aria-label="Your question"
         />
         <button className="rpp-ask-send" type="submit" disabled={busy || q.trim().length < 3}>
