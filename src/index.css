@@ -5945,6 +5945,45 @@ html body main li.rpp-hero-point.rpp-hero-point + li.rpp-hero-point {
   border-left: 1px solid #d8cfc2;
 }
 html body main .rpp-hero-point .rpp-hero-badge { flex-shrink: 0; display: block; }
+/* The linked point ("Free newsletter", Oct 25, 2026). index.css forces every
+   `main a` to 16px, so the link restates the point's own size and colour; the
+   underline is what marks it as the one tappable item. 44px tap height. */
+html body main li.rpp-hero-point a.rpp-hero-point-link.rpp-hero-point-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  /* The 44px tap height without widening the gap above and below this point. */
+  margin: -7px 0 !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+@media (hover: hover) {
+  html body main li.rpp-hero-point a.rpp-hero-point-link.rpp-hero-point-link:hover { color: #9E1F3A !important; }
+}
+/* 761–1180px: four points do not fit on one line, and wrapping 3 + 1 left a
+   stray divider in front of the lone fourth point, so they sit 2 × 2 here
+   without dividers. Above 1180px one row; at 760px and below one column. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  html body main ul.rpp-hero-points.rpp-hero-points {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    gap: 14px 56px;
+  }
+  html body main li.rpp-hero-point.rpp-hero-point { padding: 0 !important; }
+  html body main li.rpp-hero-point.rpp-hero-point + li.rpp-hero-point { border-left: 0; }
+}
+html body main li.rpp-hero-point a.rpp-hero-point-link.rpp-hero-point-link:focus-visible {
+  outline: 3px solid #1B3A6B;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 /* Phones: the three points wrap onto separate lines, where side dividers
    would hang off the ends; stack them left-aligned in one column instead. */
 @media (max-width: 760px) {

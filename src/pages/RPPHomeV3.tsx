@@ -357,19 +357,42 @@ const RPPHomeV3 = () => {
             checks, hairline dividers, and its own solid cream so the faint
             logo wallpaper no longer shows through behind the words.
             door. The class names avoid "btn"/"cta" substrings on purpose. */}
+        {/* Fourth point, "Free newsletter" (Oct 25, 2026, David's idea): the one
+            point that is a link, to /newsletter, because it is the one thing on
+            the list a visitor can act on right away. "Free", never "weekly":
+            a stated frequency is a promise (see NewsletterSignup.tsx). */}
         <ul className="rpp-hero-points" aria-label="What the site offers">
-          {[t("hero.point1"), t("hero.point2"), t("hero.point3")].map((pt) => (
-            <li key={pt} className="rpp-hero-point">
-              {/* Garnet badge with a white check (Oct 24, 2026). The bare
-                  brick-red tick read as cheap; a filled disc in the logo
-                  door's garnet reads as a finished mark. */}
+          {[
+            { text: t("hero.point1") },
+            { text: t("hero.point2") },
+            { text: t("hero.point3") },
+            { text: t("hero.point4"), to: "/newsletter" },
+          ].map(({ text, to }) => {
+            /* Garnet badge with a white check (Oct 24, 2026). The bare
+               brick-red tick read as cheap; a filled disc in the logo
+               door's garnet reads as a finished mark. */
+            const badge = (
               <svg className="rpp-hero-badge" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
                 <circle cx="15" cy="15" r="15" fill="#9E1F3A" />
                 <polyline points="9 15.5 13.2 19.6 21.2 10.8" fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              {pt}
-            </li>
-          ))}
+            );
+            return (
+              <li key={text} className="rpp-hero-point">
+                {to ? (
+                  <Link to={to} className="rpp-hero-point-link">
+                    {badge}
+                    {text}
+                  </Link>
+                ) : (
+                  <>
+                    {badge}
+                    {text}
+                  </>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
