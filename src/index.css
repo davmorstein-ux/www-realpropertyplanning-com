@@ -3927,6 +3927,13 @@ main #rpp-tagline .rpp-tagline-rule {
 .rpp-hero-img {
   height: auto;
   object-fit: contain;
+  /* Backstop for the <picture> in RPPHomeV3.tsx (Oct 25, 2026): the box takes
+     the shape of the file shown at each width, so no browser can draw the
+     phone crop at the desktop band's shape. Change these with the artwork. */
+  aspect-ratio: 1920 / 364;
+}
+@media (max-width: 900px) {
+  .rpp-hero-img { aspect-ratio: 1200 / 430; }
 }
 
 /* Below 900px the overlay stops and the tagline stacks beneath the image on

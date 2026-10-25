@@ -2724,7 +2724,21 @@ const heroPreload = (html: string) => {
      the homepage has a high-priority image today; if another page gets one,
      widen the path check. */
   const js = (v?: string) => JSON.stringify(v ?? "");
-  return `<script>(function(){var p=location.pathname;if(p!=="/"&&p!=="/index.html")return;var l=document.createElement("link");l.rel="preload";l.as="image";l.href=${js(src)};${set ? `l.setAttribute("imagesrcset",${js(set)});` : ""}${sizes ? `l.setAttribute("imagesizes",${js(sizes)});` : ""}l.setAttribute("fetchpriority","high");document.head.appendChild(l);})();</script>`;
+  /* A <picture> <source media> just before the image (Oct 25, 2026: the homepage
+     hero's phone crop) gets its own preload limited to that media, and the
+     <img> preload gets the opposite, so each screen downloads only its file. */
+  const before = html.slice(0, html.indexOf(img));
+  const pic = before.lastIndexOf("<picture");
+  const seg = pic < 0 ? "" : before.slice(pic);
+  const source = seg.includes("</picture>") ? undefined : seg.match(/<source\b[^>]*>/i)?.[0];
+  const sAttr = (n: string) => source?.match(new RegExp(`\\s${n}="([^"]*)"`, "i"))?.[1];
+  const media = sAttr("media");
+  const link = (href: string, s?: string, z?: string, m?: string) =>
+    `(function(){var l=document.createElement("link");l.rel="preload";l.as="image";l.href=${js(href)};${s ? `l.setAttribute("imagesrcset",${js(s)});` : ""}${z ? `l.setAttribute("imagesizes",${js(z)});` : ""}${m ? `l.setAttribute("media",${js(m)});` : ""}l.setAttribute("fetchpriority","high");document.head.appendChild(l);})();`;
+  const parts = [link(src, set, sizes, media ? `not all and ${media}` : undefined)];
+  const sSet = sAttr("srcset");
+  if (media && sSet) parts.unshift(link(sSet.split(",")[0].trim().split(/\s+/)[0], sSet, sAttr("sizes"), media));
+  return `<script>(function(){var p=location.pathname;if(p!=="/"&&p!=="/index.html")return;${parts.join("")}})();</script>`;
 };
 
 const withRenderedPage = (ssgContent: string, page: RenderedPage) => {

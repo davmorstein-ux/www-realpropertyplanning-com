@@ -87,6 +87,22 @@ const RPPHomeV3 = () => {
             overflow: "hidden",
           }}
         >
+          {/* <picture>, not one <img> with a mixed srcSet (Oct 25, 2026). The
+              desktop band (5.27:1) and the phone crop (2.79:1) are different
+              shapes. With both in one srcSet the <img> carried only the
+              desktop width/height, and iPhone Safari drew the phone crop at
+              the desktop shape: squashed to about half its height, the door
+              short and wide. Each <source> now carries its own width/height,
+              and index.css sets the matching aspect-ratio per breakpoint as a
+              backstop. The 900px split matches the tagline breakpoint. */}
+          <picture>
+          <source
+            media="(max-width: 900px)"
+            srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroMobile1800} 1800w`}
+            sizes="100vw"
+            width={1200}
+            height={430}
+          />
           <img
             id="rpp-hero-image"
             /* rpp-hero-2032 (Oct 22, 2026): the same 2031 render, upscaled by the
@@ -145,13 +161,13 @@ const RPPHomeV3 = () => {
                beneath the image instead of sitting on it.
                102 KB and 76 KB. */
             src={heroDesktop}
-            srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroMobile1800} 1800w, ${heroDesktop} 1920w, ${heroDesktop3840} 3840w`}
+            srcSet={`${heroDesktop} 1920w, ${heroDesktop3840} 3840w`}
             /* Above 900px always the full desktop artwork (Oct 21, 2026). With
                sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
                crop, which has no plain wall on the left, so the headline sat
                on the mirror. Below 900px the headline stacks under the image,
                so the tighter crops are fine there. */
-            sizes="(min-width: 901px) 1920px, 100vw"
+            sizes="1920px"
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
@@ -192,6 +208,7 @@ const RPPHomeV3 = () => {
                and show it a frame or more later. The build also adds a preload
                for it in <head> (heroPreload in vite.config.ts). */
           />
+          </picture>
           {/* Logo + tagline overlay — normal flow, so this content's own
               height determines the hero's height on every screen size.
 
