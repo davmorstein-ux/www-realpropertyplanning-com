@@ -266,7 +266,7 @@ const AboutTheHub = () => {
           work through their own practices.
         </p>
 
-        {/* The three figures moved to HomepageTrustBar (Sept 2026); see its note. */}
+        {/* The figures moved to HomepageTrustBar (Sept 2026), then into the four points under the artwork (HomepagePoints.tsx, Oct 25, 2026). */}
       </div>
     </div>
   );
