@@ -17,10 +17,9 @@ import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
  * Oct 25, 2026: "look cheap"); instead the check itself turns into an arrow:
  * the check rotates a quarter-turn and fades as a white arrow in the same
  * stroke turns into place. It does this once soon after the page loads,
- * staggered across the four badges, then turns back to a check; on hover or
- * keyboard focus it turns to the arrow and stays while the pointer is there.
- * No endless motion (distracting for older readers; WCAG 2.2.2). Under
- * prefers-reduced-motion the load demo is skipped and hover swaps instantly.
+ * staggered across the four badges, and then stays an arrow (David: turning
+ * back would be too much animation). No other motion. Under
+ * prefers-reduced-motion the arrows simply show from the start.
  * Styles are in index.css under .rpp-hero-points.
  *
  * The guide and calculator figures come from their data files, each with a

@@ -5994,40 +5994,36 @@ html body main li.rpp-hero-point a.rpp-hero-point-link span.rpp-hero-arrow.rpp-h
   animation: rpp-arrow-nudge 1100ms ease-in-out var(--rpp-nudge-delay, 900ms) 1 both;
 }
 /* Check badge that turns into an arrow (Oct 25, 2026; HomepagePoints.tsx).
+   Each badge starts as a check and turns into the arrow once, soon after load,
+   staggered; it then STAYS an arrow (David: turning back would be too much
+   animation). The resting style is the arrow, and the load animation runs from
+   the check with fill "backwards", so the check shows during the delay. Under
+   reduced motion there is no animation: the arrow shows from the start.
    Both shapes rotate about the badge centre (15,15 in its viewBox). */
 html body main .rpp-hero-badge .rpp-badge-check,
 html body main .rpp-hero-badge .rpp-badge-arrow {
   transform-box: view-box;
   transform-origin: 15px 15px;
-  transition: transform 0.38s cubic-bezier(.4,0,.2,1), opacity 0.3s ease;
 }
-html body main .rpp-hero-badge .rpp-badge-check { opacity: 1; transform: rotate(0deg); }
-html body main .rpp-hero-badge .rpp-badge-arrow { opacity: 0; transform: rotate(-90deg); }
+html body main .rpp-hero-badge .rpp-badge-check { opacity: 0; transform: rotate(90deg); }
+html body main .rpp-hero-badge .rpp-badge-arrow { opacity: 1; transform: rotate(0deg); }
 html body main .rpp-hero-point-link .rpp-badge-check {
-  animation: rpp-badge-check-demo 2600ms ease-in-out var(--rpp-nudge-delay, 1000ms) 1;
+  animation: rpp-badge-check-out 520ms cubic-bezier(.4,0,.2,1) var(--rpp-nudge-delay, 1000ms) 1 backwards;
 }
 html body main .rpp-hero-point-link .rpp-badge-arrow {
-  animation: rpp-badge-arrow-demo 2600ms ease-in-out var(--rpp-nudge-delay, 1000ms) 1;
+  animation: rpp-badge-arrow-in 520ms cubic-bezier(.4,0,.2,1) var(--rpp-nudge-delay, 1000ms) 1 backwards;
 }
-@keyframes rpp-badge-check-demo {
-  0%   { opacity: 1; transform: rotate(0deg); }
-  16%  { opacity: 0; transform: rotate(90deg); }
-  74%  { opacity: 0; transform: rotate(90deg); }
-  90%, 100% { opacity: 1; transform: rotate(0deg); }
+@keyframes rpp-badge-check-out {
+  from { opacity: 1; transform: rotate(0deg); }
+  to   { opacity: 0; transform: rotate(90deg); }
 }
-@keyframes rpp-badge-arrow-demo {
-  0%   { opacity: 0; transform: rotate(-90deg); }
-  16%  { opacity: 1; transform: rotate(0deg); }
-  74%  { opacity: 1; transform: rotate(0deg); }
-  90%, 100% { opacity: 0; transform: rotate(-90deg); }
+@keyframes rpp-badge-arrow-in {
+  from { opacity: 0; transform: rotate(-90deg); }
+  to   { opacity: 1; transform: rotate(0deg); }
 }
-html body main .rpp-hero-point-link:hover .rpp-badge-check,
-html body main .rpp-hero-point-link:focus-visible .rpp-badge-check { opacity: 0; transform: rotate(90deg); animation: none; }
-html body main .rpp-hero-point-link:hover .rpp-badge-arrow,
-html body main .rpp-hero-point-link:focus-visible .rpp-badge-arrow { opacity: 1; transform: rotate(0deg); animation: none; }
 @media (prefers-reduced-motion: reduce) {
   html body main .rpp-hero-badge .rpp-badge-check,
-  html body main .rpp-hero-badge .rpp-badge-arrow { animation: none !important; transition: none !important; }
+  html body main .rpp-hero-badge .rpp-badge-arrow { animation: none !important; }
 }
 @keyframes rpp-arrow-nudge {
   0%, 100% { transform: translateX(0); }
