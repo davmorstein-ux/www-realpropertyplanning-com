@@ -70,6 +70,8 @@ const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      {/* Alt text for the share picture; Facebook flags it when missing. */}
+      <meta property="og:image:alt" content={image === DEFAULT_OG_IMAGE ? "Real Property Planning" : title} />
       <meta property="og:site_name" content="Real Property Planning" />
       <meta property="og:locale" content="en_US" />
 
