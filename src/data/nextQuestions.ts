@@ -252,8 +252,8 @@ const Q = {
     href: "/wills",
     image: { src: "/q-wills-v1.webp", w: 440, h: 353 },
   },
-  tacoma: { title: "Handling an estate in Tacoma?", description: "Probate and estate real estate in Tacoma and Pierce County.", href: "/tacoma-probate-estate-real-estate" },
-  bellevue: { title: "Handling an estate in Bellevue?", description: "Probate and estate real estate in Bellevue and the Eastside.", href: "/bellevue-probate-estate-real-estate" },
+  tacoma: { title: "Handling an estate in Tacoma?", description: "Probate and estate real estate in Tacoma and Pierce County.", href: "/tacoma-probate-estate-real-estate", image: { src: "/q-tacoma-v1.webp", w: 440, h: 297 } },
+  bellevue: { title: "Handling an estate in Bellevue?", description: "Probate and estate real estate in Bellevue and the Eastside.", href: "/bellevue-probate-estate-real-estate", image: { src: "/q-bellevue-v1.webp", w: 440, h: 440 } },
 } satisfies Record<string, NextQuestion>;
 
 const AFH_OPENING = [Q.afhStart, Q.afhLicense, Q.afhCosts, Q.afhTraining, Q.afhInspection, Q.afhFinance, Q.afhPayment];
