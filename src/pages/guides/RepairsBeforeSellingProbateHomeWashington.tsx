@@ -21,6 +21,7 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 import ShortAnswer from "@/components/ShortAnswer";
 
+import RppArrow from "@/components/RppArrow";
 const payOff = [
   {
     title: "Deep cleaning and odor remediation",
@@ -379,7 +380,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                   className="marquee-hover block rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-md"
                 >
                   <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{c.title}</h3>
-                  <span className="text-gold font-medium text-base">Read more →</span>
+                  <span className="text-gold font-medium text-base">Read more <RppArrow /></span>
                 </Link>
               ))}
             </div>

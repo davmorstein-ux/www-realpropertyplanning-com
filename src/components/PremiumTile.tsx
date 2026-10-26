@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * PremiumTile — the approved site-wide tile style.
  * Matches the "Related Resources" cards (interior-tile tile-white): white face, gold trim,
@@ -53,8 +54,7 @@ const PremiumTile = ({
           <div className="mt-5 flex justify-start">
             <span className="gold-cta">
               {cta}
-              <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                →
+              <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
               </span>
             </span>
           </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 interface NextStep {
   title: string;
   description: string;
@@ -36,8 +37,7 @@ const NextStepBlock = ({ heading = "What to Read Next", steps, background = "bg-
                     <div className="mt-auto flex justify-start">
                       <span className="gold-cta">
                         Learn more
-                        <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                          →
+                        <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
                         </span>
                       </span>
                     </div>

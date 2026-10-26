@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AFH_FLOW_BY_SLUG, AFH_RULES_PATH } from "@/data/afhFlow";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * The AFH Club flow chart (Oct 1, 2026). Same building blocks and classes as
  * the probate chart (FLOW_CHART_CSS in src/components/probate/ProbateFlowChart.tsx,
@@ -31,7 +32,7 @@ const box = (slug: string, sub: string, current?: string, label?: string) => {
     <Link to={p.path} className={`pfc-go${here ? " pfc-here" : ""}`} aria-current={here ? "page" : undefined}>
       <b>{label ?? p.box}</b>
       <span>{sub}</span>
-      <em>{here ? "You are here" : "Open →"}</em>
+      <em>{here ? "You are here" : <>Open <RppArrow /></>}</em>
     </Link>
   );
 };

@@ -13,6 +13,7 @@ import { cityPageByCity } from "@/data/afhCityPages";
 import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcWaiting, CalcFoot, CK_CSS, ckVars, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * The city/county cost lookup as a self-contained card, in the same idiom as
  * the ROI and valuation calculators. Rendered on its own page
@@ -222,14 +223,14 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
             <div className="ck-links">
               {checked.facilityCount > 0 ? (
                 <>
-                  {cityEntry && <Link to={`/afh-club/homes/${cityEntry.citySlug}`}>Every licensed home in {cityEntry.city} →</Link>}
-                  <Link to={`/afh-club/homes/county/${countySlug(county)}`}>{county} County directory →</Link>
-                  {forSale && <Link to={`/afh-club/for-sale/${forSale.slug}`}>Homes for sale in {forSale.city} →</Link>}
+                  {cityEntry && <Link to={`/afh-club/homes/${cityEntry.citySlug}`}>Every licensed home in {cityEntry.city} <RppArrow /></Link>}
+                  <Link to={`/afh-club/homes/county/${countySlug(county)}`}>{county} County directory <RppArrow /></Link>
+                  {forSale && <Link to={`/afh-club/for-sale/${forSale.slug}`}>Homes for sale in {forSale.city} <RppArrow /></Link>}
                 </>
               ) : (
                 <span>
                   DSHS records show no licensed adult family homes in {county} County; families usually look to neighbouring counties.{" "}
-                  <Link to={`/afh-club/homes/county/${countySlug(county)}`}>See the county page →</Link>
+                  <Link to={`/afh-club/homes/county/${countySlug(county)}`}>See the county page <RppArrow /></Link>
                 </span>
               )}
             </div>

@@ -14,6 +14,7 @@ import IntentCTA from "@/components/IntentCTA";
 import ArticleCover from "@/components/ArticleCover";
 import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcBars, CalcWaiting, CalcFoot, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * AFH Valuation Estimator (rebuilt Oct 3, 2026 on the premium calculator kit,
  * in AFH green). Live results from React state; the maths is unchanged:
@@ -242,8 +243,8 @@ const AFHValuationEstimator = () => {
             <CalcFoot
               actions={
                 <>
-                  <Link to="/afh-club/afh-roi-calculator">Check a buyer's return →</Link>
-                  <Link to="/contact">Ask {FEATURED_BROKER.role} for a valuation →</Link>
+                  <Link to="/afh-club/afh-roi-calculator">Check a buyer's return <RppArrow /></Link>
+                  <Link to="/contact">Ask {FEATURED_BROKER.role} for a valuation <RppArrow /></Link>
                 </>
               }
             >

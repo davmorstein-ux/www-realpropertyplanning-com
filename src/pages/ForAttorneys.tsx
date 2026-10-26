@@ -9,6 +9,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import IntentCTA from "@/components/IntentCTA";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
@@ -66,7 +67,7 @@ const ForAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <Link to="/for-attorneys/how-it-works" className="text-[#1B3A6B] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
-            How the process works for attorneys →
+            How the process works for attorneys <RppArrow />
           </Link>
         </div>
       </div>

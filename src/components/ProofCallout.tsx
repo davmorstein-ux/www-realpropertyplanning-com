@@ -1,6 +1,7 @@
 import { Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 interface ProofCalloutProps {
   quote: string;
   attribution: string;
@@ -46,7 +47,7 @@ const ProofCallout = ({
           to="/testimonials"
           className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors shrink-0 ml-4"
         >
-          More reviews →
+          More reviews <RppArrow />
         </Link>
       </div>
     </div>

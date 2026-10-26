@@ -1,6 +1,7 @@
 import { Quote, Star, ExternalLink } from "lucide-react";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 interface ClientReview {
   text: string;
   highlights?: string[];
@@ -105,7 +106,7 @@ const ClientReviewsSection = ({
               className="inline-flex items-center text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors"
             >
               <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
-              See more reviews on Zillow →
+              See more reviews on Zillow <RppArrow />
             </a>
           </div>
         )}

@@ -13,6 +13,7 @@ import { AFH_FEATURED_SECTIONS, AFH_HEADSHOT_RING, type AFHProfessional } from "
 import ArticleCover from "@/components/ArticleCover";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * One person on the directory grid. Deliberately compact so twelve fit on one
  * page: profession on top (so a visitor knows what the person does before
@@ -630,7 +631,7 @@ const AFHFindProfessional = () => (
                             paddingBottom: 2,
                           }}
                         >
-                          {cat.link.label} →
+                          {cat.link.label} <RppArrow />
                         </Link>
                       ) : (
                         <a
@@ -649,7 +650,7 @@ const AFHFindProfessional = () => (
                             paddingBottom: 2,
                           }}
                         >
-                          {cat.link.label} →
+                          {cat.link.label} <RppArrow />
                         </a>
                       ))}
                   </div>

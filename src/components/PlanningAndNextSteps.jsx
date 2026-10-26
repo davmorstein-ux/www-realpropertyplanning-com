@@ -130,7 +130,7 @@ const PlanningAndNextSteps = () => (
         <div className="p3bar-text">
           <strong>Planning ahead?</strong> Connect with experienced professionals across Washington State.
         </div>
-        <button className="p3bar-btn">Get Started →</button>
+        <button className="p3bar-btn">Get Started</button>
       </div>
     </div>
   </div>

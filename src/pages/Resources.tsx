@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 const groups = [
   {
     label: "Senior Housing & Care",
@@ -138,7 +139,7 @@ const Resources = () => {
           <p className="font-serif text-[17px] text-foreground">
             Looking for a guide or article instead of a professional?{" "}
             <Link to="/guides-and-resources" className="text-gold font-bold underline">
-              Browse the Guides &amp; Articles →
+              Browse the Guides &amp; Articles <RppArrow />
             </Link>
           </p>
         </div>

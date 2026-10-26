@@ -13,6 +13,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const willsFaqs = [
   {
     question: "Does Real Property Planning write or review wills?",
@@ -100,7 +101,7 @@ const Wills = () => {
                   className="gold-cta bg-transparent"
                   style={{ display: "inline-flex", alignItems: "center", gap: 6, border: 0, cursor: "pointer" }}
                 >
-                  Do you know where your will is? Save a secure copy &rarr;
+                  Do you know where your will is? Save a secure copy <RppArrow />
                 </button>
               </div>
             </div>

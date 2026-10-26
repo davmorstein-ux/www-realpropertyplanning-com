@@ -11,6 +11,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import type { SimpleTopic } from "@/lib/simple-topics";
+import RppArrow from "@/components/RppArrow";
 
 interface Props {
   topic: SimpleTopic;
@@ -40,7 +41,7 @@ const SimpleTopicTop = ({ topic, next, talkHref }: Props) => (
 
     <div className="apf-next">
       <Link to={next.to} className="apf-next-link">
-        {next.label} <ArrowRight size={20} aria-hidden="true" />
+        {next.label} <RppArrow />
       </Link>
       {talkHref.startsWith("#") ? (
         <a href={talkHref} className="apf-talk">Or talk to someone</a>

@@ -13,6 +13,7 @@ import { soldStats } from "@/data/afhInventoryPrerender";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import { FEATURED_APPRAISER, FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
@@ -224,7 +225,7 @@ const AFHSold = () => {
 
               <p className="text-[18px] mt-8">
                 <Link to="/afh-club/listings" className="text-accent underline underline-offset-4 font-semibold">
-                  Adult family homes currently for sale in Washington →
+                  Adult family homes currently for sale in Washington <RppArrow />
                 </Link>
               </p>
             </div>

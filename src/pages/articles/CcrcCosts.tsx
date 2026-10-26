@@ -11,6 +11,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/ccrc-costs.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 
+import RppArrow from "@/components/RppArrow";
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
@@ -234,7 +235,7 @@ const CcrcCosts = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>These guides explain senior housing and CCRC decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources →</Link></em>
+                <em>These guides explain senior housing and CCRC decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources <RppArrow /></Link></em>
               </p>
 
             </article>

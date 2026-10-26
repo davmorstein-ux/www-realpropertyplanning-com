@@ -11,6 +11,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
 import WhichGuide from "@/components/WhichGuide";
 
+import RppArrow from "@/components/RppArrow";
 const label = {
   fontSize: 15,
   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
@@ -281,7 +282,7 @@ const AFHWaboGuide = () => (
           <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: "20px 0 0" }}>
             Ready for the technical details?{" "}
             <Link to="/afh-club/wabo-technical-guide" style={{ color: "#1B3A6B", fontWeight: 600, textDecoration: "underline" }}>
-              WABO Checklist & Technical Requirements →
+              WABO Checklist & Technical Requirements <RppArrow />
             </Link>
           </p>
         </div>

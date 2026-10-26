@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 interface BackToResourcesProps {
   /** Button text. Defaults to generic wording that is accurate from any
    *  entry point — a reader arriving from Google was never "at" resources,
@@ -130,7 +131,7 @@ export default function BackToResources({
       <Link to={href} className="rpp-btr marquee-hover no-underline" data-ready={ready ? "1" : "0"}>
         <span className="rpp-btr-label">{label}</span>
         <span className="rpp-btr-arrow" aria-hidden="true">
-          &#8594;
+          <RppArrow />
         </span>
       </Link>
     </div>

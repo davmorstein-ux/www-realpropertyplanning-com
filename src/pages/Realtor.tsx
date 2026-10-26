@@ -10,6 +10,7 @@ import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/feature
 import { BROKER_PHOTO, BROKER_PHOTO_ALT, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, BROKER_BIO } from "@/data/featuredProfessionalAssets";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
+import RppArrow from "@/components/RppArrow";
 const REVIEWS = [
   {
     reviewer: "Valeri Sam",
@@ -350,7 +351,7 @@ const Realtor = () => (
                 textDecoration: "none",
               }}
             >
-              View All Reviews on Zillow →
+              View All Reviews on Zillow <RppArrow />
             </a>
           </div>
         </div>

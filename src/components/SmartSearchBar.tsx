@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Search, Mic, MicOff, ArrowRight, Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import RppArrow, { RppChevron } from "@/components/RppArrow";
 
 /* ------------------------------------------------------------------ */
 /*  Keyword → route mapping                                           */
@@ -414,7 +415,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
           style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 100%)" }}
           aria-hidden="true"
         />
-        <ArrowRight className="relative w-5 h-5" strokeWidth={3} style={{ filter: "drop-shadow(0 1px 0 rgba(0,0,0,0.35)) drop-shadow(0 -1px 0 rgba(255,255,255,0.25))" }} />
+        <RppChevron size={24} className="relative" style={{ filter: "drop-shadow(0 1px 0 rgba(0,0,0,0.35))" }} />
       </button>
     </div>
   );
@@ -429,7 +430,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               <span className="premium-pill-3d__face text-[15px] sm:text-base">
                 <Search className="w-4 h-4 text-gold-dark shrink-0" />
                 <span>Go to <strong className="font-semibold text-foreground">{s.label}</strong></span>
-                <ArrowRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                <RppArrow size="1.05em" className="text-muted-foreground" />
               </span>
             </button>
           ))}
@@ -456,7 +457,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               >
                 {prompt.label}
               </span>
-              <span aria-hidden className="text-[34px] leading-none font-black shrink-0 text-navy group-hover:translate-x-2 transition-transform duration-200">→</span>
+              <span aria-hidden className="text-[34px] leading-none font-black shrink-0 text-navy group-hover:translate-x-2 transition-transform duration-200"> <RppArrow /></span>
             </button>
           ))}
         </div>

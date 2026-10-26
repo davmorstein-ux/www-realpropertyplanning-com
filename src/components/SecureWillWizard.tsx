@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Lock, Upload, Shield, Check, Send, ChevronRight, FileText, X } from "lucide-react";
 import proofOfThoughtSeal from "@/assets/icons/real-estate-certification-seal-washington.webp";
+import RppArrow from "@/components/RppArrow";
 
 type Step = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -72,7 +73,7 @@ const IntroScreen = ({ onNext }: { onNext: () => void }) => (
       trust.
     </p>
     <WizardButton onClick={onNext}>
-      Begin Secure Setup <ChevronRight className="w-5 h-5" />
+      Begin Secure Setup <RppArrow />
     </WizardButton>
   </div>
 );
@@ -158,7 +159,7 @@ const ProfileScreen = ({
           onClick={valid ? onNext : undefined}
           className={`flex-1 text-sm sm:text-base !px-5 !py-2.5 ${!valid ? "opacity-50 cursor-not-allowed" : ""}`}
         >
-          Continue <ChevronRight className="w-4 h-4" />
+          Continue <RppArrow />
         </WizardButton>
       </div>
     </div>

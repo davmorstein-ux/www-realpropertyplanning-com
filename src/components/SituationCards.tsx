@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import RppArrow from "@/components/RppArrow";
 
 const situations = [
   {
@@ -113,7 +114,7 @@ const SituationCards = () => {
                       </p>
                       <span className="gold-cta mt-auto">
                         {s.cta}
-                        <ArrowRight aria-hidden="true" />
+                        <RppArrow />
                       </span>
                     </div>
                   </div>

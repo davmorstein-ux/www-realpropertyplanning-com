@@ -14,6 +14,7 @@ import waCaresImg from "@/assets/long-term-care/WA_Cares_Washington_s_Long-Term_
 import chooseCareImg from "@/assets/long-term-care/How_to_Choose_Between_Care_Settings.webp.asset.json";
 import hospitalDischargeImg from "@/assets/long-term-care/Planning_Your_Hospital_Discharge.webp.asset.json";
 
+import RppArrow from "@/components/RppArrow";
 const cards = [
   {
     title: "Nursing Homes in Washington State",
@@ -209,8 +210,7 @@ const LongTermCareOptions = () => {
                   </h3>
                   <span className="gold-cta">
                     Read Article
-                    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                      →
+                    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
                     </span>
                   </span>
                 </div>

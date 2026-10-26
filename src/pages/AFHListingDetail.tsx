@@ -26,6 +26,7 @@ import { financingRouteFor, priceNumber } from "@/data/afhLenders";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 
 
@@ -174,7 +175,7 @@ const AFHListingDetail = () => {
                   <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mt-3">
                     How buyers finance this:{" "}
                     <Link to={financingRouteFor(listing)!.href} className="text-accent underline underline-offset-4 font-semibold">
-                      {financingRouteFor(listing)!.label} →
+                      {financingRouteFor(listing)!.label} <RppArrow />
                     </Link>
                   </p>
                 )}

@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 import NextQuestions from "@/components/NextQuestions";
+import RppArrow from "@/components/RppArrow";
 // ── Data ── (images, hrefs — text pulled via t() in the component)
 
 const whatMakesDifferentMeta = [
@@ -432,6 +433,7 @@ const ProbateEstateSales = () => {
                   className="text-accent hover:text-gold underline underline-offset-4 transition-colors"
                 >
                   {t("probateEstateSales.timeline.seeFullProcess")}
+                  {" "}<RppArrow />
                 </Link>
               </p>
             </div>

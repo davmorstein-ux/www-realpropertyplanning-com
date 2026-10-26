@@ -11,6 +11,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-regulations-compliance.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 
+import RppArrow from "@/components/RppArrow";
 const ENFORCEMENT_LEVELS = [
   {
     level: "License Conditions",
@@ -83,28 +84,28 @@ const LOOKUP_TOOLS = [
     description:
       "Search any licensed Adult Family Home by city, ZIP code, or county. View licensing status, enforcement actions, and inspection history for the previous three years.",
     url: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx",
-    label: "Search the AFH Locator →",
+    label: "Search the AFH Locator",
   },
   {
     title: "DSHS Tables & Charts",
     description:
       "Annual data tables from Residential Care Services including citation summaries, enforcement actions, and provider statistics across Washington State.",
     url: "https://www.dshs.wa.gov/altsa/residential-care-services/tables-and-charts-2025",
-    label: "View DSHS Tables & Charts →",
+    label: "View DSHS Tables & Charts",
   },
   {
     title: "Top AFH Citations — Q4 2024",
     description:
       "DSHS quarterly report listing the most frequently cited violations across Washington Adult Family Homes. Essential reading for providers preparing for inspection.",
     url: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/2024%20Q4%20--%20Top%20AFH%20Citations.pdf",
-    label: "Download Q4 2024 Report →",
+    label: "Download Q4 2024 Report",
   },
   {
     title: "Report Abuse or Neglect",
     description:
       "File a complaint with DSHS Residential Care Services online or by calling the toll-free Complaint Resolution Unit at 1-800-562-6078.",
     url: "https://www.dshs.wa.gov/report-abuse-and-neglect",
-    label: "Report to DSHS →",
+    label: "Report to DSHS",
   },
 ];
 
@@ -721,7 +722,7 @@ const AFHRegulationsCompliance = () => (
                     width: "fit-content",
                   }}
                 >
-                  {tool.label}
+                  {tool.label} <RppArrow />
                 </a>
               </div>
             ))}

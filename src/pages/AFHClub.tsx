@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import AFHGetApp from "@/components/AFHGetApp";
 import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * PAGE-SCOPED STYLES
  *
@@ -750,7 +751,7 @@ const AFHClub = () => {
                   <Link to={c.href} className="rpp-afh-choose-main">
                     <span className="rpp-afh-choose-title">{c.title}</span>
                     <span className="rpp-afh-choose-sub">{c.sub}</span>
-                    <span className="rpp-afh-choose-arrow" aria-hidden="true">→</span>
+                    <span className="rpp-afh-choose-arrow" aria-hidden="true"><RppArrow /></span>
                   </Link>
                   <Link to={c.more.href} className="rpp-afh-choose-more">{c.more.label}</Link>
                 </li>
@@ -786,7 +787,7 @@ const AFHClub = () => {
           {/* Question library link (Oct 11, 2026). */}
           <div style={{ maxWidth: 860, margin: "14px auto 0", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif" }}>
             <Link to="/afh-club/questions" className="rpp-heading-link" style={{ color: "#0a5648", fontWeight: 700, fontSize: 18, textDecoration: "underline", textUnderlineOffset: 3 }}>
-              Browse all AFH Club questions &amp; answers →
+              Browse all AFH Club questions &amp; answers <RppArrow />
             </Link>
           </div>
         </section>
@@ -1101,7 +1102,7 @@ const AFHClub = () => {
                   textDecoration: "none",
                 }}
               >
-                Meet the professionals <span aria-hidden="true">→</span>
+                Meet the professionals <RppArrow />
               </Link>
             </div>
 
@@ -1218,8 +1219,9 @@ const AFHClub = () => {
                 style={{ color: "#1c1917", textDecoration: "underline", textUnderlineOffset: 4, fontWeight: 600 }}
               >
                 {t("afhClubPage.marketplace.browseDirectory", {
-                  defaultValue: "Or browse every licensed adult family home in Washington by city →",
+                  defaultValue: "Or browse every licensed adult family home in Washington by city",
                 })}
+                {" "}<RppArrow />
               </Link>
             </p>
           </div>

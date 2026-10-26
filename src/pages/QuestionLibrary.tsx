@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AskBox from "@/components/AskBox";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import RppArrow from "@/components/RppArrow";
 import {
   LIBRARIES,
   libraryEntriesAll,
@@ -150,7 +151,7 @@ function JourneyPage({ lib, journey }: { lib: Library; journey: Journey }) {
               <div className="rpp-qa-entry" key={e.id} id={e.id.toLowerCase()}>
                 <h3 className="rpp-qa-q">{e.q}</h3>
                 <div className="rpp-qa-a">{e.a}</div>
-                <Link to={e.path} className="rpp-qa-more">Read more: {e.pathTitle} →</Link>
+                <Link to={e.path} className="rpp-qa-more">Read more: {e.pathTitle} <RppArrow /></Link>
               </div>
             ))}
           </div>

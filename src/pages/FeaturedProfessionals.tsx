@@ -9,6 +9,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 
 import { PROFESSIONAL_GROUPS as groups } from "@/data/familyProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const wrap = { maxWidth: 1080, margin: "0 auto" };
 
 const FeaturedProfessionals = () => (
@@ -216,7 +217,7 @@ const FeaturedProfessionals = () => (
                       paddingTop: 14,
                     }}
                   >
-                    View Full Profile →
+                    View Full Profile <RppArrow />
                   </p>
                 </Link>
               ))}

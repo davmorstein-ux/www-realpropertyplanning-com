@@ -72,7 +72,7 @@ const PAGE_CSS = `
   .mp-plan > li::before { content: counter(mp); position: absolute; left: 0; top: -2px; width: 36px; height: 36px; border-radius: 50%; background: ${NAVY}; color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; }
   .mp-links { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; }
   .mp a.mp-link { display: block; background: #fff; border: 1px solid #c9d3e3; border-radius: 8px; padding: 12px 14px; font-size: 18px !important; font-weight: 700; color: ${NAVY} !important; text-decoration: none !important; line-height: 1.35; }
-  .mp a.mp-link::after { content: " →"; }
+  .mp a.mp-link::after { content: ""; display: inline-block; width: 1.1em; height: 1.1em; margin-left: 8px; vertical-align: -0.2em; background: currentColor; -webkit-mask: var(--rpp-arrow-mask) center / contain no-repeat; mask: var(--rpp-arrow-mask) center / contain no-repeat; }
   @media (hover: hover) { .mp a.mp-link:hover { border-color: ${NAVY}; text-decoration: underline !important; } }
   .mp a.mp-inline { color: ${NAVY} !important; font-weight: 700; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
   .mp-result { background: #eef2f8; border-left: 5px solid ${NAVY}; border-radius: 10px; padding: 24px 20px; }

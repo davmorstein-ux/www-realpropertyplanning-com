@@ -16,6 +16,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO } from "@/data/featuredProfessionalAssets";
 import ArticleCover from "@/components/ArticleCover";
 
+import RppArrow from "@/components/RppArrow";
 const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
 const SLATE = "#1c1917";
@@ -464,7 +465,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                 textDecoration: "none",
               }}
             >
-              Is it really an AFH? Read the guide →
+              Is it really an AFH? Read the guide <RppArrow />
             </Link>
           </div>
           {/* Browse by city. Counts come from the data so they never drift from the city pages. */}
@@ -562,7 +563,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                 textDecoration: "none",
               }}
             >
-              Recently sold ({soldCount}) →
+              Recently sold ({soldCount}) <RppArrow />
             </Link>
           </nav>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>

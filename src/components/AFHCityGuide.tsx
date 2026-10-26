@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { countyIndex } from "@/data/afh/directory";
 import { cityGuide, type CityGuideInput, type Seg } from "@/data/afh/cityGuide";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 const NAVY = "#1B3A6B";
 const linkStyle: React.CSSProperties = { color: NAVY, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 };
@@ -64,7 +65,7 @@ export default function AFHCityGuide({ input, style }: { input: CityGuideInput; 
           </ul>
           <p style={{ fontSize: 18, margin: "0 0 4px" }}>
             <Link to={g.countyLink.href} style={linkStyle}>
-              {g.countyLink.text} →
+              {g.countyLink.text} <RppArrow />
             </Link>
           </p>
         </>

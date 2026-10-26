@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/the-senior-housing-guide.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import RppArrow from "@/components/RppArrow";
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
@@ -118,7 +119,7 @@ const SeniorHousingGuide = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/independent-living-costs" className={inlineLink}>
-                    Learn more about independent living costs →
+                    Learn more about independent living costs <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -159,7 +160,7 @@ const SeniorHousingGuide = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/memory-care-costs" className={inlineLink}>
-                    Learn more about memory care costs →
+                    Learn more about memory care costs <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -187,7 +188,7 @@ const SeniorHousingGuide = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/ccrc-costs" className={inlineLink}>
-                    Learn more about CCRC costs →
+                    Learn more about CCRC costs <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -208,7 +209,7 @@ const SeniorHousingGuide = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/affordable-senior-housing" className={inlineLink}>
-                    Learn more about affordable senior housing →
+                    Learn more about affordable senior housing <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -233,7 +234,7 @@ const SeniorHousingGuide = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/aging-in-place" className={inlineLink}>
-                    Learn more about aging in place with support →
+                    Learn more about aging in place with support <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -299,7 +300,7 @@ const SeniorHousingGuide = () => {
                 <em>
                   These guides explain senior housing and care decisions in plain language.{" "}
                   <Link to="/guides-and-resources" className={inlineLink}>
-                    Explore the full library of resources →
+                    Explore the full library of resources <RppArrow />
                   </Link>
                 </em>
               </p>

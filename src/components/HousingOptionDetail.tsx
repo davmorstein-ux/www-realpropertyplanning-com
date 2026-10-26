@@ -106,7 +106,7 @@ const HousingOptionDetail = ({
                 {listingsIntro && <p className="text-foreground text-lg leading-relaxed mb-6">{listingsIntro}</p>}
                 <Link to={listingsHref}>
                   <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
-                    {listingsLabel} →
+                    {listingsLabel}
                   </Button>
                 </Link>
               </div>
@@ -134,7 +134,7 @@ const HousingOptionDetail = ({
                   what independent senior living advisors do. Sept 30, 2026. */}
               <Link to="/senior-living-advisors">
                 <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
-                  What a Senior Living Advisor Does →
+                  What a Senior Living Advisor Does
                 </Button>
               </Link>
             </div>

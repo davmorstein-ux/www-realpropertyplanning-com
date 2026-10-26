@@ -15,6 +15,7 @@
 import { Link } from "react-router-dom";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
 
+import RppArrow from "@/components/RppArrow";
 const NAVY = "#1B3A6B";
 const HUB = "/estate-probate-inherited-property";
 
@@ -54,7 +55,7 @@ export default function EstateReadNext({ path, style }: { path: string; style?: 
             Step {i + 2} of {total}
           </div>
           <Link to={next.href} className="rpp-link-large" style={{ color: NAVY }}>
-            {next.title} →
+            {next.title} <RppArrow />
           </Link>
         </>
       ) : (
@@ -64,7 +65,7 @@ export default function EstateReadNext({ path, style }: { path: string; style?: 
             questions about your role and the house.
           </div>
           <Link to="/my-plan#estate:" className="rpp-link-large" style={{ color: NAVY }}>
-            Make my free step-by-step plan →
+            Make my free step-by-step plan <RppArrow />
           </Link>
         </>
       )}

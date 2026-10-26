@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
 const CREDIT_OPTIONS = [
@@ -348,7 +349,7 @@ const ShareYourExperience = () => {
               </div>
 
               <p className="text-center mt-8">
-                <Link to="/testimonials">Read what others have said →</Link>
+                <Link to="/testimonials">Read what others have said <RppArrow /></Link>
               </p>
             </div>
           </div>

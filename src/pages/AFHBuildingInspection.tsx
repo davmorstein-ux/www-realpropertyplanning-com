@@ -13,6 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 import WhichGuide from "@/components/WhichGuide";
 
+import RppArrow from "@/components/RppArrow";
 const PROPERTY_OPTIONS = [
   {
     title: "Convert an Existing Home",
@@ -276,7 +277,7 @@ const AFHBuildingInspection = () => (
                 paddingBottom: 2,
               }}
             >
-              DSHS Building Inspection Page →
+              DSHS Building Inspection Page <RppArrow />
             </a>
             <a
               href="https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf"
@@ -294,7 +295,7 @@ const AFHBuildingInspection = () => (
                 paddingBottom: 2,
               }}
             >
-              Download the Checklist (DSHS 15-604) →
+              Download the Checklist (DSHS 15-604) <RppArrow />
             </a>
           </div>
         </div>
@@ -675,7 +676,7 @@ const AFHBuildingInspection = () => (
                 textDecoration: "underline",
               }}
             >
-              DSHS AFH Building Inspections — Find Your Local Building Official →
+              DSHS AFH Building Inspections — Find Your Local Building Official <RppArrow />
             </a>
             <a
               href="https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf"
@@ -689,7 +690,7 @@ const AFHBuildingInspection = () => (
                 textDecoration: "underline",
               }}
             >
-              AFH Local Building Inspection Checklist, DSHS 15-604 (PDF) →
+              AFH Local Building Inspection Checklist, DSHS 15-604 (PDF) <RppArrow />
             </a>
             <a
               href="https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/AFH%20Initial%20Inspection%20Preparation%20Checklist.pdf"
@@ -703,7 +704,7 @@ const AFHBuildingInspection = () => (
                 textDecoration: "underline",
               }}
             >
-              DSHS Initial Inspection Preparation Checklist →
+              DSHS Initial Inspection Preparation Checklist <RppArrow />
             </a>
           </div>
         </div>

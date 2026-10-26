@@ -21,6 +21,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
 
 import NextQuestions from "@/components/NextQuestions";
+import RppArrow from "@/components/RppArrow";
 interface Pathway {
   letter: string;
   title: string;
@@ -468,7 +469,7 @@ const PreparingHomeForSaleDuringTransition = () => {
                       {c.description}
                     </p>
                     <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
-                      Continue <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                      Continue <RppArrow />
                     </span>
                   </Link>
                 ))}

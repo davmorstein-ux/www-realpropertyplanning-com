@@ -7,6 +7,7 @@ import { CARE_CALCULATORS } from "@/lib/careCalculators";
 import { monthlyIn, totalCareCost, shade } from "@/lib/careCostMath";
 import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * Cost of Care calculator card (redesigned Oct 3, 2026 from the owner-approved
  * mockup): a header band in the care type's own colour with a gold house-and-
@@ -189,11 +190,11 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           </p>
           <div className="coc2-actions coc-no-print">
             <button type="button" className="coc2-print" onClick={() => window.print()}>
-              {t("costOfCarePage.printSummary.printButton", { defaultValue: "Print this summary" })} →
+              {t("costOfCarePage.printSummary.printButton", { defaultValue: "Print this summary" })} <RppArrow />
             </button>
             {!onCalculatorPage && (
               <Link className="coc2-open" to={calculatorSlug ? `/cost-of-care-calculator/${calculatorSlug}` : "/cost-of-care-calculator"}>
-                {calculatorSlug ? "Open the full calculator →" : "Compare care costs →"}
+                {calculatorSlug ? "Open the full calculator" : "Compare care costs"} <RppArrow />
               </Link>
             )}
           </div>

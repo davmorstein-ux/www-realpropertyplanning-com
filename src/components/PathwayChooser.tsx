@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import seniorIcon from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
 import probateIcon from "@/assets/icons/probate-property-home-icon-washington.webp";
 import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.webp";
+import RppArrow from "@/components/RppArrow";
 
 const pathways = [
   {
@@ -77,7 +78,7 @@ const PathwayChooser = () => {
                 <div className="shrink-0 flex items-center justify-center sm:justify-end">
                   <span className="inline-flex items-center gap-2 px-6 py-4 min-h-[52px] rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-base sm:text-lg shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
                     {p.cta}
-                    <ArrowRight className="w-5 h-5" aria-hidden="true" />
+                    <RppArrow />
                   </span>
                 </div>
               </div>

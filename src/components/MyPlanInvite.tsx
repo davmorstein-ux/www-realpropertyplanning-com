@@ -13,6 +13,7 @@
  */
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 const COPY = {
   estate: {
     heading: "Want a checklist for your situation?",
@@ -60,7 +61,7 @@ export default function MyPlanInvite({ situation, style }: { situation: "estate"
           textDecoration: "none",
         }}
       >
-        Make my free plan →
+        Make my free plan <RppArrow />
       </Link>
       <div style={{ margin: "12px 0 0", fontSize: 16, lineHeight: 1.5, color: "#1c1917" }}>Takes about two minutes. Your answers stay on your device.</div>
     </aside>

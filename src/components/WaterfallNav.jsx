@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 
+import RppArrow from "@/components/RppArrow";
 function hexToRgba(hex, alpha) {
   const h = hex.replace("#", "");
   const r = parseInt(h.substring(0, 2), 16);
@@ -596,7 +597,7 @@ function NavRail({ categories, activeIndex, onSelect, flyoutRef }) {
             <span>{cat.label}</span>
           </span>
           <span className="wf-rail-chevron" aria-hidden="true">
-            &rarr;
+            <RppArrow />
           </span>
         </button>
       ))}

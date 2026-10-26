@@ -13,6 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 import WhichGuide from "@/components/WhichGuide";
 
+import RppArrow from "@/components/RppArrow";
 const REALITY_CHECKS = [
   {
     q: "Are you available around the clock?",
@@ -806,7 +807,7 @@ const AFHGettingStarted = () => (
                   lineHeight: 1.5,
                 }}
               >
-                {link.label} →
+                {link.label} <RppArrow />
               </a>
             ))}
           </div>

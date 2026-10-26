@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { featuredTestimonials } from "@/data/testimonials";
 
+import RppArrow from "@/components/RppArrow";
 const HomepageTestimonials = () => {
   const items = featuredTestimonials(3);
   if (items.length === 0) return null;
@@ -73,7 +74,7 @@ const HomepageTestimonials = () => {
 
         <div style={{ textAlign: "center" }}>
           <Link to="/testimonials" className="rpp-tm-link">
-            Read more →
+            Read more <RppArrow />
           </Link>
         </div>
       </div>

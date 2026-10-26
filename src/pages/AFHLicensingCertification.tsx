@@ -12,6 +12,7 @@ import audioAsset from "@/assets/afh-licensing-and-certification.mp3.asset.json"
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
+import RppArrow from "@/components/RppArrow";
 const APPLICATION_STEPS = [
   {
     step: "1",
@@ -553,7 +554,7 @@ const AFHLicensingCertification = () => (
               paddingBottom: 2,
             }}
           >
-            Search the AFH Locator before you buy →
+            Search the AFH Locator before you buy <RppArrow />
           </a>
         </div>
       </section>
@@ -605,7 +606,7 @@ const AFHLicensingCertification = () => (
                   textDecoration: "underline",
                 }}
               >
-                {link.label} →
+                {link.label} <RppArrow />
               </a>
             ))}
           </div>

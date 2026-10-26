@@ -10,6 +10,7 @@ import NextQuestions from "@/components/NextQuestions";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
 import { COST_SOURCE_LINE, COST_SOURCE_URL } from "@/lib/careTypes";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * Cost of Care calculator hub — the landing page at /cost-of-care-calculator.
  *
@@ -79,7 +80,7 @@ const CostOfCareHub = () => (
                 room, board, and day-to-day care of the residence are paid separately, exactly as before hospice began.
               </p>
               <Link to="/articles/hospice-care-washington" className="text-accent underline underline-offset-4 font-semibold text-[17px]">
-                Learn about hospice care in Washington →
+                Learn about hospice care in Washington <RppArrow />
               </Link>
             </div>
 
@@ -118,7 +119,7 @@ const CostOfCareHub = () => (
                   textDecoration: "none",
                 }}
               >
-                AFH cost by city &amp; county →
+                AFH cost by city &amp; county <RppArrow />
               </Link>
             </div>
 

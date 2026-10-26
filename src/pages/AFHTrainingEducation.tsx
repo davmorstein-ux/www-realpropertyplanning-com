@@ -12,6 +12,7 @@ import audioAsset from "@/assets/afh-training-and-education-requirements.mp3.ass
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
+import RppArrow from "@/components/RppArrow";
 const TRAINING_REQUIREMENTS = [
   {
     title: "75-Hour HCA Training",
@@ -503,7 +504,7 @@ const AFHTrainingEducation = () => (
               paddingBottom: 2,
             }}
           >
-            Find an approved instructor for specialty trainings →
+            Find an approved instructor for specialty trainings <RppArrow />
           </a>
         </div>
       </section>
@@ -608,7 +609,7 @@ const AFHTrainingEducation = () => (
                   textDecoration: "underline",
                 }}
               >
-                {link.label} →
+                {link.label} <RppArrow />
               </a>
             ))}
           </div>

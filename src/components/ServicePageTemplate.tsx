@@ -11,6 +11,7 @@ import { ArrowRight } from "lucide-react";
 import { counties, isTier1City } from "@/lib/service-areas-data";
 import type { ServiceData } from "@/lib/service-areas-data";
 import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
+import RppArrow from "@/components/RppArrow";
 
 interface ServicePageTemplateProps {
   service: ServiceData;
@@ -95,7 +96,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
             </ul>
             <div className="mt-6">
               <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                Read the full guide →
+                Read the full guide <RppArrow />
               </Link>
             </div>
           </div>
@@ -133,7 +134,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
                   to={`/cities/${c.slug}/${service.slug}`}
                   className="flex items-center gap-2 text-sm text-foreground hover:text-gold transition-colors py-1"
                 >
-                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+                  <RppArrow size="1em" />
                   {c.name}
                 </Link>
               ))}

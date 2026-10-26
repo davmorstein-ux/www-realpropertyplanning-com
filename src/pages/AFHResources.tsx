@@ -10,6 +10,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCarousel from "@/components/AFHCarousel";
 import ArticleCover from "@/components/ArticleCover";
 
+import RppArrow from "@/components/RppArrow";
 const TOPICS = [
   {
     title: "Washington Adult Family Homes: The Complete Guide",
@@ -490,8 +491,7 @@ const AFHResources = () => (
                 </p>
                 <span className="gold-cta">
                   Explore Topic
-                  <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                    →
+                  <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
                   </span>
                 </span>
               </div>

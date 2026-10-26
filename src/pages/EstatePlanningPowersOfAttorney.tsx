@@ -26,7 +26,7 @@ const EstatePlanningPowersOfAttorney = () => (
 
       <FeaturedProviderPlaceholder
         heading="Featured Estate Planning Attorney"
-        seeAlso={{ href: "/for-estate-planning-attorneys", label: "See the featured estate planning attorney →" }}
+        seeAlso={{ href: "/for-estate-planning-attorneys", label: "See the featured estate planning attorney" }}
         altLabel="featured estate planning attorney"
       />
 

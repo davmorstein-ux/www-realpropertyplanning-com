@@ -10,6 +10,7 @@ import grayDivorceIcon from "@/assets/gray-divorce-hero-icon.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import GreyDivorceBackground from "@/components/guides/GreyDivorceBackground";
 
+import RppArrow from "@/components/RppArrow";
 const GrayDivorce = () => {
   return (
     <>
@@ -192,7 +193,7 @@ const GrayDivorce = () => {
                 </p>
                 <p className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold leading-snug">
                   What a Divorce Attorney Does — and the Divorce Attorneys Listed in the Directory{" "}
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1"> <RppArrow /></span>
                 </p>
               </Link>
             </div>

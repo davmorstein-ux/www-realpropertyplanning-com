@@ -11,6 +11,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/affordable-senior-housing.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 
+import RppArrow from "@/components/RppArrow";
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
@@ -213,7 +214,7 @@ const AffordableSeniorHousing = () => {
 
               <p className={pClass + " italic text-center"}>
                 These guides cover senior housing decisions at every budget level.{" "}
-                <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources →</Link>
+                <Link to="/guides-and-resources" className={inlineLink}>Explore the full library of resources <RppArrow /></Link>
               </p>
 
             </article>

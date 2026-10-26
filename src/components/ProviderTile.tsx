@@ -642,7 +642,6 @@ export default function ProviderTile({
           style={{ marginTop: 8 }}
         >
           Learn More
-          <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
         </a>
       </div>
     </div>

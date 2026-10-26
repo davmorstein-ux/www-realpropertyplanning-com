@@ -3,6 +3,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import redSphere from "@/assets/property-accent-sphere-washington.webp";
 import { useLayoutEffect, useRef, useState, useCallback, useMemo } from "react";
 
+import RppArrow from "@/components/RppArrow";
 interface RelatedLink {
   href: string;
   label: string;
@@ -601,8 +602,7 @@ const RelatedServices = ({
                         <div className="mt-auto flex justify-start">
                           <span className="gold-cta">
                             Learn more
-                            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                              →
+                            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
                             </span>
                           </span>
                         </div>

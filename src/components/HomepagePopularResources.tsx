@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import RppArrow from "@/components/RppArrow";
 import { useTranslation } from "react-i18next";
 
 /* Popular resources (Oct 26, 2026). David: the old icon tiles "look weak" and
@@ -109,9 +110,9 @@ const HomepagePopularResources = () => {
         color: #272421 !important;
         margin: 0 !important;
       }
-      /* Circled arrow, bottom-right corner (like the homepage tiles): a solid
-         disc in the tile's colour with a white arrow (David, Oct 26, 2026); on
-         hover it darkens a little and nudges right. */
+      /* Circled arrow, bottom-right corner: the site's one arrow (RppArrow,
+         a solid disc with a heavy chevron cut out) in the tile's colour
+         (David, Oct 26, 2026); on hover it darkens a little and nudges right. */
       .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow {
         position: absolute !important;
         right: 14px !important;
@@ -123,9 +124,9 @@ const HomepagePopularResources = () => {
         box-sizing: border-box;
         border-radius: 999px !important;
         border: 0 !important;
-        color: #ffffff !important;
-        background: var(--pr-c) !important;
-        box-shadow: 0 2px 5px -1px color-mix(in srgb, var(--pr-c) 55%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+        color: var(--pr-c) !important;
+        background: transparent !important;
+        filter: drop-shadow(0 2px 2px color-mix(in srgb, var(--pr-c) 45%, transparent));
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -133,7 +134,7 @@ const HomepagePopularResources = () => {
       }
       .rpp-pr-tile:hover span.rpp-pr-arrow.rpp-pr-arrow,
       .rpp-pr-tile:focus-visible span.rpp-pr-arrow.rpp-pr-arrow {
-        background: color-mix(in srgb, var(--pr-c) 82%, #000000) !important;
+        color: color-mix(in srgb, var(--pr-c) 82%, #000000) !important;
         transform: translateX(2px);
       }
 
@@ -285,6 +286,7 @@ const HomepagePopularResources = () => {
         .rpp-pr-body.rpp-pr-body { align-items: flex-start !important; }
         .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation { font-size: 20px !important; }
         .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; bottom: 10px !important; width: 34px !important; height: 34px !important; }
+        .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg { width: 34px; height: 34px; }
       }
     ` }} />
 
@@ -310,12 +312,7 @@ const HomepagePopularResources = () => {
                   <span className="rpp-pr-situation">{r.situation}</span>
                 </span>
                 <span className="rpp-pr-arrow" aria-hidden="true">
-                  {/* A heavy chevron (sideways V), not a line arrow (David, Oct 26,
-                      2026: "a sideways V, thicker/heavier"). Nudged 1px right
-                      so it looks centred in the disc. */}
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 2 }}>
-                    <path d="M9 5.5l6.5 6.5-6.5 6.5" />
-                  </svg>
+                  <RppArrow size={36} />
                 </span>
               </Link>
             </li>

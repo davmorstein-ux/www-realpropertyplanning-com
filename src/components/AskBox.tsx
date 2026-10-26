@@ -4,6 +4,7 @@ import type { Page, Term } from "@/lib/mcp/data";
 import { ask, buildCards, type AnswerCard, type AskResult } from "@/lib/askSearch";
 import { trackAsk } from "@/lib/siteTracking";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * "Ask a question" (Oct 8, 2026; owner's idea after a buyer's call: visitors
  * should get a quick answer and the page to read next).
@@ -152,7 +153,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
                 <div className="rpp-ask-q">{res.answer.q}</div>
                 <p className="rpp-ask-a">{res.answer.a}</p>
                 <p className="rpp-ask-read">
-                  <Link className="rpp-ask-link" to={answerHref}>Read the full guide: {res.answer.pageTitle} →</Link>
+                  <Link className="rpp-ask-link" to={answerHref}>Read the full guide: {res.answer.pageTitle} <RppArrow /></Link>
                 </p>
               </div>
             ) : (

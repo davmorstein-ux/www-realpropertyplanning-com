@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.webp";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 
+import RppArrow from "@/components/RppArrow";
 const EstateLiquidation = () => (
   <>
     <SEOHead
@@ -56,7 +57,7 @@ const EstateLiquidation = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <Link to="/estate-liquidation/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-              More information about Estate Liquidation →
+              More information about Estate Liquidation <RppArrow />
             </Link>
           </div>
         </div>

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 import NextQuestions from "@/components/NextQuestions";
+import RppArrow from "@/components/RppArrow";
 const navy = "#1B3A6B";
 const gold = "#6b84ad";
 const crimson = "#8B0000";
@@ -303,7 +304,7 @@ const ExecutorsGuide = () => (
                       textDecoration: "none",
                     }}
                   >
-                    {item.label} →
+                    {item.label} <RppArrow />
                   </Link>
                 </div>
               ))}

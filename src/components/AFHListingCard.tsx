@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { financingRouteFor } from "@/data/afhLenders";
 
+import RppArrow from "@/components/RppArrow";
 const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
 const SLATE = "#1c1917";
@@ -322,7 +323,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         <p style={{ margin: 0, fontSize: "16px", color: SLATE, lineHeight: 1.5 }}>
           How buyers finance this:{" "}
           <Link to={financing.href} style={{ color: "#0a5648", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
-            {financing.label} →
+            {financing.label} <RppArrow />
           </Link>
         </p>
       )}
@@ -408,7 +409,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
           <span>Listing information source: NWMLS</span>
         ) : (
           <a href={listing.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: TEAL, textDecoration: "underline" }}>
-            Source: {AFH_SOURCE_LABELS[listing.source]} listing →
+            Source: {AFH_SOURCE_LABELS[listing.source]} listing <RppArrow />
           </a>
         )}
       </div>

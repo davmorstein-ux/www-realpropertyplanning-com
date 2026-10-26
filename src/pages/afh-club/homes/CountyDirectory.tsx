@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { counties, countyIndex, countiesChecked } from "@/data/afh/directory";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
 
@@ -123,7 +124,7 @@ const CountyDirectory = () => {
                     textDecoration: "none",
                   }}
                 >
-                  Cost by city &amp; county →
+                  Cost by city &amp; county <RppArrow />
                 </Link>
               </div>
               <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-4">Browse by county</h2>
@@ -217,7 +218,7 @@ const CountyDirectory = () => {
                         to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                         className="text-accent underline underline-offset-4"
                       >
-                        County page →
+                        County page <RppArrow />
                       </Link>
                     </p>
                   )}

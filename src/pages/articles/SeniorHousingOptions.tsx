@@ -12,6 +12,7 @@ import audioAsset from "@/assets/senior-housing-options.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 
 
+import RppArrow from "@/components/RppArrow";
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
@@ -184,7 +185,7 @@ const SeniorHousingOptions = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/ccrc-costs" className={inlineLink}>
-                    Learn more about CCRC costs →
+                    Learn more about CCRC costs <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -208,7 +209,7 @@ const SeniorHousingOptions = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/affordable-senior-housing" className={inlineLink}>
-                    Learn more about affordable senior housing →
+                    Learn more about affordable senior housing <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -235,7 +236,7 @@ const SeniorHousingOptions = () => {
               <p className={pClass}>
                 <em>
                   <Link to="/articles/aging-in-place" className={inlineLink}>
-                    Learn more about aging in place with support →
+                    Learn more about aging in place with support <RppArrow />
                   </Link>
                 </em>
               </p>
@@ -298,7 +299,7 @@ const SeniorHousingOptions = () => {
                 <em>
                   These guides explain senior housing and care decisions in plain language.{" "}
                   <Link to="/guides-and-resources" className={inlineLink}>
-                    Explore the full library of resources →
+                    Explore the full library of resources <RppArrow />
                   </Link>
                 </em>
               </p>

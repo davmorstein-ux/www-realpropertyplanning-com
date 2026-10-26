@@ -170,7 +170,7 @@ const PAGE_CSS = `
   .fhp-result:focus { outline: none; }
   .fhp-links { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
   .fhp a.fhp-link { display: block; background: #fff; border: 1px solid #c9d3e3; border-radius: 8px; padding: 14px 16px; font-size: 18px !important; font-weight: 700; color: ${NAVY} !important; text-decoration: none !important; line-height: 1.35; }
-  .fhp a.fhp-link::after { content: " →"; }
+  .fhp a.fhp-link::after { content: ""; display: inline-block; width: 1.1em; height: 1.1em; margin-left: 8px; vertical-align: -0.2em; background: currentColor; -webkit-mask: var(--rpp-arrow-mask) center / contain no-repeat; mask: var(--rpp-arrow-mask) center / contain no-repeat; }
   @media (hover: hover) { .fhp a.fhp-link:hover { border-color: ${NAVY}; text-decoration: underline !important; } }
   .fhp a.fhp-inline { color: ${NAVY} !important; font-weight: 700; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
   .fhp-divider { height: 1px; background: #c9d3e3; margin: 18px 0; }

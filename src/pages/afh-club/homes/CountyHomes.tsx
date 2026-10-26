@@ -9,6 +9,7 @@ import { getCountyChecked, getCountySummary, countiesChecked } from "@/data/afh/
 import { afhListings, isLive, listingSlug, formatVerifiedDate, afhClassification } from "@/data/afhListings";
 import { cityPageByCity } from "@/data/afhCityPages";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
 
@@ -82,7 +83,7 @@ const CountyHomes = () => {
                   <p>Choose a city to see every licensed home in it, with capacity, specialty designations, Medicaid status, and a link to its DSHS inspection record.</p>
                   <p>
                     <Link to="/adult-family-home-costs" className="text-accent underline underline-offset-4 font-semibold">
-                      What does an adult family home cost in {checked.county} County? →
+                      What does an adult family home cost in {checked.county} County? <RppArrow />
                     </Link>
                   </p>
                 </>
@@ -226,7 +227,7 @@ const CountyHomes = () => {
                 ))}
               </nav>
               <p className="text-[16px] mt-6">
-                <Link to="/afh-club/homes" className="text-accent underline underline-offset-4">All licensed adult family homes in Washington by city →</Link>
+                <Link to="/afh-club/homes" className="text-accent underline underline-offset-4">All licensed adult family homes in Washington by city <RppArrow /></Link>
               </p>
             </div>
           </div>

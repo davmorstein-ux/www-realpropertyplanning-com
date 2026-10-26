@@ -157,7 +157,7 @@ const OutOfStateFamilies = () => (
             </p>
             <Link to="/contact?reason=estate-property">
               <Button variant="gold" size="lg">
-                Start a Conversation →
+                Start a Conversation
               </Button>
             </Link>
           </div>

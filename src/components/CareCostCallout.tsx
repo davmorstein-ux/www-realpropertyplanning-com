@@ -14,6 +14,7 @@
 import { Link } from "react-router-dom";
 import { CARE_CALCULATORS } from "@/lib/careCalculators";
 
+import RppArrow from "@/components/RppArrow";
 const NAVY = "#1B3A6B";
 
 export default function CareCostCallout({ slug, style }: { slug?: string; style?: React.CSSProperties }) {
@@ -36,7 +37,7 @@ export default function CareCostCallout({ slug, style }: { slug?: string; style?
     ? `See what ${noun} costs each month in Washington, how that compares with the national median, and what several years of care could add up to. Change when care might begin and how many years to plan for.`
     : "Compare what in-home care, assisted living, adult family homes, memory care, nursing homes and independent living cost each month in Washington, and what several years of care could add up to.";
   const href = calc ? `/cost-of-care-calculator/${calc.slug}` : "/cost-of-care-calculator";
-  const button = calc ? `Open the ${label} calculator →` : "Compare care costs →";
+  const button = calc ? `Open the ${label} calculator` : "Compare care costs";
 
   return (
     <aside
@@ -71,7 +72,7 @@ export default function CareCostCallout({ slug, style }: { slug?: string; style?
           borderRadius: 6,
         } as React.CSSProperties}
       >
-        {button}
+        {button} <RppArrow />
       </Link>
     </aside>
   );

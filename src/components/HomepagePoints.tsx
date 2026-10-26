@@ -50,10 +50,8 @@ export default function HomepagePoints() {
                 <circle cx="15" cy="15" r="15" fill="#9E1F3A" />
                 <g fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
                   <polyline className="rpp-badge-check" points="9 15.5 13.2 19.6 21.2 10.8" />
-                  <g className="rpp-badge-arrow">
-                    <line x1="8.5" y1="15" x2="21" y2="15" />
-                    <polyline points="16 10 21 15 16 20" />
-                  </g>
+                  {/* The site's one arrow shape: a heavy chevron (Oct 26, 2026). */}
+                  <polyline className="rpp-badge-arrow" points="13 8.8 18 15 13 21.2" strokeWidth="3.8" />
                 </g>
               </svg>
               <span className="rpp-hero-point-text">

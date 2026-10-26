@@ -12,6 +12,7 @@ import { FEATURED_AFH_BROKER, AFH_HEADSHOT_RING } from "@/data/afhProfessionals"
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
+import RppArrow from "@/components/RppArrow";
 const REVIEWS = [
   {
     reviewer: "Valeri Sam",
@@ -500,7 +501,7 @@ const AFHRealEstateBroker = () => (
                 textDecoration: "none",
               }}
             >
-              View All Reviews on Zillow →
+              View All Reviews on Zillow <RppArrow />
             </a>
           </div>
         </div>

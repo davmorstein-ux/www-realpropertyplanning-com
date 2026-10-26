@@ -12,6 +12,7 @@ import { listingsForFacility } from "@/data/afhAddressMatch";
 import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "@/data/afhListings";
 import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "@/data/afh/inspectionRecord";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
 
@@ -290,7 +291,7 @@ const FacilityDetail = () => {
                   to={`/afh-club/homes/${citySlug}`}
                   className="underline underline-offset-4 text-accent hover:text-gold transition-colors"
                 >
-                  All {cityEntry?.facilityCount ?? ""} licensed adult family homes in {a.city} →
+                  All {cityEntry?.facilityCount ?? ""} licensed adult family homes in {a.city} <RppArrow />
                 </Link>
               </p>
             </div>

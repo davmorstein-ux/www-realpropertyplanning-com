@@ -11,6 +11,7 @@ import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { AFH_GREEN, AFH_FLOW_BASE } from "@/data/afhFlow";
 import { BEFORE_YOU_BUY, BYB_LAYERS, BYB_CLAIMS, BYB_FAQS, type BybLink } from "@/data/afhBeforeYouBuy";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * Before You Buy an Adult Family Home: What to Verify (Oct 3, 2026). Words in
  * src/data/afhBeforeYouBuy.ts (shared with the prerender). Linked from the
@@ -80,7 +81,7 @@ const Go = ({ l }: { l: BybLink }) =>
   l.external ? (
     <a className="byb-link" href={l.href} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
   ) : (
-    <Link className="byb-link" to={l.href}>{l.label} →</Link>
+    <Link className="byb-link" to={l.href}>{l.label} <RppArrow /></Link>
   );
 
 const AFHBeforeYouBuy = () => (

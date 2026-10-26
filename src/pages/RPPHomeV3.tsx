@@ -41,6 +41,7 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HomeTileIntro from "@/components/HomeTileIntro";
 import AboutTheHub from "@/components/AboutTheHub";
 import HomepagePoints from "@/components/HomepagePoints";
+import RppArrow from "@/components/RppArrow";
 import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 
@@ -472,9 +473,9 @@ const RPPHomeV3 = () => {
                             {title}
                           </span>
                           <span className="rpp-tile3d-arrow" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M5 12h14M13 6l6 6-6 6" />
-                            </svg>
+                            {/* The site's one arrow (RppArrow): a white disc with
+                                the chevron cut out, so it shows the tile colour. */}
+                            <RppArrow size={32} />
                           </span>
                           {/* Arrow is the sitewide CSS ::after (CTA ARROW block
                               in index.css) via the rpp-funnel-cta class on the
@@ -572,15 +573,19 @@ const RPPHomeV3 = () => {
     margin: 0 !important;
     box-sizing: border-box;
     border-radius: 999px;
-    border: 2px solid #ffffff;
+    /* Solid disc, heavy chevron (Oct 26, 2026): these tiles are already
+       coloured, so the disc is white and the chevron takes the tile colour,
+       the inverse of the Popular Resources tiles below. */
+    border: 0;
+    background-color: transparent;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.25);
-    transition: background-color 0.18s ease, color 0.18s ease;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.30));
+    transition: transform 0.18s ease;
   }
-  .group:hover .rpp-tile3d-arrow.rpp-tile3d-arrow { background-color: #ffffff; color: var(--tile); }
+  .group:hover .rpp-tile3d-arrow.rpp-tile3d-arrow { transform: translateX(2px); }
 
   /* PHONES (under 640px): the tiles run 2 x 2, about 155px wide each, so the
      frame, label and arrow are scaled down to fit. The title stays 18px (the
@@ -869,7 +874,7 @@ const RPPHomeV3 = () => {
               <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "18px auto 0", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 19, lineHeight: 1.5, color: "#1c1917" }}>
                 Not sure what to ask?{" "}
                 <Link to="/my-plan" className="rpp-heading-link" style={{ color: "#1B3A6B", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3, fontSize: 19 }}>
-                  Get a free step-by-step plan for your situation →
+                  Get a free step-by-step plan for your situation <RppArrow />
                 </Link>
               </p>
             </div>

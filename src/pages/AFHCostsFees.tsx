@@ -12,6 +12,7 @@ import audioAsset from "@/assets/afh-costs-fees.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
+import RppArrow from "@/components/RppArrow";
 const STARTUP_COSTS = [
   {
     category: "DSHS Annual License Fee",
@@ -604,7 +605,7 @@ const AFHCostsFees = () => (
                   textDecoration: "underline",
                 }}
               >
-                {link.label} →
+                {link.label} <RppArrow />
               </a>
             ))}
           </div>

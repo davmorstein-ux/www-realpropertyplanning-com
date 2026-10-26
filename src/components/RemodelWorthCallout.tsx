@@ -18,6 +18,7 @@
  */
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 const NAVY = "#1B3A6B";
 
 export default function RemodelWorthCallout({ style }: { style?: React.CSSProperties }) {
@@ -58,7 +59,7 @@ export default function RemodelWorthCallout({ style }: { style?: React.CSSProper
           borderRadius: 6,
         } as React.CSSProperties}
       >
-        See what updates would add →
+        See what updates would add <RppArrow />
       </Link>
       <p className="rpp-remodel-callout-fine">
         An estimate from public sales records, not an appraisal.

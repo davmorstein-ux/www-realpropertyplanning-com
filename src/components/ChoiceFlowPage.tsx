@@ -1,5 +1,5 @@
 import { useLocation, Link, Navigate } from "react-router-dom";
-import { ArrowRight, ChevronRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,6 +11,7 @@ import NextQuestions from "@/components/NextQuestions";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import { professionalsForTopic } from "@/data/topicProfessionals";
+import RppArrow from "@/components/RppArrow";
 
 /** Same rule as scripts/build-aging-parent-routes.mjs, so the prerendered
  *  description and the live one agree. */
@@ -112,7 +113,7 @@ const ChoiceGrid = ({ node, isRoot }: { node: FlowNode; isRoot: boolean }) => {
             {it.image && <img src={it.image} alt="" width={800} height={600} loading="lazy" decoding="async" />}
             <span className="apf-pick-label">
               <span>{it.label}</span>
-              <span className="apf-arrow" aria-hidden="true"><ChevronRight size={20} strokeWidth={2.5} /></span>
+              <span className="apf-arrow" aria-hidden="true"><RppArrow size="100%" /></span>
             </span>
           </Link>
         </li>
@@ -158,11 +159,11 @@ const TopicBody = ({
           <div className="apf-next">
             {next ? (
               <Link to={next.path} className="apf-next-link">
-                Next: {nextLabel} <ArrowRight size={20} aria-hidden="true" />
+                Next: {nextLabel} <RppArrow />
               </Link>
             ) : (
               <Link to="/helping-an-aging-parent" className="apf-next-link">
-                Back to all choices <ArrowRight size={20} aria-hidden="true" />
+                Back to all choices <RppArrow />
               </Link>
             )}
             {hasPros ? (

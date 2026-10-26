@@ -52,6 +52,7 @@ import { services, counties } from "@/lib/service-areas-data";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import NextQuestions from "@/components/NextQuestions";
 
+import RppArrow from "@/components/RppArrow";
 const COUNTY_WEBSITES: Record<string, string> = {
   "benton-county": `https://www.co.benton.wa.us`,
   "clark-county": "https://www.clark.wa.gov",
@@ -526,7 +527,7 @@ const CountyPageTemplate = ({
                     to="/afh-club/homes"
                     className="text-accent underline underline-offset-4 hover:text-gold transition-colors font-semibold"
                   >
-                    Browse licensed adult family homes in {countyName} by city →
+                    Browse licensed adult family homes in {countyName} by city <RppArrow />
                   </Link>
                 </p>
               </div>
@@ -713,7 +714,7 @@ const CountyPageTemplate = ({
                 className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
               >
                 <span>{nextCounty.name}</span>
-                <span aria-hidden="true">→</span>
+                <RppArrow />
               </Link>
             </div>
           </nav>

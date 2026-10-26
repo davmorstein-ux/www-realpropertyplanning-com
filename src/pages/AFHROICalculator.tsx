@@ -14,6 +14,7 @@ import IntentCTA from "@/components/IntentCTA";
 import ArticleCover from "@/components/ArticleCover";
 import { CalcShell, CalcSection, CalcField, CalcSegment, CalcHero, CalcStats, CalcBars, CalcWaiting, CalcFoot, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * AFH ROI Calculator (rebuilt Oct 3, 2026 on the premium calculator kit,
  * src/components/calc/CalcKit.tsx, in AFH green).
@@ -207,8 +208,8 @@ const AFHROICalculator = () => {
             <CalcFoot
               actions={
                 <>
-                  <Link to="/afh-club/afh-valuation-estimator">Estimate the value →</Link>
-                  <Link to="/contact">Ask {FEATURED_BROKER.role} about a deal →</Link>
+                  <Link to="/afh-club/afh-valuation-estimator">Estimate the value <RppArrow /></Link>
+                  <Link to="/contact">Ask {FEATURED_BROKER.role} about a deal <RppArrow /></Link>
                 </>
               }
             >

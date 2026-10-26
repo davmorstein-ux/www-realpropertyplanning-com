@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import iconDocument3d from "@/assets/icons/probate-document-icon-washington.webp";
 
+import RppArrow from "@/components/RppArrow";
 interface ResourceCardProps {
   title: string;
   description: string;
@@ -50,7 +51,7 @@ const ResourceCard = ({
           </div>
           <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors">
             <span>Learn more</span>
-            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow /></span>
           </div>
         </div>
       </div>

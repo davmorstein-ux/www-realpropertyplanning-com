@@ -11,6 +11,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
 import WhichGuide from "@/components/WhichGuide";
 
+import RppArrow from "@/components/RppArrow";
 const label = {
   fontSize: 15,
   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
@@ -118,7 +119,7 @@ const AFHWaboTechnicalGuide = () => (
           <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: 0 }}>
             New to WABO? Start with{" "}
             <Link to="/afh-club/wabo-inspection-guide" style={{ color: "#1B3A6B", fontWeight: 600, textDecoration: "underline" }}>
-              What Is WABO? A Simple Overview →
+              What Is WABO? A Simple Overview <RppArrow />
             </Link>
           </p>
         </div>

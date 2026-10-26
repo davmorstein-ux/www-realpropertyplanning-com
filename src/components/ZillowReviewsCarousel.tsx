@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import RppArrow, { RppChevron } from "@/components/RppArrow";
 
 const reviews = [
   { name: "Anday", date: "3/5/2026", title: "Bought a Single Family home in 2025 in Holly, Everett, WA.", text: "Dave is an excellent person to work with and above all an expert on the field. I have enjoyed his honest and professional recommendations and he always has a room to listen and so patient, a highly recommend to work with. He has deep knowledge on history of the property, comparable market analysis and is open to any time of the days." },
@@ -78,18 +79,18 @@ const ZillowReviewsCarousel = () => {
             <button
               onClick={prev}
               aria-label="Previous review"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition-colors"
-              style={{ borderColor: "hsl(220 20% 75%)", backgroundColor: "hsl(0 0% 100%)" }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-11 h-11 rounded-full flex items-center justify-center transition-transform hover:-translate-x-3 md:hover:-translate-x-[3.75rem]"
+              style={{ backgroundColor: "#1B3A6B", color: "#ffffff", boxShadow: "0 2px 6px -1px rgba(27,58,107,0.5)" }}
             >
-              <ChevronLeft className="w-5 h-5" style={{ color: "hsl(220 35% 25%)" }} />
+              <RppChevron size={26} direction="left" />
             </button>
             <button
               onClick={next}
               aria-label="Next review"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition-colors"
-              style={{ borderColor: "hsl(220 20% 75%)", backgroundColor: "hsl(0 0% 100%)" }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-11 h-11 rounded-full flex items-center justify-center transition-transform hover:translate-x-3 md:hover:translate-x-[3.75rem]"
+              style={{ backgroundColor: "#1B3A6B", color: "#ffffff", boxShadow: "0 2px 6px -1px rgba(27,58,107,0.5)" }}
             >
-              <ChevronRight className="w-5 h-5" style={{ color: "hsl(220 35% 25%)" }} />
+              <RppChevron size={26} />
             </button>
 
             {/* Card */}
@@ -158,7 +159,7 @@ const ZillowReviewsCarousel = () => {
               className="text-sm underline underline-offset-4 transition-colors"
               style={{ color: "hsl(220 30% 35%)" }}
             >
-              See all reviews on Zillow →
+              See all reviews on Zillow <RppArrow />
             </a>
           </div>
         </div>

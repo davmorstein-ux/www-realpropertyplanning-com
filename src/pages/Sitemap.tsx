@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import SiteMapSections from "@/components/SiteMapSections";
 import { RPP_SITE_MAP } from "@/data/siteMaps";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * /sitemap: the Real Property Planning site map, for families, executors,
  * trustees and professionals.
@@ -62,7 +63,7 @@ const Sitemap = () => (
                 <strong>Own, run, buy or sell an adult family home?</strong> AFH Club has its own site map.
               </span>
               <Link to="/afh-club/site-map" className="smap-afh-link rpp-dark-surface">
-                AFH Club Site Map →
+                AFH Club Site Map <RppArrow />
               </Link>
             </div>
           </div>

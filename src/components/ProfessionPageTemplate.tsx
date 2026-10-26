@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { User } from "lucide-react";
 
+import RppArrow from "@/components/RppArrow";
 interface HelpRow {
   icon?: string;
   text: string;
@@ -322,7 +323,7 @@ const ProfessionPageTemplate = ({
               to={`/contact?subject=Professional+Listing+Inquiry+—+${encodeURIComponent(title)}`}
               className="text-gold text-base font-medium underline underline-offset-4 hover:text-gold-dark transition-colors"
             >
-              Inquire about being listed →
+              Inquire about being listed <RppArrow />
             </Link>
           </div>
         </div>

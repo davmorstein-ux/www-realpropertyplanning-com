@@ -16,6 +16,7 @@ import { professionalGroup, type CategoryGroup } from "@/data/familyProfessional
 import { professionalsForTopic } from "@/data/topicProfessionals";
 import { FEATURED_BROKER, FEATURED_BROKER_IS_FOUNDER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const NAVY = "#1B3A6B";
 
 export default function TopicProfessionals({ path, style }: { path: string; style?: React.CSSProperties }) {
@@ -86,7 +87,7 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
       )}
       <div style={{ fontSize: 16, margin: "0 0 12px" }}>
         <Link to="/featured-professionals" style={{ color: NAVY, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
-          See every featured professional →
+          See every featured professional <RppArrow />
         </Link>
       </div>
     </aside>

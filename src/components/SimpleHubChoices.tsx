@@ -6,8 +6,8 @@
  * so the page's <main> must carry className="apf".
  */
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 import type { SimpleChoice, NotSureBar } from "@/lib/simple-topics";
+import RppArrow from "@/components/RppArrow";
 
 const SimpleHubChoices = ({ choices, notSure }: { choices: SimpleChoice[]; notSure: NotSureBar }) => (
   <>
@@ -18,7 +18,7 @@ const SimpleHubChoices = ({ choices, notSure }: { choices: SimpleChoice[]; notSu
             <img src={it.image} alt="" width={800} height={500} loading="lazy" decoding="async" />
             <span className="apf-pick-label">
               <span>{it.label}</span>
-              <span className="apf-arrow" aria-hidden="true"><ChevronRight size={20} strokeWidth={2.5} /></span>
+              <span className="apf-arrow" aria-hidden="true"><RppArrow size="100%" /></span>
             </span>
           </Link>
         </li>
@@ -30,7 +30,7 @@ const SimpleHubChoices = ({ choices, notSure }: { choices: SimpleChoice[]; notSu
           <span>{notSure.label}</span>
           <span>{notSure.sub}</span>
         </span>
-        <span className="apf-arrow" aria-hidden="true"><ChevronRight size={20} strokeWidth={2.5} /></span>
+        <span className="apf-arrow" aria-hidden="true"><RppArrow size="100%" /></span>
       </Link>
     </div>
   </>

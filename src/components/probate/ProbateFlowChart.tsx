@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FLOW_BY_SLUG, SELLING_PATH, DEADLINES_PATH } from "@/data/probateFlow";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * The probate flow chart (Oct 1, 2026). Plain HTML and CSS, so it reads top to
  * bottom on a phone and every box is an ordinary link for screen readers and
@@ -67,7 +68,7 @@ const box = (slug: string, sub: string, current?: string) => {
     <Link to={p.path} className={`pfc-go${here ? " pfc-here" : ""}`} aria-current={here ? "page" : undefined}>
       <b>{p.box}</b>
       <span>{sub}</span>
-      <em>{here ? "You are here" : "Open →"}</em>
+      <em>{here ? "You are here" : <>Open <RppArrow /></>}</em>
     </Link>
   );
 };
@@ -123,7 +124,7 @@ export default function ProbateFlowChart({ current }: { current?: string }) {
         <Link to={SELLING_PATH} className={`pfc-go pfc-sell${current === "selling-the-house" ? " pfc-here" : ""}`} aria-current={current === "selling-the-house" ? "page" : undefined}>
           <b>Selling the house</b>
           <span>Every path ends here if the house will be sold</span>
-          <em>{current === "selling-the-house" ? "You are here" : "Open →"}</em>
+          <em>{current === "selling-the-house" ? "You are here" : <>Open <RppArrow /></>}</em>
         </Link>
       </div>
 

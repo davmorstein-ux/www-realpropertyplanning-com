@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * "Coming Soon" block for a professional category with nobody listed yet.
  *
@@ -29,7 +30,7 @@ const FeaturedProviderPlaceholder = ({ heading, seeAlso }: Props) => (
           {seeAlso && (
             <p className="text-foreground text-lg leading-relaxed" style={{ margin: 0 }}>
               <Link to={seeAlso.href} className="text-accent hover:text-gold underline underline-offset-4 font-semibold">
-                {seeAlso.label}
+                {seeAlso.label} <RppArrow />
               </Link>
             </p>
           )}

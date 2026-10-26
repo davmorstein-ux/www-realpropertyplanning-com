@@ -121,7 +121,7 @@ const ProfessionalsAndServices = () => (
           <strong>Are you a professional serving estate, probate or senior transition clients?</strong> Join the Real Property Planning
           directory.
         </div>
-        <button className="p1bar-btn">Get Featured →</button>
+        <button className="p1bar-btn">Get Featured</button>
       </div>
     </div>
   </div>

@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 import { GUIDE_LIBRARY, GUIDE_COUNT } from "@/data/guideLibrary";
 
+import RppArrow from "@/components/RppArrow";
 const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
 const GOLD = "#1B3A6B";
 
@@ -57,7 +58,7 @@ const GuidesAndResources = () => {
           <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#142c52", margin: 0 }}>
             Looking for a professional instead of a guide?{" "}
             <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
-              Browse the Find a Professional directory →
+              Browse the Find a Professional directory <RppArrow />
             </Link>
           </p>
         </div>
@@ -149,8 +150,7 @@ const GuidesAndResources = () => {
                     {/* CTA */}
                     <span className="gold-cta">
                       Read
-                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-                        →
+                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
                       </span>
                     </span>
                   </Link>

@@ -15,6 +15,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcFoot, AFH_TOOL_COLOR, CK_GOLD } from "@/components/calc/CalcKit";
 import IntentCTA from "@/components/IntentCTA";
 
+import RppArrow from "@/components/RppArrow";
 /**
  * AFH Occupancy & Financing Calculator (Sept 2026).
  *
@@ -577,8 +578,8 @@ const AFHFinancingCalculator = () => {
             <CalcFoot
               actions={
                 <>
-                  <Link to="/afh-club/how-to-finance-an-afh">How AFH financing works →</Link>
-                  <Link to="/contact">Ask {FEATURED_BROKER.role} about financing →</Link>
+                  <Link to="/afh-club/how-to-finance-an-afh">How AFH financing works <RppArrow /></Link>
+                  <Link to="/contact">Ask {FEATURED_BROKER.role} about financing <RppArrow /></Link>
                 </>
               }
             >

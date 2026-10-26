@@ -19,6 +19,7 @@ import { AFH_CITY_PAGES, cityPageBySlug } from "@/data/afhCityPages";
 import { liveListings as allLive, soldListings as allSold } from "@/data/afhListings";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
 
 interface AFHCityHubProps {
@@ -218,7 +219,7 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
             )}
             <p className="text-center text-[18px]">
               <Link to="/afh-club/sold" className="text-accent underline underline-offset-4 font-semibold">
-                All adult family home sales in Washington →
+                All adult family home sales in Washington <RppArrow />
               </Link>
             </p>
           </div>
@@ -278,7 +279,7 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                 )}
                 <p className="mt-3 text-[16px] md:text-[17px]">
                   <Link to="/afh-club/listings" className="text-accent underline underline-offset-4 font-semibold">
-                    All adult family homes for sale in Washington →
+                    All adult family homes for sale in Washington <RppArrow />
                   </Link>
                 </p>
               </div>
@@ -323,7 +324,7 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                     to={`/afh-club/homes/${directorySlug}`}
                     className="text-accent underline underline-offset-4 hover:text-gold transition-colors font-semibold"
                   >
-                    All {directoryEntry.facilityCount} licensed adult family homes in {city} →
+                    All {directoryEntry.facilityCount} licensed adult family homes in {city} <RppArrow />
                   </Link>
                 </p>
               </div>

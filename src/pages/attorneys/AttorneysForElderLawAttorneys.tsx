@@ -29,7 +29,7 @@ const AttorneysForElderLawAttorneys = () => (
 
       <FeaturedProviderPlaceholder
         heading="Featured Elder Law Attorney"
-        seeAlso={{ href: "/for-elder-law-attorneys", label: "See the featured elder law attorney →" }}
+        seeAlso={{ href: "/for-elder-law-attorneys", label: "See the featured elder law attorney" }}
         altLabel="featured elder law attorney"
       />
 

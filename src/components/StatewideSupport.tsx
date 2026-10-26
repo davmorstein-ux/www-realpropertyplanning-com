@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 interface StatewideSupportProps {
   background?: "bg-background" | "bg-secondary" | "bg-cream" | "bg-primary";
 }
@@ -77,7 +78,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               className="premium-pill-3d group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               <span className="premium-pill-3d__face text-base text-accent group-hover:text-foreground">
-                + All Counties →
+                + All Counties <RppArrow />
               </span>
             </Link>
           </div>

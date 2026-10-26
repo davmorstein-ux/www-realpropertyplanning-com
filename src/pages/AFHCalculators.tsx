@@ -9,6 +9,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
 
+import RppArrow from "@/components/RppArrow";
 type Tile = {
   to: string;
   img: string;
@@ -106,7 +107,7 @@ const CalcTile: React.FC<{ tile: Tile }> = ({ tile }) => {
         <h2 className="text-[22px] md:text-[24px] font-bold text-slate-900 mb-2">{tile.title}</h2>
         <p className="text-[16px] text-slate-700 leading-relaxed mb-4">{tile.desc}</p>
         <span className="inline-flex items-center gap-1 font-bold" style={{ color: a.link }}>
-          {tile.accent === "plum" ? "Start the score" : "Launch calculator"} <span aria-hidden>→</span>
+          {tile.accent === "plum" ? "Start the score" : "Launch calculator"} <span aria-hidden> <RppArrow /></span>
         </span>
       </div>
     </Link>
