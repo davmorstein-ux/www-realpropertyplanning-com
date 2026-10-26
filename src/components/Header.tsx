@@ -174,6 +174,13 @@ const Header = () => {
       .rpp-curated-link { display: inline-flex; }
       /* Outlined header buttons (Get Connected, phone): fill navy on hover. */
       .rpp-header-outline { transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
+      /* "Get Connected" chiselled into the stone (Oct 26, 2026): a dark line
+         along the top of the letters and a light catch below. */
+      a.rpp-header-connect.rpp-header-outline { text-shadow: 0 -1px 0 rgba(11,24,48,0.45), 0 1px 0 rgba(255,255,255,0.95); }
+      @media (hover: hover) {
+        a.rpp-header-outline.rpp-header-outline:hover { text-shadow: none !important; box-shadow: none !important; }
+        a.rpp-header-outline.rpp-header-outline:hover svg path[filter] { filter: none; }
+      }
       @media (hover: hover) {
         a.rpp-header-outline.rpp-header-outline:hover { background: #1B3A6B !important; color: #ffffff !important; border-color: #1B3A6B !important; }
       }
@@ -629,7 +636,10 @@ const Header = () => {
                     minWidth: 44,
                     alignSelf: "stretch",
                     borderRadius: 6,
-                    border: "1px solid rgba(39,36,33,0.25)",
+                    border: "2px solid rgba(39,36,33,0.38)",
+                    /* Carved into the stone: soft shadow inside the top edge,
+                       light catch below (Oct 26, 2026). */
+                    boxShadow: "inset 0 1px 2px rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.85)",
                     background: searchOpen ? "#272421" : "transparent",
                     color: searchOpen ? "#fff" : "#272421",
                     display: "inline-flex",
@@ -638,10 +648,31 @@ const Header = () => {
                     cursor: "pointer",
                   }}
                 >
-                  {/* Larger magnifier (Oct 26, 2026, David): 26px, was 20. */}
-                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="11" cy="11" r="7" />
-                    <path d="m20 20-3.5-3.5" />
+                  {/* Larger magnifier (Oct 26, 2026, David): 26px, was 20. Etched
+                      into the stone like the phone header's marks (same filter);
+                      off while the search is open (white on charcoal). */}
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" style={{ overflow: "visible" }}>
+                    <defs>
+                      <filter id="rpp-etch-d-search" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
+                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
+                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
+                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
+                        <feComposite in2="lip" operator="in" result="highlight" />
+                        <feOffset in="SourceAlpha" dy="1" result="down2" />
+                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
+                        <feFlood floodColor="#141210" floodOpacity="0.85" />
+                        <feComposite in2="topEdge" operator="in" result="shade" />
+                        <feMerge>
+                          <feMergeNode in="highlight" />
+                          <feMergeNode in="SourceGraphic" />
+                          <feMergeNode in="shade" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <g filter={searchOpen ? undefined : "url(#rpp-etch-d-search)"}>
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="m20 20-3.5-3.5" />
+                    </g>
                   </svg>
                 </button>
                 {searchOpen && (
@@ -675,7 +706,8 @@ const Header = () => {
                     alignItems: "center",
                     padding: "0 18px",
                     borderRadius: 6,
-                    border: "1px solid rgba(39,36,33,0.25)",
+                    border: "2px solid rgba(39,36,33,0.38)",
+                    boxShadow: "inset 0 1px 2px rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.85)",
                     background: "transparent",
                     color: "#1B3A6B",
                     fontWeight: 700,
@@ -696,7 +728,8 @@ const Header = () => {
                        button (Oct 26, 2026, David). Was a solid navy square. */
                     color: "#1B3A6B",
                     background: "transparent",
-                    border: "1px solid rgba(39,36,33,0.25)",
+                    border: "2px solid rgba(39,36,33,0.38)",
+                    boxShadow: "inset 0 1px 2px rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.85)",
                     borderRadius: 6,
                     textDecoration: "none",
                     /* Square icon button matching the LanguageSwitcher beside
@@ -728,7 +761,24 @@ const Header = () => {
                     aria-hidden="true"
                     focusable="false"
                   >
-                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
+                    <defs>
+                      <filter id="rpp-etch-d-phone" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
+                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
+                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
+                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
+                        <feComposite in2="lip" operator="in" result="highlight" />
+                        <feOffset in="SourceAlpha" dy="1" result="down2" />
+                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
+                        <feFlood floodColor="#0b1830" floodOpacity="0.85" />
+                        <feComposite in2="topEdge" operator="in" result="shade" />
+                        <feMerge>
+                          <feMergeNode in="highlight" />
+                          <feMergeNode in="SourceGraphic" />
+                          <feMergeNode in="shade" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <path filter="url(#rpp-etch-d-phone)" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
                   </svg>
                 </a>
               </div>

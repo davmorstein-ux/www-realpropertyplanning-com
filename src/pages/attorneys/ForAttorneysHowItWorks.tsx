@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
+import BackLink from "@/components/BackLink";
 const STEPS: { n: string; title: string; body: string }[] = [
   {
     n: "1",
@@ -205,14 +206,7 @@ const ForAttorneysHowItWorks = () => (
                   Send a File Overview
                 </Button>
               </Link>
-              <Link to="/for-attorneys">
-                <Button
-                  size="lg"
-                  className="px-7 py-4 h-auto rounded-lg bg-[#1B3A6B] text-white hover:bg-[#142c52]"
-                >
-                  ← Back to For Attorneys
-                </Button>
-              </Link>
+              <BackLink to="/for-attorneys" label="For Attorneys" />
             </div>
           </div>
         </div>

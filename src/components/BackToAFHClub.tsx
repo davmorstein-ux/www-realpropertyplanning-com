@@ -1,36 +1,6 @@
-import { Link } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 
+/* Oct 26, 2026: the site's one back button (BackLink). Was a navy block. */
 export default function BackToAFHClub() {
-  return (
-    <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
-      {/* Class deliberately NOT named "BackTo…": index.css rule 15 targets
-          [class*="BackTo"] a and forces color #142c52 !important, which is the
-          same colour as this button's background. Naming it that way would
-          paint the label dark-on-dark — the exact bug this fixes. */}
-      <Link
-        to="/afh-club"
-        className="rpp-afh-return"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 10,
-          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-          fontSize: 18,
-          fontWeight: 900,
-          letterSpacing: "0.22em",
-          textTransform: "uppercase",
-          color: "#ffffff",
-          textDecoration: "none",
-          background: "#142c52",
-          border: "2px solid #6b84ad",
-          padding: "10px 24px",
-          borderRadius: 2,
-          boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
-        }}
-              >
-        ❮ Back to AFH Club
-      </Link>
-    </div>
-  );
+  return <BackLink to="/afh-club" label="AFH Club" center />;
 }

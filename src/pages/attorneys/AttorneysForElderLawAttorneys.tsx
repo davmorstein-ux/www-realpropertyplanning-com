@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
+import BackLink from "@/components/BackLink";
 const AttorneysForElderLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
@@ -38,9 +39,7 @@ const AttorneysForElderLawAttorneys = () => (
       </p>
 
       <div className="flex justify-center my-8">
-        <Link to="/professionals/attorneys">
-          <Button variant="gold" size="lg">Back to Attorneys</Button>
-        </Link>
+        <BackLink to="/professionals/attorneys" label="Attorneys" />
       </div>
 
       <SiteDisclaimerBlock />

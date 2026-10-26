@@ -1,30 +1,6 @@
-import { Link } from "react-router-dom";
-import backImg from "@/assets/back-to-care-options.webp.asset.json";
+import BackLink from "@/components/BackLink";
 
+/* Oct 26, 2026: the site's one back button (BackLink). Was a picture of a button. */
 export default function BackToLongTermCare() {
-  return (
-    <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
-      <Link to="/long-term-care">
-        <img
-          src={backImg.url}
-          alt="← Back to Care Options"
-          style={{
-            maxWidth: 480,
-            width: "100%",
-            height: "auto",
-            display: "inline-block",
-            transition: "transform 0.25s ease, opacity 0.25s ease",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLImageElement).style.transform = "scale(1.03)";
-            (e.currentTarget as HTMLImageElement).style.opacity = "0.9";
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLImageElement).style.transform = "scale(1)";
-            (e.currentTarget as HTMLImageElement).style.opacity = "1";
-          }}
-        />
-      </Link>
-    </div>
-  );
+  return <BackLink to="/long-term-care" label="Care Options" center />;
 }

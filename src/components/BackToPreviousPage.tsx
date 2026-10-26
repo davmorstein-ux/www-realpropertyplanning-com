@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 import { getPreviousPage, type PreviousPage } from "@/lib/navHistory";
 
 /**
@@ -32,47 +33,13 @@ export default function BackToPreviousPage({ fallback, variant = "bottom" }: Pro
   const href = prev ? prev.path : fallback.href;
   const label = prev ? prev.title : fallback.label;
 
+  /* Oct 26, 2026: the site's one back button (BackLink), top and bottom. */
   if (variant === "top") {
     return (
       <div className="rpp-prevpage-top" style={{ maxWidth: 900, margin: "0 auto", padding: "20px 24px 0" }}>
-        <Link
-          to={href}
-          className="rpp-prevpage-link"
-          style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 600, color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}
-        >
-          ❮ Back to {label}
-        </Link>
+        <BackLink to={href} label={label} />
       </div>
     );
   }
-
-  return (
-    <div style={{ textAlign: "center", padding: "40px 24px 56px" }}>
-      <Link
-        to={href}
-        className="rpp-return-btn"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 10,
-          maxWidth: "100%",
-          fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-          fontSize: 18,
-          fontWeight: 900,
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          color: "#ffffff",
-          textDecoration: "none",
-          background: "#142c52",
-          border: "2px solid #6b84ad",
-          padding: "10px 24px",
-          borderRadius: 2,
-          boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
-        }}
-      >
-        ❮ Back to {label}
-      </Link>
-    </div>
-  );
+  return <BackLink to={href} label={label} center />;
 }

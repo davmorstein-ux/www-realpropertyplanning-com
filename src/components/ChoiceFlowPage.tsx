@@ -13,6 +13,7 @@ import TopicProfessionals from "@/components/TopicProfessionals";
 import { professionalsForTopic } from "@/data/topicProfessionals";
 import RppArrow from "@/components/RppArrow";
 
+import BackLink from "@/components/BackLink";
 /** Same rule as scripts/build-aging-parent-routes.mjs, so the prerendered
  *  description and the live one agree. */
 const metaDescription = (node: FlowNode) => {
@@ -69,9 +70,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
               {!isRoot && parent && (
                 <p className="apf-back">
-                  <Link to={parent.path}>
-                    ← Back to {parent.path === "/helping-an-aging-parent" ? "all choices" : parent.heroBandTitle || parent.label}
-                  </Link>
+                  <BackLink to={parent.path} label={parent.path === "/helping-an-aging-parent" ? "all choices" : parent.heroBandTitle || parent.label} />
                 </p>
               )}
 
@@ -162,9 +161,7 @@ const TopicBody = ({
                 Next: {nextLabel} <RppArrow />
               </Link>
             ) : (
-              <Link to="/helping-an-aging-parent" className="apf-next-link">
-                Back to all choices <RppArrow />
-              </Link>
+              <BackLink to="/helping-an-aging-parent" label="all choices" />
             )}
             {hasPros ? (
               <a href="#people-who-help" className="apf-talk">Or talk to someone</a>

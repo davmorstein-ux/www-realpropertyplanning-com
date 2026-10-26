@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.webp";
 
+import BackLink from "@/components/BackLink";
 const Section = ({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
   <section id={id} className="py-10 md:py-14 bg-background">
     <div className="container px-6 lg:px-8">
@@ -153,9 +154,7 @@ const EstateLiquidationLearnMore = () => (
       <section className="py-10 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <Link to="/estate-liquidation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-              ← Back to Estate Liquidation overview
-            </Link>
+            <BackLink to="/estate-liquidation" label="Estate Liquidation overview" />
           </div>
         </div>
       </section>

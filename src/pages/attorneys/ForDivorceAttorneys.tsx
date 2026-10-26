@@ -11,6 +11,7 @@ import ProviderContact from "@/components/ProviderContact";
 import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
 import seattleDivorceLogo from "@/assets/seattle-divorce-options-logo.avif";
 
+import BackLink from "@/components/BackLink";
 interface Attorney {
   name: string;
   title: string;
@@ -120,9 +121,7 @@ const ForDivorceAttorneys = () => (
       </p>
 
       <div className="flex justify-center my-8">
-        <Link to="/professionals/attorneys">
-          <Button variant="gold" size="lg">Back to Attorneys</Button>
-        </Link>
+        <BackLink to="/professionals/attorneys" label="Attorneys" />
       </div>
 
       <BackToProfessionalsButton />

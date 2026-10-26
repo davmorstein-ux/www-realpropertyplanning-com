@@ -1,22 +1,6 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import BackLink from "@/components/BackLink";
 
-const BackToProfessionalsButton = () => (
-  <section className="py-10 md:py-14 bg-background">
-    <div className="container px-6 lg:px-8">
-      <div className="flex justify-center">
-        <Link to="/building-your-professional-team">
-          <Button
-            variant="navy3d"
-            size="lg"
-            className="px-8 py-4 h-auto min-h-[52px] text-base md:text-lg !border-2 !border-gold"
-          >
-            Back to Professionals
-          </Button>
-        </Link>
-      </div>
-    </div>
-  </section>
-);
+/* Oct 26, 2026: the site's one back button (BackLink). */
+const BackToProfessionalsButton = () => <BackLink to="/building-your-professional-team" label="Professionals" center />;
 
 export default BackToProfessionalsButton;

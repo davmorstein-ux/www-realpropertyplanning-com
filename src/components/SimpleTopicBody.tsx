@@ -17,6 +17,7 @@ import TopicProfessionals from "@/components/TopicProfessionals";
 import { professionalsForTopic } from "@/data/topicProfessionals";
 import type { SimpleTopic } from "@/lib/simple-topics";
 
+import BackLink from "@/components/BackLink";
 interface Props {
   path: string;
   topics: Record<string, SimpleTopic>;
@@ -44,7 +45,7 @@ const SimpleTopicBody = ({ path, topics, order, hubPath, hubLabel, afterSteps, h
   return (
     <div className="apf-topic">
       <p className="apf-back">
-        <Link to={hubPath}>← Back to {hubLabel}</Link>
+        <BackLink to={hubPath} label={hubLabel} />
       </p>
 
       <SimpleTopicTop topic={topic} next={next} talkHref={hasPros ? "#people-who-help" : "/featured-professionals"} />

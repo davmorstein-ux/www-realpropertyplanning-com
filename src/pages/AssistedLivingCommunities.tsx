@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 
+import BackLink from "@/components/BackLink";
 const AssistedLivingCommunities = () => (
   <>
     <SEOHead
@@ -52,9 +53,7 @@ const AssistedLivingCommunities = () => (
               <CostOfCareEmbed careTypeId="assisted-living" />
             </div>
             <div className="mt-8 text-center">
-              <Link to="/senior-living-and-relocation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium">
-                ← Back to Senior Living & Relocation
-              </Link>
+              <BackLink to="/senior-living-and-relocation" label="Senior Living & Relocation" />
             </div>
           </div>
         </div>

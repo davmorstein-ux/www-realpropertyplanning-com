@@ -9,6 +9,7 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 
 import NextQuestions from "@/components/NextQuestions";
 import RppArrow from "@/components/RppArrow";
+import BackLink from "@/components/BackLink";
 const navy = "#1B3A6B";
 const gold = "#6b84ad";
 const crimson = "#8B0000";
@@ -341,25 +342,7 @@ const ExecutorsGuide = () => (
               >
                 Browse Professionals
               </Link>
-              <Link
-                to="/executors"
-                style={{
-                  display: "inline-block",
-                  fontFamily: raleway,
-                  fontSize: 13,
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: navy,
-                  background: "transparent",
-                  padding: "14px 32px",
-                  borderRadius: 8,
-                  border: `2px solid ${navy}`,
-                  textDecoration: "none",
-                }}
-              >
-                ← Back to All Roles
-              </Link>
+              <BackLink to="/executors" label="All Roles" />
             </div>
           </div>
         </div>

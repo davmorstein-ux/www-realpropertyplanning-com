@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import type { SimpleTopic } from "@/lib/simple-topics";
 import RppArrow from "@/components/RppArrow";
+import BackLink from "@/components/BackLink";
 
 interface Props {
   topic: SimpleTopic;
@@ -40,9 +41,13 @@ const SimpleTopicTop = ({ topic, next, talkHref }: Props) => (
     </ol>
 
     <div className="apf-next">
-      <Link to={next.to} className="apf-next-link">
-        {next.label} <RppArrow />
-      </Link>
+      {/^back to\b/i.test(next.label) ? (
+        <BackLink to={next.to} label={next.label} />
+      ) : (
+        <Link to={next.to} className="apf-next-link">
+          {next.label} <RppArrow />
+        </Link>
+      )}
       {talkHref.startsWith("#") ? (
         <a href={talkHref} className="apf-talk">Or talk to someone</a>
       ) : (

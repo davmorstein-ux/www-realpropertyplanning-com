@@ -13,6 +13,7 @@ import { FLOW_BASE, DEADLINES_PATH } from "@/data/probateFlow";
 import { PROBATE_CSS, PROBATE_CSS_EXTRA } from "@/components/probate/probateStyles";
 
 import RppArrow from "@/components/RppArrow";
+import BackLink from "@/components/BackLink";
 /**
  * Deadlines & Key Rules (Oct 1, 2026): the reference half of the old one-page
  * probate guide, now one tap from every box of the flow chart. The rules table
@@ -256,7 +257,7 @@ export default function ProbateDeadlines() {
           </p>
         </div>
         <div className="prp-nextrow" style={{ marginTop: 22 }}>
-          <Link className="prp-back" to={FLOW_BASE}>← Back to the flow chart</Link>
+          <BackLink to={FLOW_BASE} label="the flow chart" />
           <Link className="prp-next" to="/probate-glossary">Glossary of terms <RppArrow /></Link>
         </div>
       </Section>

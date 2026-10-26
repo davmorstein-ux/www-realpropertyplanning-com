@@ -12,6 +12,7 @@ import { articleAuthor, articlePublisher } from "@/lib/schema";
 import type { FlowPage } from "@/data/probateFlow";
 
 import RppArrow from "@/components/RppArrow";
+import BackLink from "@/components/BackLink";
 /**
  * One box of a flow chart guide (Oct 1, 2026): the probate guide and the AFH
  * guide share this template so they look and work the same. Words come from
@@ -142,7 +143,7 @@ export default function FlowBranchPage({ page: p, base, guideName, chart, refere
 
         <Section bg="#ffffff">
           <div className="prp-nextrow">
-            <Link className="prp-back" to={base}>← Back to the flow chart</Link>
+            <BackLink to={base} label="the flow chart" />
             {p.next && <Link className="prp-next" to={p.next.href}>Next: {p.next.label} <RppArrow /></Link>}
           </div>
           <p className="prp-small" style={{ marginTop: 18 }}>

@@ -6353,3 +6353,34 @@ html body main.apf .apf-more-links.apf-more-links a { font-size: 18px !important
 .apf-az-list > li { padding: 12px 0; border-bottom: 1px solid #e4ddd1; display: flex; flex-direction: column; gap: 2px; }
 html body main.apf .apf-az-list a { font-size: 19px !important; font-weight: 700; color: #1B3A6B !important; text-decoration: underline; text-underline-offset: 3px; }
 html body main.apf .apf-az-list span { font-size: 17px !important; line-height: 1.5; color: #1c1917 !important; }
+
+/* "The short answer" labels (Oct 26, 2026, David: titles like this should
+   stand out more than the text below them). Every page's version becomes a
+   bold sentence-case heading, larger than the answer text, in its own colour.
+   Was small spaced capitals, 14px. One rule for all the page-specific classes. */
+html body main [class*="answer"] p.apf-answer-label.apf-answer-label.apf-answer-label,
+html body main [class*="answer"] p.rpp-sa-label.rpp-sa-label.rpp-sa-label,
+html body main [class*="answer"] p.afa-label.afa-label.afa-label,
+html body main [class*="answer"] p.ptx-label.ptx-label.ptx-label,
+html body main [class*="answer"] p.afhr-label.afhr-label.afhr-label,
+html body main [class*="answer"] p.stg-label.stg-label.stg-label,
+html body main [class*="answer"] p.byb-label.byb-label.byb-label {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  margin: 0 0 8px !important;
+}
+
+/* No CTA is underlined (Oct 26, 2026, David). A CTA is any link that ends in
+   the site's arrow circle (RppArrow) or draws it with the shared mask; the
+   arrow already says "go here". Links inside a sentence of body text keep
+   their underline, which is how readers tell a link from plain words. */
+html body a:has(svg.rpp-arrow),
+html body a:has(svg.rpp-arrow) *,
+html body a.rpp-arrow-after,
+html body .mp a.mp-link,
+html body .fhp a.fhp-link {
+  text-decoration: none !important;
+}
