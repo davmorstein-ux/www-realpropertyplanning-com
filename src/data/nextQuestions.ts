@@ -92,6 +92,7 @@ const Q = {
     title: "Who can sign for a parent who can't?",
     description: "What a Washington power of attorney lets an agent do, including selling real estate, and what happens without one.",
     href: "/power-of-attorney",
+    image: { src: "/q-poa-v1.webp", w: 423, h: 440 },
   },
   medicaidHome: {
     title: "Does Medicaid count the house, and can we keep it?",
@@ -153,6 +154,7 @@ const Q = {
     title: "What should we talk about before there is a crisis?",
     description: "The questions about wishes, money and the house worth asking a parent early.",
     href: "/planning-before-a-crisis/conversations-to-have",
+    image: { src: "/q-conversationsNow-v1.webp", w: 440, h: 329 },
   },
   familySale: {
     title: "Can the executor or trustee buy the house?",
@@ -212,6 +214,7 @@ const Q = {
     title: "Which documents should be in place first?",
     description: "Powers of attorney, health care directives and wills to put in place before a crisis.",
     href: "/planning-before-a-crisis/legal-documents",
+    image: { src: "/q-legalDocs-v1.webp", w: 440, h: 386 },
   },
   careManagers: {
     title: "Who can help coordinate care?",
@@ -233,6 +236,7 @@ const Q = {
     title: "Is the will up to date?",
     description: "Wills in Washington: what they do, what they don't, and when they go through probate.",
     href: "/wills",
+    image: { src: "/q-wills-v1.webp", w: 440, h: 353 },
   },
   tacoma: { title: "Handling an estate in Tacoma?", description: "Probate and estate real estate in Tacoma and Pierce County.", href: "/tacoma-probate-estate-real-estate" },
   bellevue: { title: "Handling an estate in Bellevue?", description: "Probate and estate real estate in Bellevue and the Eastside.", href: "/bellevue-probate-estate-real-estate" },
