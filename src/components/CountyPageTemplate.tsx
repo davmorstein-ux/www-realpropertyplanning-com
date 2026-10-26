@@ -706,7 +706,7 @@ const CountyPageTemplate = ({
                 to={prevCounty.path}
                 className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
               >
-                <span aria-hidden="true">←</span>
+                <RppArrow direction="left" />
                 <span>{prevCounty.name}</span>
               </Link>
               <Link

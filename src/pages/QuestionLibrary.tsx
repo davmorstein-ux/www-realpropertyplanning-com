@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AskBox from "@/components/AskBox";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import RppArrow from "@/components/RppArrow";
+import BackLink from "@/components/BackLink";
 import {
   LIBRARIES,
   libraryEntriesAll,
@@ -126,7 +127,7 @@ function JourneyPage({ lib, journey }: { lib: Library; journey: Journey }) {
         schemaJson={faqSchema}
       />
       <div className="rpp-qa-wrap" style={{ ["--j" as string]: journey.color }}>
-        <Link to={lib.basePath} className="rpp-qa-back">← All {lib.id === "afh" ? "AFH Club " : ""}questions &amp; answers</Link>
+        <BackLink to={lib.basePath} label={`Back to all ${lib.id === "afh" ? "AFH Club " : ""}questions & answers`} />
         <h1 className="rpp-qa-h1">{journey.title}: Questions &amp; Answers</h1>
         <div className="rpp-qa-intro">
           Short answers to {entries.length} common questions, each from {lib.id === "afh" ? "an AFH Club guide" : "one of the site's guides"} and linked to it. {journey.blurb}{" "}

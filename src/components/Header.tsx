@@ -636,10 +636,15 @@ const Header = () => {
                     minWidth: 44,
                     alignSelf: "stretch",
                     borderRadius: 6,
-                    border: "2px solid rgba(39,36,33,0.38)",
+                    border: "2px solid",
+                    /* Engraved groove (Oct 26, 2026, David: "a little more
+                       engraved"): darker top and left walls, light bottom and
+                       right walls, a shadow inside the top edge and a light
+                       catch outside the bottom, as if cut into the marble. */
+                    borderColor: "rgba(30,27,24,0.55) rgba(255,255,255,0.75) rgba(255,255,255,0.9) rgba(30,27,24,0.45)",
                     /* Carved into the stone: soft shadow inside the top edge,
                        light catch below (Oct 26, 2026). */
-                    boxShadow: "inset 0 1px 2px rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.85)",
+                    boxShadow: "inset 0 2px 3px rgba(0,0,0,0.22), inset 0 -1px 0 rgba(255,255,255,0.7), 0 1px 0 rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.08)",
                     background: searchOpen ? "#272421" : "transparent",
                     color: searchOpen ? "#fff" : "#272421",
                     display: "inline-flex",
@@ -706,8 +711,13 @@ const Header = () => {
                     alignItems: "center",
                     padding: "0 18px",
                     borderRadius: 6,
-                    border: "2px solid rgba(39,36,33,0.38)",
-                    boxShadow: "inset 0 1px 2px rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.85)",
+                    border: "2px solid",
+                    /* Engraved groove (Oct 26, 2026, David: "a little more
+                       engraved"): darker top and left walls, light bottom and
+                       right walls, a shadow inside the top edge and a light
+                       catch outside the bottom, as if cut into the marble. */
+                    borderColor: "rgba(30,27,24,0.55) rgba(255,255,255,0.75) rgba(255,255,255,0.9) rgba(30,27,24,0.45)",
+                    boxShadow: "inset 0 2px 3px rgba(0,0,0,0.22), inset 0 -1px 0 rgba(255,255,255,0.7), 0 1px 0 rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.08)",
                     background: "transparent",
                     color: "#1B3A6B",
                     fontWeight: 700,
@@ -728,8 +738,13 @@ const Header = () => {
                        button (Oct 26, 2026, David). Was a solid navy square. */
                     color: "#1B3A6B",
                     background: "transparent",
-                    border: "2px solid rgba(39,36,33,0.38)",
-                    boxShadow: "inset 0 1px 2px rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.85)",
+                    border: "2px solid",
+                    /* Engraved groove (Oct 26, 2026, David: "a little more
+                       engraved"): darker top and left walls, light bottom and
+                       right walls, a shadow inside the top edge and a light
+                       catch outside the bottom, as if cut into the marble. */
+                    borderColor: "rgba(30,27,24,0.55) rgba(255,255,255,0.75) rgba(255,255,255,0.9) rgba(30,27,24,0.45)",
+                    boxShadow: "inset 0 2px 3px rgba(0,0,0,0.22), inset 0 -1px 0 rgba(255,255,255,0.7), 0 1px 0 rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.08)",
                     borderRadius: 6,
                     textDecoration: "none",
                     /* Square icon button matching the LanguageSwitcher beside
