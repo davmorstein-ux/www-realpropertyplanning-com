@@ -10,10 +10,16 @@
  * checks that every path here is a real route.
  */
 
+import type { TopicImage } from "@/data/topicImages";
+
 export interface NextQuestion {
   title: string;
   description: string;
   href: string;
+  /** David's object picture for this question (Oct 26, 2026). A page's block
+   *  switches to picture tiles only when EVERY question in it has one, so no
+   *  page shows half pictures and half text. Files: public/q-<key>-v1.webp. */
+  image?: TopicImage;
 }
 
 const Q = {
@@ -26,11 +32,13 @@ const Q = {
     title: "Should we sell the house to pay for care?",
     description: "How a parent's home is sold to fund senior living in Washington, step by step, and what it means for taxes and Medicaid.",
     href: "/sell-house-fund-senior-living",
+    image: { src: "/q-houseForCare-v1.webp", w: 378, h: 440 },
   },
   medicaid: {
     title: "Will Medicaid pay, and what happens to the house?",
     description: "Apple Health long-term care in Washington: eligibility, the home exemption, spend-down and the five-year look-back.",
     href: "/long-term-care/medicaid-and-long-term-care",
+    image: { src: "/q-medicaid-v1.webp", w: 336, h: 440 },
   },
   findAfh: {
     title: "Which adult family homes are near us?",
@@ -41,11 +49,13 @@ const Q = {
     title: "What does an adult family home cost?",
     description: "Monthly costs by region and care level, including what Medicaid pays.",
     href: "/adult-family-home-costs",
+    image: { src: "/q-afhCost-v1.webp", w: 440, h: 309 },
   },
   careCost: {
     title: "What will care cost?",
     description: "Washington cost-of-care calculators for in-home care, assisted living, memory care, adult family homes and nursing homes.",
     href: "/cost-of-care-calculator",
+    image: { src: "/q-careCost-v1.webp", w: 415, h: 440 },
   },
   discharge: {
     title: "The hospital says Mom can't go home. What now?",
@@ -81,21 +91,25 @@ const Q = {
     title: "Does Medicaid count the house, and can we keep it?",
     description: "The home exemption, an empty house, selling, giving it to family, the spouse at home, and estate recovery.",
     href: "/long-term-care/medicaid-and-the-family-home",
+    image: { src: "/q-medicaidHome-v1.webp", w: 400, h: 440 },
   },
   giftingRisks: {
     title: "Should we put the house in a child's name?",
     description: "Wills, trusts, transfer-on-death deeds and adding a child to title, and the tax and Medicaid risks of each.",
     href: "/articles/wills-trusts-other-options",
+    image: { src: "/q-giftingRisks-v1.webp", w: 440, h: 438 },
   },
   estateRecovery: {
     title: "Can the state claim the house after death?",
     description: "Medicaid estate recovery in Washington, when it is deferred, and hardship waivers.",
     href: "/long-term-care/medicaid-and-the-family-home",
+    image: { src: "/q-estateRecovery-v1.webp", w: 440, h: 430 },
   },
   reverseMortgage: {
     title: "Could a reverse mortgage pay for care instead?",
     description: "How reverse mortgages work for Washington seniors, and what happens when the borrower moves into care.",
     href: "/retirement-reverse-mortgage",
+    image: { src: "/q-reverseMortgage-v1.webp", w: 440, h: 418 },
   },
   authority: {
     title: "Who has authority to sell the house?",
@@ -121,6 +135,7 @@ const Q = {
     title: "Can Mom or Dad afford to stay home?",
     description: "A worksheet: the real monthly cost of staying home, with care hours at Washington rates, against income and savings.",
     href: "/senior-transitions/can-parent-afford-to-stay-home",
+    image: { src: "/q-stayHome-v1.webp", w: 440, h: 341 },
   },
   fiftyFive: {
     title: "Is a 55+ community a good next home?",
@@ -183,6 +198,7 @@ const Q = {
     title: "What does WA Cares cover?",
     description: "Washington's long-term care benefit: who qualifies, what it pays and when.",
     href: "/long-term-care/wa-cares",
+    image: { src: "/q-waCares-v1.webp", w: 398, h: 440 },
   },
   legalDocs: {
     title: "Which documents should be in place first?",
