@@ -62,6 +62,29 @@ const CHOICES = [
 ];
 
 const PAGE_CSS = `
+/* Linked cube tiles (Oct 26, 2026). */
+.rpp-afh-lane-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile {
+  position: relative; display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: flex-start !important; text-align: left !important; gap: 14px;
+  padding: 12px 58px 12px 12px; background: #fff; border: 2px solid #0a5648; border-radius: 16px;
+  text-decoration: none !important; color: #272421 !important;
+  box-shadow: 0 4px 14px -10px rgba(10,86,72,.6); transition: transform .18s ease, box-shadow .18s ease;
+}
+html body main a.rpp-afh-lane-tile img.rpp-afh-lane-cube { width: 96px !important; height: auto !important; flex: 0 0 96px; margin: 0 !important; }
+html body main a.rpp-afh-lane-tile span.rpp-afh-lane-line.rpp-afh-lane-line { font-size: 20px !important; font-weight: 800 !important; line-height: 1.25 !important; color: #272421 !important; }
+html body main a.rpp-afh-lane-tile span.rpp-afh-lane-arrow { position: absolute; right: 14px; top: 50%; margin-top: -17px; width: 34px; height: 34px; color: #0a5648; display: inline-flex; transition: transform .18s ease; }
+@media (hover: hover) {
+  html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -14px rgba(10,86,72,.6); }
+  html body main a.rpp-afh-lane-tile:hover span.rpp-afh-lane-arrow { transform: translateX(2px); }
+}
+html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3px solid #0a5648; outline-offset: 3px; }
+@media (max-width: 900px) { .rpp-afh-lane-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .rpp-afh-lane-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  html body main a.rpp-afh-lane-tile img.rpp-afh-lane-cube { width: 76px !important; flex-basis: 76px; }
+  html body main a.rpp-afh-lane-tile span.rpp-afh-lane-line.rpp-afh-lane-line { font-size: 19px !important; }
+}
+
   /* WHAT BRINGS YOU HERE (Oct 7, 2026). Doubled classes and !important because
      index.css forces margins and sizes on every section, h2, p and link. */
   section.rpp-afh-choose.rpp-afh-choose { background: #f7f4ef; padding: 26px 20px 30px !important; border-bottom: 1px solid #e3ddd3; }
@@ -814,7 +837,7 @@ const AFHClub = () => {
             Reads as options unlocked, not as a roster of professionals.
            ================================================================== */}
         <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
-          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+          <div style={{ maxWidth: 1180, margin: "0 auto" }}>
             {/* Gaps in this block are set in PAGE_CSS (LEAD BLOCK SPACING): a sitewide
                 !important rule overrides inline margins on every p and heading. */}
             <p className="rpp-afh-kicker rpp-afh-kicker-lead" style={{ color: "#1B3A6B", marginBottom: 26 }}>
@@ -833,66 +856,35 @@ const AFHClub = () => {
             >
               More ways of doing business
             </h2>
-            <p
-              className="rpp-afh-paths-intro"
-              style={{
-                fontSize: "clamp(19px, 2vw, 23px)",
-                fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                lineHeight: 1.8,
-                maxWidth: 760,
-                margin: "0 auto 64px",
-                textAlign: "center",
-              }}
-            >
-              AFH Club explains how Washington adult family home transactions work and lists independent
-              professionals that owners, buyers, and operators can contact directly.
-            </p>
 
-            <div className="rpp-afh-lane-list">
+            {/* Linked cube tiles (Oct 26, 2026, David: "look at all this text!").
+                One short line per cube, each opening the page that explains it;
+                the old paragraphs (some describing a different cube) now live on
+                those pages. Investing opens the homes for sale, which links on
+                to financing. */}
+            <div className="rpp-afh-lane-grid">
               {[
-                {
-                  title: "Selling",
-                  body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
-                },
-                {
-                  title: "Retiring",
-                  /* Oct 10, 2026: was "A management company can run the home while the asset stays in your name."
-                     The licensed owner keeps legal responsibility and oversight duties (WAC 388-76-11055, 11060). */
-                  body: "Step back without selling. A management company can handle the day-to-day under a written agreement while the home stays in your name. As the licensed owner you keep legal responsibility, and still meet with the manager monthly and visit at least quarterly.",
-                },
-                {
-                  title: "Buying",
-                  body: "Being new is not a disqualifier. A management company can support day-to-day operations, though it does not replace the provider's own licensing, training, or legal responsibilities, and financing paths exist for qualified buyers.",
-                },
-                {
-                  title: "Investing",
-                  body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
-                },
-                {
-                  title: "Leasing",
-                  body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
-                },
-                {
-                  title: "Managing",
-                  body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
-                },
+                { title: "Selling", line: "Sell the home, the business, or both", to: "/afh-club/washington-adult-family-home-guide/selling" },
+                { title: "Retiring", line: "Step back without selling", to: "/afh-club/selling-your-business-at-retirement" },
+                { title: "Buying", line: "Buy your first home", to: "/afh-club/washington-adult-family-home-guide/buying" },
+                { title: "Investing", line: "Find homes before they list", to: "/afh-club/listings" },
+                { title: "Leasing", line: "Lease your house to an operator", to: "/afh-club/leasing-a-house-to-an-afh-operator" },
+                { title: "Managing", line: "Hire a management company", to: "/afh-club/hiring-an-afh-management-company" },
               ].map((lane) => (
-                <div key={lane.title} className="rpp-afh-lane-row">
+                <Link key={lane.title} to={lane.to} className="rpp-afh-lane-tile" aria-label={`${lane.title}: ${lane.line}`}>
                   <img
                     src={`/afh-cube-${lane.title.toLowerCase()}-v4.webp`}
                     alt=""
                     aria-hidden="true"
-                    className="rpp-afh-cube-img"
+                    className="rpp-afh-lane-cube"
                     width={688}
                     height={626}
                     loading="lazy"
                     decoding="async"
                   />
-                  <div>
-                    <h3 className="rpp-afh-lane-heading">{lane.title}</h3>
-                    <p>{lane.body}</p>
-                  </div>
-                </div>
+                  <span className="rpp-afh-lane-line">{lane.line}</span>
+                  <span className="rpp-afh-lane-arrow" aria-hidden="true"><RppArrow size="100%" /></span>
+                </Link>
               ))}
             </div>
           </div>
@@ -1222,6 +1214,13 @@ const AFHClub = () => {
                   defaultValue: "Or browse every licensed adult family home in Washington by city",
                 })}
                 {" "}<RppArrow />
+              </Link>
+            </p>
+            {/* Financing (Oct 26, 2026, David): the Investing cube opens the
+                homes for sale; this is where a buyer goes next. */}
+            <p style={{ marginTop: 10, fontSize: 17, lineHeight: 1.7 }}>
+              <Link to="/afh-club/how-to-finance-an-afh" style={{ color: "#1c1917", fontWeight: 600 }}>
+                How to finance an adult family home <RppArrow />
               </Link>
             </p>
           </div>
