@@ -27,6 +27,7 @@ const Q = {
     title: "Can we sell the house if a parent has dementia?",
     description: "Who can sign for a parent with dementia: the parent, a durable power of attorney, a trustee, or a conservator.",
     href: "/guides/sell-parents-house-dementia-washington",
+    image: { src: "/q-dementiaSale-v1.webp", w: 431, h: 440 },
   },
   houseForCare: {
     title: "Should we sell the house to pay for care?",
@@ -44,6 +45,7 @@ const Q = {
     title: "Which adult family homes are near us?",
     description: "Every licensed adult family home in Washington, by city and county, with capacity, specialties and Medicaid contracts.",
     href: "/afh-club/homes",
+    image: { src: "/q-findAfh-v1.webp", w: 440, h: 295 },
   },
   afhCost: {
     title: "What does an adult family home cost?",
@@ -61,21 +63,25 @@ const Q = {
     title: "The hospital says Mom can't go home. What now?",
     description: "How discharge planning works, what to ask before a discharge date, and where a parent can go next.",
     href: "/long-term-care/hospital-discharge-planning",
+    image: { src: "/q-discharge-v1.webp", w: 440, h: 422 },
   },
   rehab: {
     title: "What does Medicare cover after a hospital stay?",
     description: "Short-term nursing home and rehab stays: the three-day rule, what Medicare pays, and what happens when coverage ends.",
     href: "/long-term-care/short-term-nursing-home-stays",
+    image: { src: "/q-rehab-v1.webp", w: 116, h: 440 },
   },
   careSettings: {
     title: "Adult family home, assisted living or nursing home?",
     description: "How Washington's care settings differ, and which fits which needs.",
     href: "/long-term-care/how-to-choose-care-settings",
+    image: { src: "/q-careSettings-v1.webp", w: 406, h: 440 },
   },
   chooseAfh: {
     title: "How do we choose between adult family homes?",
     description: "Building a shortlist, what to ask on a tour, and a worksheet for comparing two homes side by side.",
     href: "/senior-living/choosing-an-adult-family-home",
+    image: { src: "/q-chooseAfh-v1.webp", w: 440, h: 303 },
   },
   inspections: {
     title: "How do we check a home's inspection record?",
@@ -141,6 +147,7 @@ const Q = {
     title: "Is a 55+ community a good next home?",
     description: "What 55+ and 62+ legally mean, who can live there, renting the lot, and what happens to the home later.",
     href: "/senior-transitions/55-plus-communities-washington",
+    image: { src: "/q-fiftyFive-v1.webp", w: 440, h: 419 },
   },
   conversationsNow: {
     title: "What should we talk about before there is a crisis?",
@@ -193,6 +200,7 @@ const Q = {
     title: "Can a parent stay home safely?",
     description: "What aging in place takes: safety, modifications, in-home care and when it stops working.",
     href: "/aging-in-place-staying-home-safely",
+    image: { src: "/q-agingInPlace-v1.webp", w: 440, h: 132 },
   },
   waCares: {
     title: "What does WA Cares cover?",
@@ -209,6 +217,7 @@ const Q = {
     title: "Who can help coordinate care?",
     description: "What aging life care managers do and when families bring one in.",
     href: "/aging-life-care-managers",
+    image: { src: "/q-careManagers-v1.webp", w: 402, h: 440 },
   },
   downsizing: {
     title: "How do we prepare the house and the move?",
