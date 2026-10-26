@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import PremiumTile from "@/components/PremiumTile";
+import ImageTile, { ImageTileStyles } from "@/components/ImageTile";
+import { TOPIC_IMAGES, type TopicImage } from "@/data/topicImages";
 import { articleSchema } from "@/lib/schema";
 
 import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
@@ -21,6 +23,7 @@ interface Pathway {
   description: string;
   href: string;
   icon: string;
+  image: TopicImage;
 }
 
 const pathways: Pathway[] = [
@@ -30,6 +33,7 @@ const pathways: Pathway[] = [
     description:
       "For active seniors seeking convenience, community, reduced maintenance, and lifestyle support while remaining largely independent.",
     href: "/senior-living/independent-living",
+    image: TOPIC_IMAGES.independentLiving,
     icon: iconHeartHands,
   },
   {
@@ -38,6 +42,7 @@ const pathways: Pathway[] = [
     description:
       "For seniors who may benefit from help with daily activities, meals, medication reminders, transportation, or personal support.",
     href: "/senior-living/assisted-living",
+    image: TOPIC_IMAGES.assistedLiving,
     icon: iconAssisted,
   },
   {
@@ -46,6 +51,7 @@ const pathways: Pathway[] = [
     description:
       "Smaller residential care settings that often provide more personalized support in a home-like environment.",
     href: "/senior-living/adult-family-homes",
+    image: TOPIC_IMAGES.adultFamilyHome,
     icon: iconHome,
   },
   {
@@ -54,6 +60,7 @@ const pathways: Pathway[] = [
     description:
       "Specialized environments designed for individuals experiencing Alzheimer's disease, dementia, or cognitive decline.",
     href: "/senior-living/memory-care",
+    image: TOPIC_IMAGES.memoryCare,
     icon: iconExecutor,
   },
   {
@@ -62,6 +69,7 @@ const pathways: Pathway[] = [
     description:
       "Options for seniors who wish to remain at home while receiving caregiving, safety, and support services.",
     href: "/helping-an-aging-parent",
+    image: TOPIC_IMAGES.inHomeCare,
     icon: iconHeartHands,
   },
   {
@@ -69,6 +77,7 @@ const pathways: Pathway[] = [
     title: "Temporary or Transitional Care",
     description: "Short-term rehabilitation, recovery support, respite care, or transitional care situations.",
     href: "/senior-living/nursing-and-skilled-care",
+    image: TOPIC_IMAGES.temporaryCare,
     icon: iconAssisted,
   },
 ];
@@ -148,15 +157,21 @@ const UnderstandingHousingCareOptions = () => {
             search engines saw a second empty H2 on the page. */}
         <section id="pathways" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
+            {/* Image tiles (Oct 26, 2026, David: tiles need a picture to break up
+                the text). One object per care type from src/data/topicImages.ts;
+                single frame (was a white card around a teal-bordered card). */}
+            <ImageTileStyles />
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {pathways.map((p) => (
-                <PremiumTile
+                <ImageTile
                   key={p.letter}
                   to={p.href}
                   title={p.title}
                   description={p.description}
-                  cta="Learn More"
-                  className="understanding-tile-outline"
+                  img={p.image.src}
+                  w={p.image.w}
+                  h={p.image.h}
+                  color="#0f6b56"
                 />
               ))}
             </div>
