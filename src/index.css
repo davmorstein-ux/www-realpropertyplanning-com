@@ -6001,6 +6001,10 @@ html body main li.rpp-hero-point a.rpp-hero-point-link span.rpp-hero-arrow.rpp-h
    reduced motion there is no animation: the arrow shows from the start.
    Slowed Oct 25, 2026 (David: "too fast"): first badge starts at 2.2s so
    the checks are seen first, each turn takes 1.1s, badges 0.45s apart.
+   Slowed again that evening (David: "slow down the rotation"): each turn
+   takes 2s and badges are 0.6s apart; the first starts at 1.8s so the whole
+   sequence still ends by about 5.6s after load (WCAG 2.2.2's 5-second line
+   applies to motion that starts on its own).
    Both shapes rotate about the badge centre (15,15 in its viewBox). */
 html body main .rpp-hero-badge .rpp-badge-check,
 html body main .rpp-hero-badge .rpp-badge-arrow {
@@ -6010,10 +6014,10 @@ html body main .rpp-hero-badge .rpp-badge-arrow {
 html body main .rpp-hero-badge .rpp-badge-check { opacity: 0; transform: rotate(90deg); }
 html body main .rpp-hero-badge .rpp-badge-arrow { opacity: 1; transform: rotate(0deg); }
 html body main .rpp-hero-point-link .rpp-badge-check {
-  animation: rpp-badge-check-out 1100ms cubic-bezier(.45,0,.25,1) var(--rpp-nudge-delay, 2200ms) 1 backwards;
+  animation: rpp-badge-check-out 2000ms cubic-bezier(.45,0,.25,1) var(--rpp-nudge-delay, 1800ms) 1 backwards;
 }
 html body main .rpp-hero-point-link .rpp-badge-arrow {
-  animation: rpp-badge-arrow-in 1100ms cubic-bezier(.45,0,.25,1) var(--rpp-nudge-delay, 2200ms) 1 backwards;
+  animation: rpp-badge-arrow-in 2000ms cubic-bezier(.45,0,.25,1) var(--rpp-nudge-delay, 1800ms) 1 backwards;
 }
 @keyframes rpp-badge-check-out {
   from { opacity: 1; transform: rotate(0deg); }

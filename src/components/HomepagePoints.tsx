@@ -45,7 +45,7 @@ export default function HomepagePoints() {
         const last = text.slice(cut);
         return (
           <li key={p.to} className="rpp-hero-point">
-            <Link to={p.to} className="rpp-hero-point-link" style={{ ["--rpp-nudge-delay" as string]: `${2200 + i * 450}ms` }}>
+            <Link to={p.to} className="rpp-hero-point-link" style={{ ["--rpp-nudge-delay" as string]: `${1800 + i * 600}ms` }}>
               <svg className="rpp-hero-badge" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
                 <circle cx="15" cy="15" r="15" fill="#9E1F3A" />
                 <g fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
