@@ -1,32 +1,29 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ClipboardCheck, Scale, HeartHandshake, KeyRound } from "lucide-react";
 
+/* Popular resources (Oct 26, 2026). David: the old icon tiles "look weak" and
+   "appear as one large image versus 4 separate selections". Rebuilt with his
+   choices after mock-ups:
+   - Each tile leads with the visitor's situation ("We inherited a house").
+     People find themselves faster than they find a guide title, and four
+     identical "Read Guide" buttons were part of why the tiles blurred
+     together. The guide's name was an underlined link line under it; David
+     said it cluttered the tile, so it was replaced by a circled arrow in the
+     bottom-right corner, like the homepage tiles. The guide name stays in the
+     link's aria-label for screen readers.
+   - David's four realistic 3D objects (he made them in ChatGPT; transparent
+     WebP in public/popular-*-v1.webp, trimmed to their edges). Any replacement
+     should be a real object on a plain white background, cut out the same way.
+   - White tiles with a 2px border in each tile's own colour (David: "a cleaner
+     look" than tinted fills): navy, bronze, garnet, teal, all already used on
+     the site.
+   - Desktop: object and words centred. Phones: four stacked rows, object left.
+   Class names avoid "btn"/"cta" (index.css forces maroon on those). */
 const resources = [
-  {
-    title: "Executor's 10-Step Checklist",
-    href: "/resources/washington-executors-10-step-checklist",
-    icon: ClipboardCheck,
-    accent: "#1B3A6B",
-  },
-  {
-    title: "How Probate Real Estate Works",
-    href: "/guides/how-probate-real-estate-works",
-    icon: Scale,
-    accent: "#1B3A6B",
-  },
-  {
-    title: "Senior Housing & Care Options",
-    href: "/understanding-housing-care-options",
-    icon: HeartHandshake,
-    accent: "#1B3A6B",
-  },
-  {
-    title: "What to Do With an Inherited House",
-    href: "/guides/inherited-house-washington",
-    icon: KeyRound,
-    accent: "#1B3A6B",
-  },
+  { situation: "I'm the executor. Where do I start?", guide: "Executor's 10-step checklist", href: "/resources/washington-executors-10-step-checklist", img: "/popular-clipboard-v1.webp", w: 372, h: 440, c: "#1B3A6B" },
+  { situation: "The house has to go through probate", guide: "How probate sales work", href: "/guides/how-probate-real-estate-works", img: "/popular-scale-v1.webp", w: 440, h: 430, c: "#8a5212" },
+  { situation: "Mom or Dad needs more care", guide: "Senior housing & care options", href: "/understanding-housing-care-options", img: "/popular-house-v1.webp", w: 440, h: 398, c: "#9E1F3A" },
+  { situation: "We inherited a house", guide: "What to do with it", href: "/guides/inherited-house-washington", img: "/popular-keys-v1.webp", w: 420, h: 440, c: "#0f6b56" },
 ];
 
 const HomepagePopularResources = () => {
@@ -53,129 +50,91 @@ const HomepagePopularResources = () => {
         margin: 0 !important;
         line-height: 1.2 !important;
       }
-      .rpp-pr-grid {
+      .rpp-pr-grid.rpp-pr-grid {
         display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 1.25rem !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
         list-style: none !important;
         margin: 0 !important;
         padding: 0 !important;
       }
-      .rpp-pr-grid li {
-        display: flex !important;
-      }
-      .rpp-pr-card {
+      .rpp-pr-grid li { display: flex !important; margin: 0 !important; }
+      .rpp-pr-grid li::before, .rpp-pr-grid li::marker { content: none !important; display: none !important; }
+      .rpp-pr-tile.rpp-pr-tile {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        background-color: #ffffff !important;
-        border: 1px solid #dfd3d4 !important;
-        border-top: 4px solid var(--pr-accent, #272421) !important;
-        border-radius: 12px !important;
-        padding: 2rem 1.5rem 1.75rem !important;
-        min-height: 240px !important;
         width: 100% !important;
+        background: #ffffff !important;
+        border: 2px solid var(--pr-c) !important;
+        border-radius: 16px !important;
+        position: relative !important;
+        padding: 1.5rem 1.25rem 3.6rem !important;
         text-decoration: none !important;
-        box-shadow: 0 3px 14px rgba(26,39,68,0.08) !important;
-        transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+        box-shadow: 0 4px 14px -10px color-mix(in srgb, var(--pr-c) 60%, transparent) !important;
+        transition: transform 0.18s ease, box-shadow 0.18s ease !important;
       }
-      .rpp-pr-card:hover {
-        box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
+      .rpp-pr-tile.rpp-pr-tile:hover, .rpp-pr-tile.rpp-pr-tile:focus-visible {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 16px 30px -14px color-mix(in srgb, var(--pr-c) 60%, transparent) !important;
       }
-      .rpp-pr-card-icon {
+      .rpp-pr-tile.rpp-pr-tile:focus-visible { outline: 3px solid var(--pr-c) !important; outline-offset: 3px !important; }
+      .rpp-pr-tile img.rpp-pr-object.rpp-pr-object {
+        display: block !important;
+        width: auto !important;
+        max-width: 150px !important;
+        height: 130px !important;
+        object-fit: contain !important;
+        margin: 0 0 1rem !important;
+        border-radius: 0 !important;
+        filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.16));
+        transition: transform 0.18s ease;
+      }
+      .rpp-pr-tile:hover img.rpp-pr-object.rpp-pr-object { transform: translateY(-2px) scale(1.03); }
+      .rpp-pr-body.rpp-pr-body {
         display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
-        justify-content: center !important;
-        width: 52px !important;
-        height: 52px !important;
-        border-radius: 50% !important;
-        background-color: var(--pr-accent-soft, #faf8f4) !important;
-        margin-bottom: 1.1rem !important;
-        flex-shrink: 0 !important;
-      }
-      .rpp-pr-card-text {
-        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-        font-size: 20px !important;
-        font-weight: 700 !important;
-        color: #272421 !important;
-        line-height: 1.35 !important;
         flex: 1 !important;
-        margin-bottom: 1.5rem !important;
-        text-align: center !important;
+        width: 100% !important;
       }
-      .rpp-pr-card-cta {
+      /* Spans inside links are forced to 16px regular by index.css; these
+         restate their own size and weight. */
+      .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation {
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        line-height: 1.25 !important;
+        color: #272421 !important;
+        margin: 0 !important;
+      }
+      /* Circled arrow, bottom-right corner (like the homepage tiles): a solid
+         disc in the tile's colour with a white arrow (David, Oct 26, 2026); on
+         hover it darkens a little and nudges right. */
+      .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow {
+        position: absolute !important;
+        right: 14px !important;
+        bottom: 14px !important;
+        width: 36px !important;
+        height: 36px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+        border-radius: 999px !important;
+        border: 0 !important;
+        color: #ffffff !important;
+        background: var(--pr-c) !important;
+        box-shadow: 0 2px 5px -1px color-mix(in srgb, var(--pr-c) 55%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
         display: inline-flex !important;
         align-items: center !important;
-        gap: 8px !important;
-        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.08em !important;
-        text-transform: uppercase !important;
-        color: #ffffff !important;
-        background-color: var(--pr-accent, #272421) !important;
-        padding: 10px 18px !important;
-        border-radius: 8px !important;
-        text-decoration: none !important;
-      }
-
-      /* CALM TILES (owner, Oct 8, 2026, after comparing Rocket Mortgage's
-         homepage: "simple, open, professional"). Replaces the Oct 4 3D frames:
-         one navy accent on all four cards, white card with a hairline border,
-         and a solid navy "Read guide" button so the cards still read as links
-         (the owner's check on the first mock-up, where plain text links didn't).
-         The doubled class beats the flat .rpp-pr-card rules above. */
-      .rpp-pr-3d.rpp-pr-3d {
-        border: 1px solid #e2dbcf !important;
-        border-radius: 14px !important;
-        background: #ffffff !important;
-        box-shadow: none !important;
-        padding: 1.75rem 1.25rem 1.5rem !important;
-        transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease !important;
-      }
-      .rpp-pr-3d.rpp-pr-3d:hover, .rpp-pr-3d.rpp-pr-3d:focus-visible {
-        transform: translateY(-2px) !important;
-        border-color: #1B3A6B !important;
-        box-shadow: 0 10px 24px -14px rgba(27, 58, 107, 0.55) !important;
-      }
-      .rpp-pr-3d.rpp-pr-3d::before { display: none !important; }
-      .rpp-pr-3d .rpp-pr-card-icon.rpp-pr-card-icon {
-        width: 64px !important;
-        height: 64px !important;
-        background: #eef2f7 !important;
-        color: #1B3A6B !important;
-        box-shadow: none !important;
-      }
-      .rpp-pr-3d .rpp-pr-card-text.rpp-pr-card-text {
-        color: #14283a !important;
-        font-size: 21px !important;
-      }
-      .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta {
-        align-self: stretch !important;
         justify-content: center !important;
-        font-size: 15px !important;
-        padding: 12px 16px !important;
-        border-radius: 10px !important;
-        background: #1B3A6B !important;
-        color: #ffffff !important;
-        box-shadow: none !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        white-space: nowrap !important;
-        gap: 12px !important;
+        transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
       }
-      .rpp-pr-3d .rpp-pr-card-icon svg { width: 32px !important; height: 32px !important; }
-      .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta::after { content: none !important; display: none !important; }
-      .rpp-pr-3d .rpp-pr-arrow.rpp-pr-arrow {
-        flex: 0 0 30px !important; width: 30px !important; height: 30px !important; min-width: 30px !important;
-        padding: 0 !important; margin: 0 !important; box-sizing: border-box;
-        border-radius: 999px; border: 2px solid #ffffff; color: #ffffff;
-        display: inline-flex; align-items: center; justify-content: center;
-        transition: background-color 0.18s ease, color 0.18s ease;
-      }
-      .rpp-pr-3d:hover .rpp-pr-arrow.rpp-pr-arrow, .rpp-pr-3d:focus-visible .rpp-pr-arrow.rpp-pr-arrow {
-        background-color: #ffffff; color: #1B3A6B;
+      .rpp-pr-tile:hover span.rpp-pr-arrow.rpp-pr-arrow,
+      .rpp-pr-tile:focus-visible span.rpp-pr-arrow.rpp-pr-arrow {
+        background: color-mix(in srgb, var(--pr-c) 82%, #000000) !important;
+        transform: translateX(2px);
       }
 
       /* Browse all — a solid button, so it reads as the primary next step
@@ -296,8 +255,8 @@ const HomepagePopularResources = () => {
         white-space: nowrap;
       }
 
-      @media (max-width: 900px) {
-        .rpp-pr-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      @media (max-width: 1000px) {
+        .rpp-pr-grid.rpp-pr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
       }
       @media (max-width: 640px) {
         .rpp-afh-strip.rpp-afh-strip {
@@ -310,41 +269,22 @@ const HomepagePopularResources = () => {
           letter-spacing: 0.05em;
         }
       }
-      /* PHONES (under 640px): 2 x 2 at about half size (owner, Oct 5, 2026,
-         matching the "What brings you here" tiles above). Each card is about
-         155px wide, so the frame, padding and icon shrink, the title drops to
-         18px (the site minimum) and wraps, and the button keeps "Read Guide"
-         without its circled arrow, which would not fit beside it. Was a single
-         column under 520px. */
+      /* PHONES (under 640px): four stacked rows, object left and words right,
+         left-aligned, so each choice is its own clearly separate tap target
+         (was a cramped 2 x 2 that read as one block). */
       @media (max-width: 639px) {
-        .rpp-pr-grid.rpp-pr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 0.75rem !important; }
-        .rpp-pr-3d.rpp-pr-3d {
-          border-width: 5px !important;
-          border-radius: 14px !important;
-          padding: 1rem 0.5rem 0.75rem !important;
-          min-height: 0 !important;
+        .rpp-pr-grid.rpp-pr-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 0.9rem !important; }
+        .rpp-pr-tile.rpp-pr-tile {
+          flex-direction: row !important;
+          align-items: center !important;
+          text-align: left !important;
+          gap: 0.9rem !important;
+          padding: 0.85rem 1rem 2.9rem 0.75rem !important;
         }
-        .rpp-pr-3d .rpp-pr-card-icon.rpp-pr-card-icon {
-          width: 46px !important;
-          height: 46px !important;
-          margin-bottom: 0.6rem !important;
-        }
-        .rpp-pr-3d .rpp-pr-card-icon svg { width: 24px !important; height: 24px !important; }
-        .rpp-pr-3d .rpp-pr-card-text.rpp-pr-card-text {
-          font-size: 18px !important;
-          line-height: 1.25 !important;
-          margin-bottom: 0.75rem !important;
-          overflow-wrap: break-word;
-          hyphens: auto;
-        }
-        .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta {
-          font-size: 14px !important;
-          letter-spacing: 0.04em !important;
-          padding: 10px 6px !important;
-          min-height: 44px !important;
-          gap: 0 !important;
-        }
-        .rpp-pr-3d .rpp-pr-arrow.rpp-pr-arrow { display: none !important; }
+        .rpp-pr-tile img.rpp-pr-object.rpp-pr-object { width: 88px !important; max-width: 88px !important; height: 88px !important; flex: 0 0 88px; margin: 0 0 -2rem !important; }
+        .rpp-pr-body.rpp-pr-body { align-items: flex-start !important; }
+        .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation { font-size: 20px !important; }
+        .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; bottom: 10px !important; width: 34px !important; height: 34px !important; }
       }
     ` }} />
 
@@ -357,31 +297,29 @@ const HomepagePopularResources = () => {
 
         {/* Cards */}
         <ul className="rpp-pr-grid">
-          {resources.map((r) => {
-            const Icon = r.icon;
-            return (
-              <li key={r.href}>
-                <Link
-                  to={r.href}
-                  className="rpp-pr-card rpp-pr-3d marquee-hover"
-                  style={{ ["--pr-accent" as string]: r.accent, ["--pr-accent-soft" as string]: `${r.accent}1a` }}
-                >
-                  <span className="rpp-pr-card-icon">
-                    <Icon size={26} color={r.accent} strokeWidth={2} aria-hidden="true" />
-                  </span>
-                  <span className="rpp-pr-card-text">{r.title}</span>
-                  <span className="rpp-pr-card-cta">
-                    Read Guide
-                    <span className="rpp-pr-arrow" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14M13 6l6 6-6 6" />
-                      </svg>
-                    </span>
-                  </span>
-                </Link>
-              </li>
-            );
-          })}
+          {resources.map((r) => (
+            <li key={r.href}>
+              <Link
+                to={r.href}
+                className="rpp-pr-tile marquee-hover"
+                style={{ ["--pr-c" as string]: r.c }}
+                aria-label={`${r.situation}: ${r.guide}`}
+              >
+                <img className="rpp-pr-object" src={r.img} alt="" width={r.w} height={r.h} loading="lazy" decoding="async" />
+                <span className="rpp-pr-body">
+                  <span className="rpp-pr-situation">{r.situation}</span>
+                </span>
+                <span className="rpp-pr-arrow" aria-hidden="true">
+                  {/* A heavy chevron (sideways V), not a line arrow (David, Oct 26,
+                      2026: "a sideways V, thicker/heavier"). Nudged 1px right
+                      so it looks centred in the disc. */}
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 2 }}>
+                    <path d="M9 5.5l6.5 6.5-6.5 6.5" />
+                  </svg>
+                </span>
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Browse all — primary next step */}
