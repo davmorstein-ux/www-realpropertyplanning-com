@@ -45,6 +45,10 @@ export interface Professional {
   specialty: string;
   photo: string;
   href: string;
+  /** More credentials held by the SAME person (David, Oct 26, 2026: "one
+   *  headshot, one name, then credentials below" — never the same face twice).
+   *  Each is shown as its own "Role, Company" line under the first. */
+  credentials?: { role: string; company: string }[];
   /** Optional second person, for tiles covering two people at the same firm. */
   name2?: string;
   role2?: string;
@@ -78,22 +82,39 @@ const groupsAsWritten: CategoryGroup[] = [
     key: "realEstate",
     category: "Real Estate & Appraisal",
     professionals: [
-      {
-        name: FEATURED_BROKER.name,
-        role: "Washington State Licensed Real Estate Broker",
-        company: FEATURED_BROKER.brokerage,
-        specialty: "Probate, estate, and trust property sales throughout Washington State.",
-        photo: BROKER_PHOTO,
-        href: "/realtor",
-      },
-      {
-        name: FEATURED_APPRAISER.name,
-        role: "Certified Residential Appraiser",
-        company: FEATURED_APPRAISER.firm,
-        specialty: "Date-of-death valuations, estate appraisals, and residential appraisal services.",
-        photo: APPRAISER_PHOTO,
-        href: "/real-estate-appraiser",
-      },
+      /* One entry when the featured broker and appraiser are the same person
+         (David, Oct 26, 2026: one headshot, one name, credentials below). If
+         another appraiser takes the appraiser spot, they get their own entry. */
+      ...(FEATURED_BROKER.name === FEATURED_APPRAISER.name
+        ? [
+            {
+              name: FEATURED_BROKER.name,
+              role: "Washington State Licensed Real Estate Broker",
+              company: FEATURED_BROKER.brokerage,
+              credentials: [{ role: "Certified Residential Appraiser", company: FEATURED_APPRAISER.firm }],
+              specialty: "Probate, estate and trust property sales, date-of-death valuations and estate appraisals throughout Washington State.",
+              photo: BROKER_PHOTO,
+              href: "/realtor",
+            },
+          ]
+        : [
+            {
+              name: FEATURED_BROKER.name,
+              role: "Washington State Licensed Real Estate Broker",
+              company: FEATURED_BROKER.brokerage,
+              specialty: "Probate, estate, and trust property sales throughout Washington State.",
+              photo: BROKER_PHOTO,
+              href: "/realtor",
+            },
+            {
+              name: FEATURED_APPRAISER.name,
+              role: "Certified Residential Appraiser",
+              company: FEATURED_APPRAISER.firm,
+              specialty: "Date-of-death valuations, estate appraisals, and residential appraisal services.",
+              photo: APPRAISER_PHOTO,
+              href: "/real-estate-appraiser",
+            },
+          ]),
     ],
   },
   {

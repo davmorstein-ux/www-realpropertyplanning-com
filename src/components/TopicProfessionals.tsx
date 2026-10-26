@@ -74,6 +74,11 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
                   <div style={{ fontSize: 15, color: "#1c1917" }}>
                     {p.role2 ? `${p.role} & ${p.role2}` : p.role}, {p.company}
                   </div>
+                  {p.credentials?.map((c) => (
+                    <div key={c.role} style={{ fontSize: 15, color: "#1c1917" }}>
+                      {c.role}, {c.company}
+                    </div>
+                  ))}
                 </div>
               </li>
             ))}

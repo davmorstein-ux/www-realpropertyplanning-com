@@ -148,9 +148,16 @@ const FeaturedProfessionals = () => (
                         >
                           {pro.name}
                         </p>
-                        <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, color: "#1B3A6B", margin: 0 }}>
-                          {pro.role}
-                        </p>
+                        {/* divs, not <p>: index.css adds a bottom margin to every <p>,
+                            which spread the credential lines apart. */}
+                        <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, lineHeight: 1.45, color: "#1B3A6B", margin: 0 }}>
+                          {pro.credentials ? `${pro.role}, ${pro.company}` : pro.role}
+                        </div>
+                        {pro.credentials?.map((c) => (
+                          <div key={c.role} style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 14, lineHeight: 1.45, color: "#1B3A6B", margin: "2px 0 0" }}>
+                            {c.role}, {c.company}
+                          </div>
+                        ))}
                       </div>
                     </div>
 
@@ -184,6 +191,7 @@ const FeaturedProfessionals = () => (
                       </div>
                     )}
                   </div>
+                  {!pro.credentials && (
                   <p
                     style={{
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
@@ -195,6 +203,7 @@ const FeaturedProfessionals = () => (
                   >
                     {pro.company}
                   </p>
+                  )}
                   <p
                     style={{
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
