@@ -172,6 +172,12 @@ const Header = () => {
         border-radius: 3px;
       }
       .rpp-curated-link { display: inline-flex; }
+      /* Outlined header buttons (Get Connected, phone): fill navy on hover. */
+      .rpp-header-outline { transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
+      @media (hover: hover) {
+        a.rpp-header-outline.rpp-header-outline:hover { background: #1B3A6B !important; color: #ffffff !important; border-color: #1B3A6B !important; }
+      }
+      a.rpp-header-outline.rpp-header-outline:focus-visible { outline: 2px solid #1B3A6B; outline-offset: 2px; }
       /* Not inside a media query: the button is icon-only at every width, so
          the icon needs a size at every width. It was scoped to >=769px when the
          button still had a text label to fall back on. */
@@ -632,7 +638,8 @@ const Header = () => {
                     cursor: "pointer",
                   }}
                 >
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                  {/* Larger magnifier (Oct 26, 2026, David): 26px, was 20. */}
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                     <circle cx="11" cy="11" r="7" />
                     <path d="m20 20-3.5-3.5" />
                   </svg>
@@ -655,18 +662,22 @@ const Header = () => {
                     <Suspense fallback={<div style={{ height: 48 }} />}><SiteSearchBar autoFocus /></Suspense>
                   </div>
                 )}
-                {/* The header's one action, in the hub's voice. */}
+                {/* The header's one action, in the hub's voice. Outlined, navy
+                    text (Oct 26, 2026, David: the solid navy block and solid
+                    navy phone made the right of the bar heavy). Same 1px
+                    outline as the search box; fills navy on hover. */}
                 <Link
                   to="/contact?reason=other"
-                  className="rpp-header-connect bg-transparent"
+                  className="rpp-header-connect rpp-header-outline bg-transparent"
                   style={{
                     ...NAV_FONT,
                     display: "inline-flex",
                     alignItems: "center",
                     padding: "0 18px",
                     borderRadius: 6,
-                    background: "#1B3A6B",
-                    color: "#fff",
+                    border: "1px solid rgba(39,36,33,0.25)",
+                    background: "transparent",
+                    color: "#1B3A6B",
                     fontWeight: 700,
                     fontSize: 15,
                     letterSpacing: "0.01em",
@@ -679,14 +690,13 @@ const Header = () => {
                 </Link>
                 <a href="tel:2069003015"
                   ref={phoneRef}
-                  className="rpp-header-phone"
+                  className="rpp-header-phone rpp-header-outline"
                   style={{
-                    color: "#fff",
-                    /* Same flat navy as Get Connected (Oct 24, 2026). It was #17578f, a
-                       second, brighter blue left over from before the Oct 21
-                       sitewide navy decision, so the two buttons side by side
-                       read as two different blues. */
-                    background: "#1B3A6B",
+                    /* Navy handset in the same outlined square as the search
+                       button (Oct 26, 2026, David). Was a solid navy square. */
+                    color: "#1B3A6B",
+                    background: "transparent",
+                    border: "1px solid rgba(39,36,33,0.25)",
                     borderRadius: 6,
                     textDecoration: "none",
                     /* Square icon button matching the LanguageSwitcher beside
