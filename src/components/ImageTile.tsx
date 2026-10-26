@@ -8,8 +8,14 @@ import RppArrow from "@/components/RppArrow";
  * idea is to break up the text." Same look as the homepage Popular Resources
  * tiles: white tile, 2px border in the tile's colour, one cut-out object
  * (David makes them in ChatGPT: a realistic object on plain white, then cut
- * out and trimmed to public/<topic>-v1.webp), title, optional one-line
- * description, and the site's one arrow (RppArrow) in the bottom-right corner.
+ * out and trimmed to public/<topic>-v1.webp), the title, and the site's one
+ * arrow (RppArrow) in the bottom-right corner.
+ *
+ * TITLE ONLY on the tile (David, Oct 26, 2026: "way too much text", "just keep
+ * the title"). A description, if given, is NOT shown: it goes into the link's
+ * accessible name for screen readers, and the page the tile opens explains the
+ * rest. Hover-to-reveal was considered and rejected: phones have no hover, and
+ * the tile would change size under the mouse.
  *
  * Use for NAVIGATION tiles (each one opens a page). Do not put a picture on
  * every card of an information list ("caregiver burnout", rule changes):
@@ -18,10 +24,9 @@ import RppArrow from "@/components/RppArrow";
  * One object per topic, reused on every page about that topic, so visitors
  * learn the picture. Keep the topic → image map in src/data/topicImages.ts.
  *
- * Desktop: picture on top, everything centred, like the homepage tiles (David,
- * Oct 26, 2026: centred looks best on a laptop). Keep descriptions to about
- * two lines; centred text gets hard to read past that. Phones: a row, picture
- * left, words left-aligned beside it.
+ * Desktop: picture on top, title centred, like the homepage tiles (David,
+ * Oct 26, 2026: centred looks best on a laptop). Phones: a row, picture left,
+ * title beside it.
  */
 type Props = {
   to: string;
@@ -47,7 +52,7 @@ export const IMAGE_TILE_CSS = `
   background: #ffffff !important;
   border: 2px solid var(--it-c) !important;
   border-radius: 16px !important;
-  padding: 1.4rem 1.4rem 3.6rem !important;
+  padding: 1.4rem 1.4rem 3.4rem !important;
   text-decoration: none !important;
   box-shadow: 0 4px 14px -10px color-mix(in srgb, var(--it-c) 60%, transparent) !important;
   transition: transform 0.18s ease, box-shadow 0.18s ease !important;
@@ -86,13 +91,6 @@ export const IMAGE_TILE_CSS = `
   line-height: 1.25 !important;
   color: #272421 !important;
 }
-.rpp-itile span.rpp-itile-desc.rpp-itile-desc {
-  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  line-height: 1.45 !important;
-  color: #3d3833 !important;
-}
 .rpp-itile span.rpp-itile-arrow.rpp-itile-arrow {
   position: absolute !important;
   right: 14px !important;
@@ -110,16 +108,18 @@ export const IMAGE_TILE_CSS = `
     align-items: center !important;
     text-align: left !important;
     gap: 0.9rem !important;
-    padding: 0.9rem 1rem 2.9rem 0.75rem !important;
+    padding: 0.75rem 3.6rem 0.75rem 0.75rem !important;
   }
   .rpp-itile img.rpp-itile-img.rpp-itile-img {
     width: 88px !important; max-width: 88px !important; height: 88px !important;
-    flex: 0 0 88px; margin: 0 0 -2rem !important; object-position: center !important;
+    flex: 0 0 88px; margin: 0 !important; object-position: center !important;
   }
   .rpp-itile span.rpp-itile-body { align-items: flex-start; }
   .rpp-itile span.rpp-itile-title.rpp-itile-title { font-size: 20px !important; }
-  .rpp-itile span.rpp-itile-desc.rpp-itile-desc { font-size: 17px !important; }
-  .rpp-itile span.rpp-itile-arrow.rpp-itile-arrow { right: 12px !important; bottom: 10px !important; width: 34px !important; height: 34px !important; }
+    /* Title only, so on a phone the arrow sits at the right, level with the
+     title, in its own reserved column (padding-right above): it never
+     overlaps a two-line title. */
+  .rpp-itile span.rpp-itile-arrow.rpp-itile-arrow { right: 12px !important; top: 50% !important; bottom: auto !important; margin-top: -17px !important; width: 34px !important; height: 34px !important; }
 }
 /* Image tiles are their own frame; the sitewide dashed hover ring would draw a
    second outline. */
@@ -128,11 +128,15 @@ export const IMAGE_TILE_CSS = `
 
 export default function ImageTile({ to, title, description, img, w, h, color = "#1B3A6B" }: Props) {
   return (
-    <Link to={to} className="rpp-itile" style={{ ["--it-c" as string]: color }}>
+    <Link
+      to={to}
+      className="rpp-itile"
+      style={{ ["--it-c" as string]: color }}
+      aria-label={description ? `${title}: ${description}` : undefined}
+    >
       <img className="rpp-itile-img" src={img} alt="" width={w} height={h} loading="lazy" decoding="async" />
       <span className="rpp-itile-body">
         <span className="rpp-itile-title">{title}</span>
-        {description && <span className="rpp-itile-desc">{description}</span>}
       </span>
       <span className="rpp-itile-arrow" aria-hidden="true">
         <RppArrow size="100%" />
