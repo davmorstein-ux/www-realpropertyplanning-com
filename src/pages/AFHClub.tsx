@@ -62,19 +62,21 @@ const CHOICES = [
 ];
 
 const PAGE_CSS = `
-/* Linked cube tiles (Oct 26, 2026). */
+/* Linked cube tiles (Oct 26, 2026). Neutral frame, arrow in the cube's own
+   colour (David: too much green). Leasing (teal) and Buying swapped so the
+   teal and green cubes are not side by side. */
 .rpp-afh-lane-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
 html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile {
   position: relative; display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: flex-start !important; text-align: left !important; gap: 14px;
-  padding: 12px 58px 12px 12px; background: #fff; border: 2px solid #0a5648; border-radius: 16px;
+  padding: 12px 58px 12px 12px; background: #fff; border: 1px solid #d9d2c7; border-radius: 16px;
   text-decoration: none !important; color: #272421 !important;
-  box-shadow: 0 4px 14px -10px rgba(10,86,72,.6); transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 4px 14px -10px rgba(39,36,33,.45); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 html body main a.rpp-afh-lane-tile img.rpp-afh-lane-cube { width: 96px !important; height: auto !important; flex: 0 0 96px; margin: 0 !important; }
 html body main a.rpp-afh-lane-tile span.rpp-afh-lane-line.rpp-afh-lane-line { font-size: 20px !important; font-weight: 800 !important; line-height: 1.25 !important; color: #272421 !important; }
-html body main a.rpp-afh-lane-tile span.rpp-afh-lane-arrow { position: absolute; right: 14px; top: 50%; margin-top: -17px; width: 34px; height: 34px; color: #0a5648; display: inline-flex; transition: transform .18s ease; }
+html body main a.rpp-afh-lane-tile span.rpp-afh-lane-arrow { position: absolute; right: 14px; top: 50%; margin-top: -17px; width: 34px; height: 34px; color: var(--lane-c, #0a5648); display: inline-flex; transition: transform .18s ease; }
 @media (hover: hover) {
-  html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -14px rgba(10,86,72,.6); }
+  html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:hover { transform: translateY(-3px); border-color: var(--lane-c); box-shadow: 0 16px 30px -14px rgba(39,36,33,.45); }
   html body main a.rpp-afh-lane-tile:hover span.rpp-afh-lane-arrow { transform: translateX(2px); }
 }
 html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3px solid #0a5648; outline-offset: 3px; }
@@ -105,9 +107,9 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
   /* Secondary links under each choice (Oct 26, 2026, David: too easy to
      overlook). Outlined green pill with the site's arrow circle, no underline;
      fills green on hover. */
-  .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 700; color: #0a5648 !important; text-decoration: none !important; background: #ffffff; border: 2px solid #0a5648; border-radius: 999px; padding: 7px 8px 7px 18px; min-height: 44px; box-shadow: 0 2px 6px -3px rgba(10,86,72,.5); transition: background-color .15s ease, color .15s ease; }
+  .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 700; color: #0a5648 !important; text-decoration: none !important; background: #ffffff; border: 1px solid #d9d2c7; border-radius: 999px; padding: 7px 8px 7px 18px; min-height: 44px; box-shadow: 0 2px 6px -3px rgba(39,36,33,.35); transition: border-color .15s ease; }
   .rpp-afh-choose a.rpp-afh-choose-more svg.rpp-arrow { width: 26px; height: 26px; }
-  @media (hover: hover) { .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more:hover { background: #0a5648; color: #ffffff !important; } }
+  @media (hover: hover) { .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more:hover { border-color: #0a5648; } }
   @media (max-width: 640px) {
     section.rpp-afh-choose.rpp-afh-choose { padding: 18px 16px 22px !important; }
     .rpp-afh-choose h2.rpp-afh-choose-heading.rpp-afh-choose-heading { font-size: 24px !important; margin: 0 0 12px !important; }
@@ -122,7 +124,7 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
     html body .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: block; }
   }
   .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: none; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; line-height: 1.6 !important; color: #1c1917 !important; text-align: center; margin: 12px 0 0 !important; }
-  .rpp-afh-choose p.rpp-afh-choose-also a { display: inline-flex; align-items: center; gap: 8px; margin: 4px; color: #0a5648 !important; font-weight: 700; text-decoration: none !important; font-size: 16px !important; background: #fff; border: 2px solid #0a5648; border-radius: 999px; padding: 6px 7px 6px 14px; min-height: 44px; }
+  .rpp-afh-choose p.rpp-afh-choose-also a { display: inline-flex; align-items: center; gap: 8px; margin: 4px; color: #0a5648 !important; font-weight: 700; text-decoration: none !important; font-size: 16px !important; background: #fff; border: 1px solid #d9d2c7; border-radius: 999px; padding: 6px 7px 6px 14px; min-height: 44px; }
   .rpp-afh-choose p.rpp-afh-choose-also a svg.rpp-arrow { width: 24px; height: 24px; }
 
   .rpp-afh-eyebrow.rpp-afh-eyebrow {
@@ -871,14 +873,14 @@ const AFHClub = () => {
                 to financing. */}
             <div className="rpp-afh-lane-grid">
               {[
-                { title: "Selling", line: "Sell the home, the business, or both", to: "/afh-club/washington-adult-family-home-guide/selling" },
-                { title: "Retiring", line: "Step back without selling", to: "/afh-club/selling-your-business-at-retirement" },
-                { title: "Buying", line: "Buy your first home", to: "/afh-club/washington-adult-family-home-guide/buying" },
-                { title: "Investing", line: "Find homes before they list", to: "/afh-club/listings" },
-                { title: "Leasing", line: "Lease your house to an operator", to: "/afh-club/leasing-a-house-to-an-afh-operator" },
-                { title: "Managing", line: "Hire a management company", to: "/afh-club/hiring-an-afh-management-company" },
+                { title: "Selling", line: "Sell the home, the business, or both", to: "/afh-club/washington-adult-family-home-guide/selling", c: "#9b1c1c" },
+                { title: "Retiring", line: "Step back without selling", to: "/afh-club/selling-your-business-at-retirement", c: "#b07a06" },
+                { title: "Leasing", line: "Lease your house to an operator", to: "/afh-club/leasing-a-house-to-an-afh-operator", c: "#0b7a75" },
+                { title: "Investing", line: "Find homes before they list", to: "/afh-club/listings", c: "#3f7a12" },
+                { title: "Buying", line: "Buy your first home", to: "/afh-club/washington-adult-family-home-guide/buying", c: "#1553b8" },
+                { title: "Managing", line: "Hire a management company", to: "/afh-club/hiring-an-afh-management-company", c: "#6a2aa6" },
               ].map((lane) => (
-                <Link key={lane.title} to={lane.to} className="rpp-afh-lane-tile" aria-label={`${lane.title}: ${lane.line}`}>
+                <Link key={lane.title} to={lane.to} className="rpp-afh-lane-tile" aria-label={`${lane.title}: ${lane.line}`} style={{ ["--lane-c" as string]: lane.c }}>
                   <img
                     src={`/afh-cube-${lane.title.toLowerCase()}-v4.webp`}
                     alt=""
