@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ArticlesCarousel from "@/components/ArticlesCarousel";
 import { Link } from "react-router-dom";
 import { GUIDE_LIBRARY, GUIDE_COUNT } from "@/data/guideLibrary";
 
@@ -52,6 +53,16 @@ const GuidesAndResources = () => {
       
         {/* Blue band — matches site standard */}
         <HeroBandTitle as="h1">Guides &amp; Articles</HeroBandTitle>
+
+        {/* Oct 27, 2026 (David couldn't find the covered articles from here): the magazine-cover
+            carousel from the Articles Library, with a link to that page. The same articles
+            also appear as text in the groups below. */}
+        <ArticlesCarousel />
+        <div className="rpp-lib-articles-link" style={{ display: "flex", justifyContent: "center", background: "#f7f4ef", padding: "0 20px 36px" }}>
+          <Link to="/articles" className="rpp-heading-link" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 19, fontWeight: 700, color: "#1B3A6B", textDecoration: "none" }}>
+            Browse the Articles Library <RppArrow />
+          </Link>
+        </div>
 
         {/* Looking for a professional? CTA */}
         <div style={{ background: "#f7f4ef", padding: "28px 24px", textAlign: "center" }}>
