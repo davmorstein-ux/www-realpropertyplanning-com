@@ -110,7 +110,7 @@ export const ESTATE_HUB_CHOICES: SimpleChoice[] = [
   { to: "/estate-probate-inherited-property/probate-and-legal-authority", label: "Who's in charge, and is probate needed?", image: hubProbate },
   { to: "/estate-probate-inherited-property/property-value", label: "What is the house worth?", image: hubPropertyValue },
   { to: "/estate-probate-inherited-property/what-to-do-with-the-property", label: "Sell, keep or rent the house?", image: hubWhatToDo },
-  { to: "/estate-probate-inherited-property/preparing-the-property", label: "Getting the house ready to sell", image: hubPreparing },
+  { to: "/estate-probate-inherited-property/preparing-the-property", label: "Getting ready to sell", image: hubPreparing },
   { to: "/estate-probate-inherited-property/professional-team", label: "Who can help", image: hubProfessionalTeam },
 ];
 
