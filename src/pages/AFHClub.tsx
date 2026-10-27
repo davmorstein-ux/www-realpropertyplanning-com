@@ -96,26 +96,34 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
      height and the small links beneath them line up (owner, Oct 7, 2026). */
   .rpp-afh-choose li.rpp-afh-choose-item { display: flex; flex-direction: column; gap: 6px; height: 100%; }
   .rpp-afh-choose li.rpp-afh-choose-item > a.rpp-afh-choose-main { flex: 1 1 auto; }
-  .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { position: relative; display: block; background: #0a5648; color: #fff !important; border-radius: 12px; padding: 16px 48px 16px 18px; text-decoration: none !important; min-height: 64px; box-shadow: 0 6px 16px -10px rgba(10,86,72,.7); }
+  .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { position: relative; display: block; background: #0a5648; color: #fff !important; border-radius: 12px; padding: 16px 64px 16px 18px; text-decoration: none !important; min-height: 64px; box-shadow: 0 6px 16px -10px rgba(10,86,72,.7); }
   @media (hover: hover) { .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main:hover { background: #084539; } }
   .rpp-afh-choose a.rpp-afh-choose-main:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
   .rpp-afh-choose .rpp-afh-choose-title { display: block; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 22px !important; font-weight: 700; line-height: 1.2; color: #fff !important; }
   .rpp-afh-choose .rpp-afh-choose-sub { display: block; margin-top: 4px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; font-weight: 400; line-height: 1.4; color: #e6f1ee !important; }
   .rpp-afh-choose .rpp-afh-choose-arrow { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 24px !important; color: #fff !important; }
-  .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { align-self: flex-start; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; font-weight: 600; color: #0a5648 !important; text-decoration: underline !important; text-underline-offset: 3px; padding: 4px 2px; min-height: 32px; }
+  /* Secondary links under each choice (Oct 26, 2026, David: too easy to
+     overlook). Outlined green pill with the site's arrow circle, no underline;
+     fills green on hover. */
+  .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 700; color: #0a5648 !important; text-decoration: none !important; background: #ffffff; border: 2px solid #0a5648; border-radius: 999px; padding: 7px 8px 7px 18px; min-height: 44px; box-shadow: 0 2px 6px -3px rgba(10,86,72,.5); transition: background-color .15s ease, color .15s ease; }
+  .rpp-afh-choose a.rpp-afh-choose-more svg.rpp-arrow { width: 26px; height: 26px; }
+  @media (hover: hover) { .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more:hover { background: #0a5648; color: #ffffff !important; } }
   @media (max-width: 640px) {
     section.rpp-afh-choose.rpp-afh-choose { padding: 18px 16px 22px !important; }
     .rpp-afh-choose h2.rpp-afh-choose-heading.rpp-afh-choose-heading { font-size: 24px !important; margin: 0 0 12px !important; }
     .rpp-afh-choose ul.rpp-afh-choose-list { gap: 10px; }
-    .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { padding: 12px 44px 12px 16px; }
+    .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { padding: 12px 60px 12px 16px; }
     .rpp-afh-choose .rpp-afh-choose-title { font-size: 21px !important; }
     .rpp-afh-choose .rpp-afh-choose-sub { font-size: 15px !important; margin-top: 2px; }
     /* Phones: the smaller links move to one line under all three choices. */
     .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { display: none; }
-    .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: block; }
+    /* html body prefix: the base rule below sets display:none at the same
+       weight and comes later, so the phone line never showed (found Oct 26). */
+    html body .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: block; }
   }
   .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: none; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; line-height: 1.6 !important; color: #1c1917 !important; text-align: center; margin: 12px 0 0 !important; }
-  .rpp-afh-choose p.rpp-afh-choose-also a { color: #0a5648 !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; font-size: 16px !important; }
+  .rpp-afh-choose p.rpp-afh-choose-also a { display: inline-flex; align-items: center; gap: 8px; margin: 4px; color: #0a5648 !important; font-weight: 700; text-decoration: none !important; font-size: 16px !important; background: #fff; border: 2px solid #0a5648; border-radius: 999px; padding: 6px 7px 6px 14px; min-height: 44px; }
+  .rpp-afh-choose p.rpp-afh-choose-also a svg.rpp-arrow { width: 24px; height: 24px; }
 
   .rpp-afh-eyebrow.rpp-afh-eyebrow {
     font-size: 20px !important;
@@ -776,15 +784,14 @@ const AFHClub = () => {
                     <span className="rpp-afh-choose-sub">{c.sub}</span>
                     <span className="rpp-afh-choose-arrow" aria-hidden="true"><RppArrow /></span>
                   </Link>
-                  <Link to={c.more.href} className="rpp-afh-choose-more">{c.more.label}</Link>
+                  <Link to={c.more.href} className="rpp-afh-choose-more">{c.more.label} <RppArrow /></Link>
                 </li>
               ))}
             </ul>
             <p className="rpp-afh-choose-also">
               {CHOICES.map((c, i) => (
                 <span key={c.more.href}>
-                  {i > 0 && <span aria-hidden="true"> · </span>}
-                  <Link to={c.more.href}>{c.more.label}</Link>
+                  <Link to={c.more.href}>{c.more.label} <RppArrow /></Link>
                 </span>
               ))}
             </p>
