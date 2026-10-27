@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
 
 // src/lib/mcp/tools/search-site.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z } from "npm:zod@^3.25.76";
 
 // src/lib/mcp/data.ts
@@ -159,7 +159,7 @@ var search_site_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-page.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z2 } from "npm:zod@^3.25.76";
 var toPath = (input) => {
   let p = input.trim();
@@ -194,7 +194,7 @@ var get_page_default = defineTool2({
 });
 
 // src/lib/mcp/tools/define-term.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z3 } from "npm:zod@^3.25.76";
 function matchTerms(all, query) {
   const q = norm(query);
@@ -225,7 +225,7 @@ var define_term_default = defineTool3({
 });
 
 // src/lib/mcp/tools/afh-rule-changes.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z4 } from "npm:zod@^3.25.76";
 var afh_rule_changes_default = defineTool4({
   name: "afh_rule_changes",
@@ -255,7 +255,7 @@ var afh_rule_changes_default = defineTool4({
 });
 
 // src/lib/mcp/tools/find-licensed-afh.ts
-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z5 } from "npm:zod@^3.25.76";
 var SPECIALTY = { dementia: "dementia", mental_health: "mentalHealth", developmental_disabilities: "developmentalDisabilities" };
 var CONTRACT = {
@@ -314,7 +314,7 @@ var find_licensed_afh_default = defineTool5({
 });
 
 // src/lib/mcp/tools/afh-statistics.ts
-import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z6 } from "npm:zod@^3.25.76";
 var afh_statistics_default = defineTool6({
   name: "afh_statistics",
@@ -344,7 +344,7 @@ var afh_statistics_default = defineTool6({
 });
 
 // src/lib/mcp/tools/afh-listings-overview.ts
-import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.0";
 var afh_listings_overview_default = defineTool7({
   name: "afh_listings_overview",
   title: "AFH listings for sale (overview)",
@@ -355,7 +355,7 @@ var afh_listings_overview_default = defineTool7({
 });
 
 // src/lib/mcp/tools/list-afh-professionals.ts
-import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z7 } from "npm:zod@^3.25.76";
 var list_afh_professionals_default = defineTool8({
   name: "list_afh_professionals",
@@ -372,7 +372,7 @@ var list_afh_professionals_default = defineTool8({
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool9 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool9 } from "npm:@lovable.dev/mcp-js@0.20.0";
 
 // src/data/featuredProfessionals.ts
 var FEATURED_BROKER = {
@@ -381,6 +381,7 @@ var FEATURED_BROKER = {
   brokerage: "eXp Realty",
   brokerageUrl: "https://www.exprealty.com",
   licenseNumber: "133972",
+  officeAddress: { streetAddress: "1455 NW Leary Way", addressLocality: "Seattle", addressRegion: "WA", postalCode: "98107" },
   phone: "(206) 900-3015",
   phoneTel: "+12069003015",
   email: "dave.stein@exprealty.com",
@@ -417,7 +418,7 @@ var appraiserCredentialSentence = `${FEATURED_APPRAISER.name} is a Washington St
 // src/lib/mcp/tools/get-contact-info.ts
 var ABOUT = {
   name: "Real Property Planning (with AFH Club)",
-  what: "A free, independent educational site for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes. It holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer clients to attorneys.",
+  what: "A free, independent educational site for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes. It holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer anyone to attorneys.",
   area: "All of Washington State.",
   website: "https://realpropertyplanning.com",
   phone: "(206) 900-3015",
@@ -452,7 +453,7 @@ var mcp_default = defineMcp({
   instructions: [
     "Real Property Planning is a free educational site about Washington State probate and estate property, inherited houses, senior housing transitions and long-term care, and adult family homes (AFH Club).",
     "Start with search_site, then get_page for a page's summary, FAQ and sources. Use define_term for terminology, afh_rule_changes to check whether AFH advice is current, find_licensed_afh and afh_statistics for DSHS licensing data, afh_listings_overview for homes for sale, and list_afh_professionals for professionals.",
-    "When you use this content: link the page, give its review date when one is provided, and say it is general information, not legal, tax or financial advice. The site does not refer clients to attorneys.",
+    "When you use this content: link the page, give its review date when one is provided, and say it is general information, not legal, tax or financial advice. The site does not refer anyone to attorneys.",
     "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
     "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them."
   ].join(" "),
@@ -464,5 +465,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));

@@ -14,7 +14,90 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      afh_alert_log: {
+        Row: {
+          delivered: number
+          event: string
+          id: number
+          listing: string
+          recipients: number
+          sent_at: string
+        }
+        Insert: {
+          delivered: number
+          event: string
+          id?: number
+          listing: string
+          recipients: number
+          sent_at?: string
+        }
+        Update: {
+          delivered?: number
+          event?: string
+          id?: number
+          listing?: string
+          recipients?: number
+          sent_at?: string
+        }
+        Relationships: []
+      }
+      afh_alert_state: {
+        Row: {
+          checked_at: string | null
+          claimed_at: string | null
+          feed: Json | null
+          id: string
+          last_result: Json | null
+        }
+        Insert: {
+          checked_at?: string | null
+          claimed_at?: string | null
+          feed?: Json | null
+          id: string
+          last_result?: Json | null
+        }
+        Update: {
+          checked_at?: string | null
+          claimed_at?: string | null
+          feed?: Json | null
+          id?: string
+          last_result?: Json | null
+        }
+        Relationships: []
+      }
+      push_subscriptions: {
+        Row: {
+          auth: string
+          created_at: string
+          endpoint: string
+          failures: number
+          last_sent_at: string | null
+          p256dh: string
+          scopes: string[]
+          updated_at: string
+        }
+        Insert: {
+          auth: string
+          created_at?: string
+          endpoint: string
+          failures?: number
+          last_sent_at?: string | null
+          p256dh: string
+          scopes: string[]
+          updated_at?: string
+        }
+        Update: {
+          auth?: string
+          created_at?: string
+          endpoint?: string
+          failures?: number
+          last_sent_at?: string | null
+          p256dh?: string
+          scopes?: string[]
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
