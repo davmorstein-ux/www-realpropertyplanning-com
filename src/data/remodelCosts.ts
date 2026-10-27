@@ -51,8 +51,9 @@ export const SPEND_CATEGORIES: SpendCategory[] = [
   { id: "theater", label: "Home theater", share: 0.02, fullJob: 15000, hint: "Projector or screen, sound, seating, room finishing" },
 ];
 
-/** Slider range, from the owner (Oct 15, 2026): $0 to $100,000 in $500 steps. Larger amounts can be typed. */
-export const SLIDER_MAX = 100000;
+/** Slider range, from the owner: $0 to $300,000 in $500 steps (Oct 27, 2026; was $100,000 — a kitchen alone
+ * can cost $300,000 in a high-end house). Larger amounts can be typed. */
+export const SLIDER_MAX = 300000;
 export const SLIDER_STEP = 500;
 
 /** The house value the full-job costs above are written for. */

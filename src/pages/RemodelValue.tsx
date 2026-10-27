@@ -223,6 +223,15 @@ export default function RemodelValue() {
   /* Oct 15, 2026 (owner): the visitor's 30-year mortgage rate moves every value. */
   const [rate, setRate] = useState(CURRENT_RATE);
   const done = mode === "done";
+  /* Oct 27, 2026 (owner, from a Mercer Island house remodeled for about $1M): in "Already
+     remodeled" mode the county's condition rating is usually the AFTER rating — the assessor
+     re-rates condition once the work is done, often without recording a renovation year — so
+     the "before" value came out at the remodeled condition (Very Good) and ran about $470,000
+     high. That mode now starts the house at the county's average condition (or the record's,
+     if lower). The record's own rating comes back in "Planning a remodel" mode; once the
+     visitor picks a condition themselves, their choice stands in both modes. */
+  const [recordCond, setRecordCond] = useState<number | null>(null);
+  const [condTouched, setCondTouched] = useState(false);
 
   useEffect(() => {
     const get = (path: string) => fetch(path).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))));
@@ -254,12 +263,31 @@ export default function RemodelValue() {
 
   const suggestions = useMemo(() => (zipFile && !picked ? matchAddresses(zipFile, addr) : []), [zipFile, addr, picked]);
 
+  /** "Average" condition for a neighborhood key's county (King 3; Snohomish rates relative to age, 5). */
+  const avgCondFor = (sk: string) => {
+    const c = countyOfKey(sk);
+    const mm = c === "Snohomish" ? sno : c === "Pierce" ? pie : king;
+    return mm?.condAvg ?? 3;
+  };
+  const beforeCond = (recorded: number, sk: string) => Math.min(recorded, avgCondFor(sk));
+
   const pick = (r: ZipRow) => {
     if (!zipFile) return;
     setPicked(r[0]);
     setAddr(titleCase(r[0]));
-    setFacts(rowToFacts(zipFile, r));
+    const f = rowToFacts(zipFile, r);
+    setRecordCond(f.cond);
+    setCondTouched(false);
+    setFacts(done ? { ...f, cond: beforeCond(f.cond, f.sk) } : f);
   };
+
+  /* Switching modes swaps the condition between the county's record and the "before" default,
+     unless the visitor has chosen a condition. */
+  useEffect(() => {
+    if (condTouched || recordCond === null || picked === null || picked === "manual") return;
+    setFacts((f) => (f ? { ...f, cond: done ? beforeCond(recordCond, f.sk) : recordCond } : f));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done]);
 
   const startManual = () => {
     const m = [king, sno, pie].find((x) => x?.zipDefault[zip]) ?? null;
@@ -278,6 +306,8 @@ export default function RemodelValue() {
   const isPie = county === "Pierce";
   const gradeLabels = model?.gradeLabels ?? GRADE_LABELS;
   const condLabels = model?.condLabels ?? CONDITION_LABELS;
+  /** "3 — Average" → "average", for use inside a sentence. */
+  const condWord = (c: number) => ((condLabels as Record<string, string>)[String(c)] ?? String(c)).replace(/^\d+\s*—\s*/, "").toLowerCase();
   const baseRate = BASE_RATE[model?.county ?? "King"] ?? BASE_RATE.King;
   const rf = rateFactor(rate, baseRate);
   const result = useMemo(
@@ -402,7 +432,10 @@ export default function RemodelValue() {
                     Describe the house as it was <strong>before</strong> the work you enter below.
                     {picked && picked !== "manual" && facts.yrRenovated >= doneYear
                       ? ` The county's record shows a renovation in ${facts.yrRenovated}, so it may already include this remodel: set the quality grade, condition, size and baths back to what they were before, and the year last renovated to 0 or the earlier renovation.`
-                      : " The county's record may not include the remodel yet; if it does, set the grade, condition, size and baths back to what they were before."}
+                      : " The county's record may already include the remodel; if it does, set the grade, size and baths back to what they were before."}
+                    {picked && picked !== "manual" && !condTouched && recordCond !== null && recordCond > facts.cond
+                      ? ` Condition starts at ${condWord(facts.cond)}: the county now rates this house ${condWord(recordCond)}, which usually reflects the finished remodel. If the house was already in that shape before the work, change it below.`
+                      : ""}
                   </p>
                 )}
                 {hood && hood.n >= 10 && (
@@ -436,7 +469,7 @@ export default function RemodelValue() {
                     </div>
                     <div>
                       <label className="rmv-label" htmlFor="f-cond">Condition</label>
-                      <select id="f-cond" className="rmv-in" value={facts.cond} onChange={(e) => set("cond", Number(e.target.value))}>
+                      <select id="f-cond" className="rmv-in" value={facts.cond} onChange={(e) => { setCondTouched(true); set("cond", Number(e.target.value)); }}>
                         {Object.entries(condLabels).map(([c, l]) => <option key={c} value={c}>{l}</option>)}
                       </select>
                     </div>
