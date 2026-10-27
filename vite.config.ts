@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
@@ -2648,15 +2649,19 @@ const buildRouteAwareShellScript = () => {
   }
   const mapJson = JSON.stringify(routeMap);
 
-  return `<script>(function(){
+  /* Oct 27, 2026 (performance): the map was inlined into index.html, where it made up 57 KB
+     of the homepage's 86 KB (gzipped) although the homepage never uses it: it only serves
+     addresses that have no prerendered page of their own and get index.html as a fallback.
+     It now lives in /route-meta.js, which a small inline script loads (synchronously, via
+     document.write, so it still runs before the app) only when the address is not "/".
+     The root-clearing step stays inline. */
+  const external = `(function(){
 var R=${mapJson};
 var normalizePath=function(p){var n=p||"/";try{n=decodeURIComponent(n);}catch(e){}if(!n.startsWith("/"))n="/"+n;if(n.endsWith("/index.html"))n=n.slice(0,-11)||"/";if(n.length>1&&n.endsWith("/"))n=n.slice(0,-1);return n||"/";};
 var route=normalizePath(window.location.pathname);
 /* index.html is the homepage, prerendered in full (data-prerendered). The host
    also serves it for routes without their own file; there it must not show the
    homepage, and main.tsx must render fresh rather than hydrate it. */
-var root0=document.getElementById("root");
-if(route!=="/"&&root0&&root0.hasAttribute("data-prerendered")){root0.removeAttribute("data-prerendered");root0.innerHTML="";}
 var m=R[route];
 if(!m)return;
 if(m.t)document.title=m.t;
@@ -2677,14 +2682,42 @@ html+='<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">'+m.h1+'</h
 if(m.qQ&&m.qA){html+='<div style="margin:20px 0;padding:20px;border:1px solid #e2e2e2;border-radius:12px;background:#fafaf8"><p style="font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;color:#a8892f;margin:0 0 6px 0">Quick Answer</p><h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">'+m.qQ+'</h2><p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">'+m.qA+'</p></div>';}
 if(m.intro){html+='<p style="font-size:1.1rem;line-height:1.7;color:#444">'+m.intro+'</p>';}
 html+='</div>';root.innerHTML=html;}
+})();`;
+  const version = createHash("sha1").update(external).digest("hex").slice(0, 10);
+  const inline = `<script>(function(){
+var p=window.location.pathname||"/";try{p=decodeURIComponent(p);}catch(e){}if(p.endsWith("/index.html"))p=p.slice(0,-11)||"/";if(p.length>1&&p.endsWith("/"))p=p.slice(0,-1);
+if(p==="/"||p==="")return;
+var root0=document.getElementById("root");
+if(root0&&root0.hasAttribute("data-prerendered")){root0.removeAttribute("data-prerendered");root0.innerHTML="";}
+document.write('<script src="/route-meta.js?v=${version}"><\\/script>');
 })();</script>`;
+  return { inline, external };
+};
+
+/* Oct 27, 2026 (performance): the homepage hero photo is the phone's "largest contentful
+   paint", and the browser only found it once it had read down to the <picture>. These
+   preload hints in <head> start it alongside the stylesheet: one for phones (the <source>
+   for max-width 900px), one for wider screens (the <img>). Read from the rendered page, so
+   the hashed file names always match. */
+const preloadHomepageHero = (html: string) => {
+  const pic = html.match(/<picture>([\s\S]*?)<\/picture>/);
+  if (!pic || !pic[1].includes('id="rpp-hero-image"')) return html;
+  const src = pic[1].match(/<source media="([^"]+)" srcSet="([^"]+)" sizes="([^"]+)"/);
+  const img = pic[1].match(/<img[^>]*srcSet="([^"]+)"[^>]*sizes="([^"]+)"/);
+  if (!src || !img) return html;
+  const narrow = src[1];
+  const wide = narrow.replace("max-width", "min-width").replace(/(\d+)px/, (_m, n) => `${Number(n) + 1}px`);
+  const links =
+    `<link rel="preload" as="image" media="${narrow}" imagesrcset="${src[2]}" imagesizes="${src[3]}" fetchpriority="high" />` +
+    `<link rel="preload" as="image" media="${wide}" imagesrcset="${img[1]}" imagesizes="${img[2]}" fetchpriority="high" />`;
+  return html.replace("</head>", `${links}</head>`);
 };
 
 const injectRouteAwareShell = (html: string) => {
-  const script = buildRouteAwareShellScript();
+  const { inline } = buildRouteAwareShellScript();
   // Insert script right after </head><body> or before the closing </body>
   // Since SSG content may already be inside #root, match the closing </div> of #root
-  return html.replace("</body>", `${script}</body>`);
+  return html.replace("</body>", `${inline}</body>`);
 };
 
 /* ── Full page content for crawlers (Oct 4, 2026) ───────────────────────────
@@ -3035,7 +3068,8 @@ const routeMetadataPlugin = {
     const rootHtml = injectRouteAwareShell(
       applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true, ssr: rendered.get("/") })
     );
-    await writeFile(baseHtmlPath, rootHtml, "utf8");
+    await writeFile(baseHtmlPath, preloadHomepageHero(rootHtml), "utf8");
+    await writeFile(path.join(distDir, "route-meta.js"), buildRouteAwareShellScript().external, "utf8");
 
     await Promise.all(
       Object.entries(ROUTE_METADATA)

@@ -48,6 +48,13 @@ import { BarChart3, MapPin, Search, Wrench, type LucideIcon } from "lucide-react
 import { careIconFor } from "@/lib/careIcons";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
 import calcPhotoRemodel from "@/assets/home/calc-photo-remodel.webp";
+import calcPhotoCare480 from "@/assets/home/calc-photo-care-480.webp";
+import calcPhotoCare800 from "@/assets/home/calc-photo-care-800.webp";
+import calcPhotoRemodel480 from "@/assets/home/calc-photo-remodel-480.webp";
+import calcPhotoRemodel800 from "@/assets/home/calc-photo-remodel-800.webp";
+/* Oct 27, 2026 (performance): the photo panel is about 360px wide on a laptop and the
+   screen width on a phone; the 1200px file was being sent to every screen. */
+const CALC_PHOTO_SIZES = "(max-width: 768px) 100vw, 360px";
 
 /* Calculator cards, Oct 27, 2026 (David, from a ChatGPT layout): a photo on each card and an
    icon on every line. Care icons (src/lib/careIcons.ts) take each option's own colour; the
@@ -965,7 +972,7 @@ const RPPHomeV3 = () => {
             <div>
               <a href="/cost-of-care-calculator" className="rpp-coc-card rpp-calc-photo-card group marquee-hover">
                 <div className="rpp-calc-photo" aria-hidden="true">
-                  <img src={calcPhotoCare} alt="" width={1200} height={800} loading="lazy" decoding="async" />
+                  <img src={calcPhotoCare800} srcSet={`${calcPhotoCare480} 480w, ${calcPhotoCare800} 800w, ${calcPhotoCare} 1200w`} sizes={CALC_PHOTO_SIZES} alt="" width={1200} height={800} loading="lazy" decoding="async" />
                 </div>
                 <div className="rpp-coc-layout">
                   <div className="rpp-coc-left">
@@ -1031,7 +1038,7 @@ const RPPHomeV3 = () => {
                   cost of care calculator above, for King County homeowners. */}
               <a href="/whats-my-remodel-worth" className="rpp-coc-card rpp-rmv-card rpp-calc-photo-card rpp-calc-photo-right group marquee-hover" style={{ marginTop: "1.5rem" }}>
                 <div className="rpp-calc-photo" aria-hidden="true">
-                  <img src={calcPhotoRemodel} alt="" width={1200} height={800} loading="lazy" decoding="async" />
+                  <img src={calcPhotoRemodel800} srcSet={`${calcPhotoRemodel480} 480w, ${calcPhotoRemodel800} 800w, ${calcPhotoRemodel} 1200w`} sizes={CALC_PHOTO_SIZES} alt="" width={1200} height={800} loading="lazy" decoding="async" />
                 </div>
                 <div className="rpp-coc-layout">
                   <div className="rpp-coc-left">
