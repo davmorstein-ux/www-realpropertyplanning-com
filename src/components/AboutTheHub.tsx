@@ -238,18 +238,15 @@ const AboutTheHub = () => {
       ` }} />
 
       <div className="rpp-abouthub-card rpp-abouthub-card">
+        {/* Oct 27, 2026 (David): the three boxes that followed this line ("Free &
+            independent", "Plain answers", "Who to call") were removed. They repeated the
+            points strip higher on the page, and the third claimed a directory of
+            fiduciaries the site does not have. The lead now finishes its own sentence. */}
         <p className="rpp-abouthub-lead rpp-abouthub-lead">
           When aging, illness, probate, or settling an estate forces a decision about a home,{" "}
-          <span className="rpp-abouthub-name rpp-abouthub-name">Real Property Planning</span> is&hellip;
+          <span className="rpp-abouthub-name rpp-abouthub-name">Real Property Planning</span> is a free,
+          independent place to start.
         </p>
-
-        <hr className="rpp-abouthub-rule rpp-abouthub-rule" />
-
-        <ul className="rpp-abouthub-list rpp-abouthub-list">
-          <li><span className="rpp-abouthub-tag rpp-abouthub-tag">Free &amp; independent</span>A free, independent resource for Washington families</li>
-          <li><span className="rpp-abouthub-tag rpp-abouthub-tag">Plain answers</span>Plain-language answers on real estate, housing, and planning</li>
-          <li><span className="rpp-abouthub-tag rpp-abouthub-tag">Who to call</span>A directory of attorneys, fiduciaries, and care professionals</li>
-        </ul>
 
         {/* Why it exists — the bridge a visitor otherwise never gets (Sept 24
             2026 audit). Hub voice: the reason is the situation, not a person;
@@ -260,10 +257,9 @@ const AboutTheHub = () => {
         <p className="rpp-abouthub-why">
           Property decisions caused by aging, illness, or a death are not ordinary transactions. An attorney, a
           fiduciary, an appraiser, a care provider, a lender, and several family members are often making decisions at
-          the same time, and nobody is responsible for the whole picture. Real Property Planning was built to be the
-          neutral place to start: the guides and tools are free, and when a decision needs a licensed professional, the
-          hub lists independent professionals you can contact directly, including a featured broker and appraiser who
-          work through their own practices.
+          the same time, and nobody is responsible for the whole picture. The guides and tools here are free, and when a
+          decision needs a licensed professional, the site lists independent professionals you can contact directly,
+          including a featured broker and appraiser who work through their own practices.
         </p>
 
         {/* The figures moved to HomepageTrustBar (Sept 2026), then into the four points under the artwork (HomepagePoints.tsx, Oct 25, 2026). */}
