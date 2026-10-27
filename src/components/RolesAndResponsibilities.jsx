@@ -1,5 +1,6 @@
 import React from "react";
 
+import RppArrow from "@/components/RppArrow";
 const tileData = [
   {
     pill: "Roles & Responsibilities",
@@ -102,11 +103,7 @@ const RolesAndResponsibilities = () => {
               </div>
               <div className="r2-footer">
                 <span className="r2-label">Information &amp; Featured Providers</span>
-                <div className="r2-arrow">
-                  <svg viewBox="0 0 24 24">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
+                <span className="r2-arrow-rpp" style={{ marginLeft: "auto", width: 32, height: 32, color: "#1B3A6B", display: "inline-flex", flexShrink: 0 }}><RppArrow size="100%" /></span>
               </div>
             </a>
           ))}

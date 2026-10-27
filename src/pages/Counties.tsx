@@ -32,6 +32,7 @@ import wahkiakumCountyLogo from "@/assets/counties/wahkiakum-county-logo.webp";
 import graysHarborCountyLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
+import RppArrow from "@/components/RppArrow";
 const countyCards = [
   {
     county: "King County",
@@ -248,9 +249,7 @@ const Counties = () => {
                   </p>
                   <span className="gold-cta mt-auto">
                     Learn More
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                    <RppArrow />
                   </span>
                 </Link>
               ))}

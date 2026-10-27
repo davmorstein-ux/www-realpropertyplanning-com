@@ -13,6 +13,7 @@ import trusteeImg from "@/assets/executors/trustee-tile.webp";
 import IntentCTA from "@/components/IntentCTA";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+import RppArrow from "@/components/RppArrow";
 const roles = [
   {
     title: "Executors",
@@ -261,18 +262,7 @@ const Executors = () => (
                     }}
                   >
                     {role.title} Guide
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="14"
-                      height="14"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                    <RppArrow />
                   </Link>
                 </div>
               </div>

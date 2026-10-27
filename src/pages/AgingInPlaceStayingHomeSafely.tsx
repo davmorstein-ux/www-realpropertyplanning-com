@@ -20,8 +20,8 @@ import iconIndependent from "@/assets/icons/senior-independent-living-icon-washi
 import iconEstatePlanning from "@/assets/icons/estate-wills-planning-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import WhichGuide from "@/components/WhichGuide";
-import RppArrow from "@/components/RppArrow";
 
+import RppArrow from "@/components/RppArrow";
 interface Pathway {
   letter: string;
   title: string;
@@ -302,9 +302,7 @@ const AgingInPlaceStayingHomeSafely = () => {
                         </p>
                         <span className="gold-cta mt-auto">
                           Learn More
-                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
+                          <RppArrow />
                         </span>
                       </div>
                     </div>

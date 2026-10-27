@@ -1351,18 +1351,7 @@ const AFHClub = () => {
                     style={{ color: "#142c52", display: "inline-flex", alignItems: "center", gap: 5 }}
                   >
                     {t("afhClubPage.exploreLabel")}
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                    <RppArrow />
                   </span>
                 </div>
               </Link>

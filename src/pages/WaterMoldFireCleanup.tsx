@@ -12,6 +12,7 @@ import ProviderHoverPanel from "@/components/ProviderHoverPanel";
 import CTASection from "@/components/CTASection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
+import RppArrow from "@/components/RppArrow";
 interface Provider {
   name: string;
   title: string;
@@ -164,19 +165,7 @@ const WaterMoldFireCleanup = () => (
 
                         <span className="gold-cta mt-auto">
                           Learn More
-                          <svg
-                            viewBox="0 0 24 24"
-                            width="18"
-                            height="18"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            aria-hidden="true"
-                          >
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
+                          <RppArrow />
                         </span>
                       </div>
                     </div>

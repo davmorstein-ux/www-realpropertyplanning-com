@@ -12,6 +12,7 @@ import { FEATURED_BROKER, brokerCredentialSentence } from "@/data/featuredProfes
 import SimpleTopicBody from "@/components/SimpleTopicBody";
 import { PLAN_SIMPLE_TOPICS, PLAN_HUB_PATH } from "@/lib/plan-ahead-simple";
 
+import RppArrow from "@/components/RppArrow";
 interface PlanningSubPageLayoutProps {
   /** Browser tab + meta title */
   seoTitle: string;
@@ -163,9 +164,7 @@ const PropertySideBand = () => (
           </p>
           <Link to="/contact" className="gold-cta inline-flex items-center" style={{ fontSize: "15px" }}>
             Get in Touch
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <RppArrow />
           </Link>
           <p className="text-muted-foreground text-[16px] leading-[1.6] mt-6 max-w-2xl mx-auto">
             For legal, tax, and care questions, the attorneys, fiduciaries, and care professionals listed

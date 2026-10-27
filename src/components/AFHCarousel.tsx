@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 
+import RppArrow, { RppChevron } from "@/components/RppArrow";
 const DEFAULT_TOPICS = [
   {
     title: "Getting Started",
@@ -214,18 +215,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                     }}
                   >
                     Explore
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                    <RppArrow />
                   </span>
                 </div>
               </Link>
@@ -273,18 +263,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
+          <RppChevron size={30} direction="left" />
         </button>
 
         {/* Phones: a row of dots is wider than the screen once there are more than
@@ -379,18 +358,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+          <RppChevron size={30} />
         </button>
       </div>
     </section>

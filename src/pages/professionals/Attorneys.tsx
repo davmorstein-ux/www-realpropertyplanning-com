@@ -14,6 +14,7 @@ import iconRealEstate from "@/assets/icons/real-estate-attorney-services-icon-wa
 import iconFamilyLaw from "@/assets/icons/attorney-family-law-property-icon-washington.webp";
 import iconDivorce from "@/assets/icons/attorney-divorce-property-icon-washington.webp";
 
+import RppArrow from "@/components/RppArrow";
 const attorneys = [
   {
     icon: iconProbate,
@@ -97,9 +98,7 @@ const Attorneys = () => (
                 <Link to={a.href} className="mt-auto no-underline">
                   <span className="gold-cta">
                     Learn More
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                    <RppArrow />
                   </span>
                 </Link>
               </div>

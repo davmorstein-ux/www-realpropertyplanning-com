@@ -16,6 +16,7 @@ import GuidanceGrid from "@/components/GuidanceGrid";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 import NextQuestions from "@/components/NextQuestions";
+import RppArrow from "@/components/RppArrow";
 interface Decision {
   letter: string;
   title: string;
@@ -140,9 +141,7 @@ const WhatToDoWithTheHouse = () => {
                     </p>
                     <span className="gold-cta mt-auto">
                       Learn More
-                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
+                      <RppArrow />
                     </span>
                   </div>
                 </Link>
@@ -177,9 +176,7 @@ const WhatToDoWithTheHouse = () => {
                       </p>
                       <span className="gold-cta mt-auto">
                         Continue
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
+                        <RppArrow />
                       </span>
                     </div>
                   </Link>

@@ -10,10 +10,11 @@ import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-wa
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
 import c2FinancialLogo from "@/assets/providers/real-estate-lenders-c2financial-logo-washington.webp";
-import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-washington.webp";
+import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-v2.webp";
 import familyFirstLogo from "@/assets/providers/real-estate-lenders-family-first-mortgage-logo-washington.webp";
 
 
+import RppArrow from "@/components/RppArrow";
 interface Lender {
   name: string;
   title: string;
@@ -116,16 +117,14 @@ const MortgageLenders = () => (
                         <img
                           src={l.logo}
                           alt={l.logoAlt || `${l.company} logo`}
-                          className="h-12 w-auto max-w-[180px] object-contain mb-4"
+                          className="h-12 w-auto max-w-[260px] object-contain mb-4"
                           loading="lazy" sizes="100vw" decoding="async"/>
                       )}
                       <p className="text-muted-foreground text-sm italic mb-5">{l.specialty}</p>
 
                       <span className="gold-cta mt-auto">
                         Learn More
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
+                        <RppArrow />
                       </span>
                     </div>
                   </div>

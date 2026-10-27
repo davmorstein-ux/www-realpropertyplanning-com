@@ -1,5 +1,6 @@
 import React from "react";
 
+import RppArrow from "@/components/RppArrow";
 const styles = `
   .p3wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   .p3section { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; padding: 0 40px 64px; }
@@ -50,11 +51,7 @@ const P3Tile = ({ pill, title, tagline, imgSrc, href }) => (
       </div>
       <div className="p3footer">
         <span className="p3label">Information & Featured Providers</span>
-        <div className="p3arrow">
-          <svg viewBox="0 0 24 24">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </div>
+        <span className="p3arrow-rpp" style={{ marginLeft: "auto", width: 32, height: 32, color: "#1B3A6B", display: "inline-flex", flexShrink: 0 }}><RppArrow size="100%" /></span>
       </div>
     </div>
   </a>

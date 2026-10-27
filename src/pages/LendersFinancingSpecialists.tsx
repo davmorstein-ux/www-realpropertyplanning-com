@@ -15,7 +15,7 @@ import lendersIcon from "@/assets/icons/real-estate-lenders-3d-icon-washington.w
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import c2FinancialLogo from "@/assets/providers/real-estate-lenders-c2financial-logo-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
-import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-washington.webp";
+import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-v2.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
 import familyFirstLogo from "@/assets/providers/real-estate-lenders-family-first-mortgage-logo-washington.webp";
 import equalHousingIcon from "@/assets/providers/equal-housing-lender-icon-washington.webp";
@@ -127,7 +127,7 @@ const LendersFinancingSpecialists = () => (
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[180px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[36px] sm:-mt-[16px]"  loading="lazy" sizes="100vw" decoding="async" width={1536} height={1024} />
+                  <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[56px] w-auto max-w-full object-contain mx-auto sm:mx-0 block"  loading="lazy" decoding="async" width={1246} height={226} />
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Jeff McGinnis <span className="text-muted-foreground text-sm font-normal">· NMLS 279369</span></p>

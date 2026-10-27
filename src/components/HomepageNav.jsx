@@ -1,5 +1,6 @@
 import React from "react";
 
+import RppArrow from "@/components/RppArrow";
 const sections = [
   {
     title: "Professionals & Services",
@@ -67,9 +68,7 @@ const HomepageNav = () => {
                       <p className="text-foreground text-[14px] leading-relaxed mb-6">{s.blurb}</p>
                       <span className="gold-cta mt-auto">
                         Explore
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
+                        <RppArrow />
                       </span>
                     </div>
                   </div>

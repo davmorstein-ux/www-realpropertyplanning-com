@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import RppArrow from "@/components/RppArrow";
 const HomepageWarmStatement = () => {
   return (
     <section className="py-14 lg:py-20 bg-cream">
@@ -7,9 +8,7 @@ const HomepageWarmStatement = () => {
         <div className="max-w-[820px] mx-auto text-center">
           <Link to="/about" className="gold-cta mx-auto">
             Learn how this works
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <RppArrow />
           </Link>
         </div>
       </div>

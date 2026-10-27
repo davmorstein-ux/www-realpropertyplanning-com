@@ -10,6 +10,7 @@ import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
 import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
 import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
 
+import RppArrow from "@/components/RppArrow";
 const stopPropagation = (e: React.MouseEvent) => e.stopPropagation();
 
 const GINNYS_BIO = `Ginny's is a family-owned senior move management and estate services company based in Edmonds, Washington, founded to help families in North King and Snohomish counties navigate life transitions with dignity and care. We specialize in senior move management, estate sales, residential clear-outs, and personal property appraisals — providing professional, compassionate support during times of change. Certified by NASMM (National Association of Senior Move Managers) and ISA (International Society of Appraisers), our team offers comprehensive services including space planning, sorting, packing, move oversight, unpacking, resettling, estate liquidation, full-home clear-outs, and personal property valuation. Whether you're downsizing, managing an estate after a move or death, or preparing a home for sale, Ginny's reduces stress and creates a smoother path forward for older adults and their families.`;
@@ -123,19 +124,7 @@ const EstateLiquidators = () => (
                       onClick={stopPropagation}
                     >
                       Visit Website
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="14"
-                        height="14"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
+                      <RppArrow />
                     </a>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 
+import RppArrow from "@/components/RppArrow";
 const tiles = [
   {
     imgSrc: tilePlanning,
@@ -151,20 +152,7 @@ const HomepageFunnel = () => (
                 }}
               >
                 <span className="rpp-tile-label">{title}</span>
-                <svg
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="none"
-                  stroke="#cd4a55"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                  style={{ flexShrink: 0 }}
-                >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
+                <RppArrow />
               </div>
             </div>
           </Link>
@@ -214,19 +202,7 @@ const HomepageFunnel = () => (
           {/* Right: CTA button */}
           <span className="rpp-afh-cta">
             Explore AFH Club
-            <svg
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <RppArrow />
           </span>
         </div>
       </Link>

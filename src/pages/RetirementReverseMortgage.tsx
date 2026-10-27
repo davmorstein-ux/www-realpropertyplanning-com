@@ -14,7 +14,7 @@ import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washin
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import c2FinancialLogo from "@/assets/providers/real-estate-lenders-c2financial-logo-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
-import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-washington.webp";
+import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-v2.webp";
 
 const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
@@ -213,8 +213,8 @@ const RetirementReverseMortgage = () => (
                   <img
                     src={crossCountryLogo}
                     alt="CrossCountry Mortgage logo"
-                    className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                   loading="lazy" sizes="100vw" decoding="async" width={1536} height={1024} />
+                    className="h-[56px] w-auto max-w-full object-contain mx-auto sm:mx-0 block"
+                   loading="lazy" decoding="async" width={1246} height={226} />
                 </a>
 
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">

@@ -10,6 +10,7 @@ import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageFAQ from "@/components/HomepageFAQ";
 
+import RppArrow from "@/components/RppArrow";
 const tiles = [
   {
     imgSrc: tilePlanning,
@@ -183,20 +184,7 @@ const HomepageFinal = () => {
                       >
                         {title}
                       </span>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="none"
-                        stroke="#ffffff"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                        style={{ flexShrink: 0, opacity: 0.8 }}
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
+                      <RppArrow />
                     </div>
                   </div>
                 </Link>
@@ -265,19 +253,7 @@ const HomepageFinal = () => {
                 }}
               >
                 Explore AFH Club
-                <svg
-                  viewBox="0 0 24 24"
-                  width="15"
-                  height="15"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
+                <RppArrow />
               </span>
             </a>
           </div>

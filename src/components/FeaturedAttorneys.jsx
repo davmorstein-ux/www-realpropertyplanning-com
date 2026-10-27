@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import RppArrow from "@/components/RppArrow";
 const TILES = [
   { pill: "Legal Services", title: "Divorce Attorneys", tagline: "Legal Guidance Through Divorce & Property Division", imgSrc: "/tiles/attorneys/divorce-attorneys.webp", href: "/for-divorce-attorneys" },
   { pill: "Legal Services", title: "Elder Law Attorneys", tagline: "Protecting Seniors' Rights & Long-Term Planning", imgSrc: "/tiles/attorneys/elder-law-attorneys.webp", href: "/for-elder-law-attorneys" },
@@ -56,9 +57,7 @@ const FeaturedAttorneys = () => (
                       </p>
                       <span className="gold-cta mt-auto">
                         Learn More
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
+                        <RppArrow />
                       </span>
                     </div>
                   </div>

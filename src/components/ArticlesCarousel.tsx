@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useIsVisible } from "@/hooks/use-is-visible";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
+import RppArrow, { RppChevron } from "@/components/RppArrow";
 const ARTICLES = [
   { title: "The Silver Tsunami", href: "/articles/silver-tsunami", img: "/The_Silver_Tsunami.webp" },
   { title: "The Senior Housing Guide", href: "/articles/senior-housing-guide", img: "/The_Senior_Housing_Guide.webp" },
@@ -63,9 +64,7 @@ function ArrowButton({ dir, onClick }: { dir: "prev" | "next"; onClick: () => vo
         padding: 0,
       }}
     >
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        {dir === "prev" ? <polyline points="15 18 9 12 15 6" /> : <polyline points="9 18 15 12 9 6" />}
-      </svg>
+      <RppChevron size={30} direction={dir === "prev" ? "left" : "right"} />
     </button>
   );
 }
@@ -241,18 +240,7 @@ export default function ArticlesCarousel() {
                   }}
                 >
                   Read Article
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
+                  <RppArrow />
                 </span>
               </div>
             </Link>

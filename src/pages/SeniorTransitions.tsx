@@ -18,6 +18,7 @@ import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import IntentCTA from "@/components/IntentCTA";
 
+import RppArrow from "@/components/RppArrow";
 const tileMeta = [
   { key: "moveManagers", image: "/tiles/set1/senior-move-managers-tile.webp", href: "/senior-move-managers" },
   { key: "livingAdvisors", image: "/tiles/set1/senior-living-advisors-tile.webp", href: "/senior-living-advisors" },
@@ -115,19 +116,7 @@ const SeniorTransitions = () => {
                           <p className="text-foreground text-[15px] leading-relaxed mb-4">{description}</p>
                           <span className="gold-cta clear-left inline-flex">
                             {cta}
-                            <svg
-                              viewBox="0 0 24 24"
-                              width="14"
-                              height="14"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2.4"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              aria-hidden="true"
-                            >
-                              <polyline points="9 18 15 12 9 6" />
-                            </svg>
+                            <RppArrow />
                           </span>
                         </div>
                       </div>
