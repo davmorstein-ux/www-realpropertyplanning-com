@@ -40,6 +40,10 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
               )}
               <span className="rpp-afhsteps-label">{s.label}</span>
               {!compact && <span className="rpp-afhsteps-hint">{s.hint}</span>}
+              {/* Desktop and tablet: the number sits at the foot of the tile, under
+                  the words, every row's numbers on one line (David, Oct 26, 2026).
+                  Phones keep the corner badge on the picture instead. */}
+              {!compact && <span className="rpp-afhsteps-n rpp-afhsteps-n-foot" aria-hidden="true">{s.n}</span>}
             </Link>
           </li>
         );
@@ -70,7 +74,8 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
       .rpp-afhsteps a { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 14px 10px; border: 1.5px solid #ddd6cc; border-radius: 12px; background: #fff; color: #272421 !important; text-decoration: none !important; height: 100%; }
       .rpp-afhsteps .rpp-afhsteps-n { width: 28px; height: 28px; border-radius: 50%; background: #0a5648; color: #fff; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; }
       .rpp-afhsteps .rpp-afhsteps-pic { position: relative; display: block; margin: 0 auto 6px; }
-      .rpp-afhsteps .rpp-afhsteps-pic .rpp-afhsteps-n { position: absolute; top: -4px; left: -6px; width: 26px; height: 26px; font-size: 13px; box-shadow: 0 0 0 2px #fff; }
+      .rpp-afhsteps .rpp-afhsteps-pic .rpp-afhsteps-n { position: absolute; top: -4px; left: -6px; width: 26px; height: 26px; font-size: 13px; box-shadow: 0 0 0 2px #fff; display: none; }
+      .rpp-afhsteps .rpp-afhsteps-n.rpp-afhsteps-n-foot { margin-top: auto; position: relative; top: 8px; }
       .rpp-afhsteps .rpp-afhsteps-label { font-weight: 700; font-size: 16px !important; line-height: 1.2; }
       .rpp-afhsteps .rpp-afhsteps-hint { font-size: 15px !important; line-height: 1.35; color: #1c1917; }
       .rpp-afhsteps li.is-current a { border-color: #0a5648; background: #eef5f2; }
@@ -81,6 +86,8 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
         .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { display: grid !important; grid-template-columns: 32px 1fr; column-gap: 12px; row-gap: 2px; align-items: center; text-align: left; padding: 12px 14px !important; }
         .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { grid-template-columns: 60px 1fr !important; }
         .rpp-afhsteps .rpp-afhsteps-pic { grid-row: 1 / span 2; grid-column: 1; margin: 0; }
+        .rpp-afhsteps .rpp-afhsteps-pic .rpp-afhsteps-n { display: inline-flex; }
+        .rpp-afhsteps .rpp-afhsteps-n.rpp-afhsteps-n-foot { display: none; }
         .rpp-afhsteps img.rpp-afhsteps-ico { width: 56px; height: 56px; margin: 0; }
         .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-label, .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-hint { grid-column: 2; text-align: left; }
       }
