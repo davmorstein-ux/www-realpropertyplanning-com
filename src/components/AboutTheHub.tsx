@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HomepagePoints from "@/components/HomepagePoints";
 
 /**
  * AboutTheHub
@@ -248,6 +249,10 @@ const AboutTheHub = () => {
           independent place to start.
         </p>
 
+        {/* The four points (Oct 27, 2026, David): the proof of the sentence above. Their
+            hairlines replace the rule that sat above the paragraph below. */}
+        <HomepagePoints />
+
         {/* Why it exists — the bridge a visitor otherwise never gets (Sept 24
             2026 audit). Hub voice: the reason is the situation, not a person;
             the featured professional is named once, by role, from the record.
@@ -262,7 +267,6 @@ const AboutTheHub = () => {
           including a featured broker and appraiser who work through their own practices.
         </p>
 
-        {/* The figures moved to HomepageTrustBar (Sept 2026), then into the four points under the artwork (HomepagePoints.tsx, Oct 25, 2026). */}
       </div>
     </div>
   );

@@ -35,15 +35,15 @@ const POINTS = [
 ] as const;
 
 /**
- * placement (Oct 27, 2026): the homepage renders this twice. "top" sits under
- * the headline and is hidden at 760px and below; "after-journeys" sits after the
- * journey tiles and shows only at 760px and below. One is always display:none,
- * so screen readers and keyboards meet the list once. Rules in index.css.
+ * Oct 27, 2026: rendered once, inside the homepage "about" section (AboutTheHub.tsx), right
+ * under "Real Property Planning is a free, independent place to start." (David): the four
+ * points are the proof of that sentence. Earlier the same day it sat under the headline,
+ * then after the journey tiles.
  */
-export default function HomepagePoints({ placement = "top" }: { placement?: "top" | "after-journeys" }) {
+export default function HomepagePoints() {
   const { t } = useTranslation();
   return (
-    <ul className={`rpp-hero-points rpp-hero-points--${placement}`} aria-label="What the site offers">
+    <ul className="rpp-hero-points rpp-hero-points--about" aria-label="What the site offers">
       {POINTS.map((p, i) => {
         const text = "n" in p ? t(p.key, { n: p.n }) : t(p.key);
         const cut = text.lastIndexOf(" ") + 1;

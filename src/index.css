@@ -6408,28 +6408,25 @@ html body .fhp a.fhp-link {
   text-decoration: none !important;
 }
 
-/* Homepage points placement (Oct 27, 2026). David chose layout "C" for
-   phones (points after the four journey tiles, so the tiles reach the first
-   screen) and the same for laptops later that day: on a 1366x768 laptop the
-   tiles ended at 864px with the points above them. HomepagePoints.tsx renders
-   two copies; the one under the headline is now hidden at every width and
-   the copy after the tiles shows at every width. The "top" copy is kept in
-   the markup only so it can be brought back with one rule. */
-html body main ul.rpp-hero-points.rpp-hero-points--top { display: none !important; }
-html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--after-journeys {
-  margin: 8px 0 0 !important;
+/* Homepage points (Oct 27, 2026): now one copy, inside the "about" section under its lead
+   sentence (AboutTheHub.tsx). Full width of that section; the paragraph below loses its own
+   top rule since the points' hairlines separate them. */
+html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--about {
+  margin: 1.25rem 0 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background: transparent;
 }
-@media (max-width: 760px) {
-  html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--after-journeys {
-    display: flex !important;
-    /* Full-bleed on phones so the hairlines run edge to edge. 100vw is safe
-       here (no scrollbar on phones); not used on laptops, where a desktop
-       scrollbar would make 100vw overflow sideways. */
-    width: 100vw !important;
-    max-width: none !important;
-    margin: 4px 0 0 calc(50% - 50vw) !important;
-    box-sizing: border-box;
-  }
+/* One row on laptops: tighter spacing between the four (the section is narrower than the
+   full-width strip they came from). */
+@media (min-width: 1181px) {
+  html body main ul.rpp-hero-points--about li.rpp-hero-point.rpp-hero-point { padding: 0 18px !important; }
+  html body main ul.rpp-hero-points--about li.rpp-hero-point.rpp-hero-point:first-child { padding-left: 0 !important; }
+}
+html body main ul.rpp-hero-points--about + .rpp-abouthub-why.rpp-abouthub-why {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 1.25rem !important;
 }
 
 /* Homepage journey heading on phones (Oct 27, 2026, David): "What brings you
@@ -6545,15 +6542,3 @@ html body main.apf > section:has(.rpp-hero-band) + section {
   padding-top: 0 !important;
 }
 
-/* The after-journeys points sit inside the 1200px funnel container rather
-   than across the full window, so at 28px side padding the four wrapped to
-   two rows on laptops. 20px keeps them on one row above 1180px. */
-@media (min-width: 1181px) {
-  html body main ul.rpp-hero-points--after-journeys li.rpp-hero-point.rpp-hero-point {
-    padding: 0 20px !important;
-  }
-  html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--after-journeys {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}

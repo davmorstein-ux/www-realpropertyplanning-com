@@ -40,7 +40,6 @@ import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomeTileIntro from "@/components/HomeTileIntro";
 import AboutTheHub from "@/components/AboutTheHub";
-import HomepagePoints from "@/components/HomepagePoints";
 import RppArrow from "@/components/RppArrow";
 import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
@@ -385,7 +384,8 @@ const RPPHomeV3 = () => {
             screen. This copy shows above 760px only; the second copy, after
             the tile grid, shows at 760px and below. Breakpoint matches the
             points' own one-column breakpoint in index.css. */}
-        <HomepagePoints placement="top" />
+        {/* Oct 27, 2026 (later): the points moved again, into the "about" section
+            (AboutTheHub.tsx), right under "...a free, independent place to start." */}
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
         {/* Sections from here down sit on a lighter cream (#faf8f4, David Sept 23:
@@ -514,8 +514,6 @@ const RPPHomeV3 = () => {
               })}
             </div>
 
-            {/* Phones only: the points after the tiles (see placement="top"). */}
-            <HomepagePoints placement="after-journeys" />
 
             {/* ── Scoped styles ───────────────────────────────────────
                 text-transform lives in classes rather than inline styles:
