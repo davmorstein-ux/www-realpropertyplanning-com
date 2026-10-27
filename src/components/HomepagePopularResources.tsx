@@ -319,10 +319,12 @@ const HomepagePopularResources = () => {
           ))}
         </ul>
 
-        {/* Browse all — primary next step */}
+        {/* Browse all — primary next step. Oct 27, 2026 (David): was "Browse all resources"
+            to /resources, which is the Find a Professional page, under a heading about
+            guides. Now it opens the guide library the section is about. */}
         <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
-          <Link to="/resources" className="rpp-pr-browse" style={{ padding: "11px 22px", minHeight: 44 }}>
-            Browse all resources
+          <Link to="/guides-and-resources" className="rpp-pr-browse" style={{ padding: "11px 22px", minHeight: 44 }}>
+            Browse all guides &amp; articles
           </Link>
         </div>
 
