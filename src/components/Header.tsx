@@ -803,6 +803,7 @@ const Header = () => {
                 Nothing sits above or below any label, so the five categories
                 read as one row of equals. */}
             <div
+              className="rpp-header-navrow"
               style={{
                 marginTop: 8,
                 paddingTop: 8,

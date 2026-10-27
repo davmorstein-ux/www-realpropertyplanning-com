@@ -35,7 +35,7 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                   You Are Not Alone
                 </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
+                <h2 className="rpp-guidance-heading font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Common Challenges Families Face
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
@@ -80,7 +80,7 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                   Avoid These Pitfalls
                 </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
+                <h2 className="rpp-guidance-heading font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Common Mistakes to Avoid
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">

@@ -6408,16 +6408,23 @@ html body .fhp a.fhp-link {
   text-decoration: none !important;
 }
 
-/* Homepage points placement (Oct 27, 2026, David chose layout "C"): on phones
-   the points list moves from under the headline to after the journey tiles,
-   so the tiles reach the first screen. HomepagePoints.tsx renders two copies;
-   exactly one is visible at any width. */
-html body main ul.rpp-hero-points.rpp-hero-points--below-tiles { display: none !important; }
+/* Homepage points placement (Oct 27, 2026). David chose layout "C" for
+   phones (points after the four journey tiles, so the tiles reach the first
+   screen) and the same for laptops later that day: on a 1366x768 laptop the
+   tiles ended at 864px with the points above them. HomepagePoints.tsx renders
+   two copies; the one under the headline is now hidden at every width and
+   the copy after the tiles shows at every width. The "top" copy is kept in
+   the markup only so it can be brought back with one rule. */
+html body main ul.rpp-hero-points.rpp-hero-points--top { display: none !important; }
+html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--after-journeys {
+  margin: 8px 0 0 !important;
+}
 @media (max-width: 760px) {
-  html body main ul.rpp-hero-points.rpp-hero-points--top { display: none !important; }
-  html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--below-tiles {
+  html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--after-journeys {
     display: flex !important;
-    /* Full-bleed so the hairlines run edge to edge like the top copy. */
+    /* Full-bleed on phones so the hairlines run edge to edge. 100vw is safe
+       here (no scrollbar on phones); not used on laptops, where a desktop
+       scrollbar would make 100vw overflow sideways. */
     width: 100vw !important;
     max-width: none !important;
     margin: 4px 0 0 calc(50% - 50vw) !important;
@@ -6514,5 +6521,39 @@ html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow {
   }
   html body main section.rpp-page-faq button.rpp-page-faq-toggle.rpp-page-faq-toggle {
     padding: 0.9rem 1rem 0.9rem 1.1rem !important;
+  }
+}
+
+/* "Common Challenges Families Face" / "Common Mistakes to Avoid"
+   (GuidanceGrid.tsx) measured 49.5px on laptops, bigger than the page title
+   (46px) and the FAQ heading (36px). Oct 27, 2026: 36px from tablet width up,
+   matching the other section headings; phones keep the phone h2 size. */
+@media (min-width: 641px) {
+  html body main h2.rpp-guidance-heading.rpp-guidance-heading {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Hub pages (Estate, Plan Ahead, Professionals): the section under the title
+   band carried its own 20px (phones) / 32px (laptops) top padding on top of
+   the question's 28px margin, so their question sat 20-32px lower than on
+   Helping an Aging Parent. Oct 27, 2026: all four hubs now use Aging
+   Parent's spacing, 28px from band to question. */
+html body main.apf > .rpp-hero-band + section,
+html body main.apf > section:has(.rpp-hero-band) + section {
+  padding-top: 0 !important;
+}
+
+/* The after-journeys points sit inside the 1200px funnel container rather
+   than across the full window, so at 28px side padding the four wrapped to
+   two rows on laptops. 20px keeps them on one row above 1180px. */
+@media (min-width: 1181px) {
+  html body main ul.rpp-hero-points--after-journeys li.rpp-hero-point.rpp-hero-point {
+    padding: 0 20px !important;
+  }
+  html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--after-journeys {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

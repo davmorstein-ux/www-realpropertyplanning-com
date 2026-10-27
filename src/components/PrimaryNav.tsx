@@ -329,6 +329,46 @@ const PrimaryNav = () => {
         @media (max-width: 950px) {
           .rpp-primarynav { display: none; }
         }
+
+        /* ONE-LINE LABELS on screens 1280px and wider (Oct 27, 2026, David
+           chose it from a laptop mock-up): each label reads as one phrase,
+           "ESTATE & PROBATE", with the caret beside it instead of underneath.
+           The header drops from 167px to about 137px. Below 1280px the six
+           one-line labels no longer fit across, so narrower laptops and
+           tablets keep the stacked two-line labels above. Caret 14px (was 9px
+           under the label) so visitors can see these items open a menu.
+           The nav row's own top/bottom padding is trimmed in Header.tsx via
+           .rpp-header-navrow. No backticks in this block. */
+        @media (min-width: 1280px) {
+          html body header .rpp-primarynav .rpp-pn-trigger.rpp-pn-trigger {
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 7px !important;
+            padding: 6px 16px !important;
+            min-height: 44px;
+          }
+          html body header .rpp-primarynav .rpp-pn-lines {
+            flex-direction: row !important;
+            gap: 0.32em;
+            min-height: 0 !important;
+            white-space: nowrap;
+          }
+          html body header .rpp-primarynav .rpp-pn-caret {
+            font-size: 14px !important;
+            margin-top: 0 !important;
+          }
+          html body header div.rpp-header-navrow.rpp-header-navrow {
+            padding-top: 2px !important;
+            padding-bottom: 0 !important;
+          }
+        }
+        /* 1280-1365px: the six labels ran 15px past the row at 16px side
+           padding; 13px keeps ABOUT inside it. */
+        @media (min-width: 1280px) and (max-width: 1365px) {
+          html body header .rpp-primarynav .rpp-pn-trigger.rpp-pn-trigger {
+            padding: 6px 13px !important;
+          }
+        }
       ` }} />
 
       {PRIMARY_NAV.map((entry, i) => {

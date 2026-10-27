@@ -36,11 +36,11 @@ const POINTS = [
 
 /**
  * placement (Oct 27, 2026): the homepage renders this twice. "top" sits under
- * the headline and is hidden at 760px and below; "below-tiles" sits after the
+ * the headline and is hidden at 760px and below; "after-journeys" sits after the
  * journey tiles and shows only at 760px and below. One is always display:none,
  * so screen readers and keyboards meet the list once. Rules in index.css.
  */
-export default function HomepagePoints({ placement = "top" }: { placement?: "top" | "below-tiles" }) {
+export default function HomepagePoints({ placement = "top" }: { placement?: "top" | "after-journeys" }) {
   const { t } = useTranslation();
   return (
     <ul className={`rpp-hero-points rpp-hero-points--${placement}`} aria-label="What the site offers">

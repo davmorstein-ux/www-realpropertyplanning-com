@@ -497,7 +497,7 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* Phones only: the points after the tiles (see placement="top"). */}
-            <HomepagePoints placement="below-tiles" />
+            <HomepagePoints placement="after-journeys" />
 
             {/* ── Scoped styles ───────────────────────────────────────
                 text-transform lives in classes rather than inline styles:
