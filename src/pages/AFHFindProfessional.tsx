@@ -14,6 +14,7 @@ import ArticleCover from "@/components/ArticleCover";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 import RppArrow from "@/components/RppArrow";
+import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
 /**
  * One person on the directory grid. Deliberately compact so twelve fit on one
  * page: profession on top (so a visitor knows what the person does before
@@ -482,7 +483,7 @@ const AFHFindProfessional = () => (
           <h2 className="rpp-afhpro-banner">
             <span className="sr-only">AFH Club Featured Professionals</span>
             <span aria-hidden="true" className="rpp-afhpro-banner-wm">
-              <img src="/afh-club-glyph.webp" alt="" className="rpp-afhpro-banner-glyph" width={200} height={194} />
+              <img src={afhGlyph} alt="" className="rpp-afhpro-banner-glyph" width={200} height={194} />
               <span>FH Club</span>
             </span>{" "}
             <span aria-hidden="true" className="rpp-afhpro-banner-fp">Featured Professionals</span>

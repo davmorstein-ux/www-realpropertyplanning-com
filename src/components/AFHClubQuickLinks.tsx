@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AFH_QUICK_LINKS, isAFHClubPath, isActiveQuickLink } from "@/lib/afhQuickLinks";
+import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
 
 /**
  * AFH Club quick links (owner's request, Oct 1, 2026): a bar of AFH Club's main
@@ -64,7 +65,7 @@ export default function AFHClubQuickLinks() {
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="afhq-in" ref={row}>
         <Link to="/afh-club" className="afhq-brand" aria-label="AFH Club home">
-          <img src="/afh-club-glyph.webp" alt="" width={200} height={194} />
+          <img src={afhGlyph} alt="" width={200} height={194} />
           <span aria-hidden="true">AFH Club</span>
         </Link>
         {AFH_QUICK_LINKS.map((l, i) => {

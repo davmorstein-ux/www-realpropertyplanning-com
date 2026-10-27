@@ -14,6 +14,13 @@ import { lazy } from "@/lib/chunkRecovery";
 const SiteSearchBar = lazy(() => import("./SiteSearchBar"));
 import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
+/* Oct 27, 2026 (performance): logo and marble from src/assets (content-named, long-cached;
+   public/ files had no cache lifetime) plus a 480px logo for phones. */
+import logo480 from "@/assets/perf/rpp-logo-v26-480.webp";
+import logo640 from "@/assets/perf/rpp-logo-v26-640.webp";
+import logo1280 from "@/assets/perf/rpp-logo-v26-1280.webp";
+import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp";
+import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
 
 const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
 
@@ -309,8 +316,8 @@ const Header = () => {
              warmed to the cream and softened (veins at ~90% of the photo's
              own depth) so it stays subtle and evenly spread. */
           backgroundImage: isMobile
-            ? "url(/rpp-header-marble-mobile-v5.webp)"
-            : "url(/rpp-header-marble-v4.webp)",
+            ? `url(${marbleMobile})`
+            : `url(${marbleDesktop})`,
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
@@ -396,8 +403,8 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v26-640.webp"
-                    srcSet="/rpp-logo-v26-640.webp 640w, /rpp-logo-v26-1280.webp 1280w"
+                    src={logo640}
+                    srcSet={`${logo480} 480w, ${logo640} 640w, ${logo1280} 1280w`}
                     alt=""
                     style={{ height: 35, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="185px"
@@ -601,8 +608,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v26-640.webp"
-                    srcSet="/rpp-logo-v26-640.webp 640w, /rpp-logo-v26-1280.webp 1280w"
+                    src={logo640}
+                    srcSet={`${logo480} 480w, ${logo640} 640w, ${logo1280} 1280w`}
                     alt=""
                     style={{
                       width: "100%",
@@ -612,7 +619,7 @@ const Header = () => {
                     }}
                     /* Displayed about 292px wide; the 640px file covers 2x
                        screens (Oct 6, 2026; the 1608px original was 36 KB). */
-                    sizes="292px"
+                    sizes="(max-width: 950px) 245px, 292px"
                     decoding="async"
                     width={1280}
                     height={240}

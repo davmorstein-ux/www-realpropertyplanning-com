@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 import RppArrow from "@/components/RppArrow";
 import { useTranslation } from "react-i18next";
+/* Oct 27, 2026 (performance): these images moved from public/ into src/assets so the build
+   names them by content and browsers can cache them long-term (public/ files were served with
+   no cache lifetime); the four object pictures also have 320px copies for their ~150px slot. */
+import popClipboard from "@/assets/perf/popular-clipboard-v1.webp";
+import popClipboard320 from "@/assets/perf/popular-clipboard-v1-320.webp";
+import popScale from "@/assets/perf/popular-scale-v1.webp";
+import popScale320 from "@/assets/perf/popular-scale-v1-320.webp";
+import popHouse from "@/assets/perf/popular-house-v1.webp";
+import popHouse320 from "@/assets/perf/popular-house-v1-320.webp";
+import popKeys from "@/assets/perf/popular-keys-v1.webp";
+import popKeys320 from "@/assets/perf/popular-keys-v1-320.webp";
+import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
 
 /* Popular resources (Oct 26, 2026). David: the old icon tiles "look weak" and
    "appear as one large image versus 4 separate selections". Rebuilt with his
@@ -21,10 +33,10 @@ import { useTranslation } from "react-i18next";
    - Desktop: object and words centred. Phones: four stacked rows, object left.
    Class names avoid "btn"/"cta" (index.css forces maroon on those). */
 const resources = [
-  { situation: "I'm the executor. Where do I start?", guide: "Executor's 10-step checklist", href: "/resources/washington-executors-10-step-checklist", img: "/popular-clipboard-v1.webp", w: 372, h: 440, c: "#1B3A6B" },
-  { situation: "The house has to go through probate", guide: "How probate sales work", href: "/guides/how-probate-real-estate-works", img: "/popular-scale-v1.webp", w: 440, h: 430, c: "#8a5212" },
-  { situation: "Mom or Dad needs more care", guide: "Senior housing & care options", href: "/understanding-housing-care-options", img: "/popular-house-v1.webp", w: 440, h: 398, c: "#9E1F3A" },
-  { situation: "We inherited a house", guide: "What to do with it", href: "/guides/inherited-house-washington", img: "/popular-keys-v1.webp", w: 420, h: 440, c: "#0f6b56" },
+  { situation: "I'm the executor. Where do I start?", guide: "Executor's 10-step checklist", href: "/resources/washington-executors-10-step-checklist", img: popClipboard, img320: popClipboard320, w: 372, h: 440, c: "#1B3A6B" },
+  { situation: "The house has to go through probate", guide: "How probate sales work", href: "/guides/how-probate-real-estate-works", img: popScale, img320: popScale320, w: 440, h: 430, c: "#8a5212" },
+  { situation: "Mom or Dad needs more care", guide: "Senior housing & care options", href: "/understanding-housing-care-options", img: popHouse, img320: popHouse320, w: 440, h: 398, c: "#9E1F3A" },
+  { situation: "We inherited a house", guide: "What to do with it", href: "/guides/inherited-house-washington", img: popKeys, img320: popKeys320, w: 420, h: 440, c: "#0f6b56" },
 ];
 
 const HomepagePopularResources = () => {
@@ -307,7 +319,7 @@ const HomepagePopularResources = () => {
                 style={{ ["--pr-c" as string]: r.c }}
                 aria-label={`${r.situation}: ${r.guide}`}
               >
-                <img className="rpp-pr-object" src={r.img} alt="" width={r.w} height={r.h} loading="lazy" decoding="async" />
+                <img className="rpp-pr-object" src={r.img320} srcSet={`${r.img320} 320w, ${r.img} 440w`} sizes="(max-width: 640px) 160px, 150px" alt="" width={r.w} height={r.h} loading="lazy" decoding="async" />
                 <span className="rpp-pr-body">
                   <span className="rpp-pr-situation">{r.situation}</span>
                 </span>
@@ -336,7 +348,7 @@ const HomepagePopularResources = () => {
           <span className="rpp-afh-strip-cta">
             Explore
             <span className="rpp-afh-strip-wordmark" aria-label="AFH Club">
-              <img src="/afh-club-glyph.webp" alt="" aria-hidden="true" className="rpp-afh-strip-glyph" width={200} height={194} />
+              <img src={afhGlyph} alt="" aria-hidden="true" className="rpp-afh-strip-glyph" width={200} height={194} />
               <span className="rpp-afh-strip-sr">A</span>FH Club
             </span>
           </span>

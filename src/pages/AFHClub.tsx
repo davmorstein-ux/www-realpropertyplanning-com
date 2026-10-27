@@ -14,6 +14,7 @@ import AFHGetApp from "@/components/AFHGetApp";
 import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
 import RppArrow from "@/components/RppArrow";
+import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
 /**
  * PAGE-SCOPED STYLES
  *
@@ -720,7 +721,7 @@ const AFHClub = () => {
           <div className="rpp-afh-hero-inner">
             <h1 className="rpp-afh-hero-title">
               <img
-                src="/afh-club-glyph.webp"
+                src={afhGlyph}
                 alt=""
                 aria-hidden="true"
                 className="rpp-afh-hero-glyph"

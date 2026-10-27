@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="280" viewBox="0 0 300 280">
+  <!-- Real Property Planning mark (roof + open door), tiled in a brick
+       offset for the faint page wallpaper. Opacity is set in index.css. -->
+  <defs>
+    <g id="m">
+      <path d="M6 92 L46 10 L86 92" fill="none" stroke="#1f3a68" stroke-width="11" stroke-linejoin="miter" stroke-miterlimit="10"/>
+      <path d="M38 50 L56 44 L56 92 L38 92 Z" fill="#8a1c3b"/>
+      <circle cx="51" cy="70" r="2.2" fill="#ffffff"/>
+    </g>
+  </defs>
+  <use href="#m" x="29" y="20"/>
+  <use href="#m" x="179" y="160"/>
+</svg>

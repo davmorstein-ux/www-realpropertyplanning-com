@@ -2,7 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
-import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
+/* Oct 27, 2026 (performance): a 212px copy; the badge shows at about 100px. */
+import naosaBadge from "@/assets/perf/senior-advocates-naosa-badge-212.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
 import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
 
@@ -321,8 +322,8 @@ const Footer = () => {
               style={{ maxHeight: 64, width: "auto", objectFit: "contain" }}
               loading="lazy"
               decoding="async"
-              width={423}
-              height={512}
+              width={212}
+              height={256}
             />
             <span className="sr-only"> (opens in a new window)</span>
           </a>

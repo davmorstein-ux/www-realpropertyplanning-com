@@ -2210,7 +2210,7 @@ button:not([data-nav-button]),
   pointer-events: none;
   z-index: -1;
   /* Faint wallpaper of the Real Property Planning mark (roof + open door). */
-  background-image: url("/rpp-logo-pattern.svg");
+  background-image: url("./assets/perf/rpp-logo-pattern.svg");
   background-repeat: repeat;
   background-size: 300px 280px;
   opacity: 0.02;
