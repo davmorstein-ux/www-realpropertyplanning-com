@@ -148,7 +148,7 @@ const LendersFinancingSpecialists = () => (
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
-                      <a href="mailto:jejj.mcginnis@ccm.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">jejj.mcginnis@ccm.com</a>
+                      <a href="mailto:jeff.mcginnis@ccm.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">jeff.mcginnis@ccm.com</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={976} height={859} />

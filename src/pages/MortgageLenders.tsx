@@ -51,7 +51,7 @@ const lenders: Lender[] = [
     alt: "Photo of Jeff McGinnis",
     href: "https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/",
     phone: "(206) 283-5626",
-    email: "jejj.mcginnis@ccm.com",
+    email: "jeff.mcginnis@ccm.com",
     specialty: "25+ years of mortgage lending experience",
     logo: crossCountryLogo,
     logoAlt: "CrossCountry Mortgage logo",
