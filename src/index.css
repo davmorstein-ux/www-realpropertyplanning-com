@@ -6467,3 +6467,52 @@ html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow {
   html body main.apf .apf-pick-label.apf-pick-label > span:first-child::after { width: 30px; }
   html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow { right: 8px; bottom: 8px; }
 }
+
+/* ============================================================
+   CONSISTENCY PASS (Oct 27, 2026, David approved items 2-4)
+   ============================================================ */
+
+/* Title bands: the same 8px/10px padding on every page. Where the band is
+   <main>'s first child (the Estate and Plan Ahead hubs and their topic
+   pages), the "#main-content > *:first-child" rule near the top of this
+   file (specificity 1,1,0) was zeroing it, so those bands sat tight on the
+   text (31px tall on Plan Ahead, vs 49px on Helping an Aging Parent). These
+   selectors carry the ID, so they win. Compact bands keep their own size. */
+#main-content > .rpp-hero-band.rpp-hero-band:first-child {
+  padding: 8px 24px 10px !important;
+}
+#main-content > .rpp-hero-band--compact.rpp-hero-band--compact:first-child {
+  padding: 6px 24px 8px !important;
+}
+
+@media (max-width: 640px) {
+  /* Hub questions ("Where would you like to start?") on one line, sized to
+     the screen like the homepage heading. The longest measures 14.9em. */
+  html body main.apf .apf-ask.apf-ask {
+    font-size: clamp(19px, calc((100vw - 48px) / 15.4), 24px) !important;
+  }
+
+  /* Section headings: the sitewide `main h2` is 36px, which ran FAQ headings
+     like "Planning Before a Crisis: Common Questions" to three lines on a
+     phone next to 22px homepage headings. Same specificity as that rule and
+     later in the file, so only h2s that had no size of their own change;
+     classed headings keep theirs. */
+  main h2 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Page FAQ (PageFAQ.tsx): heading to match, questions 24px -> 19px, and a
+     little less padding so a question no longer fills a whole box. */
+  html body main section.rpp-page-faq h2.rpp-page-faq-heading.rpp-page-faq-heading {
+    font-size: 26px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  html body main section.rpp-page-faq span.rpp-page-faq-q.rpp-page-faq-q {
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+  }
+  html body main section.rpp-page-faq button.rpp-page-faq-toggle.rpp-page-faq-toggle {
+    padding: 0.9rem 1rem 0.9rem 1.1rem !important;
+  }
+}

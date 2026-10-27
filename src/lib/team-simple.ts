@@ -19,8 +19,8 @@ export const TEAM_HUB_CHOICES: SimpleChoice[] = [
   { to: "/for-attorneys", label: "Wills, probate or legal papers", image: hubLegal },
   { to: "/real-estate-appraiser", label: "What is the house worth?", image: hubHouseWorth },
   { to: "/realtor", label: "Selling the house", image: hubSelling },
-  { to: "/for-cpas", label: "Taxes and money questions", image: hubMoney },
-  { to: "/aging-life-care-managers", label: "Choosing care or housing for a parent", image: hubCare },
+  { to: "/for-cpas", label: "Taxes and money", image: hubMoney },
+  { to: "/aging-life-care-managers", label: "Care or housing for a parent", image: hubCare },
   { to: "/senior-move-managers", label: "Clearing out and moving", image: hubMoving },
 ];
 

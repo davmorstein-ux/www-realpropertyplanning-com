@@ -107,7 +107,7 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
 /** Hub photo buttons, in page order (the six topics). */
 export const ESTATE_HUB_CHOICES: SimpleChoice[] = [
   { to: "/estate-probate-inherited-property/first-steps", label: "Someone just passed away", image: hubFirstSteps },
-  { to: "/estate-probate-inherited-property/probate-and-legal-authority", label: "Who's in charge, and is probate needed?", image: hubProbate },
+  { to: "/estate-probate-inherited-property/probate-and-legal-authority", label: "Is probate needed?", image: hubProbate },
   { to: "/estate-probate-inherited-property/property-value", label: "What is the house worth?", image: hubPropertyValue },
   { to: "/estate-probate-inherited-property/what-to-do-with-the-property", label: "Sell, keep or rent the house?", image: hubWhatToDo },
   { to: "/estate-probate-inherited-property/preparing-the-property", label: "Getting ready to sell", image: hubPreparing },

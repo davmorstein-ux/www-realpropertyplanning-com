@@ -41,7 +41,7 @@ const PageFAQ = ({
   };
 
   return (
-    <section style={{ padding: "4rem 0 5rem", background: "#faf8f4" }}>
+    <section className="rpp-page-faq" style={{ padding: "4rem 0 5rem", background: "#faf8f4" }}>
       <Helmet>
         <script type="application/ld+json" data-page-faq-jsonld={id}>
           {JSON.stringify(faqJsonLd)}
@@ -61,6 +61,7 @@ const PageFAQ = ({
           {eyebrow}
         </p>
         <h2
+          className="rpp-page-faq-heading"
           style={{
             fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontSize: "clamp(30px, 3.2vw, 42px)",
@@ -98,6 +99,7 @@ const PageFAQ = ({
                     }}
                   >
                     <span
+                      className="rpp-page-faq-q"
                       style={{
                         fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontSize: "22px",
@@ -147,6 +149,7 @@ const PageFAQ = ({
                 }}
               >
                 <button
+                  className="rpp-page-faq-toggle"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
                   style={{
@@ -163,6 +166,7 @@ const PageFAQ = ({
                   }}
                 >
                   <span
+                    className="rpp-page-faq-q"
                     style={{
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: "24px",

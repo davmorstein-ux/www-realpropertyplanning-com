@@ -106,7 +106,7 @@ export const PLAN_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
 
 /** Hub photo buttons, in page order (the six topics). */
 export const PLAN_HUB_CHOICES: SimpleChoice[] = [
-  { to: `${P}/why-planning-early`, label: "Nothing's wrong yet. Why plan now?", image: hubWhyPlanNow },
+  { to: `${P}/why-planning-early`, label: "Why plan now?", image: hubWhyPlanNow },
   { to: `${P}/conversations-to-have`, label: "How do I start the talk?", image: hubConversation },
   { to: `${P}/legal-documents`, label: "Which papers do we need?", image: hubPapers },
   { to: `${P}/property-questions`, label: "What about the house?", image: hubTheHouse },

@@ -262,8 +262,8 @@ export const SIMPLE_TOPICS: Record<string, SimpleTopic> = {
 export const SIMPLE_HUB: Record<string, { label: string; image: string }> = {
   "/helping-an-aging-parent/living-independently": { label: "They still live on their own", image: hub_A },
   "/helping-an-aging-parent/needs-help-at-home": { label: "They need more help at home", image: hub_B },
-  "/helping-an-aging-parent/exploring-care-options": { label: "We're looking at care or housing", image: hub_C },
-  "/helping-an-aging-parent/health-crisis": { label: "A health crisis just happened", image: hub_D },
+  "/helping-an-aging-parent/exploring-care-options": { label: "Looking at care or housing", image: hub_C },
+  "/helping-an-aging-parent/health-crisis": { label: "A sudden health crisis", image: hub_D },
   "/helping-an-aging-parent/finances-and-legal": { label: "Money and legal papers", image: hub_E },
 };
 
