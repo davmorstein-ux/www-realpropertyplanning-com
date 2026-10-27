@@ -34,9 +34,14 @@ export interface CareCalculatorOption {
   blurb: string;
   /**
    * The option's own colour, used for its card marker, its page hero accent,
-   * its label and its figure. Every value clears 4.5:1 on white (8.76, 10.02,
-   * 6.26, 8.37, 11.27, 7.00), so each is legible as text and not merely
-   * decorative. Colour never carries meaning on its own here; the label always
+   * its label and its figure. Every value clears 4.5:1 on white (8.76, 6.33,
+   * 6.26, 8.37, 6.51, 7.00), so each is legible as text and not merely
+   * decorative. Oct 27, 2026 (David: too much navy on the site): Independent
+   * Living went from navy to amber #8a5300 and Assisted Living from navy to
+   * slate #4a6076, so no two options share a colour and none is navy. Brick red
+   * was tried for Assisted Living and dropped: the calculator header darkens
+   * the colour 38% (CostOfCareEmbed), which turned brick into #6d211a, the
+   * retired maroon. Colour never carries meaning on its own here; the label always
    * sits beside it.
    */
   color: string;
@@ -55,7 +60,7 @@ export const CARE_CALCULATORS: CareCalculatorOption[] = [
     careTypeId: "independent-living",
     shortLabel: "Independent Living",
     blurb: "Own apartment, community amenities, no personal care included.",
-    color: "#1B3A6B",
+    color: "#8a5300",
   },
   {
     slug: "in-home-care",
@@ -76,7 +81,7 @@ export const CARE_CALCULATORS: CareCalculatorOption[] = [
     careTypeId: "assisted-living",
     shortLabel: "Assisted Living",
     blurb: "A larger community with daily support and on-site staff.",
-    color: "#1b3a6b",
+    color: "#4a6076",
   },
   {
     slug: "adult-family-home",

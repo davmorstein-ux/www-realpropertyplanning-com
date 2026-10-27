@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 import { formatCurrency } from "@/lib/careTypes";
+import { careIconFor } from "@/lib/careIcons";
 
 /**
  * The list of other calculators — as a grid on the hub, and as a narrow rail
@@ -93,6 +94,18 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           outline-offset: 3px;
         }
 
+        /* Icon beside the name (Oct 27, 2026), in the option's colour. */
+        .rpp-calcswitch-head.rpp-calcswitch-head {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .rpp-calcswitch-icon.rpp-calcswitch-icon {
+          flex: none;
+          width: 26px !important;
+          height: 26px !important;
+          color: var(--cc-color, #272421);
+        }
         .rpp-calcswitch-name.rpp-calcswitch-name {
           font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
           font-size: 19px !important;
@@ -129,6 +142,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
       <div className={`rpp-calcswitch-grid rpp-calcswitch-grid${layout === "rail" ? " is-rail" : ""}`}>
         {options.map((o) => {
           const care = careTypeFor(o);
+          const Icon = careIconFor(o.slug);
           return (
             <Link
               key={o.slug}
@@ -136,7 +150,10 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
               className="rpp-calcswitch-card rpp-calcswitch-card bg-transparent"
               style={{ ["--cc-color" as string]: o.color }}
             >
-              <span className="rpp-calcswitch-name rpp-calcswitch-name">{o.shortLabel}</span>
+              <span className="rpp-calcswitch-head">
+                <Icon className="rpp-calcswitch-icon" aria-hidden="true" strokeWidth={1.9} />
+                <span className="rpp-calcswitch-name rpp-calcswitch-name">{o.shortLabel}</span>
+              </span>
               <span className="rpp-calcswitch-price rpp-calcswitch-price">
                 {formatCurrency(care.waMonthly)}
                 <span className="rpp-calcswitch-per rpp-calcswitch-per">

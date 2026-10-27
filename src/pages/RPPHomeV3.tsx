@@ -44,6 +44,20 @@ import HomepagePoints from "@/components/HomepagePoints";
 import RppArrow from "@/components/RppArrow";
 import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
+import { BarChart3, MapPin, Search, Wrench, type LucideIcon } from "lucide-react";
+import { careIconFor } from "@/lib/careIcons";
+import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
+import calcPhotoRemodel from "@/assets/home/calc-photo-remodel.webp";
+
+/* Calculator cards, Oct 27, 2026 (David, from a ChatGPT layout): a photo on each card and an
+   icon on every line. Care icons (src/lib/careIcons.ts) take each option's own colour; the
+   remodel steps use amber. No navy icons (David: too much navy on the site). */
+const REMODEL_LINES: [LucideIcon, string][] = [
+  [Search, "Look up your house by address"],
+  [Wrench, "Enter what you would spend (or spent) on each part"],
+  [BarChart3, "See two values: a broker's and an appraiser's"],
+  [MapPin, "Built from recent local home sales"],
+];
 
 const tileMeta = [
   { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#8A4214", imgSrc: tilePlanning },
@@ -68,9 +82,6 @@ const RPPHomeV3 = () => {
      left an arbitrary subset: it omitted adult family homes, assisted living
      and memory care while advertising options the hub does not cover. */
   const careOptions = CARE_CALCULATORS.map((o) => ({ option: o, care: careTypeFor(o) }));
-  const careMonthlyFigures = CARE_CALCULATORS.map((o) => careTypeFor(o).waMonthly);
-  const careMonthlyLow = Math.min(...careMonthlyFigures);
-  const careMonthlyHigh = Math.max(...careMonthlyFigures);
 
   return (
     <>
@@ -856,6 +867,58 @@ const RPPHomeV3 = () => {
                 main h3.rpp-rmv-heading.rpp-rmv-heading { font-size: 24px !important; }
                 .rpp-rmv-card .rpp-coc-cta.rpp-coc-cta { white-space: normal; padding: 14px 22px !important; }
               }
+
+              /* PHOTO CARDS (Oct 27, 2026, David, from a ChatGPT layout): a photo panel on
+                 each calculator card, left on the cost card and right on the remodel card,
+                 and an icon on every line. Phones: the photo becomes a short strip on top.
+                 "rpp-calc-photo" avoids the index.css class-name traps (card, tile, btn, cta). */
+              .rpp-coc-card.rpp-calc-photo-card {
+                display: grid !important;
+                grid-template-columns: minmax(0, 31%) minmax(0, 1fr);
+                padding: 0 !important;
+                overflow: hidden;
+              }
+              .rpp-coc-card.rpp-calc-photo-card.rpp-calc-photo-right { grid-template-columns: minmax(0, 1fr) minmax(0, 31%); }
+              .rpp-calc-photo-right > .rpp-calc-photo { order: 2; }
+              .rpp-calc-photo-card > .rpp-coc-layout.rpp-coc-layout { padding: 1.5rem 1.75rem; }
+              .rpp-calc-photo.rpp-calc-photo { position: relative; min-height: 100%; }
+              .rpp-calc-photo.rpp-calc-photo img {
+                position: absolute !important;
+                inset: 0;
+                width: 100% !important;
+                height: 100% !important;
+                max-width: none !important;
+                object-fit: cover !important;
+                object-position: 50% 60%;
+                display: block;
+              }
+              .rpp-calc-sub.rpp-calc-sub {
+                font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
+                font-size: 18px !important;
+                font-weight: 500 !important;
+                line-height: 1.45;
+                color: #1c1917 !important;
+                max-width: 30ch;
+              }
+              .rpp-calc-photo-card .rpp-coc-options.rpp-coc-options li { justify-content: flex-start; align-items: center; }
+              .rpp-calc-photo-card .rpp-coc-options.rpp-coc-options li .rpp-coc-opt-name { flex: 1 1 auto; }
+              .rpp-calc-icon.rpp-calc-icon {
+                flex: none;
+                width: 26px !important;
+                height: 26px !important;
+              }
+              /* !important and the extra classes: index.css repaints any element whose inline
+                 style holds certain hex colours (the "faint text" and gold rules), which turned
+                 three of these icons charcoal. */
+              html body main .rpp-coc-options svg.rpp-calc-icon.rpp-calc-icon { color: var(--ic, #272421) !important; }
+              html body main .rpp-coc-options svg.rpp-calc-icon.rpp-calc-icon-remodel { color: #8a5300 !important; }
+              @media (max-width: 768px) {
+                .rpp-coc-card.rpp-calc-photo-card,
+                .rpp-coc-card.rpp-calc-photo-card.rpp-calc-photo-right { grid-template-columns: 1fr; }
+                .rpp-calc-photo-right > .rpp-calc-photo { order: 0; }
+                .rpp-calc-photo.rpp-calc-photo { aspect-ratio: 2.6 / 1; min-height: 0; }
+                .rpp-calc-photo-card > .rpp-coc-layout.rpp-coc-layout { padding: 1.1rem 1.25rem 1.25rem; }
+              }
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
                   grid-template-columns: 1fr;
@@ -893,7 +956,10 @@ const RPPHomeV3 = () => {
 
             {/* ── Cost of Care Calculator — two columns ──────────────── */}
             <div>
-              <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
+              <a href="/cost-of-care-calculator" className="rpp-coc-card rpp-calc-photo-card group marquee-hover">
+                <div className="rpp-calc-photo" aria-hidden="true">
+                  <img src={calcPhotoCare} alt="" width={1200} height={800} loading="lazy" decoding="async" />
+                </div>
                 <div className="rpp-coc-layout">
                   <div className="rpp-coc-left">
                     <h3
@@ -908,15 +974,9 @@ const RPPHomeV3 = () => {
                       <span style={{ color: "#14283a" }}>{t("costOfCare.headingPart2")}</span>
                     </h3>
 
-                    {/* The range sits with the heading rather than in its own
-                        column: alone in the middle it read as a stray figure. */}
-                    <div>
-                      <div className="rpp-coc-rangelabel">Monthly cost in Washington</div>
-                      <div className="rpp-coc-range">
-                        {formatCurrency(careMonthlyLow)} &ndash; {formatCurrency(careMonthlyHigh)}
-                        <span className="rpp-coc-rangeper"> / month</span>
-                      </div>
-                    </div>
+                    {/* Oct 27, 2026: a plain sentence about what the tool does replaced the
+                        red "$3,145 – $13,155 / month" range line. */}
+                    <span className="rpp-calc-sub">See typical monthly costs in Washington for six care options.</span>
 
                     {/* Text and arrow, not a filled box. The whole card is
                         already a link, so a button inside it was a second
@@ -936,8 +996,11 @@ const RPPHomeV3 = () => {
                       the rotating figures and the old "other care types" list,
                       which showed an arbitrary subset. */}
                   <ul className="rpp-coc-options">
-                    {careOptions.map(({ option, care }) => (
+                    {careOptions.map(({ option, care }) => {
+                      const Icon = careIconFor(option.slug);
+                      return (
                       <li key={option.slug}>
+                        <Icon className="rpp-calc-icon" aria-hidden="true" strokeWidth={1.9} style={{ ["--ic" as string]: option.color }} />
                         <span
                           className="rpp-coc-opt-name"
                           style={{ ["--opt-color" as string]: option.color }}
@@ -951,26 +1014,31 @@ const RPPHomeV3 = () => {
                           {formatCurrency(care.waMonthly)}
                         </span>
                       </li>
-                    ))}
+                      );
+                    })}
                   </ul>
                 </div>
               </a>
 
               {/* ── What's My Remodel Worth? (Oct 14, 2026, owner) ── same card as the
                   cost of care calculator above, for King County homeowners. */}
-              <a href="/whats-my-remodel-worth" className="rpp-coc-card rpp-rmv-card group marquee-hover" style={{ marginTop: "1.5rem" }}>
+              <a href="/whats-my-remodel-worth" className="rpp-coc-card rpp-rmv-card rpp-calc-photo-card rpp-calc-photo-right group marquee-hover" style={{ marginTop: "1.5rem" }}>
+                <div className="rpp-calc-photo" aria-hidden="true">
+                  <img src={calcPhotoRemodel} alt="" width={1200} height={800} loading="lazy" decoding="async" />
+                </div>
                 <div className="rpp-coc-layout">
                   <div className="rpp-coc-left">
                     <h3 className="rpp-rmv-heading" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", margin: 0, lineHeight: 1.1 }}>
                       <span style={{ color: "#272421" }}>What's My</span>{" "}
                       <span style={{ color: "#14283a" }}>Remodel Worth?</span>
                     </h3>
-                    <div className="rpp-coc-rangelabel" style={{ color: "#1B3A6B" }}>For King, Snohomish &amp; Pierce County homeowners</div>
+                    <span className="rpp-calc-sub">See how much value a remodel could add to your home in King, Snohomish &amp; Pierce Counties.</span>
                     <span className="rpp-coc-cta">Try the calculator</span>
                   </div>
                   <ul className="rpp-coc-options">
-                    {["Look up your house by address", "Enter what you would spend (or spent) on each part", "See two values: a broker's and an appraiser's", "Built from King, Snohomish and Pierce County home sales"].map((line) => (
+                    {REMODEL_LINES.map(([Icon, line]) => (
                       <li key={line}>
+                        <Icon className="rpp-calc-icon rpp-calc-icon-remodel" aria-hidden="true" strokeWidth={1.9} />
                         <span className="rpp-coc-opt-name">{line}</span>
                       </li>
                     ))}
