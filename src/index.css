@@ -6105,11 +6105,22 @@ html body main li.rpp-hero-point a.rpp-hero-point-link.rpp-hero-point-link:focus
 }
 html body main li.rpp-hero-point.rpp-hero-point::before,
 html body main li.rpp-hero-point.rpp-hero-point::marker { content: none !important; display: none !important; }
-/* Phones: the headline stacks under the image; give it more size (it fell to
-   the 20px floor at 390px). */
+/* Phones: the headline stacks under the image. Oct 27, 2026 (David): sized
+   so the English headline sits on exactly its two lines ("Probate, estate &
+   senior transition" / "guidance for Washington families.") at any phone
+   width. The longer line measures 16.5em at the weight it renders (800,
+   measured in the browser, Oct 27). The column is the viewport minus 16px
+   side padding (set just below; was 24px), so size = (100vw - 32px) / 17
+   leaves a little slack: about 21px at 390px, 20px at 375px, 23.4px at
+   430px. Longer translations simply wrap. Was clamp(24px, 6.4vw, 34px),
+   which wrapped English to four lines. */
 @media (max-width: 900px) {
   html body main #rpp-tagline .rpp-tagline-line-v2 {
-    font-size: clamp(24px, 6.4vw, 34px) !important;
+    font-size: clamp(18px, calc((100vw - 32px) / 17), 34px) !important;
+  }
+  main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
