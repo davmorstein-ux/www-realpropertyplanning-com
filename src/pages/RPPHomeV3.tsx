@@ -379,7 +379,7 @@ const RPPHomeV3 = () => {
                 0.4rem that left roughly 14px between a 56px heading and the
                 tile tops, so the heading read as a label stuck to the tiles
                 rather than one introducing them. */}
-            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+            <div className="rpp-funnel-head" style={{ textAlign: "center", marginBottom: "2rem" }}>
               <h2
                 className="rpp-funnel-heading"
                 style={{

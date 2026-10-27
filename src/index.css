@@ -6116,11 +6116,12 @@ html body main li.rpp-hero-point.rpp-hero-point::marker { content: none !importa
    which wrapped English to four lines. */
 @media (max-width: 900px) {
   html body main #rpp-tagline .rpp-tagline-line-v2 {
-    font-size: clamp(18px, calc((100vw - 32px) / 17), 34px) !important;
+    font-size: clamp(18px, calc((100vw - 32px) / 17.6), 34px) !important;
   }
+  /* Oct 27, 2026 (David): tighter band so the four journey tiles fit on the
+     first screen — was 20px top / 26px bottom / 24px sides. */
   main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding: 12px 16px 14px !important;
   }
 }
 
@@ -6422,4 +6423,47 @@ html body main ul.rpp-hero-points.rpp-hero-points--below-tiles { display: none !
     margin: 4px 0 0 calc(50% - 50vw) !important;
     box-sizing: border-box;
   }
+}
+
+/* Homepage journey heading on phones (Oct 27, 2026, David): "What brings you
+   here today?" on ONE line, sized to the screen, with half the space above
+   and below it, so the heading and all four tiles fit on the first screen.
+   The section's inline 2.5rem top padding and the wrapper's inline 2rem
+   bottom margin are overridden here. */
+@media (max-width: 760px) {
+  html body main section#rpp-start-here { padding-top: 18px !important; }
+  html body main div.rpp-funnel-head.rpp-funnel-head { margin-bottom: 14px !important; }
+  html body main h2.rpp-funnel-heading.rpp-funnel-heading.rpp-funnel-heading {
+    font-size: clamp(22px, calc((100vw - 48px) / 15.5), 36px) !important;
+    line-height: 1.15 !important;
+  }
+}
+
+/* Hub photo tiles (Oct 27, 2026, David): the arrow moves to the tile's
+   bottom-right corner so the words use the full width of the tile — fewer
+   lines, shorter tiles. The ::after spacer is an invisible block the width of
+   the arrow at the end of the words: it keeps the LAST line clear of the
+   arrow (if it doesn't fit it drops to its own line) while every other line
+   runs full width. Covers every hub and choice page (SimpleHubChoices and
+   ChoiceFlowPage share this markup). */
+html body main.apf .apf-pick-label.apf-pick-label {
+  position: relative;
+  display: block;
+  padding-right: 12px;
+}
+html body main.apf .apf-pick-label.apf-pick-label > span:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 1px;
+}
+html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+}
+@media (max-width: 640px) {
+  html body main.apf .apf-pick-label.apf-pick-label { padding: 10px 10px 11px 12px !important; }
+  html body main.apf .apf-pick-label.apf-pick-label > span:first-child::after { width: 30px; }
+  html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow { right: 8px; bottom: 8px; }
 }
