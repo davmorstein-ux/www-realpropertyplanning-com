@@ -7,7 +7,6 @@ import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 
 import { articleSchema } from "@/lib/schema";
-import GuidanceGrid from "@/components/GuidanceGrid";
 import IntentCTA from "@/components/IntentCTA";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { Link } from "react-router-dom";
@@ -101,18 +100,9 @@ const EstateProbateInheritedProperty = () => {
           id="estate-probate-inherited-property"
         />
 
-        {/* Guidance relocated here from /selling-an-inherited-home, which had
-            grown into a single page answering what its six sub-pages exist to
-            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
-            filtered by this slug — do not paste them inline.
-
-            Both this and the disclaimer below previously sat AFTER </main>,
-            outside the main landmark, which put real page content somewhere
-            assistive technology does not reach via the skip link and screen
-            readers do not include when navigating by landmark. The
-            professional disclosure in particular is content that needs to
-            travel with the page, not sit adrift beside it. */}
-        <GuidanceGrid page="estate-probate-inherited-property" />
+        {/* "Common Challenges" / "Common Mistakes" (GuidanceGrid) removed from this hub on
+            Oct 27, 2026 (David: simplify the hubs); its three items were deleted from
+            src/lib/inheritedPropertyGuidance.ts. */}
 
         <IntentCTA
           heading="Dealing with an estate property?"

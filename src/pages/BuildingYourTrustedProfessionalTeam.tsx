@@ -8,7 +8,6 @@ import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { articleSchema } from "@/lib/schema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
-import GuidanceGrid from "@/components/GuidanceGrid";
 import SimpleHubChoices from "@/components/SimpleHubChoices";
 import { TEAM_HUB_CHOICES, TEAM_NOT_SURE } from "@/lib/team-simple";
 
@@ -201,11 +200,9 @@ const BuildingYourTrustedProfessionalTeam = () => {
           </div>
         </section>
 
-        {/* Guidance relocated here from /selling-an-inherited-home, which had
-            grown into a single page answering what its six sub-pages exist to
-            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
-            filtered by this slug — do not paste them inline. */}
-        <GuidanceGrid page="building-your-professional-team" />
+        {/* "Common Challenges" / "Common Mistakes" (GuidanceGrid) removed from this hub on
+            Oct 27, 2026 (David: simplify the hubs); its three items were deleted from
+            src/lib/inheritedPropertyGuidance.ts. */}
 
         <DisclaimerSection />
       </main>

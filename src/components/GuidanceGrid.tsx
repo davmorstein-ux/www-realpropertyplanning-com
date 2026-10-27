@@ -27,6 +27,24 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
 
   return (
     <>
+      {/* Icons beside each title (Oct 27, 2026): amber for challenges, brick red for mistakes,
+          never navy. The body text indents to line up with the title. Cards had been
+          mostly empty space; padding tightened. */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        html body main .rpp-guide-item.rpp-guide-item { padding: 18px 20px !important; }
+        html body main h3.rpp-guide-item-title.rpp-guide-item-title { display: flex; align-items: center; gap: 12px; margin-bottom: 6px !important; }
+        html body main svg.rpp-guide-icon.rpp-guide-icon { flex: none; width: 28px; height: 28px; }
+        html body main svg.rpp-guide-icon-challenge { color: #8a5300 !important; }
+        html body main svg.rpp-guide-icon-mistake { color: #B0352A !important; }
+        html body main .rpp-guide-item.rpp-guide-item > p { padding-left: 40px; margin: 0 !important; }
+        /* index.css sets spans inside cards to 16px regular; the title must outrank the text. */
+        html body main h3.rpp-guide-item-title span.rpp-guide-item-name.rpp-guide-item-name { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; line-height: 1.3 !important; color: #1c1917 !important; }
+        html body main .rpp-guide-item.rpp-guide-item > p { font-size: 18px !important; line-height: 1.55 !important; color: #1c1917 !important; }
+        @media (max-width: 640px) {
+          html body main h3.rpp-guide-item-title span.rpp-guide-item-name.rpp-guide-item-name { font-size: 19px !important; }
+          html body main .rpp-guide-item.rpp-guide-item > p { font-size: 17px !important; padding-left: 0; }
+        }
+      ` }} />
       {challenges.length > 0 && (
         <section className="py-10 lg:py-14 bg-background">
           <div className="container px-6 lg:px-8">
@@ -58,10 +76,11 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
                 {challenges.map((c) => (
                   <div
                     key={c.title}
-                    className="bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
+                    className="rpp-guide-item bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
                   >
-                    <h3 className="font-serif text-lg md:text-xl text-navy font-semibold mb-2">
-                      {c.title}
+                    <h3 className="rpp-guide-item-title font-serif text-lg md:text-xl text-navy font-semibold mb-2">
+                      <c.icon className="rpp-guide-icon rpp-guide-icon-challenge" aria-hidden="true" strokeWidth={1.9} />
+                      <span className="rpp-guide-item-name">{c.title}</span>
                     </h3>
                     <p className="text-navy text-base leading-relaxed">{c.body}</p>
                   </div>
@@ -97,10 +116,11 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
                 {mistakes.map((m) => (
                   <div
                     key={m.title}
-                    className="bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
+                    className="rpp-guide-item bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
                   >
-                    <h3 className="font-serif text-lg md:text-xl text-navy font-semibold mb-2">
-                      {m.title}
+                    <h3 className="rpp-guide-item-title font-serif text-lg md:text-xl text-navy font-semibold mb-2">
+                      <m.icon className="rpp-guide-icon rpp-guide-icon-mistake" aria-hidden="true" strokeWidth={1.9} />
+                      <span className="rpp-guide-item-name">{m.title}</span>
                     </h3>
                     <p className="text-navy text-base leading-relaxed">{m.body}</p>
                   </div>
