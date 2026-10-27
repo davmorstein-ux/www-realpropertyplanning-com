@@ -10,6 +10,23 @@ import { Link } from "react-router-dom";
 import { ArrowRight, AlertCircle } from "lucide-react";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import PhotoSteps from "@/components/PhotoSteps";
+/* Step 1: the attorney's office (the step ends "confirm this with the attorney handling the
+   estate"); the key-on-folder photo looked too much like step 3's insurance folder. */
+import imgAuthority from "@/assets/estate/probate-3.webp";
+import imgSecure from "@/assets/estate/first-steps-1.webp";
+import imgInsurance from "@/assets/estate/executor-insurance.webp";
+import imgDocuments from "@/assets/estate/first-steps-2.webp";
+import imgCondition from "@/assets/estate/preparing-2.webp";
+import imgValue from "@/assets/estate/property-value-1.webp";
+import imgImprove from "@/assets/estate/preparing-3.webp";
+import imgFamily from "@/assets/estate/what-to-do-2.webp";
+import imgTimeline from "@/assets/estate/property-value-2.webp";
+import imgStrategy from "@/assets/estate/executor-sale-strategy.webp";
+
+/* One photo per step, in step order (Oct 27, 2026): the site's square estate set in place of the
+   numbers 1-10, as on the simplified topic pages. */
+const STEP_IMAGES = [imgAuthority, imgSecure, imgInsurance, imgDocuments, imgCondition, imgValue, imgImprove, imgFamily, imgTimeline, imgStrategy];
 
 const steps = [
   {
@@ -112,30 +129,14 @@ const WashingtonExecutorsChecklist = () => {
         <section className="py-14 md:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Your Roadmap
-              </p>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-10">
-                10 Steps Every Executor Should Know
-              </h2>
-              <div className="space-y-8">
-                {steps.map((step, i) => (
-                  <div key={i} className="flex gap-5 md:gap-6">
-                    {/* Step number */}
-                    <div className="shrink-0 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-b from-gold/20 to-gold/8 border border-gold/25 shadow-[0_2px_6px_rgba(201,168,76,0.12)]">
-                      <span className="text-gold font-bold text-base">{i + 1}</span>
-                    </div>
-                    <div className="pt-1.5">
-                      <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-[15px] md:text-base leading-relaxed">
-                        {step.body}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {/* Oct 27, 2026: the "Your Roadmap" label and a heading repeating the page title
+                  were removed; photos replace the step numbers. The list stays numbered for
+                  screen readers (an <ol>), and the step order is in the HowTo schema above. */}
+              <PhotoSteps
+                as="h2"
+                label="10 steps every executor should know"
+                steps={steps.map((st, i) => ({ title: st.title, body: st.body, image: STEP_IMAGES[i] }))}
+              />
             </div>
           </div>
         </section>
