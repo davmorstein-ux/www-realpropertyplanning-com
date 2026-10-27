@@ -799,6 +799,13 @@ const RPPHomeV3 = () => {
               .rpp-coc-card:hover .rpp-coc-cta.rpp-coc-cta {
                 background: #142c52 !important;
               }
+              /* Oct 27, 2026 (David): the two calculator buttons take different colours, and
+                 neither is navy: Cost of Care teal #0b6a7a (6.26:1 with white), the remodel
+                 card amber #8a5300 (6.33:1), matching its icons. Hover darkens each. */
+              a.rpp-coc-card:not(.rpp-rmv-card) .rpp-coc-cta.rpp-coc-cta { background: #0b6a7a !important; }
+              a.rpp-coc-card:not(.rpp-rmv-card):hover .rpp-coc-cta.rpp-coc-cta { background: #08515d !important; }
+              a.rpp-coc-card.rpp-rmv-card .rpp-coc-cta.rpp-coc-cta { background: #8a5300 !important; }
+              a.rpp-coc-card.rpp-rmv-card:hover .rpp-coc-cta.rpp-coc-cta { background: #6b4000 !important; }
               .rpp-coc-left.rpp-coc-left {
                 display: flex;
                 flex-direction: column;
