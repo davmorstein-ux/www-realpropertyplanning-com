@@ -105,6 +105,8 @@ const CSS = `
 .rmv label.rmv-label { display: block; font-size: 15px; font-weight: 700; color: #2b2825; margin-bottom: 4px; }
 .rmv .rmv-in { width: 100%; box-sizing: border-box; font-family: ${FONT}; font-size: 17px; padding: 10px 12px; border: 1.5px solid #c9c2b6; border-radius: 8px; background: #fff; color: ${INK}; min-height: 46px; }
 .rmv .rmv-in:focus { outline: 3px solid #b9c8e3; border-color: ${NAVY}; }
+/* Example text must not look like a value already entered (Oct 27, 2026). */
+.rmv .rmv-in::placeholder { color: #6e675e !important; opacity: 1; font-style: italic; font-weight: 400; }
 .rmv .rmv-grid { display: grid; gap: 14px; align-items: end; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 760px) { .rmv .rmv-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .rmv .rmv-grid2 { display: grid; gap: 14px; grid-template-columns: 1fr; }
@@ -378,7 +380,22 @@ export default function RemodelValue() {
               <div className="rmv-grid2">
                 <div>
                   <label className="rmv-label" htmlFor="rmv-zip">ZIP code</label>
-                  <input id="rmv-zip" className="rmv-in" inputMode="numeric" autoComplete="postal-code" maxLength={5} placeholder="98040" value={zip} onChange={(e) => setZip(e.target.value.replace(/\D/g, "").slice(0, 5))} />
+                  {/* Oct 27, 2026 (David): no placeholder. "98040" in this box read as a ZIP already
+                      filled in, while the address box stayed locked until a ZIP was typed. Now the
+                      box starts empty, and five digits move the cursor to the address box. */}
+                  <input
+                    id="rmv-zip"
+                    className="rmv-in"
+                    inputMode="numeric"
+                    autoComplete="postal-code"
+                    maxLength={5}
+                    value={zip}
+                    onChange={(e) => {
+                      const z = e.target.value.replace(/\D/g, "").slice(0, 5);
+                      setZip(z);
+                      if (z.length === 5 && !addr) document.getElementById("rmv-addr")?.focus();
+                    }}
+                  />
                 </div>
                 <div>
                   <label className="rmv-label" htmlFor="rmv-addr">Street address</label>
@@ -386,8 +403,7 @@ export default function RemodelValue() {
                     id="rmv-addr"
                     className="rmv-in"
                     autoComplete="off"
-                    placeholder={zipState === "ok" ? "e.g. 4210 86th Ave SE" : "Enter the ZIP code first"}
-                    disabled={zipState !== "ok"}
+                    placeholder="e.g. 4210 86th Ave SE"
                     value={addr}
                     onChange={(e) => {
                       setAddr(e.target.value);
@@ -415,6 +431,7 @@ export default function RemodelValue() {
                     <button type="button" className="rmv-link" onClick={startManual} disabled={!king}>Enter the details yourself</button>
                   </>
                 )}
+                {zipState === "idle" && addr.trim().length > 0 && "Enter the ZIP code too, and matching addresses will appear. "}
                 {zipState === "idle" && "Condos, townhouses and houses outside King, Snohomish and Pierce counties are not covered yet."}
               </p>
             </div>
