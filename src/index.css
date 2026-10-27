@@ -6395,3 +6395,20 @@ html body .mp a.mp-link,
 html body .fhp a.fhp-link {
   text-decoration: none !important;
 }
+
+/* Homepage points placement (Oct 27, 2026, David chose layout "C"): on phones
+   the points list moves from under the headline to after the journey tiles,
+   so the tiles reach the first screen. HomepagePoints.tsx renders two copies;
+   exactly one is visible at any width. */
+html body main ul.rpp-hero-points.rpp-hero-points--below-tiles { display: none !important; }
+@media (max-width: 760px) {
+  html body main ul.rpp-hero-points.rpp-hero-points--top { display: none !important; }
+  html body main ul.rpp-hero-points.rpp-hero-points.rpp-hero-points--below-tiles {
+    display: flex !important;
+    /* Full-bleed so the hairlines run edge to edge like the top copy. */
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 4px 0 0 calc(50% - 50vw) !important;
+    box-sizing: border-box;
+  }
+}

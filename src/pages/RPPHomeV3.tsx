@@ -361,7 +361,13 @@ const RPPHomeV3 = () => {
         {/* The four homepage points (Oct 25, 2026): checks, numbers and links in
             one row. They replaced the "What this hub includes" pills lower down,
             which said the same things. See HomepagePoints.tsx. */}
-        <HomepagePoints />
+        {/* Oct 27, 2026 (David chose layout "C" from a phone mock-up): on
+            phones the points move BELOW the four journey tiles, so "What
+            brings you here today?" and all four tile photos fit on the first
+            screen. This copy shows above 760px only; the second copy, after
+            the tile grid, shows at 760px and below. Breakpoint matches the
+            points' own one-column breakpoint in index.css. */}
+        <HomepagePoints placement="top" />
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
         {/* Sections from here down sit on a lighter cream (#faf8f4, David Sept 23:
@@ -489,6 +495,9 @@ const RPPHomeV3 = () => {
                 );
               })}
             </div>
+
+            {/* Phones only: the points after the tiles (see placement="top"). */}
+            <HomepagePoints placement="below-tiles" />
 
             {/* ── Scoped styles ───────────────────────────────────────
                 text-transform lives in classes rather than inline styles:

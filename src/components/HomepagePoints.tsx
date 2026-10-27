@@ -34,10 +34,16 @@ const POINTS = [
   { key: "hero.point3", to: "/featured-professionals" },
 ] as const;
 
-export default function HomepagePoints() {
+/**
+ * placement (Oct 27, 2026): the homepage renders this twice. "top" sits under
+ * the headline and is hidden at 760px and below; "below-tiles" sits after the
+ * journey tiles and shows only at 760px and below. One is always display:none,
+ * so screen readers and keyboards meet the list once. Rules in index.css.
+ */
+export default function HomepagePoints({ placement = "top" }: { placement?: "top" | "below-tiles" }) {
   const { t } = useTranslation();
   return (
-    <ul className="rpp-hero-points" aria-label="What the site offers">
+    <ul className={`rpp-hero-points rpp-hero-points--${placement}`} aria-label="What the site offers">
       {POINTS.map((p, i) => {
         const text = "n" in p ? t(p.key, { n: p.n }) : t(p.key);
         const cut = text.lastIndexOf(" ") + 1;
