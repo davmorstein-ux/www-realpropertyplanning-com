@@ -27,8 +27,17 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
         return (
           <li key={s.n} className={isCurrent ? "is-current" : undefined} aria-current={isCurrent ? "step" : undefined}>
             <Link to={s.href} className="bg-transparent">
-              {!compact && <img className="rpp-afhsteps-ico" src={s.icon} alt="" width={120} height={120} loading="lazy" decoding="async" />}
-              <span className="rpp-afhsteps-n">{s.n}</span>
+              {/* Full band: the step number sits as a small badge on the picture's
+                  corner (Oct 26, 2026, David: the separate number row cramped the
+                  tiles). The order still matters, so the number stays. */}
+              {!compact ? (
+                <span className="rpp-afhsteps-pic">
+                  <img className="rpp-afhsteps-ico" src={s.icon} alt="" width={120} height={120} loading="lazy" decoding="async" />
+                  <span className="rpp-afhsteps-n" aria-label={`Step ${s.n}`}>{s.n}</span>
+                </span>
+              ) : (
+                <span className="rpp-afhsteps-n">{s.n}</span>
+              )}
               <span className="rpp-afhsteps-label">{s.label}</span>
               {!compact && <span className="rpp-afhsteps-hint">{s.hint}</span>}
             </Link>
@@ -60,6 +69,8 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
       .rpp-afhsteps li { margin: 0; }
       .rpp-afhsteps a { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 14px 10px; border: 1.5px solid #ddd6cc; border-radius: 12px; background: #fff; color: #272421 !important; text-decoration: none !important; height: 100%; }
       .rpp-afhsteps .rpp-afhsteps-n { width: 28px; height: 28px; border-radius: 50%; background: #0a5648; color: #fff; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; }
+      .rpp-afhsteps .rpp-afhsteps-pic { position: relative; display: block; margin: 0 auto 6px; }
+      .rpp-afhsteps .rpp-afhsteps-pic .rpp-afhsteps-n { position: absolute; top: -4px; left: -6px; width: 26px; height: 26px; font-size: 13px; box-shadow: 0 0 0 2px #fff; }
       .rpp-afhsteps .rpp-afhsteps-label { font-weight: 700; font-size: 16px !important; line-height: 1.2; }
       .rpp-afhsteps .rpp-afhsteps-hint { font-size: 15px !important; line-height: 1.35; color: #1c1917; }
       .rpp-afhsteps li.is-current a { border-color: #0a5648; background: #eef5f2; }
@@ -68,10 +79,10 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
       @media (max-width: 599px) {
         .rpp-afhsteps:not(.rpp-afhsteps-compact) ol { grid-template-columns: 1fr; gap: 8px; }
         .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { display: grid !important; grid-template-columns: 32px 1fr; column-gap: 12px; row-gap: 2px; align-items: center; text-align: left; padding: 12px 14px !important; }
-        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-n { grid-row: 1 / span 2; grid-column: 2; }
-        .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { grid-template-columns: 56px 32px 1fr !important; }
-        .rpp-afhsteps img.rpp-afhsteps-ico { width: 56px; height: 56px; margin: 0; grid-row: 1 / span 2; grid-column: 1; }
-        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-label, .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-hint { grid-column: 3; text-align: left; }
+        .rpp-afhsteps:not(.rpp-afhsteps-compact) ol > li > a { grid-template-columns: 60px 1fr !important; }
+        .rpp-afhsteps .rpp-afhsteps-pic { grid-row: 1 / span 2; grid-column: 1; margin: 0; }
+        .rpp-afhsteps img.rpp-afhsteps-ico { width: 56px; height: 56px; margin: 0; }
+        .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-label, .rpp-afhsteps:not(.rpp-afhsteps-compact) .rpp-afhsteps-hint { grid-column: 2; text-align: left; }
       }
       .rpp-afhsteps-compact ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
       @media (min-width: 700px) { .rpp-afhsteps-compact ol { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
