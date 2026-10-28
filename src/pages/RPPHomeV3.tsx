@@ -525,7 +525,7 @@ const RPPHomeV3 = () => {
                           <span className="rpp-tile3d-arrow" aria-hidden="true">
                             {/* The site's one arrow (RppArrow): a white disc with
                                 the chevron cut out, so it shows the tile colour. */}
-                            <RppArrow size={32} />
+                            <RppArrow size={26} />
                           </span>
                           {/* Arrow is the sitewide CSS ::after (CTA ARROW block
                               in index.css) via the rpp-funnel-cta class on the
@@ -616,10 +616,10 @@ const RPPHomeV3 = () => {
      ring would draw a second outline around the 3D frame. */
   .marquee-hover:has(> .rpp-tile3d)::before { display: none !important; }
   .rpp-tile3d-arrow.rpp-tile3d-arrow {
-    flex: 0 0 32px !important;
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
+    flex: 0 0 26px !important;
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
     padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box;
