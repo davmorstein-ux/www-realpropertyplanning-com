@@ -290,12 +290,16 @@ const HomepagePopularResources = () => {
         .rpp-pr-tile.rpp-pr-tile {
           flex-direction: row !important;
           align-items: center !important;
-          text-align: left !important;
-          gap: 0.9rem !important;
-          padding: 0.85rem 1rem 2.9rem 0.75rem !important;
+          /* Oct 27, 2026 (David): words centred in the space beside the picture, both ways,
+             like the desktop tiles (were left-aligned and pushed to the top by extra bottom
+             padding for the arrow). Right padding keeps the words clear of the arrow. */
+          text-align: center !important;
+          gap: 0.75rem !important;
+          padding: 1rem 3.1rem 1rem 0.75rem !important;
         }
-        .rpp-pr-tile img.rpp-pr-object.rpp-pr-object { width: 88px !important; max-width: 88px !important; height: 88px !important; flex: 0 0 88px; margin: 0 0 -2rem !important; }
-        .rpp-pr-body.rpp-pr-body { align-items: flex-start !important; }
+        .rpp-pr-tile img.rpp-pr-object.rpp-pr-object { width: 88px !important; max-width: 88px !important; height: 88px !important; flex: 0 0 88px; margin: 0 !important; }
+        .rpp-pr-body.rpp-pr-body { align-items: center !important; justify-content: center !important; text-align: center !important; }
+        .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation { text-align: center !important; }
         .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation { font-size: 20px !important; }
         .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; bottom: 10px !important; width: 34px !important; height: 34px !important; }
         .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg { width: 34px; height: 34px; }
