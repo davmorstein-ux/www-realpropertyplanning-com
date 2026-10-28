@@ -129,6 +129,11 @@ const RPPHomeV3 = () => {
                1920x364) at David's choice, so the ceiling above the door AND the floor and rug
                both show; the hero is about 40px taller on a laptop. 3840x840 for sharp screens,
                both shrunk from the source, never enlarged. Phone crops keep 1200x430.
+               The headline overlays the left wall on laptops; that wall had dappled sun and
+               measured only 5.0:1 behind the charcoal text, and David saw it "fighting the
+               wall". The left half is blended 55% toward cream, full to 36% of the width and
+               feathered out by 50% (before the mirror): now 8.6:1 at its weakest, 9.7:1
+               median. Phone crops are untouched (the headline sits below the image there).
 
                rpp-hero-2032 (Oct 22, 2026): the same 2031 render, upscaled by the
                owner to 8000px because the hero looked soft on high-resolution
