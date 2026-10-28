@@ -94,7 +94,11 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           outline-offset: 3px;
         }
 
-        /* Icon beside the name (Oct 27, 2026), in the option's colour. */
+        /* Icon beside the name (Oct 27, 2026), in the option's colour.
+           Heavier on Oct 28, 2026 (David: the names and icons "get lost in
+           these tiles"): name 19px/700 -> 20px/800 and the weight is now
+           !important, because index.css forces spans inside links to a
+           regular weight; icon 26px at stroke 1.9 -> 28px at stroke 2.6. */
         .rpp-calcswitch-head.rpp-calcswitch-head {
           display: flex;
           align-items: center;
@@ -102,14 +106,14 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
         }
         .rpp-calcswitch-icon.rpp-calcswitch-icon {
           flex: none;
-          width: 26px !important;
-          height: 26px !important;
+          width: 28px !important;
+          height: 28px !important;
           color: var(--cc-color, #272421);
         }
         .rpp-calcswitch-name.rpp-calcswitch-name {
           font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-          font-size: 19px !important;
-          font-weight: 700;
+          font-size: 20px !important;
+          font-weight: 800 !important;
           color: var(--cc-color, #1B3A6B) !important;
           line-height: 1.25;
         }
@@ -151,7 +155,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
               style={{ ["--cc-color" as string]: o.color }}
             >
               <span className="rpp-calcswitch-head">
-                <Icon className="rpp-calcswitch-icon" aria-hidden="true" strokeWidth={1.9} />
+                <Icon className="rpp-calcswitch-icon" aria-hidden="true" strokeWidth={2.6} />
                 <span className="rpp-calcswitch-name rpp-calcswitch-name">{o.shortLabel}</span>
               </span>
               <span className="rpp-calcswitch-price rpp-calcswitch-price">
