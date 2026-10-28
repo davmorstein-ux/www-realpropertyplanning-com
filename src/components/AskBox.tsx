@@ -80,7 +80,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
      with reduced motion, or if the list is already on screen when the page loads. */
   const examplesRef = useRef<HTMLDivElement>(null);
   const [typed, setTyped] = useState<number | null>(null);
-  const PAUSE = 14; // characters' worth of pause between questions
+  const PAUSE = 10; // characters' worth of pause between questions
   const offsets = examples.reduce<number[]>((acc, x, i) => { acc.push(i === 0 ? 0 : acc[i - 1] + examples[i - 1].length + PAUSE); return acc; }, []);
   const totalChars = examples.length ? offsets[offsets.length - 1] + examples[examples.length - 1].length : 0;
   useEffect(() => {
@@ -99,7 +99,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
         n += 1;
         setTyped(n);
         if (n >= totalChars) { window.clearInterval(timer); setTyped(null); }
-      }, 38);
+      }, 65);
     }, { threshold: 0.6 });
     io.observe(el);
     return () => { io.disconnect(); if (timer) window.clearInterval(timer); };
