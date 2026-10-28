@@ -232,6 +232,7 @@ const AboutTheHub = () => {
         .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list li::before { content: none; display: none; }
         .rpp-abouthub-list .rpp-abouthub-tag.rpp-abouthub-tag { display: block; font-size: 14px !important; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B0352A !important; margin-bottom: 6px; }
         .rpp-abouthub-card .rpp-abouthub-why.rpp-abouthub-why { font-size: 18px; color: #2b2825; border-top-color: #d9d1c3; margin-top: 1.5rem !important; }
+        .rpp-abouthub-card .rpp-abouthub-why.rpp-abouthub-why + .rpp-abouthub-why.rpp-abouthub-why { border-top: 0; padding-top: 0; margin-top: 0.9rem !important; }
         @media (max-width: 760px) {
           .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list { grid-template-columns: 1fr; }
           .rpp-abouthub-card.rpp-abouthub-card { padding: 2rem 0; }
@@ -262,9 +263,13 @@ const AboutTheHub = () => {
         <p className="rpp-abouthub-why">
           Property decisions caused by aging, illness, or a death are not ordinary transactions. An attorney, a
           fiduciary, an appraiser, a care provider, a lender, and several family members are often making decisions at
-          the same time, and nobody is responsible for the whole picture. The guides and tools here are free, and when a
-          decision needs a licensed professional, the site lists independent professionals you can contact directly,
-          including a featured broker and appraiser who work through their own practices.
+          the same time, and nobody is responsible for the whole picture.
+        </p>
+        {/* Split into its own paragraph (Oct 27, 2026, David). */}
+        <p className="rpp-abouthub-why">
+          The guides and tools here are free, and when a decision needs a licensed professional, the site lists
+          independent professionals you can contact directly, including a featured broker and appraiser who work
+          through their own practices.
         </p>
 
       </div>
