@@ -6,6 +6,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticlesCarousel from "@/components/ArticlesCarousel";
 import { Link } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Search as SearchIcon, X } from "lucide-react";
 import { GUIDE_LIBRARY, GUIDE_COUNT } from "@/data/guideLibrary";
 
 import RppArrow from "@/components/RppArrow";
@@ -31,9 +33,57 @@ const LIBRARY_CSS = `
   .rpp-lib-count.rpp-lib-count { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 18px !important; line-height: 1.6 !important; color: #142c52; text-align: center; max-width: 760px; margin: 0 auto 22px !important; }
   a.rpp-lib-landing.rpp-lib-landing { display: inline-block; margin: 14px 0 4px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16.5px !important; font-weight: 700 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 4px; }
   section[id] { scroll-margin-top: calc(var(--header-height, 120px) + 12px); }
+
+  /* Oct 28, 2026 (David: visitors may not realise there is a searchable list below the
+     carousel). A search box that filters the list as you type, and on phones a single
+     "Jump to a topic" dropdown in place of nine tall topic buttons. */
+  .rpp-lib-find { max-width: 760px; margin: 0 auto 18px; }
+  .rpp-lib-find label.rpp-lib-find-label { display: block; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 15px !important; font-weight: 700 !important; color: #142c52; margin: 0 0 6px; }
+  .rpp-lib-find .rpp-lib-find-box { position: relative; }
+  .rpp-lib-find .rpp-lib-find-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #1B3A6B; pointer-events: none; }
+  .rpp-lib-find input.rpp-lib-find-input.rpp-lib-find-input { width: 100%; box-sizing: border-box; min-height: 56px; padding: 12px 52px 12px 50px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 18px !important; color: #1c1917; background: #fff; border: 2px solid #1B3A6B; border-radius: 12px; box-shadow: 0 2px 10px rgba(20,44,82,0.08); -webkit-appearance: none; appearance: none; }
+  .rpp-lib-find input.rpp-lib-find-input::placeholder { color: #6b6660; }
+  .rpp-lib-find input.rpp-lib-find-input.rpp-lib-find-input:placeholder-shown { padding-right: 14px; }
+  .rpp-lib-find input.rpp-lib-find-input::-webkit-search-cancel-button { display: none; }
+  .rpp-lib-find input.rpp-lib-find-input:focus { outline: 3px solid rgba(27,58,107,0.25); outline-offset: 1px; }
+  .rpp-lib-find button.rpp-lib-find-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: transparent !important; color: #4a4540; cursor: pointer; padding: 0; }
+  .rpp-lib-find-status.rpp-lib-find-status { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; color: #142c52; text-align: center; margin: 12px 0 0 !important; }
+  .rpp-lib-find-status a { color: #1B3A6B !important; font-weight: 700; text-decoration: underline !important; text-underline-offset: 3px; }
+  .rpp-lib-topic { display: none; max-width: 760px; margin: 0 auto; }
+  .rpp-lib-topic select.rpp-lib-topic-select { width: 100%; min-height: 52px; padding: 10px 44px 10px 14px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 600; color: #142c52; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%231B3A6B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center; border: 1px solid #c9a9ac; border-radius: 12px; -webkit-appearance: none; appearance: none; }
+  .rpp-lib-pro { background: #f7f4ef; padding: 32px 24px; text-align: center; }
+  @media (max-width: 640px) {
+    .rpp-lib-jump.rpp-lib-jump { display: none; }
+    .rpp-lib-topic { display: block; }
+    .rpp-lib-count.rpp-lib-count { font-size: 17px !important; margin-bottom: 16px !important; }
+  }
 `;
 
+/** Every word typed must appear in the guide's title or its group's name. */
+const matches = (q: string, title: string, group: string) => {
+  const hay = `${title} ${group}`.toLowerCase().replace(/[’']/g, "");
+  return q
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .every((w) => hay.includes(w));
+};
+
 const GuidesAndResources = () => {
+  const [query, setQuery] = useState("");
+  const q = query.trim();
+  const shown = useMemo(
+    () => categories.map((c) => ({ ...c, articles: q ? c.articles.filter((a) => matches(q, a.title, c.label)) : c.articles })),
+    [q],
+  );
+  const hits = shown.reduce((n, c) => n + c.articles.length, 0);
+  const jumpTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  };
   return (
     <>
       <SEOHead
@@ -57,42 +107,82 @@ const GuidesAndResources = () => {
         {/* Oct 27, 2026 (David couldn't find the covered articles from here): the magazine-cover
             carousel from the Articles Library, with a link to that page. The same articles
             also appear as text in the groups below. */}
+        {/* Oct 28, 2026: the "Browse the Articles Library" link that sat here was removed (the
+            covers and the list below both lead to the articles), and the "Looking for a
+            professional" line moved to the end of the page, so the list starts sooner. */}
         <ArticlesCarousel />
-        <div className="rpp-lib-articles-link" style={{ display: "flex", justifyContent: "center", background: "#f7f4ef", padding: "0 20px 36px" }}>
-          <Link to="/articles" className="rpp-heading-link" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 19, fontWeight: 700, color: "#1B3A6B", textDecoration: "none" }}>
-            Browse the Articles Library <RppArrow />
-          </Link>
-        </div>
 
-        {/* Looking for a professional? CTA */}
-        <div style={{ background: "#f7f4ef", padding: "28px 24px", textAlign: "center" }}>
-          <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#142c52", margin: 0 }}>
-            Looking for a professional instead of a guide?{" "}
-            <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
-              Browse the Find a Professional directory <RppArrow />
-            </Link>
-          </p>
-        </div>
-
-        {/* How many, and a way to jump to a group */}
-        <div style={{ background: "#fff", padding: "34px 20px 30px" }}>
+        {/* How many, a search box, and a way to jump to a group */}
+        <div style={{ background: "#fff", padding: "30px 20px 28px" }}>
           <style dangerouslySetInnerHTML={{ __html: LIBRARY_CSS }} />
           <p className="rpp-lib-count">
-            <strong>{GUIDE_COUNT} guides and articles</strong> for Washington families, executors, and trustees, in {categories.length} groups. Jump to the one that fits where you are.
+            <strong>{GUIDE_COUNT} guides and articles</strong> for Washington families, executors, and trustees. Search by
+            topic, or browse the {categories.length} groups below.
           </p>
-          <ul className="rpp-lib-jump">
-            {categories.map((c) => (
-              <li key={c.id}>
-                <a href={`#${c.id}`} className="rpp-lib-chip bg-transparent">
-                  {c.label} <span style={{ fontWeight: 400, color: "#1c1917" }}>({c.articles.length})</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="rpp-lib-find" role="search">
+            <label htmlFor="rpp-lib-q" className="rpp-lib-find-label">Find a guide</label>
+            <div className="rpp-lib-find-box">
+              <SearchIcon className="rpp-lib-find-icon" size={22} aria-hidden="true" />
+              <input
+                id="rpp-lib-q"
+                className="rpp-lib-find-input"
+                type="search"
+                inputMode="search"
+                autoComplete="off"
+                placeholder="Try probate or memory care"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+              {query && (
+                <button type="button" className="rpp-lib-find-clear" aria-label="Clear search" onClick={() => setQuery("")}>
+                  <X size={22} aria-hidden="true" />
+                </button>
+              )}
+            </div>
+            <p className="rpp-lib-find-status" aria-live="polite">
+              {!q ? null : hits === 0 ? (
+                <>
+                  No guide titles match "{q}". Try a different word, or <Link to="/search">ask a question</Link>.
+                </>
+              ) : (
+                <>
+                  {hits} {hits === 1 ? "guide matches" : "guides match"} "{q}"
+                </>
+              )}
+            </p>
+          </div>
+          {!q && (
+            <>
+              <ul className="rpp-lib-jump">
+                {categories.map((c) => (
+                  <li key={c.id}>
+                    <a href={`#${c.id}`} className="rpp-lib-chip bg-transparent">
+                      {c.label} <span style={{ fontWeight: 400, color: "#1c1917" }}>({c.articles.length})</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="rpp-lib-topic">
+                <select
+                  className="rpp-lib-topic-select"
+                  aria-label="Jump to a topic"
+                  value=""
+                  onChange={(e) => e.target.value && jumpTo(e.target.value)}
+                >
+                  <option value="">Or jump to a topic…</option>
+                  {categories.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.label} ({c.articles.length})
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </>
+          )}
         </div>
 
-        {/* Category Sections */}
-        {categories.map((cat, catIndex) => (
+        {/* Category Sections (while searching, only groups with a matching guide show) */}
+        {shown.map((cat, catIndex) => cat.articles.length === 0 ? null : (
           <section
             key={cat.id}
             id={cat.id}
@@ -170,6 +260,16 @@ const GuidesAndResources = () => {
             </div>
           </section>
         ))}
+
+        {/* Looking for a professional? (moved here from above the list, Oct 28, 2026) */}
+        <div className="rpp-lib-pro">
+          <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#142c52", margin: 0 }}>
+            Looking for a professional instead of a guide?{" "}
+            <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
+              Browse the Find a Professional directory <RppArrow />
+            </Link>
+          </p>
+        </div>
 
         <DisclaimerSection />
       </main>

@@ -119,9 +119,9 @@ export default function ArticlesCarousel() {
   const CARD_W = 304;
 
   return (
-    <section ref={sectionRef} style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", minHeight: 640 }}>
+    <section ref={sectionRef} className="rpp-car-section" style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", minHeight: 640 }}>
       {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 48 }}>
+      <div className="rpp-car-head" style={{ textAlign: "center", marginBottom: 48 }}>
         <span
           style={{
             display: "block",
@@ -155,6 +155,9 @@ export default function ArticlesCarousel() {
              Laptops keep three covers from the left edge. */
           .rpp-car-view { --cw: ${CARD_W}px; --cg: ${CARD_GAP}px; --lead: 0px; }
           @media (max-width: 700px) {
+            /* Less air around the carousel on phones so the guide list starts sooner. */
+            section.rpp-car-section.rpp-car-section { padding: 30px 16px 26px !important; min-height: 0 !important; }
+            .rpp-car-section .rpp-car-head.rpp-car-head { margin-bottom: 22px !important; }
             .rpp-car-view { --cw: min(${CARD_W}px, 68vw); --cg: 14px; --lead: calc(50% - var(--cw) / 2); }
           }
           @media (max-width: 1120px) {
