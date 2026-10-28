@@ -52,6 +52,13 @@ const LIBRARY_CSS = `
   .rpp-lib-topic { display: none; max-width: 760px; margin: 0 auto; }
   .rpp-lib-topic select.rpp-lib-topic-select { width: 100%; min-height: 52px; padding: 10px 44px 10px 14px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 17px !important; font-weight: 600; color: #142c52; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%231B3A6B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center; border: 1px solid #c9a9ac; border-radius: 12px; -webkit-appearance: none; appearance: none; }
   .rpp-lib-pro { background: #f7f4ef; padding: 32px 24px; text-align: center; }
+  /* Keep the longer title on one line on small phones (360px wide). */
+  @media (max-width: 389px) {
+    html body main h1.rpp-hero-band-text.rpp-lib-h1.rpp-lib-h1 { font-size: 24px !important; }
+  }
+  @media (max-width: 340px) {
+    html body main h1.rpp-hero-band-text.rpp-lib-h1.rpp-lib-h1 { font-size: 21px !important; }
+  }
   @media (max-width: 640px) {
     .rpp-lib-jump.rpp-lib-jump { display: none; }
     .rpp-lib-topic { display: block; }
@@ -102,7 +109,7 @@ const GuidesAndResources = () => {
       <main id="main-content">
       
         {/* Blue band — matches site standard */}
-        <HeroBandTitle as="h1">Guides &amp; Featured Articles</HeroBandTitle>
+        <HeroBandTitle as="h1" className="rpp-lib-h1">Guides &amp; Featured Articles</HeroBandTitle>
 
         {/* Oct 27, 2026 (David couldn't find the covered articles from here): the magazine-cover
             carousel from the Articles Library, with a link to that page. The same articles
