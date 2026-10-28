@@ -7,13 +7,13 @@ import AskBox from "@/components/AskBox";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2034.webp";
-import heroDesktop3840 from "@/assets/hero/rpp-hero-2034-3840.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2034-mobile.webp";
-import heroMobile1800 from "@/assets/hero/rpp-hero-2034-mobile-1800.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2035.webp";
+import heroDesktop3840 from "@/assets/hero/rpp-hero-2035-3840.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2035-mobile.webp";
+import heroMobile1800 from "@/assets/hero/rpp-hero-2035-mobile-1800.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2034-mobile-900.webp";
+import heroMobile900 from "@/assets/hero/rpp-hero-2035-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -123,7 +123,14 @@ const RPPHomeV3 = () => {
           />
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2034 (Oct 27, 2026, evening): David's final render, 4340x1450 from a real
+            /* rpp-hero-2035 (Oct 27, 2026, night): David's re-render that keeps the sunlight
+               reflected on the navy wall (2034 had lost it). Same 4340x1450 size. At David's
+               request every crop keeps the whole right side of the scene: the laptop band is the
+               full width (no trim), so the mirror starts at 53% and clears the headline; the
+               phone crop is anchored to the right edge (left window to the plant, mirror out).
+               Left wall blended toward cream behind the headline as before.
+
+/* rpp-hero-2034 (Oct 27, 2026, evening): David's final render, 4340x1450 from a real
                upscaler, much sharper than 2033 (garden, trim and rug). Same 1920x420 band and
                1200x430 phone shape. The band is cut 3945 wide from x=285 (trimmed ~10% so the
                door is a little larger), still shrunk to 1920 and 3840, never enlarged. Left wall
