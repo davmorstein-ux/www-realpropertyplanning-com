@@ -903,6 +903,11 @@ const RPPHomeV3 = () => {
               main h3.rpp-rmv-heading.rpp-rmv-heading, main h3.rpp-rmv-heading span { white-space: normal !important; }
               /* Oct 27, 2026: the longer name ("What's My Home Worth After Remodeling?") was cut
                  to "...Worth After…" by a sitewide card rule that clamps headings to two lines. */
+              /* Oct 27, 2026 (David: the titles "don't stick out enough"): the h3s were set to 900
+                 but their two coloured spans were forced to regular 400 by the sitewide rule for
+                 spans inside cards, so the titles rendered light. */
+              html body main a.rpp-coc-card h3.coc-heading span,
+              html body main a.rpp-coc-card h3.rpp-rmv-heading span { font-weight: 800 !important; letter-spacing: -0.01em; }
               html body main h3.rpp-rmv-heading.rpp-rmv-heading { display: block !important; -webkit-line-clamp: unset !important; overflow: visible !important; font-size: 36px !important; }
               @media (max-width: 640px) {
                 html body main h3.rpp-rmv-heading.rpp-rmv-heading { font-size: 24px !important; }
