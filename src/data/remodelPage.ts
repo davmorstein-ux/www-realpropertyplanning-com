@@ -11,8 +11,8 @@
 
 export const REMODEL_PAGE = {
   PATH: "/whats-my-remodel-worth",
-  TITLE: "What's My Remodel Worth?",
-  SEO_TITLE: "What's My Remodel Worth? King, Snohomish & Pierce County Remodel Value Calculator | Real Property Planning",
+  TITLE: "What's My Home Worth After Remodeling?",
+  SEO_TITLE: "What's My Home Worth After Remodeling? Remodel Value Calculator for King, Snohomish & Pierce | Real Property Planning",
   DESCRIPTION:
     "Free calculator for King, Snohomish and Pierce County homes: look up your house, choose what you would remodel and at what quality, and see two values afterward, a broker's view of what buyers pay and an appraiser's view of what a refinance appraisal is likely to support. Built from about 27,000 King County, 14,000 Snohomish County and 15,000 Pierce County home sales.",
   PUBLISHED: "2026-10-13",

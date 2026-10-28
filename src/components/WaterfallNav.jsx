@@ -101,7 +101,7 @@ const CATEGORIES = [
       { name: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh" },
       { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
       { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
-      { name: "What's My Remodel Worth?", href: "/whats-my-remodel-worth" },
+      { name: "What's My Home Worth After Remodeling?", href: "/whats-my-remodel-worth" },
       { name: "Find a Professional", href: "/resources" },
       { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },

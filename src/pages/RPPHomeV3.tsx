@@ -901,8 +901,11 @@ const RPPHomeV3 = () => {
               }
               .rpp-rmv-card .rpp-coc-opt-name { font-weight: 600 !important; }
               main h3.rpp-rmv-heading.rpp-rmv-heading, main h3.rpp-rmv-heading span { white-space: normal !important; }
+              /* Oct 27, 2026: the longer name ("What's My Home Worth After Remodeling?") was cut
+                 to "...Worth After…" by a sitewide card rule that clamps headings to two lines. */
+              html body main h3.rpp-rmv-heading.rpp-rmv-heading { display: block !important; -webkit-line-clamp: unset !important; overflow: visible !important; font-size: 36px !important; }
               @media (max-width: 640px) {
-                main h3.rpp-rmv-heading.rpp-rmv-heading { font-size: 24px !important; }
+                html body main h3.rpp-rmv-heading.rpp-rmv-heading { font-size: 24px !important; }
                 .rpp-rmv-card .rpp-coc-cta.rpp-coc-cta { white-space: normal; padding: 14px 22px !important; }
               }
 
@@ -1067,8 +1070,10 @@ const RPPHomeV3 = () => {
                 <div className="rpp-coc-layout">
                   <div className="rpp-coc-left">
                     <h3 className="rpp-rmv-heading" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", margin: 0, lineHeight: 1.1 }}>
-                      <span style={{ color: "#272421" }}>What's My</span>{" "}
-                      <span style={{ color: "#14283a" }}>Remodel Worth?</span>
+                      {/* Renamed Oct 27, 2026 (David): "What's My Remodel Worth?" read as the
+                          remodel's cost. */}
+                      <span style={{ color: "#272421" }}>What's My Home Worth</span>{" "}
+                      <span style={{ color: "#14283a" }}>After Remodeling?</span>
                     </h3>
                     <span className="rpp-calc-sub">See how much value a remodel could add to your home in King, Snohomish &amp; Pierce Counties.</span>
                     <span className="rpp-coc-cta">Try the calculator</span>

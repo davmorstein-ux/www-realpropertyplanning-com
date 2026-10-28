@@ -119,7 +119,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
      { name: "All Guides & Articles", href: "/guides-and-resources" },
       { name: "All Calculators", href: "/calculators" },
       { name: "Newsletter", href: "/newsletter" },
-      { name: "What's My Remodel Worth?", href: "/whats-my-remodel-worth" },
+      { name: "What's My Home Worth After Remodeling?", href: "/whats-my-remodel-worth" },
       { name: "Articles Library", href: "/articles" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { name: "Independent Living Costs", href: "/articles/independent-living-costs" },

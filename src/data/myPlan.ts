@@ -361,7 +361,7 @@ function estatePlan(a: Answers): PlanStep[] {
       title: "Check whether updates would pay for themselves",
       why: "Light work (paint, flooring, cleaning) often pays back; big remodels usually don't in an estate sale. Run the numbers for this house before spending.",
       links: [
-        { title: "What's My Remodel Worth? (calculator)", href: "/whats-my-remodel-worth" },
+        { title: "What's My Home Worth After Remodeling? (calculator)", href: "/whats-my-remodel-worth" },
         { title: "Sell as-is or fix it up?", href: "/guides/sell-inherited-house-as-is-or-fix" },
       ],
     });

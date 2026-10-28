@@ -65,7 +65,7 @@ export const FAMILY_EXTRA_CALCULATORS: CalculatorEntry[] = [
 export const HOME_CALCULATORS: CalculatorEntry[] = [
   {
     href: "/whats-my-remodel-worth",
-    title: "What's My Remodel Worth?",
+    title: "What's My Home Worth After Remodeling?",
     blurb: "King, Snohomish and Pierce County homeowners: look up your house, enter what you would spend on each part, and see a broker's and an appraiser's value afterward.",
   },
 ];
