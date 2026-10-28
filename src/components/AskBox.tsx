@@ -167,9 +167,12 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
           <span className="rpp-ask-try">Try:</span>
           {examples.map((x, i) => {
             const shown = typed === null ? x.length : Math.max(0, Math.min(x.length, typed - offsets[i]));
-            const typing = typed !== null && shown > 0 && shown < x.length;
+            // The box being typed in (it stays lit through the pause after it, then the
+            // highlight moves on with the next question).
+            const active = typed ? offsets.reduce((a, o, j) => (typed > o ? j : a), -1) : -1;
+            const typing = i === active;
             return (
-              <button key={x} type="button" className="rpp-ask-example" aria-label={x} onClick={() => { setQ(x); run(x); }}>
+              <button key={x} type="button" className={typing ? "rpp-ask-example rpp-ask-ex-active" : "rpp-ask-example"} aria-label={x} onClick={() => { setQ(x); run(x); }}>
                 {/* Typing effect (Oct 27, 2026, David): the full text holds the pill's size and
                     is what crawlers, screen readers and no-JS visitors get; the typed copy sits
                     over it. */}
@@ -262,7 +265,10 @@ const CSS = `
 .rpp-ask .rpp-ask-ex-wrap { position: relative; display: block; }
 .rpp-ask .rpp-ask-ex-ghost { visibility: hidden; }
 .rpp-ask .rpp-ask-ex-typed { position: absolute; inset: 0; }
-.rpp-ask .rpp-ask-ex-caret { display: inline-block; width: 2px; height: 1.05em; margin-left: 1px; vertical-align: -0.15em; background: currentColor; animation: rpp-ask-caret 0.8s steps(1) infinite; }
+.rpp-ask button.rpp-ask-example { transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease; }
+.rpp-ask button.rpp-ask-example.rpp-ask-ex-active { border-color: var(--ask, #1B3A6B); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ask, #1B3A6B) 14%, transparent); background: #ffffff; }
+@media (prefers-reduced-motion: reduce) { .rpp-ask button.rpp-ask-example { transition: none; } }
+.rpp-ask .rpp-ask-ex-caret { display: inline-block; width: 2.5px; height: 1.1em; margin-left: 2px; vertical-align: -0.18em; border-radius: 1px; background: var(--ask, #1B3A6B); animation: rpp-ask-caret 0.8s steps(1) infinite; }
 @keyframes rpp-ask-caret { 50% { opacity: 0; } }
 .rpp-ask .rpp-ask-answer { margin-top: 18px; background: #f7f5f0; border-radius: 10px; padding: 16px 18px; }
 .rpp-ask .rpp-ask-label { font-size: 15px; font-weight: 700; color: var(--ask); margin-bottom: 4px; }
