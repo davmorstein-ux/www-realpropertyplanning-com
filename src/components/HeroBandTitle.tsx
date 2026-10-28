@@ -184,6 +184,11 @@ const HeroBandTitle = ({
      estate pages render above this band, hides itself there and is drawn
      after the tabs instead, so the photo sits directly under the site menu. */
   const strip = !bare && isH1 && !stripInHeader(pathname) ? sectionStripFor(pathname) : null;
+  /* On the custom-header strip pages (Long-Term Care, Downsizing, ...) the
+     header already draws the photo band and tabs; a dark LABEL band there only
+     repeated the page title under the tabs, so it stands down (owner, Oct 28,
+     2026). Their own h1 below is untouched. */
+  if (!bare && !isH1 && stripInHeader(pathname) && sectionStripFor(pathname)) return null;
   if (strip) {
     return (
       <>
