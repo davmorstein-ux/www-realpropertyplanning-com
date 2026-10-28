@@ -75,6 +75,36 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
   const [failed, setFailed] = useState(false);
   const [res, setRes] = useState<AskResult | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
+  /* Example questions "type themselves" one after another the first time the list scrolls
+     into view (Oct 27, 2026, David). null = show them whole: before the page's code runs,
+     with reduced motion, or if the list is already on screen when the page loads. */
+  const examplesRef = useRef<HTMLDivElement>(null);
+  const [typed, setTyped] = useState<number | null>(null);
+  const PAUSE = 14; // characters' worth of pause between questions
+  const offsets = examples.reduce<number[]>((acc, x, i) => { acc.push(i === 0 ? 0 : acc[i - 1] + examples[i - 1].length + PAUSE); return acc; }, []);
+  const totalChars = examples.length ? offsets[offsets.length - 1] + examples[examples.length - 1].length : 0;
+  useEffect(() => {
+    const el = examplesRef.current;
+    if (!el || typeof window === "undefined" || !("IntersectionObserver" in window)) return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) return; // already visible: leave whole
+    setTyped(0);
+    let timer: number | undefined;
+    const io = new IntersectionObserver((entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
+      let n = 0;
+      timer = window.setInterval(() => {
+        n += 1;
+        setTyped(n);
+        if (n >= totalChars) { window.clearInterval(timer); setTyped(null); }
+      }, 38);
+    }, { threshold: 0.6 });
+    io.observe(el);
+    return () => { io.disconnect(); if (timer) window.clearInterval(timer); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const run = async (text: string) => {
     const question = text.trim();
@@ -133,13 +163,28 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
         </button>
       </form>
       {!res && !failed && examples.length > 0 && (
-        <div className="rpp-ask-examples">
+        <div className="rpp-ask-examples" ref={examplesRef}>
           <span className="rpp-ask-try">Try:</span>
-          {examples.map((x) => (
-            <button key={x} type="button" className="rpp-ask-example" onClick={() => { setQ(x); run(x); }}>
-              {x}
-            </button>
-          ))}
+          {examples.map((x, i) => {
+            const shown = typed === null ? x.length : Math.max(0, Math.min(x.length, typed - offsets[i]));
+            const typing = typed !== null && shown > 0 && shown < x.length;
+            return (
+              <button key={x} type="button" className="rpp-ask-example" aria-label={x} onClick={() => { setQ(x); run(x); }}>
+                {/* Typing effect (Oct 27, 2026, David): the full text holds the pill's size and
+                    is what crawlers, screen readers and no-JS visitors get; the typed copy sits
+                    over it. */}
+                <span className="rpp-ask-ex-wrap" aria-hidden="true">
+                  <span className={typed === null ? "rpp-ask-ex-full" : "rpp-ask-ex-full rpp-ask-ex-ghost"}>{x}</span>
+                  {typed !== null && (
+                    <span className="rpp-ask-ex-typed">
+                      {x.slice(0, shown)}
+                      {typing && <span className="rpp-ask-ex-caret" />}
+                    </span>
+                  )}
+                </span>
+              </button>
+            );
+          })}
         </div>
       )}
 
@@ -214,6 +259,11 @@ const CSS = `
 .rpp-ask button.rpp-ask-example { font-size: 15px; line-height: 1.3; text-align: left; padding: 8px 12px; border: 1px solid #d9d3c8; border-radius: 999px; background: #faf8f4; color: #1c1917; cursor: pointer; min-height: 40px; }
 @media (hover: hover) { .rpp-ask button.rpp-ask-example:hover { border-color: var(--ask); } }
 .rpp-ask .rpp-ask-result:focus { outline: none; }
+.rpp-ask .rpp-ask-ex-wrap { position: relative; display: block; }
+.rpp-ask .rpp-ask-ex-ghost { visibility: hidden; }
+.rpp-ask .rpp-ask-ex-typed { position: absolute; inset: 0; }
+.rpp-ask .rpp-ask-ex-caret { display: inline-block; width: 2px; height: 1.05em; margin-left: 1px; vertical-align: -0.15em; background: currentColor; animation: rpp-ask-caret 0.8s steps(1) infinite; }
+@keyframes rpp-ask-caret { 50% { opacity: 0; } }
 .rpp-ask .rpp-ask-answer { margin-top: 18px; background: #f7f5f0; border-radius: 10px; padding: 16px 18px; }
 .rpp-ask .rpp-ask-label { font-size: 15px; font-weight: 700; color: var(--ask); margin-bottom: 4px; }
 .rpp-ask .rpp-ask-q { font-size: 19px; font-weight: 700; line-height: 1.35; color: #14283a; margin-bottom: 6px; }
