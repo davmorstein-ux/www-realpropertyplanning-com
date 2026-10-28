@@ -400,14 +400,18 @@ const Header = () => {
                   className="rpp-logo-home"
                   aria-label="Real Property Planning — go to the homepage"
                   title="Go to the homepage"
-                  style={{ display: "flex", alignItems: "center", position: "relative" }}
+                  style={{ display: "flex", alignItems: "center", position: "relative", flex: "none" }}
                 >
+                  {/* Oct 28, 2026 (David: logo looked small on phones). It was height 35 with
+                      width auto inside a shrinking flex row, so it was squeezed to 138px wide and
+                      drawn about 26px tall. Now a set width that grows with the screen: 158px on
+                      a 360px phone, ~172px at 390, 180px max. Height follows (1280x240 file). */}
                   <img
                     src={logo640}
                     srcSet={`${logo480} 480w, ${logo640} 640w, ${logo1280} 1280w`}
                     alt=""
-                    style={{ height: 35, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
-                    sizes="185px"
+                    style={{ width: "clamp(150px, 44vw, 180px)", height: "auto", maxWidth: "none", display: "block" }}
+                    sizes="180px"
                     decoding="async"
                     width={1280}
                     height={240}
