@@ -145,11 +145,18 @@ export default function ArticlesCarousel() {
       </div>
 
       {/* Carousel viewport with arrows on either side */}
-      <div style={{ position: "relative", maxWidth: 960, margin: "0 auto" }}>
+      <div className="rpp-car-view" style={{ position: "relative", maxWidth: 960, margin: "0 auto" }}>
         <style dangerouslySetInnerHTML={{ __html: `
           .rpp-car-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; }
           .rpp-car-arrow.is-prev { left: -72px; }
           .rpp-car-arrow.is-next { right: -72px; }
+          /* Card size and spacing as variables so phones can centre one cover with a slice of
+             its neighbours either side (Oct 28, 2026, David: carousel not centred on mobile).
+             Laptops keep three covers from the left edge. */
+          .rpp-car-view { --cw: ${CARD_W}px; --cg: ${CARD_GAP}px; --lead: 0px; }
+          @media (max-width: 700px) {
+            .rpp-car-view { --cw: min(${CARD_W}px, 68vw); --cg: 14px; --lead: calc(50% - var(--cw) / 2); }
+          }
           @media (max-width: 1120px) {
             .rpp-car-arrow.is-prev { left: 8px; }
             .rpp-car-arrow.is-next { right: 8px; }
@@ -167,8 +174,9 @@ export default function ArticlesCarousel() {
           ref={trackRef}
           style={{
             display: "flex",
-            gap: CARD_GAP,
-            transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
+            gap: "var(--cg)",
+            marginLeft: "var(--lead)",
+            transform: `translateX(calc(-${pos} * (var(--cw) + var(--cg))))`,
             transition: transitioning ? `transform ${slideMs}ms ${slideMs > 1000 ? "cubic-bezier(0.45, 0.05, 0.25, 1)" : "cubic-bezier(0.16, 1, 0.3, 1)"}` : "none",
             willChange: "transform",
           }}
@@ -186,7 +194,7 @@ export default function ArticlesCarousel() {
                 borderRadius: 4,
                 overflow: "hidden",
                 flexShrink: 0,
-                width: `${CARD_W}px`,
+                width: "var(--cw)",
                 aspectRatio: "3 / 4",
                 boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
                 transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
