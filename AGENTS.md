@@ -72,14 +72,17 @@ navy style (names kept for the call sites). The global
 class name holding "btn" on a dark band needs its own white override.
 Maroon (#6b1b22 / #7f1d1d) is retired; do not bring it back for buttons.
 
-## Hero images: homepage only
+## Hero images: homepage, plus one photo band per topic section (Oct 28, 2026)
 
-Only the homepage has a hero image; every other page opens with its title band
-and goes straight to content (AFH Club's photo hero is its own landing page and
-stays). Oct 21, 2026: the last full-width heroes were removed from the shared
-layouts for Planning Before a Crisis, Serving as Executor & Trustee, the six
-senior-living housing pages and the probate attorney resource page. Do not add
-a hero image to a layout or page.
+Only the homepage has a full hero image. The one exception, chosen by the owner
+on Oct 28, 2026: pages that a topic dropdown (Estate & Probate, Senior
+Transitions, Find a Professional, Guides & Tools) links to show that section's
+long, narrow photo band (150px computers, 130px phones) with the page title on
+it, then the section tabs. It replaces the dark title band there. Four photos,
+one per section, in `src/assets/section-bands/`; rules and page lists in
+`src/lib/sectionStrip.ts`; drawn by `HeroBandTitle` (or the header, for the eight
+custom-header pages). AFH Club's photo hero is its own landing page and stays.
+Do not add any other hero image to a layout or page.
 
 ## Tile hover: no marching ants (Oct 21, 2026)
 

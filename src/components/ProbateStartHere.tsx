@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { sectionStripFor, stripInHeader } from "@/lib/sectionStrip";
 import { PROBATE_START_HERE as T } from "@/data/probateStartHere";
 
 /**
@@ -27,7 +28,11 @@ const CSS = `
 .psh-band a.psh-link { color: #1B3A6B !important; font-size: 16px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 `;
 
-export default function ProbateStartHere() {
+export default function ProbateStartHere({ inBand = false }: { inBand?: boolean }) {
+  const { pathname } = useLocation();
+  /* On section-photo-band pages HeroBandTitle draws this bar after the tabs
+     (inBand), so the copy the page places above the band stands down. */
+  if (!inBand && sectionStripFor(pathname) && !stripInHeader(pathname)) return null;
   return (
     <div className="psh-band" role="navigation" aria-label="Start here for probate">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />

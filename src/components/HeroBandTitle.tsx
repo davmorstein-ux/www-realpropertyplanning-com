@@ -1,5 +1,9 @@
 import { Children, ElementType, ReactNode } from "react";
 import { useLocation } from "react-router-dom";
+import { sectionStripFor, stripInHeader } from "@/lib/sectionStrip";
+import { SectionBand, SectionTabs } from "@/components/SectionStrip";
+import ProbateStartHere from "@/components/ProbateStartHere";
+import { PROBATE_START_HERE_ROUTES } from "@/data/probateStartHere";
 
 interface HeroBandTitleProps {
   children: ReactNode;
@@ -172,6 +176,26 @@ const HeroBandTitle = ({
     isCompactH1 ? "rpp-hero-band-text--compact" : "",
     className,
   ].filter(Boolean).join(" ");
+
+  /* SECTION PHOTO BAND (owner, Oct 28, 2026, option "E"). On a page that a
+     topic dropdown links to, the dark band gives way to that section's photo
+     band with the title on it, followed by the section tabs. Rules and the page
+     list: src/lib/sectionStrip.ts. The "New to probate?" bar, which those
+     estate pages render above this band, hides itself there and is drawn
+     after the tabs instead, so the photo sits directly under the site menu. */
+  const strip = !bare && isH1 && !stripInHeader(pathname) ? sectionStripFor(pathname) : null;
+  if (strip) {
+    return (
+      <>
+        <SectionBand
+          photo={strip.photo}
+          title={<Tag className={["rppbd-title", className].filter(Boolean).join(" ")}>{transformChildren(children)}</Tag>}
+        />
+        <SectionTabs strip={strip} />
+        {PROBATE_START_HERE_ROUTES.includes(pathname.replace(/\/+$/, "") || "/") && <ProbateStartHere inBand />}
+      </>
+    );
+  }
 
   if (bare) {
     return (

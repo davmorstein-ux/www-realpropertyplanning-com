@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
-import { STRIP_LABELS, STRIP_MENUS, sectionStripFor } from "@/lib/sectionStrip";
+import { CUSTOM_HEADER_ROUTES, STRIP_LABELS, STRIP_MENUS, STRIP_PHOTOS, sectionStripFor } from "@/lib/sectionStrip";
 
 const stripItems = PRIMARY_NAV.filter((m) => STRIP_MENUS.includes(m.href)).flatMap((m) => m.items ?? []);
 
@@ -47,5 +47,14 @@ describe("section strip", () => {
       if (!s) continue; // AFH Club pages
       expect(s.links.filter((l) => l.current).length).toBe(1);
     }
+  });
+
+  it("gives every strip menu a photo band", () => {
+    for (const href of STRIP_MENUS) expect(STRIP_PHOTOS[href]).toBeTruthy();
+    expect(sectionStripFor("/realtor")?.photo).toBe("professional");
+  });
+
+  it("lists only real strip pages as custom-header pages", () => {
+    for (const r of CUSTOM_HEADER_ROUTES) expect(sectionStripFor(r)).not.toBeNull();
   });
 });

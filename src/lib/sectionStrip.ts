@@ -7,7 +7,13 @@
  *
  * Owner's decisions (Oct 28, 2026, from the canvas mock-up):
  * - Charcoal, one colour for every strip (not each menu's own colour; the site
- *   already has too much blue). Text-only pills, no icons or arrows.
+ *   already has too much blue). Text tabs, the current page in brick red #B0352A
+ *   with a bar under it (pills were the first version; the owner found them busy).
+ * - Each section has its own photo band (owner's option "E"): a long, narrow
+ *   photo with a 25% cream fade and a soft cream glow behind the page title.
+ *   It replaces the dark title band on strip pages and sits between the site
+ *   menu and the tabs. Photos made by the owner in ChatGPT, cut by Claude to
+ *   1920x225 (computers) and 1170x390 (phones) in src/assets/section-bands/.
  * - Topic menus only: Estate & Probate, Senior Transitions, Find a Professional,
  *   Guides & Tools. Not About. AFH Club already has its own quick-links bar
  *   (src/components/AFHClubQuickLinks.tsx), so no strip on any AFH Club page.
@@ -26,6 +32,34 @@ import { isAFHClubPath } from "@/lib/afhQuickLinks";
 
 /** Menus that get a strip, by the menu button's own href. */
 export const STRIP_MENUS = ["/probate-estate-sales", "/senior-transitions", "/featured-professionals", "/guides-and-resources"];
+
+/** Which photo each section's band uses, by menu href. */
+export type BandPhoto = "estate" | "senior" | "professional" | "guides";
+export const STRIP_PHOTOS: Record<string, BandPhoto> = {
+  "/probate-estate-sales": "estate",
+  "/senior-transitions": "senior",
+  "/featured-professionals": "professional",
+  "/guides-and-resources": "guides",
+};
+
+/**
+ * Strip pages whose title is NOT the shared HeroBandTitle band (they have their
+ * own custom headers). On these, the header draws the photo band (without a
+ * title) and the tabs above the page's own heading. Every other strip page gets
+ * both from HeroBandTitle, with the page title on the photo. A strip page must
+ * be in exactly one of the two groups, or it shows the band twice or not at
+ * all — checked against the built pages (see the commit for Oct 28, 2026).
+ */
+export const CUSTOM_HEADER_ROUTES = [
+  "/washington-probate-guide",
+  "/long-term-care",
+  "/downsizing-preparing-for-transition",
+  "/calculators",
+  "/newsletter",
+  "/whats-my-remodel-worth",
+  "/articles",
+  "/probate-glossary",
+];
 
 /** Short labels for the strip, by page href. */
 export const STRIP_LABELS: Record<string, string> = {
@@ -63,6 +97,7 @@ export interface StripLink {
 }
 export interface SectionStrip {
   heading: string;
+  photo: BandPhoto;
   links: StripLink[];
 }
 
@@ -81,8 +116,12 @@ export const sectionStripFor = (pathname: string): SectionStrip | null => {
     if (!items.some((i) => i.href === path)) continue;
     return {
       heading: menu.lines.join(" ").replace(/\s+/g, " "),
+      photo: STRIP_PHOTOS[menu.href],
       links: items.map((i) => ({ label: STRIP_LABELS[i.href] ?? i.name, href: i.href, current: i.href === path })),
     };
   }
   return null;
 };
+
+/** True when this page's strip is drawn by the header (custom-header pages). */
+export const stripInHeader = (pathname: string) => CUSTOM_HEADER_ROUTES.includes(clean(pathname));
