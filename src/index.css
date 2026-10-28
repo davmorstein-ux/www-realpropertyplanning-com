@@ -3928,7 +3928,7 @@ main #rpp-tagline .rpp-tagline-rule {
   /* Backstop for the <picture> in RPPHomeV3.tsx (Oct 25, 2026): the box takes
      the shape of the file shown at each width, so no browser can draw the
      phone crop at the desktop band's shape. Change these with the artwork. */
-  aspect-ratio: 1920 / 364;
+  aspect-ratio: 1920 / 420;
 }
 @media (max-width: 900px) {
   .rpp-hero-img { aspect-ratio: 1200 / 430; }
