@@ -7,13 +7,13 @@ import AskBox from "@/components/AskBox";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2033.webp";
-import heroDesktop3840 from "@/assets/hero/rpp-hero-2033-3840.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2033-mobile.webp";
-import heroMobile1800 from "@/assets/hero/rpp-hero-2033-mobile-1800.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2034.webp";
+import heroDesktop3840 from "@/assets/hero/rpp-hero-2034-3840.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2034-mobile.webp";
+import heroMobile1800 from "@/assets/hero/rpp-hero-2034-mobile-1800.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2033-mobile-900.webp";
+import heroMobile900 from "@/assets/hero/rpp-hero-2034-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -123,7 +123,14 @@ const RPPHomeV3 = () => {
           />
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2033 (Oct 27, 2026): David's new entryway render, upscaled with a real
+            /* rpp-hero-2034 (Oct 27, 2026, evening): David's final render, 4340x1450 from a real
+               upscaler, much sharper than 2033 (garden, trim and rug). Same 1920x420 band and
+               1200x430 phone shape. The band is cut 3945 wide from x=285 (trimmed ~10% so the
+               door is a little larger), still shrunk to 1920 and 3840, never enlarged. Left wall
+               blended 55% toward cream behind the headline as before; the mirror starts at 52%
+               of the width, clear of the text.
+
+/* rpp-hero-2033 (Oct 27, 2026): David's new entryway render, upscaled with a real
                upscaler to 4096x1368 (the 2032 file was soft: an AI enlargement of a small
                render). Same scene and colours. The desktop band is now 1920x420 (4.57:1, was
                1920x364) at David's choice, so the ceiling above the door AND the floor and rug
