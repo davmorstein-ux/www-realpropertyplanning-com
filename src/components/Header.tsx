@@ -7,6 +7,7 @@ import { Suspense, useEffect, useLayoutEffect, useState, useRef } from "react";
 const useBeforePaint = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import { Link, useLocation } from "react-router-dom";
 import AFHClubQuickLinks from "@/components/AFHClubQuickLinks";
+import SectionStrip from "@/components/SectionStrip";
 import WaterfallNav from "./WaterfallNav";
 import { lazy } from "@/lib/chunkRecovery";
 /* Loaded when search is opened (Oct 6, 2026): search sits behind an icon on
@@ -846,6 +847,9 @@ const Header = () => {
       {isMobile && (
         <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 65px)", flexShrink: 0 }} />
       )}
+      {/* Section strip: the other topics from the same dropdown, on pages a topic
+          menu links to (owner, Oct 28, 2026). Never on AFH Club pages. */}
+      <SectionStrip />
       {/* AFH Club quick links: renders only on AFH Club pages (owner, Oct 1, 2026). */}
       <AFHClubQuickLinks />
     </>
