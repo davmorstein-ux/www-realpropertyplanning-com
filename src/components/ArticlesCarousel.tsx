@@ -69,7 +69,9 @@ function ArrowButton({ dir, onClick }: { dir: "prev" | "next"; onClick: () => vo
   );
 }
 
-export default function ArticlesCarousel() {
+/** showHeading=false drops the "Real Property Planning / Featured Articles" heading, for a page
+ *  whose title band already says it (Guides & Featured Articles, Oct 28, 2026, David). */
+export default function ArticlesCarousel({ showHeading = true }: { showHeading?: boolean } = {}) {
   const [pos, setPos] = useState(START);
   const [transitioning, setTransitioning] = useState(false);
   const [slideMs, setSlideMs] = useState(AUTO_MS_SLIDE);
@@ -114,14 +116,14 @@ export default function ArticlesCarousel() {
     };
   }, [autoNext, paused, isVisible, prefersReducedMotion]);
 
-  // Card width: container is 960px, 3 cards with 2 gaps of 24px each
-  // (960 - 48) / 3 = 304px per card
-  const CARD_W = 304;
+  // Card width. Was 304px (three across); reduced Oct 28, 2026 (David: only the cover titles
+  // are readable, so the covers can be smaller and free up space). Four across in 960px.
+  const CARD_W = 220;
 
   return (
-    <section ref={sectionRef} className="rpp-car-section" style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", minHeight: 640 }}>
+    <section ref={sectionRef} className={showHeading ? "rpp-car-section" : "rpp-car-section is-bare"} aria-label={showHeading ? undefined : "Featured articles"} style={{ background: "#f7f4ef", padding: showHeading ? "64px 24px 72px" : "40px 24px 44px", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", minHeight: showHeading ? 560 : 0 }}>
       {/* Header */}
-      <div className="rpp-car-head" style={{ textAlign: "center", marginBottom: 48 }}>
+      {showHeading && <div className="rpp-car-head" style={{ textAlign: "center", marginBottom: 48 }}>
         <span
           style={{
             display: "block",
@@ -142,7 +144,7 @@ export default function ArticlesCarousel() {
           Featured Articles
         </h2>
         <div style={{ width: 48, height: 2, background: "#1B3A6B", margin: "16px auto 0", borderRadius: 1 }} />
-      </div>
+      </div>}
 
       {/* Carousel viewport with arrows on either side */}
       <div className="rpp-car-view" style={{ position: "relative", maxWidth: 960, margin: "0 auto" }}>
@@ -157,8 +159,9 @@ export default function ArticlesCarousel() {
           @media (max-width: 700px) {
             /* Less air around the carousel on phones so the guide list starts sooner. */
             section.rpp-car-section.rpp-car-section { padding: 30px 16px 26px !important; min-height: 0 !important; }
+            section.rpp-car-section.is-bare.is-bare { padding-top: 22px !important; }
             .rpp-car-section .rpp-car-head.rpp-car-head { margin-bottom: 22px !important; }
-            .rpp-car-view { --cw: min(${CARD_W}px, 68vw); --cg: 14px; --lead: calc(50% - var(--cw) / 2); }
+            .rpp-car-view { --cw: min(${CARD_W}px, 52vw); --cg: 14px; --lead: calc(50% - var(--cw) / 2); }
           }
           @media (max-width: 1120px) {
             .rpp-car-arrow.is-prev { left: 8px; }
@@ -208,8 +211,8 @@ export default function ArticlesCarousel() {
               <img
                 src={article.img}
                 alt={article.title}
-                width={304}
-                height={405}
+                width={CARD_W}
+                height={Math.round((CARD_W * 4) / 3)}
                 loading="lazy"
                 decoding="async"
                 style={{
@@ -218,7 +221,7 @@ export default function ArticlesCarousel() {
                   objectFit: "cover",
                   objectPosition: "top",
                   display: "block",
-                }} sizes="(max-width: 768px) 100vw, 304px"/>
+                }} sizes="(max-width: 700px) 52vw, 220px"/>
 
               {/* Hover overlay */}
               <div

@@ -102,7 +102,7 @@ const GuidesAndResources = () => {
       <main id="main-content">
       
         {/* Blue band — matches site standard */}
-        <HeroBandTitle as="h1">Guides &amp; Articles</HeroBandTitle>
+        <HeroBandTitle as="h1">Guides &amp; Featured Articles</HeroBandTitle>
 
         {/* Oct 27, 2026 (David couldn't find the covered articles from here): the magazine-cover
             carousel from the Articles Library, with a link to that page. The same articles
@@ -110,7 +110,7 @@ const GuidesAndResources = () => {
         {/* Oct 28, 2026: the "Browse the Articles Library" link that sat here was removed (the
             covers and the list below both lead to the articles), and the "Looking for a
             professional" line moved to the end of the page, so the list starts sooner. */}
-        <ArticlesCarousel />
+        <ArticlesCarousel showHeading={false} />
 
         {/* How many, a search box, and a way to jump to a group */}
         <div style={{ background: "#fff", padding: "30px 20px 28px" }}>
