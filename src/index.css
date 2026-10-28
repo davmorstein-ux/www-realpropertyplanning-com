@@ -6458,18 +6458,30 @@ html body main.apf .apf-pick-label.apf-pick-label {
 html body main.apf .apf-pick-label.apf-pick-label > span:first-child::after {
   content: "";
   display: inline-block;
-  width: 34px;
+  width: 30px; /* the arrow (22px) + an 8px gap */
   height: 1px;
 }
+/* Oct 28, 2026 (David: "the arrows are covering up the text"): the arrow was
+   30px, taller than one line of the title (about 23px), so it rose into the
+   line above and sat on its last words. Now 22px, which fits inside the last
+   line, and bottom-aligned to that line (bottom = the label's bottom padding
+   + half the leftover line height), so the spacer above is enough to keep
+   every word clear. Keep the spacer = arrow + 8px if the size changes. */
 html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow {
   position: absolute;
-  right: 10px;
-  bottom: 9px;
+  width: 22px;
+  height: 22px;
+  right: 12px;
+  bottom: 12px;
+}
+@media (min-width: 900px) {
+  html body main.apf .apf-grid-4 .apf-pick-label.apf-pick-label > .apf-arrow { width: 20px; height: 20px; right: 10px; bottom: 11px; }
+  html body main.apf .apf-grid-4 .apf-pick-label.apf-pick-label > span:first-child::after { width: 28px; }
 }
 @media (max-width: 640px) {
   html body main.apf .apf-pick-label.apf-pick-label { padding: 10px 10px 11px 12px !important; }
-  html body main.apf .apf-pick-label.apf-pick-label > span:first-child::after { width: 30px; }
-  html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow { right: 8px; bottom: 8px; }
+  html body main.apf .apf-pick-label.apf-pick-label > span:first-child::after { width: 28px; }
+  html body main.apf .apf-pick-label.apf-pick-label > .apf-arrow { width: 20px; height: 20px; right: 9px; bottom: 12px; }
 }
 
 /* ============================================================

@@ -129,8 +129,8 @@ const HomepagePopularResources = () => {
         position: absolute !important;
         right: 14px !important;
         bottom: 14px !important;
-        width: 36px !important;
-        height: 36px !important;
+        width: 28px !important;
+        height: 28px !important;
         margin: 0 !important;
         padding: 0 !important;
         box-sizing: border-box;
@@ -301,8 +301,8 @@ const HomepagePopularResources = () => {
         .rpp-pr-body.rpp-pr-body { align-items: center !important; justify-content: center !important; text-align: center !important; }
         .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation { text-align: center !important; }
         .rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation { font-size: 20px !important; }
-        .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; bottom: 10px !important; width: 34px !important; height: 34px !important; }
-        .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg { width: 34px; height: 34px; }
+        .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; bottom: 12px !important; width: 26px !important; height: 26px !important; }
+        .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg { width: 26px; height: 26px; }
       }
     ` }} />
 
@@ -328,7 +328,7 @@ const HomepagePopularResources = () => {
                   <span className="rpp-pr-situation">{r.situation}</span>
                 </span>
                 <span className="rpp-pr-arrow" aria-hidden="true">
-                  <RppArrow size={36} />
+                  <RppArrow size={28} />
                 </span>
               </Link>
             </li>
