@@ -123,6 +123,8 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           font-weight: 700;
           color: #272421 !important;
           line-height: 1.2;
+          margin-top: auto;
+          padding-top: 12px;
         }
         .rpp-calcswitch-per.rpp-calcswitch-per {
           font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
@@ -135,7 +137,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           font-weight: 400;
           color: #1c1917 !important;
           line-height: 1.4;
-          margin-top: 2px;
+          margin-top: 6px;
         }
       ` }} />
 
@@ -158,13 +160,17 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
                 <Icon className="rpp-calcswitch-icon" aria-hidden="true" strokeWidth={2.6} />
                 <span className="rpp-calcswitch-name rpp-calcswitch-name">{o.shortLabel}</span>
               </span>
+              <span className="rpp-calcswitch-blurb rpp-calcswitch-blurb">{o.blurb}</span>
+              {/* Price at the foot of the tile (David, Oct 28, 2026: the icon
+                  and name sat cramped on top of it). margin-top: auto pins it
+                  to the bottom, so the prices line up across a row even when
+                  the descriptions run to different lengths. */}
               <span className="rpp-calcswitch-price rpp-calcswitch-price">
                 {formatCurrency(care.waMonthly)}
                 <span className="rpp-calcswitch-per rpp-calcswitch-per">
                   &nbsp;/ month{care.estimate ? " (estimate)" : " (median)"}
                 </span>
               </span>
-              <span className="rpp-calcswitch-blurb rpp-calcswitch-blurb">{o.blurb}</span>
             </Link>
           );
         })}
