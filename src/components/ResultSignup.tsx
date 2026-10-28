@@ -12,7 +12,7 @@
  */
 import { Link } from "react-router-dom";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import { CHECKLIST_PDF } from "@/data/myPlan";
+import { CHECKLIST_PDF } from "@/data/checklistPdf";
 
 type Kind = "care" | "remodel";
 

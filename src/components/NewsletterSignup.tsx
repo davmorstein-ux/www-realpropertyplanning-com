@@ -2,8 +2,7 @@
 import { useId, useState, useEffect, useRef } from "react";
 import { trackSignup } from "@/lib/siteTracking";
 import { useLocation } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { CHECKLIST_PDF } from "@/data/myPlan";
+import { CHECKLIST_PDF } from "@/data/checklistPdf";
 
 /**
  * Newsletter signup.
@@ -117,6 +116,9 @@ async function subscribeRequest(payload: {
   form_loaded_at: number;
   turnstile_token: string;
 }): Promise<void> {
+  /* Loaded on submit, not with the page (Oct 28, 2026, code splitting): the Supabase
+     library was ~210 KB of every page's first download, for a box most visitors never use. */
+  const { supabase } = await import("@/integrations/supabase/client");
   const { error } = await supabase.functions.invoke("newsletter-subscribe", { body: payload });
   if (error) throw error;
 }

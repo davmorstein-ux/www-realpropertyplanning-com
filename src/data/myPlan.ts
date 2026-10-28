@@ -21,7 +21,7 @@
  */
 
 export const MY_PLAN_PATH = "/my-plan";
-export const CHECKLIST_PDF = "/family-home-planning-checklist.pdf";
+export { CHECKLIST_PDF } from "./checklistPdf";
 
 export type Situation = "estate" | "parent";
 
