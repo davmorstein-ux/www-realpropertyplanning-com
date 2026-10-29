@@ -18,19 +18,19 @@
     "exploreBadge": "Explore",
     "tiles": {
       "planAhead": {
-        "title": "I Want to Plan Ahead",
+        "title": "Plan Ahead",
         "imgAlt": "Older couple reviewing an estate plan together at home"
       },
       "helpingParent": {
-        "title": "I'm Helping an Aging Parent",
+        "title": "Help an Aging Parent",
         "imgAlt": "Adult daughter hugging her senior mother on a couch"
       },
       "handlingEstate": {
-        "title": "I'm Handling an Estate",
+        "title": "Handle an Estate",
         "imgAlt": "Family reviewing an estate property plan with documents"
       },
       "needProfessional": {
-        "title": "I Need a Professional",
+        "title": "Find a Professional",
         "imgAlt": "Man at a laptop browsing professional resources"
       }
     }

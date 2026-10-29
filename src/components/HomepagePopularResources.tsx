@@ -138,7 +138,6 @@ const HomepagePopularResources = () => {
         border: 0 !important;
         color: var(--pr-c) !important;
         background: transparent !important;
-        filter: drop-shadow(0 2px 2px color-mix(in srgb, var(--pr-c) 45%, transparent));
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;

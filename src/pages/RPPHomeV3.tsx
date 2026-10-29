@@ -451,88 +451,45 @@ const RPPHomeV3 = () => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
                 return (
-                  <Link key={key} to={href} data-home-tile={key} data-pulse className="group block" style={{ textDecoration: "none" }}>
-                    {/* marquee-hover lives HERE, on the rounded div, and only
-                        here. A second copy on the Link above drew a second,
-                        SQUARE ring around the whole tile — the Link has no
-                        border radius for the ring to inherit. */}
-                    <div
-                      className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
-                      style={{ borderRadius: 16 }}
-                    >
-                      {/* 3D TILE (Oct 4, 2026, owner's 3D mock-ups): a raised
-                          frame in the tile's colour around the photo and a
-                          bevelled label panel, built in CSS (.rpp-tile3d below)
-                          so the label stays live text — readable by search
-                          engines and screen readers, and translated. */}
-                      <div
-                        className="rpp-tile3d"
-                        style={{ ["--tile" as string]: bgColor, backgroundColor: bgColor }}
-                      >
-                        <div className="rpp-tile3d-photo" style={{ position: "relative" }}>
-                          {/* Sizing lives in .rpp-funnel-img below, not inline:
-                              the height has to differ by breakpoint. width and
-                              height attributes are the photos' real proportions
-                              so the browser reserves the space before they load. */}
-                          <img
-                            src={TILE_SMALL[imgSrc] ?? imgSrc}
-                            srcSet={TILE_SMALL[imgSrc] ? `${TILE_SMALL[imgSrc]} 640w, ${imgSrc} 1160w` : undefined}
-                            sizes="(max-width: 1023px) 50vw, 260px"
-                            alt={imgAlt}
-                            loading="lazy"
-                            width={1160}
-                            height={793}
-                            className="rpp-funnel-img"
-                          />
-                          {/* The mobile-only "EXPLORE ->" pill that sat here was
-                              removed (Sept 2026). The title below already carries
-                              the sitewide CTA arrow, so phones showed two arrows
-                              per card while desktop showed one, and the pill
-                              covered part of each photo. */}
-                        </div>
-                        <div
-                          className="rpp-tile3d-label"
-                          style={{
-                            backgroundColor: bgColor,
-                            /* WAS 1.1rem vertical. Two lines of 20px at 1.25 line-height is
-                               50px; 1.1rem a side added 35px on top, so a third of
-                               the band was empty and the 70px minHeight below never
-                               applied. 0.7rem lands a two-line label in a ~72px
-                               band, still clearing the floor for one-line locales. */
-                            padding: "0.7rem 1.25rem",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                            gap: "0.75rem",
-                            minHeight: "70px",
-                          }}
-                        >
-                          <span
-                            className="rpp-funnel-cta"
-                            style={{
-                              fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                              fontSize: 20,
-                              fontWeight: 700,
-                              color: "#ffffff",
-                              lineHeight: 1.25,
-                              margin: 0,
-                              display: "inline-flex",
-                              alignItems: "center",
-                            }}
-                          >
-                            {title}
+                  <Link
+                    key={key}
+                    to={href}
+                    data-home-tile={key}
+                    data-pulse
+                    className="group block rpp-jt-link"
+                    style={{ textDecoration: "none", ["--tile" as string]: bgColor }}
+                  >
+                    {/* JOURNEY TILE (Oct 29, 2026, David: the site "looks dated"; he
+                        approved a flatter mock-up). White card, full-bleed photo,
+                        white label with a short rule and a thin ring arrow in the
+                        tile's colour. Replaces the Oct 4 bevelled 3D frame (thick
+                        coloured band, inset highlights, heavy shadow). Live text,
+                        so search engines, screen readers and translations still
+                        read it. Classes are rpp-jt-*: no card/tile/cta/btn/section
+                        substrings, which index.css restyles. */}
+                    <div className="rpp-jt">
+                      <div className="rpp-jt-photo">
+                        {/* width/height are the photos' real 1160x793 shape, so the
+                            browser reserves the space before they load. */}
+                        <img
+                          src={TILE_SMALL[imgSrc] ?? imgSrc}
+                          srcSet={TILE_SMALL[imgSrc] ? `${TILE_SMALL[imgSrc]} 640w, ${imgSrc} 1160w` : undefined}
+                          sizes="(max-width: 1023px) 50vw, 260px"
+                          alt={imgAlt}
+                          loading="lazy"
+                          width={1160}
+                          height={793}
+                          className="rpp-funnel-img"
+                        />
+                      </div>
+                      <div className="rpp-jt-label">
+                        <span className="rpp-jt-rule" aria-hidden="true" />
+                        <span className="rpp-jt-row">
+                          <span className="rpp-jt-title">{title}</span>
+                          <span className="rpp-jt-arrow" aria-hidden="true">
+                            <RppArrow size="100%" />
                           </span>
-                          <span className="rpp-tile3d-arrow" aria-hidden="true">
-                            {/* The site's one arrow (RppArrow): a white disc with
-                                the chevron cut out, so it shows the tile colour. */}
-                            <RppArrow size={26} />
-                          </span>
-                          {/* Arrow is the sitewide CSS ::after (CTA ARROW block
-                              in index.css) via the rpp-funnel-cta class on the
-                              span above — the hand-placed chevron this replaces
-                              was one of the reasons arrows behaved differently
-                              from button to button. */}
-                        </div>
+                        </span>
                       </div>
                     </div>
                   </Link>
@@ -562,87 +519,51 @@ const RPPHomeV3 = () => {
      here and the width/height attributes on the <img> together.
 
      Doubled class + !important because index.css carries global img rules. */
-  /* 3D TILES. The frame is the tile colour with a light-to-dark sheen on top,
-     an inner highlight along the top edge and a dark one along the bottom,
-     and a two-layer drop shadow; on hover the tile lifts and the shadow grows.
-     The photo and the label sit inside as inset panels. Live text throughout. */
-  /* Equal heights across the row: the frame fills the grid cell and the label
-     panel takes the leftover space, so one-line and two-line labels line up. */
-  .group:has(> .marquee-hover > .rpp-tile3d), .marquee-hover:has(> .rpp-tile3d) { height: 100%; }
-  .rpp-tile3d {
+  /* JOURNEY TILES (Oct 29, 2026). Flat white cards: the photo carries the
+     colour, the tile's own colour appears only as the short rule above the
+     title and the ring arrow. Lift + coloured border on hover (computers only),
+     the double pulse on click. Equal heights across a row. */
+  .rpp-jt-link.rpp-jt-link { height: 100%; }
+  .rpp-jt {
     display: flex;
     flex-direction: column;
     height: 100%;
-    position: relative;
-    border-radius: 16px;
-    padding: 6px;
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.04) 38%, rgba(0,0,0,0.14) 100%);
-    box-shadow:
-      inset 0 1.5px 0 rgba(255,255,255,0.45),
-      inset 0 -3px 0 rgba(0,0,0,0.28),
-      0 2px 3px rgba(0,0,0,0.12),
-      0 10px 22px -6px rgba(0,0,0,0.30);
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .group:hover .rpp-tile3d, .group:focus-visible .rpp-tile3d {
-    transform: translateY(-4px);
-    box-shadow:
-      inset 0 1.5px 0 rgba(255,255,255,0.45),
-      inset 0 -3px 0 rgba(0,0,0,0.28),
-      0 4px 6px rgba(0,0,0,0.14),
-      0 18px 32px -8px rgba(0,0,0,0.38);
-  }
-  .rpp-tile3d-photo {
-    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e4ddd1;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.35);
+    box-shadow: 0 1px 2px rgba(28,25,23,0.06), 0 8px 20px -12px rgba(28,25,23,0.22);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   }
-  .rpp-tile3d-label.rpp-tile3d-label {
-    margin-top: 6px;
-    border-radius: 10px;
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.12));
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.30), inset 0 -2px 0 rgba(0,0,0,0.22);
+  @media (hover: hover) {
+    .group:hover .rpp-jt { transform: translateY(-2px); border-color: var(--tile); box-shadow: 0 2px 4px rgba(28,25,23,0.08), 0 14px 28px -14px rgba(28,25,23,0.30); }
+    .group:hover .rpp-jt-arrow.rpp-jt-arrow { transform: translateX(2px); }
   }
-  .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta {
-    font-size: 20px !important;
+  .rpp-jt-link:focus-visible .rpp-jt { outline: 3px solid var(--tile); outline-offset: 3px; }
+  .rpp-jt-photo { line-height: 0; }
+  .rpp-jt-label.rpp-jt-label {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 18px 18px;
+  }
+  .rpp-jt-rule.rpp-jt-rule { display: block; width: 28px; height: 3px; border-radius: 2px; background: var(--tile); margin: 0 0 12px; }
+  .rpp-jt-row.rpp-jt-row { flex: 1 1 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  /* index.css forces spans in links to 16px regular: restate size and weight. */
+  html body main .rpp-jt span.rpp-jt-title.rpp-jt-title {
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+    font-size: 22px !important;
     font-weight: 700 !important;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+    line-height: 1.22 !important;
+    color: #1c1917 !important;
+    letter-spacing: -0.005em;
   }
-  /* The circled arrow replaces the sitewide ::after arrow on these tiles. */
-  .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta::after { content: none !important; display: none !important; }
-  .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta { flex: 1 1 auto; min-width: 0; }
-  .rpp-tile3d-label.rpp-tile3d-label { padding: 0.7rem 0.85rem 0.7rem 1rem !important; gap: 0.5rem !important; flex: 1 1 auto; flex-direction: row !important; flex-wrap: nowrap !important; }
-  /* The lift and shadow are the hover cue here; the sitewide dashed marquee
-     ring would draw a second outline around the 3D frame. */
-  .marquee-hover:has(> .rpp-tile3d)::before { display: none !important; }
-  .rpp-tile3d-arrow.rpp-tile3d-arrow {
-    flex: 0 0 26px !important;
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-    border-radius: 999px;
-    /* Solid disc, heavy chevron (Oct 26, 2026): these tiles are already
-       coloured, so the disc is white and the chevron takes the tile colour,
-       the inverse of the Popular Resources tiles below. */
-    border: 0;
-    background-color: transparent;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.30));
-    transition: transform 0.18s ease;
-  }
-  .group:hover .rpp-tile3d-arrow.rpp-tile3d-arrow { transform: translateX(2px); }
+  .rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 34px; width: 34px; height: 34px; color: var(--tile); display: inline-flex; transition: transform 0.18s ease; }
+  .rpp-jt-arrow svg { width: 100%; height: 100%; vertical-align: 0 !important; }
 
-  /* PHONES (under 640px): the tiles run 2 x 2, about 155px wide each, so the
-     frame, label and arrow are scaled down to fit. The title stays 18px (the
-     site's minimum for this audience) and wraps to two or three lines; the
-     circled arrow is dropped because it would take a quarter of the label's
-     width — the whole tile is still the link. */
+  /* PHONES (under 640px): 2 x 2, about 165px wide each. Title 18px (the
+     site's minimum for this audience); the arrow stays, smaller, in the
+     label's bottom-right corner, with the last line kept clear of it. */
   @media (max-width: 639px) {
     /* index.css forces every multi-column grid to one column on phones with
        [class*="grid-cols-"]:not(...) at (0,2,0), which beats its own
@@ -650,22 +571,15 @@ const RPPHomeV3 = () => {
     .rpp-funnel-grid.rpp-funnel-grid.rpp-funnel-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
-    .rpp-tile3d.rpp-tile3d { padding: 4px; border-radius: 12px; }
-    .rpp-tile3d .rpp-tile3d-photo { border-radius: 8px; }
-    .rpp-tile3d-label.rpp-tile3d-label.rpp-tile3d-label {
-      margin-top: 4px;
-      border-radius: 8px;
-      padding: 0.55rem 0.6rem !important;
-      min-height: 0 !important;
-      justify-content: flex-start !important;
-    }
-    .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta.rpp-funnel-cta {
-      font-size: 18px !important;
-      line-height: 1.2 !important;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-    .rpp-tile3d .rpp-tile3d-arrow.rpp-tile3d-arrow { display: none !important; }
+    .rpp-jt { border-radius: 12px; }
+    .rpp-jt-label.rpp-jt-label { padding: 10px 10px 11px 12px; position: relative; }
+    .rpp-jt-rule.rpp-jt-rule { width: 22px; margin-bottom: 6px; }
+    /* A block row: the title is inline text, so the row's own line-height
+       (main's 1.7 at 16px = 28px) sets the line spacing. Pin it to the title's. */
+    html body main .rpp-jt .rpp-jt-row.rpp-jt-row { display: block; font-size: 18px !important; line-height: 1.2 !important; }
+    html body main .rpp-jt span.rpp-jt-title.rpp-jt-title { font-size: 18px !important; line-height: 1.2 !important; }
+    html body main .rpp-jt span.rpp-jt-title.rpp-jt-title::after { content: ""; display: inline-block; width: 26px; height: 1px; }
+    .rpp-jt-arrow.rpp-jt-arrow { position: absolute; right: 9px; bottom: 11px; width: 20px; height: 20px; }
   }
 
   .rpp-funnel-img.rpp-funnel-img {
