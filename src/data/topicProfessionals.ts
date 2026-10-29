@@ -54,7 +54,8 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   [`${PL}/why-planning-early`]: ["elderLaw", "financialPlanning"],
   [`${PL}/conversations-to-have`]: ["careManagers"],
   [`${PL}/legal-documents`]: ["elderLaw", "legalPlans"],
-  [`${PL}/property-questions`]: ["realEstate", "mortgage"],
+  /* Oct 29, 2026 (David): no mortgage lenders here; the page tells readers to ask a CPA about the taxes. */
+  [`${PL}/property-questions`]: ["realEstate", "cpas"],
   [`${PL}/when-a-move-is-coming`]: ["moveManagers", "seniorLiving"],
 
   // Estate, Probate & Inherited Property (no attorneys until a probate attorney is listed)
