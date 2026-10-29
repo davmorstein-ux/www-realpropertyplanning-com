@@ -211,7 +211,9 @@ const PrimaryNav = () => {
              "header a { font-size: max(1rem, 16px) !important }". That is why
              ABOUT rendered smaller than its neighbours. */
           font-size: 13px !important;
-          font-weight: 600;
+          /* 650 (was 600), Oct 29, 2026 header refresh: a touch heavier so the
+             labels hold their own on the lighter header. DM Sans is variable. */
+          font-weight: 650;
           letter-spacing: 0.07em;
           text-transform: uppercase;
           /* Dark on the cream header. These were white when the header was
@@ -353,8 +355,10 @@ const PrimaryNav = () => {
             min-height: 0 !important;
             white-space: nowrap;
           }
+          /* 11px (was 14px), Oct 29, 2026 header refresh: still visible, but
+             no longer as loud as the label beside it. */
           html body header .rpp-primarynav .rpp-pn-caret {
-            font-size: 14px !important;
+            font-size: 11px !important;
             margin-top: 0 !important;
           }
           html body header div.rpp-header-navrow.rpp-header-navrow {

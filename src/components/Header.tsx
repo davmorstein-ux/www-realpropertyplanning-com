@@ -1,5 +1,5 @@
 
-import { Suspense, useEffect, useLayoutEffect, useState, useRef } from "react";
+import { Suspense, useEffect, useLayoutEffect, useState, useRef, type CSSProperties } from "react";
 
 /* Layout effect in the browser (runs before paint, so the phone header appears
    with no flicker); plain effect during the build-time render, where layout
@@ -17,13 +17,47 @@ import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 /* Oct 27, 2026 (performance): logo and marble from src/assets (content-named, long-cached;
    public/ files had no cache lifetime) plus a 480px logo for phones. */
-import logo480 from "@/assets/perf/rpp-logo-v26-480.webp";
-import logo640 from "@/assets/perf/rpp-logo-v26-640.webp";
-import logo1280 from "@/assets/perf/rpp-logo-v26-1280.webp";
+import logo480 from "@/assets/perf/rpp-logo-v27-480.webp";
+import logo640 from "@/assets/perf/rpp-logo-v27-640.webp";
+import logo1280 from "@/assets/perf/rpp-logo-v27-1280.webp";
 import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp";
 import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
 
 const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
+
+/* Header controls (Oct 29, 2026 refresh, from the mock-up David approved):
+   thin navy rings for search and call, and a navy outlined pill for Get
+   Connected. They replace the "engraved into the marble" squares and etched
+   icons of Oct 24-26. 44px tap targets throughout. */
+const HEADER_NAVY = "#1B3A6B";
+const RING_BUTTON: CSSProperties = {
+  width: 44,
+  minWidth: 44,
+  height: 44,
+  padding: 0,
+  borderRadius: "50%",
+  border: `1.75px solid ${HEADER_NAVY}`,
+  boxSizing: "border-box",
+  background: "transparent",
+  color: HEADER_NAVY,
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexShrink: 0,
+  cursor: "pointer",
+  textDecoration: "none",
+};
+const SearchGlyph = ({ size }: { size: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true" focusable="false">
+    <circle cx="10.5" cy="10.5" r="6.5" />
+    <path d="M15.5 15.5 20 20" />
+  </svg>
+);
+const PhoneGlyph = ({ size }: { size: number }) => (
+  <svg className="rpp-header-phone-icon" viewBox="0 0 24 24" width={size} height={size} style={{ width: size, height: size }} fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
+  </svg>
+);
 
 /* Contact was removed from the top nav — it now lives on the About page and in
    the WaterfallNav quick-links strip. The CALL button covers urgent contact.
@@ -44,16 +78,17 @@ const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-s
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x240 (rpp-logo-v26: the 3D navy stone mark with a
-   charcoal "PLANNING" under PROPERTY and a garnet door, on a transparent
-   background; v14 has slimmer, more widely spaced REAL PROPERTY letters than
-   v13, and v15 adds back the chimney on the A's left slope (top level with
-   the E), which ChatGPT had dropped; v18 keeps its right side, widens it to the left, and blends its base into the roof so the chimney and A read as one piece; v19 removes a soft ghost fringe on its left edge and casts its shadow left like the letters; v20 squares its top-left corner; v22 sets it to 1.5x the v20 width (right side fixed); v23 gives its top edge the same thickness as the L's; v24 moves the door left so its tightest gaps to each leg of the A are equal (22/23px at full size) and it touches neither; v25 removes a dark smudge left between the door's top-right corner and the A; v26 shrinks the keyhole to ~60%. Oct 24, 2026; replaced the flat v11).
+/* The logo file is 1280x250 (rpp-logo-v27, Oct 29, 2026: David's new logo,
+   cleaned up from a ChatGPT render, with PLANNING centred under PROPERTY and
+   the chimney kept; transparent background). The full-size master is
+   docs/brand/rpp-logo-v27-master.png (2125x415); regenerate the 480/640/1280
+   webp files from it, never from an earlier export. Replaced v26 (1280x240,
+   the 3D stone mark).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
    here would silently break that alignment. */
-const LOGO_ASPECT = 1280 / 240;
+const LOGO_ASPECT = 1280 / 250;
 const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 
 /* Search field width. It shares the nav tier now rather than sitting beneath
@@ -180,27 +215,16 @@ const Header = () => {
         border-radius: 3px;
       }
       .rpp-curated-link { display: inline-flex; }
-      /* Outlined header buttons (Get Connected, phone): fill navy on hover. */
-      .rpp-header-outline { transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
-      /* "Get Connected" chiselled into the stone (Oct 26, 2026): a dark line
-         along the top of the letters and a light catch below. */
-      a.rpp-header-connect.rpp-header-outline { text-shadow: 0 -1px 0 rgba(11,24,48,0.45), 0 1px 0 rgba(255,255,255,0.95); }
+      /* Ring buttons and the Get Connected pill (Oct 29, 2026 refresh) fill
+         navy on hover, on devices that really hover. */
+      .rpp-header-outline, header .rpp-header-search-toggle { transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
       @media (hover: hover) {
-        a.rpp-header-outline.rpp-header-outline:hover { text-shadow: none !important; box-shadow: none !important; }
-        a.rpp-header-outline.rpp-header-outline:hover svg path[filter] { filter: none; }
+        a.rpp-header-outline.rpp-header-outline:hover,
+        header button.rpp-header-search-toggle.rpp-header-search-toggle:hover { background: #1B3A6B !important; color: #ffffff !important; border-color: #1B3A6B !important; }
       }
-      @media (hover: hover) {
-        a.rpp-header-outline.rpp-header-outline:hover { background: #1B3A6B !important; color: #ffffff !important; border-color: #1B3A6B !important; }
-      }
-      a.rpp-header-outline.rpp-header-outline:focus-visible { outline: 2px solid #1B3A6B; outline-offset: 2px; }
-      /* Not inside a media query: the button is icon-only at every width, so
-         the icon needs a size at every width. It was scoped to >=769px when the
-         button still had a text label to fall back on. */
-      .rpp-header-phone-icon {
-        width: 21px;
-        height: 21px;
-        flex-shrink: 0;
-      }
+      a.rpp-header-outline.rpp-header-outline:focus-visible,
+      header button.rpp-header-search-toggle:focus-visible { outline: 2px solid #1B3A6B; outline-offset: 2px; }
+      .rpp-header-phone-icon { flex-shrink: 0; }
       @media (max-width: 950px) {
         .rpp-curated-link { display: none !important; }
       }
@@ -316,9 +340,14 @@ const Header = () => {
              generated pattern with a real marble photograph David supplied,
              warmed to the cream and softened (veins at ~90% of the photo's
              own depth) so it stays subtle and evenly spread. */
+          /* Oct 29, 2026 header refresh (David approved the mock-up): a
+             62% cream wash over the same photo makes the marble a faint
+             texture rather than a stone slab, so the flatter tiles and ring
+             buttons below it don't fight it. Lower the 0.62 to bring the
+             veins back. */
           backgroundImage: isMobile
-            ? `url(${marbleMobile})`
-            : `url(${marbleDesktop})`,
+            ? `linear-gradient(rgba(250,248,244,0.62), rgba(250,248,244,0.62)), url(${marbleMobile})`
+            : `linear-gradient(rgba(250,248,244,0.62), rgba(250,248,244,0.62)), url(${marbleDesktop})`,
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
@@ -362,19 +391,12 @@ const Header = () => {
              Charcoal at low opacity rather than a fixed colour, so it holds up
              over the photograph on the homepage and over cream on interior
              pages without needing a second rule. */
-          borderBottom: "1px solid rgba(39,36,33,0.5)",
-          /* Oct 24, 2026: the marble reads as a stone slab projecting out over
-             the hero. Three parts, all subtle: a thin light line just above the
-             bottom edge (the slab's top face catching light), a short tight
-             shadow right under the edge (where the slab meets the wall), and a
-             wider soft shadow cast down onto the hero. Kept on interior pages
-             too, where it reads as the same ledge over the cream page. If this
-             ever looks heavy, lower the last two alphas, not the offsets. */
-          boxShadow:
-            /* Strengthened Oct 24, 2026 after David found the first pass too
-               faint: brighter top-face line, a shaded band inside the bottom
-               edge that reads as the slab's thickness, and deeper shadows. */
-            "inset 0 -2px 0 rgba(255,255,255,0.8), inset 0 -10px 10px -8px rgba(39,36,33,0.22), 0 3px 4px rgba(39,36,33,0.36), 0 16px 30px -6px rgba(39,36,33,0.38)",
+          /* Oct 29, 2026 header refresh: one warm hairline where the header
+             meets the page. It replaces the "stone ledge" (a 1px charcoal
+             border, an inset light line and two drop shadows cast onto the
+             hero, Oct 24), which visitors read as dated. */
+          borderBottom: "1px solid #ddd5c8",
+          boxShadow: "none",
           ...NAV_FONT,
           color: "#272421",
         }}
@@ -403,7 +425,10 @@ const Header = () => {
                   title="Go to the homepage"
                   style={{ display: "flex", alignItems: "center", position: "relative", flex: "none" }}
                 >
-                  {/* Oct 28, 2026 (David: logo looked small on phones). It was height 35 with
+                  {/* Oct 29, 2026 refresh: up to 184px wide (about 36px tall with the
+                      v27 file), a touch under the mock-up's 38px so it clears the
+                      search ring at 390px; on narrower phones it gives up width first, keeping a ~12px gap at 360px.
+                      Oct 28, 2026 (David: logo looked small on phones). It was height 35 with
                       width auto inside a shrinking flex row, so it was squeezed to 138px wide and
                       drawn about 26px tall. Now a set width that grows with the screen: 158px on
                       a 360px phone, ~172px at 390, 180px max. Height follows (1280x240 file). */}
@@ -411,11 +436,11 @@ const Header = () => {
                     src={logo640}
                     srcSet={`${logo480} 480w, ${logo640} 640w, ${logo1280} 1280w`}
                     alt=""
-                    style={{ width: "clamp(150px, 44vw, 180px)", height: "auto", maxWidth: "none", display: "block" }}
-                    sizes="180px"
+                    style={{ width: "clamp(150px, calc(100vw - 196px), 184px)", height: "auto", maxWidth: "none", display: "block" }}
+                    sizes="184px"
                     decoding="async"
                     width={1280}
-                    height={240}
+                    height={250}
                   />
                 </Link>
               </div>
@@ -444,130 +469,21 @@ const Header = () => {
                   aria-label={searchOpen ? "Close site search" : "Search the site"}
                   className="rpp-header-search-toggle"
                   style={{
-                    width: 44,
-                    minWidth: 44,
-                    height: 44,
-                    borderRadius: 6,
-                    /* Phones (Oct 24, 2026): no box. The magnifier is etched
-                       into the header stone like the hamburger bars, so the
-                       three marks on the left of the bar read as one family.
-                       The 44px tap target is unchanged; it still fills
-                       charcoal while the search row is open. */
-                    border: "none",
-                    background: searchOpen ? "#272421" : "transparent",
-                    color: searchOpen ? "#fff" : "#625c56",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    padding: 0,
+                    ...RING_BUTTON,
+                    /* Fills navy while the search row is open. */
+                    background: searchOpen ? HEADER_NAVY : "transparent",
+                    color: searchOpen ? "#fff" : HEADER_NAVY,
                   }}
                 >
-                  {/* viewBox cropped to the glyph's own edges so the magnifier is drawn
-                      at exactly the same height as the phone handset beside it
-                      (22px each); stroke 2 here renders ~2.4px, matching the
-                      handset's line weight. */}
-                  <svg viewBox="2.9 2.9 18.2 18.2" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" style={{ overflow: "visible" }}>
-                    {/* Etched-in look, same lighting as the hamburger bars:
-                        a dark shadow along the TOP inside edge of each stroke
-                        and a thin light line just BELOW it. Off while open,
-                        where the icon is white on charcoal. */}
-                    <defs>
-                      <filter id="rpp-etch-search" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
-                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
-                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
-                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
-                        <feComposite in2="lip" operator="in" result="highlight" />
-                        <feOffset in="SourceAlpha" dy="1" result="down2" />
-                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
-                        <feFlood floodColor="#141210" floodOpacity="0.8" />
-                        <feComposite in2="topEdge" operator="in" result="shade" />
-                        <feMerge>
-                          <feMergeNode in="highlight" />
-                          <feMergeNode in="SourceGraphic" />
-                          <feMergeNode in="shade" />
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <g filter={searchOpen ? undefined : "url(#rpp-etch-search)"}>
-                      <circle cx="11" cy="11" r="7" />
-                      <path d="m20 20-3.5-3.5" />
-                    </g>
-                  </svg>
+                  <SearchGlyph size={18} />
                 </button>
                 <a href="tel:2069003015"
                   className="rpp-header-phone"
-                  style={{
-                    ...NAV_FONT,
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
-                    /* Phones (Oct 24, 2026): the handset is etched into the
-                       header stone like the hamburger and search marks, in the
-                       logo's navy so it still reads as THE call button. The
-                       44px tap target and the aria-label are unchanged. */
-                    color: "#1B3A6B",
-                    /* Same flat navy as Get Connected (Oct 24, 2026). It was #17578f, a
-                       second, brighter blue left over from before the Oct 21
-                       sitewide navy decision, so the two buttons side by side
-                       read as two different blues. */
-                    background: "transparent",
-                    /* Square icon button, sized to sit level with the language
-                       switcher beside it. Height comes from the row (the parent
-                       stretches its children) so the two stay matched if either
-                       control's padding changes; width is pinned equal to that
-                       so it reads as a square rather than a pill. */
-                    padding: 0,
-                    borderRadius: 6,
-                    width: isMobile ? 44 : 42,
-                    minWidth: isMobile ? 44 : 42,
-                    /* Fixed height since the language switcher it used to match
-                       was removed (Sept 30, 2026); stretching alone left it flat. */
-                    height: isMobile ? 44 : 42,
-                    alignSelf: "center",
-                    textDecoration: "none",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  style={RING_BUTTON}
                   aria-label="Call Real Property Planning at (206) 900-3015"
                 >
-                  {/* Icon-only button. The number is no longer visible here, so
-                      the anchor's aria-label carries it for screen readers and
-                      the footer remains the place a reader can actually read the
-                      digits off the page. aria-hidden on the svg so the label is
-                      not announced twice. */}
-                  <svg
-                    className="rpp-header-phone-icon"
-                    viewBox="0.8 0.8 22.4 22.4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    width={22}
-                    height={22}
-                    style={{ overflow: "visible", width: 22, height: 22 }}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <defs>
-                      <filter id="rpp-etch-phone" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
-                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
-                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
-                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
-                        <feComposite in2="lip" operator="in" result="highlight" />
-                        <feOffset in="SourceAlpha" dy="1" result="down2" />
-                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
-                        <feFlood floodColor="#0b1830" floodOpacity="0.85" />
-                        <feComposite in2="topEdge" operator="in" result="shade" />
-                        <feMerge>
-                          <feMergeNode in="highlight" />
-                          <feMergeNode in="SourceGraphic" />
-                          <feMergeNode in="shade" />
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <path filter="url(#rpp-etch-phone)" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
-                  </svg>
+                  {/* Icon-only; the aria-label carries the number. */}
+                  <PhoneGlyph size={18} />
                 </a>
               </div>
             </nav>
@@ -627,7 +543,7 @@ const Header = () => {
                     sizes="(max-width: 950px) 245px, 292px"
                     decoding="async"
                     width={1280}
-                    height={240}
+                    height={250}
                   />
                 </Link>
               </div>
@@ -644,53 +560,13 @@ const Header = () => {
                   aria-label={searchOpen ? "Close site search" : "Search the site"}
                   className="rpp-header-search-toggle"
                   style={{
-                    width: 44,
-                    minWidth: 44,
-                    alignSelf: "stretch",
-                    borderRadius: 6,
-                    border: "2px solid",
-                    /* Engraved groove (Oct 26, 2026, David: "a little more
-                       engraved"): darker top and left walls, light bottom and
-                       right walls, a shadow inside the top edge and a light
-                       catch outside the bottom, as if cut into the marble. */
-                    borderColor: "rgba(30,27,24,0.55) rgba(255,255,255,0.75) rgba(255,255,255,0.9) rgba(30,27,24,0.45)",
-                    /* Carved into the stone: soft shadow inside the top edge,
-                       light catch below (Oct 26, 2026). */
-                    boxShadow: "inset 0 2px 3px rgba(0,0,0,0.22), inset 0 -1px 0 rgba(255,255,255,0.7), 0 1px 0 rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.08)",
-                    background: searchOpen ? "#272421" : "transparent",
-                    color: searchOpen ? "#fff" : "#272421",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
+                    ...RING_BUTTON,
+                    alignSelf: "center",
+                    background: searchOpen ? HEADER_NAVY : "transparent",
+                    color: searchOpen ? "#fff" : HEADER_NAVY,
                   }}
                 >
-                  {/* Larger magnifier (Oct 26, 2026, David): 26px, was 20. Etched
-                      into the stone like the phone header's marks (same filter);
-                      off while the search is open (white on charcoal). */}
-                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" style={{ overflow: "visible" }}>
-                    <defs>
-                      <filter id="rpp-etch-d-search" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
-                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
-                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
-                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
-                        <feComposite in2="lip" operator="in" result="highlight" />
-                        <feOffset in="SourceAlpha" dy="1" result="down2" />
-                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
-                        <feFlood floodColor="#141210" floodOpacity="0.85" />
-                        <feComposite in2="topEdge" operator="in" result="shade" />
-                        <feMerge>
-                          <feMergeNode in="highlight" />
-                          <feMergeNode in="SourceGraphic" />
-                          <feMergeNode in="shade" />
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <g filter={searchOpen ? undefined : "url(#rpp-etch-d-search)"}>
-                      <circle cx="11" cy="11" r="7" />
-                      <path d="m20 20-3.5-3.5" />
-                    </g>
-                  </svg>
+                  <SearchGlyph size={19} />
                 </button>
                 {searchOpen && (
                   <div
@@ -721,23 +597,22 @@ const Header = () => {
                     ...NAV_FONT,
                     display: "inline-flex",
                     alignItems: "center",
-                    padding: "0 18px",
-                    borderRadius: 6,
-                    border: "2px solid",
-                    /* Engraved groove (Oct 26, 2026, David: "a little more
-                       engraved"): darker top and left walls, light bottom and
-                       right walls, a shadow inside the top edge and a light
-                       catch outside the bottom, as if cut into the marble. */
-                    borderColor: "rgba(30,27,24,0.55) rgba(255,255,255,0.75) rgba(255,255,255,0.9) rgba(30,27,24,0.45)",
-                    boxShadow: "inset 0 2px 3px rgba(0,0,0,0.22), inset 0 -1px 0 rgba(255,255,255,0.7), 0 1px 0 rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.08)",
-                    background: "transparent",
-                    color: "#1B3A6B",
+                    alignSelf: "center",
+                    height: 44,
+                    boxSizing: "border-box",
+                    padding: "0 20px",
+                    /* Outlined navy pill (Oct 29, 2026 refresh); the faint
+                       white fill lifts it off the marble. */
+                    borderRadius: 999,
+                    border: `1.75px solid ${HEADER_NAVY}`,
+                    boxShadow: "none",
+                    background: "rgba(255,255,255,0.55)",
+                    color: HEADER_NAVY,
                     fontWeight: 700,
-                    fontSize: 15,
+                    fontSize: 16,
                     letterSpacing: "0.01em",
                     textDecoration: "none",
                     whiteSpace: "nowrap",
-                    alignSelf: "stretch",
                   }}
                 >
                   Get Connected
@@ -745,68 +620,11 @@ const Header = () => {
                 <a href="tel:2069003015"
                   ref={phoneRef}
                   className="rpp-header-phone rpp-header-outline"
-                  style={{
-                    /* Navy handset in the same outlined square as the search
-                       button (Oct 26, 2026, David). Was a solid navy square. */
-                    color: "#1B3A6B",
-                    background: "transparent",
-                    border: "2px solid",
-                    /* Engraved groove (Oct 26, 2026, David: "a little more
-                       engraved"): darker top and left walls, light bottom and
-                       right walls, a shadow inside the top edge and a light
-                       catch outside the bottom, as if cut into the marble. */
-                    borderColor: "rgba(30,27,24,0.55) rgba(255,255,255,0.75) rgba(255,255,255,0.9) rgba(30,27,24,0.45)",
-                    boxShadow: "inset 0 2px 3px rgba(0,0,0,0.22), inset 0 -1px 0 rgba(255,255,255,0.7), 0 1px 0 rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.08)",
-                    borderRadius: 6,
-                    textDecoration: "none",
-                    /* Square icon button matching the LanguageSwitcher beside
-                       it. The parent sets alignItems: "stretch", so height
-                       comes from the row and the two stay level; width is
-                       pinned to the same 44 the switcher uses for its compact
-                       box, so this reads as a square, not a pill. */
-                    padding: 0,
-                    width: 44,
-                    minWidth: 44,
-                    alignSelf: "stretch",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  style={{ ...RING_BUTTON, alignSelf: "center" }}
                   aria-label="Call Real Property Planning at (206) 900-3015"
                 >
-                  {/* Icon-only: the digits are no longer painted here, so the
-                      anchor's aria-label carries them for assistive tech.
-                      aria-hidden on the svg so it is not announced twice. */}
-                  <svg
-                    className="rpp-header-phone-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.1"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <defs>
-                      <filter id="rpp-etch-d-phone" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
-                        <feOffset in="SourceAlpha" dy="0.9" result="down" />
-                        <feComposite in="down" in2="SourceAlpha" operator="out" result="lip" />
-                        <feFlood floodColor="#ffffff" floodOpacity="0.95" />
-                        <feComposite in2="lip" operator="in" result="highlight" />
-                        <feOffset in="SourceAlpha" dy="1" result="down2" />
-                        <feComposite in="SourceAlpha" in2="down2" operator="out" result="topEdge" />
-                        <feFlood floodColor="#0b1830" floodOpacity="0.85" />
-                        <feComposite in2="topEdge" operator="in" result="shade" />
-                        <feMerge>
-                          <feMergeNode in="highlight" />
-                          <feMergeNode in="SourceGraphic" />
-                          <feMergeNode in="shade" />
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <path filter="url(#rpp-etch-d-phone)" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
-                  </svg>
+                  {/* Icon-only; the aria-label carries the number. */}
+                  <PhoneGlyph size={19} />
                 </a>
               </div>
             </div>
