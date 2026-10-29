@@ -74,7 +74,7 @@ const steps = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "The Washington Executor's 10-Step Checklist for Handling Real Estate",
+  name: "The WA Executor's 10-Step Checklist for Handling Real Estate",
   description:
     "A practical free resource for Washington executors, trustees, and families handling estate real estate.",
   step: steps.map((s, i) => ({
@@ -89,8 +89,8 @@ const WashingtonExecutorsChecklist = () => {
   return (
     <>
       <SEOHead
-        title="Washington Executor's 10-Step Checklist for Handling Real Estate | Real Property Planning"
-        description="A practical free resource for Washington executors, trustees, and families handling estate real estate. Learn the 10 key steps to protect the property, understand value, and move forward with confidence."
+        title="WA Executor's 10-Step Checklist for Handling Real Estate | Real Property Planning"
+        description="A practical free resource for Washington State (WA) executors, trustees, and families handling estate real estate. Learn the 10 key steps to protect the property, understand value, and move forward with confidence."
         canonical="https://realpropertyplanning.com/resources/washington-executors-10-step-checklist"
         jsonLd={jsonLd}
       />

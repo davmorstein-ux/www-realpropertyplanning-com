@@ -122,7 +122,7 @@ const ARTICLES = [
     description: "How to pass real estate to your children — and the tradeoffs each method carries.",
   },
   {
-    title: "Hospice Care in Washington",
+    title: "Hospice Care in Washington State",
     href: "/articles/hospice-care-washington",
     minutes: 6,
     listenMinutes: 5,

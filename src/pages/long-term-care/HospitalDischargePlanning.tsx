@@ -20,16 +20,16 @@ const HospitalDischargePlanning = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Planning Your Hospital Discharge: A Guide for Washington Families"
-        description="A comprehensive guide to hospital discharge planning in Washington State — what questions to ask, understanding your options, and how to avoid readmission after a hospital stay."
+        title="Planning Your Hospital Discharge: A Guide for Washington State Families"
+        description="A comprehensive guide to hospital discharge planning in Washington State (WA) — what questions to ask, understanding your options, and how to avoid readmission after a hospital stay."
       />
       <Header />
       <main id="main-content">
-<HeroBandTitle as="h1">Planning Your Hospital Discharge: A Guide for Washington Families</HeroBandTitle>
+<HeroBandTitle as="h1">Planning Your Hospital Discharge: A Guide for Washington State Families</HeroBandTitle>
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">
-            <h2 className={h2Class + " mt-0"}>Planning Your Hospital Discharge: A Guide for Washington Families</h2>
+            <h2 className={h2Class + " mt-0"}>Planning Your Hospital Discharge: A Guide for Washington State Families</h2>
             <p className={leadClass}>
               The moment of discharge is not the time to start planning. The families who do best are the ones who began
               asking questions on the day of admission.

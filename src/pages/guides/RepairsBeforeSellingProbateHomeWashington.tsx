@@ -127,7 +127,7 @@ const relatedCards = [
 
 const jsonLd = articleSchema({
   headline: "What Repairs Should Be Made Before Selling a Probate Home?",
-  description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip.",
+  description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State (WA) — and which ones to skip.",
   url: "/guides/repairs-before-selling-probate-home-washington",
   datePublished: "2026-04-21",
   dateModified: "2026-04-21",
@@ -158,8 +158,8 @@ const CardGrid = ({ items, accent }: { items: Card[]; accent: "green" | "amber" 
 const RepairsBeforeSellingProbateHomeWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning"
-      description="Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip."
+      title="What Repairs Should Be Made Before Selling a Probate Home in WA? | Real Property Planning"
+      description="Real Property Planning explains which repairs are worth making before selling an estate property in Washington State (WA) — and which ones to skip."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema

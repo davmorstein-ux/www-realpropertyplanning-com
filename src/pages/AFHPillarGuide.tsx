@@ -29,10 +29,10 @@ import { AFH_RULES_PATH, AFH_GREEN } from "@/data/afhFlow";
 
 const PATH = "/afh-club/washington-adult-family-home-guide";
 const CANONICAL = `https://realpropertyplanning.com${PATH}`;
-const TITLE = "Washington Adult Family Homes: The Complete Guide";
+const TITLE = "Washington State Adult Family Homes: The Complete Guide";
 const COVER = "/afh-washington-guide-cover.webp";
 const DESCRIPTION =
-  "What a Washington adult family home is, who licenses it, what the house and the owner need, how homes are paid, and what happens when one is sold, with a path for opening, running, buying, selling or evaluating an AFH.";
+  "What a Washington State (WA) adult family home is, who licenses it, what the house and the owner need, how homes are paid, and what happens when one is sold, with a path for opening, running, buying, selling or evaluating an AFH.";
 const SHORT_ANSWER =
   "An adult family home is a regular house licensed by DSHS to care for two to six adults who are not related to the provider, or up to eight with DSHS approval. The license belongs to the provider, not the house, so it never transfers in a sale: every new owner applies for a new one. Most homes are paid mainly by Medicaid, at a daily rate set by each resident's CARE classification and where the home is.";
 

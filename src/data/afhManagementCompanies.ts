@@ -1,5 +1,5 @@
 /**
- * "Hiring a Management Company for Your Washington Adult Family Home" (Oct 10, 2026).
+ * "Hiring a Management Company for Your Washington State Adult Family Home" (Oct 10, 2026).
  *
  * WHY IT EXISTS. An AFH resident manager the owner met (Oct 10, 2026) asked
  * whether he could manage more than one adult family home. The site's
@@ -58,10 +58,10 @@ const WAC = (cite: string) => `https://app.leg.wa.gov/WAC/default.aspx?cite=${ci
 
 export const AFH_MGMT = {
   PATH: "/afh-club/hiring-an-afh-management-company",
-  TITLE: "Hiring a Management Company for Your Washington Adult Family Home",
-  SEO_TITLE: "Hiring an Adult Family Home Management Company in Washington: What the Rules Allow | AFH Club",
+  TITLE: "Hiring a Management Company for Your Washington State Adult Family Home",
+  SEO_TITLE: "Hiring an Adult Family Home Management Company in WA: What the Rules Allow | AFH Club",
   DESCRIPTION:
-    "Can you hire a company to manage your Washington adult family home? What a manager can and cannot do, what stays with you as the licensed owner, the DSHS 27-226 filing and 60-day notices, and whether one person can manage more than one home.",
+    "Can you hire a company to manage your Washington State (WA) adult family home? What a manager can and cannot do, what stays with you as the licensed owner, the DSHS 27-226 filing and 60-day notices, and whether one person can manage more than one home.",
   SHORT_ANSWER:
     "Yes. Washington allows an adult family home to hire a management company under a written agreement. The licensed owner stays responsible for the home and its residents, must meet with the manager every month and visit the home at least every quarter, and must file the agreement with DSHS 60 days before it starts. A company can manage many homes, but each home still needs its own on-site person in charge.",
   PUBLISHED: "2026-10-10",

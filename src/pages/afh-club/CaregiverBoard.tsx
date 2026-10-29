@@ -373,8 +373,8 @@ const CaregiverBoard = () => {
     <div className="cgb">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <SEOHead
-        title="AFH Caregiver Board: Jobs and Caregivers in Washington | AFH Club"
-        description="A free board for Washington adult family homes hiring caregivers, and for caregivers looking for adult family home work. Posts are reviewed, contact details stay private, and every post expires after 30 days."
+        title="AFH Caregiver Board: Jobs and Caregivers in Washington State | AFH Club"
+        description="A free board for Washington State (WA) adult family homes hiring caregivers, and for caregivers looking for adult family home work. Posts are reviewed, contact details stay private, and every post expires after 30 days."
         canonical={CANONICAL}
         schemaJson={schema}
       />

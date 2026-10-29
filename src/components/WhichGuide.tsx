@@ -36,7 +36,7 @@ export const WHICH_GUIDE: Record<string, { heading: string; entries: Entry[] }> 
     entries: [
       { href: "/guides/who-has-authority-sell-probate-property-washington", title: "Who Has Authority to Sell Probate Property?", role: "The full answer: letters, nonintervention powers, court-supervised sales and what a title company asks for." },
       { href: "/estate-probate-inherited-property/probate-and-legal-authority", title: "Understanding Probate & Legal Authority", role: "A step in the estate guide: where authority comes from, in plain terms." },
-      { href: "/washington-probate-guide", title: "Washington Probate Guide (flow chart)", role: "Find your situation: will or no will, trust, joint ownership, and your role." },
+      { href: "/washington-probate-guide", title: "Washington State Probate Guide (flow chart)", role: "Find your situation: will or no will, trust, joint ownership, and your role." },
     ],
   },
   wabo: {

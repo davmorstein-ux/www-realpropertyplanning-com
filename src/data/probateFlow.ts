@@ -78,7 +78,7 @@ export const FLOW_PAGES: FlowPage[] = [
     path: path("house-in-a-trust"),
     box: "In a living trust",
     title: "The House Is in a Living Trust",
-    description: "When a Washington house was deeded into a living trust before the death, the successor trustee handles it and probate is generally not needed for the house. How to check, and the steps in order.",
+    description: "When a Washington State (WA) house was deeded into a living trust before the death, the successor trustee handles it and probate is generally not needed for the house. How to check, and the steps in order.",
     trail: ["How was the house owned?", "In a living trust"],
     summary: [
       "If the house was deeded into the trust before the death, it generally does not go through probate. The successor trustee named in the trust takes over and can sell it, usually by giving the title company a certification of trust.",
@@ -97,7 +97,7 @@ export const FLOW_PAGES: FlowPage[] = [
     path: path("no-probate-needed"),
     box: "Joint owner or transfer on death deed",
     title: "The House Passed Without Probate",
-    description: "A Washington house held in joint tenancy with right of survivorship, or with a transfer on death deed recorded before the death, generally passes without probate. What to check, and what the new owner does next.",
+    description: "A Washington State (WA) house held in joint tenancy with right of survivorship, or with a transfer on death deed recorded before the death, generally passes without probate. What to check, and what the new owner does next.",
     trail: ["How was the house owned?", "Joint owner or transfer on death deed"],
     summary: [
       "A house held in joint tenancy with right of survivorship belongs to the surviving owner. A house with a transfer on death deed recorded before the death goes to the beneficiary named in the deed. Either way, the house generally passes without probate, as long as the deed says so and the person it passes to is still living.",
@@ -121,7 +121,7 @@ export const FLOW_PAGES: FlowPage[] = [
     path: path("executor"),
     box: "I'm the executor",
     title: "You Are the Executor or Personal Representative",
-    description: "For a Washington house in the person's name alone: the executor's steps, in order, from getting court authority to deciding what to do with the house.",
+    description: "For a Washington State (WA) house in the person's name alone: the executor's steps, in order, from getting court authority to deciding what to do with the house.",
     trail: ["How was the house owned?", "In their name alone", "Probate", "Executor"],
     summary: [
       "A house in the person's name alone usually goes through probate, because the small estate affidavit cannot transfer real estate. One common exception: a married couple's community property agreement may pass the house to the surviving spouse without a full probate. Otherwise, you have no authority over the house until the superior court appoints you and issues letters.",
@@ -140,7 +140,7 @@ export const FLOW_PAGES: FlowPage[] = [
     path: path("heir"),
     box: "I'm an heir",
     title: "You Inherited a House, or a Share of One",
-    description: "For Washington heirs and beneficiaries of a house going through probate: what you can and cannot do, and the guides to read in order.",
+    description: "For Washington State (WA) heirs and beneficiaries of a house going through probate: what you can and cannot do, and the guides to read in order.",
     trail: ["How was the house owned?", "In their name alone", "Probate", "Heir or beneficiary"],
     summary: [
       "While the estate is open, the personal representative controls the house, not the heirs. Your part is to understand your choices (keep, buy out, or sell) and the value everyone will rely on.",
@@ -159,7 +159,7 @@ export const FLOW_PAGES: FlowPage[] = [
     path: SELLING_PATH,
     box: "Selling the house",
     title: "Selling the House",
-    description: "Selling a Washington house from an estate, a trust or an inheritance: timing, preparation, price and closing, in order.",
+    description: "Selling a Washington State (WA) house from an estate, a trust or an inheritance: timing, preparation, price and closing, in order.",
     trail: ["Selling the house"],
     summary: [
       "Once the right person has authority (the personal representative, the successor trustee or the new owner), the house can be sold much like any other, with a few differences in timing, disclosures and paperwork.",

@@ -1,5 +1,5 @@
 /**
- * "55+ Communities in Washington: What Families Should Know" (Oct 4, 2026).
+ * "55+ Communities in Washington State: What Families Should Know" (Oct 4, 2026).
  *
  * Written instead of a 55+ community directory (owner's decision, Oct 4,
  * 2026): no official statewide list of age-restricted communities exists, the
@@ -40,7 +40,7 @@
 
 export const FIFTY_FIVE = {
   PATH: "/senior-transitions/55-plus-communities-washington",
-  TITLE: "55+ Communities in Washington: What Families Should Know",
+  TITLE: "55+ Communities in Washington State: What Families Should Know",
   SHORT_TITLE: "55+ Communities in Washington",
   DESCRIPTION:
     "What \"55+\" and \"62+\" legally mean, who can live in an age-restricted community, how owning a home on a leased lot works, what to check before buying, and what happens to the home when the owner dies.",

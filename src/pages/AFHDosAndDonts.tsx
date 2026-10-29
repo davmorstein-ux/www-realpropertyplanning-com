@@ -12,7 +12,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 
 /**
- * The Dos and Don'ts of Operating a Washington Adult Family Home (Sept 27, 2026).
+ * The Dos and Don'ts of Operating a Washington State Adult Family Home (Sept 27, 2026).
  * Written by David; every "Washington requirement" checked against the WAC the
  * same day, including WSR 26-17-004 (effective Sept 20, 2026):
  *   - drills: WAC 388-76-10895 as amended says partial drills "at least every two
@@ -29,9 +29,9 @@ import { articleAuthor, articlePublisher } from "@/lib/schema";
  */
 
 const CANONICAL = "https://realpropertyplanning.com/afh-club/dos-and-donts-operating-adult-family-home";
-const TITLE = "The Dos and Don'ts of Operating a Washington Adult Family Home";
+const TITLE = "The Dos and Don'ts of Operating a Washington State Adult Family Home";
 const DESCRIPTION =
-  "The essential dos and don'ts of operating a Washington adult family home: admissions, staffing, resident care, documentation, medications, emergencies, inspections, finances, and succession planning.";
+  "The essential dos and don'ts of operating a Washington State (WA) adult family home: admissions, staffing, resident care, documentation, medications, emergencies, inspections, finances, and succession planning.";
 
 type Kind = "req" | "req+bp" | "bp" | "bp+law";
 const KIND_LABEL: Record<Kind, string> = {

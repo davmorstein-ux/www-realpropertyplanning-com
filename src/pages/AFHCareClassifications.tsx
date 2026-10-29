@@ -49,7 +49,7 @@ const FAQS = [
 const AFHCareClassifications = () => (
   <PaymentGuideShell
     id="care"
-    seoTitle="CARE Classifications A Through E: How Medicaid Pays Washington Adult Family Homes | AFH Club"
+    seoTitle="CARE Classifications A Through E: How Medicaid Pays WA Adult Family Homes | AFH Club"
     seoDescription="How DSHS's CARE assessment places Medicaid residents into seventeen classifications from A Low to E High, what each group means, current daily rates, why classification mix matters as much as occupancy, and what AFH buyers should verify in due diligence."
     eyebrow="For buyers, sellers & owners"
     lede="When a Medicaid client moves into an adult family home, the home does not set the price. An assessment produces a classification, and the classification sets the daily rate. One bed can be worth very different amounts."

@@ -125,7 +125,7 @@ const PropertyTaxesAfterDeath = () => (
 
       <Section bg="#ffffff">
         <div style={{ marginBottom: 20 }}>
-          <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+          <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington State Probate Guide" }} />
         </div>
         <div className="ptx-story">
           <p className="ptx-label">One family's experience</p>
@@ -164,10 +164,10 @@ const PropertyTaxesAfterDeath = () => (
       <Section bg={PTX_SECTIONS.length % 2 === 0 ? "#ffffff" : "#f7f4ef"}>
         <h2 className="ptx-h2">Related guides</h2>
         <ul className="ptx-related">
-          <li><Link className="ptx-link" to="/washington-probate-guide">Washington Probate &amp; Estate Property: The Complete Guide</Link></li>
+          <li><Link className="ptx-link" to="/washington-probate-guide">Washington State Probate &amp; Estate Property: The Complete Guide</Link></li>
           <li><Link className="ptx-link" to="/guides/executor-first-steps-house">What Should an Executor Do First With a House?</Link></li>
           <li><Link className="ptx-link" to="/guides/taxes-selling-inherited-house-washington">What Taxes Apply When Selling an Inherited House?</Link></li>
-          <li><Link className="ptx-link" to="/probate-glossary">Washington Probate &amp; Estate Glossary</Link></li>
+          <li><Link className="ptx-link" to="/probate-glossary">Washington State Probate &amp; Estate Glossary</Link></li>
         </ul>
         <div className="ptx-note" style={{ marginTop: 24 }}>
           <p style={{ marginBottom: 0 }}>
@@ -180,7 +180,7 @@ const PropertyTaxesAfterDeath = () => (
       <PageFAQ faqs={PTX_FAQS} heading="Property Taxes After a Death: Common Questions" eyebrow="Frequently Asked Questions" id="property-tax-after-death" />
       <div style={{ padding: "0 16px 32px" }}>
         <div className="ptx-wrap">
-          <BackToPreviousPage variant="bottom" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+          <BackToPreviousPage variant="bottom" fallback={{ href: "/washington-probate-guide", label: "Washington State Probate Guide" }} />
         </div>
       </div>
     </main>

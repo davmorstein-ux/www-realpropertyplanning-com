@@ -8,8 +8,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 const Roles = () => (
   <div className="min-h-screen flex flex-col">
     <SEOHead
-      title="Roles & Responsibilities | Executors, Trustees & POA — Washington"
-      description="Clear guidance on the roles that govern estates — executors, trustees, power of attorney, and the duties each carries in Washington State."
+      title="Roles & Responsibilities | Executors, Trustees & POA — Washington State"
+      description="Clear guidance on the roles that govern estates — executors, trustees, power of attorney, and the duties each carries in Washington State (WA)."
     />
     <BreadcrumbSchema items={[{ name: "Roles & Responsibilities", url: "/roles" }]} />
     <Header />

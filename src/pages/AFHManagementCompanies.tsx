@@ -20,7 +20,7 @@ import {
 } from "@/data/afhManagementCompanies";
 
 /**
- * Hiring a Management Company for Your Washington Adult Family Home (Oct 10, 2026).
+ * Hiring a Management Company for Your Washington State Adult Family Home (Oct 10, 2026).
  * Every rule, the sources, and what is deliberately left unanswered: see the
  * header of src/data/afhManagementCompanies.ts. The FAQs below also feed the
  * site's "Ask a question" box, which answers only from page FAQs.

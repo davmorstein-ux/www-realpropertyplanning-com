@@ -40,9 +40,9 @@
 export const DSCR_LOANS = {
   PATH: "/afh-club/dscr-loans-adult-family-homes",
   TITLE: "Can You Get a DSCR Loan for an Adult Family Home?",
-  SEO_TITLE: "DSCR Loans for Adult Family Homes in Washington: How Lenders Count the Income | AFH Club",
+  SEO_TITLE: "DSCR Loans for Adult Family Homes in WA: How Lenders Count the Income | AFH Club",
   DESCRIPTION:
-    "Can you use a DSCR loan to buy an adult family home? How DSCR works for a Washington AFH, why gross income and net income give very different answers, how one AFH lender and SBA lenders count income, loan terms to read, and lenders that publish AFH programs.",
+    "Can you use a DSCR loan to buy an adult family home? How DSCR works for a Washington State (WA) AFH, why gross income and net income give very different answers, how one AFH lender and SBA lenders count income, loan terms to read, and lenders that publish AFH programs.",
   SHORT_ANSWER:
     "Sometimes. A DSCR loan qualifies a purchase mainly on the income the home produces rather than the buyer's paycheck, and some lenders offer it on adult family homes. Many ordinary rental-property DSCR programs exclude care homes. Lenders that do lend also count an AFH's income in different ways: some use gross resident income averaged over two years, while SBA and commercial lenders use income after expenses. The same home can pass one test easily and only just pass the other, so ask which income a lender counts before comparing offers.",
   PUBLISHED: "2026-10-09",

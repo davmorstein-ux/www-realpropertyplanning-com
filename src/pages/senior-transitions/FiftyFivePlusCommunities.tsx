@@ -13,7 +13,7 @@ import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { FIFTY_FIVE, FP_SECTIONS, FP_FAQS } from "@/data/fiftyFivePlus";
 
 /**
- * 55+ Communities in Washington: What Families Should Know (Oct 4, 2026).
+ * 55+ Communities in Washington State: What Families Should Know (Oct 4, 2026).
  * Words and sources live in src/data/fiftyFivePlus.ts (shared with the
  * prerender). Same layout as the stay-home and property-tax guides. A guide,
  * not a directory: see the note at the top of the data file.
@@ -97,7 +97,7 @@ const FiftyFivePlusCommunities = () => (
       <section style={{ background: "#eef3f7", padding: "36px 16px 32px", borderBottom: `3px solid ${A}` }}>
         <div className="ptx-wrap" style={{ paddingTop: 28 }}>
           <div className="ptx-narrow">
-            <ArticleCover src="/senior-55-plus-communities-cover.webp" alt="Cover art: 55+ Communities in Washington: What Families Should Know" width={1024} height={1365} />
+            <ArticleCover src="/senior-55-plus-communities-cover.webp" alt="Cover art: 55+ Communities in Washington State: What Families Should Know" width={1024} height={1365} />
             <p className="ptx-eyebrow">Senior transitions · For families</p>
             <h1 className="ptx-h1">{TITLE}</h1>
             <div className="ptx-answer">

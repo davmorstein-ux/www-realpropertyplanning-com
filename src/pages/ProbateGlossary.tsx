@@ -95,8 +95,8 @@ const ProbateGlossary = () => (
   <div className="prg">
     <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead
-      title="Washington Probate & Estate Glossary: Terms Explained | Real Property Planning"
-      description={`${PROBATE_GLOSSARY.length} Washington probate and estate property terms in plain English: personal representative, letters testamentary, nonintervention powers, creditor claims, transfer on death deeds, stepped-up basis and estate tax, each with its statute.`}
+      title="Washington State Probate & Estate Glossary: Terms Explained | Real Property Planning"
+      description={`${PROBATE_GLOSSARY.length} Washington State (WA) probate and estate property terms in plain English: personal representative, letters testamentary, nonintervention powers, creditor claims, transfer on death deeds, stepped-up basis and estate tax, each with its statute.`}
       canonical={CANONICAL}
       schemaJson={schema}
     />
@@ -112,7 +112,7 @@ const ProbateGlossary = () => (
       <section style={{ background: "#eef3f7", padding: "40px 16px 32px", borderBottom: `3px solid ${A}` }}>
         <div className="prg-wrap" style={{ paddingTop: 32 }}>
           <p className="prg-eyebrow">Estate &amp; Probate · Reference</p>
-          <h1 className="prg-h1">Washington Probate &amp; Estate Glossary</h1>
+          <h1 className="prg-h1">Washington State Probate &amp; Estate Glossary</h1>
           <p style={{ fontSize: 20 }}>
             {PROBATE_GLOSSARY.length} terms you will meet when settling an estate, inheriting a house or selling one in Washington, in
             plain English. Each one links to the guide that explains it and, where there is one, the statute behind it.
@@ -136,7 +136,7 @@ const ProbateGlossary = () => (
       <section style={{ background: "#ffffff", padding: "32px 16px 24px" }}>
         <div className="prg-wrap">
           <div style={{ marginBottom: 20 }}>
-            <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+            <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington State Probate Guide" }} />
           </div>
           <h2 className="prg-h2">Browse by topic</h2>
           <div className="prg-cats">

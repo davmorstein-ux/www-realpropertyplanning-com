@@ -30,7 +30,7 @@ export const flowCss = (accent: string) =>
 export interface FlowBranchProps {
   page: FlowPage;
   base: string;
-  /** "Washington Probate Guide" / "Washington AFH Guide" */
+  /** "Washington State Probate Guide" / "Washington AFH Guide" */
   guideName: string;
   /** The chart, rendered with this page's box highlighted. */
   chart: ReactNode;

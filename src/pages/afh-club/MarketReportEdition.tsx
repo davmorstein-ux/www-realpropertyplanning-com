@@ -1,5 +1,5 @@
 /**
- * One edition of the Washington AFH Market Report (Oct 6, 2026). Every figure
+ * One edition of the Washington State AFH Market Report (Oct 6, 2026). Every figure
  * comes from the frozen edition file (src/data/afh/market/<edition>.json) via
  * src/data/afhMarketReport.ts. Route: /afh-club/market-report/:edition.
  */
@@ -22,7 +22,7 @@ const MarketReportEdition = () => {
   const { edition } = useParams();
   const e = EDITIONS.find((x) => x.edition === edition);
   if (!e) return <NotFound />;
-  const title = `Washington Adult Family Home Market Report: ${editionTitle(e)}`;
+  const title = `Washington State Adult Family Home Market Report: ${editionTitle(e)}`;
   const url = `https://realpropertyplanning.com${editionPath(e)}`;
   const s = e.sales;
   const l = e.licensing;

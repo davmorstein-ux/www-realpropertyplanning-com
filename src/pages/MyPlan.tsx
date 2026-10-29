@@ -224,8 +224,8 @@ const MyPlan = () => {
   return (
     <>
       <SEOHead
-        title="My Real Property Plan: a Free Step-by-Step Plan for Washington Families | Real Property Planning"
-        description="Answer a few questions about an inherited house or a parent's housing and get a free, step-by-step plan built from Washington guides. No email needed. Print it or save the link."
+        title="My Real Property Plan: a Free Step-by-Step Plan for WA Families | Real Property Planning"
+        description="Answer a few questions about an inherited house or a parent's housing and get a free, step-by-step plan built from Washington State (WA) guides. No email needed. Print it or save the link."
         canonical="https://realpropertyplanning.com/my-plan"
       />
       <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />

@@ -111,7 +111,7 @@ const FamilySaleEstate = () => (
       </section>
 
       <Section bg="#ffffff">
-        <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+        <BackToPreviousPage variant="top" fallback={{ href: "/washington-probate-guide", label: "Washington State Probate Guide" }} />
       </Section>
 
       {PTX_SECTIONS.map((s, i) => (
@@ -160,7 +160,7 @@ const FamilySaleEstate = () => (
       <NextQuestions />
       <div style={{ padding: "0 16px 32px" }}>
         <div className="ptx-wrap">
-          <BackToPreviousPage variant="bottom" fallback={{ href: "/washington-probate-guide", label: "Washington Probate Guide" }} />
+          <BackToPreviousPage variant="bottom" fallback={{ href: "/washington-probate-guide", label: "Washington State Probate Guide" }} />
         </div>
       </div>
     </main>

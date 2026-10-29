@@ -37,7 +37,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
   "@id": `${CANONICAL}#terms`,
-  name: "Washington Adult Family Home Glossary",
+  name: "Washington State Adult Family Home Glossary",
   description: "Plain-English definitions of the licensing, building, payment, ownership and enforcement terms used for Washington adult family homes, each with its primary source.",
   url: CANONICAL,
   hasDefinedTerm: AFH_GLOSSARY.map((t) => ({
@@ -87,8 +87,8 @@ const AFHGlossary = () => (
   <div className="afhg">
     <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead
-      title="Washington Adult Family Home Glossary: AFH Terms Explained | AFH Club"
-      description={`${AFH_GLOSSARY.length} Washington adult family home terms in plain English: CHOW, CARE and the A–E classifications, CBHS tiers, ECS and SBS, WABO and form 15-604, license fees, inspections and enforcement, each with its WAC or RCW source.`}
+      title="WA Adult Family Home Glossary: AFH Terms Explained | AFH Club"
+      description={`${AFH_GLOSSARY.length} Washington State (WA) adult family home terms in plain English: CHOW, CARE and the A–E classifications, CBHS tiers, ECS and SBS, WABO and form 15-604, license fees, inspections and enforcement, each with its WAC or RCW source.`}
       canonical={CANONICAL}
       schemaJson={schema}
     />
@@ -104,7 +104,7 @@ const AFHGlossary = () => (
       <section style={{ background: "#edf0f3", padding: "40px 16px 32px", borderBottom: "3px solid #0a5648" }}>
         <div className="afhg-wrap" style={{ paddingTop: 32 }}>
           <p className="afhg-eyebrow">AFH Club · Reference</p>
-          <h1 className="afhg-h1">Washington Adult Family Home Glossary</h1>
+          <h1 className="afhg-h1">Washington State Adult Family Home Glossary</h1>
           <p style={{ fontSize: 20 }}>
             {AFH_GLOSSARY.length} terms you will meet when opening, running, buying or selling an adult family home in Washington,
             in plain English. Each one links to the AFH Club guide that explains it and, where there is one, the rule or statute

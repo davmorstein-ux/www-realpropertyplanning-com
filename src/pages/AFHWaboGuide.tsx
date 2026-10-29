@@ -59,7 +59,7 @@ const afhArticleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "What Is WABO? A Simple Overview",
-  description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying.",
+  description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State (WA) — what WABO is, who inspects the home, and why it matters before buying.",
   url: "https://realpropertyplanning.com/afh-club/wabo-inspection-guide",
   datePublished: "2026-07-26",
   dateModified: "2026-09-28",
@@ -76,7 +76,7 @@ const AFHWaboGuide = () => (
   <>
     <SEOHead
       title="What Is WABO? A Simple Overview | AFH Club | Real Property Planning"
-      description="A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying."
+      description="A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State (WA) — what WABO is, who inspects the home, and why it matters before buying."
       canonical="https://realpropertyplanning.com/afh-club/wabo-inspection-guide"
       ogType="article"
       schemaJson={afhArticleSchema}
@@ -107,7 +107,7 @@ const AFHWaboGuide = () => (
               margin: "0 0 20px",
             }}
           >
-            What Is WABO? A Simple Overview for Washington Adult Family Homes
+            What Is WABO? A Simple Overview for Washington State Adult Family Homes
           </h1>
           <p style={{ ...body, margin: 0, maxWidth: 680 }}>
             If you are exploring an Adult Family Home in Washington, you will probably hear someone mention a "WABO

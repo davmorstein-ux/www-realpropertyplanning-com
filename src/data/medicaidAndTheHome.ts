@@ -1,5 +1,5 @@
 /**
- * "Medicaid and the Family Home in Washington" (Question Map step 7, Oct 4,
+ * "Medicaid and the Family Home in Washington State" (Question Map step 7, Oct 4,
  * 2026; audit questions Q130, Q143, Q152, Q170, Q171, Q173, Q174, Q184, Q185,
  * Q186, Q190, Q191, Q192 — the house-specific Medicaid questions that were
  * split across four pages).
@@ -34,13 +34,13 @@ const wac = (cite: string) => `https://app.leg.wa.gov/WAC/default.aspx?cite=${ci
 
 export const MEDICAID_AND_THE_HOME = {
   PATH: "/long-term-care/medicaid-and-the-family-home",
-  TITLE: "Medicaid and the Family Home in Washington",
+  TITLE: "Medicaid and the Family Home in Washington State",
   SHORT_TITLE: "Medicaid and the Family Home",
   /** The search-result title (Oct 19, 2026). Search Console, Sept 20 – Oct 17:
    *  position 4.9 but 1.7% click-through with the topic title above, so the
    *  search title asks the question families type and the description answers
    *  it in its first words. The page heading stays TITLE. */
-  SEO_TITLE: "Will Medicaid Take My Parent's House in Washington?",
+  SEO_TITLE: "Will Medicaid Take My Parent's House in Washington State?",
   DESCRIPTION:
     "Usually not while your parent is alive: Apple Health treats the home as exempt while they intend to return or a spouse lives there. What changes if it's sold, gifted, or after death.",
   PUBLISHED: "2026-10-04",

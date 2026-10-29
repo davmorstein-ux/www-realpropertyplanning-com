@@ -24,7 +24,7 @@ const faqs = [
 ];
 
 const jsonLd = articleSchema({
-  headline: "Can an Executor Sell a House Before Probate in Washington?",
+  headline: "Can an Executor Sell a House Before Probate in Washington State?",
   description: "Understanding when an executor can — and cannot — sell estate property in Washington State, and what steps to take while waiting for legal authority.",
   url: "/guides/executor-sell-house-before-probate-washington",
   datePublished: "2026-03-27",
@@ -35,8 +35,8 @@ const jsonLd = articleSchema({
 const ExecutorSellBeforeProbate = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Can an Executor Sell a House Before Probate in Washington? | Real Property Planning"
-      description="Understanding when an executor can — and cannot — sell estate property in Washington State. Learn what steps to take while waiting for legal authority."
+      title="Can an Executor Sell a House Before Probate in Washington State? | Real Property Planning"
+      description="Understanding when an executor can — and cannot — sell estate property in Washington State (WA). Learn what steps to take while waiting for legal authority."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -47,7 +47,7 @@ const ExecutorSellBeforeProbate = () => (
     <main id="main-content">
       <ProbateStartHere />
 
-    <HeroBandTitle as="h1">Can an Executor Sell a House Before Probate in Washington?</HeroBandTitle>
+    <HeroBandTitle as="h1">Can an Executor Sell a House Before Probate in Washington State?</HeroBandTitle>
 
         {/* Intro — moved out of the blue band so the band carries only the
             title. The text is the page's answer-style summary and is what

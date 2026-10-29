@@ -16,7 +16,7 @@ const GrayDivorce = () => {
     <>
       <SEOHead
         title="Gray Divorce and the Family Home in Washington State | Real Property Planning"
-        description="Guidance for Washington State couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part."
+        description="Guidance for Washington State (WA) couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part."
         canonical="https://realpropertyplanning.com/gray-divorce"
       />
       <BreadcrumbSchema
@@ -28,7 +28,7 @@ const GrayDivorce = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <HeroBandTitle as="h1">Gray Divorce and Your Home — What Washington Couples Need to Know</HeroBandTitle>
+        <HeroBandTitle as="h1">Gray Divorce and Your Home — What Washington State Couples Need to Know</HeroBandTitle>
 
         {/* Intro — relocated out of the title band. The band carries the
             page title and nothing else, sitewide. */}

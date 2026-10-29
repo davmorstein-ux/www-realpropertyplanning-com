@@ -13,7 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 import RppArrow from "@/components/RppArrow";
 const TOPICS = [
   {
-    title: "Washington Adult Family Homes: The Complete Guide",
+    title: "Washington State Adult Family Homes: The Complete Guide",
     href: "/afh-club/washington-adult-family-home-guide",
     img: "/afh-washington-guide-cover.webp",
     description:
@@ -229,7 +229,7 @@ const AFHResources = () => (
           >
             <strong>New here?</strong> Start with{" "}
             <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
-              Washington Adult Family Homes: The Complete Guide
+              Washington State Adult Family Homes: The Complete Guide
             </Link>
             , and keep the{" "}
             <Link to="/afh-club/glossary" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
@@ -246,7 +246,7 @@ const AFHResources = () => (
       <AFHCarousel
         categories={[
           {
-            title: "Washington Adult Family Homes: The Complete Guide",
+            title: "Washington State Adult Family Homes: The Complete Guide",
             href: "/afh-club/washington-adult-family-home-guide",
             img: "/afh-washington-guide-cover.webp",
             placeholder: "#1d2e22",

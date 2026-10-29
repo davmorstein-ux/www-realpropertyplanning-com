@@ -14,7 +14,7 @@ import {
 } from "@/data/medicaidAndTheHome";
 
 /**
- * Medicaid and the Family Home in Washington (Oct 4, 2026, Question Map step
+ * Medicaid and the Family Home in Washington State (Oct 4, 2026, Question Map step
  * 7). Words live in src/data/medicaidAndTheHome.ts (shared with the
  * prerender), where each point is tied to its source. Same layout as the
  * property-tax and mortgage guides.

@@ -30,10 +30,10 @@ import { AFH_FLOW_BASE, AFH_RULES_PATH } from "@/data/afhFlow";
 
 const PATH = AFH_RULES_PATH;
 const CANONICAL = `https://realpropertyplanning.com${PATH}`;
-const TITLE = "Washington Adult Family Homes: Rules & Key Figures";
+const TITLE = "Washington State Adult Family Homes: Rules & Key Figures";
 const COVER = "/afh-washington-guide-cover.webp";
 const DESCRIPTION =
-  "The rules and figures that matter for a Washington adult family home, each with its source: licensing, capacity, zoning, owner experience, training, the building inspection, fees, inspections, payment, and what happens in a sale.";
+  "The rules and figures that matter for a Washington State (WA) adult family home, each with its source: licensing, capacity, zoning, owner experience, training, the building inspection, fees, inspections, payment, and what happens in a sale.";
 
 const S = stats.state;
 const n = (x: number) => x.toLocaleString("en-US");

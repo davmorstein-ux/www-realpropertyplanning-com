@@ -70,7 +70,7 @@ export const PROBATE_START_HERE_ROUTES: string[] = [
 
 export const PROBATE_START_HERE = {
   lead: "New to probate?",
-  guide: { href: "/washington-probate-guide", label: "Washington Probate & Estate Property Guide", short: "Washington Probate Guide" },
+  guide: { href: "/washington-probate-guide", label: "Washington Probate & Estate Property Guide", short: "Washington State Probate Guide" },
   glossary: { href: "/probate-glossary", label: "Probate & Estate Glossary", short: "Probate Glossary" },
   terms: [
     { href: "/probate-glossary#nonintervention-powers", label: "nonintervention powers" },

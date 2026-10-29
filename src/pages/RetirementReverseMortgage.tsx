@@ -20,7 +20,7 @@ const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Retirement & Reverse Mortgage Guidance | Real Property Planning"
-      description="Reverse mortgage and retirement financing guidance for Washington seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions."
+      description="Reverse mortgage and retirement financing guidance for Washington State (WA) seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions."
     />
     <BreadcrumbSchema
       items={[
@@ -32,7 +32,7 @@ const RetirementReverseMortgage = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <HeroBandTitle as="h1">Reverse Mortgages and Retirement in Washington</HeroBandTitle>
+    <HeroBandTitle as="h1">Reverse Mortgages and Retirement in Washington State</HeroBandTitle>
 
     {/* Intro — relocated out of the title band. The band carries the
         page title and nothing else, sitewide. */}

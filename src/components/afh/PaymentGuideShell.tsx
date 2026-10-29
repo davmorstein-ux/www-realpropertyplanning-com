@@ -44,7 +44,7 @@ export type GuideId = "hub" | "care" | "cbhs";
 export const GUIDES: Record<GuideId, { href: string; title: string; short: string; blurb: string }> = {
   hub: {
     href: "/afh-club/afh-payment-field-guide",
-    title: "Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs Get Paid",
+    title: "Tiers, Levels, and Classifications: A Field Guide to How Washington State AFHs Get Paid",
     short: "The Field Guide",
     blurb: "Four separate systems, who sets each one, and which survive a sale.",
   },

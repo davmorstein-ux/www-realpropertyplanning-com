@@ -22,9 +22,9 @@ import BackLink from "@/components/BackLink";
  */
 const SITE = "https://realpropertyplanning.com";
 const CANONICAL = `${SITE}${DEADLINES_PATH}`;
-const TITLE = "Washington Probate Deadlines & Key Rules";
+const TITLE = "Washington State Probate Deadlines & Key Rules";
 const DESCRIPTION =
-  "Every Washington probate deadline and rule that matters for a house, in one table with its statute: notice to heirs, inventory, creditor claims, will contests, small estates, transfer on death deeds, estate tax, and common questions.";
+  "Every Washington State (WA) probate deadline and rule that matters for a house, in one table with its statute: notice to heirs, inventory, creditor claims, will contests, small estates, transfer on death deeds, estate tax, and common questions.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -63,7 +63,7 @@ export default function ProbateDeadlines() {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: SITE },
-          { name: "Washington Probate Guide", url: `${SITE}${FLOW_BASE}` },
+          { name: "Washington State Probate Guide", url: `${SITE}${FLOW_BASE}` },
           { name: "Deadlines & Key Rules", url: CANONICAL },
         ]}
       />

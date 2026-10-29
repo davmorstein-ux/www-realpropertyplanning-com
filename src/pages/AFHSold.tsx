@@ -65,7 +65,7 @@ const AFHSold = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Adult Family Home Sales in Washington — Sold Prices & Comps | AFH Club"
+        title="Adult Family Home Sales in WA — Sold Prices & Comps | AFH Club"
         description={`Closed adult family home sales across Washington State with sold price, sold price per bedroom, size, licensing status at sale, and whether the business conveyed. NWMLS records reviewed by ${FEATURED_APPRAISER.name}, certified residential appraiser.`}
         canonical="https://realpropertyplanning.com/afh-club/sold"
       />
@@ -79,7 +79,7 @@ const AFHSold = () => {
       <Header />
       <main id="main-content">
         <div style={{ background: GREEN, padding: "6px 24px 4px" }} />
-        <HeroBandTitle as="h1">Adult Family Home Sales in Washington</HeroBandTitle>
+        <HeroBandTitle as="h1">Adult Family Home Sales in Washington State</HeroBandTitle>
 
         <section className="py-10 md:py-14 bg-cream">
           <div className="container px-5 md:px-8">

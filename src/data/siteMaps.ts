@@ -267,7 +267,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           { title: "AFH Club Home", href: "/afh-club" },
-          { title: "Washington Adult Family Homes: The Complete Guide", href: "/afh-club/washington-adult-family-home-guide" },
+          { title: "Washington State Adult Family Homes: The Complete Guide", href: "/afh-club/washington-adult-family-home-guide" },
           { title: "Opening a New Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/opening" },
           { title: "Buying an Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/buying" },
           { title: "Selling Your Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/selling" },
@@ -321,8 +321,8 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "For Lease", href: "/afh-club/listings/for-lease" },
           { title: "Recent AFH Sales", href: "/afh-club/sold" },
           { title: "Directory of Licensed Adult Family Homes", href: "/afh-club/homes" },
-          { title: "Washington Adult Family Homes by the Numbers", href: "/afh-club/washington-afh-data" },
-          { title: "Washington AFH Market Report", href: "/afh-club/market-report" },
+          { title: "Washington State Adult Family Homes by the Numbers", href: "/afh-club/washington-afh-data" },
+          { title: "Washington State AFH Market Report", href: "/afh-club/market-report" },
           { title: "AFH Market Report: October 2026", href: "/afh-club/market-report/2026-10" },
           { title: "Newly Licensed Adult Family Homes", href: "/afh-club/new-licenses" },
         ],

@@ -152,7 +152,7 @@ const SellParentsHouseDementia = () => (
         <ul className="ptx-related">
           <li><Link className="ptx-link" to="/sell-house-fund-senior-living">How to Sell a Parent's House to Pay for Senior Living</Link></li>
           <li><Link className="ptx-link" to="/power-of-attorney">Power of Attorney and Real Estate in Washington</Link></li>
-          <li><Link className="ptx-link" to="/long-term-care/medicaid-and-the-family-home">Medicaid and the Family Home in Washington</Link></li>
+          <li><Link className="ptx-link" to="/long-term-care/medicaid-and-the-family-home">Medicaid and the Family Home in Washington State</Link></li>
           <li><Link className="ptx-link" to="/senior-living/memory-care">Memory care in Washington</Link></li>
         </ul>
         <div className="ptx-note" style={{ marginTop: 24 }}>

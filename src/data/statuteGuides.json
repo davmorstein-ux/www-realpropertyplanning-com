@@ -3,8 +3,8 @@
     "slug": "probate-costs",
     "path": "/guides/probate-costs-washington",
     "short": "Probate costs",
-    "title": "What Does Probate Cost in Washington?",
-    "shortAnswer": "Washington law sets no fixed price for probate. Attorney fees and pay for the personal representative (executor) are not set by a percentage or fee schedule. Unless a will sets the executor's pay, the law says both must be \"just and reasonable,\" and heirs can ask the court to review fees. Court fees are fixed by statute: in King County, opening a probate costs $290 (fee schedule effective October 1, 2026). Bond, newspaper notice, certified copies and appraisals can add to the total. Most costs are paid from the estate, not from the executor's own pocket.",
+    "title": "What Does Probate Cost in Washington State?",
+    "shortAnswer": "Washington State (WA) law sets no fixed price for probate. Attorney fees and pay for the personal representative (executor) are not set by a percentage or fee schedule. Unless a will sets the executor's pay, the law says both must be \"just and reasonable,\" and heirs can ask the court to review fees. Court fees are fixed by statute: in King County, opening a probate costs $290 (fee schedule effective October 1, 2026). Bond, newspaper notice, certified copies and appraisals can add to the total. Most costs are paid from the estate, not from the executor's own pocket.",
     "sections": [
       {
         "heading": "Attorney fees: hourly, percentage, or something else?",
@@ -35,7 +35,7 @@
         "body": "- **Notice to creditors.** If the executor gives notice to creditors, it must be published \"once each week for three successive weeks in a legal newspaper\" in the county where the estate is being handled. If the person lived in Washington but probate was opened in a different county, it is published in the county where they lived instead (RCW 11.40.020). The newspaper sets the price.\n- **Appraisals and accountants.** Within three months of appointment, the executor must prepare a sworn inventory with each item's \"fair net value, as of the date of the decedent's death\" (RCW 11.44.015). The statute does not require a professional appraiser. Appraiser and accountant fees are among the fees disclosed at closing (RCW 11.68.100)."
       }
     ],
-    "next": "- See the overview at [Washington Probate & Estate Property: The Complete Guide](/washington-probate-guide).\n- Check the 30-day fee-objection window and other deadlines at [Washington Probate Deadlines & Key Rules](/washington-probate-guide/deadlines-and-key-rules).\n- If you are the executor, start with [Executor Responsibilities — First Steps](/executor-responsibilities-first-steps), and keep receipts for every estate expense.\n- Look up unfamiliar terms in the [Washington Probate & Estate Glossary](/probate-glossary).\n- For finding a lawyer, see [Probate Attorneys in Western Washington](/professionals/probate-attorneys).",
+    "next": "- See the overview at [Washington State Probate & Estate Property: The Complete Guide](/washington-probate-guide).\n- Check the 30-day fee-objection window and other deadlines at [Washington State Probate Deadlines & Key Rules](/washington-probate-guide/deadlines-and-key-rules).\n- If you are the executor, start with [Executor Responsibilities — First Steps](/executor-responsibilities-first-steps), and keep receipts for every estate expense.\n- Look up unfamiliar terms in the [Washington State Probate & Estate Glossary](/probate-glossary).\n- For finding a lawyer, see [Probate Attorneys in Western Washington](/professionals/probate-attorneys).",
     "faqs": [
       {
         "question": "How much does a probate attorney cost in Washington?",
@@ -182,8 +182,8 @@
     "slug": "debts-after-death",
     "path": "/guides/debts-after-death-washington",
     "short": "Debts after a death",
-    "title": "Who Pays a Parent's Debts After They Die in Washington?",
-    "shortAnswer": "The estate pays, not the family. In Washington, the personal representative pays the estate's debts in an order the law sets: administration costs first, then reasonable funeral costs, then last-illness costs, and so on. Creditors usually have four months after the first published notice to file a claim, or up to 24 months after death if no notice is given. If debts exceed assets, lower-priority creditors may go unpaid. Children are generally not personally responsible, with exceptions such as co-signers and joint account holders.",
+    "title": "Who Pays a Parent's Debts After They Die in Washington State?",
+    "shortAnswer": "The estate pays, not the family. In Washington State (WA), the personal representative pays the estate's debts in an order the law sets: administration costs first, then reasonable funeral costs, then last-illness costs, and so on. Creditors usually have four months after the first published notice to file a claim, or up to 24 months after death if no notice is given. If debts exceed assets, lower-priority creditors may go unpaid. Children are generally not personally responsible, with exceptions such as co-signers and joint account holders.",
     "sections": [
       {
         "heading": "The estate pays, not the children",
@@ -352,7 +352,7 @@
     "slug": "will-contests",
     "path": "/guides/contest-will-washington",
     "short": "Will contests",
-    "title": "Can a Will Be Challenged in Washington?",
+    "title": "Can a Will Be Challenged in Washington State?",
     "shortAnswer": "Yes, but the window is short. A person with an interest in a will has four months after the court admits the will to probate (or rejects it) to file a challenge. They must personally serve the personal representative within 90 days of filing. The court decides issues such as mental capacity, undue influence, fraud, and whether the will was properly signed and witnessed. If no one files and serves in time, the court's decision on the will becomes final.",
     "sections": [
       {
@@ -560,7 +560,7 @@
     "slug": "choosing-a-trustee",
     "path": "/guides/choosing-a-trustee-washington",
     "short": "Choosing a trustee",
-    "title": "Family Member or Trust Company? Choosing a Trustee in Washington",
+    "title": "Family Member or Trust Company? Choosing a Trustee in Washington State",
     "shortAnswer": "Your trustee or successor trustee can be a family member, a friend, a professional, a bank or trust company, or co-trustees. Whoever serves owes the same duties: loyalty, impartiality, prudent investing, information and yearly statements. The law allows \"reasonable compensation\" but sets no fee. The real question is who can carry those duties for as long as the trust lasts, and at what cost.",
     "sections": [
       {

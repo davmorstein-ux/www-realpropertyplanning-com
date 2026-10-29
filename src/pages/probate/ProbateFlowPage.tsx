@@ -15,7 +15,7 @@ export default function ProbateFlowPage({ slug }: { slug: string }) {
         bylineContext="estate"
       page={FLOW_BY_SLUG[slug]}
       base={FLOW_BASE}
-      guideName="Washington Probate Guide"
+      guideName="Washington State Probate Guide"
       chart={<ProbateFlowChart current={slug} />}
       reference={{ label: "Deadlines & key rules", href: DEADLINES_PATH }}
       glossary={{ label: "glossary", href: "/probate-glossary" }}

@@ -104,7 +104,7 @@ const GUIDES: Record<Topic, { heading: string; body: string; links: { title: str
     links: [
       { title: "How to Pass Real Estate to Your Children", href: "/articles/wills-trusts-other-options" },
       { title: "The Property Questions to Think Through", href: "/planning-before-a-crisis/property-questions" },
-      { title: "Medicaid and the Family Home in Washington", href: "/long-term-care/medicaid-and-the-family-home" },
+      { title: "Medicaid and the Family Home in Washington State", href: "/long-term-care/medicaid-and-the-family-home" },
     ],
   },
 };

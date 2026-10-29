@@ -45,9 +45,9 @@ const rcw = (cite: string) => `https://app.leg.wa.gov/RCW/default.aspx?cite=${ci
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to Choose an Adult Family Home in Washington",
+  headline: "How to Choose an Adult Family Home in Washington State",
   description:
-    "A Washington family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side.",
+    "A Washington State (WA) family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side.",
   url: URL,
   datePublished: "2026-10-04",
   dateModified: "2026-10-04",
@@ -170,8 +170,8 @@ const printPage = () => {
 const ChoosingAnAdultFamilyHome = () => (
   <>
     <SEOHead
-      title="How to Choose an Adult Family Home in Washington: Tour Checklist | Real Property Planning"
-      description="A Washington family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side."
+      title="How to Choose an Adult Family Home in WA: Tour Checklist | Real Property Planning"
+      description="A Washington State (WA) family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side."
       canonical={URL}
       ogType="article"
       schemaJson={schema}
@@ -191,7 +191,7 @@ const ChoosingAnAdultFamilyHome = () => (
       <section className="cafh-hero">
         <div className="cafh-wrap">
           <p className="cafh-eyebrow">For families · Last reviewed October 2026</p>
-          <h1 className="cafh-h1">How to Choose an Adult Family Home in Washington</h1>
+          <h1 className="cafh-h1">How to Choose an Adult Family Home in Washington State</h1>
           <div className="cafh-answer">
             <p>
               Build a shortlist from the state's licensing records, read each home's DSHS inspection record, then visit

@@ -2,9 +2,9 @@
  * STATUTE GUIDES (Oct 11, 2026): three probate guides written from the Washington
  * statutes themselves, for questions the site did not answer (from Google's list of
  * 90 common probate questions):
- *   /guides/probate-costs-washington      What Does Probate Cost in Washington?
+ *   /guides/probate-costs-washington      What Does Probate Cost in Washington State?
  *   /guides/debts-after-death-washington  Who Pays a Parent's Debts After They Die?
- *   /guides/contest-will-washington       Can a Will Be Challenged in Washington?
+ *   /guides/contest-will-washington       Can a Will Be Challenged in Washington State?
  *   /guides/choosing-a-trustee-washington Family Member or Trust Company? Choosing a
  *                                         Trustee in Washington (Oct 12, 2026; same
  *                                         method: written from chapters 11.98, 11.98B,

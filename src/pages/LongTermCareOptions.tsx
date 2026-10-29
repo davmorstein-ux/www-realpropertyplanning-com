@@ -96,7 +96,7 @@ const LongTermCareOptions = () => {
                 marginBottom: 20,
               }}
             >
-              Understanding Long-Term Care in Washington
+              Understanding Long-Term Care in Washington State
             </h1>
             <p
               style={{

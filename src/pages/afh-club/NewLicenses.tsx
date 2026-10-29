@@ -38,7 +38,7 @@ const NewLicenses = () => {
     <div className="mkt">
       <style dangerouslySetInnerHTML={{ __html: MKT_CSS }} />
       <SEOHead
-        title="Newly Licensed Adult Family Homes in Washington | AFH Club"
+        title="Newly Licensed Adult Family Homes in Washington State | AFH Club"
         description={`Adult family homes newly licensed by DSHS in ${C.counties.join(", ")} counties, ${period}, and homes that changed ownership, with links to each home's licensing record.`}
         canonical={URL}
       />

@@ -1,5 +1,5 @@
 /**
- * "What Happens to the Mortgage When Someone Dies in Washington"
+ * "What Happens to the Mortgage When Someone Dies in Washington State"
  * (Question Map step 7, Oct 4, 2026; audit questions Q046, Q047, Q050–Q053).
  *
  * Checked Oct 4, 2026 against the primary sources:
@@ -31,10 +31,10 @@ import { rcw } from "./probateGlossary";
 
 export const MORTGAGE_AFTER_DEATH = {
   PATH: "/guides/mortgage-after-death-washington",
-  TITLE: "What Happens to the Mortgage When Someone Dies in Washington",
+  TITLE: "What Happens to the Mortgage When Someone Dies in Washington State",
   SHORT_TITLE: "The Mortgage After a Death",
   DESCRIPTION:
-    "The loan does not end at death. Who keeps paying it, how to become a successor in interest with the servicer, when a family member can keep the existing loan, who is personally responsible, and what happens to a reverse mortgage. For Washington executors, heirs and surviving spouses.",
+    "The loan does not end at death. Who keeps paying it, how to become a successor in interest with the servicer, when a family member can keep the existing loan, who is personally responsible, and what happens to a reverse mortgage. For Washington State (WA) executors, heirs and surviving spouses.",
   PUBLISHED: "2026-10-04",
   REVIEWED: "2026-10-04",
   SHORT_ANSWER:

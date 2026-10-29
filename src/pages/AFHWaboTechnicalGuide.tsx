@@ -60,7 +60,7 @@ const afhArticleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "WABO Checklist & Technical Requirements",
-  description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State — what the checklist covers, common delays, and why passing does not mean licensed.",
+  description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State (WA) — what the checklist covers, common delays, and why passing does not mean licensed.",
   url: "https://realpropertyplanning.com/afh-club/wabo-technical-guide",
   datePublished: "2026-07-26",
   dateModified: "2026-09-28",
@@ -77,7 +77,7 @@ const AFHWaboTechnicalGuide = () => (
   <>
     <SEOHead
       title="WABO Checklist & Technical Requirements | AFH Club | Real Property Planning"
-      description="A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State — what the checklist covers, common delays, and why passing does not mean licensed."
+      description="A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State (WA) — what the checklist covers, common delays, and why passing does not mean licensed."
       canonical="https://realpropertyplanning.com/afh-club/wabo-technical-guide"
       ogType="article"
       schemaJson={afhArticleSchema}
@@ -108,7 +108,7 @@ const AFHWaboTechnicalGuide = () => (
               margin: "0 0 20px",
             }}
           >
-            WABO Checklist: The Technical Guide for Washington Adult Family Homes
+            WABO Checklist: The Technical Guide for Washington State Adult Family Homes
           </h1>
           <p style={{ ...body, margin: "0 0 16px", maxWidth: 680 }}>
             If you are opening, buying, remodeling, or expanding an Adult Family Home in Washington, the WABO

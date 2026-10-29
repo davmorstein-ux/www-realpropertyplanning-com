@@ -1,6 +1,6 @@
 /**
  * Invitation to My Real Property Plan (/my-plan) from the two big hubs
- * (Oct 19, 2026): the Washington Probate Guide (situation "estate") and
+ * (Oct 19, 2026): the Washington State Probate Guide (situation "estate") and
  * Helping an Aging Parent (situation "parent"). The link opens the planner
  * with that situation already chosen (/my-plan#estate: or #parent:).
  *

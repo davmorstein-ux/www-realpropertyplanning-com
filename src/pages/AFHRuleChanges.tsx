@@ -20,7 +20,7 @@ import {
 } from "@/data/afhRuleChanges";
 
 /**
- * Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards
+ * Washington State AFH Rules Have Changed: Old Requirements vs. Today's Standards
  * (Sept 29, 2026). Every rule row lives in src/data/afhRuleChanges.ts, which
  * the prerender also reads; this file is layout and explanation only.
  * Review quarterly: the test fails when a row's verified date is > 120 days old.
@@ -28,10 +28,10 @@ import {
 
 const PATH = "/afh-club/washington-afh-rule-changes";
 const CANONICAL = `https://realpropertyplanning.com${PATH}`;
-const TITLE = "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards";
+const TITLE = "Washington State AFH Rules Have Changed: Old Requirements vs. Today's Standards";
 const COVER = "/afh-rule-changes-cover.webp";
 const DESCRIPTION =
-  "Every Washington adult family home rule change since 2023, side by side: the old requirement, today's rule, the effective date, who it affects and the official citation, plus proposals that are not yet law.";
+  "Every Washington State (WA) adult family home rule change since 2023, side by side: the old requirement, today's rule, the effective date, who it affects and the official citation, plus proposals that are not yet law.";
 
 const fmt = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 const fmtShort = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -381,7 +381,7 @@ const AFHRuleChanges = () => {
               <li>For a seven- or eight-bed home: is there a sprinkler system, and does the license limit who the home may serve?</li>
             </ul>
             <p>
-              Related: <Link className="afhr-link" to="/afh-club/washington-adult-family-home-guide">Washington Adult Family Homes: The Complete Guide</Link> ·{" "}
+              Related: <Link className="afhr-link" to="/afh-club/washington-adult-family-home-guide">Washington State Adult Family Homes: The Complete Guide</Link> ·{" "}
               <Link className="afhr-link" to="/afh-club/glossary">AFH Glossary</Link> ·{" "}
               <Link className="afhr-link" to="/afh-club/afh-property-classifications">Is It Really an Adult Family Home?</Link>
             </p>

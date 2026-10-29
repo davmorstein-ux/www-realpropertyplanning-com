@@ -37,7 +37,7 @@ const relatedResources = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Hospice Care in Washington: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home",
+  headline: "Hospice Care in WA: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home",
   description:
     "Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' actually means, and how hospice works inside an adult family home, assisted living, or your own home in Washington.",
   url: CANONICAL,
@@ -90,15 +90,15 @@ const HospiceCare = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         ogType="article"
-        title="Hospice Care in Washington: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home"
-        description="Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' means, and how hospice works inside an adult family home, assisted living, or your own home in Washington."
+        title="Hospice Care in WA: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home"
+        description="Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' means, and how hospice works inside an adult family home, assisted living, or your own home in Washington State (WA)."
         canonical={CANONICAL}
         ogImage="https://realpropertyplanning.com/hospice-care-cover.webp"
         jsonLd={jsonLd}
       />
       <Header />
       <main id="main-content">
-        <HeroBandTitle as="h1">Hospice Care in Washington</HeroBandTitle>
+        <HeroBandTitle as="h1">Hospice Care in Washington State</HeroBandTitle>
 
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>

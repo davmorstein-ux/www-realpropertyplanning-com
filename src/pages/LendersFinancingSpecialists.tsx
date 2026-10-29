@@ -62,7 +62,7 @@ const LendersFinancingSpecialists = () => (
             works, including using one to pay for a spouse's care and what happens when a borrower moves into a care
             facility or dies, read{" "}
             <Link to="/retirement-reverse-mortgage" className="text-accent hover:text-gold underline underline-offset-4">
-              Reverse Mortgages and Retirement in Washington
+              Reverse Mortgages and Retirement in Washington State
             </Link>
             .
           </p>

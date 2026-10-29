@@ -21,17 +21,17 @@ const HowToChooseCareSettings = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How to Choose Between Care Settings: A Guide for Washington Families"
-        description="A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State — matched to actual care needs and budget."
+        title="How to Choose Between Care Settings: A Guide for Washington State Families"
+        description="A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State (WA) — matched to actual care needs and budget."
       />
       <Header />
       <main id="main-content">
-<HeroBandTitle as="h1">How to Choose Between Care Settings: A Guide for Washington Families</HeroBandTitle>
+<HeroBandTitle as="h1">How to Choose Between Care Settings: A Guide for Washington State Families</HeroBandTitle>
 <QuickAnswers />
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">
-            <h2 className={h2Class + " mt-0"}>How to Choose Between Care Settings: A Guide for Washington Families</h2>
+            <h2 className={h2Class + " mt-0"}>How to Choose Between Care Settings: A Guide for Washington State Families</h2>
             <p className={leadClass}>
               The right level of care is not the most intensive one available. It is the one that matches where someone
               actually is — today, and in the years ahead.

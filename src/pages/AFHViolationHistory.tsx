@@ -66,7 +66,7 @@ const afhArticleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "How to Look Up AFH Violations & Inspection Reports",
-  description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean.",
+  description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State (WA) — how to search, read reports, spot red flags, and know what the records actually mean.",
   url: "https://realpropertyplanning.com/afh-club/violation-history-lookup",
   datePublished: "2026-07-27",
   dateModified: "2026-09-28",
@@ -83,7 +83,7 @@ const AFHViolationHistory = () => (
   <>
     <SEOHead
       title="How to Look Up AFH Violations & Inspection Reports | AFH Club | Real Property Planning"
-      description="A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean."
+      description="A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State (WA) — how to search, read reports, spot red flags, and know what the records actually mean."
       canonical="https://realpropertyplanning.com/afh-club/violation-history-lookup"
       ogType="article"
       schemaJson={afhArticleSchema}
@@ -114,7 +114,7 @@ const AFHViolationHistory = () => (
               margin: "0 0 20px",
             }}
           >
-            How to Look Up Washington Adult Family Home Violations and Inspection Reports
+            How to Look Up Washington State Adult Family Home Violations and Inspection Reports
           </h1>
           <p style={{ ...body, margin: 0, maxWidth: 680 }}>
             Washington State provides free public access to Adult Family Home (AFH) inspection and enforcement

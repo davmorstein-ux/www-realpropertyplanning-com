@@ -1,5 +1,5 @@
 /**
- * Washington AFH Market Report hub (Oct 6, 2026): the latest edition's key
+ * Washington State AFH Market Report hub (Oct 6, 2026): the latest edition's key
  * figures and the list of editions. Editions live in src/data/afhMarketReport.ts.
  */
 import { Link } from "react-router-dom";
@@ -19,14 +19,14 @@ const MarketReportHub = () => (
   <div className="mkt">
     <style dangerouslySetInnerHTML={{ __html: MKT_CSS }} />
     <SEOHead
-      title="Washington Adult Family Home Market Report | AFH Club"
-      description="A regular report on Washington adult family homes: licensed homes and beds from DSHS records, new licenses, ownership changes and closures, and adult family home sales."
+      title="Washington State Adult Family Home Market Report | AFH Club"
+      description="A regular report on Washington State (WA) adult family homes: licensed homes and beds from DSHS records, new licenses, ownership changes and closures, and adult family home sales."
       canonical={URL}
     />
     <BreadcrumbSchema items={[{ name: "AFH Club", url: "/afh-club" }, { name: "Market Report", url: REPORT_HUB }]} />
     <Header />
     <main id="main-content">
-      <HeroBandTitle as="h1">Washington AFH Market Report</HeroBandTitle>
+      <HeroBandTitle as="h1">Washington State AFH Market Report</HeroBandTitle>
       <Section>
         <p>
           A regular look at Washington&apos;s adult family homes: how many are licensed, which homes are new, which changed

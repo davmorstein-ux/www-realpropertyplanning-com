@@ -146,7 +146,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/": {
     title: "Probate, Estate & Senior Transition Guidance in Washington State | Real Property Planning",
     description:
-      "A free educational hub for Washington families: plain-language guides and calculators for probate, inherited property, adult family homes, and senior moves, plus a path to the right licensed professional. Call (206) 900-3015.",
+      "A free educational hub for Washington State (WA) families: plain-language guides and calculators for probate, inherited property, adult family homes, and senior moves, plus a path to the right licensed professional. Call (206) 900-3015.",
     h1: "Probate, estate & senior transition guidance for Washington families.",
     /* Must match the image RPPHomeV3 actually renders. This still pointed at
        the retired /hero-v2.webp after the 2026 artwork swap, so every page
@@ -286,9 +286,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning is a free educational resource for older adults, their families, and the professionals who work with them across Washington State. Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals, use this page to ask a question and be pointed in the right direction.",
   },
   "/counties": {
-    title: "Washington Counties | Probate, Estate & Senior Transition Guides by County",
+    title: "Washington State Counties | Probate, Estate & Senior Transition Guides by County",
     description:
-      "County-by-county guides to probate real estate, inherited property, estate sales, valuation, and senior transitions across Washington State, with help finding a broker or appraiser who works each market.",
+      "County-by-county guides to probate real estate, inherited property, estate sales, valuation, and senior transitions across Washington State (WA), with help finding a broker or appraiser who works each market.",
     h1: "Washington State Counties",
     intro:
       "Real Property Planning covers every county in Washington State with plain-language guidance on probate real estate, inherited property, estate sales, and senior transitions. Each county page explains what makes that market different and how to connect with a featured Washington licensed broker or certified appraiser who works there.",
@@ -635,10 +635,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "When does an estate need a formal appraisal versus a Comparative Market Analysis? A clear breakdown of the differences and when each is appropriate.",
   },
   "/guides/out-of-state-families": {
-    title: "How Out-of-State Families Can Manage a Washington Property Sale | Real Property Planning",
-    description: "Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State from out of state.",
+    title: "How Out-of-State Families Can Manage a WA Property Sale | Real Property Planning",
+    description: "Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State (WA) from out of state.",
     h1: "How Out-of-State Families Manage a Washington Property Sale",
-    intro: "Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State from out of state.",
+    intro: "Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State (WA) from out of state.",
   },
   "/guides/senior-transition-differences": {
     title: "How Senior Transition Sales Differ From Ordinary Home Sales | Real Property Planning",
@@ -653,9 +653,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Your options when you inherit a house in Washington — selling, keeping, renting, valuation, preparation, tax considerations, and family coordination.",
   },
   "/guides/executor-sell-house-before-probate-washington": {
-    title: "Can an Executor Sell a House Before Probate in Washington? | Real Property Planning",
-    description: "Understanding when an executor can — and cannot — sell estate property in Washington State. Learn what steps to take while waiting for legal authority.",
-    h1: "Can an Executor Sell a House Before Probate in Washington?",
+    title: "Can an Executor Sell a House Before Probate in Washington State? | Real Property Planning",
+    description: "Understanding when an executor can — and cannot — sell estate property in Washington State (WA). Learn what steps to take while waiting for legal authority.",
+    h1: "Can an Executor Sell a House Before Probate in Washington State?",
     intro: "When an executor can — and cannot — sell estate property in Washington State, and what to do while waiting for legal authority.",
   },
   "/guides/appraisal-before-selling-inherited-property": {
@@ -788,7 +788,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     FLOW_PAGES.map((fp) => [
       fp.path,
       {
-        title: `${fp.title} | Washington Probate Guide`,
+        title: `${fp.title} | Washington State Probate Guide`,
         description: fp.description,
         h1: fp.title,
         intro: fp.summary[0],
@@ -798,9 +798,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ])
   ),
   [DEADLINES_PATH]: {
-    title: "Washington Probate Deadlines & Key Rules | Real Property Planning",
-    description: "Every Washington probate deadline and rule that matters for a house, in one table with its statute: notice to heirs, inventory, creditor claims, will contests, small estates, transfer on death deeds, estate tax, and common questions.",
-    h1: "Washington Probate Deadlines & Key Rules",
+    title: "Washington State Probate Deadlines & Key Rules | Real Property Planning",
+    description: "Every Washington State (WA) probate deadline and rule that matters for a house, in one table with its statute: notice to heirs, inventory, creditor claims, will contests, small estates, transfer on death deeds, estate tax, and common questions.",
+    h1: "Washington State Probate Deadlines & Key Rules",
     quickAnswerQ: "What are the main Washington probate deadlines?",
     quickAnswerA: "After the court appoints the personal representative: notice to heirs and beneficiaries within 20 days (RCW 11.28.237), the inventory within three months (RCW 11.44.015), and creditor claims due four months after the notice to creditors is first published (RCW 11.40.051). A will contest must be filed within four months of the will being admitted (RCW 11.24.010).",
     intro: "The dates and rules that matter when there is a house, each with its statute, from the Washington Probate & Estate Property Guide. General information, not legal advice.",
@@ -809,9 +809,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-09-30", dateModified: "2026-10-01" },
   },
   "/probate-glossary": {
-    title: "Washington Probate & Estate Glossary: Terms Explained | Real Property Planning",
-    description: `${PROBATE_GLOSSARY_A_TO_Z.length} Washington probate and estate property terms in plain English: personal representative, letters testamentary, nonintervention powers, creditor claims, transfer on death deeds, stepped-up basis and estate tax, each with its statute.`,
-    h1: "Washington Probate & Estate Glossary",
+    title: "Washington State Probate & Estate Glossary: Terms Explained | Real Property Planning",
+    description: `${PROBATE_GLOSSARY_A_TO_Z.length} Washington State (WA) probate and estate property terms in plain English: personal representative, letters testamentary, nonintervention powers, creditor claims, transfer on death deeds, stepped-up basis and estate tax, each with its statute.`,
+    h1: "Washington State Probate & Estate Glossary",
     quickAnswerQ: "What are nonintervention powers in Washington probate?",
     quickAnswerA: "Authority the court can grant the personal representative of a solvent estate to settle it without further court orders, including to sell, mortgage or lease real estate without court approval or confirmation (RCW 11.68.090). Most Washington estates are administered this way.",
     intro: `${PROBATE_GLOSSARY_A_TO_Z.length} terms you will meet when settling an estate, inheriting a house or selling one in Washington, in plain English, each linked to the guide that explains it and, where there is one, the statute behind it. General information, not legal advice.`,
@@ -930,8 +930,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/wabo-inspection-guide": {
     title: "What Is WABO? A Simple Overview | AFH Club | Real Property Planning",
-    description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying.",
-    h1: "What Is WABO? A Simple Overview for Washington Adult Family Homes",
+    description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State (WA) — what WABO is, who inspects the home, and why it matters before buying.",
+    h1: "What Is WABO? A Simple Overview for Washington State Adult Family Homes",
     quickAnswerQ: "What is WABO and what is a WABO inspection for an Adult Family Home?",
     quickAnswerA: "WABO is the Washington Association of Building Officials, a nonprofit professional association — it is not the agency that licenses Adult Family Homes and generally does not inspect the property itself. A 'WABO inspection' is informal shorthand for the local building inspection performed by your city or county building department using the Adult Family Home Local Building Inspection Checklist, which WABO developed in cooperation with DSHS.",
     intro: "Everyone in the adult family home world says 'WABO inspection,' and almost no one means what the words say. This is the short version for buyers and prospective providers who need to know what actually happens and who does it.",
@@ -943,8 +943,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/wabo-technical-guide": {
     title: "WABO Checklist & Technical Requirements | AFH Club | Real Property Planning",
-    description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State — what the checklist covers, common delays, and why passing does not mean licensed.",
-    h1: "WABO Checklist: The Technical Guide for Washington Adult Family Homes",
+    description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State (WA) — what the checklist covers, common delays, and why passing does not mean licensed.",
+    h1: "WABO Checklist: The Technical Guide for Washington State Adult Family Homes",
     quickAnswerQ: "What does the WABO Adult Family Home building inspection checklist cover?",
     quickAnswerA: "The checklist addresses resident bedroom exits and classifications, emergency escape windows, smoke and carbon monoxide alarms, doors and hardware, ramps and landings, stairs and handrails, bathroom grab bars, shower dimensions, and fire access and water supply. A passed checklist confirms the building meets AFH code requirements, but it is not the same as a DSHS license — DSHS separately decides whether the provider and home qualify for licensing. DSHS also has physical rules the checklist does not show: homes licensed after September 20, 2026 need interior doors of at least 27 inches wherever residents pass through (WAC 388-76-10715). A continuously licensed home that changes owners is exempt; a lapsed former AFH is not.",
     intro: "The checklist is the code standard an adult family home has to meet. This guide walks the checklist item by item, explains the bedroom classifications that drive most of the cost, and flags the items that most often cause delays.",
@@ -955,9 +955,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-07-26", dateModified: "2026-09-28" },
   },
   "/afh-club/washington-afh-data": {
-    title: "Washington Adult Family Homes by the Numbers | AFH Club",
-    description: `${afhN(AFH_STATS.state.homes)} licensed adult family homes and ${afhN(AFH_STATS.state.beds)} beds in Washington: counts by county, home size, Medicaid, specialty designations, and ECS and SBS contracts, from DSHS data. Free CSV download.`,
-    h1: "Washington Adult Family Homes by the Numbers",
+    title: "Washington State Adult Family Homes by the Numbers | AFH Club",
+    description: `${afhN(AFH_STATS.state.homes)} licensed adult family homes and ${afhN(AFH_STATS.state.beds)} beds in Washington State (WA): counts by county, home size, Medicaid, specialty designations, and ECS and SBS contracts, from DSHS data. Free CSV download.`,
+    h1: "Washington State Adult Family Homes by the Numbers",
     quickAnswerQ: "How many licensed adult family homes are there in Washington?",
     quickAnswerA: `${afhN(AFH_STATS.state.homes)} licensed adult family homes with ${afhN(AFH_STATS.state.beds)} licensed beds in ${AFH_STATS.state.counties} of Washington's 39 counties, according to the DSHS Adult Family Home Locator (retrieved ${AFH_STATS.retrievedFrom} to ${AFH_STATS.retrievedTo}). ${afhSix}% are licensed for six residents, ${AFH_STATS.shares.medicaid}% hold a Medicaid contract, and ${afhTop3.map((c: { county: string; homes: number }) => `${c.county} (${afhN(c.homes)})`).join(", ")} counties have the most homes.`,
     intro: "Every licensed adult family home in Washington, counted from the state's own records: how many there are, where they are, how big they are, and which contracts and specialty designations they hold. Counts only, nothing estimated; county table available as a CSV.",
@@ -968,13 +968,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       `Specialty contracts — Expanded Community Services (ECS) ${AFH_STATS.shares.ecs}%, Specialized Behavior Support (SBS) ${AFH_STATS.shares.sbs}% of homes statewide; they belong to the owner and do not transfer in a sale.`,
       `By county — ${[...AFH_STATS.counties].filter((c: { homes: number }) => c.homes > 0).map((c: { county: string; homes: number; beds: number }) => `${c.county} ${afhN(c.homes)} homes, ${afhN(c.beds)} beds`).join("; ")}.`,
       "Method — counts of records in the DSHS Adult Family Home Locator for all 39 counties; see /research-methodology. Download: /data/washington-afh-by-county.csv",
-      `Using these figures — you may quote them with a link to this page. Suggested citation: Real Property Planning, "Washington Adult Family Homes by the Numbers," compiled from the DSHS Adult Family Home Locator (retrieved ${AFH_STATS.retrievedFrom} to ${AFH_STATS.retrievedTo}), https://realpropertyplanning.com/afh-club/washington-afh-data`,
+      `Using these figures — you may quote them with a link to this page. Suggested citation: Real Property Planning, "Washington State Adult Family Homes by the Numbers," compiled from the DSHS Adult Family Home Locator (retrieved ${AFH_STATS.retrievedFrom} to ${AFH_STATS.retrievedTo}), https://realpropertyplanning.com/afh-club/washington-afh-data`,
     ],
   },
   "/afh-club/washington-adult-family-home-guide": {
-    title: "Washington Adult Family Homes: The Complete Guide | AFH Club",
-    description: "What a Washington adult family home is, who licenses it, what the house and the owner need, how homes are paid, and what happens when one is sold, with a path for opening, running, buying, selling or evaluating an AFH.",
-    h1: "Washington Adult Family Homes: The Complete Guide",
+    title: "Washington State Adult Family Homes: The Complete Guide | AFH Club",
+    description: "What a Washington State (WA) adult family home is, who licenses it, what the house and the owner need, how homes are paid, and what happens when one is sold, with a path for opening, running, buying, selling or evaluating an AFH.",
+    h1: "Washington State Adult Family Homes: The Complete Guide",
     heroImage: "/afh-washington-guide-cover.webp",
     quickAnswerQ: "What is an adult family home in Washington?",
     quickAnswerA: "An adult family home is a regular house licensed by DSHS to care for two to six adults who are not related to the provider, or up to eight with DSHS approval (RCW 70.128.010). The license belongs to the provider, not the house, so it never transfers in a sale: every new owner applies for a new one (WAC 388-76-10105). Most homes are paid mainly by Medicaid, at a daily rate set by each resident's CARE classification and where the home is.",
@@ -996,9 +996,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ])
   ),
   [AFH_RULES_PATH]: {
-    title: "Washington Adult Family Homes: Rules & Key Figures | AFH Club",
-    description: "The rules and figures that matter for a Washington adult family home, each with its source: licensing, capacity, zoning, owner experience, training, the building inspection, fees, inspections, payment, and what happens in a sale.",
-    h1: "Washington Adult Family Homes: Rules & Key Figures",
+    title: "Washington State Adult Family Homes: Rules & Key Figures | AFH Club",
+    description: "The rules and figures that matter for a Washington State (WA) adult family home, each with its source: licensing, capacity, zoning, owner experience, training, the building inspection, fees, inspections, payment, and what happens in a sale.",
+    h1: "Washington State Adult Family Homes: Rules & Key Figures",
     quickAnswerQ: "What is an adult family home in Washington?",
     quickAnswerA: "An adult family home is a regular house licensed by DSHS to care for two to six adults who are not related to the provider, or up to eight with DSHS approval (RCW 70.128.010). The license belongs to the provider, not the house, so it never transfers in a sale: every new owner applies for a new one (WAC 388-76-10105). Most homes are paid mainly by Medicaid, at a daily rate set by each resident's CARE classification and where the home is.",
     intro: `For anyone opening, running, buying, selling or investing in an adult family home in Washington: the rules that matter, in plain English, with a path to the right guide. Washington has ${afhN(AFH_STATS.state.homes)} licensed adult family homes with ${afhN(AFH_STATS.state.beds)} beds; ${afhSix}% are licensed for six residents and ${AFH_STATS.shares.medicaid}% hold a Medicaid contract (DSHS locator, retrieved ${AFH_STATS.retrievedTo}).`,
@@ -1018,9 +1018,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-09-29", dateModified: "2026-10-01" },
   },
   "/afh-club/washington-afh-rule-changes": {
-    title: "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards | AFH Club",
-    description: "Every Washington adult family home rule change since 2023, side by side: the old requirement, today's rule, the effective date, who it affects and the official citation, plus proposals that are not yet law.",
-    h1: "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards",
+    title: "Washington State AFH Rules Have Changed: Old Requirements vs. Today's Standards | AFH Club",
+    description: "Every Washington State (WA) adult family home rule change since 2023, side by side: the old requirement, today's rule, the effective date, who it affects and the official citation, plus proposals that are not yet law.",
+    h1: "Washington State AFH Rules Have Changed: Old Requirements vs. Today's Standards",
     heroImage: "/afh-rule-changes-cover.webp",
     quickAnswerQ: "What Washington adult family home rules changed in 2026?",
     quickAnswerA: "Effective September 20, 2026 (WSR 26-17-004): homes licensed after that date need 27-inch interior doors where residents pass through; partial evacuation drills are required at least every two months; resident records must hold the signed notice-of-rights acknowledgement; a resident may not sleep in a bedroom DSHS has not inspected and approved; and license denial became mandatory for an applicant who operates other homes without meeting the multiple-home provider requirements. Earlier in 2026, Medicaid residency agreements became required (January 1), the rules on posting stop placement orders were made more specific (March 15), and the Washington Supreme Court ended the minimum-wage exemption for AFH live-in caregivers (July 9).",
@@ -1038,18 +1038,18 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-09-29", dateModified: "2026-09-29" },
   },
   "/afh-club/glossary": {
-    title: "Washington Adult Family Home Glossary: AFH Terms Explained | AFH Club",
-    description: `${GLOSSARY_A_TO_Z.length} Washington adult family home terms in plain English: CHOW, CARE and the A–E classifications, CBHS tiers, ECS and SBS, WABO and form 15-604, license fees, inspections and enforcement, each with its WAC or RCW source.`,
-    h1: "Washington Adult Family Home Glossary",
+    title: "WA Adult Family Home Glossary: AFH Terms Explained | AFH Club",
+    description: `${GLOSSARY_A_TO_Z.length} Washington State (WA) adult family home terms in plain English: CHOW, CARE and the A–E classifications, CBHS tiers, ECS and SBS, WABO and form 15-604, license fees, inspections and enforcement, each with its WAC or RCW source.`,
+    h1: "Washington State Adult Family Home Glossary",
     quickAnswerQ: "What does CHOW mean for an adult family home?",
     quickAnswerA: "CHOW means change of ownership: any change in the provider or in control of the provider, such as selling the business, forming an LLC, or transferring 50 percent or more of an entity's shares. It requires a new license application and a new license (WAC 388-76-10105).",
     intro: `${GLOSSARY_A_TO_Z.length} terms you will meet when opening, running, buying or selling an adult family home in Washington, in plain English, each linked to the AFH Club guide that explains it and the rule or statute behind it.`,
     sections: GLOSSARY_A_TO_Z.map((t) => `${t.term}${t.aka ? ` (${t.aka})` : ""} — ${t.definition}${t.source ? ` Source: ${t.source.label}.` : ""}`),
   },
   "/afh-club/dos-and-donts-operating-adult-family-home": {
-    title: "The Dos and Don'ts of Operating a Washington Adult Family Home | AFH Club",
-    description: "The essential dos and don'ts of operating a Washington adult family home: admissions, staffing, resident care, documentation, medications, emergencies, inspections, finances, and succession planning.",
-    h1: "The Dos and Don'ts of Operating a Washington Adult Family Home",
+    title: "The Dos and Don'ts of Operating a Washington State Adult Family Home | AFH Club",
+    description: "The essential dos and don'ts of operating a Washington State (WA) adult family home: admissions, staffing, resident care, documentation, medications, emergencies, inspections, finances, and succession planning.",
+    h1: "The Dos and Don'ts of Operating a Washington State Adult Family Home",
     quickAnswerQ: "What matters most when operating a Washington adult family home?",
     quickAnswerA: "Build the operation around the residents you can safely and consistently serve. That means careful admissions, staffing for residents' actual needs rather than bed count (with at least one qualified caregiver present whenever residents are home), a dependable medication and documentation system, a practiced emergency plan with partial evacuation drills at least every two months, protected resident rights, a written succession plan, and conservative finances with an operating reserve. The license is not transferable, so a sale or change of control requires a new license.",
     intro: "An adult family home is three things at once: someone's home, a licensed care setting, and a small business. This guide covers fourteen topics every operator faces, each with a Do and a Don't, and marks each point as a Washington requirement or an operating best practice. Requirements were checked on September 27, 2026, including the rule changes that took effect September 20, 2026.",
@@ -1072,8 +1072,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/afh-property-classifications": {
     title: "Is It Really an Adult Family Home? How to Read AFH Listings | AFH Club",
-    description: "What 'adult family home', 'AFH-ready', 'WABO-approved' and 'potential AFH' actually mean in a Washington listing, the five labels AFH Club uses, the building requirements behind them, and the documents to request before you buy.",
-    h1: "Is It Really an Adult Family Home? How to Read AFH Listings in Washington",
+    description: "What 'adult family home', 'AFH-ready', 'WABO-approved' and 'potential AFH' actually mean in a Washington State (WA) listing, the five labels AFH Club uses, the building requirements behind them, and the documents to request before you buy.",
+    h1: "Is It Really an Adult Family Home? How to Read AFH Listings in Washington State",
     quickAnswerQ: "What makes a house a licensed adult family home in Washington?",
     quickAnswerA: "Two separate approvals. First, the local city or county building official inspects the house against the Adult Family Home Local Building Inspection Checklist developed by the Washington Association of Building Officials (WABO) with DSHS, and signs it as passed. Second, DSHS licenses a qualified provider to operate an adult family home at that address. A house with enough bedrooms, a ramp, or grab bars has neither approval until both have happened, and a passed inspection alone is not a license. The license belongs to the provider and the address; a buyer must obtain their own through the DSHS Change of Ownership process.",
     intro: "Brokers write 'adult family home', 'AFH-ready', 'WABO-approved' and 'potential AFH' into listings for houses that range from a fully licensed, occupied care home to an ordinary four-bedroom with wide hallways. None of those phrases is a legal status. AFH Club labels every listing and closed sale by what the record actually supports rather than by the broker's description.",
@@ -1095,9 +1095,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-09-13", dateModified: "2026-09-13" },
   },
   "/senior-living/choosing-an-adult-family-home": {
-    title: "How to Choose an Adult Family Home in Washington: Tour Checklist | Real Property Planning",
-    description: "A Washington family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side.",
-    h1: "How to Choose an Adult Family Home in Washington",
+    title: "How to Choose an Adult Family Home in WA: Tour Checklist | Real Property Planning",
+    description: "A Washington State (WA) family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side.",
+    h1: "How to Choose an Adult Family Home in Washington State",
     quickAnswerQ: "How do I choose an adult family home in Washington?",
     quickAnswerA: "Build a shortlist from the state's licensing records, read each home's DSHS inspection record, then visit your top two or three, ideally at a mealtime. On the tour, ask who is on duty overnight, which specialty designations the home holds, whether it has a Medicaid contract, and exactly what your parent's care would cost. Ask for the home's Disclosure of Services and its last three years of inspection reports, and compare the homes on the same points before you decide.",
     intro: "A guide for Washington families choosing an adult family home for a parent or relative: how to narrow the list by location, care needs and payment, how to read a home's DSHS record, the questions to ask on a tour, and a worksheet for comparing two homes. AFH Club does not rate, rank or recommend individual homes.",
@@ -1111,8 +1111,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/violation-history-lookup": {
     title: "How to Look Up AFH Violations & Inspection Reports | AFH Club | Real Property Planning",
-    description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean.",
-    h1: "How to Look Up Washington Adult Family Home Violations and Inspection Reports",
+    description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State (WA) — how to search, read reports, spot red flags, and know what the records actually mean.",
+    h1: "How to Look Up Washington State Adult Family Home Violations and Inspection Reports",
     quickAnswerQ: "How do I look up violation and inspection history for a Washington Adult Family Home?",
     quickAnswerA: "Go to the DSHS Adult Family Home Locator, search for the home, open the listing, and open the home's reports and inspection letters. There you'll find inspection reports and cited deficiencies, complaint investigation results, and enforcement letters. DSHS says the Locator shows limits and enforcement from the previous three years. If no documents are listed, that only means none are currently displayed, not that the home has a perfect history.",
     intro: "Adult family home inspection reports, complaint investigations, and enforcement actions are public. The DSHS Locator shows limits and enforcement from the previous three years, and each home must keep its last three years of inspection reports available for anyone to review. Knowing where to find them and how to read them is the single most useful thing a family can do before a placement.",
@@ -1129,8 +1129,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   /* Question library (Oct 11, 2026): src/data/questionLibrary.ts. The journey pages carry every
      entry as an FAQ, so the questions and their links are in the static HTML and /ai/pages.json. */
   [QUESTIONS_PATH]: {
-    title: "Questions & Answers: Short Answers for Washington Families | Real Property Planning",
-    description: `${ALL_LIBRARY_ENTRIES.length} short answers to the questions Washington families ask about planning ahead, helping an aging parent, handling an estate, and finding the right professional. Each answer links to the guide that covers it in full.`,
+    title: "Questions & Answers: Short Answers for WA Families | Real Property Planning",
+    description: `${ALL_LIBRARY_ENTRIES.length} short answers to the questions Washington State (WA) families ask about planning ahead, helping an aging parent, handling an estate, and finding the right professional. Each answer links to the guide that covers it in full.`,
     h1: "Questions & Answers",
     intro: "Short answers to the questions families ask most, grouped the same way as the rest of the site. Every answer comes from one of our guides and links to it, so you can read the full explanation and its sources.",
     sections: JOURNEYS.map((j) => `${j.title} (${journeyPath(j.slug)}) — ${libraryFor(j.slug).length} questions. ${j.blurb}`),
@@ -1168,10 +1168,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ]),
   ),
   "/newsletter": {
-    title: "Newsletters: Washington Families and AFH Club | Real Property Planning",
-    description: "Two free, occasional newsletters: one for Washington families dealing with inherited homes, probate, senior moves and the cost of care, and one for adult family home buyers, owners and investors.",
+    title: "Newsletters: Washington State Families and AFH Club | Real Property Planning",
+    description: "Two free, occasional newsletters: one for Washington State (WA) families dealing with inherited homes, probate, senior moves and the cost of care, and one for adult family home buyers, owners and investors.",
     h1: "Newsletters",
-    intro: "There are two newsletters, written for different people. The family newsletter covers inherited homes, probate, senior moves and what care costs in Washington. The AFH Club newsletter covers adult family homes for sale and recent sales, DSHS rate and rule changes, and the Washington AFH Market Report. Both are free and occasional, ask you to confirm your address before anything is sent, and can be unsubscribed from at any time.",
+    intro: "There are two newsletters, written for different people. The family newsletter covers inherited homes, probate, senior moves and what care costs in Washington. The AFH Club newsletter covers adult family homes for sale and recent sales, DSHS rate and rule changes, and the Washington State AFH Market Report. Both are free and occasional, ask you to confirm your address before anything is sent, and can be unsubscribed from at any time.",
   },
   "/family-home-planning": {
     title: "What Will Happen to the Family Home? A Free Planning Checklist | Real Property Planning",
@@ -1186,8 +1186,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/my-plan": {
-    title: "My Real Property Plan: a Free Step-by-Step Plan for Washington Families | Real Property Planning",
-    description: "Answer a few questions about an inherited house or a parent's housing and get a free, step-by-step plan built from Washington guides. No email needed. Print it or save the link.",
+    title: "My Real Property Plan: a Free Step-by-Step Plan for WA Families | Real Property Planning",
+    description: "Answer a few questions about an inherited house or a parent's housing and get a free, step-by-step plan built from Washington State (WA) guides. No email needed. Print it or save the link.",
     h1: "My Real Property Plan",
     quickAnswerQ: "Where do I start with an inherited house or a parent's housing in Washington?",
     quickAnswerA: "With an inherited house, start with who has authority to act (the deed and any will or trust decide it), then protect the house, keep the mortgage, taxes and insurance paid, and find out what it is worth before deciding to sell, keep or rent. With a parent's housing, check that a durable power of attorney covers real estate, compare what each option costs, learn how Medicaid treats the home if it may be needed, and plan any move and sale together. My Real Property Plan turns your answers into a step-by-step plan with the Washington guide for each step.",
@@ -1274,9 +1274,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: BEFORE_YOU_BUY.PUBLISHED, dateModified: BEFORE_YOU_BUY.REVIEWED },
   },
   "/afh-club/afh-payment-field-guide": {
-    title: "AFH Tiers, Levels and Classifications Explained | How Washington Adult Family Homes Get Paid | AFH Club",
-    description: "CARE classifications A through E, CBHS Tiers 1 through 6, ECS and SBS specialty contracts, and private-pay care levels are four different systems. A field guide for Washington AFH buyers, sellers and owners: who sets each one, who it applies to, and what survives a sale.",
-    h1: "Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs Get Paid",
+    title: "AFH Tiers, Levels and Classifications Explained | How Washington State Adult Family Homes Get Paid | AFH Club",
+    description: "CARE classifications A through E, CBHS Tiers 1 through 6, ECS and SBS specialty contracts, and private-pay care levels are four different systems. A field guide for Washington State (WA) AFH buyers, sellers and owners: who sets each one, who it applies to, and what survives a sale.",
+    h1: "Tiers, Levels, and Classifications: A Field Guide to How Washington State AFHs Get Paid",
     quickAnswerQ: "Are Washington adult family homes classified as Tier 1 through Tier 5?",
     quickAnswerA: "No. Homes are not tiered. Four separate systems get called tiers or levels: DSHS CARE classifications (A Low through E High) that set each Medicaid resident's base daily rate; CBHS supportive supervision tiers (1 through 6) for residents with qualifying behavioral health needs; owner-held specialty contracts such as ECS and SBS; and private-pay care levels each home sets for itself.",
     intro: "Owners talk about Tier 3 residents, C High, Level 4 care and the ECS contract as if they were one system. They are four, set by different agencies, attached to different things, and they behave differently when a home is sold.",
@@ -1287,7 +1287,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-09-18", dateModified: "2026-10-12" },
   },
   "/afh-club/care-classifications-a-through-e": {
-    title: "CARE Classifications A Through E: How Medicaid Pays Washington Adult Family Homes | AFH Club",
+    title: "CARE Classifications A Through E: How Medicaid Pays WA Adult Family Homes | AFH Club",
     description: "How DSHS's CARE assessment places Medicaid residents into seventeen classifications from A Low to E High, what each group means, current daily rates, why classification mix matters as much as occupancy, and what AFH buyers should verify in due diligence.",
     h1: "A Through E: How CARE Classifications Set an Adult Family Home's Medicaid Income",
     quickAnswerQ: "What are the A through E classifications for Washington adult family homes?",
@@ -1301,7 +1301,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-09-18", dateModified: "2026-09-25" },
   },
   "/afh-club/cbhs-tiers": {
-    title: "CBHS Tiers Explained for Washington Adult Family Homes | Supportive Supervision Tiers 1-6 | AFH Club",
+    title: "CBHS Tiers Explained for Washington State Adult Family Homes | Supportive Supervision Tiers 1-6 | AFH Club",
     description: "Community Behavioral Health Support (CBHS) pays adult family homes for supportive supervision in six tiers defined by staff hours per day. What the tiers are, who qualifies, how they are reviewed and re-tiered, and what AFH buyers and sellers should verify.",
     h1: "CBHS Tiers Explained: The Behavioral Health Add-On Behind Some AFH Income",
     quickAnswerQ: "What are CBHS tiers in a Washington adult family home?",
@@ -1359,14 +1359,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/market-report": {
-    title: "Washington Adult Family Home Market Report | AFH Club",
-    description: "A regular report on Washington adult family homes: licensed homes and beds from DSHS records, new licenses, ownership changes and closures, and adult family home sales.",
-    h1: "Washington AFH Market Report",
+    title: "Washington State Adult Family Home Market Report | AFH Club",
+    description: "A regular report on Washington State (WA) adult family homes: licensed homes and beds from DSHS records, new licenses, ownership changes and closures, and adult family home sales.",
+    h1: "Washington State AFH Market Report",
     intro: `A regular look at Washington's adult family homes, built from DSHS licensing records and the adult family home sales reviewed on AFH Club. Latest edition, ${editionTitle(AFH_LATEST)}: ${editionSummary(AFH_LATEST)}`,
     sections: AFH_EDITIONS.map((e) => `${editionTitle(e)} edition — ${editionSummary(e)} Full report: https://realpropertyplanning.com${editionPath(e)}`),
   },
   ...Object.fromEntries(AFH_EDITIONS.map((e) => [editionPath(e), {
-    title: `Washington Adult Family Home Market Report: ${editionTitle(e)} | AFH Club`,
+    title: `Washington State Adult Family Home Market Report: ${editionTitle(e)} | AFH Club`,
     description: editionSummary(e).slice(0, 300),
     h1: `AFH Market Report: ${editionTitle(e)}`,
     intro: editionSummary(e),
@@ -1374,14 +1374,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: e.published, dateModified: e.published },
   }])),
   "/afh-club/new-licenses": {
-    title: "Newly Licensed Adult Family Homes in Washington | AFH Club",
+    title: "Newly Licensed Adult Family Homes in Washington State | AFH Club",
     description: `Adult family homes newly licensed by DSHS in ${AFH_CHANGES.counties.join(", ")} counties, ${mktDate(AFH_CHANGES.from)} to ${mktDate(AFH_CHANGES.to)}, and homes that changed ownership, with links to each home's licensing record.`,
     h1: "Newly Licensed Adult Family Homes",
     intro: `Homes that appeared in DSHS adult family home licensing records in ${AFH_CHANGES.counties.join(", ")} counties between ${mktDate(AFH_CHANGES.from)} and ${mktDate(AFH_CHANGES.to)}: ${AFH_CHANGES.newHomes.length} newly licensed homes and ${AFH_CHANGES.ownershipChanges.length} new licenses at an address that had a different license (usually a change of ownership). ${AFH_CHANGES.closed.length} licenses ended. Updated after each DSHS download.`,
   },
   "/afh-club/caregivers": {
-    title: "AFH Caregiver Board: Jobs and Caregivers in Washington | AFH Club",
-    description: "A free board for Washington adult family homes hiring caregivers, and for caregivers looking for adult family home work. Posts are reviewed, contact details stay private, and every post expires after 30 days.",
+    title: "AFH Caregiver Board: Jobs and Caregivers in Washington State | AFH Club",
+    description: "A free board for Washington State (WA) adult family homes hiring caregivers, and for caregivers looking for adult family home work. Posts are reviewed, contact details stay private, and every post expires after 30 days.",
     h1: "AFH Caregiver Board",
     intro: "A free place for Washington adult family homes looking for caregivers, resident managers and nurses, and for caregivers looking for adult family home work. Homes include their DSHS license number, which is checked before a post appears. Each post is reviewed and shows for 30 days. Phone numbers and email addresses are never shown; replies go through the site and are forwarded. The board is a connection resource only: it is not the employer, a staffing agency or a recruiter, and does not verify anyone's identity, credentials or background. Homes complete every hiring requirement themselves, including the DSHS background check, and can look up any caregiver credential on the Washington Department of Health provider credential search.",
   },
@@ -1534,9 +1534,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Plain-English articles on senior housing options, probate timelines, inherited property decisions, and estate transitions across Washington State.",
   },
   "/articles/hospice-care-washington": {
-    title: "Hospice Care in Washington: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home",
-    description: "Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' means, and how hospice works inside an adult family home, assisted living, or your own home in Washington.",
-    h1: "Hospice Care in Washington",
+    title: "Hospice Care in WA: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home",
+    description: "Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' means, and how hospice works inside an adult family home, assisted living, or your own home in Washington State (WA).",
+    h1: "Hospice Care in Washington State",
     quickAnswerQ: "Where can my parent receive hospice care in Washington?",
     quickAnswerA: "Almost anywhere they already live: their own home, an adult family home, assisted living, memory care, or a nursing facility, plus short stays in a hospice care center or hospital when symptoms can't be managed at home. Washington's Medicaid rule (WAC 182-551-1000) says hospice care may be in a client's temporary or permanent place of residence. Medicare covers the hospice services for eligible patients at little or no cost (a copayment of up to $5 per prescription and 5% for inpatient respite care); it does not cover room and board, so the home or facility is paid for the way it was before hospice began. \"24-hour hospice\" means a team on call around the clock with scheduled visits, not a worker in the house all day and night.",
     intro: "Hospice is not a place. It is care that comes to you, wherever you live, when the goal has changed from curing an illness to comfort. Families choosing between staying home, an adult family home, assisted living, or memory care need to know that hospice can usually be added to any of those settings, and that it does not replace them: someone still has to be there between hospice visits, and the residence is still paid for separately.",
@@ -1751,8 +1751,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/gray-divorce": {
     title: "Gray Divorce and the Family Home in Washington State | Real Property Planning",
-    description: "Guidance for Washington State couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part.",
-    h1: "Gray Divorce and Your Home — What Washington Couples Need to Know",
+    description: "Guidance for Washington State (WA) couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part.",
+    h1: "Gray Divorce and Your Home — What Washington State Couples Need to Know",
   },
   "/guides/probate-vs-trust-sale-washington": {
     title: "Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning",
@@ -1772,20 +1772,20 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/long-term-care": {
     title: "Long-Term Care Options in Washington State | Real Property Planning",
     description: "A hub for understanding long-term care options in Washington State — nursing homes, Medicaid, WA Cares, hospital discharge planning, and how to choose the right care setting.",
-    h1: "Understanding Long-Term Care in Washington",
+    h1: "Understanding Long-Term Care in Washington State",
   },
   "/long-term-care/hospital-discharge-planning": {
-    title: "Planning Your Hospital Discharge: A Guide for Washington Families",
-    description: "A comprehensive guide to hospital discharge planning in Washington State — what questions to ask, understanding your options, and how to avoid readmission after a hospital stay.",
-    h1: "Planning Your Hospital Discharge: A Guide for Washington Families",
+    title: "Planning Your Hospital Discharge: A Guide for Washington State Families",
+    description: "A comprehensive guide to hospital discharge planning in Washington State (WA) — what questions to ask, understanding your options, and how to avoid readmission after a hospital stay.",
+    h1: "Planning Your Hospital Discharge: A Guide for Washington State Families",
   },
   "/long-term-care/how-to-choose-care-settings": {
-    title: "How to Choose Between Care Settings: A Guide for Washington Families",
-    description: "A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State — matched to actual care needs and budget.",
-    h1: "How to Choose Between Care Settings: A Guide for Washington Families",
+    title: "How to Choose Between Care Settings: A Guide for Washington State Families",
+    description: "A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State (WA) — matched to actual care needs and budget.",
+    h1: "How to Choose Between Care Settings: A Guide for Washington State Families",
   },
   [SELL_PARENTS_HOUSE_DEMENTIA.PATH]: {
-    title: `${SELL_PARENTS_HOUSE_DEMENTIA.TITLE} (Washington) | Real Property Planning`,
+    title: `${SELL_PARENTS_HOUSE_DEMENTIA.TITLE} (WA) | Real Property Planning`,
     description: SELL_PARENTS_HOUSE_DEMENTIA.DESCRIPTION,
     h1: SELL_PARENTS_HOUSE_DEMENTIA.TITLE,
     quickAnswerQ: "Can we sell my parent's house in Washington if they have dementia?",
@@ -1939,18 +1939,18 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Real Estate Attorneys",
   },
   "/resources/washington-executors-10-step-checklist": {
-    title: "Washington Executor's 10-Step Checklist for Handling Real Estate | Real Property Planning",
-    description: "A practical free resource for Washington executors, trustees, and families handling estate real estate. Learn the 10 key steps to protect the property, understand value, and move forward with confidence.",
+    title: "WA Executor's 10-Step Checklist for Handling Real Estate | Real Property Planning",
+    description: "A practical free resource for Washington State (WA) executors, trustees, and families handling estate real estate. Learn the 10 key steps to protect the property, understand value, and move forward with confidence.",
     h1: "10 Steps Every Executor Should Know",
   },
   "/retirement-reverse-mortgage": {
     title: "Retirement & Reverse Mortgage Guidance | Real Property Planning",
-    description: "Reverse mortgage and retirement financing guidance for Washington seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions.",
-    h1: "Reverse Mortgages and Retirement in Washington",
+    description: "Reverse mortgage and retirement financing guidance for Washington State (WA) seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions.",
+    h1: "Reverse Mortgages and Retirement in Washington State",
   },
   "/roles": {
-    title: "Roles & Responsibilities | Executors, Trustees & POA — Washington",
-    description: "Clear guidance on the roles that govern estates — executors, trustees, power of attorney, and the duties each carries in Washington State.",
+    title: "Roles & Responsibilities | Executors, Trustees & POA — Washington State",
+    description: "Clear guidance on the roles that govern estates — executors, trustees, power of attorney, and the duties each carries in Washington State (WA).",
   },
   "/search": {
     title: "Search | Real Property Planning",
@@ -2043,9 +2043,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   // served the homepage (homepage title and canonical) at their URLs. Every <Route> in
   // App.tsx needs a prerendered page; the build now warns when one is missing.
   "/afh-club/how-to-finance-an-afh": {
-    title: "How to Finance an Adult Family Home in Washington | Residential, SBA 7(a), 504 and Commercial | AFH Club",
-    description: "How buyers finance a Washington adult family home: owner-occupied residential mortgages, SBA 7(a) business acquisition loans, SBA 504, and portfolio lending — what each requires, what the lender checks, current SBA rate ceilings, and lenders that work with AFHs.",
-    h1: "How to Finance an Adult Family Home in Washington",
+    title: "How to Finance an Adult Family Home in Washington State | Residential, SBA 7(a), 504 and Commercial | AFH Club",
+    description: "How buyers finance a Washington State (WA) adult family home: owner-occupied residential mortgages, SBA 7(a) business acquisition loans, SBA 504, and portfolio lending — what each requires, what the lender checks, current SBA rate ceilings, and lenders that work with AFHs.",
+    h1: "How to Finance an Adult Family Home in Washington State",
     quickAnswerQ: "How do you finance an adult family home in Washington?",
     quickAnswerA: "It depends on what you are buying. A house you will live in and run yourself may qualify for an owner-occupied residential mortgage, though only a handful of lenders write them on licensed AFHs. A licensed operating business with its real estate is usually financed with an SBA 7(a) loan, which can include the business, working capital and closing costs. SBA 504 gives a lower fixed rate on the real estate only, and portfolio or commercial loans suit investors who need more flexibility at the cost of a larger down payment.",
     intro: "Residential mortgage, SBA 7(a), SBA 504, or a commercial loan — which one fits depends on one question: are you buying a house, or a business that comes with a house?",
@@ -2086,7 +2086,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "What a lender checks — the debt service coverage ratio (DSCR): net operating income divided by the annual loan payments. Lenders commonly look for at least 1.25, meaning the home earns $1.25 for every $1.00 of debt payments.",
       "How it works — income is entered per licensed bed (blank means empty), so occupancy is tested resident by resident. The property price is the subject of the test; the business (license, contracts, residents) can be financed in cash, in the same loan, or on seller terms with its own rate and term, because any business loan is paid from the same income.",
       "Results — a plain yes or no on lender approval at each occupancy, the highest price a lender would likely finance, and a chart of coverage across a range of prices. Count only beds with a resident today, confirmed from the home's records; a Medicaid contract alone is not income.",
-      "Related — How to Finance an Adult Family Home in Washington (/afh-club/how-to-finance-an-afh), DSCR Loans for Adult Family Homes (/afh-club/dscr-loans-adult-family-homes), the AFH ROI Calculator (/afh-club/afh-roi-calculator) and the AFH Valuation Estimator (/afh-club/afh-valuation-estimator).",
+      "Related — How to Finance an Adult Family Home in Washington State (/afh-club/how-to-finance-an-afh), DSCR Loans for Adult Family Homes (/afh-club/dscr-loans-adult-family-homes), the AFH ROI Calculator (/afh-club/afh-roi-calculator) and the AFH Valuation Estimator (/afh-club/afh-valuation-estimator).",
     ],
   },
   "/privacy": {
@@ -2148,9 +2148,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
 
   "/afh-club/sold": {
-    title: "Adult Family Home Sales in Washington — Sold Prices & Comps | AFH Club",
-    description: "Closed adult family home sales across Washington State with sold price, sold price per bedroom, size, licensing status at sale, and whether the business conveyed. NWMLS records reviewed by David Stein, certified residential appraiser.",
-    h1: "Adult Family Home Sales in Washington",
+    title: "Adult Family Home Sales in WA — Sold Prices & Comps | AFH Club",
+    description: "Closed adult family home sales across Washington State (WA) with sold price, sold price per bedroom, size, licensing status at sale, and whether the business conveyed. NWMLS records reviewed by David Stein, certified residential appraiser.",
+    h1: "Adult Family Home Sales in Washington State",
     afhInventory: { sold: true },
     quickAnswerQ: "What do adult family homes sell for in Washington?",
     quickAnswerA: "This page lists closed adult family home sales in Washington State from NWMLS records, each reviewed to confirm the home was licensed, formerly licensed, or WABO-approved rather than merely marketed as an AFH opportunity. Every sale shows the sold price, last list price, sold price per bedroom, size, licensing status at the time of sale, and whether the operating business conveyed. Summary medians are calculated from the sales shown.",
@@ -2386,8 +2386,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/guides/repairs-before-selling-probate-home-washington": {
     quickAnswerQ: SHORT_ANSWERS["/guides/repairs-before-selling-probate-home-washington"].q,
     quickAnswerA: SHORT_ANSWERS["/guides/repairs-before-selling-probate-home-washington"].a,
-    title: "What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning",
-    description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip.",
+    title: "What Repairs Should Be Made Before Selling a Probate Home in WA? | Real Property Planning",
+    description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State (WA) — and which ones to skip.",
     h1: "What Repairs Should Be Made Before Selling a Probate Home?",
   },
   "/guides/who-has-authority-sell-probate-property-washington": {
@@ -2592,7 +2592,7 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   ssgParts.push(`</div>`);
 
   ssgParts.push(`<div style="margin-top:28px">`);
-  ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington Counties Covered</h2>`);
+  ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Counties Covered</h2>`);
   if (cities && cities.length > 0) {
     ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
   }

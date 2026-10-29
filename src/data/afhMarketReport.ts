@@ -1,5 +1,5 @@
 /**
- * Washington AFH Market Report and newly licensed homes (Oct 6, 2026).
+ * Washington State AFH Market Report and newly licensed homes (Oct 6, 2026).
  *
  * Each edition is a frozen JSON file in src/data/afh/market/, written by
  * scripts/build-afh-market-report.mjs; the licensing changes behind it are in
@@ -45,7 +45,7 @@ export function editionSummary(e: MarketEdition): string {
   const s = e.sales;
   const l = e.licensing;
   return (
-    `Washington had ${num(e.dshs.homes)} licensed adult family homes with ${num(e.dshs.beds)} beds in DSHS records as of ${longDate(e.dshs.asOf)}. ` +
+    `Washington State (WA) had ${num(e.dshs.homes)} licensed adult family homes with ${num(e.dshs.beds)} beds in DSHS records as of ${longDate(e.dshs.asOf)}. ` +
     `In ${countyList(l.counties)} counties, ${l.newHomes} homes were newly licensed between ${longDate(l.from)} and ${longDate(l.to)}, ` +
     `${l.ownershipChanges} homes took a new license at the same address (usually a change of ownership), and ${l.closed} licenses ended. ` +
     `On the sales side, ${s.sold.count} adult family home properties reviewed on AFH Club sold in the 12 months to ${longDate(s.asOf)}, at a median price of ${usd(s.sold.medianPrice)}; ` +

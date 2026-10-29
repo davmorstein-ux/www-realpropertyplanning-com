@@ -1,5 +1,5 @@
 /**
- * "What Taxes Do You Pay When Selling an Inherited House in Washington?"
+ * "What Taxes Do You Pay When Selling an Inherited House in Washington State?"
  * Title, description and the short answer, shared by the page and
  * vite.config.ts (prerender), Oct 19, 2026.
  *
@@ -18,10 +18,10 @@
  */
 export const TAXES_INHERITED_HOUSE = {
   PATH: "/guides/taxes-selling-inherited-house-washington",
-  TITLE: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
-  SEO_TITLE: "Taxes on Selling an Inherited House in Washington (2026)",
+  TITLE: "What Taxes Do You Pay When Selling an Inherited House in Washington State?",
+  SEO_TITLE: "Taxes on Selling an Inherited House in WA (2026)",
   DESCRIPTION:
-    "Often little or none: the tax basis steps up to the value at death, so only later gain is taxed. Washington taxes no capital gains on real estate and has no inheritance tax.",
+    "Often little or none: the tax basis steps up to the value at death, so only later gain is taxed. Washington State (WA) taxes no capital gains on real estate and has no inheritance tax.",
   REVIEWED: "2026-10-19",
   SHORT_ANSWER:
     "Often little or none. When you inherit a house, its tax basis resets (\"steps up\") to its fair market value on the date of death, so federal capital gains tax applies only to any gain after that date, at long-term rates. Washington's own capital gains tax does not apply to real estate, and Washington has no inheritance tax. Washington's estate tax is paid by the estate, not the heirs, and only when the whole estate is over $3,000,000 (deaths from July 1, 2026). The seller pays the real estate excise tax (REET) at closing, as on any sale.",

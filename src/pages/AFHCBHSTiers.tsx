@@ -45,7 +45,7 @@ const FAQS = [
 const AFHCBHSTiers = () => (
   <PaymentGuideShell
     id="cbhs"
-    seoTitle="CBHS Tiers Explained for Washington Adult Family Homes | Supportive Supervision Tiers 1–6 | AFH Club"
+    seoTitle="CBHS Tiers Explained for Washington State Adult Family Homes | Supportive Supervision Tiers 1–6 | AFH Club"
     seoDescription="Community Behavioral Health Support (CBHS) pays adult family homes for supportive supervision in six tiers defined by staff hours per day. What the tiers are, who qualifies, how they are reviewed and re-tiered, and what AFH buyers and sellers should verify."
     eyebrow="For buyers, sellers & owners"
     lede="If an adult family home owner talks about Tier 2 or Tier 4 residents, this is almost certainly the system they mean. It is separate from the A through E classification that sets the base rate."

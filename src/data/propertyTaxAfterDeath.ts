@@ -30,10 +30,10 @@ const WAC = (cite: string) => `https://app.leg.wa.gov/WAC/default.aspx?cite=${ci
 
 export const PROPERTY_TAX_AFTER_DEATH = {
   PATH: "/guides/property-taxes-after-death-washington",
-  TITLE: "Property Taxes After a Death in Washington: What Executors and Heirs Need to Know",
+  TITLE: "Property Taxes After a Death in Washington State: What Executors and Heirs Need to Know",
   SHORT_TITLE: "Property Taxes After a Death",
   DESCRIPTION:
-    "The house's property taxes keep coming due after the owner dies, and the October payment is easy to miss. Due dates, interest, senior exemptions and deferrals, the mortgage escrow, and what happens at the sale, for Washington executors and heirs.",
+    "The house's property taxes keep coming due after the owner dies, and the October payment is easy to miss. Due dates, interest, senior exemptions and deferrals, the mortgage escrow, and what happens at the sale, for Washington State (WA) executors and heirs.",
   PUBLISHED: "2026-10-01",
   REVIEWED: "2026-10-01",
   SHORT_ANSWER:

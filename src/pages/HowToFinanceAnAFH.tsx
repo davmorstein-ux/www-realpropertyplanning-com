@@ -11,7 +11,7 @@ import ArticleCover from "@/components/ArticleCover";
 import LenderCard from "@/components/afh/LenderCard";
 
 /**
- * How to Finance an Adult Family Home in Washington (Sept 2026).
+ * How to Finance an Adult Family Home in Washington State (Sept 2026).
  *
  * Educational first, directory second. Opens with the one idea everything
  * hangs on (a house that runs a licensed business falls between residential
@@ -59,9 +59,9 @@ const HowToFinanceAnAFH = () => {
   return (
     <>
       <SEOHead
-        title="How to Finance an Adult Family Home in Washington | Residential, SBA 7(a), 504 and Commercial | AFH Club"
-        description="How buyers finance a Washington adult family home: owner-occupied residential mortgages, SBA 7(a) business acquisition loans, SBA 504, and portfolio lending — what each requires, what the lender checks, current SBA rate ceilings, and lenders that work with AFHs."
-        schemaJson={{ "@context": "https://schema.org", "@type": "Article", headline: "How to Finance an Adult Family Home in Washington", author: { "@type": "Person", name: `${FEATURED_BROKER.name}` }, dateModified: "2026-09-18", url: "https://realpropertyplanning.com/afh-club/how-to-finance-an-afh" }}
+        title="How to Finance an Adult Family Home in Washington State | Residential, SBA 7(a), 504 and Commercial | AFH Club"
+        description="How buyers finance a Washington State (WA) adult family home: owner-occupied residential mortgages, SBA 7(a) business acquisition loans, SBA 504, and portfolio lending — what each requires, what the lender checks, current SBA rate ceilings, and lenders that work with AFHs."
+        schemaJson={{ "@context": "https://schema.org", "@type": "Article", headline: "How to Finance an Adult Family Home in Washington State", author: { "@type": "Person", name: `${FEATURED_BROKER.name}` }, dateModified: "2026-09-18", url: "https://realpropertyplanning.com/afh-club/how-to-finance-an-afh" }}
       />
       <Header />
       <main>
@@ -69,7 +69,7 @@ const HowToFinanceAnAFH = () => {
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <ArticleCover src="/afh-how-to-finance-cover.webp" alt="Cover art: How to Finance an Adult Family Home" width={1024} height={1365} />
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>For buyers, sellers &amp; new operators</p>
-            <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington</h1>
+            <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington State</h1>
             <p style={{ ...p, maxWidth: 720, margin: 0 }}>Residential mortgage, SBA 7(a), SBA 504, or a commercial loan — which one fits depends on one question: are you buying a house, or a business that comes with a house?</p>
           </div>
         </div>

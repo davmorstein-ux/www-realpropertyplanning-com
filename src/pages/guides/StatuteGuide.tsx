@@ -90,7 +90,7 @@ function Page({ g }: { g: Guide }) {
     isPartOf: { "@type": "WebSite", name: "Real Property Planning", url: "https://realpropertyplanning.com" },
   };
   const others = STATUTE_GUIDES.filter((x) => x.slug !== g.slug);
-  const back = g.back ?? { href: "/washington-probate-guide", label: "Washington Probate Guide" };
+  const back = g.back ?? { href: "/washington-probate-guide", label: "Washington State Probate Guide" };
   return (
     <div className="stg">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />

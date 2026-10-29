@@ -12,7 +12,7 @@ import PageFAQ from "@/components/PageFAQ";
 import stats from "@/data/afh/stats.json";
 
 /**
- * Washington Adult Family Homes by the Numbers (Sept 28, 2026).
+ * Washington State Adult Family Homes by the Numbers (Sept 28, 2026).
  *
  * Every figure comes from src/data/afh/stats.json, which
  * scripts/build-afh-stats.mjs computes from the DSHS locator data behind the
@@ -48,7 +48,7 @@ const sixBed = stats.bedSizes.find((b) => b.beds === 6);
    are built from stats.json, so they update with each DSHS refresh. */
 const PAGE_URL = "https://realpropertyplanning.com/afh-club/washington-afh-data";
 const SUMMARY = `Washington had ${n(S.homes)} licensed adult family homes with ${n(S.beds)} licensed beds (DSHS Adult Family Home Locator, retrieved ${RETRIEVED}). ${p(sixBed?.share ?? 0)} are licensed for six residents, and ${p(stats.shares.medicaid)} hold the base DSHS Medicaid contract.`;
-const CITATION = `Real Property Planning, "Washington Adult Family Homes by the Numbers," compiled from the DSHS Adult Family Home Locator (retrieved ${RETRIEVED}), ${PAGE_URL}`;
+const CITATION = `Real Property Planning, "Washington State Adult Family Homes by the Numbers," compiled from the DSHS Adult Family Home Locator (retrieved ${RETRIEVED}), ${PAGE_URL}`;
 
 const CopyBlock = ({ label, text }: { label: string; text: string }) => {
   const [done, setDone] = useState(false);
@@ -184,8 +184,8 @@ const AFHWashingtonData = () => {
     <div className="afhd">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <SEOHead
-        title="Washington Adult Family Homes by the Numbers | AFH Club"
-        description={`${n(S.homes)} licensed adult family homes and ${n(S.beds)} beds in Washington: counts by county, home size, Medicaid, specialty designations, and ECS and SBS contracts, from DSHS data. Free CSV download.`}
+        title="Washington State Adult Family Homes by the Numbers | AFH Club"
+        description={`${n(S.homes)} licensed adult family homes and ${n(S.beds)} beds in Washington State (WA): counts by county, home size, Medicaid, specialty designations, and ECS and SBS contracts, from DSHS data. Free CSV download.`}
         canonical={CANONICAL}
         schemaJson={datasetSchema}
       />
@@ -204,7 +204,7 @@ const AFHWashingtonData = () => {
             <div className="afhd-hero">
               <div>
                 <p className="afhd-eyebrow">AFH Club · Data · DSHS records retrieved {RETRIEVED}</p>
-                <h1 className="afhd-h1">Washington Adult Family Homes by the Numbers</h1>
+                <h1 className="afhd-h1">Washington State Adult Family Homes by the Numbers</h1>
                 <p style={{ fontSize: 20 }}>
                   Every licensed adult family home in Washington, counted from the state's own records: how many there are,
                   where they are, how big they are, and which contracts and specialty designations they hold.
@@ -212,7 +212,7 @@ const AFHWashingtonData = () => {
               </div>
               <img
                 src="/afh-washington-data-cover.webp"
-                alt="AFH Club data report cover: Washington Adult Family Homes by the Numbers, every licensed adult family home in Washington"
+                alt="AFH Club data report cover: Washington State Adult Family Homes by the Numbers, every licensed adult family home in Washington"
                 className="afhd-cover"
                 width={1024}
                 height={1365}

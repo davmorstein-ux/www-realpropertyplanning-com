@@ -48,7 +48,7 @@ export const SELL_PARENTS_HOUSE_DEMENTIA = {
   TITLE: "Can You Sell a Parent's House If They Have Dementia?",
   SHORT_TITLE: "Selling a Parent's House When They Have Dementia",
   DESCRIPTION:
-    "For Washington families: who can sign to sell the house of a parent with dementia — the parent, an agent under a durable power of attorney, a successor trustee, or a court-appointed conservator — and what the sale means for Medicaid and taxes.",
+    "For Washington State (WA) families: who can sign to sell the house of a parent with dementia — the parent, an agent under a durable power of attorney, a successor trustee, or a court-appointed conservator — and what the sale means for Medicaid and taxes.",
   PUBLISHED: "2026-10-08",
   REVIEWED: "2026-10-08",
   SHORT_ANSWER:
@@ -143,7 +143,7 @@ export const SPHD_SECTIONS: SphdSection[] = [
       "Taxes. A parent who lived in the home at least two of the last five years can usually exclude up to $250,000 of gain from federal income tax ($500,000 for a married couple). Time spent living in a licensed care facility counts as living in the home, as long as your parent lived there at least one of those five years and can no longer care for themself. Keeping the house until death instead gives the heirs a new tax basis at its value then, which can wipe out the gain entirely. Which is better depends on the numbers; ask a CPA before you list.",
     ],
     cites: [SRC.exclusion, SRC.stepUp],
-    link: { label: "Medicaid and the Family Home in Washington", href: "/long-term-care/medicaid-and-the-family-home" },
+    link: { label: "Medicaid and the Family Home in Washington State", href: "/long-term-care/medicaid-and-the-family-home" },
   },
 ];
 

@@ -69,7 +69,7 @@ const CANONICAL = "https://realpropertyplanning.com/afh-club/afh-property-classi
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Is It Really an Adult Family Home? How to Read AFH Listings in Washington",
+  headline: "Is It Really an Adult Family Home? How to Read AFH Listings in Washington State",
   description:
     "What 'adult family home', 'AFH-ready', 'WABO-approved' and 'potential AFH' actually mean in a Washington real estate listing, the five labels AFH Club uses, the building requirements behind them, and the documents to request before you buy.",
   url: CANONICAL,
@@ -107,7 +107,7 @@ const AFHPropertyClassifications = () => (
   <>
     <SEOHead
       title="Is It Really an Adult Family Home? How to Read AFH Listings | AFH Club"
-      description="What 'adult family home', 'AFH-ready', 'WABO-approved' and 'potential AFH' actually mean in a Washington listing, the five labels AFH Club uses, the building requirements behind them, and the documents to request before you buy."
+      description="What 'adult family home', 'AFH-ready', 'WABO-approved' and 'potential AFH' actually mean in a Washington State (WA) listing, the five labels AFH Club uses, the building requirements behind them, and the documents to request before you buy."
       canonical={CANONICAL}
       ogType="article"
       schemaJson={schema}
@@ -135,7 +135,7 @@ const AFHPropertyClassifications = () => (
               margin: "0 0 20px",
             }}
           >
-            Is It Really an Adult Family Home? How to Read AFH Listings in Washington
+            Is It Really an Adult Family Home? How to Read AFH Listings in Washington State
           </h1>
           <p style={{ ...body, fontSize: 20, margin: 0 }}>
             Brokers write "adult family home," "AFH-ready," "WABO-approved," and "potential AFH" into listings for

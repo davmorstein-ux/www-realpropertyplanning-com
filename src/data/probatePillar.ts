@@ -11,10 +11,10 @@ import { rcw, DOR_ESTATE_TAX } from "./probateGlossary";
 
 export const PROBATE_PILLAR = {
   PATH: "/washington-probate-guide",
-  TITLE: "Washington Probate & Estate Property: The Complete Guide",
+  TITLE: "Washington State Probate & Estate Property: The Complete Guide",
   COVER: "/washington-probate-guide-cover.webp" as string,
   DESCRIPTION:
-    "How probate works in Washington when a house is involved: who has authority to sell, nonintervention powers, the 20-day, three-month and four-month deadlines, property that skips probate, taxes, and a path for executors, heirs and trustees.",
+    "How probate works in Washington State (WA) when a house is involved: who has authority to sell, nonintervention powers, the 20-day, three-month and four-month deadlines, property that skips probate, taxes, and a path for executors, heirs and trustees.",
   SHORT_ANSWER:
     "Probate is the superior court process that appoints a personal representative to settle the estate of someone who died. Most Washington estates are settled with nonintervention powers, so once appointed, the personal representative can sell the house without further court approval. A house in a living trust, held in joint tenancy with right of survivorship, or with a recorded transfer on death deed passes outside probate. Until the right person has authority, no one can sell: not the named executor, not an heir, and not the agent under the parent's power of attorney.",
   FIGURES: [

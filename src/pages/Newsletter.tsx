@@ -47,8 +47,8 @@ const PAGE_CSS = `
 const Newsletter = () => (
   <>
     <SEOHead
-      title="Newsletters: Washington Families and AFH Club | Real Property Planning"
-      description="Two free, occasional newsletters: one for Washington families dealing with inherited homes, probate, senior moves and the cost of care, and one for adult family home buyers, owners and investors."
+      title="Newsletters: Washington State Families and AFH Club | Real Property Planning"
+      description="Two free, occasional newsletters: one for Washington State (WA) families dealing with inherited homes, probate, senior moves and the cost of care, and one for adult family home buyers, owners and investors."
       canonical="https://realpropertyplanning.com/newsletter"
     />
     <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
@@ -94,7 +94,7 @@ const Newsletter = () => (
           <ul className="rpp-nl-list">
             <li>New adult family homes and businesses for sale, and recent sales</li>
             <li>DSHS rate and rule changes that affect owners and buyers</li>
-            <li>New editions of the Washington AFH Market Report and new tools</li>
+            <li>New editions of the Washington State AFH Market Report and new tools</li>
           </ul>
           <NewsletterSignup
             list="afh"
