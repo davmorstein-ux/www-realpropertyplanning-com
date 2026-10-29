@@ -559,7 +559,10 @@ const RPPHomeV3 = () => {
   html body main .rpp-jt span.rpp-jt-title.rpp-jt-title {
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     font-size: 22px !important;
-    font-weight: 700 !important;
+    /* 800, not 700 (David, Oct 29, 2026: heavier so the labels stand out
+       and read more easily). DM Sans is a variable font, so 800 is a true
+       weight, not a synthetic bold. */
+    font-weight: 800 !important;
     line-height: 1.22 !important;
     color: #1c1917 !important;
     letter-spacing: -0.005em;
