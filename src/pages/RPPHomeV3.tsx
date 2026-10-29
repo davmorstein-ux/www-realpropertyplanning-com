@@ -9,11 +9,17 @@ import AskBox from "@/components/AskBox";
    go missing. */
 import heroDesktop from "@/assets/hero/rpp-hero-2035.webp";
 import heroDesktop3840 from "@/assets/hero/rpp-hero-2035-3840.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2035-mobile.webp";
-import heroMobile1800 from "@/assets/hero/rpp-hero-2035-mobile-1800.webp";
+/* Phone crop zoomed out (Oct 28, 2026, David chose option "B"): cut wider
+   from the same 2035 render, 2100x752 from x=1740 of the 3840 band (was
+   1876 wide from x=1964), right edge kept, same 1200x430 shape, so the image
+   is no taller and the journey tiles stay on the first screen. More of the
+   room's left side shows (full mirror, plant, table); the door is a little
+   smaller. */
+import heroMobile from "@/assets/hero/rpp-hero-2036-mobile.webp";
+import heroMobile1800 from "@/assets/hero/rpp-hero-2036-mobile-1800.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2035-mobile-900.webp";
+import heroMobile900 from "@/assets/hero/rpp-hero-2036-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
