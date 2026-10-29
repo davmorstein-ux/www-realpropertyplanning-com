@@ -13,8 +13,13 @@ import AskBox from "@/components/AskBox";
    which straightens the verticals without tilting the room's horizontals, then
    8px trimmed from each side and scaled back to size. Same crops as before:
    desktop band 1920x420 / 3840x840, phone 2100x752 from x=1740 of the band. */
-import heroDesktop from "@/assets/hero/rpp-hero-2037.webp";
-import heroDesktop3840 from "@/assets/hero/rpp-hero-2037-3840.webp";
+/* rpp-hero-2041 (Oct 29, 2026, David): the taller laptop hero. Same entryway,
+   recomposed at 2.4:1 with a plain left wall for the slogan (the mirror was
+   removed on purpose). Used above 900px only; phones keep the 2037 crop below.
+   1942x809 is the largest file David had; a ~3840px version would be sharper
+   on high-density laptop screens if one is ever made. */
+import heroDesktop from "@/assets/hero/rpp-hero-2041.webp";
+import heroDesktop1280 from "@/assets/hero/rpp-hero-2041-1280.webp";
 /* Phone crop zoomed out (Oct 28, 2026, David chose option "B"): cut wider
    from the same 2035 render, 2100x752 from x=1740 of the 3840 band (was
    1876 wide from x=1964), right edge kept, same 1200x430 shape, so the image
@@ -77,6 +82,103 @@ const REMODEL_LINES: [LucideIcon, string][] = [
   [MapPin, "Built from recent local home sales"],
 ];
 
+const HERO_WIDE_CSS = `
+/* LAPTOP HERO (Oct 29, 2026, David approved the mock-up after several rounds).
+   Above 900px only; phones and anything 900px or narrower are untouched.
+   - Taller 2.4:1 photo (rpp-hero-2041) under a 40% cream wash, so the slogan
+     and tiles lead and the door still shows.
+   - Slogan "Where transitions begin" in Playfair Display (the only serif on
+     the site), "transitions" in the door red, "begin" stepped under it.
+   - The h1 (the plain description) sits under the slogan as a smaller line:
+     it stays the page's headline for search engines and tells a first-time
+     visitor what the site is.
+   - The four tiles move up so the line where each tile's photo meets its
+     white label sits on the hero's bottom edge. The grid's negative top
+     margin is the photo height computed from the column width: photos are
+     1160x793, 4 columns, 24px gaps, plus the tile's 1px border. If the gap,
+     column count or photo shape changes, change the calc with it.
+   - "What brings you here today?" moves under the tiles (flex order).
+   - Titles 18px; one line from 1270px up (narrower windows can wrap).
+   - Layered "floating" shadow and a thin white edge on each tile.
+   No backticks in this block. */
+html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
+@media (min-width: 901px) {
+  html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img { aspect-ratio: 1942 / 809 !important; }
+  html body main div.rpp-hero-figure.rpp-hero-figure::after {
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(180deg, rgba(250,248,244,0.52) 0%, rgba(250,248,244,0.40) 45%, rgba(250,248,244,0.55) 100%);
+  }
+  html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
+    z-index: 2; left: 3.9% !important; top: 7.5% !important; max-width: 46% !important;
+  }
+  html body main p.rpp-hero-slogan.rpp-hero-slogan {
+    display: block !important;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 600 !important;
+    font-size: clamp(40px, 4.2vw, 64px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.005em !important;
+    color: #272421 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    text-align: left !important;
+    text-shadow: 0 0 22px rgba(250,248,244,0.9);
+  }
+  html body main p.rpp-hero-slogan.rpp-hero-slogan em {
+    font-family: inherit !important; font-style: italic !important; font-weight: 500 !important;
+    font-size: inherit !important; color: #B0274F !important;
+  }
+  html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-hero-slogan-end {
+    display: inline-block !important; padding-left: 3.25em;
+    font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important;
+    line-height: inherit !important; color: inherit !important;
+  }
+  html body main h1#rpp-tagline { margin: 18px 0 0 !important; text-align: left !important; }
+  html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 {
+    display: block !important;
+    font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+    font-size: clamp(17px, 1.45vw, 21px) !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
+    color: #2f2a26 !important;
+    text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
+  }
+  html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
+
+  html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
+  html body main div.rpp-funnel-block {
+    display: flex; flex-direction: column;
+    --rpp-gw: min(1120px, 84vw, calc(100vw - 3rem));
+  }
+  html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 2.25rem 0 0 !important; }
+  html body main div.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid {
+    order: 1;
+    width: var(--rpp-gw); max-width: none !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    column-gap: 24px !important; row-gap: 24px !important;
+    margin: calc(-1 * ((var(--rpp-gw) - 72px) / 4 * 793 / 1160 + 1px)) auto 0 !important;
+  }
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt {
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 2px 3px rgba(39,36,33,0.14), 0 8px 14px rgba(39,36,33,0.14), 0 22px 40px rgba(39,36,33,0.22), 0 44px 80px -12px rgba(39,36,33,0.42);
+  }
+  @media (hover: hover) {
+    html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt {
+      border-color: var(--tile);
+      box-shadow: 0 3px 5px rgba(39,36,33,0.16), 0 12px 20px rgba(39,36,33,0.16), 0 28px 48px rgba(39,36,33,0.24), 0 52px 90px -12px rgba(39,36,33,0.44);
+    }
+  }
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 12px 18px 14px; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 30px; width: 30px; height: 30px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 18px !important; }
+}
+@media (min-width: 1270px) {
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { white-space: nowrap; }
+}
+`;
+
 const tileMeta = [
   { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#8A4214", imgSrc: tilePlanning },
   { key: "helpingParent", href: "/helping-an-aging-parent", bgColor: "#246044", imgSrc: tileHelping },
@@ -108,6 +210,7 @@ const RPPHomeV3 = () => {
       <Header />
 
       <main id="main-content">
+        <style dangerouslySetInnerHTML={{ __html: HERO_WIDE_CSS }} />
         {/* ── Hero ── height driven by content, image is a background layer ── */}
         <div
           className="rpp-hero-figure"
@@ -217,14 +320,14 @@ const RPPHomeV3 = () => {
                beneath the image instead of sitting on it.
                102 KB and 76 KB. */
             src={heroDesktop}
-            srcSet={`${heroDesktop} 1920w, ${heroDesktop3840} 3840w`}
+            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 1942w`}
             /* Above 900px always the full desktop artwork (Oct 21, 2026). With
                sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
                crop, which has no plain wall on the left, so the headline sat
                on the mirror. Below 900px the headline stacks under the image,
                so the tighter crops are fine there. */
-            sizes="1920px"
-            width={1920}
+            sizes="100vw"
+            width={1942}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
                page to jump as it arrives. 1920x364 is the artwork's own
@@ -235,7 +338,7 @@ const RPPHomeV3 = () => {
                PREVIOUS ARTWORK WAS 4.66:1 (1920x412). The 2028 replacement
                is a shorter band, so the hero is about 72px shorter at full
                width. */
-            height={420}
+            height={809}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
@@ -326,6 +429,14 @@ const RPPHomeV3 = () => {
           >
             {/* Tagline in #1B3A6B — the same navy used by the homepage
                 descriptor and the calculator tile's secondary text. */}
+            {/* Slogan (Oct 29, 2026, David): laptops and wider only (hidden at
+                900px and below in HERO_WIDE_CSS). A <p>, not a heading: the h1
+                below stays the page's real headline for search engines. */}
+            <p className="rpp-hero-slogan">
+              {t("hero.sloganStart")} <em>{t("hero.sloganAccent")}</em>
+              <br />
+              <span className="rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
+            </p>
             <h1 id="rpp-tagline" style={{ textAlign: "left", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
@@ -430,11 +541,15 @@ const RPPHomeV3 = () => {
             "more alive"). The hero band and the lead-line strip above stay
             #f5f2ec because the artwork's paper field was colour-matched to it. */}
         <section id="rpp-start-here" style={{ backgroundColor: "#faf8f4", padding: "2.5rem 0 4rem" }}>
-          <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+          <div className="rpp-start-inner" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             {/* 2rem, was 0.5rem. With the global h1-h4 margin-bottom of
                 0.4rem that left roughly 14px between a 56px heading and the
                 tile tops, so the heading read as a label stuck to the tiles
                 rather than one introducing them. */}
+            {/* Heading + tiles wrapper (Oct 29, 2026): above 900px HERO_WIDE_CSS
+                makes this a flex column and puts the heading UNDER the tiles,
+                which sit on the hero's bottom edge. Phones keep heading-first. */}
+            <div className="rpp-funnel-block">
             <div className="rpp-funnel-head" style={{ textAlign: "center", marginBottom: "2rem" }}>
               <h2
                 className="rpp-funnel-heading"
@@ -507,6 +622,7 @@ const RPPHomeV3 = () => {
                   </Link>
                 );
               })}
+            </div>
             </div>
 
 
