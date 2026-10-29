@@ -60,7 +60,7 @@ const IndependentLivingCosts = () => {
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 What the monthly fee actually covers — and what the number on the brochure doesn't tell you
               </p>
-              <ArticleAudioPlayer src={audioAsset.url} title="Listen to this article" />
+              <ArticleAudioPlayer audioSrc={audioAsset.url} />
               <hr className={hrClass} />
 
               <p className={leadClass}>
