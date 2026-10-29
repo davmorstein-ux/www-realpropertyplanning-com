@@ -260,10 +260,14 @@ const AboutTheHub = () => {
             Sept 27, 2026 (owner's decision after an outside audit): no individual is named here;
             the name stays on the About page, the professional's own pages, and the required
             attribution line in the disclaimer. */}
+        {/* Oct 29, 2026 (David): one idea per paragraph, so the section reads in
+            three short blocks instead of one long one. */}
         <p className="rpp-abouthub-why">
-          Property decisions caused by aging, illness, or a death are not ordinary transactions. An attorney, a
-          fiduciary, an appraiser, a care provider, a lender, and several family members are often making decisions at
-          the same time, and nobody is responsible for the whole picture.
+          Property decisions caused by aging, illness, or a death are not ordinary transactions.
+        </p>
+        <p className="rpp-abouthub-why">
+          An attorney, a fiduciary, an appraiser, a care provider, a lender, and several family members are often
+          making decisions at the same time, and nobody is responsible for the whole picture.
         </p>
         {/* Split into its own paragraph (Oct 27, 2026, David). */}
         <p className="rpp-abouthub-why">

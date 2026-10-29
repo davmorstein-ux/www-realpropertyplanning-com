@@ -7,19 +7,25 @@ import AskBox from "@/components/AskBox";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2035.webp";
-import heroDesktop3840 from "@/assets/hero/rpp-hero-2035-3840.webp";
+/* rpp-hero-2037 (Oct 29, 2026): the 2035/2036 cuts straightened. David saw the
+   hero "slightly tilted to the right": the wall corner, window and door frames
+   leaned about 0.8 degrees (tops to the right). Fixed with a 0.75-degree shear,
+   which straightens the verticals without tilting the room's horizontals, then
+   8px trimmed from each side and scaled back to size. Same crops as before:
+   desktop band 1920x420 / 3840x840, phone 2100x752 from x=1740 of the band. */
+import heroDesktop from "@/assets/hero/rpp-hero-2037.webp";
+import heroDesktop3840 from "@/assets/hero/rpp-hero-2037-3840.webp";
 /* Phone crop zoomed out (Oct 28, 2026, David chose option "B"): cut wider
    from the same 2035 render, 2100x752 from x=1740 of the 3840 band (was
    1876 wide from x=1964), right edge kept, same 1200x430 shape, so the image
    is no taller and the journey tiles stay on the first screen. More of the
    room's left side shows (full mirror, plant, table); the door is a little
    smaller. */
-import heroMobile from "@/assets/hero/rpp-hero-2036-mobile.webp";
-import heroMobile1800 from "@/assets/hero/rpp-hero-2036-mobile-1800.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2037-mobile.webp";
+import heroMobile1800 from "@/assets/hero/rpp-hero-2037-mobile-1800.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2036-mobile-900.webp";
+import heroMobile900 from "@/assets/hero/rpp-hero-2037-mobile-900.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
