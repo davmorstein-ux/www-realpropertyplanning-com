@@ -211,7 +211,7 @@ const AFHSellingBusinessAtRetirement = () => (
                 className="rounded-xl p-5"
                 style={{ border: `1px solid ${GREEN}55`, background: "#ffffff" }}
               >
-                <h3 className="font-serif text-[19px] font-semibold mb-2" style={{ color: GREEN }}>
+                <h3 className="font-serif text-[19px] font-bold mb-2" style={{ color: GREEN }}>
                   {t.title}
                 </h3>
                 <p className="text-foreground text-[15px] leading-relaxed">{t.description}</p>

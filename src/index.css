@@ -6554,3 +6554,16 @@ html body main.apf > section:has(.rpp-hero-band) + section {
   padding-top: 0 !important;
 }
 
+
+/* ============================================================
+   TILE TITLES: BOLD (Oct 28, 2026, David: tile titles "too light")
+   ============================================================
+   A sitewide audit of every English page measured the weight each tile's
+   title actually renders at. Most were already bold (700/800); 61 titles on
+   12 pages were semi-bold (600, Tailwind font-semibold), which reads thin in
+   DM Sans. All of them sit in the white tile and premium tile faces below, so
+   one rule lifts them to bold; the one other case (AFH selling-at-retirement
+   cards) was changed in its page. New tile titles: use 700 or heavier. */
+html body main :is(.tile-white__face, .card-3d-premium__face) :is(h2, h3, h4) {
+  font-weight: 700 !important;
+}
