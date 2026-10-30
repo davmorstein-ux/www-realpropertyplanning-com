@@ -89,8 +89,7 @@ export function SectionBand({ photo, title }: { photo: BandPhoto; title?: ReactN
       <div className="rppbd-photo">
         <picture>
           <source media="(max-width: 767px)" srcSet={src.mobile} width={1170} height={390} />
-          {/* lowercase: React warns on the camelCase fetchPriority prop */}
-          <img src={src.desktop} alt="" width={1920} height={225} fetchpriority="high" decoding="async" />
+          <img ref={setFetchPriority("high")} src={src.desktop} alt="" width={1920} height={225} decoding="async" />
         </picture>
         <div className="rppbd-fade" aria-hidden="true" />
         {title && <div className="rppbd-glow" aria-hidden="true" />}

@@ -459,10 +459,7 @@ const RPPHomeV3 = () => {
                band rather than the original 2.37:1. */
             className="rpp-hero-img block w-full"
             loading="eager"
-            /* Lowercase is the attribute the browser reads — React does not
-               recognise the camelCase fetchPriority prop and drops it with a
-               console warning. */
-            fetchpriority="high"
+            ref={setFetchPriority("high")}
             /* No decoding="async" (Oct 7, 2026): this is the largest thing on the
                first screen, and async decoding let the browser paint without it
                and show it a frame or more later. The build also adds a preload
