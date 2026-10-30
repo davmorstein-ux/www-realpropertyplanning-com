@@ -64,6 +64,7 @@ import AboutTheHub from "@/components/AboutTheHub";
 import RppArrow from "@/components/RppArrow";
 import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
+import { setFetchPriority } from "@/lib/imgPriority";
 import { BarChart3, MapPin, Search, Wrench, type LucideIcon } from "lucide-react";
 import { careIconFor } from "@/lib/careIcons";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";

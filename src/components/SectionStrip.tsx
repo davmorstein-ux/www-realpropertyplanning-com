@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { sectionStripFor, stripInHeader, type BandPhoto, type SectionStrip as Strip } from "@/lib/sectionStrip";
+import { setFetchPriority } from "@/lib/imgPriority";
 import estateBand from "@/assets/section-bands/estate-band.webp";
 import estateBandMobile from "@/assets/section-bands/estate-band-mobile.webp";
 import seniorBand from "@/assets/section-bands/senior-band.webp";
