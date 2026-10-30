@@ -142,11 +142,17 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     /* Floating slogan (Oct 30, 2026, David): a cream glow keeps it legible on
        the wall, then three soft drop shadows below it lift the letters off the
        page, the same light as the floating tiles. */
-    /* Stronger float (Oct 30, 2026, David): a thin light top edge, a crisp
-       shadow under each letter and wider soft ones below, matching the tiles. */
-    text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 1px 0 rgba(255,255,255,0.6), 0 3px 3px rgba(39,36,33,0.22), 0 10px 14px rgba(39,36,33,0.22), 0 24px 30px rgba(39,36,33,0.20);
+    /* Flat (Oct 30, 2026, David): "Your" and "begins" sit flat on the wall,
+       no shadow or rim. Only the red "next chapter" floats (rule below). */
+    text-shadow: none;
   }
+  /* Floating "next chapter" (Oct 30, 2026, David): a cast shadow, offset down
+     and right with a gap, in a warm dark tone, so the red words read as
+     lifted off the wall; they also sit 3px higher. */
   html body main p.rpp-hero-slogan.rpp-hero-slogan em {
+    display: inline-block;
+    transform: translateY(-3px);
+    text-shadow: 6px 14px 5px rgba(70,30,35,0.30), 12px 26px 16px rgba(70,30,35,0.18), 20px 40px 30px rgba(70,30,35,0.10) !important;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important; font-style: italic !important; font-weight: 500 !important;
     font-size: inherit !important; color: #B0274F !important;
   }
@@ -209,13 +215,21 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      taller, so the hero gives up a little of its ceiling (cropped from the
      top only; the door's foot stays above the tiles) until the whole tiles
      fit on the first screen. Taller screens show the full photo. */
-  @media (max-height: 780px) {
+  @media (max-height: 860px) {
     html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img.rpp-hero-img {
       aspect-ratio: auto !important; object-fit: cover !important; object-position: 50% 100% !important;
-      height: max(400px, min(calc(100vw * 730 / 2154), calc(100vh - var(--header-height, 130px) - 112px))) !important;
+      /* Never crops more than 14% (ceiling only), so the top of the door always
+         shows; on very short windows the question may then sit just below
+         the fold. 182px = the overlapping label (~75px) + gap + "What brings you here today?" (Oct 30, 2026, David: the question should be fully on the first screen). */
+      height: max(calc(100vw * 730 / 2154 * 0.86), min(calc(100vw * 730 / 2154), calc(100vh - var(--header-height, 130px) - 182px))) !important;
     }
+    /* On the shortest screens the hero text scales with the window height too,
+       so the slogan and description never reach the tiles. */
+    html body main p.rpp-hero-slogan.rpp-hero-slogan { font-size: clamp(36px, min(4.2vw, 7.2vh), 64px) !important; }
+    html body main h1#rpp-tagline { margin-top: clamp(12px, 2.2vh, 30px) !important; }
+    html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 { font-size: clamp(17px, min(1.5vw, 2.9vh), 23px) !important; }
   }
-  html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 2.25rem 0 0 !important; }
+  html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 1.1rem 0 0 !important; }
   html body main div.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid {
     order: 1;
     width: var(--rpp-gw); max-width: none !important;
@@ -269,7 +283,7 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      the rest of the site keeps the thin ring arrow. */
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label {
     position: relative; display: block !important; background: #FBF8F2;
-    padding: 13px 16px 8px; min-height: 0;
+    padding: 12px 16px 6px; min-height: 0;
   }
   html body main .rpp-funnel-grid span.rpp-jt-rule.rpp-jt-rule { display: none !important; }
   html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { display: block !important; }
@@ -285,10 +299,10 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     letter-spacing: -0.005em;
     white-space: nowrap;
     /* leaves the bottom row free for the button */
-    margin-bottom: 32px;
+    margin-bottom: 31px;
   }
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
-    position: absolute; right: 10px; bottom: 8px;
+    position: absolute; right: 10px; bottom: 7px;
     width: 30px; height: 30px; border-radius: 50%;
     background: var(--tile); color: #fff; display: inline-flex; align-items: center; justify-content: center;
     box-shadow: 0 4px 10px rgba(39,36,33,0.22);
