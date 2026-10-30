@@ -170,9 +170,13 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
   }
   html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
-  html body main h1#rpp-tagline.rpp-head3 span.rpp-tagline-line-v2.rpp-tagline-line-v2 { display: inline !important; }
-  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide { display: inline; }
-  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide:first-of-type { display: none; }
+  /* Two fixed lines on laptops (Oct 30, 2026, David: the line ran across the
+     wall in one long row on his screen). Each span is its own line:
+     "Senior transition, probate & estate" / "guidance for families in
+     Washington State." The old in-span breaks are off. Before this the
+     break depended on the column width, so wide windows got one line. */
+  html body main h1#rpp-tagline.rpp-head3 span.rpp-tagline-line-v2.rpp-tagline-line-v2 { display: block !important; white-space: nowrap; }
+  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide { display: none !important; }
 
   html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
   html body main div.rpp-funnel-block {
