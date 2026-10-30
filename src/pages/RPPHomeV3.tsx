@@ -39,17 +39,19 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
-import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
-import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
-import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
-/* 640px copies (Oct 6, 2026): the tiles show at about 180px wide on phones and
+import tilePlanning from "@/assets/tiles/tile-planning-ahead-v2.webp";
+import tileHelping from "@/assets/tiles/tile-helping-loved-one-v2.webp";
+import tileEstate from "@/assets/tiles/tile-handling-estate-v2.webp";
+import tileProfessionals from "@/assets/tiles/tile-find-professionals-v2.webp";
+/* -v2 (Oct 30, 2026): David's re-renders, sharper with more headroom,
+   cropped to the same 1160x793 shape (about 2% off the top, 4% off the
+   bottom), so no layout changes. 640px copies (Oct 6, 2026): the tiles show at about 180px wide on phones and
    260px on desktop (half the 1040px grid below 1024px), so the full-size files
    were two to four times what most screens used. */
-import tilePlanningSm from "@/assets/tiles/tile-planning-ahead-640.webp";
-import tileHelpingSm from "@/assets/tiles/tile-helping-loved-one-640.webp";
-import tileEstateSm from "@/assets/tiles/tile-handling-estate-640.webp";
-import tileProfessionalsSm from "@/assets/tiles/tile-find-professionals-640.webp";
+import tilePlanningSm from "@/assets/tiles/tile-planning-ahead-v2-640.webp";
+import tileHelpingSm from "@/assets/tiles/tile-helping-loved-one-v2-640.webp";
+import tileEstateSm from "@/assets/tiles/tile-handling-estate-v2-640.webp";
+import tileProfessionalsSm from "@/assets/tiles/tile-find-professionals-v2-640.webp";
 const TILE_SMALL: Record<string, string> = {
   [tilePlanning]: tilePlanningSm,
   [tileHelping]: tileHelpingSm,
