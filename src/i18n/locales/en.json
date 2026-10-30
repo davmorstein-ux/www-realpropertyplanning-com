@@ -5,8 +5,12 @@
   },
   "hero": {
     "imageAlt": "Real Property Planning — serving Washington families through senior transitions, probate, and estate sales",
-    "taglineLine1": "Probate, estate & senior transition",
+    "taglineLine1": "Senior transition, probate & estate",
     "taglineLine2": "guidance for Washington families.",
+    "headA": "Senior transition,",
+    "headB": "probate & estate",
+    "headC": "guidance",
+    "headD": "for Washington families.",
     "sloganStart": "Where",
     "sloganAccent": "transitions",
     "sloganEnd": "begin",

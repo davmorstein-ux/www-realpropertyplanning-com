@@ -102,6 +102,11 @@ const HERO_WIDE_CSS = `
    - Layered "floating" shadow and a thin white edge on each tile.
    No backticks in this block. */
 html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
+/* Headline line breaks: phones show two lines ("Senior transition, probate &
+   estate" / "guidance for Washington families."); laptops show three
+   ("Senior transition," / "probate & estate guidance" / "for Washington
+   families.") by joining the two spans and turning these breaks on. */
+html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
 @media (min-width: 901px) {
   html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img { aspect-ratio: 1942 / 809 !important; }
   html body main div.rpp-hero-figure.rpp-hero-figure::after {
@@ -147,6 +152,8 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
   }
   html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
+  html body main h1#rpp-tagline.rpp-head3 span.rpp-tagline-line-v2.rpp-tagline-line-v2 { display: inline !important; }
+  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide { display: inline; }
 
   html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
   html body main div.rpp-funnel-block {
@@ -159,17 +166,35 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
     width: var(--rpp-gw); max-width: none !important;
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     column-gap: 24px !important; row-gap: 24px !important;
-    margin: calc(-1 * ((var(--rpp-gw) - 72px) / 4 * 793 / 1160 + 1px)) auto 0 !important;
+    margin: calc(-1 * ((var(--rpp-gw) - 72px) / 4 * 793 / 1160)) auto 0 !important;
   }
+  /* FLOATING TILES (Oct 29, 2026 evening, David: the thin white edge read as
+     a frame, not depth). No border; five stacked shadows from tight to very
+     wide and soft; and a blurred "ground shadow" oval a little below each
+     tile, so the gap between tile and shadow reads as hovering. The oval is
+     the link's ::after at z-index -1 (it paints above the section's cream
+     because the section is its own stacking context). No border also means
+     the seam calc above has no +1px. */
   html body main .rpp-funnel-grid div.rpp-jt.rpp-jt {
-    border: 1px solid rgba(255,255,255,0.9);
-    box-shadow: 0 2px 3px rgba(39,36,33,0.14), 0 8px 14px rgba(39,36,33,0.14), 0 22px 40px rgba(39,36,33,0.22), 0 44px 80px -12px rgba(39,36,33,0.42);
+    border: 0 !important;
+    border-radius: 16px;
+    box-shadow: 0 1px 1px rgba(39,36,33,0.08), 0 2px 4px rgba(39,36,33,0.08), 0 8px 16px rgba(39,36,33,0.10), 0 18px 36px rgba(39,36,33,0.14), 0 36px 72px rgba(39,36,33,0.18);
+  }
+  html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link { position: relative; }
+  html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after {
+    content: ""; position: absolute; left: 10%; right: 10%; bottom: -26px; height: 22px;
+    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(4px);
+    background: radial-gradient(ellipse at center, rgba(39,36,33,0.30) 0%, rgba(39,36,33,0.12) 45%, rgba(39,36,33,0) 72%);
+    transition: transform 0.18s ease, opacity 0.18s ease;
   }
   @media (hover: hover) {
+    /* Hover: the tile rises a little and its ground shadow spreads and fades,
+       as a lifted object's would. */
     html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt {
-      border-color: var(--tile);
-      box-shadow: 0 3px 5px rgba(39,36,33,0.16), 0 12px 20px rgba(39,36,33,0.16), 0 28px 48px rgba(39,36,33,0.24), 0 52px 90px -12px rgba(39,36,33,0.44);
+      border-color: transparent;
+      box-shadow: 0 2px 2px rgba(39,36,33,0.08), 0 4px 8px rgba(39,36,33,0.08), 0 12px 24px rgba(39,36,33,0.12), 0 26px 52px rgba(39,36,33,0.16), 0 48px 96px rgba(39,36,33,0.20);
     }
+    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.06); opacity: 0.75; }
   }
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 12px 18px 14px; }
   html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
@@ -196,7 +221,10 @@ const tileMeta = [
 
 
 const RPPHomeV3 = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  /* English headline breaks into three lines on laptops (Oct 29, 2026, David);
+     other languages keep their two translated lines. */
+  const head3 = (i18n.resolvedLanguage || i18n.language || "en").startsWith("en");
 
   /* Every value on this tile derives from CARE_CALCULATORS — the same list the
      calculator hub and the switcher strip read. The list shown here used to be
@@ -439,7 +467,7 @@ const RPPHomeV3 = () => {
               <br />
               <span className="rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
             </p>
-            <h1 id="rpp-tagline" style={{ textAlign: "left", margin: 0 }}>
+            <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
                 style={{
@@ -473,7 +501,14 @@ const RPPHomeV3 = () => {
                   marginTop: 0,
                 }}
               >
-                {t("hero.taglineLine1")}
+                {head3 ? (
+                  <>
+                    {t("hero.headA")}
+                    <br className="rpp-br-wide" /> {t("hero.headB")}
+                  </>
+                ) : (
+                  t("hero.taglineLine1")
+                )}
               </span>
               <span
                 className="rpp-tagline-line-v2"
@@ -510,7 +545,14 @@ const RPPHomeV3 = () => {
                 }}
               >
                 {" "}
-                {t("hero.taglineLine2")}
+                {head3 ? (
+                  <>
+                    {t("hero.headC")}
+                    <br className="rpp-br-wide" /> {t("hero.headD")}
+                  </>
+                ) : (
+                  t("hero.taglineLine2")
+                )}
               </span>
             </h1>
             <span className="rpp-tagline-rule" aria-hidden="true" />
