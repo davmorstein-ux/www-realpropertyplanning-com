@@ -140,7 +140,9 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     /* Floating slogan (Oct 30, 2026, David): a cream glow keeps it legible on
        the wall, then three soft drop shadows below it lift the letters off the
        page, the same light as the floating tiles. */
-    text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 2px 2px rgba(39,36,33,0.12), 0 8px 14px rgba(39,36,33,0.16), 0 20px 34px rgba(39,36,33,0.16);
+    /* Stronger float (Oct 30, 2026, David): a thin light top edge, a crisp
+       shadow under each letter and wider soft ones below, matching the tiles. */
+    text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 1px 0 rgba(255,255,255,0.6), 0 3px 3px rgba(39,36,33,0.22), 0 10px 14px rgba(39,36,33,0.22), 0 24px 30px rgba(39,36,33,0.20);
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan em {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important; font-style: italic !important; font-weight: 500 !important;
@@ -158,7 +160,11 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      two even lines, a short door-red rule above it that echoes the slogan's
      red words, medium weight and near-black so it reads on the sunlit wall. */
   html body main h1#rpp-tagline { position: relative; padding-top: 20px !important; }
-  html body main h1#rpp-tagline::before { content: ""; position: absolute; left: 0; top: 0; width: 48px; height: 3px; border-radius: 2px; background: #B0274F; }
+  /* Rule changed Oct 30, 2026 (David): short charcoal line CENTRED over the
+     two description lines (was door red at the left edge). The h1 shrinks to
+     its text width so "centre" means the centre of the description. */
+  html body main h1#rpp-tagline { width: fit-content; }
+  html body main h1#rpp-tagline::before { content: ""; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 56px; height: 2px; border-radius: 2px; background: #1c1917; }
   html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 {
     display: block !important;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
@@ -253,40 +259,48 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   @media (prefers-reduced-motion: reduce) {
     html body main .rpp-funnel-grid div.rpp-jt.rpp-jt, html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after { transition: none; }
   }
-  /* Option B labels (Oct 30, 2026): warm cream, the slogan's serif for the
-     title (two lines where needed), and a solid round button in the tile's
-     colour. These four homepage tiles only; the rest of the site keeps the
-     thin ring arrow. */
-  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 14px 12px 14px 16px; background: #FBF8F2; }
-  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
+  /* Tile labels (Oct 30, 2026, David). Warm cream, the slogan's serif, one
+     line. The short coloured rule above the title is gone ("Is it necessary?
+     ... remove it, move the text up"): the title sits at the top of the
+     label using the full width, and the round button in the tile's colour
+     sits in the label's bottom-right corner. These four homepage tiles only;
+     the rest of the site keeps the thin ring arrow. */
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label {
+    position: relative; display: block !important; background: #FBF8F2;
+    padding: 13px 16px 8px; min-height: 0;
+  }
+  html body main .rpp-funnel-grid span.rpp-jt-rule.rpp-jt-rule { display: none !important; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { display: block !important; }
   html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
+    display: block;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
     font-weight: 600 !important;
-    /* One line (Oct 30, 2026, David: "needs to remain on a single line so
-       the white box is shorter"). Sized from the tile width so the longest
-       title ("Help an Aging Parent", about 9.8em) plus the 34px button
-       always fits; 24px cap. Below 1200px titles may wrap (too narrow). */
-    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 64px) / 9.3), 24px) !important;
-    line-height: 1.12 !important;
+    /* One line, sized from the tile width so the longest title ("Help an
+       Aging Parent", about 9.3em) fits the full label width; 24px cap. */
+    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 34px) / 9.3), 24px) !important;
+    line-height: 1.15 !important;
     color: #1f1c19 !important;
     letter-spacing: -0.005em;
     white-space: nowrap;
+    /* leaves the bottom row free for the button */
+    margin-bottom: 32px;
   }
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
-    flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%;
-    background: var(--tile); color: #fff; align-items: center; justify-content: center;
+    position: absolute; right: 10px; bottom: 8px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--tile); color: #fff; display: inline-flex; align-items: center; justify-content: center;
     box-shadow: 0 4px 10px rgba(39,36,33,0.22);
   }
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow svg circle { stroke: transparent; }
+  /* Thin dark outline around the whole tile (Oct 30, 2026, David: it adds to
+     the floating effect; a crisp edge separates the tile from the room). */
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt { outline: 1px solid rgba(39,36,33,0.42); outline-offset: -1px; }
 }
-/* Small laptops and tablets in landscape (901-1199px): the tiles are about
-   165-210px wide, so the title and button shrink to keep "Professional" on
-   the card with its button. */
+/* Small laptops and tablets in landscape (901-1199px): tiles about
+   165-210px wide; titles may wrap there. */
 @media (min-width: 901px) and (max-width: 1199px) {
-  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 14px 10px 14px 13px; }
-  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 6px; }
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; white-space: normal; }
-  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 32px; width: 32px; height: 32px; }
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 12px 12px 10px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; white-space: normal; margin-bottom: 36px; }
 }
 `;
 
