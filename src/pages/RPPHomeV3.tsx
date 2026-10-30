@@ -159,17 +159,35 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
     width: var(--rpp-gw); max-width: none !important;
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     column-gap: 24px !important; row-gap: 24px !important;
-    margin: calc(-1 * ((var(--rpp-gw) - 72px) / 4 * 793 / 1160 + 1px)) auto 0 !important;
+    margin: calc(-1 * ((var(--rpp-gw) - 72px) / 4 * 793 / 1160)) auto 0 !important;
   }
+  /* FLOATING TILES (Oct 29, 2026 evening, David: the thin white edge read as
+     a frame, not depth). No border; five stacked shadows from tight to very
+     wide and soft; and a blurred "ground shadow" oval a little below each
+     tile, so the gap between tile and shadow reads as hovering. The oval is
+     the link's ::after at z-index -1 (it paints above the section's cream
+     because the section is its own stacking context). No border also means
+     the seam calc above has no +1px. */
   html body main .rpp-funnel-grid div.rpp-jt.rpp-jt {
-    border: 1px solid rgba(255,255,255,0.9);
-    box-shadow: 0 2px 3px rgba(39,36,33,0.14), 0 8px 14px rgba(39,36,33,0.14), 0 22px 40px rgba(39,36,33,0.22), 0 44px 80px -12px rgba(39,36,33,0.42);
+    border: 0 !important;
+    border-radius: 16px;
+    box-shadow: 0 1px 1px rgba(39,36,33,0.08), 0 2px 4px rgba(39,36,33,0.08), 0 8px 16px rgba(39,36,33,0.10), 0 18px 36px rgba(39,36,33,0.14), 0 36px 72px rgba(39,36,33,0.18);
+  }
+  html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link { position: relative; }
+  html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after {
+    content: ""; position: absolute; left: 10%; right: 10%; bottom: -26px; height: 22px;
+    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(4px);
+    background: radial-gradient(ellipse at center, rgba(39,36,33,0.30) 0%, rgba(39,36,33,0.12) 45%, rgba(39,36,33,0) 72%);
+    transition: transform 0.18s ease, opacity 0.18s ease;
   }
   @media (hover: hover) {
+    /* Hover: the tile rises a little and its ground shadow spreads and fades,
+       as a lifted object's would. */
     html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt {
-      border-color: var(--tile);
-      box-shadow: 0 3px 5px rgba(39,36,33,0.16), 0 12px 20px rgba(39,36,33,0.16), 0 28px 48px rgba(39,36,33,0.24), 0 52px 90px -12px rgba(39,36,33,0.44);
+      border-color: transparent;
+      box-shadow: 0 2px 2px rgba(39,36,33,0.08), 0 4px 8px rgba(39,36,33,0.08), 0 12px 24px rgba(39,36,33,0.12), 0 26px 52px rgba(39,36,33,0.16), 0 48px 96px rgba(39,36,33,0.20);
     }
+    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.06); opacity: 0.75; }
   }
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 12px 18px 14px; }
   html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
