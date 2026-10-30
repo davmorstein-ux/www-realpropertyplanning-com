@@ -133,13 +133,15 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
     font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important;
     line-height: inherit !important; color: inherit !important;
   }
-  html body main h1#rpp-tagline { margin: 18px 0 0 !important; text-align: left !important; }
+  /* Oct 29, 2026 evening (David): the description dropped lower and enlarged,
+     so it reads as its own line rather than a caption tucked under the slogan. */
+  html body main h1#rpp-tagline { margin: clamp(26px, 2.6vw, 44px) 0 0 !important; text-align: left !important; }
   html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 {
     display: block !important;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-    font-size: clamp(17px, 1.45vw, 21px) !important;
+    font-size: clamp(19px, 1.85vw, 28px) !important;
     font-weight: 500 !important;
-    line-height: 1.4 !important;
+    line-height: 1.35 !important;
     letter-spacing: 0 !important;
     color: #2f2a26 !important;
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
