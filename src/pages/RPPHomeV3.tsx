@@ -166,12 +166,18 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
   html body main div.rpp-funnel-block {
     display: flex; flex-direction: column;
-    --rpp-gw: min(1120px, 84vw, calc(100vw - 3rem));
+    /* 71vw + 8px (Oct 30, 2026, David: the door must never be blocked):
+       the tile photos must be no taller than the strip of hero below the
+       door's foot. In rpp-hero-2042 the door and threshold end 64% down the
+       frame, leaving 36% of the photo's full height (12.2vw) below them;
+       a tile photo is (width - 72px) / 4 x 793/1160 tall. Solving for a
+       ~12px gap gives this width. Change it with the photo. */
+    --rpp-gw: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem));
   }
   /* Short laptop screens (Oct 29, 2026, night): slightly narrower tiles, so
      the whole tiles fit on the first screen without cropping the photos. */
   @media (max-height: 780px) {
-    html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(100vw - 3rem)); }
+    html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(71vw + 8px), calc(100vw - 3rem)); }
   }
   /* Short laptop screens, second part (Oct 30, 2026): the option B tiles are
      taller, so the hero gives up a little of its ceiling (cropped from the
@@ -238,7 +244,7 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
     font-weight: 600 !important;
-    font-size: clamp(21px, 1.75vw, 25px) !important;
+    font-size: clamp(19px, 1.55vw, 24px) !important;
     line-height: 1.12 !important;
     color: #1f1c19 !important;
     letter-spacing: -0.005em;
@@ -250,6 +256,15 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     box-shadow: 0 4px 10px rgba(39,36,33,0.22);
   }
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow svg circle { stroke: transparent; }
+}
+/* Small laptops and tablets in landscape (901-1199px): the tiles are about
+   165-210px wide, so the title and button shrink to keep "Professional" on
+   the card with its button. */
+@media (min-width: 901px) and (max-width: 1199px) {
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 14px 10px 14px 13px; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 6px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 32px; width: 32px; height: 32px; }
 }
 `;
 
