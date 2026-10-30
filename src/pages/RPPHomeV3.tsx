@@ -102,6 +102,11 @@ const HERO_WIDE_CSS = `
    - Layered "floating" shadow and a thin white edge on each tile.
    No backticks in this block. */
 html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
+/* Headline line breaks: phones show two lines ("Senior transition, probate &
+   estate" / "guidance for Washington families."); laptops show three
+   ("Senior transition," / "probate & estate guidance" / "for Washington
+   families.") by joining the two spans and turning these breaks on. */
+html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
 @media (min-width: 901px) {
   html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img { aspect-ratio: 1942 / 809 !important; }
   html body main div.rpp-hero-figure.rpp-hero-figure::after {
@@ -147,6 +152,8 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
   }
   html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
+  html body main h1#rpp-tagline.rpp-head3 span.rpp-tagline-line-v2.rpp-tagline-line-v2 { display: inline !important; }
+  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide { display: inline; }
 
   html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
   html body main div.rpp-funnel-block {
@@ -214,7 +221,10 @@ const tileMeta = [
 
 
 const RPPHomeV3 = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  /* English headline breaks into three lines on laptops (Oct 29, 2026, David);
+     other languages keep their two translated lines. */
+  const head3 = (i18n.resolvedLanguage || i18n.language || "en").startsWith("en");
 
   /* Every value on this tile derives from CARE_CALCULATORS — the same list the
      calculator hub and the switcher strip read. The list shown here used to be
@@ -457,7 +467,7 @@ const RPPHomeV3 = () => {
               <br />
               <span className="rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
             </p>
-            <h1 id="rpp-tagline" style={{ textAlign: "left", margin: 0 }}>
+            <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
                 style={{
@@ -491,7 +501,14 @@ const RPPHomeV3 = () => {
                   marginTop: 0,
                 }}
               >
-                {t("hero.taglineLine1")}
+                {head3 ? (
+                  <>
+                    {t("hero.headA")}
+                    <br className="rpp-br-wide" /> {t("hero.headB")}
+                  </>
+                ) : (
+                  t("hero.taglineLine1")
+                )}
               </span>
               <span
                 className="rpp-tagline-line-v2"
@@ -528,7 +545,14 @@ const RPPHomeV3 = () => {
                 }}
               >
                 {" "}
-                {t("hero.taglineLine2")}
+                {head3 ? (
+                  <>
+                    {t("hero.headC")}
+                    <br className="rpp-br-wide" /> {t("hero.headD")}
+                  </>
+                ) : (
+                  t("hero.taglineLine2")
+                )}
               </span>
             </h1>
             <span className="rpp-tagline-rule" aria-hidden="true" />
