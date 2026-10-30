@@ -118,7 +118,10 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img { aspect-ratio: 2154 / 730 !important; }
   html body main div.rpp-hero-figure.rpp-hero-figure::after {
     content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background: linear-gradient(180deg, rgba(250,248,244,0.52) 0%, rgba(250,248,244,0.40) 45%, rgba(250,248,244,0.55) 100%);
+    /* Floor strip behind the tiles faded more (Oct 30, 2026, David: the busy
+       wood and rug "directly above the tiles"). Starts below the door's foot
+       (about 67% down, level with the tile tops) and deepens to 80-88%. */
+    background: linear-gradient(180deg, rgba(250,248,244,0.52) 0%, rgba(250,248,244,0.40) 45%, rgba(250,248,244,0.42) 67%, rgba(250,248,244,0.80) 82%, rgba(250,248,244,0.88) 100%);
   }
   html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
     z-index: 2; left: 3.9% !important; top: 5% !important; max-width: 46% !important;
@@ -254,19 +257,23 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      title (two lines where needed), and a solid round button in the tile's
      colour. These four homepage tiles only; the rest of the site keeps the
      thin ring arrow. */
-  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 14px 16px 18px; background: #FBF8F2; }
-  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 10px; }
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 14px 12px 14px 16px; background: #FBF8F2; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
   html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
     font-weight: 600 !important;
-    font-size: clamp(19px, 1.55vw, 24px) !important;
+    /* One line (Oct 30, 2026, David: "needs to remain on a single line so
+       the white box is shorter"). Sized from the tile width so the longest
+       title ("Help an Aging Parent", about 9.8em) plus the 34px button
+       always fits; 24px cap. Below 1200px titles may wrap (too narrow). */
+    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 64px) / 9.3), 24px) !important;
     line-height: 1.12 !important;
     color: #1f1c19 !important;
     letter-spacing: -0.005em;
-    white-space: normal;
+    white-space: nowrap;
   }
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
-    flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+    flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%;
     background: var(--tile); color: #fff; align-items: center; justify-content: center;
     box-shadow: 0 4px 10px rgba(39,36,33,0.22);
   }
@@ -278,7 +285,7 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
 @media (min-width: 901px) and (max-width: 1199px) {
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 14px 10px 14px 13px; }
   html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 6px; }
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; white-space: normal; }
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 32px; width: 32px; height: 32px; }
 }
 `;
