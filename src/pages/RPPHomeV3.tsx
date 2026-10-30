@@ -18,8 +18,12 @@ import AskBox from "@/components/AskBox";
    removed on purpose). Used above 900px only; phones keep the 2037 crop below.
    1942x809 is the largest file David had; a ~3840px version would be sharper
    on high-density laptop screens if one is ever made. */
-import heroDesktop from "@/assets/hero/rpp-hero-2041.webp";
-import heroDesktop1280 from "@/assets/hero/rpp-hero-2041-1280.webp";
+/* rpp-hero-2042 (Oct 29, 2026, night): David's wider 2.95:1 version, so a short
+   laptop screen shows the whole room (ceiling, full door, floor) and the
+   tiles still fit on the first screen. The door's foot sits ~63% down the
+   frame, which leaves room for the tiles below it. */
+import heroDesktop from "@/assets/hero/rpp-hero-2042.webp";
+import heroDesktop1280 from "@/assets/hero/rpp-hero-2042-1280.webp";
 /* Phone crop zoomed out (Oct 28, 2026, David chose option "B"): cut wider
    from the same 2035 render, 2100x752 from x=1740 of the 3840 band (was
    1876 wide from x=1964), right edge kept, same 1200x430 shape, so the image
@@ -87,8 +91,9 @@ const HERO_WIDE_CSS = `
    Above 900px only; phones and anything 900px or narrower are untouched.
    - Taller 2.4:1 photo (rpp-hero-2041) under a 40% cream wash, so the slogan
      and tiles lead and the door still shows.
-   - Slogan "Where transitions begin" in Playfair Display (the only serif on
-     the site), "transitions" in the door red, "begin" stepped under it.
+   - Slogan "Where the next chapter / begins" in Playfair Display (the only
+     serif on the site), "next chapter" in the door red (David chose this
+     wording over "Where transitions begin", Oct 29, 2026, night).
    - The h1 (the plain description) sits under the slogan as a smaller line:
      it stays the page's headline for search engines and tells a first-time
      visitor what the site is.
@@ -108,13 +113,13 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
    families.") by joining the two spans and turning these breaks on. */
 html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
 @media (min-width: 901px) {
-  html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img { aspect-ratio: 1942 / 809 !important; }
+  html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img { aspect-ratio: 2154 / 730 !important; }
   html body main div.rpp-hero-figure.rpp-hero-figure::after {
     content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background: linear-gradient(180deg, rgba(250,248,244,0.52) 0%, rgba(250,248,244,0.40) 45%, rgba(250,248,244,0.55) 100%);
   }
   html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
-    z-index: 2; left: 3.9% !important; top: 7.5% !important; max-width: 46% !important;
+    z-index: 2; left: 3.9% !important; top: 5% !important; max-width: 46% !important;
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan {
     display: block !important;
@@ -134,13 +139,13 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     font-size: inherit !important; color: #B0274F !important;
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-hero-slogan-end {
-    display: inline-block !important; padding-left: 3.25em;
+    display: inline-block !important; padding-left: 0;
     font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important;
     line-height: inherit !important; color: inherit !important;
   }
   /* Oct 29, 2026 evening (David): the description dropped lower and enlarged,
      so it reads as its own line rather than a caption tucked under the slogan. */
-  html body main h1#rpp-tagline { margin: clamp(26px, 2.6vw, 44px) 0 0 !important; text-align: left !important; }
+  html body main h1#rpp-tagline { margin: clamp(20px, 2vw, 36px) 0 0 !important; text-align: left !important; }
   html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 {
     display: block !important;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
@@ -159,6 +164,11 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   html body main div.rpp-funnel-block {
     display: flex; flex-direction: column;
     --rpp-gw: min(1120px, 84vw, calc(100vw - 3rem));
+  }
+  /* Short laptop screens (Oct 29, 2026, night): slightly narrower tiles, so
+     the whole tiles fit on the first screen without cropping the photos. */
+  @media (max-height: 780px) {
+    html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(100vw - 3rem)); }
   }
   html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 2.25rem 0 0 !important; }
   html body main div.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid {
@@ -350,14 +360,14 @@ const RPPHomeV3 = () => {
                beneath the image instead of sitting on it.
                102 KB and 76 KB. */
             src={heroDesktop}
-            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 1942w`}
+            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 2154w`}
             /* Above 900px always the full desktop artwork (Oct 21, 2026). With
                sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
                crop, which has no plain wall on the left, so the headline sat
                on the mirror. Below 900px the headline stacks under the image,
                so the tighter crops are fine there. */
             sizes="100vw"
-            width={1942}
+            width={2154}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
                page to jump as it arrives. 1920x364 is the artwork's own
@@ -368,7 +378,7 @@ const RPPHomeV3 = () => {
                PREVIOUS ARTWORK WAS 4.66:1 (1920x412). The 2028 replacement
                is a shorter band, so the hero is about 72px shorter at full
                width. */
-            height={809}
+            height={730}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
