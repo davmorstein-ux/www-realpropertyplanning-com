@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { sectionStripFor, stripInHeader, type BandPhoto, type SectionStrip as Strip } from "@/lib/sectionStrip";
+import { setFetchPriority } from "@/lib/imgPriority";
 import estateBand from "@/assets/section-bands/estate-band.webp";
 import estateBandMobile from "@/assets/section-bands/estate-band-mobile.webp";
 import seniorBand from "@/assets/section-bands/senior-band.webp";
@@ -89,7 +90,7 @@ export function SectionBand({ photo, title }: { photo: BandPhoto; title?: ReactN
       <div className="rppbd-photo">
         <picture>
           <source media="(max-width: 767px)" srcSet={src.mobile} width={1170} height={390} />
-          <img src={src.desktop} alt="" width={1920} height={225} fetchPriority="high" decoding="async" />
+          <img ref={setFetchPriority("high")} src={src.desktop} alt="" width={1920} height={225} decoding="async" />
         </picture>
         <div className="rppbd-fade" aria-hidden="true" />
         {title && <div className="rppbd-glow" aria-hidden="true" />}
