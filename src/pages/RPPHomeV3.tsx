@@ -159,10 +159,13 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     display: block !important;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
     font-size: clamp(18px, 1.5vw, 23px) !important;
-    font-weight: 500 !important;
+    /* 600 and the site's body near-black (Oct 30, 2026, David: "could be more
+       contrast"). The colour already measured 9-13:1 on the wall; the medium
+       weight is what read as faint next to the slogan. */
+    font-weight: 600 !important;
     line-height: 1.45 !important;
     letter-spacing: 0 !important;
-    color: #2a2622 !important;
+    color: #1c1917 !important;
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
   }
   html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
