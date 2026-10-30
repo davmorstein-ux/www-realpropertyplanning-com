@@ -91,9 +91,10 @@ const HERO_WIDE_CSS = `
    Above 900px only; phones and anything 900px or narrower are untouched.
    - Taller 2.4:1 photo (rpp-hero-2041) under a 40% cream wash, so the slogan
      and tiles lead and the door still shows.
-   - Slogan "Where the next chapter / begins" in Playfair Display (the only
-     serif on the site), "next chapter" in the door red (David chose this
-     wording over "Where transitions begin", Oct 29, 2026, night).
+   - Slogan "Your next / chapter begins" in Playfair Display (the only serif
+     on the site besides the tile titles), "next" and "chapter" in the door
+     red (David, Oct 30, 2026; earlier "Where the next chapter begins" and
+     "Where transitions begin").
    - The h1 (the plain description) sits under the slogan as a smaller line:
      it stays the page's headline for search engines and tells a first-time
      visitor what the site is.
@@ -132,10 +133,13 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     margin: 0 !important;
     max-width: none !important;
     text-align: left !important;
-    text-shadow: 0 0 22px rgba(250,248,244,0.9);
+    /* Floating slogan (Oct 30, 2026, David): a cream glow keeps it legible on
+       the wall, then three soft drop shadows below it lift the letters off the
+       page, the same light as the floating tiles. */
+    text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 2px 2px rgba(39,36,33,0.12), 0 8px 14px rgba(39,36,33,0.16), 0 20px 34px rgba(39,36,33,0.16);
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan em {
-    font-family: inherit !important; font-style: italic !important; font-weight: 500 !important;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important; font-style: italic !important; font-weight: 500 !important;
     font-size: inherit !important; color: #B0274F !important;
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-hero-slogan-end {
@@ -146,29 +150,51 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   /* Oct 29, 2026 evening (David): the description dropped lower and enlarged,
      so it reads as its own line rather than a caption tucked under the slogan. */
   html body main h1#rpp-tagline { margin: clamp(20px, 2vw, 36px) 0 0 !important; text-align: left !important; }
+  /* Description, calmer (Oct 30, 2026, David: "a bit cluttered"; chose B):
+     two even lines, a short door-red rule above it that echoes the slogan's
+     red words, medium weight and near-black so it reads on the sunlit wall. */
+  html body main h1#rpp-tagline { position: relative; padding-top: 20px !important; }
+  html body main h1#rpp-tagline::before { content: ""; position: absolute; left: 0; top: 0; width: 48px; height: 3px; border-radius: 2px; background: #B0274F; }
   html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 {
     display: block !important;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-    font-size: clamp(19px, 1.85vw, 28px) !important;
+    font-size: clamp(18px, 1.5vw, 23px) !important;
     font-weight: 500 !important;
-    line-height: 1.35 !important;
+    line-height: 1.45 !important;
     letter-spacing: 0 !important;
-    color: #2f2a26 !important;
+    color: #2a2622 !important;
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
   }
   html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
   html body main h1#rpp-tagline.rpp-head3 span.rpp-tagline-line-v2.rpp-tagline-line-v2 { display: inline !important; }
   html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide { display: inline; }
+  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide:first-of-type { display: none; }
 
   html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
   html body main div.rpp-funnel-block {
     display: flex; flex-direction: column;
-    --rpp-gw: min(1120px, 84vw, calc(100vw - 3rem));
+    /* 71vw + 8px (Oct 30, 2026, David: the door must never be blocked):
+       the tile photos must be no taller than the strip of hero below the
+       door's foot. In rpp-hero-2042 the door and threshold end 64% down the
+       frame, leaving 36% of the photo's full height (12.2vw) below them;
+       a tile photo is (width - 72px) / 4 x 793/1160 tall. Solving for a
+       ~12px gap gives this width. Change it with the photo. */
+    --rpp-gw: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem));
   }
   /* Short laptop screens (Oct 29, 2026, night): slightly narrower tiles, so
      the whole tiles fit on the first screen without cropping the photos. */
   @media (max-height: 780px) {
-    html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(100vw - 3rem)); }
+    html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(71vw + 8px), calc(100vw - 3rem)); }
+  }
+  /* Short laptop screens, second part (Oct 30, 2026): the option B tiles are
+     taller, so the hero gives up a little of its ceiling (cropped from the
+     top only; the door's foot stays above the tiles) until the whole tiles
+     fit on the first screen. Taller screens show the full photo. */
+  @media (max-height: 780px) {
+    html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img.rpp-hero-img {
+      aspect-ratio: auto !important; object-fit: cover !important; object-position: 50% 100% !important;
+      height: max(400px, min(calc(100vw * 730 / 2154), calc(100vh - var(--header-height, 130px) - 112px))) !important;
+    }
   }
   html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 2.25rem 0 0 !important; }
   html body main div.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid {
@@ -185,34 +211,67 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      the link's ::after at z-index -1 (it paints above the section's cream
      because the section is its own stacking context). No border also means
      the seam calc above has no +1px. */
+  /* Oct 30, 2026 (David chose "option B" plus a higher float): deeper, wider
+     shadow and a ground shadow further below the tile, so the gap reads as
+     height. The tile itself is not moved, so the photo/label seam stays on
+     the hero's bottom edge. */
   html body main .rpp-funnel-grid div.rpp-jt.rpp-jt {
     border: 0 !important;
     border-radius: 16px;
-    box-shadow: 0 1px 1px rgba(39,36,33,0.08), 0 2px 4px rgba(39,36,33,0.08), 0 8px 16px rgba(39,36,33,0.10), 0 18px 36px rgba(39,36,33,0.14), 0 36px 72px rgba(39,36,33,0.18);
+    background: #FBF8F2;
+    box-shadow: 0 1px 1px rgba(39,36,33,0.10), 0 4px 8px rgba(39,36,33,0.10), 0 14px 28px rgba(39,36,33,0.16), 0 32px 60px rgba(39,36,33,0.22), 0 60px 110px rgba(39,36,33,0.24);
   }
   html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link { position: relative; }
   html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after {
-    content: ""; position: absolute; left: 10%; right: 10%; bottom: -26px; height: 22px;
-    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(4px);
+    content: ""; position: absolute; left: 14%; right: 14%; bottom: -44px; height: 20px;
+    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(7px); opacity: 0.85;
     background: radial-gradient(ellipse at center, rgba(39,36,33,0.30) 0%, rgba(39,36,33,0.12) 45%, rgba(39,36,33,0) 72%);
-    transition: transform 0.18s ease, opacity 0.18s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease;
   }
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt { transition: transform 0.25s ease, box-shadow 0.25s ease; }
   @media (hover: hover) {
-    /* Hover: the tile rises a little and its ground shadow spreads and fades,
-       as a lifted object's would. */
+    /* Hover: the tile rises 8px, its shadow deepens, and its ground shadow
+       spreads and fades, as a lifted object's would. */
     html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt {
+      transform: translateY(-8px);
       border-color: transparent;
-      box-shadow: 0 2px 2px rgba(39,36,33,0.08), 0 4px 8px rgba(39,36,33,0.08), 0 12px 24px rgba(39,36,33,0.12), 0 26px 52px rgba(39,36,33,0.16), 0 48px 96px rgba(39,36,33,0.20);
+      box-shadow: 0 2px 2px rgba(39,36,33,0.10), 0 6px 12px rgba(39,36,33,0.10), 0 20px 36px rgba(39,36,33,0.16), 0 42px 72px rgba(39,36,33,0.22), 0 76px 130px rgba(39,36,33,0.26);
     }
-    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.06); opacity: 0.75; }
+    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.12); opacity: 0.55; }
   }
-  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 12px 18px 14px; }
-  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
-  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 30px; width: 30px; height: 30px; }
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 18px !important; }
+  @media (prefers-reduced-motion: reduce) {
+    html body main .rpp-funnel-grid div.rpp-jt.rpp-jt, html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after { transition: none; }
+  }
+  /* Option B labels (Oct 30, 2026): warm cream, the slogan's serif for the
+     title (two lines where needed), and a solid round button in the tile's
+     colour. These four homepage tiles only; the rest of the site keeps the
+     thin ring arrow. */
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 14px 16px 18px; background: #FBF8F2; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 10px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 600 !important;
+    font-size: clamp(19px, 1.55vw, 24px) !important;
+    line-height: 1.12 !important;
+    color: #1f1c19 !important;
+    letter-spacing: -0.005em;
+    white-space: normal;
+  }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
+    flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+    background: var(--tile); color: #fff; align-items: center; justify-content: center;
+    box-shadow: 0 4px 10px rgba(39,36,33,0.22);
+  }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow svg circle { stroke: transparent; }
 }
-@media (min-width: 1270px) {
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { white-space: nowrap; }
+/* Small laptops and tablets in landscape (901-1199px): the tiles are about
+   165-210px wide, so the title and button shrink to keep "Professional" on
+   the card with its button. */
+@media (min-width: 901px) and (max-width: 1199px) {
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 14px 10px 14px 13px; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 6px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 32px; width: 32px; height: 32px; }
 }
 `;
 
@@ -475,6 +534,7 @@ const RPPHomeV3 = () => {
             <p className="rpp-hero-slogan">
               {t("hero.sloganStart")} <em>{t("hero.sloganAccent")}</em>
               <br />
+              <em>{t("hero.sloganAccent2")}</em>{" "}
               <span className="rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
             </p>
             <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
