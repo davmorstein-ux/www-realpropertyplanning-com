@@ -22,6 +22,7 @@ export type Database = {
           listing: string
           recipients: number
           sent_at: string
+          statuses: string | null
         }
         Insert: {
           delivered: number
@@ -30,6 +31,7 @@ export type Database = {
           listing: string
           recipients: number
           sent_at?: string
+          statuses?: string | null
         }
         Update: {
           delivered?: number
@@ -38,6 +40,7 @@ export type Database = {
           listing?: string
           recipients?: number
           sent_at?: string
+          statuses?: string | null
         }
         Relationships: []
       }
