@@ -142,11 +142,17 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     /* Floating slogan (Oct 30, 2026, David): a cream glow keeps it legible on
        the wall, then three soft drop shadows below it lift the letters off the
        page, the same light as the floating tiles. */
-    /* Stronger float (Oct 30, 2026, David): a thin light top edge, a crisp
-       shadow under each letter and wider soft ones below, matching the tiles. */
-    text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 1px 0 rgba(255,255,255,0.6), 0 3px 3px rgba(39,36,33,0.22), 0 10px 14px rgba(39,36,33,0.22), 0 24px 30px rgba(39,36,33,0.20);
+    /* Flat (Oct 30, 2026, David): "Your" and "begins" sit flat on the wall,
+       no shadow or rim. Only the red "next chapter" floats (rule below). */
+    text-shadow: none;
   }
+  /* Floating "next chapter" (Oct 30, 2026, David): a cast shadow, offset down
+     and right with a gap, in a warm dark tone, so the red words read as
+     lifted off the wall; they also sit 3px higher. */
   html body main p.rpp-hero-slogan.rpp-hero-slogan em {
+    display: inline-block;
+    transform: translateY(-3px);
+    text-shadow: 6px 14px 5px rgba(70,30,35,0.30), 12px 26px 16px rgba(70,30,35,0.18), 20px 40px 30px rgba(70,30,35,0.10) !important;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important; font-style: italic !important; font-weight: 500 !important;
     font-size: inherit !important; color: #B0274F !important;
   }
