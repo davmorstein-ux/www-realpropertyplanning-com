@@ -91,9 +91,10 @@ const HERO_WIDE_CSS = `
    Above 900px only; phones and anything 900px or narrower are untouched.
    - Taller 2.4:1 photo (rpp-hero-2041) under a 40% cream wash, so the slogan
      and tiles lead and the door still shows.
-   - Slogan "Where the next chapter / begins" in Playfair Display (the only
-     serif on the site), "next chapter" in the door red (David chose this
-     wording over "Where transitions begin", Oct 29, 2026, night).
+   - Slogan "Your next / chapter begins" in Playfair Display (the only serif
+     on the site besides the tile titles), "next" and "chapter" in the door
+     red (David, Oct 30, 2026; earlier "Where the next chapter begins" and
+     "Where transitions begin").
    - The h1 (the plain description) sits under the slogan as a smaller line:
      it stays the page's headline for search engines and tells a first-time
      visitor what the site is.
@@ -138,7 +139,7 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 2px 2px rgba(39,36,33,0.12), 0 8px 14px rgba(39,36,33,0.16), 0 20px 34px rgba(39,36,33,0.16);
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan em {
-    font-family: inherit !important; font-style: italic !important; font-weight: 500 !important;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important; font-style: italic !important; font-weight: 500 !important;
     font-size: inherit !important; color: #B0274F !important;
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-hero-slogan-end {
@@ -149,19 +150,25 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   /* Oct 29, 2026 evening (David): the description dropped lower and enlarged,
      so it reads as its own line rather than a caption tucked under the slogan. */
   html body main h1#rpp-tagline { margin: clamp(20px, 2vw, 36px) 0 0 !important; text-align: left !important; }
+  /* Description, calmer (Oct 30, 2026, David: "a bit cluttered"; chose B):
+     two even lines, a short door-red rule above it that echoes the slogan's
+     red words, medium weight and near-black so it reads on the sunlit wall. */
+  html body main h1#rpp-tagline { position: relative; padding-top: 20px !important; }
+  html body main h1#rpp-tagline::before { content: ""; position: absolute; left: 0; top: 0; width: 48px; height: 3px; border-radius: 2px; background: #B0274F; }
   html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 {
     display: block !important;
     font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
-    font-size: clamp(19px, 1.85vw, 28px) !important;
+    font-size: clamp(18px, 1.5vw, 23px) !important;
     font-weight: 500 !important;
-    line-height: 1.35 !important;
+    line-height: 1.45 !important;
     letter-spacing: 0 !important;
-    color: #2f2a26 !important;
+    color: #2a2622 !important;
     text-shadow: 0 0 16px rgba(250,248,244,0.95) !important;
   }
   html body main .rpp-hero-scrim span.rpp-tagline-rule.rpp-tagline-rule { display: none !important; }
   html body main h1#rpp-tagline.rpp-head3 span.rpp-tagline-line-v2.rpp-tagline-line-v2 { display: inline !important; }
   html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide { display: inline; }
+  html body main h1#rpp-tagline.rpp-head3 br.rpp-br-wide:first-of-type { display: none; }
 
   html body main section#rpp-start-here { padding-top: 0 !important; position: relative; z-index: 3; }
   html body main div.rpp-funnel-block {
@@ -527,6 +534,7 @@ const RPPHomeV3 = () => {
             <p className="rpp-hero-slogan">
               {t("hero.sloganStart")} <em>{t("hero.sloganAccent")}</em>
               <br />
+              <em>{t("hero.sloganAccent2")}</em>{" "}
               <span className="rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
             </p>
             <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
