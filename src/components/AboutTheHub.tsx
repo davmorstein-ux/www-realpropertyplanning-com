@@ -254,26 +254,14 @@ const AboutTheHub = () => {
             hairlines replace the rule that sat above the paragraph below. */}
         <HomepagePoints />
 
-        {/* Why it exists — the bridge a visitor otherwise never gets (Sept 24
-            2026 audit). Hub voice: the reason is the situation, not a person;
-            the featured professional is named once, by role, from the record.
-            Sept 27, 2026 (owner's decision after an outside audit): no individual is named here;
-            the name stays on the About page, the professional's own pages, and the required
-            attribution line in the disclaimer. */}
-        {/* Oct 29, 2026 (David): one idea per paragraph, so the section reads in
-            three short blocks instead of one long one. */}
+        {/* Oct 30, 2026 (David, after an outside review: "too much text"): the three
+            paragraphs became one. The other two repeated the four points above
+            (free guides, a path to licensed professionals); this line is the one
+            reason for the site the points do not give. The fuller explanation
+            lives on the About page. */}
         <p className="rpp-abouthub-why">
-          Property decisions caused by aging, illness, or a death are not ordinary transactions.
-        </p>
-        <p className="rpp-abouthub-why">
-          An attorney, a fiduciary, an appraiser, a care provider, a lender, and several family members are often
-          making decisions at the same time, and nobody is responsible for the whole picture.
-        </p>
-        {/* Split into its own paragraph (Oct 27, 2026, David). */}
-        <p className="rpp-abouthub-why">
-          The guides and tools here are free, and when a decision needs a licensed professional, the site lists
-          independent professionals you can contact directly, including a featured broker and appraiser who work
-          through their own practices.
+          These decisions often involve an attorney, an appraiser, a care provider and several family
+          members at once, with no one looking at the whole picture.
         </p>
 
       </div>

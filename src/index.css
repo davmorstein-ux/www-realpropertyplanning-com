@@ -6567,3 +6567,44 @@ html body main.apf > section:has(.rpp-hero-band) + section {
 html body main :is(.tile-white__face, .card-3d-premium__face) :is(h2, h3, h4) {
   font-weight: 700 !important;
 }
+
+/* ============================================================
+   READABLE TEXT, PART 2 (Oct 30, 2026, David: "a lot of text that is
+   small and difficult to read"). Measured on the homepage and footer:
+   body copy was 17-18px at medium weight, links and labels 15-16px, and
+   the fine print 13-14px. New floor: paragraphs 20px, links/labels/
+   buttons 17-18px, fine print 16px. Nothing on these pages goes below
+   16px. Headings unchanged. The footer is sitewide, so its sizes change
+   on every page. Doubled classes + html body to beat earlier rules.
+   ============================================================ */
+html body :is(.rpp-abouthub-why, .rpp-calc-sub, .rpp-ask-sub, .rpp-news-body).rpp-x,
+html body p.rpp-abouthub-why.rpp-abouthub-why,
+html body .rpp-calc-sub.rpp-calc-sub,
+html body .rpp-ask-sub.rpp-ask-sub,
+html body .rpp-news-body.rpp-news-body {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+}
+html body .rpp-myplan-link.rpp-myplan-link,
+html body .rpp-heading-link.rpp-heading-link,
+html body .rpp-pr-browse.rpp-pr-browse,
+html body .rpp-afh-strip-label.rpp-afh-strip-label,
+html body .rpp-afh-strip-cta.rpp-afh-strip-cta,
+html body .rpp-news-submit.rpp-news-submit,
+html body .rpp-ask-try.rpp-ask-try {
+  font-size: 18px !important;
+}
+html body .rpp-coc-opt-name.rpp-coc-opt-name { font-size: 18px !important; }
+html body .rpp-coc-opt-figure.rpp-coc-opt-figure { font-size: 20px !important; }
+html body .rpp-news-label.rpp-news-label { font-size: 17px !important; }
+html body .rpp-news-fine.rpp-news-fine,
+html body .rpp-news-fine.rpp-news-fine a { font-size: 16px !important; line-height: 1.5 !important; }
+html body footer .rpp-footer-col-heading.rpp-footer-col-heading { font-size: 17px !important; }
+html body footer :is(.rpp-footer-link, .rpp-footer-nap, .rpp-footer-tagline, .rpp-footer-news-other).rpp-x,
+html body footer .rpp-footer-link.rpp-footer-link,
+html body footer .rpp-footer-nap.rpp-footer-nap,
+html body footer .rpp-footer-tagline.rpp-footer-tagline,
+html body footer .rpp-footer-news-other.rpp-footer-news-other { font-size: 17px !important; }
+html body footer .rpp-footer-disclaimer.rpp-footer-disclaimer,
+html body footer .rpp-footer-disclaimer.rpp-footer-disclaimer :is(p, span, a) { font-size: 16px !important; line-height: 1.55 !important; }
+html body footer p.rpp-footer-news-other.rpp-footer-news-other a { font-size: 17px !important; }

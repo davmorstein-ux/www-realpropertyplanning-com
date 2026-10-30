@@ -246,7 +246,7 @@ const CSS = `
 .rpp-ask.rpp-ask { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; background: #ffffff; border: 1.5px solid #d9d3c8; border-left: 5px solid var(--ask); border-radius: 14px; padding: 24px 24px 22px; max-width: 860px; margin: 0 auto; box-sizing: border-box; text-align: left; }
 .rpp-ask.rpp-ask-bare { border: 0; padding: 0; background: transparent; }
 .rpp-ask h2.rpp-ask-h.rpp-ask-h { font-size: clamp(24px, 3vw, 30px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #14283a !important; margin: 0 0 6px !important; text-align: left; }
-.rpp-ask p.rpp-ask-sub.rpp-ask-sub { font-size: 17px !important; line-height: 1.5 !important; color: #2b2825 !important; margin: 0 0 14px !important; }
+.rpp-ask p.rpp-ask-sub.rpp-ask-sub { font-size: 20px !important; line-height: 1.5 !important; color: #2b2825 !important; margin: 0 0 14px !important; }
 .rpp-ask .rpp-ask-form { display: flex; gap: 10px; flex-wrap: wrap; }
 .rpp-ask input.rpp-ask-input { flex: 1 1 320px; min-width: 0; min-height: 52px; font-size: 18px; padding: 10px 16px; border: 2px solid #b9b2a6; border-radius: 10px; color: #1c1917; background: #fff; box-sizing: border-box; }
 .rpp-ask input.rpp-ask-input:focus { outline: 3px solid color-mix(in srgb, var(--ask) 35%, transparent); border-color: var(--ask); }
