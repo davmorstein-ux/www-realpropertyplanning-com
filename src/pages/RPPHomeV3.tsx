@@ -132,7 +132,10 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     margin: 0 !important;
     max-width: none !important;
     text-align: left !important;
-    text-shadow: 0 0 22px rgba(250,248,244,0.9);
+    /* Floating slogan (Oct 30, 2026, David): a cream glow keeps it legible on
+       the wall, then three soft drop shadows below it lift the letters off the
+       page, the same light as the floating tiles. */
+    text-shadow: 0 0 22px rgba(250,248,244,0.9), 0 2px 2px rgba(39,36,33,0.12), 0 8px 14px rgba(39,36,33,0.16), 0 20px 34px rgba(39,36,33,0.16);
   }
   html body main p.rpp-hero-slogan.rpp-hero-slogan em {
     font-family: inherit !important; font-style: italic !important; font-weight: 500 !important;
@@ -170,6 +173,16 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   @media (max-height: 780px) {
     html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(100vw - 3rem)); }
   }
+  /* Short laptop screens, second part (Oct 30, 2026): the option B tiles are
+     taller, so the hero gives up a little of its ceiling (cropped from the
+     top only; the door's foot stays above the tiles) until the whole tiles
+     fit on the first screen. Taller screens show the full photo. */
+  @media (max-height: 780px) {
+    html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img.rpp-hero-img {
+      aspect-ratio: auto !important; object-fit: cover !important; object-position: 50% 100% !important;
+      height: max(400px, min(calc(100vw * 730 / 2154), calc(100vh - var(--header-height, 130px) - 112px))) !important;
+    }
+  }
   html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 2.25rem 0 0 !important; }
   html body main div.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid {
     order: 1;
@@ -185,34 +198,58 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      the link's ::after at z-index -1 (it paints above the section's cream
      because the section is its own stacking context). No border also means
      the seam calc above has no +1px. */
+  /* Oct 30, 2026 (David chose "option B" plus a higher float): deeper, wider
+     shadow and a ground shadow further below the tile, so the gap reads as
+     height. The tile itself is not moved, so the photo/label seam stays on
+     the hero's bottom edge. */
   html body main .rpp-funnel-grid div.rpp-jt.rpp-jt {
     border: 0 !important;
     border-radius: 16px;
-    box-shadow: 0 1px 1px rgba(39,36,33,0.08), 0 2px 4px rgba(39,36,33,0.08), 0 8px 16px rgba(39,36,33,0.10), 0 18px 36px rgba(39,36,33,0.14), 0 36px 72px rgba(39,36,33,0.18);
+    background: #FBF8F2;
+    box-shadow: 0 1px 1px rgba(39,36,33,0.10), 0 4px 8px rgba(39,36,33,0.10), 0 14px 28px rgba(39,36,33,0.16), 0 32px 60px rgba(39,36,33,0.22), 0 60px 110px rgba(39,36,33,0.24);
   }
   html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link { position: relative; }
   html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after {
-    content: ""; position: absolute; left: 10%; right: 10%; bottom: -26px; height: 22px;
-    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(4px);
+    content: ""; position: absolute; left: 14%; right: 14%; bottom: -44px; height: 20px;
+    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(7px); opacity: 0.85;
     background: radial-gradient(ellipse at center, rgba(39,36,33,0.30) 0%, rgba(39,36,33,0.12) 45%, rgba(39,36,33,0) 72%);
-    transition: transform 0.18s ease, opacity 0.18s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease;
   }
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt { transition: transform 0.25s ease, box-shadow 0.25s ease; }
   @media (hover: hover) {
-    /* Hover: the tile rises a little and its ground shadow spreads and fades,
-       as a lifted object's would. */
+    /* Hover: the tile rises 8px, its shadow deepens, and its ground shadow
+       spreads and fades, as a lifted object's would. */
     html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt {
+      transform: translateY(-8px);
       border-color: transparent;
-      box-shadow: 0 2px 2px rgba(39,36,33,0.08), 0 4px 8px rgba(39,36,33,0.08), 0 12px 24px rgba(39,36,33,0.12), 0 26px 52px rgba(39,36,33,0.16), 0 48px 96px rgba(39,36,33,0.20);
+      box-shadow: 0 2px 2px rgba(39,36,33,0.10), 0 6px 12px rgba(39,36,33,0.10), 0 20px 36px rgba(39,36,33,0.16), 0 42px 72px rgba(39,36,33,0.22), 0 76px 130px rgba(39,36,33,0.26);
     }
-    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.06); opacity: 0.75; }
+    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.12); opacity: 0.55; }
   }
-  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 12px 18px 14px; }
-  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 8px; }
-  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 30px; width: 30px; height: 30px; }
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 18px !important; }
-}
-@media (min-width: 1270px) {
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { white-space: nowrap; }
+  @media (prefers-reduced-motion: reduce) {
+    html body main .rpp-funnel-grid div.rpp-jt.rpp-jt, html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after { transition: none; }
+  }
+  /* Option B labels (Oct 30, 2026): warm cream, the slogan's serif for the
+     title (two lines where needed), and a solid round button in the tile's
+     colour. These four homepage tiles only; the rest of the site keeps the
+     thin ring arrow. */
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 16px 14px 16px 18px; background: #FBF8F2; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { gap: 10px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 600 !important;
+    font-size: clamp(21px, 1.75vw, 25px) !important;
+    line-height: 1.12 !important;
+    color: #1f1c19 !important;
+    letter-spacing: -0.005em;
+    white-space: normal;
+  }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
+    flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+    background: var(--tile); color: #fff; align-items: center; justify-content: center;
+    box-shadow: 0 4px 10px rgba(39,36,33,0.22);
+  }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow svg circle { stroke: transparent; }
 }
 `;
 
