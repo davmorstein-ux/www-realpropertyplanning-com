@@ -73,9 +73,14 @@ interface Category {
 
 interface AFHCarouselProps {
   categories?: Category[];
+  /* Card height as a multiple of its width. Default 4/3 (the AFH Club
+     covers); the Long-Term Care page passes 1 for its square images
+     (Oct 31, 2026). */
+  aspect?: number;
 }
 
-export default function AFHCarousel({ categories }: AFHCarouselProps) {
+export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
+  const cardH = aspect ? Math.round(CARD_W * aspect) : CARD_H;
   const ITEMS = categories || DEFAULT_TOPICS;
   const TRACK = [...ITEMS, ...ITEMS, ...ITEMS];
   const START = ITEMS.length;
@@ -165,7 +170,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                   width: `${CARD_W}px`,
                   minWidth: `${CARD_W}px`,
                   maxWidth: `${CARD_W}px`,
-                  height: `${CARD_H}px`,
+                  height: `${cardH}px`,
                   boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
                   transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
                   transition: "box-shadow 0.4s ease, transform 0.4s ease",
@@ -177,7 +182,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                   alt={item.title}
                   className="rpp-cover-edge"
                   width={CARD_W}
-                  height={CARD_H}
+                  height={cardH}
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
