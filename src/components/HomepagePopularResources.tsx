@@ -4,14 +4,14 @@ import { useTranslation } from "react-i18next";
 /* Oct 27, 2026 (performance): these images moved from public/ into src/assets so the build
    names them by content and browsers can cache them long-term (public/ files were served with
    no cache lifetime); the four object pictures also have 320px copies for their ~150px slot. */
-import popClipboard from "@/assets/perf/popular-clipboard-v1.webp";
-import popClipboard320 from "@/assets/perf/popular-clipboard-v1-320.webp";
-import popScale from "@/assets/perf/popular-scale-v1.webp";
-import popScale320 from "@/assets/perf/popular-scale-v1-320.webp";
-import popHouse from "@/assets/perf/popular-house-v1.webp";
-import popHouse320 from "@/assets/perf/popular-house-v1-320.webp";
-import popKeys from "@/assets/perf/popular-keys-v1.webp";
-import popKeys320 from "@/assets/perf/popular-keys-v1-320.webp";
+import popClipboard from "@/assets/perf/popular-clipboard-v2.webp";
+import popClipboard320 from "@/assets/perf/popular-clipboard-v2-480.webp";
+import popScale from "@/assets/perf/popular-scale-v2.webp";
+import popScale320 from "@/assets/perf/popular-scale-v2-480.webp";
+import popHouse from "@/assets/perf/popular-house-v2.webp";
+import popHouse320 from "@/assets/perf/popular-house-v2-480.webp";
+import popKeys from "@/assets/perf/popular-keys-v2.webp";
+import popKeys320 from "@/assets/perf/popular-keys-v2-480.webp";
 import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
 
 /* Popular resources (Oct 26, 2026). David: the old icon tiles "look weak" and
@@ -24,19 +24,22 @@ import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
      said it cluttered the tile, so it was replaced by a circled arrow in the
      bottom-right corner, like the homepage tiles. The guide name stays in the
      link's aria-label for screen readers.
-   - David's four realistic 3D objects (he made them in ChatGPT; transparent
-     WebP in public/popular-*-v1.webp, trimmed to their edges). Any replacement
-     should be a real object on a plain white background, cut out the same way.
+   - Oct 31, 2026: PHOTOS, not cut-out objects. David's four ChatGPT scenes
+     (clipboard, scale, wooden house, key) on a warm desk by a window, cropped
+     5:4 so each object stays whole (src/assets/perf/popular-*-v2.webp, 900w
+     and 450w). Each card is now photo on top, cream label below, like the
+     "What brings you here today?" tiles; phones show a row with the photo on
+     the left. Replacements should be 5:4 and keep the object whole.
    - White tiles with a 2px border in each tile's own colour (David: "a cleaner
      look" than tinted fills): navy, bronze, garnet, teal, all already used on
      the site.
    - Desktop: object and words centred. Phones: four stacked rows, object left.
    Class names avoid "btn"/"cta" (index.css forces maroon on those). */
 const resources = [
-  { situation: "I'm the executor. Where do I start?", guide: "Executor's 10-step checklist", href: "/resources/washington-executors-10-step-checklist", img: popClipboard, img320: popClipboard320, w: 372, h: 440, c: "#1B3A6B" },
-  { situation: "The house has to go through probate", guide: "How probate sales work", href: "/guides/how-probate-real-estate-works", img: popScale, img320: popScale320, w: 440, h: 430, c: "#8a5212" },
-  { situation: "Mom or Dad needs more care", guide: "Senior housing & care options", href: "/understanding-housing-care-options", img: popHouse, img320: popHouse320, w: 440, h: 398, c: "#9E1F3A" },
-  { situation: "We inherited a house", guide: "What to do with it", href: "/guides/inherited-house-washington", img: popKeys, img320: popKeys320, w: 420, h: 440, c: "#0f6b56" },
+  { situation: "I'm the executor. Where do I start?", guide: "Executor's 10-step checklist", href: "/resources/washington-executors-10-step-checklist", img: popClipboard, img320: popClipboard320, w: 900, h: 720, c: "#1B3A6B" },
+  { situation: "The house has to go through probate", guide: "How probate sales work", href: "/guides/how-probate-real-estate-works", img: popScale, img320: popScale320, w: 900, h: 720, c: "#8a5212" },
+  { situation: "Mom or Dad needs more care", guide: "Senior housing & care options", href: "/understanding-housing-care-options", img: popHouse, img320: popHouse320, w: 900, h: 720, c: "#9E1F3A" },
+  { situation: "We inherited a house", guide: "What to do with it", href: "/guides/inherited-house-washington", img: popKeys, img320: popKeys320, w: 900, h: 720, c: "#0f6b56" },
 ];
 
 const HomepagePopularResources = () => {
@@ -303,6 +306,25 @@ const HomepagePopularResources = () => {
         .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; bottom: 12px !important; width: 26px !important; height: 26px !important; }
         .rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg { width: 26px; height: 26px; }
       }
+
+      /* PHOTO CARDS (Oct 31, 2026). Photo across the top, cream label below
+         with the situation in the serif, ring arrow bottom-right in the
+         card's colour, as on the journey tiles. */
+      html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { padding: 0 !important; overflow: hidden !important; align-items: stretch !important; text-align: left !important; border-radius: 16px !important; }
+      .rpp-pr-tile span.rpp-pr-photo.rpp-pr-photo { display: block !important; width: 100% !important; line-height: 0; }
+      .rpp-pr-tile img.rpp-pr-photo-img.rpp-pr-photo-img { display: block !important; width: 100% !important; height: auto !important; aspect-ratio: 5 / 4; object-fit: cover; margin: 0 !important; border-radius: 0 !important; transition: transform 0.35s ease; }
+      @media (hover: hover) { .rpp-pr-tile:hover img.rpp-pr-photo-img.rpp-pr-photo-img { transform: scale(1.03); } }
+      .rpp-pr-tile span.rpp-pr-body.rpp-pr-body { align-items: flex-start !important; text-align: left !important; padding: 14px 16px 50px !important; box-sizing: border-box; }
+      html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { text-align: left !important; font-size: clamp(19px, 1.6vw, 22px) !important; }
+      html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow { background: transparent !important; color: var(--pr-c) !important; box-shadow: none !important; }
+      html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg circle { stroke: currentColor !important; }
+      @media (max-width: 639px) {
+        html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { flex-direction: row !important; align-items: stretch !important; padding: 0 !important; gap: 0 !important; min-height: 104px; }
+        .rpp-pr-tile span.rpp-pr-photo.rpp-pr-photo { flex: 0 0 130px !important; width: 130px !important; }
+        .rpp-pr-tile img.rpp-pr-photo-img.rpp-pr-photo-img { height: 100% !important; aspect-ratio: auto; }
+        .rpp-pr-tile span.rpp-pr-body.rpp-pr-body { justify-content: center !important; padding: 12px 56px 12px 14px !important; }
+        html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { font-size: 19px !important; }
+      }
     ` }} />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
@@ -322,7 +344,7 @@ const HomepagePopularResources = () => {
                 style={{ ["--pr-c" as string]: r.c }}
                 aria-label={`${r.situation}: ${r.guide}`}
               >
-                <img className="rpp-pr-object" src={r.img320} srcSet={`${r.img320} 320w, ${r.img} 440w`} sizes="(max-width: 640px) 160px, 150px" alt="" width={r.w} height={r.h} loading="lazy" decoding="async" />
+                <span className="rpp-pr-photo"><img className="rpp-pr-photo-img" src={r.img320} srcSet={`${r.img320} 450w, ${r.img} 900w`} sizes="(max-width: 639px) 130px, (max-width: 1000px) 46vw, 280px" alt="" width={r.w} height={r.h} loading="lazy" decoding="async" /></span>
                 <span className="rpp-pr-body">
                   <span className="rpp-pr-situation">{r.situation}</span>
                 </span>
