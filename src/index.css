@@ -6667,8 +6667,14 @@ html body main a.rpp-pr-browse.rpp-pr-browse.rpp-pr-browse { border-color: #1B3A
 html body footer .rpp-footer-col-heading.rpp-footer-col-heading { color: #d9c9a8 !important; }
 html body footer a.rpp-footer-col-heading.rpp-footer-col-heading:hover { color: #f1e6cf !important; }
 /* "Estimates" label above the care costs (Oct 31, 2026). */
-html body main a.rpp-coc-card .rpp-coc-figs { display: flex; flex-direction: column; align-self: center; }
+html body main a.rpp-coc-card .rpp-coc-figs { display: flex; flex-direction: column; align-self: center; min-width: 0; }
 html body main a.rpp-coc-card span.rpp-coc-est.rpp-coc-est {
   display: block; font-size: 16px !important; font-weight: 600 !important; color: #3d3833 !important;
   margin: 0 0 8px !important; letter-spacing: 0.01em; line-height: 1.3 !important;
+}
+/* Tablets (769-960px): the calculator card's two text columns were too narrow
+   beside the photo and the prices ran off the card. Stack them, like phones. */
+@media (min-width: 769px) and (max-width: 960px) {
+  html body main a.rpp-coc-card .rpp-coc-layout.rpp-coc-layout { grid-template-columns: 1fr !important; gap: 1rem !important; align-items: stretch !important; }
+  html body main a.rpp-coc-card .rpp-coc-options.rpp-coc-options { border-left: none !important; border-top: 1px solid #f0ece5 !important; padding: 0.9rem 0 0 0 !important; }
 }
