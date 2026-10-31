@@ -6667,8 +6667,91 @@ html body main a.rpp-pr-browse.rpp-pr-browse.rpp-pr-browse { border-color: #1B3A
 html body footer .rpp-footer-col-heading.rpp-footer-col-heading { color: #d9c9a8 !important; }
 html body footer a.rpp-footer-col-heading.rpp-footer-col-heading:hover { color: #f1e6cf !important; }
 /* "Estimates" label above the care costs (Oct 31, 2026). */
-html body main a.rpp-coc-card .rpp-coc-figs { display: flex; flex-direction: column; align-self: center; }
+html body main a.rpp-coc-card .rpp-coc-figs { display: flex; flex-direction: column; align-self: center; min-width: 0; }
 html body main a.rpp-coc-card span.rpp-coc-est.rpp-coc-est {
   display: block; font-size: 16px !important; font-weight: 600 !important; color: #3d3833 !important;
   margin: 0 0 8px !important; letter-spacing: 0.01em; line-height: 1.3 !important;
 }
+/* Tablets (769-960px): the calculator card's two text columns were too narrow
+   beside the photo and the prices ran off the card. Stack them, like phones. */
+@media (min-width: 769px) and (max-width: 960px) {
+  html body main a.rpp-coc-card .rpp-coc-layout.rpp-coc-layout { grid-template-columns: 1fr !important; gap: 1rem !important; align-items: stretch !important; }
+  html body main a.rpp-coc-card .rpp-coc-options.rpp-coc-options { border-left: none !important; border-top: 1px solid #f0ece5 !important; padding: 0.9rem 0 0 0 !important; }
+}
+
+/* ============================================================
+   INNER PAGES, NEW STYLE (Oct 31, 2026, David: bring the rest of the
+   site up to the new homepage). One pass through shared pieces only:
+   1. Title band: the dark charcoal band becomes cream, with the title
+      in the slogan's serif and a short charcoal rule under it.
+   2. Headings: page h1/h2, and h3s that ask for the heading face
+      (font-serif), use Playfair Display. Body text stays DM Sans.
+   3. Cards: guide tiles (.interior-tile), picture choices (.apf-pick)
+      and image tiles (.rpp-itile) become cream floating cards like the
+      homepage tiles, with a gentle lift on hover instead of the
+      marching dashed border.
+   The homepage has its own rules and is unaffected.
+   ============================================================ */
+/* 1. Title band */
+html body div.rpp-hero-band.rpp-hero-band.rpp-hero-band {
+  background: #f5f2ec !important;
+  padding: 26px 24px 22px !important;
+  flex-direction: column !important;
+  border-bottom: 1px solid #e6dfd3;
+  line-height: 1.2 !important;
+}
+html body div.rpp-hero-band :is(h1, h2).rpp-hero-band-text.rpp-hero-band-text {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-weight: 600 !important;
+  color: #1c1917 !important;
+  font-size: clamp(30px, 3.8vw, 46px) !important;
+  letter-spacing: -0.005em !important;
+  text-align: center;
+}
+html body div.rpp-hero-band.rpp-hero-band::after {
+  content: ""; display: block; width: 48px; height: 2px; border-radius: 2px;
+  background: #1c1917; margin-top: 14px;
+}
+/* AFH Club pages keep their green as the rule colour. */
+html body div.rpp-hero-band.rpp-hero-band[style*="182B19"]::after,
+html body div.rpp-hero-band.rpp-hero-band[style*="rgb(24, 43, 25)"]::after { background: #182B19; }
+@media (max-width: 640px) {
+  html body div.rpp-hero-band.rpp-hero-band.rpp-hero-band { padding: 20px 18px 16px !important; }
+  html body div.rpp-hero-band :is(h1, h2).rpp-hero-band-text.rpp-hero-band-text { font-size: clamp(26px, 7.4vw, 32px) !important; }
+}
+
+/* 2. Headings */
+html body main:not(:has(.rpp-hero-slogan)) :is(h1, h2):not(.rpp-afh-hero-title):not([class*="eyebrow"]),
+html body main:not(:has(.rpp-hero-slogan)) h3.font-serif {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.005em;
+}
+
+/* 3. Cards */
+html body main a.interior-tile.interior-tile,
+html body main.apf a.apf-pick.apf-pick.apf-pick,
+html body main a.rpp-itile.rpp-itile.rpp-itile {
+  background: #FBF8F2 !important;
+  border: 0 !important;
+  outline: 1px solid rgba(39,36,33,0.16); outline-offset: -1px;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 1px rgba(39,36,33,0.06), 0 4px 8px rgba(39,36,33,0.07), 0 12px 24px rgba(39,36,33,0.10), 0 24px 48px rgba(39,36,33,0.10) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+html body main a.interior-tile .tile-white__inner,
+html body main a.interior-tile .tile-white__face { background: transparent !important; }
+html body main a.interior-tile.interior-tile::before { display: none !important; }
+html body main.apf a.apf-pick .apf-pick-label.apf-pick-label { font-family: 'Playfair Display', Georgia, serif !important; font-weight: 600 !important; color: #1f1c19 !important; font-size: 20px !important; }
+@media (hover: hover) {
+  html body main a.interior-tile.interior-tile:hover,
+  html body main.apf a.apf-pick.apf-pick.apf-pick:hover,
+  html body main a.rpp-itile.rpp-itile.rpp-itile:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 2px 2px rgba(39,36,33,0.07), 0 6px 12px rgba(39,36,33,0.09), 0 18px 34px rgba(39,36,33,0.13), 0 36px 64px rgba(39,36,33,0.14) !important;
+  }
+}
+html body div.rpp-hero-band :is(h1, h2).rpp-hero-band-text.rpp-hero-band-text { word-spacing: normal !important; }
+/* Serif card titles need a little more size and weight than the sans did. */
+html body main a.interior-tile h3.font-serif.font-serif { font-size: clamp(20px, 1.6vw, 23px) !important; color: #1c1917 !important; line-height: 1.25 !important; }
+html body main.apf a.apf-pick .apf-pick-label.apf-pick-label > span:not(.apf-arrow) { font-family: 'Playfair Display', Georgia, serif !important; font-weight: 600 !important; color: #1f1c19 !important; font-size: inherit !important; }

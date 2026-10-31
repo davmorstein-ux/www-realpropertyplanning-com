@@ -119,6 +119,8 @@ const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
    the label set cannot diverge between the two layouts. */
 const CURATED_LINKS = PRIMARY_NAV;
 
+const MOBILE_HEADER_BELOW = 951;
+
 const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   /* Starts false on every render, server and browser alike, so a prerendered
@@ -157,9 +159,13 @@ const Header = () => {
     const check = () => {
       if (window.innerWidth === lastWidth) return;
       lastWidth = window.innerWidth;
-      setIsMobile(window.innerWidth < 769);
+      setIsMobile(window.innerWidth < MOBILE_HEADER_BELOW);
     };
-    setIsMobile(window.innerWidth < 769);
+    /* 951, was 769 (Oct 31, 2026): between 769 and 950px (iPad portrait, small
+       tablets) the desktop header showed but its menu row is hidden below
+       951px (PrimaryNav), so tablets had no navigation at all. They now get
+       the phone header with the menu button. */
+    setIsMobile(window.innerWidth < MOBILE_HEADER_BELOW);
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);

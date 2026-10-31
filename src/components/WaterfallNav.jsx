@@ -640,7 +640,14 @@ export default function WaterfallNav() {
     if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
   };
 
+  /* Hover-to-close only where a real mouse hovers (Oct 31, 2026). On touch
+     screens a tap counts as a hover, and the overlay that appears under the
+     finger then counted as "leaving", so on tablets the menu closed itself
+     about a second after opening. Touch users close it with the X, the
+     button at the bottom or a tap outside. */
+  const canHover = () => typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
   const scheduleClose = () => {
+    if (!canHover()) return;
     hoverTimerRef.current = setTimeout(closePanel, PANEL_HOVER_CLOSE_DELAY);
   };
 
