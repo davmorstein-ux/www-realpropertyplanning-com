@@ -167,7 +167,10 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
        base. Two layers: bottom fade on top, side-to-side wash beneath. */
     background:
       linear-gradient(180deg, rgba(250,248,244,0) 0%, rgba(250,248,244,0) 62%, rgba(250,248,244,0.30) 70%, rgba(250,248,244,0.74) 82%, rgba(250,248,244,0.84) 100%),
-      linear-gradient(90deg, rgba(250,248,244,0.50) 0%, rgba(250,248,244,0.46) 30%, rgba(250,248,244,0.30) 46%, rgba(250,248,244,0.22) 60%, rgba(250,248,244,0.24) 100%);
+      linear-gradient(90deg, rgba(250,248,244,0.70) 0%, rgba(250,248,244,0.66) 22%, rgba(250,248,244,0.54) 34%, rgba(250,248,244,0.32) 46%, rgba(250,248,244,0.22) 60%, rgba(250,248,244,0.24) 100%);
+    /* Oct 31, 2026 (David): left side lighter (0.50 -> 0.70 at the edge),
+       fading to the old strength by ~46% across, so the leaf shadows behind
+       the slogan and description are softer. Door side unchanged. */
   }
   html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
     z-index: 2; left: 3.9% !important; top: 5% !important; max-width: 46% !important;
