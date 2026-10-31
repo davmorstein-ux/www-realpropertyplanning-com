@@ -389,6 +389,24 @@ html body main p.rpp-hero-slogan-m svg.rpp-sl-swoosh { width: 6.6em; margin-left
   html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan { font-size: clamp(32px, min(3.4vw, 5.6vh), 56px) !important; line-height: 1.0 !important; }
   html body main h1#rpp-tagline.rpp-head3 { margin-top: clamp(10px, 1.4vw, 24px) !important; }
 }
+/* SLOGAN, STAIRCASE (Oct 31, 2026, David's reference). Flat, no shadow;
+   heavy near-black "Your" and "begins." (Playfair 800); bold red italic
+   "next chapter" spanning the full width; "begins." steps right, flush with
+   the end of "chapter"; an arched gold swoosh runs behind the tail of the
+   "p". The box is as wide as the red line, so nothing gets wider. */
+html body main p.rpp-hero-slogan span.rpp-sl-box.rpp-sl-box,
+html body main p.rpp-hero-slogan-m span.rpp-sl-box.rpp-sl-box { display: inline-block !important; text-align: left; font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; color: inherit !important; }
+html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-sl-line.rpp-hero-slogan-end.rpp-hero-slogan-end { display: block !important; }
+html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan,
+html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m { font-weight: 800 !important; color: #1c1917 !important; }
+html body main p.rpp-hero-slogan span.rpp-sl-mid.rpp-sl-mid,
+html body main p.rpp-hero-slogan-m span.rpp-sl-mid.rpp-sl-mid { padding-left: 0; position: relative; z-index: 1; }
+html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-sl-line:last-child,
+html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m span.rpp-sl-line:last-child { text-align: right; }
+html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan em,
+html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { text-shadow: none !important; transform: none; font-weight: 700 !important; color: #A51F36 !important; }
+html body main p.rpp-hero-slogan svg.rpp-sl-swoosh.rpp-sl-swoosh,
+html body main p.rpp-hero-slogan-m svg.rpp-sl-swoosh.rpp-sl-swoosh { position: relative; z-index: 0; width: 100%; height: 0.24em; margin: -0.15em 0 0.03em 0; }
 `;
 
 const tileMeta = [
@@ -450,11 +468,11 @@ const RPPHomeV3 = () => {
               "Your" / bold red italic "next chapter" with a gold swoosh under
               it / "begins." Real text, not an image, so it stays sharp and
               readable to search engines and screen readers. */}
-          <p className="rpp-hero-slogan-m">
+          <p className="rpp-hero-slogan-m"><span className="rpp-sl-box">
             <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
             <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
-            <svg className="rpp-sl-swoosh" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldM" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.35" /><stop offset="0.35" stopColor="#c9962f" /><stop offset="0.75" stopColor="#d9ab45" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.45" /></linearGradient></defs><path d="M2 21 C 100 9, 250 2, 398 1 C 260 9, 120 16, 2 21 Z" fill="url(#rppSwooshGoldM)" /></svg>{" "}
-            <span className="rpp-sl-line">{t("hero.sloganEnd")}</span>
+            <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldM" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldM)" /></svg>{" "}
+            <span className="rpp-sl-line">{t("hero.sloganEnd")}</span></span>
           </p>
           <picture>
           <source
@@ -656,11 +674,11 @@ const RPPHomeV3 = () => {
             {/* Slogan (Oct 29, 2026, David): laptops and wider only (hidden at
                 900px and below in HERO_WIDE_CSS). A <p>, not a heading: the h1
                 below stays the page's real headline for search engines. */}
-            <p className="rpp-hero-slogan">
+            <p className="rpp-hero-slogan"><span className="rpp-sl-box">
               <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
               <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
-              <svg className="rpp-sl-swoosh" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.35" /><stop offset="0.35" stopColor="#c9962f" /><stop offset="0.75" stopColor="#d9ab45" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.45" /></linearGradient></defs><path d="M2 21 C 100 9, 250 2, 398 1 C 260 9, 120 16, 2 21 Z" fill="url(#rppSwooshGoldL)" /></svg>{" "}
-              <span className="rpp-sl-line rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
+              <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldL)" /></svg>{" "}
+              <span className="rpp-sl-line rpp-hero-slogan-end">{t("hero.sloganEnd")}</span></span>
             </p>
             <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
               <span
