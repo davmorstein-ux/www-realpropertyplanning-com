@@ -3,6 +3,9 @@ import { useId, useState, useEffect, useRef } from "react";
 import { trackSignup } from "@/lib/siteTracking";
 import { useLocation } from "react-router-dom";
 import { CHECKLIST_PDF } from "@/data/checklistPdf";
+/* First page of the checklist PDF, shown beside the family signup so people
+   see the actual thing they get (Oct 31, 2026). Regenerate if the PDF changes. */
+import checklistPage from "@/assets/perf/checklist-page1-300.webp";
 
 /**
  * Newsletter signup.
@@ -54,7 +57,7 @@ const CHECKLIST_LINE = "the 7-step checklist for Washington families: who can si
 
 const COPY: Record<Variant, { heading: string; body: string; cta: string }> = {
   general: {
-    heading: "Free: the family home planning checklist",
+    heading: "Before the big decisions, start here",
     body: `Get ${CHECKLIST_LINE}. You'll also get occasional plain-English notes on inherited homes, probate, senior moves and the cost of care. Unsubscribe any time.`,
     cta: "Send me the checklist",
   },
@@ -69,7 +72,9 @@ const COPY: Record<Variant, { heading: string; body: string; cta: string }> = {
     cta: "Send me the checklist",
   },
   footer: {
-    heading: "Free: the family home planning checklist",
+    /* Warmer headline (Oct 31, 2026, after an outside review: the box read as
+       a plain form). The free checklist is now named in the body and shown. */
+    heading: "Before the big decisions, start here",
     body: `Get ${CHECKLIST_LINE}, plus the occasional Real Property Planning newsletter. No sales pressure. Unsubscribe any time.`,
     cta: "Send me the checklist",
   },
@@ -266,6 +271,18 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
           margin: 40px auto;
           max-width: 640px;
         }
+        /* Checklist preview (Oct 31, 2026): the PDF's first page, slightly
+           tilted, beside the heading; above it on phones. */
+        .rpp-news-intro { display: flex; gap: 22px; align-items: flex-start; }
+        .rpp-news-cover.rpp-news-cover { position: relative; flex: 0 0 112px; display: block; transform: rotate(-3deg); margin-top: 4px; text-decoration: none !important; }
+        .rpp-news-cover img { display: block; width: 112px !important; height: auto !important; border-radius: 3px; box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 8px 18px rgba(0,0,0,0.20); background: #fff; }
+        .rpp-news-cover-tag.rpp-news-cover-tag { position: absolute; left: -6px; bottom: 10px; background: #B0274F; color: #fff !important; font-family: 'DM Sans','DM Sans Fallback',system-ui,sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.04em; padding: 3px 8px; border-radius: 3px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        @media (hover: hover) { .rpp-news-cover:hover { transform: rotate(-1deg) translateY(-2px); transition: transform 0.2s ease; } }
+        @media (max-width: 520px) {
+          .rpp-news-intro { flex-direction: column; gap: 14px; }
+          .rpp-news-cover.rpp-news-cover { flex-basis: auto; width: 96px; }
+          .rpp-news-cover img { width: 96px !important; }
+        }
         .rpp-news-heading.rpp-news-heading {
           font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
           font-size: 24px !important;
@@ -406,8 +423,23 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
         </p>
       ) : (
         <form onSubmit={handleSubmit} noValidate>
-          <p className="rpp-news-heading">{copy.heading}</p>
-          <p className="rpp-news-body">{copy.body}</p>
+          {checklistDone ? (
+            <div className="rpp-news-intro">
+              <a className="rpp-news-cover" href={CHECKLIST_PDF} target="_blank" rel="noopener" aria-label="Preview the free 7-step checklist (PDF)">
+                <img src={checklistPage} alt="" width={300} height={388} loading="lazy" decoding="async" />
+                <span className="rpp-news-cover-tag" aria-hidden="true">Free PDF</span>
+              </a>
+              <div>
+                <p className="rpp-news-heading">{copy.heading}</p>
+                <p className="rpp-news-body">{copy.body}</p>
+              </div>
+            </div>
+          ) : (
+            <>
+              <p className="rpp-news-heading">{copy.heading}</p>
+              <p className="rpp-news-body">{copy.body}</p>
+            </>
+          )}
 
           <label className="rpp-news-label" htmlFor={inputId}>
             Email address
