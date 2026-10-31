@@ -20,7 +20,7 @@ export default function ProbateFlowPage({ slug }: { slug: string }) {
       reference={{ label: "Deadlines & key rules", href: DEADLINES_PATH }}
       glossary={{ label: "glossary", href: "/probate-glossary" }}
       accent="#25597e"
-      heroBg="#eef3f7"
+      heroBg="#f5f2ec"
       extra={slug === "heir" ? <ExecutorNotActing /> : slug === "selling-the-house" ? <div style={{ padding: "0 16px" }}><RemodelWorthCallout /></div> : undefined}
       disclaimer="General information, not legal advice; Real Property Planning does not refer anyone to attorneys."
     />

@@ -112,7 +112,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
   }, [next, paused]);
 
   return (
-    <section style={{ background: "#f0f3f6", padding: "48px 24px 64px" }}>
+    <section style={{ background: "#f5f2ec", padding: "48px 24px 64px" }}>
       {/* Carousel viewport */}
       <div
         className="afh-carousel-container"

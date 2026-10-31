@@ -1004,7 +1004,7 @@ const AFHDosAndDonts = () => (
     />
     <Header />
     <main id="main-content">
-      <section className="afhdd-herosec" style={{ background: "#edf0f3", padding: "56px 16px 48px", borderBottom: "3px solid #1B3A6B" }}>
+      <section className="afhdd-herosec" style={{ background: "#f5f2ec", padding: "56px 16px 48px", borderBottom: "1px solid #e6dfd3" }}>
         <div className="afhdd-wrap" style={{ maxWidth: 1040 }}>
           <div className="afhdd-hero">
             <div>

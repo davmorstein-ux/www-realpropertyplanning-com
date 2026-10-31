@@ -101,7 +101,7 @@ const AFHGlossary = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#edf0f3", padding: "40px 16px 32px", borderBottom: "3px solid #0a5648" }}>
+      <section style={{ background: "#f5f2ec", padding: "40px 16px 32px", borderBottom: "3px solid #0a5648" }}>
         <div className="afhg-wrap" style={{ paddingTop: 32 }}>
           <p className="afhg-eyebrow">AFH Club · Reference</p>
           <h1 className="afhg-h1">Washington State Adult Family Home Glossary</h1>

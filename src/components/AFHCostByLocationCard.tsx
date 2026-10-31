@@ -266,7 +266,7 @@ const LOOKUP_CSS = `
 .ck.ck-plain { border: 0 !important; box-shadow: none !important; border-radius: 0 !important; overflow: visible; }
 .ck.ck-plain .ck-body { padding: 0 !important; }
 .ck p.ck-intro.ck-intro { font-size: 16px !important; line-height: 1.55 !important; color: #1f2933 !important; margin: 0 0 16px !important; }
-.ck button.ck-clear.ck-clear { flex: 0 0 auto; width: 48px !important; min-height: 48px; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; background: #eef3f7 !important; color: #14283a !important; font-size: 22px !important; cursor: pointer !important; }
+.ck button.ck-clear.ck-clear { flex: 0 0 auto; width: 48px !important; min-height: 48px; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; background: #f5f2ec !important; color: #14283a !important; font-size: 22px !important; cursor: pointer !important; }
 .ck ul.ck-matches { list-style: none !important; margin: 8px 0 0 !important; padding: 0 !important; border: 1px solid #c9d7e2; border-radius: 10px; overflow: hidden; }
 .ck ul.ck-matches li { display: block !important; }
 .ck button.ck-match.ck-match { display: block; width: 100%; text-align: left; min-height: 46px; padding: 10px 14px !important; background: #ffffff !important; border: 0 !important; border-bottom: 1px solid #eef1f4 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 500 !important; color: #14283a !important; cursor: pointer !important; }

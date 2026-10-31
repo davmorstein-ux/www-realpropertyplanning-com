@@ -150,7 +150,7 @@ const AFHCostsFees = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-costs-fees-v2.webp" alt="Cover art: AFH Costs & Fees" width={1024} height={1365} />
           <p
@@ -221,7 +221,7 @@ const AFHCostsFees = () => (
       </section>
 
       {/* Audio Player */}
-      <section style={{ background: "#edf0f3", padding: "0 24px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "0 24px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleAudioPlayer audioSrc={audioAsset.url} />
         </div>
@@ -336,7 +336,7 @@ const AFHCostsFees = () => (
       </section>
 
       {/* Liability Insurance Detail */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -556,7 +556,7 @@ const AFHCostsFees = () => (
       </section>
 
       {/* Key Links */}
-      <section style={{ background: "#edf0f3", padding: "56px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
             style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: "0 0 8px" }}

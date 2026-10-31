@@ -224,7 +224,7 @@ export const CK_CSS = `
 .ck .ck-suffix.ck-suffix { flex: 0 0 auto; font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .ck .ck-hint.ck-hint { font-size: 14px !important; line-height: 1.45 !important; color: #1c1917 !important; margin-top: 6px !important; }
 .ck .ck-seg { display: inline-flex; flex: 0 0 auto; border: 1px solid #c9d7e2; border-radius: 10px; overflow: hidden; }
-.ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #eef3f7 !important; color: #1f2933 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
+.ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #f5f2ec !important; color: #1f2933 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
 .ck button.ck-segopt.ck-segopt.ck-on { background: var(--deep) !important; color: #ffffff !important; }
 .ck button.ck-segopt.ck-segopt:focus-visible { outline: 3px solid ${CK_GOLD}; outline-offset: -3px; }
 .ck .ck-hero { background: var(--tint); border-radius: 14px; padding: 20px 18px 18px; text-align: center; margin: 4px 0 14px; }

@@ -340,7 +340,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         .coc2 .coc2-ctrl { display: flex; flex-direction: column; align-items: center; min-width: 0; }
         .coc2 .coc2-label.coc2-label { font-size: 17px !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 10px !important; text-align: center; }
         .coc2 .coc2-stepper { display: flex; align-items: stretch; border: 1px solid #c9d7e2; border-radius: 12px; overflow: hidden; background: #ffffff; }
-        .coc2 button.coc2-step.coc2-step { width: 54px; min-height: 54px; display: flex; align-items: center; justify-content: center; background: #eef3f7 !important; color: var(--deep) !important; font-size: 28px !important; font-weight: 500 !important; line-height: 1 !important; border: 0 !important; cursor: pointer !important; padding: 0 !important; }
+        .coc2 button.coc2-step.coc2-step { width: 54px; min-height: 54px; display: flex; align-items: center; justify-content: center; background: #f5f2ec !important; color: var(--deep) !important; font-size: 28px !important; font-weight: 500 !important; line-height: 1 !important; border: 0 !important; cursor: pointer !important; padding: 0 !important; }
         .coc2 button.coc2-step.coc2-step:hover:not(:disabled) { background: #dfe8ef !important; }
         .coc2 button.coc2-step.coc2-step:disabled { color: #a3b1bc !important; cursor: default !important; }
         .coc2 button.coc2-step.coc2-step:focus-visible { outline: 3px solid var(--c); outline-offset: -3px; }

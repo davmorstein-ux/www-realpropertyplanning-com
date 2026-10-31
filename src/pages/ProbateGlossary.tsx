@@ -75,7 +75,7 @@ const CSS = `
 .prg dl { margin: 0; }
 .prg .prg-term { padding: 18px 0; border-bottom: 1px solid #eee9e1; scroll-margin-top: 180px; }
 .prg .prg-term:last-child { border-bottom: 0; }
-.prg .prg-term:target { background: #eef3f7; box-shadow: -12px 0 0 #eef3f7, 12px 0 0 #eef3f7; }
+.prg .prg-term:target { background: #f5f2ec; box-shadow: -12px 0 0 #f5f2ec, 12px 0 0 #f5f2ec; }
 .prg dt { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 21px; font-weight: 700; color: #14283a; line-height: 1.3; }
 .prg dt .prg-aka { display: block; font-size: 16px; font-weight: 500; color: #1c1917; margin-top: 2px; }
 .prg dd { margin: 8px 0 0; }
@@ -109,7 +109,7 @@ const ProbateGlossary = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#eef3f7", padding: "40px 16px 32px", borderBottom: `3px solid ${A}` }}>
+      <section style={{ background: "#f5f2ec", padding: "40px 16px 32px", borderBottom: `1px solid #e6dfd3` }}>
         <div className="prg-wrap" style={{ paddingTop: 32 }}>
           <p className="prg-eyebrow">Estate &amp; Probate · Reference</p>
           <h1 className="prg-h1">Washington State Probate &amp; Estate Glossary</h1>

@@ -100,7 +100,7 @@ const CSS = `
 .afhr .afhr-small { font-size: 15px !important; color: #1c1917 !important; }
 .afhr .afhr-tablewrap { overflow-x: auto; border: 1px solid #e2ddd5; border-radius: 10px; background: #ffffff; }
 .afhr table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; }
-.afhr th { text-align: left; font-weight: 700; background: #eef3f7; padding: 10px 14px; border-bottom: 1px solid #cfdbe6; }
+.afhr th { text-align: left; font-weight: 700; background: #f5f2ec; padding: 10px 14px; border-bottom: 1px solid #cfdbe6; }
 .afhr td { padding: 11px 14px; border-bottom: 1px solid #eee9e1; vertical-align: top; line-height: 1.5; }
 .afhr tr:last-child td { border-bottom: 0; }
 .afhr td.afhr-old { color: #6b4a2a; }
@@ -115,7 +115,7 @@ const CSS = `
 .afhr .afhr-card { background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #0b5c8a; border-radius: 10px; padding: 18px 20px; scroll-margin-top: 110px; }
 .afhr .afhr-card.afhr-ended { border-left-color: #a39a8f; background: #faf8f4; }
 .afhr .afhr-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0 0 8px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 14px; }
-.afhr .afhr-chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #eef3f7; color: #0f1b2b; font-weight: 600; }
+.afhr .afhr-chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #f5f2ec; color: #0f1b2b; font-weight: 600; }
 .afhr .afhr-chip.afhr-date { background: #0b5c8a; color: #ffffff; }
 .afhr .afhr-chip.afhr-ended-chip { background: #e7e1d8; color: #1c1917; }
 .afhr .afhr-ba { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); margin: 8px 0 10px; }

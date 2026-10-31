@@ -71,7 +71,7 @@ const AFHPillarGuide = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#edf0f3", padding: "28px 16px 24px", borderBottom: `3px solid ${AFH_GREEN}` }}>
+      <section style={{ background: "#f5f2ec", padding: "28px 16px 24px", borderBottom: `1px solid #e6dfd3` }}>
         {/* index.css zeroes the first section's top padding sitewide; the gap goes inside. */}
         <div className="prp-wrap" style={{ paddingTop: 24 }}>
           <div className="prp-hubhead">

@@ -123,7 +123,7 @@ const AFHCalculators: React.FC = () => {
         canonical="https://realpropertyplanning.com/afh-club/calculators"
       />
       <Header />
-      <main id="main-content" className="min-h-screen" style={{ paddingTop: 80, background: "#f0f3f6" }}>
+      <main id="main-content" className="min-h-screen" style={{ paddingTop: 80, background: "#f5f2ec" }}>
         <section className="bg-white border-b border-slate-200 py-10 md:py-14">
           <div className="max-w-3xl mx-auto px-6">
             <HeroBandTitle as="h1">AFH Calculators</HeroBandTitle>

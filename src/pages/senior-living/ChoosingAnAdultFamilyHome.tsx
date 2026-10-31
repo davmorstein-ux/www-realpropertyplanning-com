@@ -124,7 +124,7 @@ const COMPARE_ROWS = [
 
 const CSS = `
 .cafh { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; color: #1c1917; }
-.cafh-hero { background: #edf0f3; padding: 56px 20px 48px; border-bottom: 3px solid #1B3A6B; }
+.cafh-hero { background: #f5f2ec; padding: 56px 20px 48px; border-bottom: 1px solid #e6dfd3; }
 .cafh-wrap { max-width: 780px; margin: 0 auto; }
 .cafh-eyebrow.cafh-eyebrow { font-size: 14px !important; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #142c52 !important; margin: 0 0 14px !important; }
 .cafh h1.cafh-h1 { font-size: clamp(32px, 5vw, 48px) !important; font-weight: 700; color: #292521 !important; line-height: 1.15; margin: 0 0 18px !important; text-wrap: balance; }

@@ -91,7 +91,7 @@ const AFHOwnershipStructure = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-ownership-img.webp" alt="Cover art: AFH Ownership: Individual or LLC?" width={1024} height={1536} />
           <p
@@ -138,7 +138,7 @@ const AFHOwnershipStructure = () => (
       </section>
 
       {/* Audio Player */}
-      <section style={{ background: "#edf0f3", padding: "48px 24px 32px" }}>
+      <section style={{ background: "#f5f2ec", padding: "48px 24px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleAudioPlayer audioSrc={audioAsset.url} />
         </div>
@@ -226,7 +226,7 @@ const AFHOwnershipStructure = () => (
       </section>
 
       {/* Individual vs LLC */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -339,7 +339,7 @@ const AFHOwnershipStructure = () => (
       </section>
 
       {/* Washington State considerations */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -523,7 +523,7 @@ const AFHOwnershipStructure = () => (
       </section>
 
       {/* Final thoughts */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{

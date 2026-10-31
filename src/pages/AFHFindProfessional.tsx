@@ -328,7 +328,7 @@ const AFHFindProfessional = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-professionals-cover.webp" alt="Cover art: AFH Professionals" width={1024} height={1365} />
           <p
@@ -518,7 +518,7 @@ const AFHFindProfessional = () => (
       </section>
 
       {/* The guide: what to look for in each kind of professional. Narrated by the audio below. */}
-      <section className="rpp-afhpro" style={{ background: "#edf0f3", padding: "56px 24px 0" }}>
+      <section className="rpp-afhpro" style={{ background: "#f5f2ec", padding: "56px 24px 0" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52" }}>
             What to look for in each kind of professional
@@ -530,7 +530,7 @@ const AFHFindProfessional = () => (
       </section>
 
       {/* Audio Player */}
-      <section style={{ background: "#edf0f3", padding: "48px 24px 32px" }}>
+      <section style={{ background: "#f5f2ec", padding: "48px 24px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleAudioPlayer audioSrc={audioAsset.url} />
         </div>
@@ -663,7 +663,7 @@ const AFHFindProfessional = () => (
       </section>
 
       {/* Are You a Professional CTA */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px" }}>
         <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
           <p
             style={{

@@ -97,7 +97,7 @@ const MortgageAfterDeath = () => (
     <Header />
     <main id="main-content">
       <ProbateStartHere />
-      <section style={{ background: "#eef3f7", padding: "36px 16px 32px", borderBottom: `3px solid ${A}` }}>
+      <section style={{ background: "#f5f2ec", padding: "36px 16px 32px", borderBottom: `1px solid #e6dfd3` }}>
         <div className="ptx-wrap" style={{ paddingTop: 28 }}>
           <div className="ptx-narrow">
             <p className="ptx-eyebrow">Estate &amp; Probate · For executors and heirs</p>
