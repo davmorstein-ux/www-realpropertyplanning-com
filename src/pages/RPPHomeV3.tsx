@@ -410,6 +410,10 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
    Only the red line keeps the floating shadow; no 3D lettering. */
 html body main p.rpp-hero-slogan span.rpp-sl-line,
 html body main p.rpp-hero-slogan-m span.rpp-sl-line { display: block !important; font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; color: inherit !important; white-space: nowrap; }
+/* Oct 31, 2026 (David): "Your" 10% smaller and tucked closer to "next
+   chapter", so the red line leads and the two read as one headline. */
+html body main p.rpp-hero-slogan span.rpp-sl-box > span.rpp-sl-line:first-child.rpp-sl-line,
+html body main p.rpp-hero-slogan-m span.rpp-sl-box > span.rpp-sl-line:first-child.rpp-sl-line { font-size: 0.9em !important; margin-bottom: -0.1em !important; }
 html body main p.rpp-hero-slogan span.rpp-sl-mid { padding-left: 0.42em; }
 html body main p.rpp-hero-slogan-m span.rpp-sl-mid { padding-left: 0.3em; }
 html body main p.rpp-hero-slogan.rpp-hero-slogan em,
@@ -448,8 +452,12 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan span.rpp-sl-line:last-child,
 html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m span.rpp-sl-line:last-child { text-align: right; }
 html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan em,
 html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { text-shadow: none !important; transform: none; font-weight: 700 !important; color: #A51F36 !important; }
+/* Underline refined (Oct 31, 2026, David's brief): one flat muted antique
+   gold (#B89452), no gradient or shadow; a thin, gently curved stroke that
+   tapers to fine points at both ends; about 87% of the width of "next
+   chapter"; sitting just below the lettering, clear of the tail of the "p". */
 html body main p.rpp-hero-slogan svg.rpp-sl-swoosh.rpp-sl-swoosh,
-html body main p.rpp-hero-slogan-m svg.rpp-sl-swoosh.rpp-sl-swoosh { position: relative; z-index: 0; width: 100%; height: 0.24em; margin: -0.15em 0 0.03em 0; }
+html body main p.rpp-hero-slogan-m svg.rpp-sl-swoosh.rpp-sl-swoosh { position: relative; z-index: 0; width: 87%; height: 0.15em; margin: 0.04em 0 0.04em 0.02em; }
 `;
 
 const tileMeta = [
@@ -514,7 +522,7 @@ const RPPHomeV3 = () => {
           <p className="rpp-hero-slogan-m"><span className="rpp-sl-box">
             <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
             <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
-            <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldM" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldM)" /></svg></span>
+            <svg className="rpp-sl-swoosh" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 10.5 C 120 3.2, 280 2.6, 400 7.5 C 280 6.3, 120 7.4, 0 10.5 Z" fill="#B89452" /></svg></span>
           </p>
           <picture>
           <source
@@ -719,7 +727,7 @@ const RPPHomeV3 = () => {
             <p className="rpp-hero-slogan"><span className="rpp-sl-box">
               <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
               <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
-              <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldL)" /></svg></span>
+              <svg className="rpp-sl-swoosh" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 10.5 C 120 3.2, 280 2.6, 400 7.5 C 280 6.3, 120 7.4, 0 10.5 Z" fill="#B89452" /></svg></span>
             </p>
             <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
               <span
