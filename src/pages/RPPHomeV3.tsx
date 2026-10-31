@@ -1279,6 +1279,9 @@ const RPPHomeV3 = () => {
                       tile and the hub can never disagree. This replaces both
                       the rotating figures and the old "other care types" list,
                       which showed an arbitrary subset. */}
+                  <div className="rpp-coc-figs">
+                  {/* Oct 31, 2026 (outside review): say plainly these are estimates. */}
+                  <span className="rpp-coc-est">Typical monthly cost in Washington (estimates)</span>
                   <ul className="rpp-coc-options">
                     {careOptions.map(({ option, care }) => {
                       const Icon = careIconFor(option.slug);
@@ -1301,6 +1304,7 @@ const RPPHomeV3 = () => {
                       );
                     })}
                   </ul>
+                  </div>
                 </div>
               </a>
 
