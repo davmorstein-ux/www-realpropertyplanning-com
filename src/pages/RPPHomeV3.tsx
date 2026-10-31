@@ -24,6 +24,11 @@ import AskBox from "@/components/AskBox";
    frame, which leaves room for the tiles below it. */
 import heroDesktop from "@/assets/hero/rpp-hero-2042.webp";
 import heroDesktop1280 from "@/assets/hero/rpp-hero-2042-1280.webp";
+/* Oct 31, 2026: all hero files rebuilt from David's 4x upscale of the
+   original (8616x2920), so they are sharper; plus a 2880 copy for
+   high-resolution laptop screens and a 1370 phone copy for 3x iPhones.
+   Same framing and the same phone crop (x 760, y 60, 913x500 at 2154 wide). */
+import heroDesktop2880 from "@/assets/hero/rpp-hero-2042-2880.webp";
 /* Phone crop zoomed out (Oct 28, 2026, David chose option "B"): cut wider
    from the same 2035 render, 2100x752 from x=1740 of the 3840 band (was
    1876 wide from x=1964), right edge kept, same 1200x430 shape, so the image
@@ -37,6 +42,7 @@ import heroMobile from "@/assets/hero/rpp-hero-2042-mobile.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
 import heroMobile640 from "@/assets/hero/rpp-hero-2042-mobile-640.webp";
+import heroMobile1370 from "@/assets/hero/rpp-hero-2042-mobile-1370.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -510,7 +516,7 @@ const RPPHomeV3 = () => {
           <picture>
           <source
             media="(max-width: 900px)"
-            srcSet={`${heroMobile640} 640w, ${heroMobile} 913w`}
+            srcSet={`${heroMobile640} 640w, ${heroMobile} 913w, ${heroMobile1370} 1370w`}
             sizes="100vw"
             width={913}
             height={500}
@@ -599,7 +605,7 @@ const RPPHomeV3 = () => {
                beneath the image instead of sitting on it.
                102 KB and 76 KB. */
             src={heroDesktop}
-            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 2154w`}
+            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 2154w, ${heroDesktop2880} 2880w`}
             /* Above 900px always the full desktop artwork (Oct 21, 2026). With
                sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
                crop, which has no plain wall on the left, so the headline sat
