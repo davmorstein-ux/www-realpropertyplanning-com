@@ -6,56 +6,73 @@ import BackToResources from "@/components/BackToResources";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCarousel from "@/components/AFHCarousel";
-import nursingHomesImg from "@/assets/long-term-care/Nursing_Homes_in_Washington_State.webp.asset.json";
-import shortTermImg from "@/assets/long-term-care/Short_Term_Nursing_Homes.webp.asset.json";
-import nurseDelegationImg from "@/assets/long-term-care/Nurse_Delegation_Program.webp.asset.json";
-import medicaidImg from "@/assets/long-term-care/Medicaid_and_Long-Term_Care.webp.asset.json";
-import waCaresImg from "@/assets/long-term-care/WA_Cares_Washington_s_Long-Term_Care_Insurance.webp.asset.json";
-import chooseCareImg from "@/assets/long-term-care/How_to_Choose_Between_Care_Settings.webp.asset.json";
-import hospitalDischargeImg from "@/assets/long-term-care/Planning_Your_Hospital_Discharge.webp.asset.json";
+/* Oct 31, 2026: David's new square cover images (current branding, no
+   old logo), served from the site's own files rather than Lovable asset
+   links. 900px for the slider, 400px for the article-list thumbnails. */
+import nursingHomesImg from "@/assets/long-term-care/ltc-nursing-homes-v2.webp";
+import nursingHomesImgSmall from "@/assets/long-term-care/ltc-nursing-homes-v2-400.webp";
+import shortTermImg from "@/assets/long-term-care/ltc-short-term-stays-v2.webp";
+import shortTermImgSmall from "@/assets/long-term-care/ltc-short-term-stays-v2-400.webp";
+import nurseDelegationImg from "@/assets/long-term-care/ltc-nurse-delegation-v2.webp";
+import nurseDelegationImgSmall from "@/assets/long-term-care/ltc-nurse-delegation-v2-400.webp";
+import medicaidImg from "@/assets/long-term-care/ltc-medicaid-v2.webp";
+import medicaidImgSmall from "@/assets/long-term-care/ltc-medicaid-v2-400.webp";
+import waCaresImg from "@/assets/long-term-care/ltc-wa-cares-v2.webp";
+import waCaresImgSmall from "@/assets/long-term-care/ltc-wa-cares-v2-400.webp";
+import chooseCareImg from "@/assets/long-term-care/ltc-choose-care-settings-v2.webp";
+import chooseCareImgSmall from "@/assets/long-term-care/ltc-choose-care-settings-v2-400.webp";
+import hospitalDischargeImg from "@/assets/long-term-care/ltc-hospital-discharge-v2.webp";
+import hospitalDischargeImgSmall from "@/assets/long-term-care/ltc-hospital-discharge-v2-400.webp";
 
 import RppArrow from "@/components/RppArrow";
 const cards = [
   {
     title: "Nursing Homes in Washington State",
     href: "/long-term-care/nursing-homes",
-    img: nursingHomesImg.url,
+    img: nursingHomesImg,
+    thumb: nursingHomesImgSmall,
     placeholder: "#3f3a35",
   },
   {
     title: "Short-Term Nursing Home Stays",
     href: "/long-term-care/short-term-nursing-home-stays",
-    img: shortTermImg.url,
+    img: shortTermImg,
+    thumb: shortTermImgSmall,
     placeholder: "#433d37",
   },
   {
     title: "Nurse Delegation Program",
     href: "/long-term-care/nurse-delegation",
-    img: nurseDelegationImg.url,
+    img: nurseDelegationImg,
+    thumb: nurseDelegationImgSmall,
     placeholder: "#4b453f",
   },
   {
     title: "Medicaid & Long-Term Care",
     href: "/long-term-care/medicaid-and-long-term-care",
-    img: medicaidImg.url,
+    img: medicaidImg,
+    thumb: medicaidImgSmall,
     placeholder: "#433d38",
   },
   {
     title: "WA Cares: Washington's Long-Term Care Insurance",
     href: "/long-term-care/wa-cares",
-    img: waCaresImg.url,
+    img: waCaresImg,
+    thumb: waCaresImgSmall,
     placeholder: "#4e4842",
   },
   {
     title: "How to Choose Between Care Settings",
     href: "/long-term-care/how-to-choose-care-settings",
-    img: chooseCareImg.url,
+    img: chooseCareImg,
+    thumb: chooseCareImgSmall,
     placeholder: "#403a34",
   },
   {
     title: "Planning Your Hospital Discharge",
     href: "/long-term-care/hospital-discharge-planning",
-    img: hospitalDischargeImg.url,
+    img: hospitalDischargeImg,
+    thumb: hospitalDischargeImgSmall,
     placeholder: "#49433d",
   },
 ];
@@ -130,7 +147,7 @@ const LongTermCareOptions = () => {
           </div>
         </section>
 
-        <AFHCarousel categories={cards} />
+        <AFHCarousel categories={cards} aspect={1} />
 
         {/* All Topics list — matches AFH Resources pattern */}
         <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
@@ -169,8 +186,8 @@ const LongTermCareOptions = () => {
                 <div
                   style={{
                     flexShrink: 0,
-                    width: 90,
-                    height: 120,
+                    width: 100,
+                    height: 100,
                     borderRadius: 4,
                     overflow: "hidden",
                     background: topic.placeholder,
@@ -178,10 +195,10 @@ const LongTermCareOptions = () => {
                   }}
                 >
                   <img
-                    src={topic.img}
+                    src={topic.thumb}
                     alt={topic.title}
-                    width={90}
-                    height={120}
+                    width={100}
+                    height={100}
                     style={{
                       width: "100%",
                       height: "100%",
