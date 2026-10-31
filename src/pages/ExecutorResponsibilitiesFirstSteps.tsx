@@ -65,7 +65,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
       <Header />
       <main id="main-content">
         <ProbateStartHere />
-        <HeroBandTitle as="h1">SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
+        <HeroBandTitle as="h1">Serving as Executor &amp; Trustee</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}
         <section className="py-14 md:py-20 bg-cream">

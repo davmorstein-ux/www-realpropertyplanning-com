@@ -327,9 +327,9 @@ const CountyPageTemplate = ({
       <Header />
       <main id="main-content">
         {/* Hero — concise */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14 [&:has(>_.county-hero-video)]:pb-0">
+        <section className="rpp-county-hero pt-6 md:pt-8 pb-10 md:pb-12 [&:has(>_.county-hero-video)]:pb-0">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4 md:mb-5">
                 {COUNTY_LOGOS[countySlug] ? (
                   COUNTY_WEBSITES[countySlug] ? (
@@ -379,12 +379,12 @@ const CountyPageTemplate = ({
                   />
                 )}
               </div>
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">{countyName}</p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold leading-tight mb-4">
+              <p className="rpp-county-eyebrow font-bold tracking-[0.2em] uppercase mb-3 text-sm">{countyName}</p>
+              <h1 className="rpp-county-h1 font-serif text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
                 {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
               </h1>
               {heroSubheading && (
-                <p className="text-xl text-primary-foreground/85 leading-relaxed font-serif italic">{heroSubheading}</p>
+                <p className="rpp-county-sub text-xl leading-relaxed">{heroSubheading}</p>
               )}
             </div>
           </div>
