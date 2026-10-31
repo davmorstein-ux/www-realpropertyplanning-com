@@ -331,16 +331,37 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     /* leaves the bottom row free for the button */
     margin-bottom: 31px;
   }
+  /* Arrow (Oct 31, 2026, David): back to the sitewide thin ring with the
+     chevron, in the tile's colour, instead of the solid round button. Four
+     solid colour dots were the loudest thing in the row; the ring keeps the
+     colour coding at a fraction of the weight and matches every other
+     arrow on the site. */
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
     position: absolute; right: 10px; bottom: 7px;
     width: 30px; height: 30px; border-radius: 50%;
-    background: var(--tile); color: #fff; display: inline-flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 10px rgba(39,36,33,0.22);
+    background: transparent; color: var(--tile); display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: none;
   }
-  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow svg circle { stroke: transparent; }
   /* Thin dark outline around the whole tile (Oct 30, 2026, David: it adds to
      the floating effect; a crisp edge separates the tile from the room). */
   html body main .rpp-funnel-grid div.rpp-jt.rpp-jt { outline: 1px solid rgba(39,36,33,0.42); outline-offset: -1px; }
+}
+/* PHONES AND TABLETS (900px and narrower), Oct 31, 2026 (David): the same
+   look as the laptop tiles. Warm cream, serif title, no coloured rule, thin
+   ring arrow in the tile's colour, thin dark outline and a floating shadow
+   scaled down for the 2 x 2 grid. */
+@media (max-width: 900px) {
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt {
+    border: 0 !important; border-radius: 14px; background: #FBF8F2;
+    outline: 1px solid rgba(39,36,33,0.30); outline-offset: -1px;
+    box-shadow: 0 1px 1px rgba(39,36,33,0.10), 0 3px 6px rgba(39,36,33,0.10), 0 10px 20px rgba(39,36,33,0.14), 0 22px 40px rgba(39,36,33,0.14);
+  }
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { background: #FBF8F2; }
+  html body main .rpp-funnel-grid span.rpp-jt-rule.rpp-jt-rule { display: none !important; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 600 !important; color: #1f1c19 !important; letter-spacing: -0.005em;
+  }
 }
 /* Small laptops and tablets in landscape (901-1199px): tiles about
    165-210px wide; titles may wrap there. */
