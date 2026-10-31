@@ -3931,7 +3931,7 @@ main #rpp-tagline .rpp-tagline-rule {
   aspect-ratio: 1920 / 420;
 }
 @media (max-width: 900px) {
-  .rpp-hero-img { aspect-ratio: 1200 / 430; }
+  .rpp-hero-img { aspect-ratio: 913 / 500; }
 }
 
 /* Below 900px the overlay stops and the tagline stacks beneath the image on

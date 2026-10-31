@@ -30,11 +30,13 @@ import heroDesktop1280 from "@/assets/hero/rpp-hero-2042-1280.webp";
    is no taller and the journey tiles stay on the first screen. More of the
    room's left side shows (full mirror, plant, table); the door is a little
    smaller. */
-import heroMobile from "@/assets/hero/rpp-hero-2037-mobile.webp";
-import heroMobile1800 from "@/assets/hero/rpp-hero-2037-mobile-1800.webp";
+/* rpp-hero-2042-mobile (Oct 30, 2026, David chose layout "B" for phones): a
+   913x500 crop of the wide 2042 photo, room and door centred, used under the
+   slogan, which sits on cream above it. */
+import heroMobile from "@/assets/hero/rpp-hero-2042-mobile.webp";
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile900 from "@/assets/hero/rpp-hero-2037-mobile-900.webp";
+import heroMobile640 from "@/assets/hero/rpp-hero-2042-mobile-640.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -111,6 +113,34 @@ const HERO_WIDE_CSS = `
    - Layered "floating" shadow and a thin white edge on each tile.
    No backticks in this block. */
 html body main p.rpp-hero-slogan.rpp-hero-slogan { display: none !important; }
+/* PHONES (900px and narrower), Oct 30, 2026, layout "B": the slogan on cream
+   above the photo, the photo, then the description under a short centred
+   charcoal rule. "next chapter" floats with a smaller cast shadow. */
+html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m { display: none !important; }
+@media (max-width: 900px) {
+  html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m {
+    display: block !important;
+    background: #f5f2ec;
+    margin: 0 !important;
+    padding: 18px 18px 14px !important;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 600 !important;
+    font-size: clamp(32px, 9.8vw, 52px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.005em !important;
+    color: #272421 !important;
+    text-align: left !important;
+    max-width: none !important;
+  }
+  html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m em {
+    display: inline-block; transform: translateY(-2px);
+    font-family: inherit !important; font-size: inherit !important;
+    font-style: italic !important; font-weight: 500 !important; color: #B0274F !important;
+    text-shadow: 4px 9px 4px rgba(70,30,35,0.28), 9px 18px 12px rgba(70,30,35,0.16);
+  }
+  html body main h1#rpp-tagline { position: relative; padding-top: 14px !important; }
+  html body main h1#rpp-tagline::before { content: ""; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 44px; height: 2px; border-radius: 2px; background: #1c1917; }
+}
 /* Headline line breaks: phones show two lines ("Senior transition, probate &
    estate" / "guidance for Washington families."); laptops show three
    ("Senior transition," / "probate & estate guidance" / "for Washington
@@ -372,13 +402,21 @@ const RPPHomeV3 = () => {
               short and wide. Each <source> now carries its own width/height,
               and index.css sets the matching aspect-ratio per breakpoint as a
               backstop. The 900px split matches the tagline breakpoint. */}
+          {/* Phone slogan (Oct 30, 2026, layout "B"): on cream above the photo.
+              The laptop slogan lives in the scrim below and is hidden on phones;
+              this copy is hidden on laptops, so only one is ever shown. */}
+          <p className="rpp-hero-slogan-m">
+            {t("hero.sloganStart")} <em>{t("hero.sloganAccent")}</em>
+            <br />
+            <em>{t("hero.sloganAccent2")}</em> {t("hero.sloganEnd")}
+          </p>
           <picture>
           <source
             media="(max-width: 900px)"
-            srcSet={`${heroMobile900} 900w, ${heroMobile} 1200w, ${heroMobile1800} 1800w`}
+            srcSet={`${heroMobile640} 640w, ${heroMobile} 913w`}
             sizes="100vw"
-            width={1200}
-            height={430}
+            width={913}
+            height={500}
           />
           <img
             id="rpp-hero-image"
