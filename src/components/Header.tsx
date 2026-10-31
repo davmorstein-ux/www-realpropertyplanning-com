@@ -78,10 +78,10 @@ const PhoneGlyph = ({ size }: { size: number }) => (
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x252 (rpp-logo-v28, Oct 31, 2026: David's variation,
+/* The logo file is 1280x250 (rpp-logo-v28, Oct 31, 2026: David's variation,
    PLANNING right-aligned under the Y with a thin charcoal rule running to its
    left; chimney and door unchanged; cut out from a white background). The
-   full-size master is docs/brand/rpp-logo-v28-master.png (3000x590, from David's 8000px upscale);
+   full-size master is docs/brand/rpp-logo-v28-master.png (3000x585, from David's corrected 8000px upscale with the separate chimney; an earlier upscale merged the chimney into the A and was discarded);
    regenerate the 480/640/1280 webp files from it, never from an earlier
    export. Replaced v27 (PLANNING centred, no rule; master kept in docs/brand).
    Deriving its rendered width from the height above
@@ -446,7 +446,7 @@ const Header = () => {
                     sizes="184px"
                     decoding="async"
                     width={1280}
-                    height={252}
+                    height={250}
                   />
                 </Link>
               </div>
@@ -549,7 +549,7 @@ const Header = () => {
                     sizes="(max-width: 950px) 245px, 292px"
                     decoding="async"
                     width={1280}
-                    height={252}
+                    height={250}
                   />
                 </Link>
               </div>
