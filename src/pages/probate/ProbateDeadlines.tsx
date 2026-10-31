@@ -69,7 +69,7 @@ export default function ProbateDeadlines() {
       />
       <Header />
       <main id="main-content">
-        <section style={{ background: "#eef3f7", padding: "32px 16px 28px", borderBottom: "3px solid #25597e" }}>
+        <section style={{ background: "#f5f2ec", padding: "32px 16px 28px", borderBottom: "1px solid #e6dfd3" }}>
           <div className="prp-wrap" style={{ paddingTop: 24 }}>
             <div className="prp-trail" role="navigation" aria-label="Where you are">
               <Link to={FLOW_BASE}>Probate flow chart</Link>

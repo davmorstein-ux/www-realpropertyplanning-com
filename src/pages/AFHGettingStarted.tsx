@@ -106,7 +106,7 @@ const AFHGettingStarted = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-getting-started.webp" alt="Cover art: Getting Started with Adult Family Homes" width={1086} height={1448} />
           <p
@@ -239,7 +239,7 @@ const AFHGettingStarted = () => (
       </section>
 
       {/* Minimum Qualifications */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -494,7 +494,7 @@ const AFHGettingStarted = () => (
       </section>
 
       {/* Individual vs Entity */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p
             style={{

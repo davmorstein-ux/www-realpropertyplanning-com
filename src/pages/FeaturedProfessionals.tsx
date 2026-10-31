@@ -33,7 +33,7 @@ const FeaturedProfessionals = () => (
 <HeroBandTitle as="h1">Featured Professionals</HeroBandTitle>
         </div>
       </section>
-      <section style={{ background: "#edf0f3", padding: "40px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "40px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={wrap}>
           <p
             style={{

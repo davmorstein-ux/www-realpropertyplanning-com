@@ -33,7 +33,7 @@ export const PROBATE_CSS = `
 .prp ul.prp-list li::marker { color: ${A}; }
 .prp .prp-tablewrap { overflow-x: auto; border: 1px solid #e2ddd5; border-radius: 10px; background: #ffffff; }
 .prp table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; }
-.prp th { text-align: left; font-weight: 700; background: #eef3f7; padding: 10px 14px; border-bottom: 1px solid #d3dfe8; }
+.prp th { text-align: left; font-weight: 700; background: #f5f2ec; padding: 10px 14px; border-bottom: 1px solid #d3dfe8; }
 .prp td { padding: 11px 14px; border-bottom: 1px solid #eee9e1; vertical-align: top; line-height: 1.5; overflow-wrap: break-word; }
 .prp tr:last-child td { border-bottom: 0; }
 .prp td.prp-topic { font-weight: 700; width: 24%; min-width: 130px; }

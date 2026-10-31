@@ -121,7 +121,7 @@ const AFHPropertyClassifications = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={wrap}>
           <ArticleCover src="/afh-property-classifications-cover.webp" alt="Cover art: Is It Really an Adult Family Home?" width={1024} height={1365} />
           <p style={label}>AFH Club · Buyer's Guide · Last reviewed September 2026</p>

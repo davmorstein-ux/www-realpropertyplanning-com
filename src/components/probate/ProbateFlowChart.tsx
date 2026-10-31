@@ -38,7 +38,7 @@ export const FLOW_CHART_CSS = `
 .pfc a.pfc-go:focus-visible { outline: 3px solid #d9a521; outline-offset: 2px; }
 .pfc a.pfc-go.pfc-here { background: ${A}; color: #ffffff !important; }
 .pfc a.pfc-go.pfc-here span, .pfc a.pfc-go.pfc-here em { color: #ffffff !important; }
-.pfc .pfc-note { background: #eef3f7; border: 1px dashed #9fb4c4; border-radius: 12px; padding: 12px 14px; text-align: center; font-size: 16px; font-weight: 700; }
+.pfc .pfc-note { background: #f5f2ec; border: 1px dashed #9fb4c4; border-radius: 12px; padding: 12px 14px; text-align: center; font-size: 16px; font-weight: 700; }
 .pfc .pfc-note small { display: block; font-size: 14px; font-weight: 500; color: #1c1917; margin-top: 2px; }
 .pfc .pfc-roles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
 .pfc .pfc-merge { margin-top: 26px; }

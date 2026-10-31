@@ -65,7 +65,7 @@ const ProbatePillarGuide = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#eef3f7", padding: "28px 16px 24px", borderBottom: "3px solid #25597e" }}>
+      <section style={{ background: "#f5f2ec", padding: "28px 16px 24px", borderBottom: "1px solid #e6dfd3" }}>
         {/* index.css zeroes the first section's top padding sitewide; the gap goes inside. */}
         <div className="prp-wrap" style={{ paddingTop: 24 }}>
           <div className="prp-hubhead">

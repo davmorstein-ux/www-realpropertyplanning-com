@@ -114,7 +114,7 @@ const AFHTrainingEducation = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #1B3A6B" }}>
+      <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <ArticleCover src="/afh-training-education.webp" alt="Cover art: AFH Training & Education" width={1024} height={1536} />
           <p
@@ -252,7 +252,7 @@ const AFHTrainingEducation = () => (
                         fontWeight: 600,
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
-                        background: "#edf0f3",
+                        background: "#f5f2ec",
                         color: "#1c1917",
                         padding: "3px 10px",
                         borderRadius: 3,
@@ -293,7 +293,7 @@ const AFHTrainingEducation = () => (
       </section>
 
       {/* AFH Admin Training Detail */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -510,7 +510,7 @@ const AFHTrainingEducation = () => (
       </section>
 
       {/* Continuing Education */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
+      <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{

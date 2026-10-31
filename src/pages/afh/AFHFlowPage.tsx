@@ -25,7 +25,7 @@ export default function AFHFlowPage({ slug }: { slug: string }) {
         reference={{ label: "Rules & key figures", href: AFH_RULES_PATH }}
         glossary={{ label: "AFH glossary", href: "/afh-club/glossary" }}
         accent={AFH_GREEN}
-        heroBg="#edf0f3"
+        heroBg="#f5f2ec"
         extra={slug === "opening" ? <WhichGuide group="afhOpening" /> : slug === "buying" ? <AFHBuyerSteps title="The tools for each step, in order" /> : undefined}
         disclaimer="General information, not legal or tax advice."
         after={

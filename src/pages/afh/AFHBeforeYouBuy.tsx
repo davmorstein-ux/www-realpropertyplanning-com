@@ -97,7 +97,7 @@ const AFHBeforeYouBuy = () => (
     />
     <Header />
     <main id="main-content">
-      <div style={{ background: "#edf0f3", padding: "36px 16px 32px", borderBottom: `3px solid ${G}` }}>
+      <div style={{ background: "#f5f2ec", padding: "36px 16px 32px", borderBottom: `1px solid #e6dfd3` }}>
         <div className="byb-wrap" style={{ paddingTop: 28 }}>
           <p className="byb-eyebrow">AFH Club · For buyers</p>
           <h1 className="byb-h1">{TITLE}</h1>

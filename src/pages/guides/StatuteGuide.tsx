@@ -52,7 +52,7 @@ const CSS = `
 .stg a.stg-a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; font-weight: 600; }
 .stg table.stg-table { border-collapse: collapse; width: 100%; min-width: 420px; margin: 4px 0 16px; background: #fff; border: 1px solid #d3dfe8; }
 .stg table.stg-table th, .stg table.stg-table td { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 17px !important; line-height: 1.45; padding: 10px 14px; text-align: left; border-bottom: 1px solid #e3e9ef; color: #1c1917; }
-.stg table.stg-table th { background: #eef3f7; font-weight: 700; color: #14283a; }
+.stg table.stg-table th { background: #f5f2ec; font-weight: 700; color: #14283a; }
 .stg .stg-note { background: #f7f4ef; border: 1px solid #e2ddd5; border-radius: 10px; padding: 16px 20px; }
 .stg .stg-small { font-size: 15px !important; color: #1c1917 !important; }
 .stg .stg-toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
@@ -105,7 +105,7 @@ function Page({ g }: { g: Guide }) {
       <Header />
       <main id="main-content">
         {g.probateBanner !== false && <ProbateStartHere />}
-        <section style={{ background: "#eef3f7", padding: "36px 16px 32px", borderBottom: `3px solid ${A}` }}>
+        <section style={{ background: "#f5f2ec", padding: "36px 16px 32px", borderBottom: `1px solid #e6dfd3` }}>
           <div className="stg-wrap" style={{ paddingTop: 28 }}>
             <div className="stg-narrow">
               <p className="stg-eyebrow">{g.eyebrow ?? "Estate & Probate · For executors and families"}</p>
