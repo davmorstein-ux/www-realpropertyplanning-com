@@ -241,6 +241,24 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   @media (max-height: 780px) {
     html body main div.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1020px, 76vw, calc(71vw + 8px), calc(100vw - 3rem)); }
   }
+  /* HERO TEXT CENTRED IN THE WALL SPACE (Oct 31, 2026, David: an empty band
+     opened between the description and the tiles on taller screens). The
+     slogan and description stay together as one block, centred vertically
+     between the top of the photo and the tops of the tiles, so spare
+     height splits evenly above and below. The tile-width variable is
+     repeated on the hero (same values) because the tiles' photo height,
+     which sets where the tiles start, is calculated from it. This replaces
+     the old top-anchored 17%. */
+  html body main div.rpp-hero-figure.rpp-hero-figure { --rpp-gw: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem)); }
+  @media (max-height: 780px) {
+    html body main div.rpp-hero-figure.rpp-hero-figure { --rpp-gw: min(1020px, 76vw, calc(71vw + 8px), calc(100vw - 3rem)); }
+  }
+  html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim.rpp-hero-scrim {
+    top: 0 !important;
+    bottom: calc((var(--rpp-gw) - 72px) / 4 * 793 / 1160 + 6px) !important;
+    justify-content: center !important;
+    padding: 14px 0 !important;
+  }
   /* Short laptop screens, second part (Oct 30, 2026): the option B tiles are
      taller, so the hero gives up a little of its ceiling (cropped from the
      top only; the door's foot stays above the tiles) until the whole tiles
