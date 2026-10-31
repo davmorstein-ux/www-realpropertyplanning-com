@@ -348,6 +348,26 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 12px 12px 10px; }
   html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; white-space: normal; margin-bottom: 36px; }
 }
+/* SLOGAN, THREE LINES (Oct 31, 2026, David). "Your" / "next chapter" in a
+   bolder red italic (Playfair 700 italic) / "begins." A gold swoosh under the
+   red line replaces the short charcoal rule over the description on laptops.
+   Only the red line keeps the floating shadow; no 3D lettering. */
+html body main p.rpp-hero-slogan span.rpp-sl-line,
+html body main p.rpp-hero-slogan-m span.rpp-sl-line { display: block !important; font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; color: inherit !important; white-space: nowrap; }
+html body main p.rpp-hero-slogan span.rpp-sl-mid { padding-left: 0.42em; }
+html body main p.rpp-hero-slogan-m span.rpp-sl-mid { padding-left: 0.3em; }
+html body main p.rpp-hero-slogan.rpp-hero-slogan em,
+html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m em { font-weight: 700 !important; color: #A51F36 !important; }
+html body main svg.rpp-sl-swoosh { display: block; width: 6.9em; height: 0.26em; margin: 0.04em 0 0.08em 0.3em; overflow: visible; }
+html body main p.rpp-hero-slogan-m svg.rpp-sl-swoosh { width: 6.6em; margin-left: 0.2em; }
+@media (min-width: 901px) {
+  html body main h1#rpp-tagline::before { display: none !important; }
+  html body main h1#rpp-tagline { padding-top: 0 !important; }
+  /* Three lines are taller than two: about 20% smaller than the two-line
+     version, and capped by window height so it never reaches the tiles. */
+  html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan { font-size: clamp(32px, min(3.4vw, 5.6vh), 56px) !important; line-height: 1.0 !important; }
+  html body main h1#rpp-tagline.rpp-head3 { margin-top: clamp(10px, 1.4vw, 24px) !important; }
+}
 `;
 
 const tileMeta = [
@@ -405,10 +425,15 @@ const RPPHomeV3 = () => {
           {/* Phone slogan (Oct 30, 2026, layout "B"): on cream above the photo.
               The laptop slogan lives in the scrim below and is hidden on phones;
               this copy is hidden on laptops, so only one is ever shown. */}
+          {/* Three lines (Oct 31, 2026, David chose the stacked version):
+              "Your" / bold red italic "next chapter" with a gold swoosh under
+              it / "begins." Real text, not an image, so it stays sharp and
+              readable to search engines and screen readers. */}
           <p className="rpp-hero-slogan-m">
-            {t("hero.sloganStart")} <em>{t("hero.sloganAccent")}</em>
-            <br />
-            <em>{t("hero.sloganAccent2")}</em> {t("hero.sloganEnd")}
+            <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
+            <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
+            <svg className="rpp-sl-swoosh" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldM" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.35" /><stop offset="0.35" stopColor="#c9962f" /><stop offset="0.75" stopColor="#d9ab45" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.45" /></linearGradient></defs><path d="M2 21 C 100 9, 250 2, 398 1 C 260 9, 120 16, 2 21 Z" fill="url(#rppSwooshGoldM)" /></svg>{" "}
+            <span className="rpp-sl-line">{t("hero.sloganEnd")}</span>
           </p>
           <picture>
           <source
@@ -611,10 +636,10 @@ const RPPHomeV3 = () => {
                 900px and below in HERO_WIDE_CSS). A <p>, not a heading: the h1
                 below stays the page's real headline for search engines. */}
             <p className="rpp-hero-slogan">
-              {t("hero.sloganStart")} <em>{t("hero.sloganAccent")}</em>
-              <br />
-              <em>{t("hero.sloganAccent2")}</em>{" "}
-              <span className="rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
+              <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
+              <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
+              <svg className="rpp-sl-swoosh" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.35" /><stop offset="0.35" stopColor="#c9962f" /><stop offset="0.75" stopColor="#d9ab45" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.45" /></linearGradient></defs><path d="M2 21 C 100 9, 250 2, 398 1 C 260 9, 120 16, 2 21 Z" fill="url(#rppSwooshGoldL)" /></svg>{" "}
+              <span className="rpp-sl-line rpp-hero-slogan-end">{t("hero.sloganEnd")}</span>
             </p>
             <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
               <span
