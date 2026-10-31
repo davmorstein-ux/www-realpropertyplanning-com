@@ -17,9 +17,9 @@ import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 /* Oct 27, 2026 (performance): logo and marble from src/assets (content-named, long-cached;
    public/ files had no cache lifetime) plus a 480px logo for phones. */
-import logo480 from "@/assets/perf/rpp-logo-v27-480.webp";
-import logo640 from "@/assets/perf/rpp-logo-v27-640.webp";
-import logo1280 from "@/assets/perf/rpp-logo-v27-1280.webp";
+import logo480 from "@/assets/perf/rpp-logo-v28-480.webp";
+import logo640 from "@/assets/perf/rpp-logo-v28-640.webp";
+import logo1280 from "@/assets/perf/rpp-logo-v28-1280.webp";
 import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp";
 import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
 
@@ -78,12 +78,12 @@ const PhoneGlyph = ({ size }: { size: number }) => (
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x250 (rpp-logo-v27, Oct 29, 2026: David's new logo,
-   cleaned up from a ChatGPT render, with PLANNING centred under PROPERTY and
-   the chimney kept; transparent background). The full-size master is
-   docs/brand/rpp-logo-v27-master.png (2125x415); regenerate the 480/640/1280
-   webp files from it, never from an earlier export. Replaced v26 (1280x240,
-   the 3D stone mark).
+/* The logo file is 1280x251 (rpp-logo-v28, Oct 31, 2026: David's variation,
+   PLANNING right-aligned under the Y with a thin charcoal rule running to its
+   left; chimney and door unchanged; cut out from a white background). The
+   full-size master is docs/brand/rpp-logo-v28-master.png (2022x396);
+   regenerate the 480/640/1280 webp files from it, never from an earlier
+   export. Replaced v27 (PLANNING centred, no rule; master kept in docs/brand).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
@@ -446,7 +446,7 @@ const Header = () => {
                     sizes="184px"
                     decoding="async"
                     width={1280}
-                    height={250}
+                    height={251}
                   />
                 </Link>
               </div>
@@ -549,7 +549,7 @@ const Header = () => {
                     sizes="(max-width: 950px) 245px, 292px"
                     decoding="async"
                     width={1280}
-                    height={250}
+                    height={251}
                   />
                 </Link>
               </div>
