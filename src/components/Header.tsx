@@ -17,9 +17,9 @@ import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 /* Oct 27, 2026 (performance): logo and marble from src/assets (content-named, long-cached;
    public/ files had no cache lifetime) plus a 480px logo for phones. */
-import logo480 from "@/assets/perf/rpp-logo-v28-480.webp";
-import logo640 from "@/assets/perf/rpp-logo-v28-640.webp";
-import logo1280 from "@/assets/perf/rpp-logo-v28-1280.webp";
+import logo480 from "@/assets/perf/rpp-logo-v29-480.webp";
+import logo640 from "@/assets/perf/rpp-logo-v29-640.webp";
+import logo1280 from "@/assets/perf/rpp-logo-v29-1280.webp";
 import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp";
 import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
 
@@ -78,12 +78,13 @@ const PhoneGlyph = ({ size }: { size: number }) => (
    the same room the flat v11 logo took at 60, so the nav keeps its space. */
 const DESKTOP_LOGO_HEIGHT = 55;
 
-/* The logo file is 1280x250 (rpp-logo-v28, Oct 31, 2026: David's variation,
-   PLANNING right-aligned under the Y with a thin charcoal rule running to its
-   left; chimney and door unchanged; cut out from a white background). The
-   full-size master is docs/brand/rpp-logo-v28-master.png (3000x585, from David's corrected 8000px upscale with the separate chimney; an earlier upscale merged the chimney into the A and was discarded);
-   regenerate the 480/640/1280 webp files from it, never from an earlier
-   export. Replaced v27 (PLANNING centred, no rule; master kept in docs/brand).
+/* The logo file is 1280x264 (rpp-logo-v29, Oct 31, 2026: David's concept,
+   built by Claude from the v28 master so the letters, door and chimney are
+   untouched: a charcoal line runs the full width just below REAL PROPERTY,
+   broken around the door where the inner edges of the A would meet it, with ends cut at the same angle as the A, and PLANNING in garnet (#8F1B2C) right-aligned
+   beneath it). Full-size master: docs/brand/rpp-logo-v29-master.png
+   (3000x619); regenerate the 480/640/1280 webp files from it. Replaced v28
+   (PLANNING charcoal beside a short line; master kept in docs/brand).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
    stays matched if the logo height is ever changed. Hardcoding a pixel value
@@ -446,7 +447,7 @@ const Header = () => {
                     sizes="184px"
                     decoding="async"
                     width={1280}
-                    height={250}
+                    height={264}
                   />
                 </Link>
               </div>
@@ -549,7 +550,7 @@ const Header = () => {
                     sizes="(max-width: 950px) 245px, 292px"
                     decoding="async"
                     width={1280}
-                    height={250}
+                    height={264}
                   />
                 </Link>
               </div>
