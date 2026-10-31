@@ -6755,3 +6755,57 @@ html body div.rpp-hero-band :is(h1, h2).rpp-hero-band-text.rpp-hero-band-text { 
 /* Serif card titles need a little more size and weight than the sans did. */
 html body main a.interior-tile h3.font-serif.font-serif { font-size: clamp(20px, 1.6vw, 23px) !important; color: #1c1917 !important; line-height: 1.25 !important; }
 html body main.apf a.apf-pick .apf-pick-label.apf-pick-label > span:not(.apf-arrow) { font-family: 'Playfair Display', Georgia, serif !important; font-weight: 600 !important; color: #1f1c19 !important; font-size: inherit !important; }
+
+/* COUNTY PAGE HERO, NEW STYLE (Oct 31, 2026). The 22 county pages
+   (CountyPageTemplate.tsx) had a full navy hero; it now matches the cream
+   title band used on every other inner page. Seal, eyebrow, serif h1 with the
+   short charcoal rule, then the aerial strip as before. */
+html body main section.rpp-county-hero.rpp-county-hero {
+  background: #f5f2ec !important;
+  border-bottom: 1px solid #e6dfd3 !important;
+}
+html body main section.rpp-county-hero p.rpp-county-eyebrow.rpp-county-eyebrow {
+  color: #5c544b !important;
+  font-size: 16px !important;
+}
+html body main section.rpp-county-hero h1.rpp-county-h1.rpp-county-h1 {
+  color: #1c1917 !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(30px, 3.8vw, 46px) !important;
+  text-align: center !important;
+}
+html body main section.rpp-county-hero h1.rpp-county-h1.rpp-county-h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #3a3632;
+  margin: 18px auto 0;
+}
+html body main section.rpp-county-hero p.rpp-county-sub.rpp-county-sub {
+  color: #3a3632 !important;
+  font-size: 20px !important;
+  text-align: center !important;
+}
+@media (max-width: 768px) {
+  html body main section.rpp-county-hero h1.rpp-county-h1.rpp-county-h1 { font-size: clamp(26px, 7.4vw, 32px) !important; }
+}
+
+/* The "#main-content > *:first-child" rules (ID specificity) zeroed or
+   shrank the padding when a band or the county hero is the first thing in
+   <main>, which pushed the short rule out of the band (Executor page) and
+   put the county seal against the header. Same values, carried with the ID. */
+html body #main-content > div.rpp-hero-band.rpp-hero-band.rpp-hero-band {
+  padding: 26px 24px 22px !important;
+}
+html body #main-content > section.rpp-county-hero.rpp-county-hero:first-child {
+  padding-top: 32px !important;
+}
+html body #main-content section.rpp-county-hero.rpp-county-hero img[alt*="official seal"] {
+  object-fit: contain !important;
+}
+@media (max-width: 768px) {
+  html body #main-content > div.rpp-hero-band.rpp-hero-band.rpp-hero-band { padding: 20px 18px 16px !important; }
+  html body #main-content > section.rpp-county-hero.rpp-county-hero:first-child { padding-top: 24px !important; }
+}
