@@ -81,7 +81,7 @@ const DESKTOP_LOGO_HEIGHT = 55;
 /* The logo file is 1280x264 (rpp-logo-v29, Oct 31, 2026: David's concept,
    built by Claude from the v28 master so the letters, door and chimney are
    untouched: a charcoal line runs the full width just below REAL PROPERTY,
-   broken around the door, with PLANNING in garnet (#8F1B2C) right-aligned
+   broken around the door where the inner edges of the A would meet it, with ends cut at the same angle as the A, and PLANNING in garnet (#8F1B2C) right-aligned
    beneath it). Full-size master: docs/brand/rpp-logo-v29-master.png
    (3000x619); regenerate the 480/640/1280 webp files from it. Replaced v28
    (PLANNING charcoal beside a short line; master kept in docs/brand).
