@@ -404,10 +404,18 @@ html body main p.rpp-hero-slogan-m svg.rpp-sl-swoosh { width: 6.6em; margin-left
   html body main h1#rpp-tagline { padding-top: 0 !important; }
   /* Three lines are taller than two: about 20% smaller than the two-line
      version, and capped by window height so it never reaches the tiles. */
-  html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan { font-size: clamp(32px, min(3.4vw, 5.6vh), 56px) !important; line-height: 1.0 !important; }
+  /* Two lines again (Oct 31, 2026, David dropped "begins."): "Your" /
+     "next chapter", so the slogan goes back up to about its two-line size,
+     still capped by window height. */
+  html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan { font-size: clamp(36px, min(4.1vw, 7vh), 62px) !important; line-height: 1.0 !important; }
   html body main h1#rpp-tagline.rpp-head3 { margin-top: clamp(10px, 1.4vw, 24px) !important; }
 }
-/* SLOGAN, STAIRCASE (Oct 31, 2026, David's reference). Flat, no shadow;
+/* SLOGAN (Oct 31, 2026, David): "Your next chapter", no "begins.", no
+   period. Two lines: heavy near-black "Your", bold red italic "next
+   chapter" with the arched gold swoosh under it. The staircase notes below
+   describe the earlier three-line version; the step-right rule no longer
+   matches anything.
+   SLOGAN, STAIRCASE (Oct 31, 2026, David's reference). Flat, no shadow;
    heavy near-black "Your" and "begins." (Playfair 800); bold red italic
    "next chapter" spanning the full width; "begins." steps right, flush with
    the end of "chapter"; an arched gold swoosh runs behind the tail of the
@@ -489,8 +497,7 @@ const RPPHomeV3 = () => {
           <p className="rpp-hero-slogan-m"><span className="rpp-sl-box">
             <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
             <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
-            <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldM" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldM)" /></svg>{" "}
-            <span className="rpp-sl-line">{t("hero.sloganEnd")}</span></span>
+            <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldM" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldM)" /></svg></span>
           </p>
           <picture>
           <source
@@ -695,8 +702,7 @@ const RPPHomeV3 = () => {
             <p className="rpp-hero-slogan"><span className="rpp-sl-box">
               <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
               <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span>
-              <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldL)" /></svg>{" "}
-              <span className="rpp-sl-line rpp-hero-slogan-end">{t("hero.sloganEnd")}</span></span>
+              <svg className="rpp-sl-swoosh" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="rppSwooshGoldL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#b8862b" stopOpacity="0.55" /><stop offset="0.5" stopColor="#e9c46a" /><stop offset="1" stopColor="#b8862b" stopOpacity="0.5" /></linearGradient></defs><path d="M0 19 Q 200 -6 400 15 Q 200 7 0 19 Z" fill="url(#rppSwooshGoldL)" /></svg></span>
             </p>
             <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
               <span
