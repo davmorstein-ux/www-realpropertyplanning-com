@@ -153,7 +153,15 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     /* Floor strip behind the tiles faded more (Oct 30, 2026, David: the busy
        wood and rug "directly above the tiles"). Starts below the door's foot
        (about 67% down, level with the tile tops) and deepens to 80-88%. */
-    background: linear-gradient(180deg, rgba(250,248,244,0.52) 0%, rgba(250,248,244,0.40) 45%, rgba(250,248,244,0.42) 67%, rgba(250,248,244,0.80) 82%, rgba(250,248,244,0.88) 100%);
+    /* Oct 31, 2026 (David, from a ChatGPT review): the wash now varies across
+       the width. Left (behind the slogan) keeps its old strength; it eases
+       off from about 35% across so the door, navy wall and windows get
+       roughly 15% more colour back. The floor fade at the bottom is a
+       separate layer, unchanged in shape, so the tiles still sit on a soft
+       base. Two layers: bottom fade on top, side-to-side wash beneath. */
+    background:
+      linear-gradient(180deg, rgba(250,248,244,0) 0%, rgba(250,248,244,0) 62%, rgba(250,248,244,0.30) 70%, rgba(250,248,244,0.74) 82%, rgba(250,248,244,0.84) 100%),
+      linear-gradient(90deg, rgba(250,248,244,0.50) 0%, rgba(250,248,244,0.46) 30%, rgba(250,248,244,0.30) 46%, rgba(250,248,244,0.22) 60%, rgba(250,248,244,0.24) 100%);
   }
   html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim {
     z-index: 2; left: 3.9% !important; top: 5% !important; max-width: 46% !important;
