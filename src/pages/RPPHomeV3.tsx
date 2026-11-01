@@ -60,6 +60,19 @@ import tilePlanningSm from "@/assets/tiles/tile-planning-ahead-v2-640.webp";
 import tileHelpingSm from "@/assets/tiles/tile-helping-loved-one-v2-640.webp";
 import tileEstateSm from "@/assets/tiles/tile-handling-estate-v2-640.webp";
 import tileProfessionalsSm from "@/assets/tiles/tile-find-professionals-v2-640.webp";
+/* 420px copies (Nov 1, 2026): on phones the tiles show about 176px wide, so
+   even the 640px files were roughly three times what a phone needs
+   (PageSpeed's "Improve image delivery"). About 18 KB each instead of 30-47. */
+import tilePlanningXs from "@/assets/tiles/tile-planning-ahead-v2-420.webp";
+import tileHelpingXs from "@/assets/tiles/tile-helping-loved-one-v2-420.webp";
+import tileEstateXs from "@/assets/tiles/tile-handling-estate-v2-420.webp";
+import tileProfessionalsXs from "@/assets/tiles/tile-find-professionals-v2-420.webp";
+const TILE_XSMALL: Record<string, string> = {
+  [tilePlanning]: tilePlanningXs,
+  [tileHelping]: tileHelpingXs,
+  [tileEstate]: tileEstateXs,
+  [tileProfessionals]: tileProfessionalsXs,
+};
 const TILE_SMALL: Record<string, string> = {
   [tilePlanning]: tilePlanningSm,
   [tileHelping]: tileHelpingSm,
@@ -902,7 +915,7 @@ const RPPHomeV3 = () => {
                             browser reserves the space before they load. */}
                         <img
                           src={TILE_SMALL[imgSrc] ?? imgSrc}
-                          srcSet={TILE_SMALL[imgSrc] ? `${TILE_SMALL[imgSrc]} 640w, ${imgSrc} 1160w` : undefined}
+                          srcSet={TILE_SMALL[imgSrc] ? `${TILE_XSMALL[imgSrc]} 420w, ${TILE_SMALL[imgSrc]} 640w, ${imgSrc} 1160w` : undefined}
                           sizes="(max-width: 1023px) 50vw, 260px"
                           alt={imgAlt}
                           loading="lazy"
