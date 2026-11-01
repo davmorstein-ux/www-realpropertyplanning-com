@@ -98,6 +98,30 @@ const PAGE_CSS = `
   .mp button.mp-change:focus-visible { outline: 3px solid ${NAVY} !important; outline-offset: 2px !important; }
   .mp-questions:focus { outline: none; }
   .mp-print-only { display: none; }
+  .mp-phone { display: none; }
+  /* Phones (Nov 1, 2026, owner's request): arriving from the homepage, both
+     "What brings you here?" choices must be on the first screen. Shorter hero,
+     one-line intro, tighter choice boxes. Desktop unchanged. */
+  @media (max-width: 699px) {
+    .mp-hero { padding: 18px 0 16px; border-bottom-width: 2px; }
+    .mp p.mp-kicker { font-size: 12px !important; letter-spacing: .1em; margin: 0 0 6px !important; }
+    .mp h1.mp-h1 { font-size: 30px !important; margin: 0 0 8px !important; }
+    .mp-rule { margin: 0 0 10px; height: 3px; }
+    .mp-desk { display: none; }
+    .mp-phone { display: block; }
+    .mp-block { padding: 14px 0 28px; }
+    .mp-panel { padding: 16px 14px; }
+    .mp p.mp-qtext { font-size: 19px !important; margin: 0 0 2px !important; }
+    .mp-choices { gap: 8px; margin-top: 8px; }
+    .mp button.mp-big { min-height: 0; padding: 12px 14px !important; gap: 2px; }
+    .mp button.mp-big .mp-big-t { font-size: 19px; line-height: 1.25; }
+    .mp button.mp-big .mp-big-s { font-size: 16px; line-height: 1.35; }
+  }
+  /* Short phones (iPhone SE-size with Safari's bars): drop the kicker and intro line. */
+  @media (max-width: 699px) and (max-height: 620px) {
+    .mp-hero p.mp-kicker, .mp-hero p.mp-phone { display: none !important; }
+    .mp-rule { margin: 0; }
+  }
   @media print {
     header, footer, nav, .mp-noprint, .rpp-news { display: none !important; }
     .mp-print-only { display: block; }
@@ -285,7 +309,10 @@ const MyPlan = () => {
             <p className="mp-kicker">Free · about two minutes · no email needed</p>
             <h1 className="mp-h1">My Real Property Plan</h1>
             <div className="mp-rule" />
-            <p className="mp-p" style={{ maxWidth: 680, marginBottom: 0 }}>
+            <p className="mp-p mp-phone" style={{ marginBottom: 0 }}>
+              A few questions, then a step-by-step plan you can print or save.
+            </p>
+            <p className="mp-p mp-desk" style={{ maxWidth: 680, marginBottom: 0 }}>
               Answer a few questions and get a step-by-step plan for your situation, with the Washington guides and tools for each
               step. Print it, or save the link and come back to it.
             </p>
