@@ -47,3 +47,6 @@ Left: remove the custom domain in Lovable; old Pages project `www-realpropertypl
 (April) is disconnected from GitHub but not deleted (too many deployments for the dashboard).
 Rollback now: re-add `A @ 185.158.133.1` (DNS only) after removing the Worker custom domain, or
 put GoDaddy nameservers back (ns47/ns48.domaincontrol.com).
+Lovable custom domains removed (Nov 1, 2026). KeyCDN Performance Test after the move, TTFB:
+Frankfurt 74 ms, Amsterdam 105, London 107, New York 97, San Francisco 114, Singapore 318,
+Sydney 259, Bangalore 241 (Lovable: 254-335 Europe, 444 NY, 720 SF, 1,100-2,360 Asia/Australia).
