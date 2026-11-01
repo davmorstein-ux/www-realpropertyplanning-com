@@ -17,9 +17,9 @@ import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 /* Oct 27, 2026 (performance): logo and marble from src/assets (content-named, long-cached;
    public/ files had no cache lifetime) plus a 480px logo for phones. */
-import logo480 from "@/assets/perf/rpp-logo-v29-480.webp";
-import logo640 from "@/assets/perf/rpp-logo-v29-640.webp";
-import logo1280 from "@/assets/perf/rpp-logo-v29-1280.webp";
+import logo480 from "@/assets/perf/rpp-logo-v30-480.webp";
+import logo640 from "@/assets/perf/rpp-logo-v30-640.webp";
+import logo1280 from "@/assets/perf/rpp-logo-v30-1280.webp";
 import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp";
 import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
 
@@ -82,8 +82,11 @@ const DESKTOP_LOGO_HEIGHT = 55;
    built by Claude from the v28 master so the letters, door and chimney are
    untouched: a charcoal line runs the full width just below REAL PROPERTY,
    broken around the door where the inner edges of the A would meet it, with ends cut at the same angle as the A, and PLANNING in garnet (#8F1B2C) right-aligned
-   beneath it). Full-size master: docs/brand/rpp-logo-v29-master.png
-   (3000x619); regenerate the 480/640/1280 webp files from it. Replaced v28
+   beneath it). Nov 1, 2026 (v30): the two charcoal line segments made 15%
+   thinner at David's request (12.3px -> 10.4px at master size, same centre and
+   cut ends; letters, door, chimney and PLANNING untouched). Full-size master:
+   docs/brand/rpp-logo-v30-master.png (3000x619); regenerate the 480/640/1280
+   webp files from it. v29 master kept in docs/brand. Replaced v28
    (PLANNING charcoal beside a short line; master kept in docs/brand).
    Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
