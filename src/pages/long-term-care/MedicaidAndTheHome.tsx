@@ -8,6 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import PageFAQ from "@/components/PageFAQ";
 import BackToPreviousPage from "@/components/BackToPreviousPage";
 import NextQuestions from "@/components/NextQuestions";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 import {
   MEDICAID_AND_THE_HOME, MTH_SECTIONS as PTX_SECTIONS, MTH_CHECKLIST as PTX_CHECKLIST, MTH_FAQS as PTX_FAQS,
@@ -103,6 +104,10 @@ const MedicaidAndTheHome = () => (
             <div className="ptx-answer">
               <p className="ptx-label">The short answer</p>
               <p>{SHORT_ANSWER}</p>
+            </div>
+            {/* David's narration (Nov 1, 2026), 3:16. */}
+            <div style={{ marginTop: 20 }}>
+              <ArticleAudioPlayer audioSrc="/audio/medicaid-and-the-family-home.mp3" />
             </div>
           </div>
         </div>
