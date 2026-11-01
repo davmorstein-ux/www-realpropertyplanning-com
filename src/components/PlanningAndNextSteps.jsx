@@ -106,7 +106,7 @@ const PlanningAndNextSteps = () => (
           title="Guides & Resources"
           tagline="Practical Tools for Every Step of the Way"
           imgSrc="/tiles/set3/guides-resources.webp"
-          href="/resources"
+          href="/guides-and-resources"
         />
         <P3Tile
           pill="Life Transitions"

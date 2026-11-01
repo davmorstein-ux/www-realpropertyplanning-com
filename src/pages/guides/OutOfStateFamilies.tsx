@@ -70,7 +70,7 @@ const OutOfStateFamilies = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Out-of-State Families", url: "/guides/out-of-state-families" },
     ]} />
     <Header />

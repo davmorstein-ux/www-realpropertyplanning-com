@@ -154,8 +154,6 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Biohazard, water, mold & fire cleanup", href: "/water-mold-fire-cleanup" },
           { title: "Financing & Long-Term Planning", href: "/lenders-and-financing-specialists" },
           { title: "Reverse Mortgages & Retirement Financing", href: "/retirement-reverse-mortgage" },
-          { title: "Building Your Professional Team", href: "/professionals" },
-          { title: "Professionals & Services", href: "/professionals-services" },
           { title: "Legal Professionals", href: "/professionals/attorneys" },
           { title: "Probate Attorneys in Western Washington", href: "/professionals/probate-attorneys" },
           { title: "Aging Life Care Managers & Social Workers", href: "/professionals/care-managers" },
@@ -170,7 +168,6 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
       {
         label: "Statewide directories",
         links: [
-          { title: "All Directories", href: "/resources" },
           { title: "Probate & Estate Attorneys", href: "/resources/probate-estate-attorneys" },
           { title: "CPAs & Financial Advisors", href: "/resources/cpas-financial-advisors" },
           { title: "Estate Sale Companies", href: "/resources/estate-sale-companies" },

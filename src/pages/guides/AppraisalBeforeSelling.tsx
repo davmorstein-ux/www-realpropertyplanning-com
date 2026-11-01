@@ -42,7 +42,7 @@ const AppraisalBeforeSelling = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Appraisal Before Selling Inherited Property", url: "/guides/appraisal-before-selling-inherited-property" },
     ]} />
     <Header />

@@ -187,8 +187,6 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/resources/probate-estate-attorneys", label: "Probate Estate Attorneys" },
   { path: "/probate-estate-sales", label: "Probate Estate Sales" },
   { path: "/guides/probate-vs-trust-sale-washington", label: "Probate Vs Trust Sale Washington" },
-  { path: "/professionals", label: "Professionals" },
-  { path: "/professionals-services", label: "Professionals Page" },
   { path: "/resources/property-preparation-services", label: "Property Preparation Services" },
   {
     path: "/guides/repairs-before-selling-probate-home-washington",
@@ -197,7 +195,6 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/", label: "Home" },
   { path: "/real-estate-appraiser", label: "Real Estate Appraiser" },
   { path: "/realtor", label: "Realtor" },
-  { path: "/resources", label: "Find a Professional" },
   { path: "/retirement-reverse-mortgage", label: "Retirement Reverse Mortgage" },
   { path: "/roles", label: "Roles" },
   { path: "/san-juan-county", label: "San Juan County" },

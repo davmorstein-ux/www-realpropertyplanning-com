@@ -40,7 +40,7 @@ const ExecutorSellBeforeProbate = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Can an Executor Sell Before Probate?", url: "/guides/executor-sell-house-before-probate-washington" },
     ]} />
     <Header />

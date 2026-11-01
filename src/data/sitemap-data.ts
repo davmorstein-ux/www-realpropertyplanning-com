@@ -931,7 +931,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     path: "/guides-and-resources",
-    links: ["/resources"],
+    links: ["/featured-professionals"],
   },
   {
     path: "/guides/appraisal-before-selling-inherited-property",
@@ -1281,14 +1281,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: ["/contact"],
   },
   {
-    path: "/professionals",
-    links: ["/contact"],
-  },
-  {
-    path: "/professionals-services",
-    links: [],
-  },
-  {
     path: "/professionals/attorneys",
     links: [],
   },
@@ -1327,10 +1319,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     path: "/realtor",
     links: [],
-  },
-  {
-    path: "/resources",
-    links: ["/guides-and-resources"],
   },
   {
     path: "/resources/cpas-financial-advisors",
@@ -1784,7 +1772,7 @@ export const SITEMAP_REDIRECTS: SitemapRedirect[] = [
   },
   {
     from: "/for-professionals",
-    to: "/professionals",
+    to: "/featured-professionals",
   },
   {
     from: "/for-senior-living-professionals",

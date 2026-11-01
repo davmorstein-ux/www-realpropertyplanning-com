@@ -42,7 +42,7 @@ const HeirsDisagreeSelling = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "When Heirs Disagree on Selling", url: "/guides/heirs-disagree-selling-house" },
     ]} />
     <Header />

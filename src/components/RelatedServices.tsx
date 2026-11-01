@@ -83,7 +83,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Start a confidential conversation about a specific property.",
   },
   resources: {
-    href: "/resources",
+    href: "/featured-professionals",
     label: "Professional Resources",
     description: "Independent attorneys, CPAs, and senior-care professionals across Washington.",
   },

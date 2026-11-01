@@ -41,7 +41,7 @@ const PricingHouseTrustEstate = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Pricing a House in a Trust or Estate", url: "/guides/pricing-house-trust-estate" },
     ]} />
     <Header />

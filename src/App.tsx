@@ -98,7 +98,6 @@ const PacificCounty = lazy(() => import("./pages/counties/PacificCounty"));
 const SanJuanCounty = lazy(() => import("./pages/counties/SanJuanCounty"));
 const SkamaniaCounty = lazy(() => import("./pages/counties/SkamaniaCounty"));
 const WahkiakumCounty = lazy(() => import("./pages/counties/WahkiakumCounty"));
-const Resources = lazy(() => import("./pages/Resources"));
 const SeniorMoveManagersFull = lazy(() => import("./pages/SeniorMoveManagers"));
 const EstateSaleCompanies = lazy(() => import("./pages/resources/EstateSaleCompanies"));
 const ProbateEstateAttorneys = lazy(() => import("./pages/resources/ProbateEstateAttorneys"));
@@ -177,7 +176,6 @@ const EstateLiquidationLearnMore = lazy(() => import("./pages/EstateLiquidationL
 const EstateLiquidators = lazy(() => import("./pages/EstateLiquidators"));
 const Realtor = lazy(() => import("./pages/Realtor"));
 const RealEstateAppraiser = lazy(() => import("./pages/RealEstateAppraiser"));
-const Professionals = lazy(() => import("./pages/Professionals"));
 const ProbateAttorneys = lazy(() => import("./pages/professionals/ProbateAttorneys"));
 const AttorneysDirectory = lazy(() => import("./pages/professionals/Attorneys"));
 const SeniorHousingAdvisors = lazy(() => import("./pages/professionals/SeniorHousingAdvisors"));
@@ -190,7 +188,6 @@ const ShareYourExperience = lazy(() => import("./pages/ShareYourExperience"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
-const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const Search = lazy(() => import("./pages/Search"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
@@ -553,10 +550,8 @@ export const AppRoutes = () => (
       />
 
       {/* ─── Professionals directory (for families) ───────────── */}
-      <Route path="/professionals" element={<Professionals />} />
       <Route path="/roles" element={<Roles />} />
       <Route path="/planning" element={<Planning />} />
-      <Route path="/professionals-services" element={<ProfessionalsPage />} />
       <Route path="/professionals/attorneys" element={<AttorneysDirectory />} />
       <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
       <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
@@ -581,7 +576,6 @@ export const AppRoutes = () => (
       <Route path="/retirement-reverse-mortgage" element={<RetirementReverseMortgage />} />
 
       {/* ─── Resources directory ──────────────────────────────── */}
-      <Route path="/resources" element={<Resources />} />
       <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
       <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
       <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />

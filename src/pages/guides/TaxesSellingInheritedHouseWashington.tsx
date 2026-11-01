@@ -42,7 +42,7 @@ const TaxesSellingInheritedHouseWashington = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Taxes on Inherited House in WA", url: "/guides/taxes-selling-inherited-house-washington" },
     ]} />
     <Header />

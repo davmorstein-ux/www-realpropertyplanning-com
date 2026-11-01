@@ -58,7 +58,7 @@ const HowLongSellProbateProperty = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "How Long to Sell Probate Property", url: "/guides/how-long-sell-probate-property" },
     ]} />
     <Header />

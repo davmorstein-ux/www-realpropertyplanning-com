@@ -41,7 +41,7 @@ const ExecutorFirstStepsHouse = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Executor First Steps With a House", url: "/guides/executor-first-steps-house" },
     ]} />
     <Header />

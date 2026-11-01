@@ -41,7 +41,7 @@ const AppraisalVsCma = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Appraisal vs. CMA", url: "/guides/appraisal-vs-cma" },
     ]} />
     <Header />

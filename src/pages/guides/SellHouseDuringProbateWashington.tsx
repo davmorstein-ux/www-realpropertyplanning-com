@@ -88,7 +88,7 @@ const SellHouseDuringProbateWashington = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Sell a House During Probate in WA", url: "/guides/sell-house-during-probate-washington" },
     ]} />
     <Header />

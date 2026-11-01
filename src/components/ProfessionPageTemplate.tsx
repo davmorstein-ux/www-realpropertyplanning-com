@@ -97,7 +97,7 @@ const ProfessionPageTemplate = ({
       <SEOHead title={metaTitle} description={metaDescription} jsonLd={faqSchema} />
       <BreadcrumbSchema
         items={[
-          { name: "Professionals", url: "/professionals" },
+          { name: "Find a Professional", url: "/featured-professionals" },
           { name: title, url: "" },
         ]}
       />

@@ -47,7 +47,7 @@ const SeniorTransitionDifferences = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Senior Transition Differences", url: "/guides/senior-transition-differences" },
     ]} />
     <Header />

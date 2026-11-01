@@ -272,7 +272,7 @@ const GuidesAndResources = () => {
         <div className="rpp-lib-pro">
           <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#142c52", margin: 0 }}>
             Looking for a professional instead of a guide?{" "}
-            <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
+            <Link to="/featured-professionals" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
               Browse the Find a Professional directory <RppArrow />
             </Link>
           </p>

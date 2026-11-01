@@ -387,14 +387,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Many Tacoma estate homes were built before 1950 and carry decades of deferred maintenance — character-rich houses in the North End and Stadium District, mid-century ramblers in the South End, and post-war homes across Hilltop and Eastside. The right move is rarely \"fix everything\"; it's knowing which targeted repairs the Tacoma buyer pool will actually pay for, and which ones to skip.",
   },
-  "/resources": {
-    title: "Find a Professional | Real Property Planning",
-    description:
-      "Independent professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
-    h1: "Find a Professional",
-    intro:
-      "Independent professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
-  },
   "/resources/estate-sale-companies": {
     title: "Estate Sale Companies | Resources | Real Property Planning",
     description:
@@ -1892,16 +1884,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "When housing and property decisions are made under pressure, families pay the price — financially and emotionally. Here's what's at stake when planning is left too late.",
     h1: "Why Plan Before a Crisis",
     intro: "Decisions made in a hurry cost families money and peace. Planning while everyone is well keeps choices open, can avoid a court process, and lets your parent decide for themselves.",
-  },
-  "/professionals": {
-    title: "Find a Professional | Real Property Planning | Western Washington",
-    description: "A resource for families navigating estate settlement, inherited homes, and senior transitions — find independent probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region.",
-    h1: "The Right Team Makes All the Difference",
-  },
-  "/professionals-services": {
-    title: "Professionals & Services | Estate, Probate & Senior Specialists — WA",
-    description: "Find independent attorneys, CPAs, lenders, appraisers, and senior transition specialists serving families across Washington State.",
-    h1: "Professionals &amp; Services",
   },
   "/professionals/attorneys": {
     title: "Legal Professionals | Attorneys Directory | Real Property Planning",

@@ -41,7 +41,11 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     color: "#25597e",
     items: [
       { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
-      { name: "Washington State Probate Guide (Start Here)", href: "/washington-probate-guide" },
+      /* One front door for "handling an estate" (Nov 1, 2026): the same page
+         as the homepage tile and the phone menu's Start Here. The probate
+         guide is the in-depth guide, no longer also labelled Start Here. */
+      { name: "Handling an Estate: Start Here", href: "/estate-probate-inherited-property" },
+      { name: "Washington State Probate Guide", href: "/washington-probate-guide" },
       /* Nov 1, 2026: the free planner, opened on its estate questions. */
       { name: "Get a Free Step-by-Step Plan", href: "/my-plan#estate:" },
       { name: "For Executors", href: "/executors" },
@@ -80,6 +84,8 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     color: "#9c5000",
     items: [
       { name: "Find a Professional", href: "/featured-professionals" },
+      /* Nov 1, 2026: the homepage's "I Need a Professional" guide. */
+      { name: "Not Sure Who You Need? Start Here", href: "/building-your-professional-team" },
       { name: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/for-probate-attorneys" },
       { name: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },

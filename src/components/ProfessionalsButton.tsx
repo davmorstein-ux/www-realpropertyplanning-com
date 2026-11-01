@@ -108,7 +108,7 @@ export default function ProfessionalsButton() {
 
   return (
     <a
-      href="/professionals"
+      href="/featured-professionals"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{

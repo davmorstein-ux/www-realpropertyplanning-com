@@ -48,7 +48,7 @@ const WhatExecutorsShouldDo = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "What Executors Should Do", url: "/guides/what-executors-should-do" },
     ]} />
     <Header />

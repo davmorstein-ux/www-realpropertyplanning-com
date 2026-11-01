@@ -86,7 +86,7 @@ const InheritedHouseWashington = () => (
     />
     <BreadcrumbSchema
       items={[
-        { name: "Resources", url: "/resources" },
+        { name: "Guides & Resources", url: "/guides-and-resources" },
         { name: "Inherited House Guide", url: "/guides/inherited-house-washington" },
       ]}
     />

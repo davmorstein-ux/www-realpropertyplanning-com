@@ -63,7 +63,12 @@ export const CUSTOM_HEADER_ROUTES = [
 
 /** Short labels for the strip, by page href. */
 /** Menu items that never get a tab or a strip (owner-approved own layouts). */
-export const STRIP_SKIP = ["/helping-an-aging-parent", "/planning-before-a-crisis"];
+export const STRIP_SKIP = [
+  "/helping-an-aging-parent",
+  "/planning-before-a-crisis",
+  "/estate-probate-inherited-property",
+  "/building-your-professional-team",
+];
 
 export const STRIP_LABELS: Record<string, string> = {
   // Estate & Probate

@@ -26,6 +26,13 @@ export interface SiteRedirect {
 }
 
 export const REDIRECTS: SiteRedirect[] = [
+  /* One "Find a Professional" page (Nov 1, 2026, David). Three older pages
+     each called themselves Find a Professional or Professionals & Services;
+     the header, phone menu and homepage now agree on /featured-professionals,
+     with /building-your-professional-team as its "who do I need?" guide. */
+  { from: "/resources", to: "/featured-professionals" },
+  { from: "/professionals", to: "/featured-professionals" },
+  { from: "/professionals-services", to: "/featured-professionals" },
   /* Family-facing adult family home guides moved out of AFH Club (which is
      for home operators) into the senior living section, Oct 4, 2026. */
   { from: "/afh-club/what-is-an-adult-family-home", to: "/senior-living/what-is-an-adult-family-home" },
@@ -162,7 +169,7 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/building-your-trusted-professional-team", to: "/building-your-professional-team" },
   { from: "/attorney-referral", to: "/for-attorneys" },
   { from: "/for-referral-partners", to: "/join-the-network" },
-  { from: "/for-professionals", to: "/professionals" },
+  { from: "/for-professionals", to: "/featured-professionals" },
   { from: "/for-senior-living-professionals", to: "/professionals/senior-housing-advisors" },
   { from: "/senior-estate-services", to: "/senior-transitions" },
   { from: "/transition-resources", to: "/senior-transitions" },

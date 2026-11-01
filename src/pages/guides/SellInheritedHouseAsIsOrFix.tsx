@@ -40,7 +40,7 @@ const SellInheritedHouseAsIsOrFix = () => (
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
-      { name: "Resources", url: "/resources" },
+      { name: "Guides & Resources", url: "/guides-and-resources" },
       { name: "Sell As-Is or Fix Up?", url: "/guides/sell-inherited-house-as-is-or-fix" },
     ]} />
     <Header />

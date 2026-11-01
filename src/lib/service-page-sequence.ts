@@ -56,7 +56,7 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/transition-resources", label: "Transition Resources" },
 
   // ── Resources ──
-  { path: "/resources", label: "Resources" },
+  { path: "/featured-professionals", label: "Find a Professional" },
   
   { path: "/resources/estate-sale-companies", label: "Estate Sale Companies" },
   { path: "/resources/probate-estate-attorneys", label: "Probate & Estate Attorneys" },
