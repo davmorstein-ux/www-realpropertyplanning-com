@@ -6591,6 +6591,17 @@ html body .rpp-news-submit.rpp-news-submit,
 html body .rpp-ask-try.rpp-ask-try {
   font-size: 18px !important;
 }
+/* Nov 1, 2026 (David: "the font should be heavier, it gets lost"): the
+   homepage line under the Ask box, "Not sure what to ask? Get a free
+   step-by-step plan…". Was 500 / 600 weight at 18px; now 700 / 800 at 20px. */
+html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-heading-link.rpp-heading-link {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
 html body .rpp-coc-opt-name.rpp-coc-opt-name { font-size: 18px !important; }
 html body .rpp-coc-opt-figure.rpp-coc-opt-figure { font-size: 20px !important; }
 html body .rpp-news-label.rpp-news-label { font-size: 17px !important; }
