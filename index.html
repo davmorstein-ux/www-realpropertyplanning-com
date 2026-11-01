@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Must stay first: browsers only look for the charset in the first 1024
+         bytes. Lovable also sent it in the HTTP header; Cloudflare does not, so
+         after the move (Nov 1, 2026) PageSpeed flagged it here at byte 1,687. -->
+    <meta charset="UTF-8" />
     <!-- Canonical host fallback (Sept 25 2026). Search Console showed
          www.realpropertyplanning.com indexed as a separate site, splitting
          every page's signal. The real fix is a 301 at the host (Lovable
@@ -32,7 +36,6 @@
       });
     </script>
     <meta name="google-site-verification" content="WqzgPFUggfXVdfdb1HYv-dQdznpmIejwblRWHLJGvRc" />
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Real Property Planning" />
 
