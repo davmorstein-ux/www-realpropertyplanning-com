@@ -1,0 +1,46 @@
+# Publishes the site to Cloudflare (Nov 1, 2026; see docs/cloudflare-move.md).
+#
+# Every push to main builds the site and uploads it to the Cloudflare Worker
+# named in wrangler.jsonc. Until the domain is attached in Cloudflare that only
+# updates the free test address (*.workers.dev); the live domain is untouched.
+#
+# Dependencies install from the public npm registry with no lockfile: the
+# committed package-lock.json resolves many packages from Lovable's private
+# mirror, which answers 403 outside Lovable (same note as AGENTS.md).
+#
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
+# Without them the build still runs (a useful check) and the upload is skipped.
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: npm install --no-package-lock --no-audit --no-fund --registry https://registry.npmjs.org
+      - name: Build (vite build + prerender)
+        run: npm run build
+      - name: Upload to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "Cloudflare secrets not set yet; build checked, upload skipped."
+            exit 0
+          fi
+          npx --yes wrangler@4 deploy

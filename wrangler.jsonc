@@ -1,9 +1,18 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "www-realpropertyplanning-com",
-  "compatibility_date": "2026-04-10",
+  // Cloudflare hosting (Nov 1, 2026; see docs/cloudflare-move.md). An
+  // assets-only Worker: every page is a prebuilt file in ./dist, uploaded by
+  // .github/workflows/deploy-cloudflare.yml.
+  "name": "realpropertyplanning",
+  "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",
+    // Pages are built as /executors/index.html but their address (and canonical)
+    // is /executors: serve them without a trailing slash, and send /executors/
+    // to /executors. The default (auto-trailing-slash) would do the opposite.
+    "html_handling": "drop-trailing-slash",
+    // Addresses with no file get the app shell, which loads route-meta.js and
+    // renders the page in the browser (same behaviour as on Lovable today).
     "not_found_handling": "single-page-application"
   }
 }
