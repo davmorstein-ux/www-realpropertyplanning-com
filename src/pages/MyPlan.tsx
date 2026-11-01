@@ -161,7 +161,7 @@ const MyPlan = () => {
   const [copied, setCopied] = useState(false);
   // The two big "What brings you here?" choices collapse once one is picked.
   const [chooserOpen, setChooserOpen] = useState(true);
-  const advanceAfterPick = useRef(false);
+  const advanceAfterPick = useRef<string | null>(null);
   // True once the visitor answers a question on this page (not for a plan reopened from a saved link).
   const answeredHere = useRef(false);
   const resultRef = useRef<HTMLDivElement>(null);
@@ -210,7 +210,7 @@ const MyPlan = () => {
 
   const pick = (id: string, v: string) => {
     setCopied(false);
-    advanceAfterPick.current = true;
+    advanceAfterPick.current = id;
     answeredHere.current = true;
     setAnswers((prev) => {
       const next = { ...prev, [id]: v };
@@ -245,14 +245,20 @@ const MyPlan = () => {
     revealById("mp-situation-label");
   };
 
-  // After an answer, if the next unanswered question is off-screen, move to it.
-  // (The finished plan is handled by the effect below.)
+  // After an answer, move the next unanswered question up under the header
+  // (Nov 1, 2026, David: "the next box should automatically move up"). "Next"
+  // means the first unanswered one AFTER the question just answered, so
+  // changing an earlier answer never jumps the page backwards; only if every
+  // later one is answered does it go to an earlier gap. The finished plan is
+  // handled by the effect below.
   useEffect(() => {
-    if (!advanceAfterPick.current) return;
-    advanceAfterPick.current = false;
+    const justAnswered = advanceAfterPick.current;
+    if (!justAnswered) return;
+    advanceAfterPick.current = null;
     if (!situation || done) return;
-    const next = questions.find((q) => !answers[q.id]);
-    if (next) revealById(`mp-q-${next.id}`);
+    const at = questions.findIndex((q) => q.id === justAnswered);
+    const next = questions.slice(at + 1).find((q) => !answers[q.id]) ?? questions.find((q) => !answers[q.id]);
+    if (next) revealById(`mp-q-${next.id}`, { always: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answers]);
 

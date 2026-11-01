@@ -256,7 +256,7 @@ const FamilyHomePlanning = () => {
       if (!wasDone.current) revealById("fhp-result", { focus: true, always: true });
     } else {
       const next = discussed === null ? Q1 : topic === null ? Q2 : Q3;
-      revealById(`fhp-q-${next.id}`);
+      revealById(`fhp-q-${next.id}`, { always: true });
     }
     wasDone.current = done;
   }, [discussed, topic, need, done]);
