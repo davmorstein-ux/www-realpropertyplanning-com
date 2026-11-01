@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { loadMetaPixel } from "@/lib/metaPixel";
 import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
-import { revealById } from "@/lib/revealScroll";
+import { revealById, isPhoneWidth } from "@/lib/revealScroll";
 
 /**
  * /family-home-planning (Oct 17, 2026): the first Facebook ad landing page.
@@ -253,10 +253,11 @@ const FamilyHomePlanning = () => {
     if (!lastPick.current) return;
     lastPick.current = false;
     if (done) {
-      if (!wasDone.current) revealById("fhp-result", { focus: true, always: true });
+      if (!wasDone.current) revealById("fhp-result", { focus: true, always: true, delayMs: 250 });
     } else {
       const next = discussed === null ? Q1 : topic === null ? Q2 : Q3;
-      revealById(`fhp-q-${next.id}`, { always: true });
+      // Phones: always bring it up; laptops: only if off-screen. Short pause first.
+      revealById(`fhp-q-${next.id}`, { always: isPhoneWidth(), delayMs: 250 });
     }
     wasDone.current = done;
   }, [discussed, topic, need, done]);

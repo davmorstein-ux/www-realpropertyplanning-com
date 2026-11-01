@@ -49,6 +49,18 @@ export interface RevealOptions {
    * above/under the header.
    */
   always?: boolean;
+  /** Wait this long (ms) before moving, so the tap visibly registers first. */
+  delayMs?: number;
+}
+
+/** Phones and small tablets — the width at which the header switches to its phone layout. */
+export function isPhoneWidth(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.matchMedia("(max-width: 950px)").matches;
+  } catch {
+    return window.innerWidth < 951;
+  }
 }
 
 export function revealInView(el: HTMLElement | null | undefined, opts: RevealOptions = {}): void {
@@ -72,7 +84,9 @@ export function revealInView(el: HTMLElement | null | undefined, opts: RevealOpt
     }
   };
   // Two frames: the first lets React commit, the second lets layout settle.
-  requestAnimationFrame(() => requestAnimationFrame(run));
+  const go = () => requestAnimationFrame(() => requestAnimationFrame(run));
+  if (opts.delayMs && opts.delayMs > 0) window.setTimeout(go, opts.delayMs);
+  else go();
 }
 
 /** Same, by element id — for components that don't hold a ref. */

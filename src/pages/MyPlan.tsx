@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
-import { revealInView, revealById } from "@/lib/revealScroll";
+import { revealInView, revealById, isPhoneWidth } from "@/lib/revealScroll";
 import {
   CHECKLIST_PDF,
   OFFICIAL_SOURCES,
@@ -258,7 +258,9 @@ const MyPlan = () => {
     if (!situation || done) return;
     const at = questions.findIndex((q) => q.id === justAnswered);
     const next = questions.slice(at + 1).find((q) => !answers[q.id]) ?? questions.find((q) => !answers[q.id]);
-    if (next) revealById(`mp-q-${next.id}`, { always: true });
+    // Phones: always bring it up. Laptops: only if it's off-screen. A short
+    // pause first so the chosen answer visibly lights up before the page moves.
+    if (next) revealById(`mp-q-${next.id}`, { always: isPhoneWidth(), delayMs: 250 });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answers]);
 
@@ -292,7 +294,7 @@ const MyPlan = () => {
   const wasDone = useRef(false);
   useEffect(() => {
     if (done && !wasDone.current && answeredHere.current) {
-      revealInView(resultRef.current, { focus: true, always: true });
+      revealInView(resultRef.current, { focus: true, always: true, delayMs: 250 });
     }
     wasDone.current = done;
     // eslint-disable-next-line react-hooks/exhaustive-deps
