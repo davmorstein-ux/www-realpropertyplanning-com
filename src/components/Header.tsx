@@ -47,6 +47,12 @@ const RING_BUTTON: CSSProperties = {
   cursor: "pointer",
   textDecoration: "none",
 };
+/* Mobile header rings (Nov 1, 2026, David): same thickness as the two grey
+   lines in the logo. The logo shows 37.9px tall on phones and its lines are
+   10.35px in the 619px-tall master, so 10.35 x 37.9 / 619 = 0.63px. iPhones
+   draw that as 2 screen pixels. Desktop rings keep 1.75px. If the mobile logo
+   height or its line thickness ever changes, recompute this. */
+const MOBILE_RING_BUTTON: CSSProperties = { ...RING_BUTTON, border: `0.63px solid ${HEADER_NAVY}` };
 const SearchGlyph = ({ size }: { size: number }) => (
   <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true" focusable="false">
     <circle cx="10.5" cy="10.5" r="6.5" />
@@ -479,7 +485,7 @@ const Header = () => {
                   aria-label={searchOpen ? "Close site search" : "Search the site"}
                   className="rpp-header-search-toggle"
                   style={{
-                    ...RING_BUTTON,
+                    ...MOBILE_RING_BUTTON,
                     /* Fills navy while the search row is open. */
                     background: searchOpen ? HEADER_NAVY : "transparent",
                     color: searchOpen ? "#fff" : HEADER_NAVY,
@@ -489,7 +495,7 @@ const Header = () => {
                 </button>
                 <a href="tel:2069003015"
                   className="rpp-header-phone"
-                  style={RING_BUTTON}
+                  style={MOBILE_RING_BUTTON}
                   aria-label="Call Real Property Planning at (206) 900-3015"
                 >
                   {/* Icon-only; the aria-label carries the number. */}
