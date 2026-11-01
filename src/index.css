@@ -6820,3 +6820,45 @@ html body #main-content section.rpp-county-hero.rpp-county-hero img[alt*="offici
   html body #main-content > div.rpp-hero-band.rpp-hero-band.rpp-hero-band { padding: 20px 18px 16px !important; }
   html body #main-content > section.rpp-county-hero.rpp-county-hero:first-child { padding-top: 24px !important; }
 }
+
+/* ============================================================
+   PHONES: LESS EMPTY SPACE ON HUB PAGES (Nov 1, 2026, David: "a number of
+   places where empty space can be minimized"). The four simplified hubs
+   (Estate & Probate, Helping an Aging Parent, Planning Before a Crisis,
+   Building Your Professional Team) and every page with a title band.
+   Phones only; laptops unchanged.
+   ============================================================ */
+@media (max-width: 640px) {
+  /* Title band: thinner top/bottom, slightly smaller title (was 28.9px). */
+  html body main div.rpp-hero-band.rpp-hero-band.rpp-hero-band {
+    padding-top: 12px !important;
+    padding-bottom: 10px !important;
+  }
+  html body main :is(h1, h2).rpp-hero-band-text.rpp-hero-band-text.rpp-hero-band-text {
+    font-size: 25px !important;
+    line-height: 1.14 !important;
+  }
+  /* "Where would you like to start?" / "What do you need help with?"
+     Its top margin used to escape the cream section and show as a pale
+     strip under the title band; padding on the section instead keeps the
+     cream continuous and the gap smaller. */
+  html body main.apf section:has(> .container > p.apf-ask) {
+    padding-top: 14px !important;
+  }
+  html body main.apf p.apf-ask.apf-ask.apf-ask {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+  /* Tile titles: less space between the photo and the words, tighter lines. */
+  html body main.apf a.apf-pick .apf-pick-label.apf-pick-label.apf-pick-label {
+    padding-top: 6px !important;
+    padding-bottom: 9px !important;
+    line-height: 1.18 !important;
+  }
+  html body main.apf a.apf-pick .apf-pick-label.apf-pick-label > span:first-child {
+    line-height: 1.18 !important;
+  }
+  html body main.apf a.apf-pick .apf-pick-label.apf-pick-label > .apf-arrow {
+    bottom: 9px !important;
+  }
+}
