@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import RppArrow from "@/components/RppArrow";
+import { PRIMARY_NAV } from "@/lib/primaryNav";
 function hexToRgba(hex, alpha) {
   const h = hex.replace("#", "");
   const r = parseInt(h.substring(0, 2), 16);
@@ -10,116 +11,34 @@ function hexToRgba(hex, alpha) {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-const CATEGORIES = [
-  {
-    label: "Legal Professionals",
-    color: "#ac1515",
-    items: [
-  /* Three of these pointed at /professionals/* routes that do not exist —
-     estate-planning-attorneys, real-estate-attorneys and family-law-attorneys
-     — so the main menu was sending readers to 404s. The category mixes two URL
-     patterns (/professionals/* and /for-*) because the pages were built at
-     different times; the hrefs below are the routes that actually exist in
-     App.tsx. Verify against the router before adding more. */
-      { name: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
-      { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
-      { name: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
-      { name: "Real Estate Attorneys", href: "/real-estate-attorneys" },
-      { name: "Family Law Attorneys", href: "/for-family-law-attorneys" },
-      { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
-      { name: "Legal Plans & Identity Protection", href: "/legal-plans-identity-protection" },
-    ],
-  },
-  {
-    label: "Real Estate & Professionals",
-    color: "#aa570e",
-    items: [
-      { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
-      { name: "CPAs & Accountants", href: "/for-cpas" },
-      { name: "Certified Appraisers", href: "/real-estate-appraiser" },
-      { name: "Mortgage Lenders", href: "/mortgage-lenders" },
-      { name: "Real Estate Brokers", href: "/realtor" },
-      { name: "Estate Liquidators", href: "/estate-liquidators" },
-    ],
-  },
-  {
-    label: "Senior Housing",
-    color: "#1d7239",
-    items: [
-      { name: "Adult Family Home Directory", href: "/afh-club/homes" },
-      { name: "Adult Family Home Costs by City & County", href: "/adult-family-home-costs" },
-      { name: "Hospice Care", href: "/articles/hospice-care-washington" },
-      { name: "Senior Living Advisors", href: "/senior-living-advisors" },
-      { name: "Senior Move Managers", href: "/senior-move-managers" },
-      { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
-      { name: "Downsizing & Preparing for Transition", href: "/downsizing-preparing-for-transition" },
-    ],
-  },
-  {
-    label: "Senior Care",
-    color: "#117078",
-    items: [
-      { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
-      { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
-      { name: "Understanding Housing & Care Options", href: "/understanding-housing-care-options" },
-    ],
-  },
-  {
-    label: "Guides & Articles",
-    color: "#284dbd",
-    items: [
-      { name: "All Guides & Articles", href: "/guides-and-resources" },
-      { name: "Articles Library", href: "/articles" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "Aging in Place", href: "/articles/aging-in-place" },
-      { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
-      { name: "For Executors", href: "/executors" },
-    ],
-  },
-  {
-    label: "Long-Term Care",
-    color: "#6b30a6",
-    items: [
-      { name: "Long-Term Care Overview", href: "/long-term-care" },
-      { name: "Nursing Homes", href: "/long-term-care/nursing-homes" },
-      { name: "Nurse Delegation", href: "/long-term-care/nurse-delegation" },
-      { name: "Medicaid & Long-Term Care", href: "/long-term-care/medicaid-and-long-term-care" },
-      { name: "WA Cares Fund", href: "/long-term-care/wa-cares" },
-      { name: "Hospital Discharge Planning", href: "/long-term-care/hospital-discharge-planning" },
-    ],
-  },
-  {
-    label: "More",
-    color: "#a82466",
-    items: [
-      { name: "AFH Club", href: "/afh-club" },
-      { name: "Licensed AFH Directory", href: "/afh-club/homes" },
-      { name: "AFH Calculators", href: "/afh-club/calculators" },
-      { name: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh" },
-      { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
-      { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
-      { name: "What's My Home Worth After Remodeling?", href: "/whats-my-remodel-worth" },
-      { name: "Find a Professional", href: "/resources" },
-      { name: "About", href: "/about" },
-      { name: "Contact", href: "/contact" },
-    ],
-  },
-];
+/* ONE MENU ON EVERY SCREEN (Nov 1, 2026, David). This drawer used to carry
+   its own, older list (attorneys first, then "Real Estate & Professionals",
+   "Senior Housing", "Senior Care", "Long-Term Care", "More") that had drifted
+   far from the laptop menu: no Helping an Aging Parent, no probate guide, and
+   "Find a Professional" pointed at a different page. It now reads the same
+   PRIMARY_NAV list as the laptop dropdowns (src/lib/primaryNav.ts), so the
+   two cannot drift again. Edit menus there, not here. */
+const CATEGORIES = PRIMARY_NAV.filter((entry) => entry.items?.length).map((entry) => ({
+  label: entry.lines.join(" "),
+  color: entry.color || "#1B3A6B",
+  items: entry.items,
+}));
 
-/* Primary top-level pages. On viewports at or below 1100px these links are
-   removed from the header bar by the .rpp-curated-link media query in
-   Header.tsx, which left them reachable only two taps deep inside the "More"
-   category (and left Senior Transitions unreachable entirely). This strip
-   restores them to a single tap at the top of the drawer. It is hidden above
-   1100px, where the header bar shows the same links. */
+/* The section a page belongs to, so the drawer opens on it instead of always
+   on the first one. First match wins; falls back to the first section. */
+const sectionIndexFor = (pathname) => {
+  const path = (pathname || "/").replace(/\/$/, "") || "/";
+  const i = CATEGORIES.findIndex((cat) => cat.items.some((item) => item.href.split("#")[0] === path));
+  return i < 0 ? 0 : i;
+};
+
+/* "Start here" (Nov 1, 2026): the homepage's doorways, one tap from the top of
+   the drawer on every page, plus Contact. Same pages as the homepage tiles. */
 const QUICK_LINKS = [
-  { name: "About", href: "/about" },
-  { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
-  { name: "Senior Transitions", href: "/senior-transitions" },
-  { name: "AFH Club", href: "/afh-club" },
+  { name: "Help an Aging Parent", href: "/helping-an-aging-parent" },
+  { name: "Handle an Estate", href: "/estate-probate-inherited-property" },
+  { name: "Plan Ahead", href: "/planning-before-a-crisis" },
+  { name: "Free Step-by-Step Plan", href: "/my-plan" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -525,7 +444,7 @@ const CSS = `
 function QuickLinks({ onNavigate }) {
   return (
     <div className="wf-quick">
-      <p className="wf-quick-label">Main Pages</p>
+      <p className="wf-quick-label">Start Here</p>
       <div className="wf-quick-grid">
         {QUICK_LINKS.map((item) => (
           <button key={item.href} data-nav-button className="wf-quick-btn" onClick={() => onNavigate(item.href)}>
@@ -623,6 +542,7 @@ export default function WaterfallNav() {
     if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
     if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
     setExiting(false);
+    if (!open) setActiveIndex(sectionIndexFor(typeof window !== "undefined" ? window.location.pathname : "/"));
     setOpen(true);
   };
 

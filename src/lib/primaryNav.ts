@@ -1,8 +1,8 @@
 /**
  * The header's primary navigation: five buttons, four of which open a menu.
  *
- * SINGLE SOURCE OF TRUTH. Header.tsx reads this for the compact layout and
- * PrimaryNav.tsx reads it for the desktop dropdowns, so the two cannot drift.
+ * SINGLE SOURCE OF TRUTH. PrimaryNav.tsx reads it for the laptop dropdowns and
+ * WaterfallNav.jsx for the phone menu, so the two cannot drift.
  *
  * `lines` are the button label split into explicit lines. Nothing here should
  * ever be more than two: the labels wrapped to three when the browser chose
@@ -19,10 +19,8 @@
  * About has no `items` and so renders as a plain link. A menu holding one
  * entry is worse than no menu.
  *
- * The link lists are drawn from the CATEGORIES array in WaterfallNav.jsx.
- * If you add a page there, add it here too — they are deliberately separate
- * (the drawer groups by profession, the header groups by what a visitor is
- * trying to do) but they should not contradict each other.
+ * The phone menu (WaterfallNav.jsx) reads this same list since Nov 1, 2026,
+ * so a change here changes the menu on every screen size.
  */
 export interface PrimaryNavItem {
   name: string;
@@ -44,6 +42,8 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     items: [
       { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
       { name: "Washington State Probate Guide (Start Here)", href: "/washington-probate-guide" },
+      /* Nov 1, 2026: the free planner, opened on its estate questions. */
+      { name: "Get a Free Step-by-Step Plan", href: "/my-plan#estate:" },
       { name: "For Executors", href: "/executors" },
       { name: "For Trustees", href: "/trustees" },
       { name: "Selling an Inherited Home", href: "/selling-an-inherited-home" },
@@ -58,6 +58,12 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     color: "#1d7239",
     items: [
       { name: "Senior Transitions", href: "/senior-transitions" },
+      /* Nov 1, 2026: the homepage's two family doorways and the planner were
+         missing from the header, so visitors landing on an inner page from
+         a search could not find them. */
+      { name: "Helping an Aging Parent", href: "/helping-an-aging-parent" },
+      { name: "Planning Ahead, Before a Crisis", href: "/planning-before-a-crisis" },
+      { name: "Get a Free Step-by-Step Plan", href: "/my-plan#parent:" },
       { name: "Understanding Housing & Care Options", href: "/understanding-housing-care-options" },
       { name: "Adult Family Home Directory", href: "/afh-club/homes" },
       { name: "Cost of Care Calculators", href: "/cost-of-care-calculator" },

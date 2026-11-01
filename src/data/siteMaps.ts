@@ -48,7 +48,9 @@ export interface SiteMapSection {
 const nav = (href: string) => {
   const entry = PRIMARY_NAV.find((e) => e.href === href);
   if (!entry) throw new Error(`siteMaps: no header menu at ${href}`);
-  return (entry.items ?? []).map((i) => ({ title: i.name, href: i.href }));
+  // Anchor links (the planner opened on one situation, /my-plan#estate:) are
+  // left out; the planner has its own site map entry.
+  return (entry.items ?? []).filter((i) => !i.href.includes("#")).map((i) => ({ title: i.name, href: i.href }));
 };
 
 const titleCase = (slug: string) =>

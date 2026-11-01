@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
-import { CUSTOM_HEADER_ROUTES, STRIP_LABELS, STRIP_MENUS, STRIP_PHOTOS, sectionStripFor } from "@/lib/sectionStrip";
+import { CUSTOM_HEADER_ROUTES, STRIP_LABELS, STRIP_MENUS, STRIP_PHOTOS, STRIP_SKIP, sectionStripFor } from "@/lib/sectionStrip";
 
 const stripItems = PRIMARY_NAV.filter((m) => STRIP_MENUS.includes(m.href)).flatMap((m) => m.items ?? []);
 
@@ -17,7 +17,12 @@ describe("section strip", () => {
     const s = sectionStripFor("/probate-estate-sales");
     expect(s?.heading).toBe("Estate & Probate");
     expect(s?.links.filter((l) => l.current).map((l) => l.href)).toEqual(["/probate-estate-sales"]);
-    expect(s?.links.length).toBe(PRIMARY_NAV[0].items!.length);
+    expect(s?.links.length).toBe(PRIMARY_NAV[0].items!.filter((i) => !i.href.includes("#") && !STRIP_SKIP.includes(i.href)).length);
+  });
+
+  it("keeps the family doorways on their own layout (no strip, no tab)", () => {
+    for (const p of STRIP_SKIP) expect(sectionStripFor(p)).toBeNull();
+    expect(sectionStripFor("/senior-transitions")?.links.some((l) => STRIP_SKIP.includes(l.href))).toBe(false);
   });
 
   it("puts How the Process Works in Estate & Probate, not About", () => {
