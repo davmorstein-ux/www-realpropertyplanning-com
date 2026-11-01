@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import logo640 from "@/assets/perf/rpp-logo-v30-640.webp";
 import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
 import { revealInView, revealById, isPhoneWidth } from "@/lib/revealScroll";
 import {
@@ -98,6 +99,14 @@ const PAGE_CSS = `
   .mp button.mp-change:focus-visible { outline: 3px solid ${NAVY} !important; outline-offset: 2px !important; }
   .mp-questions:focus { outline: none; }
   .mp-print-only { display: none; }
+  /* Printed letterhead (Nov 1, 2026, David: "the print out of the plan does not
+     mention Real Property Planning"). Print only; the screen page is unchanged. */
+  .mp-lh { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 3px solid ${NAVY}; padding-bottom: 10px; margin-bottom: 14px; }
+  .mp-lh img { height: 54px; width: auto; display: block; }
+  .mp-lh-c { text-align: right; font-size: 13px; line-height: 1.45; color: ${INK}; }
+  .mp-lh-c strong { color: ${NAVY}; font-size: 14px; }
+  .mp p.mp-meta { font-size: 13px !important; line-height: 1.45 !important; margin: 0 0 14px !important; color: ${INK} !important; word-break: break-all; }
+  .mp-close { margin-top: 18px; border-top: 2px solid ${NAVY}; padding-top: 10px; font-size: 13px; line-height: 1.5; }
   .mp-phone { display: none; }
   /* Phones (Nov 1, 2026, owner's request): arriving from the homepage, both
      "What brings you here?" choices must be on the first screen. Shorter hero,
@@ -127,9 +136,26 @@ const PAGE_CSS = `
     .mp-print-only { display: block; }
     .mp-result { background: #fff; border: none; padding: 0; }
     .mp a.mp-link { border: none; padding: 2px 0; font-size: 14px !important; }
-    .mp a.mp-link::after { content: " — realpropertyplanning.com" attr(data-href); font-weight: 400; color: #444; }
+    /* The screen arrow is a 1.1em masked box; without this reset the address
+       text was squeezed into it and every link printed as a tall gap with a
+       stray arrow (found Nov 1, 2026). */
+    .mp a.mp-link::after { content: " — realpropertyplanning.com" attr(data-href); display: inline; width: auto; height: auto; margin: 0; background: none; -webkit-mask: none; mask: none; vertical-align: baseline; font-weight: 400; color: #444; font-size: 11px; }
+    .mp-links { gap: 2px; margin-top: 4px; }
+    .mp-plan > li { margin-bottom: 12px; }
+    .mp-plan > li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .mp p.mp-p { font-size: 15px !important; line-height: 1.45 !important; margin-bottom: 8px !important; }
+    .mp h2.mp-h2 { font-size: 24px !important; }
+    .mp h3.mp-h3 { font-size: 17px !important; }
+    .mp .mp-srclist li, .mp .mp-srclist li * { font-size: 14px !important; line-height: 1.45 !important; }
+    .mp-srclist { gap: 4px; }
+    .mp-sources p.mp-small { font-size: 13px !important; }
+    .mp-plan > li::before { top: 0; }
+    html, body, .mp, .mp-result { background: #fff !important; }
+    .mp-block { padding: 0 !important; }
+    .mp-lh { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .mp-close { break-inside: avoid; }
     .mp-plan > li { break-inside: avoid; }
-    .mp-sources { border: 1px solid #999; break-inside: avoid; }
+    .mp-sources { border: 1px solid #999; }
     .mp-srclist a.mp-inline::after { content: " (" attr(data-href) ")"; font-weight: 400; color: #444; font-size: 13px; word-break: break-all; }
   }
 `;
@@ -159,6 +185,19 @@ const MyPlan = () => {
   const [situation, setSituation] = useState<Situation | null>(null);
   const [answers, setAnswers] = useState<Answers>({});
   const [copied, setCopied] = useState(false);
+  /* Letterhead details for the printout: today's date and this plan's own
+     address (answers live in the fragment), refreshed just before printing. */
+  const [printInfo, setPrintInfo] = useState<{ date: string; url: string }>({ date: "", url: "" });
+  useEffect(() => {
+    const update = () =>
+      setPrintInfo({
+        date: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+        url: window.location.href.replace(/^https?:\/\/(www\.)?/, ""),
+      });
+    update();
+    window.addEventListener("beforeprint", update);
+    return () => window.removeEventListener("beforeprint", update);
+  }, []);
   // The two big "What brings you here?" choices collapse once one is picked.
   const [chooserOpen, setChooserOpen] = useState(true);
   const advanceAfterPick = useRef<string | null>(null);
@@ -327,9 +366,23 @@ const MyPlan = () => {
           </div>
         </div>
 
-        <div className="mp-print-only mp-wrap" style={{ paddingTop: 20 }}>
-          <p style={{ fontSize: 22, fontWeight: 700, margin: 0 }}>My Real Property Plan</p>
-          <p style={{ fontSize: 14, margin: "4px 0 16px" }}>realpropertyplanning.com/my-plan · general information, not legal, tax or financial advice</p>
+        <div className="mp-print-only mp-wrap">
+          <div className="mp-lh">
+            <img src={logo640} alt="Real Property Planning" width={291} height={60} loading="eager" />
+            <div className="mp-lh-c">
+              <strong>Real Property Planning</strong>
+              <br />
+              (206) 900-3015 · info@realpropertyplanning.com
+              <br />
+              realpropertyplanning.com
+            </div>
+          </div>
+          <p className="mp-meta">
+            <strong>My Real Property Plan</strong>
+            {printInfo.date ? ` · printed ${printInfo.date}` : ""}
+            <br />
+            Reopen this plan online: {printInfo.url || "realpropertyplanning.com/my-plan"}
+          </p>
         </div>
 
         <div className="mp-block mp-noprint">
@@ -450,6 +503,12 @@ const MyPlan = () => {
                       General information, not legal, tax or financial advice. Rules and figures change; confirm with these sources or a
                       professional before acting. The guides explain when it's worth calling one.
                     </p>
+                  </div>
+                  <div className="mp-print-only mp-close">
+                    <strong>Real Property Planning</strong> · free Washington guides for families dealing with a house after a death or a
+                    parent's move · realpropertyplanning.com
+                    <br />
+                    Questions about your plan? Call (206) 900-3015 or email info@realpropertyplanning.com.
                   </div>
                 </div>
 
