@@ -36,7 +36,10 @@ const RING_BUTTON: CSSProperties = {
   height: 44,
   padding: 0,
   borderRadius: "50%",
-  border: `1.75px solid ${HEADER_NAVY}`,
+  /* 1px (Nov 1, 2026, David; was 1.75px): the thickness of the logo's grey
+     lines at desktop size, 10.35 x 58.2 / 619 = 0.97px. Same rule as the
+     phone rings below. The Get Connected pill matches. */
+  border: `1px solid ${HEADER_NAVY}`,
   boxSizing: "border-box",
   background: "transparent",
   color: HEADER_NAVY,
@@ -50,7 +53,7 @@ const RING_BUTTON: CSSProperties = {
 /* Mobile header rings (Nov 1, 2026, David): same thickness as the two grey
    lines in the logo. The logo shows 37.9px tall on phones and its lines are
    10.35px in the 619px-tall master, so 10.35 x 37.9 / 619 = 0.63px. iPhones
-   draw that as 2 screen pixels. Desktop rings keep 1.75px. If the mobile logo
+   draw that as 2 screen pixels. Desktop rings are 1px by the same rule. If the mobile logo
    height or its line thickness ever changes, recompute this. */
 const MOBILE_RING_BUTTON: CSSProperties = { ...RING_BUTTON, border: `0.63px solid ${HEADER_NAVY}` };
 const SearchGlyph = ({ size }: { size: number }) => (
@@ -605,7 +608,7 @@ const Header = () => {
                 {/* The header's one action, in the hub's voice. Outlined, navy
                     text (Oct 26, 2026, David: the solid navy block and solid
                     navy phone made the right of the bar heavy). Same 1px
-                    outline as the search box; fills navy on hover. */}
+                    outline as the search and call rings; fills navy on hover. */}
                 <Link
                   to="/contact?reason=other"
                   className="rpp-header-connect rpp-header-outline bg-transparent"
@@ -620,7 +623,7 @@ const Header = () => {
                     /* Outlined navy pill (Oct 29, 2026 refresh); the faint
                        white fill lifts it off the marble. */
                     borderRadius: 999,
-                    border: `1.75px solid ${HEADER_NAVY}`,
+                    border: `1px solid ${HEADER_NAVY}`,
                     boxShadow: "none",
                     background: "rgba(255,255,255,0.55)",
                     color: HEADER_NAVY,

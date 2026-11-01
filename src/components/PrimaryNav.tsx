@@ -235,7 +235,11 @@ const PrimaryNav = () => {
           outline-offset: 3px;
           border-radius: 3px;
         }
-        .rpp-pn-line { display: block; white-space: nowrap; }
+        /* Weight on the span itself (Nov 1, 2026, David: "a shade or two
+           darker"). index.css has "body, p, li, td, span { font-weight: 400 }",
+           which beat the trigger's inherited weight, so the labels rendered at
+           400 whatever the trigger said. 500 is the approved look. */
+        .rpp-pn-line { display: block; white-space: nowrap; font-weight: 500; }
 
         /* Reserves two lines of height for EVERY label, whether it has one or
            two. The trigger is a centred flex column, so a one-line entry used
