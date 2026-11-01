@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { loadMetaPixel } from "@/lib/metaPixel";
 import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
+import { revealById } from "@/lib/revealScroll";
 
 /**
  * /family-home-planning (Oct 17, 2026): the first Facebook ad landing page.
@@ -186,7 +187,7 @@ const PAGE_CSS = `
 function Choices<T extends string>({ q, n, value, onPick }: { q: Question<T>; n: number; value: T | null; onPick: (v: T) => void }) {
   const labelId = `fhp-${q.id}-label`;
   return (
-    <div className="fhp-q">
+    <div className="fhp-q" id={`fhp-q-${q.id}`}>
       <p className="fhp-qtext" id={labelId}>
         <span className="fhp-qnum">{n}.</span>
         {q.prompt}
@@ -237,6 +238,29 @@ const FamilyHomePlanning = () => {
     loadMetaPixel();
   }, []);
 
+  /* Nov 1, 2026: after each answer, bring the next unanswered question (or, once
+     all three are answered, the "Where to start" box) into view — on a phone it
+     is often below the screen. Shared helper: src/lib/revealScroll.ts. */
+  const lastPick = useRef(false);
+  const wasDone = useRef(false);
+  const pickThen =
+    <T,>(set: (v: T) => void) =>
+    (v: T) => {
+      lastPick.current = true;
+      set(v);
+    };
+  useEffect(() => {
+    if (!lastPick.current) return;
+    lastPick.current = false;
+    if (done) {
+      if (!wasDone.current) revealById("fhp-result", { focus: true, always: true });
+    } else {
+      const next = discussed === null ? Q1 : topic === null ? Q2 : Q3;
+      revealById(`fhp-q-${next.id}`);
+    }
+    wasDone.current = done;
+  }, [discussed, topic, need, done]);
+
   /* Once per visit: answers can be changed afterwards without re-sending. */
   const reported = useRef(false);
   useEffect(() => {
@@ -272,13 +296,13 @@ const FamilyHomePlanning = () => {
         <div className="fhp-block">
           <div className="fhp-wrap">
             <div className="fhp-quiz">
-              <Choices<Discussed> q={Q1} n={1} value={discussed} onPick={setDiscussed} />
-              <Choices<Topic> q={Q2} n={2} value={topic} onPick={setTopic} />
-              <Choices<Need> q={Q3} n={3} value={need} onPick={setNeed} />
+              <Choices<Discussed> q={Q1} n={1} value={discussed} onPick={pickThen(setDiscussed)} />
+              <Choices<Topic> q={Q2} n={2} value={topic} onPick={pickThen(setTopic)} />
+              <Choices<Need> q={Q3} n={3} value={need} onPick={pickThen(setNeed)} />
 
               <div aria-live="polite">
                 {done && (
-                  <div className="fhp-result">
+                  <div className="fhp-result" id="fhp-result" tabIndex={-1}>
                     <p className="fhp-kicker">Where to start</p>
                     <h2 className="fhp-h2">{FIRST_STEP[discussed].title}</h2>
                     <p className="fhp-p">{FIRST_STEP[discussed].body}</p>

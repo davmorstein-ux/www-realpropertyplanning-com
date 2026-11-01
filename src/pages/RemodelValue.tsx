@@ -1,3 +1,4 @@
+import { revealById } from "@/lib/revealScroll";
 import { useEffect, useMemo, useState } from "react";
 import WhyIBuiltThis from "@/components/WhyIBuiltThis";
 import { CALCULATOR_NOTES } from "@/data/calculatorNotes";
@@ -281,6 +282,9 @@ export default function RemodelValue() {
     setRecordCond(f.cond);
     setCondTouched(false);
     setFacts(done ? { ...f, cond: beforeCond(f.cond, f.sk) } : f);
+    // Nov 1, 2026: step 2 appears below step 1 — off-screen on phones. Only on
+    // the first pick; later picks just update the steps already in view.
+    if (!facts) revealById("rmv-step2");
   };
 
   /* Switching modes swaps the condition between the county's record and the "before" default,
@@ -296,6 +300,7 @@ export default function RemodelValue() {
     if (!m) return;
     setPicked("manual");
     setFacts({ sk: m.zipDefault[zip], ...MANUAL_DEFAULTS, cond: m.condAvg ?? MANUAL_DEFAULTS.cond });
+    if (!facts) revealById("rmv-step2");
   };
 
   const set = <K extends keyof HomeFacts>(k: K, v: HomeFacts[K]) => setFacts((f) => (f ? { ...f, [k]: v } : f));
@@ -441,7 +446,7 @@ export default function RemodelValue() {
         {facts && (
           <>
             {/* ---------- step 2 ---------- */}
-            <div style={{ padding: "26px 0 10px" }}>
+            <div id="rmv-step2" style={{ padding: "26px 0 10px" }}>
               <div className="rmv-wrap">
                 <div className="rmv-steprow"><span className="rmv-step" aria-hidden="true">2</span><h2 className="rmv-h2" style={{ margin: 0 }}>{done ? "Your house before the remodel" : "Your house today"}</h2><img src={artStepToday} alt="" aria-hidden="true" width={64} height={64} className="rmv-stepart" /></div>
                 {done && (

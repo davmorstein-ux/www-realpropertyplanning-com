@@ -1,3 +1,4 @@
+import { revealById } from "@/lib/revealScroll";
 import { useState } from "react";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
@@ -121,12 +122,14 @@ const ApplicationForm = () => {
     setTimeout(() => {
       setSending(false);
       setSubmitted(true);
+      // Nov 1, 2026: the form is replaced by a shorter thank-you; bring it into view.
+      revealById("join-network-thanks", { focus: true, always: true });
     }, 500);
   };
 
   if (submitted) {
     return (
-      <section className="py-20 lg:py-28 bg-secondary">
+      <section id="join-network-thanks" tabIndex={-1} style={{ outline: "none" }} className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mb-6 mx-auto">

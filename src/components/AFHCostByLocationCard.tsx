@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useId, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { countyIndex, countiesChecked, countySlug, getCountySummary } from "@/data/afh/directory";
 import {
@@ -14,6 +14,7 @@ import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcWaiting, CalcFoot, CK_CSS, ckVars, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
 import RppArrow from "@/components/RppArrow";
+import { revealById } from "@/lib/revealScroll";
 /**
  * The city/county cost lookup as a self-contained card, in the same idiom as
  * the ROI and valuation calculators. Rendered on its own page
@@ -37,6 +38,9 @@ interface Place {
 }
 
 const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { compact?: boolean; accent?: string }) => {
+  // Nov 1, 2026: picking a city or county shows the result below the search
+  // box; bring it into view on phones. Shared helper: src/lib/revealScroll.ts.
+  const resultAnchor = `afh-cost-result-${useId().replace(/:/g, "")}`;
   const GREEN = accent;
   const places = useMemo<Place[]>(() => {
     const cities: Place[] = countyIndex.map((c) => ({
@@ -126,6 +130,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                   onClick={() => {
                     setPicked(m);
                     setQuery("");
+                    revealById(resultAnchor);
                   }}
                 >
                   {m.label}
@@ -139,6 +144,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
 
       {picked && county && region && range && band ? (
         <>
+          <div id={resultAnchor} aria-hidden="true" style={{ height: 0 }} />
           <CalcHero
             label={`Medicaid pays a home in ${placeName}, per month`}
             value={`${money(monthly(range.minDaily))} – ${money(monthly(range.maxDaily))}`}

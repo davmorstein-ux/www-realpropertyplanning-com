@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
+import { revealInView, revealById } from "@/lib/revealScroll";
 import {
   CHECKLIST_PDF,
   OFFICIAL_SOURCES,
@@ -31,6 +32,12 @@ import {
  * Class names use an mp- prefix and avoid "card", "tile", "section", "btn" and
  * "cta" (sitewide substring rules in index.css). Choices are buttons with
  * role="radio", not <label>s, because index.css forces every label in main to 14px.
+ *
+ * Mobile flow (Nov 1, 2026, owner's request): picking "What brings you here?"
+ * collapses the two big choices into a one-line "You chose … Change" bar and
+ * scrolls the questions up under the header; each answer scrolls to the next
+ * unanswered question if it is off-screen; the finished plan scrolls into view.
+ * All scrolling goes through src/lib/revealScroll.ts (the sitewide helper).
  */
 
 const NAVY = "#1B3A6B";
@@ -84,6 +91,12 @@ const PAGE_CSS = `
   .mp-srclist { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 10px; }
   .mp-srclist li { font-size: 17px; line-height: 1.5; }
   .mp-srcnote { color: #1c1917; }
+  .mp-chosen { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+  .mp p.mp-chosen-t { font-size: 18px !important; line-height: 1.4 !important; margin: 0 !important; color: ${INK} !important; }
+  .mp-chosen-t strong { color: ${NAVY}; }
+  .mp button.mp-change { min-height: 48px; padding: 8px 16px !important; border-radius: 8px !important; border: 2px solid ${NAVY} !important; background: #fff !important; color: ${NAVY} !important; font-family: ${FONT} !important; font-size: 17px !important; font-weight: 700 !important; cursor: pointer; }
+  .mp button.mp-change:focus-visible { outline: 3px solid ${NAVY} !important; outline-offset: 2px !important; }
+  .mp-questions:focus { outline: none; }
   .mp-print-only { display: none; }
   @media print {
     header, footer, nav, .mp-noprint, .rpp-news { display: none !important; }
@@ -100,7 +113,7 @@ const PAGE_CSS = `
 function Choices({ q, n, value, onPick }: { q: PlanQuestion; n: number; value: string | undefined; onPick: (v: string) => void }) {
   const labelId = `mp-${q.id}-label`;
   return (
-    <div className="mp-q">
+    <div className="mp-q" id={`mp-q-${q.id}`}>
       <p className="mp-qtext" id={labelId}>
         <span className="mp-qnum">{n}.</span>
         {q.prompt}
@@ -122,6 +135,11 @@ const MyPlan = () => {
   const [situation, setSituation] = useState<Situation | null>(null);
   const [answers, setAnswers] = useState<Answers>({});
   const [copied, setCopied] = useState(false);
+  // The two big "What brings you here?" choices collapse once one is picked.
+  const [chooserOpen, setChooserOpen] = useState(true);
+  const advanceAfterPick = useRef(false);
+  // True once the visitor answers a question on this page (not for a plan reopened from a saved link).
+  const answeredHere = useRef(false);
   const resultRef = useRef<HTMLDivElement>(null);
   const reported = useRef(false);
   const started = useRef(false);
@@ -137,6 +155,7 @@ const MyPlan = () => {
         reported.current = true;
         setSituation(saved.situation);
         setAnswers(saved.answers);
+        setChooserOpen(false);
       }
     };
     load();
@@ -167,6 +186,8 @@ const MyPlan = () => {
 
   const pick = (id: string, v: string) => {
     setCopied(false);
+    advanceAfterPick.current = true;
+    answeredHere.current = true;
     setAnswers((prev) => {
       const next = { ...prev, [id]: v };
       // Drop answers to questions no longer shown (e.g. the court question once the house is in a trust).
@@ -183,16 +204,39 @@ const MyPlan = () => {
       started.current = true;
       trackPlannerStarted(); // once per visit; never the answer
     }
-    setSituation(s);
-    setAnswers({});
-    setCopied(false);
-    reported.current = false;
+    if (s !== situation) {
+      setSituation(s);
+      setAnswers({});
+      setCopied(false);
+      reported.current = false;
+    }
+    setChooserOpen(false);
+    // Bring the questions up under the header and put focus on them.
+    // By id, not ref: on the first pick the panel doesn't exist until React renders it.
+    revealById("mp-questions", { focus: true, always: true });
   };
+
+  const reopenChooser = () => {
+    setChooserOpen(true);
+    revealById("mp-situation-label");
+  };
+
+  // After an answer, if the next unanswered question is off-screen, move to it.
+  // (The finished plan is handled by the effect below.)
+  useEffect(() => {
+    if (!advanceAfterPick.current) return;
+    advanceAfterPick.current = false;
+    if (!situation || done) return;
+    const next = questions.find((q) => !answers[q.id]);
+    if (next) revealById(`mp-q-${next.id}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answers]);
 
   const startOver = () => {
     setSituation(null);
     setAnswers({});
     setCopied(false);
+    setChooserOpen(true);
     reported.current = false;
     try {
       window.history.replaceState(null, "", window.location.pathname);
@@ -212,11 +256,16 @@ const MyPlan = () => {
     }
   };
 
-  // When the plan appears, move focus to it so keyboard and screen-reader users land there.
+  // When the plan appears, scroll it into view and move focus to it, so phone,
+  // keyboard and screen-reader users all land there. A plan reopened from a
+  // saved link is not scrolled (the visitor arrived for it; the top is fine).
   const wasDone = useRef(false);
   useEffect(() => {
-    if (done && !wasDone.current) resultRef.current?.focus({ preventScroll: true });
+    if (done && !wasDone.current && answeredHere.current) {
+      revealInView(resultRef.current, { focus: true, always: true });
+    }
     wasDone.current = done;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done]);
 
   const title = situation === "estate" ? "Your plan for the house" : "Your plan for your parent's housing";
@@ -250,6 +299,16 @@ const MyPlan = () => {
 
         <div className="mp-block mp-noprint">
           <div className="mp-wrap">
+            {situation && !chooserOpen ? (
+              <div className="mp-panel mp-chosen">
+                <p className="mp-chosen-t">
+                  You chose: <strong>{SITUATIONS.find((x) => x.value === situation)?.label}</strong>
+                </p>
+                <button type="button" className="mp-change" onClick={reopenChooser}>
+                  Change
+                </button>
+              </div>
+            ) : (
             <div className="mp-panel">
               <p className="mp-qtext" id="mp-situation-label">What brings you here?</p>
               <div className="mp-choices mp-two" role="radiogroup" aria-labelledby="mp-situation-label">
@@ -271,9 +330,16 @@ const MyPlan = () => {
                 Buying an adult family home? <Link className="mp-inline" to="/afh-club">AFH Club</Link> has its own buyer's steps.
               </p>
             </div>
+            )}
 
             {situation && (
-              <div className="mp-panel" style={{ marginTop: 20 }}>
+              <div
+                className="mp-panel mp-questions"
+                id="mp-questions"
+                style={{ marginTop: 20 }}
+                tabIndex={-1}
+                aria-labelledby={questions[0] ? `mp-${questions[0].id}-label` : undefined}
+              >
                 {questions.map((q, i) => (
                   <Choices key={q.id} q={q} n={i + 1} value={answers[q.id]} onPick={(v) => pick(q.id, v)} />
                 ))}

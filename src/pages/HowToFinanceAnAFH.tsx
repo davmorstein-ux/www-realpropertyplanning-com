@@ -9,6 +9,7 @@ import { LANES, LENDERS, SBA_RATE_BOX, type LaneId } from "@/data/afhLenders";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import ArticleCover from "@/components/ArticleCover";
 import LenderCard from "@/components/afh/LenderCard";
+import { revealById } from "@/lib/revealScroll";
 
 /**
  * How to Finance an Adult Family Home in Washington State (Sept 2026).
@@ -93,7 +94,12 @@ const HowToFinanceAnAFH = () => {
                   <button
                     key={s.label}
                     type="button"
-                    onClick={() => setSituation(i)}
+                    onClick={() => {
+                      setSituation(i);
+                      // Nov 1, 2026: the "Start with" box appears under the last button —
+                      // off-screen on a phone after tapping an upper one.
+                      revealById("afh-fin-start-with", { focus: true });
+                    }}
                     aria-pressed={situation === i}
                     style={{
                       textAlign: "left",
@@ -113,7 +119,7 @@ const HowToFinanceAnAFH = () => {
                 ))}
               </div>
               {chosen && (
-                <div style={{ marginTop: 16, background: "#fff", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "14px 16px" }}>
+                <div id="afh-fin-start-with" tabIndex={-1} aria-live="polite" style={{ outline: "none", marginTop: 16, background: "#fff", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "14px 16px" }}>
                   <div style={{ fontSize: 17, fontWeight: 700, color: TEAL_DARK, marginBottom: 4 }}>Start with: {laneFor(chosen.lane).title}</div>
                   <div style={{ fontSize: 18, lineHeight: 1.6, color: INK }}>{chosen.note}</div>
                   <a href={`#lane-${chosen.lane}`} style={{ display: "inline-block", marginTop: 8, fontSize: 18, fontWeight: 700, color: TEAL }}>Read about this lane and see lenders ↓</a>

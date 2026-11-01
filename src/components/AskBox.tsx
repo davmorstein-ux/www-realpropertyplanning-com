@@ -5,6 +5,7 @@ import { ask, buildCards, type AnswerCard, type AskResult } from "@/lib/askSearc
 import { trackAsk } from "@/lib/siteTracking";
 
 import RppArrow from "@/components/RppArrow";
+import { revealInView } from "@/lib/revealScroll";
 /**
  * "Ask a question" (Oct 8, 2026; owner's idea after a buyer's call: visitors
  * should get a quick answer and the page to read next).
@@ -125,9 +126,12 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
     }
   };
 
+  // Nov 1, 2026: the answer appears below the box and examples — on a phone it
+  // is often off-screen, so bring it into view (only if it isn't already) and
+  // move focus to it. Shared helper: src/lib/revealScroll.ts.
   useEffect(() => {
-    if (res && resultRef.current) resultRef.current.focus({ preventScroll: true });
-  }, [res]);
+    if ((res || failed) && resultRef.current) revealInView(resultRef.current, { focus: true });
+  }, [res, failed]);
 
   const answerHref = res?.answer?.path ?? "";
 

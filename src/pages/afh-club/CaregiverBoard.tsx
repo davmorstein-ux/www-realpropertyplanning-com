@@ -1,3 +1,4 @@
+import { revealById } from "@/lib/revealScroll";
 /**
  * AFH Caregiver Board (Oct 5, 2026). Caregivers looking for work and adult
  * family homes hiring. Version one is owner-approved: posts and contact
@@ -362,6 +363,13 @@ const schema = {
 
 const CaregiverBoard = () => {
   const [openForm, setOpenForm] = useState<"" | "caregiver" | "job">("");
+  // Nov 1, 2026: the form opens below both buttons — off-screen on a phone.
+  // Opening scrolls to it; tapping the open one again closes it. Helper: src/lib/revealScroll.ts.
+  const openOne = (which: "caregiver" | "job") => {
+    const next = openForm === which ? "" : which;
+    setOpenForm(next);
+    if (next) revealById("cgb-open-form");
+  };
   /* First render uses the date the posts were last edited, so the static HTML
      and the browser agree; then switch to today's date. */
   const [today, setToday] = useState(BOARD_AS_OF);
@@ -411,17 +419,19 @@ const CaregiverBoard = () => {
 
             <h2 className="cgb-h2" style={{ marginTop: 32 }}>Post on the board</h2>
             <div className="cgb-choose">
-              <button type="button" className="cgb-pick" aria-expanded={openForm === "caregiver"} onClick={() => setOpenForm(openForm === "caregiver" ? "" : "caregiver")}>
+              <button type="button" className="cgb-pick" aria-expanded={openForm === "caregiver"} onClick={() => openOne("caregiver")}>
                 <strong>I&apos;m looking for AFH work</strong>
                 <span>Caregivers, resident managers and nurses</span>
               </button>
-              <button type="button" className="cgb-pick" aria-expanded={openForm === "job"} onClick={() => setOpenForm(openForm === "job" ? "" : "job")}>
+              <button type="button" className="cgb-pick" aria-expanded={openForm === "job"} onClick={() => openOne("job")}>
                 <strong>My adult family home is hiring</strong>
                 <span>For licensed Washington adult family homes</span>
               </button>
             </div>
-            {openForm === "caregiver" && <CaregiverForm />}
-            {openForm === "job" && <JobForm />}
+            <div id="cgb-open-form">
+              {openForm === "caregiver" && <CaregiverForm />}
+              {openForm === "job" && <JobForm />}
+            </div>
           </div>
         </section>
 
