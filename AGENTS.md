@@ -8,7 +8,7 @@ facts). Read the one for the area you touch.
 ## What this is
 `realpropertyplanning.com`: a neutral educational hub (probate, inherited property, estate
 sales, senior housing) plus AFH Club for Washington adult family homes. React + TS + Vite +
-Tailwind. `main` deploys straight to the live site, no staging. A build step in
+Tailwind. `main` deploys straight to the live site, no staging (Cloudflare since Nov 1, 2026: every push to main is built and published by `.github/workflows/deploy-cloudflare.yml` in about 4 minutes; Lovable's Publish button no longer affects the live site; see `docs/cloudflare-move.md`). A build step in
 `vite.config.ts` prerenders static HTML per route; crawlers read that, so SEO changes must
 exist in the prerendered output. The repository is public.
 
@@ -37,7 +37,7 @@ npx tsc --noEmit -p tsconfig.app.json
 
 ## AFH listing push alerts ("Real Plan" home-screen app, Oct 18, 2026)
 - Feed: `src/data/afhAlerts.ts` → `dist/afh-alert-feed.json` at build. It must never carry a listing's address, price, photo or beds (NWMLS; same rule as `src/lib/aiData.ts`); `src/test/afhAlerts.test.ts` fails if it does.
-- Sending: `supabase/functions/push-check` (pg_cron every 15 min, diffs the LIVE feed, so alerts follow Publish). Sign-ups: `supabase/functions/push-subscribe`; box: `src/components/AFHPushAlerts.tsx`; browser side `src/lib/pushAlerts.ts`; `public/sw.js` has no fetch handler on purpose (never cache pages).
+- Sending: `supabase/functions/push-check` (pg_cron every 15 min, diffs the LIVE feed, so alerts follow the deploy). Sign-ups: `supabase/functions/push-subscribe`; box: `src/components/AFHPushAlerts.tsx`; browser side `src/lib/pushAlerts.ts`; `public/sw.js` has no fetch handler on purpose (never cache pages).
 - Web Push is hand-written on Web Crypto (`_shared/webpush.ts`); the npm `web-push` package needs Node ECDH that Deno lacks. Tests decrypt its output independently.
 - Keys: public key in `src/lib/pushAlerts.ts` and `supabase/functions/_shared/vapid.ts` (must match); private key only in the Supabase secret `VAPID_PRIVATE_KEY`. Replacing the pair cancels every subscription.
 - More than 12 changes in one publish are saved without sending (treated as a data update). Adding a past sale for the sold page sends nothing.

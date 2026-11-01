@@ -10,7 +10,7 @@ housing, plus **AFH Club**, a marketplace and resource section for Washington
 adult family homes (AFHs).
 
 - React + TypeScript + Vite + Tailwind, with a lot of inline JSX styles.
-- Originally generated in Lovable. **The `main` branch deploys to the live site.**
+- Originally generated in Lovable. **The `main` branch deploys to the live site** (Cloudflare, via GitHub Actions, since Nov 1, 2026).
   There is no staging environment and no review step.
 - Pages are client-rendered, and a build step in `vite.config.ts` also writes
   static HTML for each route (titles, descriptions, quick answers, FAQs, and the

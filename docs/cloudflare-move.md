@@ -1,4 +1,4 @@
-# Moving hosting from Lovable to Cloudflare (started Nov 1, 2026)
+# Moving hosting from Lovable to Cloudflare (done Nov 1, 2026)
 
 Why: Lovable serves every page uncached from its origin (`cache-control: no-cache`, no
 `cf-cache-status`), so Time to First Byte was 0.25 s in Europe, 0.72 s in San Francisco and
@@ -35,3 +35,15 @@ addressed below: one host only, the domain attached through the Worker's Custom 
 ## Rollback
 At GoDaddy, set nameservers back to GoDaddy's defaults; GoDaddy's DNS still holds
 `A @ 185.158.133.1` (Lovable). Keep the Step 4 screenshot until the move is settled.
+
+## Status (Nov 1, 2026, evening)
+Done: zone active (nameservers carlos/virginia.ns.cloudflare.com, DNSSEC off at GoDaddy), all
+email/verification records copied and DNS only (SPF sub-record `dc-db9e4b7a04._spfm` was added by
+hand: the import missed it), Worker `realpropertyplanning` attached as Custom Domain to
+`realpropertyplanning.com` and `www.realpropertyplanning.com`, Redirect Rule "Redirect from WWW to
+root" (301, preserve query string). First header check on the live domain: `server: cloudflare`,
+`cf-cache-status: HIT`, the project's own `cache-control` (Lovable ignored it).
+Left: remove the custom domain in Lovable; old Pages project `www-realpropertyplanning-com`
+(April) is disconnected from GitHub but not deleted (too many deployments for the dashboard).
+Rollback now: re-add `A @ 185.158.133.1` (DNS only) after removing the Worker custom domain, or
+put GoDaddy nameservers back (ns47/ns48.domaincontrol.com).
