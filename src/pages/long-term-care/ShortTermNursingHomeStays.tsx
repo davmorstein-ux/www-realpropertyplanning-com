@@ -6,6 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 import NextQuestions from "@/components/NextQuestions";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 
 const h2Class = "font-serif text-[28px] font-semibold text-[hsl(215,45%,18%)] mt-10 mb-4";
 const pClass = "font-body text-lg leading-[1.8] text-[hsl(220,25%,22%)] mt-6";
@@ -28,6 +29,11 @@ const ShortTermNursingHomeStays = () => {
           <div className="max-w-[760px] mx-auto">
             <h2 className={h2Class + " mt-0"}>Short-Term Nursing Home Stays in Washington State: What Families Need to Know</h2>
             <p className={leadClass}>A nursing home admission does not always mean a permanent move. For many older adults in Washington, a short-term stay is a bridge between hospital and home — and knowing how to cross it makes all the difference.</p>
+
+            {/* Recording was in public/audio but never wired to the page (found Nov 1, 2026). */}
+            <div className="mb-6">
+              <ArticleAudioPlayer audioSrc="/audio/short-term-nursing-home-stays.mp3" />
+            </div>
 
             <p className={pClass}>Most people hear the words "nursing home" and think of long-term care. A final chapter. A place you go and don't come back from. That assumption causes real harm — because it leads families to resist a level of care that could genuinely help, at exactly the moment when help is most needed.</p>
             <p className={pClass}>The truth is more hopeful. Skilled nursing stays are often temporary. They help older adults recover after surgery, illness, or a medical setback — and then return to the life they were living before.</p>
