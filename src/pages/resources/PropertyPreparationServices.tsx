@@ -20,7 +20,7 @@ const PropertyPreparationServices = () => (
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Find a Professional", url: "https://realpropertyplanning.com/featured-professionals" },
         { name: "Property Preparation Services", url: "https://realpropertyplanning.com/resources/property-preparation-services" },
       ]}
     />

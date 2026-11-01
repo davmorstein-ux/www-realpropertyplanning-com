@@ -19,7 +19,7 @@ const ProbateEstateAttorneys = () => (
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Find a Professional", url: "https://realpropertyplanning.com/featured-professionals" },
         { name: "Probate Attorney", url: "https://realpropertyplanning.com/resources/probate-estate-attorneys" },
       ]}
     />

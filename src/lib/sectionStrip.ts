@@ -117,13 +117,14 @@ export const sectionStripFor = (pathname: string): SectionStrip | null => {
   if (isAFHClubPath(path)) return null;
   for (const menu of PRIMARY_NAV) {
     if (!STRIP_MENUS.includes(menu.href) || !menu.items) continue;
+    const topics = menu.strip ?? menu.items;
     // Anchor links (e.g. /newsletter#afh) point into another page; leave them out.
     // AFH Club pages stay as links (the AFH directory is a Senior Transitions topic)
     // but never show this strip themselves (checked above).
     // The family doorways (Nov 1, 2026) are in the Senior Transitions menu but
     // keep their own simplified layout: no tabs or photo band there, and no tab
     // for them on other pages.
-    const items = menu.items.filter((i) => !i.href.includes("#") && !STRIP_SKIP.includes(i.href));
+    const items = topics.filter((i) => !i.href.includes("#") && !STRIP_SKIP.includes(i.href));
     if (!items.some((i) => i.href === path)) continue;
     return {
       heading: menu.lines.join(" ").replace(/\s+/g, " "),

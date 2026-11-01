@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 import { CUSTOM_HEADER_ROUTES, STRIP_LABELS, STRIP_MENUS, STRIP_PHOTOS, STRIP_SKIP, sectionStripFor } from "@/lib/sectionStrip";
 
-const stripItems = PRIMARY_NAV.filter((m) => STRIP_MENUS.includes(m.href)).flatMap((m) => m.items ?? []);
+const stripItems = PRIMARY_NAV.filter((m) => STRIP_MENUS.includes(m.href)).flatMap((m) => m.strip ?? m.items ?? []);
 
 describe("section strip", () => {
   it("every strip menu exists in the site menu", () => {

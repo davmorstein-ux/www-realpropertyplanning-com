@@ -32,7 +32,37 @@ export interface PrimaryNavEntry {
   href: string;
   color?: string;
   items?: PrimaryNavItem[];
+  /** Full topic list for the section tabs and site map, when the menu itself
+   *  is a shorter list (Nov 1, 2026: menus trimmed to about ten entries). */
+  strip?: PrimaryNavItem[];
 }
+
+/* Find a Professional: the six attorney pages share one menu entry. */
+const ATTORNEY_PAGES: PrimaryNavItem[] = [
+  { name: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
+  { name: "Probate & Estate Attorneys", href: "/for-probate-attorneys" },
+  { name: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
+  { name: "Real Estate Attorneys", href: "/real-estate-attorneys" },
+  { name: "Family Law Attorneys", href: "/for-family-law-attorneys" },
+  { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
+];
+const PRO_AFTER_ATTORNEYS: PrimaryNavItem[] = [
+  { name: "Legal Plans & ID Protection", href: "/legal-plans-identity-protection" },
+  { name: "Certified Appraisers", href: "/real-estate-appraiser" },
+  { name: "Real Estate Brokers", href: "/realtor" },
+  { name: "CPAs & Accountants", href: "/for-cpas" },
+  { name: "Financial Planners", href: "/professionals/financial-planners" },
+  { name: "Mortgage Lenders", href: "/mortgage-lenders" },
+  { name: "Estate Liquidators", href: "/estate-liquidators" },
+];
+/* Guides & Tools: single articles stay as section tabs, not menu entries. */
+const FEATURED_ARTICLES: PrimaryNavItem[] = [
+  { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+  { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
+  { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
+  { name: "Aging in Place", href: "/articles/aging-in-place" },
+  { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
+];
 
 export const PRIMARY_NAV: PrimaryNavEntry[] = [
   {
@@ -71,6 +101,17 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Understanding Housing & Care Options", href: "/understanding-housing-care-options" },
       { name: "Adult Family Home Directory", href: "/afh-club/homes" },
       { name: "Cost of Care Calculators", href: "/cost-of-care-calculator" },
+      { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
+      { name: "Downsizing & Preparing to Move", href: "/downsizing-preparing-for-transition" },
+      { name: "Long-Term Care", href: "/long-term-care" },
+    ],
+    /* Senior Living Advisors and Senior Move Managers left the menu (Nov 1,
+       2026; they are on the Senior Transitions page and its tabs). */
+    strip: [
+      { name: "Senior Transitions", href: "/senior-transitions" },
+      { name: "Understanding Housing & Care Options", href: "/understanding-housing-care-options" },
+      { name: "Adult Family Home Directory", href: "/afh-club/homes" },
+      { name: "Cost of Care Calculators", href: "/cost-of-care-calculator" },
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
       { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
@@ -86,19 +127,15 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Find a Professional", href: "/featured-professionals" },
       /* Nov 1, 2026: the homepage's "I Need a Professional" guide. */
       { name: "Not Sure Who You Need? Start Here", href: "/building-your-professional-team" },
-      { name: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
-      { name: "Probate & Estate Attorneys", href: "/for-probate-attorneys" },
-      { name: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
-      { name: "Real Estate Attorneys", href: "/real-estate-attorneys" },
-      { name: "Family Law Attorneys", href: "/for-family-law-attorneys" },
-      { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
-      { name: "Legal Plans & ID Protection", href: "/legal-plans-identity-protection" },
-      { name: "Certified Appraisers", href: "/real-estate-appraiser" },
-      { name: "Real Estate Brokers", href: "/realtor" },
-      { name: "CPAs & Accountants", href: "/for-cpas" },
-      { name: "Financial Planners", href: "/professionals/financial-planners" },
-      { name: "Mortgage Lenders", href: "/mortgage-lenders" },
-      { name: "Estate Liquidators", href: "/estate-liquidators" },
+      /* One entry for all six attorney pages (Nov 1, 2026); each still has
+         its own tab on the Find a Professional pages. */
+      { name: "Attorneys (All Types)", href: "/professionals/attorneys" },
+      ...PRO_AFTER_ATTORNEYS,
+    ],
+    strip: [
+      { name: "Find a Professional", href: "/featured-professionals" },
+      ...ATTORNEY_PAGES,
+      ...PRO_AFTER_ATTORNEYS,
     ],
   },
   {
@@ -120,7 +157,6 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Licensing & Certification", href: "/afh-club/licensing-certification" },
       { name: "Find a Professional", href: "/afh-club/find-a-professional" },
       { name: "Caregiver Job Board", href: "/afh-club/caregivers" },
-      { name: "AFH Club Newsletter", href: "/newsletter#afh" },
     ],
   },
   {
@@ -128,16 +164,21 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     href: "/guides-and-resources",
     color: "#6b30a6",
     items: [
-     { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "Articles Library", href: "/articles" },
+      { name: "Questions & Answers", href: "/questions" },
+      { name: "All Calculators", href: "/calculators" },
+      { name: "What's My Home Worth After Remodeling?", href: "/whats-my-remodel-worth" },
+      { name: "Probate Glossary", href: "/probate-glossary" },
+      { name: "Newsletter", href: "/newsletter" },
+    ],
+    strip: [
+      { name: "All Guides & Articles", href: "/guides-and-resources" },
       { name: "All Calculators", href: "/calculators" },
       { name: "Newsletter", href: "/newsletter" },
       { name: "What's My Home Worth After Remodeling?", href: "/whats-my-remodel-worth" },
       { name: "Articles Library", href: "/articles" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "Aging in Place", href: "/articles/aging-in-place" },
-      { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
+      ...FEATURED_ARTICLES,
       { name: "Probate Glossary", href: "/probate-glossary" },
     ],
   },

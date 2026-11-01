@@ -127,3 +127,9 @@ bold, navy) are the one exception. The card rule that shrinks headings inside
 - Styles: "AGING PARENT SIMPLE LAYOUT" at the end of index.css. Class names start `apf-` and must not contain card/cta/btn/tile/section.
 - After editing either flow file, run `node scripts/build-aging-parent-routes.mjs` (h1 = plain title, description = short answer).
 - Same pattern is planned next for the Estate, Plan Ahead and Professional paths.
+
+## Navigation: one menu, one front door, "you are here" (Nov 1, 2026)
+- `src/lib/primaryNav.ts` is the only menu list: laptop dropdowns AND the phone drawer (WaterfallNav) read it. `items` is the menu (about ten each); optional `strip` is the fuller topic list for the section tabs and site map. Doorway pages with their own layout are in `STRIP_SKIP` (src/lib/sectionStrip.ts).
+- One front door each: estate = `/estate-probate-inherited-property`, find a professional = `/featured-professionals` (its "who do I need?" guide is `/building-your-professional-team`). `/resources`, `/professionals`, `/professionals-services`, `/roles`, `/planning` are redirects now; never link to them.
+- Breadcrumb line under the header: `src/components/Breadcrumbs.tsx`, trail from the site maps (`src/lib/breadcrumbs.ts`). Not shown on the homepage, on pages with section tabs, or on the two flow-chart guides (they have their own).
+- City probate pages: `src/data/cityProbatePages.ts`; county pages link them.

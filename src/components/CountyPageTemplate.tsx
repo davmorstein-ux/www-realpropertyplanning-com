@@ -1,3 +1,4 @@
+import { cityPagesForCounty } from "@/data/cityProbatePages";
 import { COUNTY_OFFICIAL_RESOURCES } from "@/data/countyOfficialResources";
 import { currentPath } from "@/data/redirects";
 import Header from "@/components/Header";
@@ -542,9 +543,25 @@ const CountyPageTemplate = ({
               {communitiesIntro && (
                 <p className="text-muted-foreground text-lg leading-relaxed mb-5">{communitiesIntro}</p>
               )}
+              {/* City guides (Nov 1, 2026): these pages were reachable only from the site map. */}
+              {cityPagesForCounty(countySlug).length > 0 && (
+                <p className="text-lg leading-relaxed mb-5" style={{ color: "#1c1917" }}>
+                  City {cityPagesForCounty(countySlug).length > 1 ? "guides" : "guide"} for inherited and estate homes:{" "}
+                  {cityPagesForCounty(countySlug).map((c, i) => (
+                    <span key={c.href}>
+                      {i > 0 && " · "}
+                      <Link to={c.href} style={{ color: "#1B3A6B", fontWeight: 700, textDecoration: "underline" }}>
+                        {c.title}
+                      </Link>
+                    </span>
+                  ))}
+                </p>
+              )}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2.5">
                 {cities.map((cityName) => {
-                  // City pages were retired (/cities/* redirects to /counties), so names are plain text (Oct 8, 2026 audit).
+                  // The old /cities/* pages were retired (Oct 8, 2026 audit); a name links only
+                  // when it has a city probate page (src/data/cityProbatePages.ts).
+                  const cityPage = cityPagesForCounty(countySlug).find((c) => c.city === cityName);
                   return (
                     <div key={cityName} className="flex items-center gap-2">
                       <img
@@ -558,7 +575,13 @@ const CountyPageTemplate = ({
                         width={1024}
                         height={1024}
                       />
-                      <span className="text-foreground text-sm">{cityName}</span>
+                      {cityPage ? (
+                        <Link to={cityPage.href} className="text-sm" style={{ color: "#1B3A6B", fontWeight: 700, textDecoration: "underline" }}>
+                          {cityName}
+                        </Link>
+                      ) : (
+                        <span className="text-foreground text-sm">{cityName}</span>
+                      )}
                     </div>
                   );
                 })}

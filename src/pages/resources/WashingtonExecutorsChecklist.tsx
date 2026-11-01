@@ -97,7 +97,7 @@ const WashingtonExecutorsChecklist = () => {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://realpropertyplanning.com" },
-          { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+          { name: "Guides & Resources", url: "https://realpropertyplanning.com/guides-and-resources" },
           {
             name: "Washington Executor's 10-Step Checklist",
             url: "https://realpropertyplanning.com/resources/washington-executors-10-step-checklist",

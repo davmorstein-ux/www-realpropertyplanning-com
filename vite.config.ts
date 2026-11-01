@@ -1840,10 +1840,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Guidance for families, executors, and seniors with estate or inherited property in Olympia, WA. Support for transitions, timing, and next steps.",
     h1: "Helping Families Navigate Estate Property in Olympia",
   },
-  "/planning": {
-    title: "Planning & Next Steps | Estate & Senior Transition Roadmap — WA",
-    description: "A practical roadmap for planning ahead — estate prep, property decisions, and senior housing transitions guided with care across Washington State.",
-  },
   "/planning-before-a-crisis": {
     title: "Planning Before a Crisis | Real Property Planning",
     description: "Most families wait until a health emergency or a loved one's passing to sort out housing and property. Learn what you can do now — while there's still time to plan calmly.",
@@ -1929,10 +1925,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Retirement & Reverse Mortgage Guidance | Real Property Planning",
     description: "Reverse mortgage and retirement financing guidance for Washington State (WA) seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions.",
     h1: "Reverse Mortgages and Retirement in Washington State",
-  },
-  "/roles": {
-    title: "Roles & Responsibilities | Executors, Trustees & POA — Washington State",
-    description: "Clear guidance on the roles that govern estates — executors, trustees, power of attorney, and the duties each carries in Washington State (WA).",
   },
   "/search": {
     title: "Search | Real Property Planning",

@@ -20,7 +20,7 @@ const EstateSaleCompanies = () => (
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Find a Professional", url: "https://realpropertyplanning.com/featured-professionals" },
         { name: "Estate Sale Companies", url: "https://realpropertyplanning.com/resources/estate-sale-companies" },
       ]}
     />

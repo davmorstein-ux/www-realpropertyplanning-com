@@ -1241,10 +1241,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/planning",
-    links: [],
-  },
-  {
     path: "/planning-before-a-crisis",
     links: ["/contact"],
   },
@@ -1351,10 +1347,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     path: "/retirement-reverse-mortgage",
     links: ["/contact"],
-  },
-  {
-    path: "/roles",
-    links: [],
   },
   {
     path: "/san-juan-county",

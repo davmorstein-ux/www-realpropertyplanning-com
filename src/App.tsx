@@ -186,8 +186,6 @@ const CareManagers = lazy(() => import("./pages/professionals/CareManagers"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
 const ShareYourExperience = lazy(() => import("./pages/ShareYourExperience"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const Roles = lazy(() => import("./pages/Roles"));
-const Planning = lazy(() => import("./pages/Planning"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const Search = lazy(() => import("./pages/Search"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
@@ -550,8 +548,6 @@ export const AppRoutes = () => (
       />
 
       {/* ─── Professionals directory (for families) ───────────── */}
-      <Route path="/roles" element={<Roles />} />
-      <Route path="/planning" element={<Planning />} />
       <Route path="/professionals/attorneys" element={<AttorneysDirectory />} />
       <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
       <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />

@@ -64,7 +64,7 @@ const Attorneys = () => (
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Professionals", url: "https://realpropertyplanning.com/professionals" },
+        { name: "Find a Professional", url: "https://realpropertyplanning.com/featured-professionals" },
         { name: "Attorneys", url: "https://realpropertyplanning.com/professionals/attorneys" },
       ]}
     />

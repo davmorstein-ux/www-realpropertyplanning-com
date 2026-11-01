@@ -8,6 +8,7 @@ const useBeforePaint = typeof window !== "undefined" ? useLayoutEffect : useEffe
 import { Link, useLocation } from "react-router-dom";
 import AFHClubQuickLinks from "@/components/AFHClubQuickLinks";
 import SectionStrip from "@/components/SectionStrip";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import WaterfallNav from "./WaterfallNav";
 import { lazy } from "@/lib/chunkRecovery";
 /* Loaded when search is opened (Oct 6, 2026): search sits behind an icon on
@@ -689,6 +690,8 @@ const Header = () => {
       <SectionStrip />
       {/* AFH Club quick links: renders only on AFH Club pages (owner, Oct 1, 2026). */}
       <AFHClubQuickLinks />
+      {/* "You are here" line (Nov 1, 2026): src/lib/breadcrumbs.ts. */}
+      <Breadcrumbs />
     </>
   );
 };

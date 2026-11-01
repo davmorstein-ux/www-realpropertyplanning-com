@@ -25,6 +25,7 @@ import { CARE_CALCULATORS } from "../lib/careCalculators";
 import { AFH_CALCULATORS } from "./calculatorIndex";
 import { AFH_CITY_PAGES } from "./afhCityPages";
 import { POLICY_PAGES } from "./policyPages";
+import { CITY_PROBATE_PAGES } from "./cityProbatePages";
 
 export interface SiteMapLink {
   title: string;
@@ -50,7 +51,8 @@ const nav = (href: string) => {
   if (!entry) throw new Error(`siteMaps: no header menu at ${href}`);
   // Anchor links (the planner opened on one situation, /my-plan#estate:) are
   // left out; the planner has its own site map entry.
-  return (entry.items ?? []).filter((i) => !i.href.includes("#")).map((i) => ({ title: i.name, href: i.href }));
+  // Menu entries first, then any section-tab-only topics (entry.strip).
+  return [...(entry.items ?? []), ...(entry.strip ?? [])].filter((i) => !i.href.includes("#")).map((i) => ({ title: i.name, href: i.href }));
 };
 
 const titleCase = (slug: string) =>
@@ -89,16 +91,7 @@ const COUNTIES = [
   "wahkiakum", "yakima", "franklin",
 ];
 
-const CITY_PAGES: SiteMapLink[] = [
-  { title: "Seattle", href: "/seattle-probate-estate-real-estate" },
-  { title: "Bellevue", href: "/bellevue-probate-estate-real-estate" },
-  { title: "Tacoma", href: "/tacoma-probate-estate-real-estate" },
-  { title: "Everett", href: "/everett-probate-estate-real-estate" },
-  { title: "Olympia", href: "/olympia-probate-estate-real-estate" },
-  { title: "Bellingham", href: "/bellingham-probate-estate-real-estate" },
-  { title: "Spokane", href: "/spokane-probate-estate-real-estate" },
-  { title: "Vancouver, WA", href: "/vancouver-wa-probate-estate-real-estate" },
-];
+const CITY_PAGES: SiteMapLink[] = CITY_PROBATE_PAGES.map((c) => ({ title: c.title, href: c.href }));
 
 export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
   {
@@ -111,8 +104,6 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           ...nav("/probate-estate-sales"),
           { title: "Estate Liquidation & Estate Sales Explained", href: "/estate-liquidation/learn-more" },
           { title: "10 Steps Every Executor Should Know", href: "/resources/washington-executors-10-step-checklist" },
-          { title: "Roles & Responsibilities", href: "/roles" },
-          { title: "Planning & Next Steps", href: "/planning" },
           { title: "Planning Before a Crisis: How This Site Helps", href: "/planning-before-a-crisis/how-this-site-helps" },
           { title: "What Will Happen to the Family Home? (Free Checklist)", href: "/family-home-planning" },
           { title: "My Real Property Plan (Free Step-by-Step Plan)", href: "/my-plan" },

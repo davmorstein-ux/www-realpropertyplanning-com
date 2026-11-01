@@ -33,6 +33,10 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/resources", to: "/featured-professionals" },
   { from: "/professionals", to: "/featured-professionals" },
   { from: "/professionals-services", to: "/featured-professionals" },
+  /* Two leftover tile pages from the old site (Nov 1, 2026), reachable only
+     from the site map and still in the old wording. */
+  { from: "/roles", to: "/executors" },
+  { from: "/planning", to: "/planning-before-a-crisis" },
   /* Family-facing adult family home guides moved out of AFH Club (which is
      for home operators) into the senior living section, Oct 4, 2026. */
   { from: "/afh-club/what-is-an-adult-family-home", to: "/senior-living/what-is-an-adult-family-home" },
