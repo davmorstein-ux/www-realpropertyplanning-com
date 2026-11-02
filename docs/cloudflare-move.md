@@ -50,3 +50,11 @@ put GoDaddy nameservers back (ns47/ns48.domaincontrol.com).
 Lovable custom domains removed (Nov 1, 2026). KeyCDN Performance Test after the move, TTFB:
 Frankfurt 74 ms, Amsterdam 105, London 107, New York 97, San Francisco 114, Singapore 318,
 Sydney 259, Bangalore 241 (Lovable: 254-335 Europe, 444 NY, 720 SF, 1,100-2,360 Asia/Australia).
+
+## Not-found handling (Nov 2, 2026)
+`not_found_handling` changed from "single-page-application" to "404-page": an address with no file
+now gets dist/404.html (the app shell, noindex) with status 404 instead of the homepage file with
+status 200, which Search Console reported as 12 "Soft 404" pages. Checked with wrangler dev: all
+7,171 real pages and sitemap addresses answer 200; unknown addresses 404 and show the app's "page not
+found" screen. Old addresses from that report now redirect (src/data/redirects.ts). Undo: set it back
+to "single-page-application" and redeploy.

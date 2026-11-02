@@ -132,6 +132,17 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/richland-probate-estate-real-estate", to: "/benton-county" },
   { from: "/pasco-probate-estate-real-estate", to: "/franklin-county" },
   { from: "/cities-we-serve", to: "/counties" },
+  /* Old addresses Google Search Console reported as "Soft 404" (Nov 2, 2026):
+     they used to load the app's not-found screen with status 200. */
+  { from: "/afh-club/afh-resources", to: "/afh-club/resources" },
+  { from: "/professionals/estate-planning-attorneys", to: "/for-estate-planning-attorneys" },
+  { from: "/guides/executor-sell-before-probate", to: "/guides/executor-sell-house-before-probate-washington" },
+  { from: "/guides/who-has-authority-sell-probate-property", to: "/guides/who-has-authority-sell-probate-property-washington" },
+  { from: "/guides/heirs-disagree-selling", to: "/guides/heirs-disagree-selling-house" },
+  { from: "/guides/how-to-move-elderly-parents", to: "/how-to-move-elderly-parents" },
+  { from: "/senior-housing-transitions", to: "/senior-transitions" },
+  { from: "/where-to-start", to: "/my-plan" },
+  { from: "/clallam-county", to: "/counties" },
   /* Old /cities/<city> addresses go to that city's own page when one exists
      (Nov 2, 2026 audit: /cities/seattle landed on the county list). Exact
      entries are written before the patterns below, so they win. */
