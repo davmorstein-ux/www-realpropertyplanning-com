@@ -5,8 +5,8 @@
   // .github/workflows/deploy-cloudflare.yml.
   "name": "realpropertyplanning",
   "compatibility_date": "2026-10-01",
-  // Runs only for /.well-known/* (run_worker_first): turns the SPA fallback's
-  // homepage HTML into a 404 there. See worker/index.js.
+  // Runs only for /.well-known/* (run_worker_first): answers a missing file there
+  // with a plain-text 404 instead of the HTML 404 page. See worker/index.js.
   "main": "./worker/index.js",
   "assets": {
     "directory": "./dist",
@@ -16,8 +16,11 @@
     // is /executors: serve them without a trailing slash, and send /executors/
     // to /executors. The default (auto-trailing-slash) would do the opposite.
     "html_handling": "drop-trailing-slash",
-    // Addresses with no file get the app shell, which loads route-meta.js and
-    // renders the page in the browser (same behaviour as on Lovable today).
-    "not_found_handling": "single-page-application"
+    // Addresses with no file get dist/404.html with status 404 (Nov 2, 2026).
+    // The app inside it shows its "page not found" screen. Before, they got the
+    // homepage file with status 200 ("single-page-application"), which Google
+    // reported as Soft 404. Every real page has its own file, so none is affected;
+    // to undo, set this back to "single-page-application".
+    "not_found_handling": "404-page"
   }
 }

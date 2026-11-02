@@ -3019,6 +3019,26 @@ const routeMetadataPlugin = {
       applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true, ssr: rendered.get("/") })
     );
     await writeFile(baseHtmlPath, preloadHomepageHero(rootHtml), "utf8");
+
+    /* 404.html (Nov 2, 2026). Cloudflare serves it, with status 404, for any
+       address that has no file (wrangler.jsonc not_found_handling "404-page").
+       Before, unknown addresses got the homepage file with status 200, which
+       Google reported as "Soft 404". The shell is empty (no data-prerendered),
+       so the app renders its own "page not found" screen for that address. */
+    await writeFile(
+      path.join(distDir, "404.html"),
+      applyMetadata(
+        baseHtml,
+        "/404",
+        {
+          title: "Page Not Found | Real Property Planning",
+          description: "This page doesn't exist on Real Property Planning. Use the menu or search to find what you need.",
+          noIndex: true,
+        },
+        { injectSsg: false }
+      ),
+      "utf8"
+    );
     await writeFile(path.join(distDir, "route-meta.js"), buildRouteAwareShellScript().external, "utf8");
 
     await Promise.all(

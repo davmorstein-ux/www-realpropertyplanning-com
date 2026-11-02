@@ -9,12 +9,16 @@
  * PageSpeed report "ARD manifest is invalid" (Lovable answered those probes
  * with a 404). A real file in public/.well-known/ is still served as-is; an
  * address there with no file now gets an honest 404.
+ *
+ * Since Nov 2, 2026 a missing file anywhere gets dist/404.html with status 404;
+ * here it is replaced by plain text, because agents probing /.well-known expect
+ * a file, not a web page.
  */
 export default {
   async fetch(request, env) {
     const res = await env.ASSETS.fetch(request);
     const type = res.headers.get("content-type") || "";
-    if (res.status === 200 && type.includes("text/html")) {
+    if (res.status === 404 || (res.status === 200 && type.includes("text/html"))) {
       return new Response("Not found\n", {
         status: 404,
         headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=300" },
