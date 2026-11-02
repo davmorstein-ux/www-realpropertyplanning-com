@@ -16,6 +16,7 @@ import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcFoot, AFH_T
 import IntentCTA from "@/components/IntentCTA";
 
 import RppArrow from "@/components/RppArrow";
+import AFHTopicProfessionals from "@/components/AFHTopicProfessionals";
 /**
  * AFH Occupancy & Financing Calculator (Sept 2026).
  *
@@ -610,6 +611,7 @@ const AFHFinancingCalculator = () => {
           @media (max-width: 640px) { .fin-beds { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
         ` }} />
         <PageFAQ faqs={FAQS} heading="Financing an Adult Family Home: Common Questions" eyebrow="Frequently Asked Questions" id="afh-financing" />
+        <AFHTopicProfessionals />
         <BackToAFHClub />
         <IntentCTA
           heading="Testing whether the loan will carry?"

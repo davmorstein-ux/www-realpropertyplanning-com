@@ -12,6 +12,7 @@ import { Table, gs, TEAL, TEAL_DARK, NAVY, INK } from "@/components/afh/PaymentG
 import { LENDERS } from "@/data/afhLenders";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { DSCR_LOANS, DSCR_FAQS, DSCR_QUESTIONS, EXAMPLE, computeExample, usd, x } from "@/data/afhDscrLoans";
+import AFHTopicProfessionals from "@/components/AFHTopicProfessionals";
 
 /**
  * Can You Get a DSCR Loan for an Adult Family Home? (Oct 9, 2026).
@@ -211,6 +212,7 @@ const AFHDscrLoans = () => {
           <AuthorByline context="afh" />
         </div>
         <PageFAQ faqs={DSCR_FAQS} heading="DSCR Loans for Adult Family Homes: Common Questions" eyebrow="Frequently Asked Questions" id="afh-dscr-loans" />
+        <AFHTopicProfessionals />
         <BackToAFHClub />
       </main>
       <Footer />
