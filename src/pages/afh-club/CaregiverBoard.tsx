@@ -21,6 +21,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import { trackLead } from "@/lib/leadTracking";
 import { supabase } from "@/integrations/supabase/client";
 import { useTurnstile } from "@/hooks/useTurnstile";
 import {
@@ -177,6 +178,9 @@ function useBoardForm(reason: string, heading: string, extra?: () => string) {
       });
       if (error || data?.error) throw new Error(data?.error || "send failed");
       setState("sent");
+      /* Analytics: only after the server confirmed the send; reason code and
+         page only, never what was typed (Nov 2, 2026). */
+      trackLead({ reason, recipient: "general", sourcePage: PATH, formName: "caregiver_board" });
       form.reset();
     } catch {
       setState("error");

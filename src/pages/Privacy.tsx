@@ -24,6 +24,14 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *                           contact message is sent: topic code, which inbox
  *                           (general / broker / appraiser) and the page the
  *                           visitor came from. No name, email, phone or text.
+ *                           Also after a Caregiver Board post or message is
+ *                           sent (form_name caregiver_board, its reason code,
+ *                           page path; Nov 2, 2026). testimonial_submitted
+ *                           (siteTracking.ts): a testimonial was sent; page
+ *                           path only.
+ *   Push alert links        public/sw.js — the page a listing alert opens
+ *                           carries utm_source=push, utm_medium=push,
+ *                           utm_campaign=afh-listing-alert (Nov 2, 2026)
  *   Site action events      siteTracking.ts (Oct 8, 2026) — contact_click
  *                           (any phone/email link: kind, whether it reaches the
  *                           featured professional / site inbox / someone else,

@@ -30,6 +30,9 @@
  *   planner_completed    every question on a planner page answered: page_path
  *                        only, never the answers. A saved plan reopened from its
  *                        link is not counted again (Oct 25, 2026).
+ *   testimonial_submitted  a Share Your Experience testimonial was sent and the
+ *                        server confirmed it (Nov 2, 2026): page_path only,
+ *                        never the words, name or credit choice. Not a lead.
  *   next_step_click      a link in a related-reading or professionals block
  *                        (Oct 20, 2026): block (next_questions | read_next |
  *                        journey_shortcuts | my_plan_invite | people_who_help |
@@ -191,3 +194,7 @@ export const trackPlannerStarted = (): void =>
 /** All questions on a planner page answered. The answers are never sent. */
 export const trackPlannerCompleted = (): void =>
   send("planner_completed", { page_path: typeof window === "undefined" ? "" : path() });
+
+/** Share Your Experience: a testimonial the server confirmed. Never its content. */
+export const trackTestimonialSubmitted = (): void =>
+  send("testimonial_submitted", { page_path: typeof window === "undefined" ? "" : path() });

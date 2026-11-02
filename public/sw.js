@@ -35,6 +35,13 @@ self.addEventListener("notificationclick", (event) => {
   event.notification.close();
   const target = new URL((event.notification.data && event.notification.data.url) || "/afh-club/listings", self.location.origin);
   if (target.origin !== self.location.origin) return; // only ever open this site
+  /* Campaign tags so Google Analytics reports alert visits as push, not
+     Direct (Nov 2, 2026). Left alone if the alert already carries a source. */
+  if (!target.searchParams.has("utm_source")) {
+    target.searchParams.set("utm_source", "push");
+    target.searchParams.set("utm_medium", "push");
+    target.searchParams.set("utm_campaign", "afh-listing-alert");
+  }
   event.waitUntil(
     self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((wins) => {
       for (const w of wins) {

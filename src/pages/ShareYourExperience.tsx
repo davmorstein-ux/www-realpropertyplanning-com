@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { trackTestimonialSubmitted } from "@/lib/siteTracking";
 import { supabase } from "@/integrations/supabase/client";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
@@ -145,6 +146,7 @@ const ShareYourExperience = () => {
         description:
           "Your words came through. Nothing is published automatically; it will be read, and you will hear back before it appears anywhere.",
       });
+      trackTestimonialSubmitted(); // after the server confirmed; never the content
       form.reset();
       setCredit("");
       setConsent(false);
