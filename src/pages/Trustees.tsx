@@ -15,6 +15,7 @@ import IntentCTA from "@/components/IntentCTA";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import NextQuestions from "@/components/NextQuestions";
 import TrusteeHouseGuide from "@/components/guides/TrusteeHouseGuide";
+import KariFrinkTile, { KARI_TRUST_SPECIALTY } from "@/components/KariFrinkTile";
 
 const jsonLd = articleSchema({
   headline: "Trust Property Guide for Trustees",
@@ -57,6 +58,24 @@ const Trustees = () => (
     </section>
 
     <TrusteeHouseGuide />
+
+    {/* Trust company contact (Nov 2, 2026, owner's request): the same tile
+        appears on the financial planner pages. */}
+    <section className="py-10 md:py-12 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">Trust services</h2>
+          <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "18px" }}>
+            A trust company can serve as trustee or co-trustee, or support a family member who serves. Real Property
+            Planning lists professionals the founder has met personally; it is not an endorsement, and no one pays to
+            be listed.
+          </p>
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+          <KariFrinkTile specialty={KARI_TRUST_SPECIALTY} />
+        </div>
+      </div>
+    </section>
 
     <PageFAQ
       faqs={[
