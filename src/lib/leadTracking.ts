@@ -11,14 +11,18 @@
  * Never a name, email, phone number or any message text. Documented on
  * src/pages/Privacy.tsx; keep the two in step.
  *
+ * Also sent by the AFH Caregiver Board forms (Nov 2, 2026) with form_name
+ * "caregiver_board" and the board's reason code (caregiver-board-post,
+ * afh-job-post, caregiver-board-contact), again only after the send succeeds.
+ *
  * Fails silently if gtag is missing (ad blocker, preview build): tracking must
  * never affect sending a message.
  */
-export const trackLead = (args: { reason: string; recipient: string; sourcePage?: string }): void => {
+export const trackLead = (args: { reason: string; recipient: string; sourcePage?: string; formName?: "contact" | "caregiver_board" }): void => {
   try {
     if (typeof window === "undefined" || typeof window.gtag !== "function") return;
     window.gtag("event", "generate_lead", {
-      form_name: "contact",
+      form_name: args.formName ?? "contact",
       contact_reason: args.reason || "unspecified",
       recipient_group: args.recipient,
       source_page: args.sourcePage || window.location.pathname,
