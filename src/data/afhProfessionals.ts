@@ -18,6 +18,8 @@ import sethRadduePhoto from "@/assets/providers/seth-raddue-tristar-finance-head
 import fengquanSongPhoto from "@/assets/providers/fengquan-song-aura-living-care-headshot.webp";
 import auraLivingCareLogo from "@/assets/providers/aura-living-care-logo.webp";
 import tristarLogo from "@/assets/providers/tristar-finance-home-loans-logo.webp";
+import brianNicholsPhoto from "@/assets/providers/brian-nichols-surest-capital.webp";
+import surestCapitalLogo from "@/assets/providers/surest-capital-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -281,6 +283,27 @@ export const SETH_RADDUE: AFHProfessional = {
   bio: "",
 };
 
+/* Added Nov 2, 2026 at the owner's request, from the details he supplied:
+   name, individual and company NMLS numbers, phone, email, website, headshot
+   and logo. No title or bio was supplied; "Loan Originator" follows from the
+   individual NMLS number. */
+export const BRIAN_NICHOLS: AFHProfessional = {
+  id: "brian-nichols",
+  name: "Brian D. Nichols",
+  title: "Loan Originator",
+  company: "Surest Capital Company",
+  photo: brianNicholsPhoto,
+  photoAlt: "Photo of Brian D. Nichols, Surest Capital Company",
+  logo: surestCapitalLogo,
+  logoAlt: "Surest Capital Company logo",
+  license: "NMLS #2641349 · Company NMLS #2640412",
+  phone: "(213) 867-4223",
+  email: "Sales@SurestCapital.com",
+  website: "https://surestcapital.com",
+  specialty: "AFH business-purpose financing — Surest Capital Company",
+  bio: "",
+};
+
 /* Added Oct 9, 2026 at the owner's request, with the details published on the
    old /afh-club/management-companies page since June 2026 (phone, email,
    website); headshot recropped from that page's photo. That page was retired
@@ -401,6 +424,15 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     people: [SETH_RADDUE],
   },
   {
+    id: "business-purpose-financing",
+    label: "AFH business-purpose financing",
+    profession: "AFH Business-Purpose Financing",
+    professionLines: ["AFH Business-Purpose", "Financing"],
+    why: "An investor who buys a house to run or lease as an adult family home, and will not live in it, usually borrows on a business-purpose loan rather than a consumer mortgage. These loans are generally underwritten on the property and its income more than on the borrower's personal income. A lender who knows adult family homes understands how licensing, a lease to an operator, and the home's care income bear on the loan.",
+    /* Added Nov 2, 2026 (owner's category name). */
+    people: [BRIAN_NICHOLS],
+  },
+  {
     id: "afh-management",
     label: "AFH management",
     profession: "AFH Management",
@@ -432,7 +464,8 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
  * order they appear; within a group, people run A to Z by last name. Every
  * group must belong to exactly one section (a test checks), and a section with
  * nobody in it is not rendered.
- *   Buy & Sell   the AFH real estate broker, the mortgage lender, the business broker
+ *   Buy & Sell   the AFH real estate broker, the mortgage lender, business-purpose
+ *                financing (Nov 2, 2026), the business broker
  *                (photography and SBA lending join here once someone is listed)
  *   Operate      management, insurance, website & marketing, bookkeeping
  *   Maintain     house cleaning, water damage restoration, restoration contractor (Oct 14, 2026),
@@ -452,7 +485,7 @@ export const AFH_PROFESSIONAL_SECTIONS: AFHProfessionalSection[] = [
     id: "buy-sell",
     title: "Buy & Sell",
     lead: "Buying or selling an adult family home, the building, the business, or both.",
-    groupIds: ["real-estate", "mortgage-lending", "business-brokerage", "sba-lending", "photography"],
+    groupIds: ["real-estate", "mortgage-lending", "business-purpose-financing", "business-brokerage", "sba-lending", "photography"],
   },
   {
     id: "operate",
