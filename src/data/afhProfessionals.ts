@@ -298,7 +298,7 @@ export const BRIAN_NICHOLS: AFHProfessional = {
   logoAlt: "Surest Capital Company logo",
   license: "NMLS #2641349 · Company NMLS #2640412",
   phone: "(213) 867-4223",
-  email: "Sales@SurestCapital.com",
+  email: "brian@surestcapital.com",
   website: "https://surestcapital.com",
   specialty: "AFH business-purpose financing — Surest Capital Company",
   bio: "",
