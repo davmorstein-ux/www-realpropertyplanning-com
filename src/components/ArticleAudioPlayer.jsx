@@ -70,9 +70,6 @@ function RewindIcon({ size = 20, color = COLORS.ivoryMuted }) {
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M11 17a6 6 0 1 0-6-6" stroke={color} strokeWidth="2" strokeLinecap="round" />
       <polyline points="5,7 5,11 9,11" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="9.5" y="14.5" fontSize="5" fill={color} fontFamily="Georgia, serif" fontWeight="bold">
-        15
-      </text>
     </svg>
   );
 }
@@ -83,9 +80,6 @@ function ForwardIcon({ size = 20, color = COLORS.ivoryMuted }) {
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M13 17a6 6 0 1 1 6-6" stroke={color} strokeWidth="2" strokeLinecap="round" />
       <polyline points="19,7 19,11 15,11" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="8" y="14.5" fontSize="5" fill={color} fontFamily="Georgia, serif" fontWeight="bold">
-        15
-      </text>
     </svg>
   );
 }
@@ -170,11 +164,14 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
     audio.currentTime = Math.min(Math.max(0, audio.currentTime + secs), duration);
   };
 
-  const cycleSpeed = () => {
-    const rates = [1, 1.25, 1.5, 1.75, 2];
-    const next = rates[(rates.indexOf(playbackRate) + 1) % rates.length];
-    setPlaybackRate(next);
-    if (audioRef.current) audioRef.current.playbackRate = next;
+  /* Speed (Nov 2, 2026, David: "hard to see and control"). Was one tiny 12px
+     button that cycled through five speeds on each tap, so a listener had to
+     tap round to find the one they wanted. Now every speed is its own large
+     button, labelled, with the current one filled in. */
+  const SPEEDS = [0.75, 1, 1.25, 1.5, 2];
+  const setSpeed = (rate) => {
+    setPlaybackRate(rate);
+    if (audioRef.current) audioRef.current.playbackRate = rate;
   };
 
   // Progress bar interaction
@@ -258,9 +255,9 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
   };
 
   const subtitleStyle = {
-    fontFamily: "Georgia, serif",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
     fontWeight: "400",
-    fontSize: "12px",
+    fontSize: "15px",
     color: COLORS.ivoryMuted,
     marginTop: "3px",
   };
@@ -306,8 +303,9 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
   const timesStyle = {
     display: "flex",
     justifyContent: "space-between",
-    fontFamily: "Georgia, monospace",
-    fontSize: "12px",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
+    fontSize: "15px",
+    fontVariantNumeric: "tabular-nums",
     color: COLORS.ivoryMuted,
   };
 
@@ -323,13 +321,53 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
     background: "none",
     border: "none",
     cursor: "pointer",
-    padding: "6px",
+    padding: "6px 10px",
+    minWidth: "56px",
+    minHeight: "56px",
+    flexDirection: "column",
+    color: COLORS.ivory,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    opacity: 0.85,
+    opacity: 1,
     transition: "opacity 0.15s, transform 0.1s",
     borderRadius: "50%",
+  };
+
+  const skipLabelStyle = {
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
+    fontSize: "14px",
+    fontWeight: "600",
+    marginTop: "2px",
+  };
+
+  const speedRowStyle = {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+    marginTop: "16px",
+  };
+
+  const speedLabelStyle = {
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
+    fontSize: "15px",
+    fontWeight: "700",
+    marginRight: "4px",
+  };
+
+  const speedChoiceStyle = {
+    minWidth: "56px",
+    minHeight: "44px",
+    padding: "0 12px",
+    borderRadius: "22px",
+    border: "2px solid",
+    fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
+    fontSize: "16px",
+    fontWeight: "700",
+    cursor: "pointer",
+    fontVariantNumeric: "tabular-nums",
   };
 
   const playBtnStyle = {
@@ -347,19 +385,6 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
     flexShrink: 0,
   };
 
-  const speedBtnStyle = {
-    background: COLORS.track,
-    border: `1px solid ${COLORS.bgLight}`,
-    borderRadius: "20px",
-    color: COLORS.brass,
-    fontFamily: "Georgia, serif",
-    fontWeight: "700",
-    fontSize: "12px",
-    padding: "4px 10px",
-    cursor: "pointer",
-    letterSpacing: "0.04em",
-    transition: "background 0.15s",
-  };
 
   const dismissStyle = {
     background: "none",
@@ -408,13 +433,13 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
 
       {/* ── Expanded player ─────────────────────────────── */}
       {isExpanded && (
-        <div style={playerStyle}>
+        <div className="rpp-dark-surface" style={playerStyle}>
           {/* Header */}
           <div style={headerStyle}>
             <HeadphoneIcon size={30} color={COLORS.brass} />
             <div style={labelStyle}>
               <p style={titleStyle}>Listen to this Article</p>
-              <p style={subtitleStyle}>{aiVoice ? AI_VOICE_NOTE : "AI-generated audio overview · Real Property Planning"}</p>
+              <p className="rpp-dark-muted" style={subtitleStyle}>{aiVoice ? AI_VOICE_NOTE : "AI-generated audio overview · Real Property Planning"}</p>
             </div>
             <button
               style={dismissStyle}
@@ -468,7 +493,7 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
               <div style={fillStyle} />
               <div style={thumbStyle} />
             </div>
-            <div style={timesStyle}>
+            <div className="rpp-dark-muted" style={timesStyle}>
               <span>{fmt(currentTime)}</span>
               <span>{fmt(duration)}</span>
             </div>
@@ -486,11 +511,12 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
                 e.currentTarget.style.transform = "scale(1.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = "0.85";
+                e.currentTarget.style.opacity = "1";
                 e.currentTarget.style.transform = "none";
               }}
             >
-              <RewindIcon size={22} color={COLORS.ivoryMuted} />
+              <RewindIcon size={24} color={COLORS.ivory} />
+              <span style={skipLabelStyle}>15 sec</span>
             </button>
 
             {/* Play / Pause */}
@@ -522,23 +548,40 @@ export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
                 e.currentTarget.style.transform = "scale(1.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = "0.85";
+                e.currentTarget.style.opacity = "1";
                 e.currentTarget.style.transform = "none";
               }}
             >
-              <ForwardIcon size={22} color={COLORS.ivoryMuted} />
+              <ForwardIcon size={24} color={COLORS.ivory} />
+              <span style={skipLabelStyle}>15 sec</span>
             </button>
 
-            {/* Speed */}
-            <button
-              style={speedBtnStyle}
-              aria-label={`Playback speed ${playbackRate}x. Click to change.`}
-              onClick={cycleSpeed}
-              onMouseEnter={(e) => (e.currentTarget.style.background = COLORS.bgLight)}
-              onMouseLeave={(e) => (e.currentTarget.style.background = COLORS.track)}
-            >
-              {playbackRate}×
-            </button>
+          </div>
+
+          {/* Speed: one button per speed, current one filled in. */}
+          <div role="group" aria-label="Playback speed" style={speedRowStyle}>
+            <span style={speedLabelStyle}>Speed</span>
+            {SPEEDS.map((rate) => {
+              const on = playbackRate === rate;
+              return (
+                <button
+                  key={rate}
+                  type="button"
+                  data-nav-button
+                  aria-pressed={on}
+                  aria-label={`${rate} times speed`}
+                  onClick={() => setSpeed(rate)}
+                  style={{
+                    ...speedChoiceStyle,
+                    background: on ? COLORS.ivory : "transparent",
+                    color: on ? COLORS.track : COLORS.ivory,
+                    borderColor: on ? COLORS.ivory : "rgba(245,240,232,0.55)",
+                  }}
+                >
+                  {rate}×
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
