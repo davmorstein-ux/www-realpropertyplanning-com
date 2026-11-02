@@ -204,7 +204,7 @@ const ChoosingAnAdultFamilyHome = () => (
           </div>
           {/* David's narration, cloned voice (Nov 2, 2026), 7:12. */}
           <div className="cafh-noprint" style={{ marginTop: 20 }}>
-            <ArticleAudioPlayer audioSrc="/audio/choosing-an-adult-family-home.mp3" aiVoice />
+            <ArticleAudioPlayer audioSrc="/audio/choosing-an-adult-family-home.mp3" />
           </div>
         </div>
       </section>

@@ -195,7 +195,7 @@ const AFHWhatIsAnAFH = () => {
 
             {/* David's narration, cloned voice (Nov 2, 2026), 9:29. */}
             <div style={{ marginTop: 16 }}>
-              <ArticleAudioPlayer audioSrc="/audio/what-is-an-adult-family-home.mp3" aiVoice />
+              <ArticleAudioPlayer audioSrc="/audio/what-is-an-adult-family-home.mp3" />
             </div>
           </div>
         </section>
