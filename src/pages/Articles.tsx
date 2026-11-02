@@ -131,11 +131,12 @@ const ARTICLES = [
   },
   /* Moved here from the AFH Club resource library (Nov 2, 2026, David): it is
      written for families choosing a home for a parent, not for operators.
-     No narration yet, so no Listen link (listenMinutes omitted). */
+     Narration added the same day (7:12). */
   {
     title: "How to Choose an Adult Family Home",
     href: "/senior-living/choosing-an-adult-family-home",
     minutes: 6,
+    listenMinutes: 7,
     img: "/afh-choosing-a-home-cover.webp",
     description: "Build a shortlist from the state's records, read each home's DSHS inspection history, ask the right questions on a tour, and compare two homes side by side.",
   },

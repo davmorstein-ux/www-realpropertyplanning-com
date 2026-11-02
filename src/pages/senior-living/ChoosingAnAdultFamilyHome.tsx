@@ -36,6 +36,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import AuthorByline from "@/components/AuthorByline";
 import NextQuestions from "@/components/NextQuestions";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { DSHS_LOCATOR_URL } from "@/data/afh/inspectionRecord";
 
@@ -200,6 +201,10 @@ const ChoosingAnAdultFamilyHome = () => (
               would cost. Ask for the home's Disclosure of Services and its last three years of inspection reports,
               and compare the homes on the same points before you decide.
             </p>
+          </div>
+          {/* David's narration, cloned voice (Nov 2, 2026), 7:12. */}
+          <div className="cafh-noprint" style={{ marginTop: 20 }}>
+            <ArticleAudioPlayer audioSrc="/audio/choosing-an-adult-family-home.mp3" aiVoice />
           </div>
         </div>
       </section>
