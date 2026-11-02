@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { HUB_FOUNDER_NAME } from "@/data/featuredProfessionals";
 
 // ─────────────────────────────────────────────
 //  ArticleAudioPlayer
@@ -92,7 +93,7 @@ function ForwardIcon({ size = 20, color = COLORS.ivoryMuted }) {
 /* aiVoice (Nov 2, 2026, David): recordings made with his cloned voice say so in
    the player's own subtitle, so listeners know whose voice it is and that it is
    AI-made. Other recordings keep "AI-generated audio". */
-export const AI_VOICE_NOTE = "Narrated in the voice of David Stein, created with AI";
+export const AI_VOICE_NOTE = `Narrated in the voice of ${HUB_FOUNDER_NAME}, created with AI`;
 
 export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
   const audioRef = useRef(null);
