@@ -28,7 +28,7 @@ const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
       if (new RegExp(`\\b${q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`).test(l)) return 60;
       if (l.includes(q)) return 40; // substring match in label
       if (path.toLowerCase().includes(q)) return 20; // only the path matches
-      return 0;
+      return wordScore(label, path, q); // every word found, in any order or form
     };
 
     return siteSearchIndex
@@ -159,5 +159,29 @@ const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
     </div>
   );
 };
+
+/* Word matching (Nov 2, 2026, David: searching "Choosing an AFH" found
+   nothing, because the label is "How to Choose an Adult Family Home…" and the
+   phrase checks above need the query as one unbroken piece). Every meaningful
+   query word must appear in the label or address, in any order; words match
+   on their first five letters, so "choosing" finds "choose"; "AFH" also
+   matches "adult family home". */
+const STOP_WORDS = new Set(["a", "an", "the", "to", "of", "for", "in", "on", "and", "or", "how", "what", "is", "my", "do", "i"]);
+const ABBREVIATIONS: Record<string, string> = { afh: "adult family home", afhs: "adult family home", ltc: "long term care", poa: "power of attorney", wa: "washington" };
+const SYNONYMS: Record<string, string[]> = { house: ["home"], home: ["house"], homes: ["house"], parent: ["aging", "senior"], mom: ["parent"], dad: ["parent"] };
+const words = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().split(" ").filter(Boolean);
+const stem = (w: string) => w.slice(0, 5);
+function wordScore(label: string, path: string, query: string): number {
+  const hay = new Set([...words(label), ...words(path)].map(stem));
+  const queryWords = words(query).filter((w) => !STOP_WORDS.has(w));
+  if (queryWords.length === 0) return 0;
+  const found = queryWords.every((w) => {
+    const expansion = ABBREVIATIONS[w];
+    if (expansion && words(expansion).every((x) => hay.has(stem(x)))) return true;
+    if ((SYNONYMS[w] ?? []).some((x) => hay.has(stem(x)))) return true;
+    return hay.has(stem(w));
+  });
+  return found ? 10 : 0;
+}
 
 export default SiteSearchBar;
