@@ -139,7 +139,7 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/guides/executor-sell-before-probate", to: "/guides/executor-sell-house-before-probate-washington" },
   { from: "/guides/who-has-authority-sell-probate-property", to: "/guides/who-has-authority-sell-probate-property-washington" },
   { from: "/guides/heirs-disagree-selling", to: "/guides/heirs-disagree-selling-house" },
-  { from: "/guides/how-to-move-elderly-parents", to: "/how-to-move-elderly-parents" },
+  { from: "/guides/how-to-move-elderly-parents", to: "/guides/senior-transition-differences" },
   { from: "/senior-housing-transitions", to: "/senior-transitions" },
   { from: "/where-to-start", to: "/my-plan" },
   { from: "/clallam-county", to: "/counties" },
