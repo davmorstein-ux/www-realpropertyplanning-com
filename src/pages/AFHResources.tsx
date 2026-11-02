@@ -180,13 +180,6 @@ const TOPICS = [
     description:
       "The definition, how it differs from assisted living, and what the same small care home is called in every other state.",
   },
-  {
-    title: "How to Choose an Adult Family Home",
-    href: "/senior-living/choosing-an-adult-family-home",
-    img: "/afh-choosing-a-home-cover.webp",
-    description:
-      "For families: building a shortlist, reading the DSHS record, 20 questions to ask on a tour, and a worksheet for comparing two homes.",
-  },
 ];
 
 const AFHResources = () => (
@@ -268,12 +261,6 @@ const AFHResources = () => (
             href: "/senior-living/what-is-an-adult-family-home",
             img: "/afh-what-is-an-afh-cover.webp",
             placeholder: "#1f3350",
-          },
-          {
-            title: "How to Choose an Adult Family Home",
-            href: "/senior-living/choosing-an-adult-family-home",
-            img: "/afh-choosing-a-home-cover.webp",
-            placeholder: "#16325c",
           },
           {
             title: "Licensing & Certification",

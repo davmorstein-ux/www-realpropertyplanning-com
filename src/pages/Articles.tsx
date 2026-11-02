@@ -129,6 +129,16 @@ const ARTICLES = [
     img: "/hospice-care-cover.webp",
     description: "Hospice comes to where a person lives — home, an adult family home, assisted living — and doesn't replace it. What Medicare pays, what it doesn't, and what \"24-hour\" really means.",
   },
+  /* Moved here from the AFH Club resource library (Nov 2, 2026, David): it is
+     written for families choosing a home for a parent, not for operators.
+     No narration yet, so no Listen link (listenMinutes omitted). */
+  {
+    title: "How to Choose an Adult Family Home",
+    href: "/senior-living/choosing-an-adult-family-home",
+    minutes: 6,
+    img: "/afh-choosing-a-home-cover.webp",
+    description: "Build a shortlist from the state's records, read each home's DSHS inspection history, ask the right questions on a tour, and compare two homes side by side.",
+  },
 ];
 
 const Articles = () => {
@@ -263,12 +273,14 @@ const Articles = () => {
                       </svg>
                       Read &middot; {article.minutes} min
                     </Link>
+                    {article.listenMinutes ? (
                     <Link to={`${article.href}?listen=1`} style={{ ...actionLinkStyle }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
                       </svg>
                       Listen &middot; {article.listenMinutes} min
                     </Link>
+                    ) : null}
                   </div>
                 </div>
               </div>
