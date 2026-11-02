@@ -81,6 +81,11 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   "/executor-responsibilities-first-steps/legal-duties": ["cpas"],
   "/executor-responsibilities-first-steps/working-with-professionals": ["cpas", "financialPlanning"],
   "/executor-responsibilities-first-steps/when-you-need-extra-help": ["moveManagers", "estateLiquidation", "financialPlanning"],
+  // Trusts: Kari Frink's trust services (owner, Nov 2, 2026). /trustees has its own section.
+  "/guides/choosing-a-trustee-washington": ["trustServices"],
+  "/washington-probate-guide/house-in-a-trust": ["trustServices"],
+  "/guides/probate-vs-trust-sale-washington": ["trustServices"],
+  "/articles/wills-trusts-other-options": ["trustServices"],
   // A parent's housing, care and money
   "/power-of-attorney": ["elderLaw", "legalPlans", "moveManagers"],
   "/senior-transitions": ["moveManagers", "seniorLiving", "estateLiquidation"],
