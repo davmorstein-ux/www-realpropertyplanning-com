@@ -13,6 +13,7 @@ import audioAsset from "@/assets/afh-buying-selling.mp3.asset.json";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
+import RouteFAQ from "@/components/RouteFAQ";
 
 const CHOW_STEPS = [
   {
@@ -544,6 +545,7 @@ const AFHBuyingSelling = () => (
         reason="afh-buy-sell"
         professional="broker"
       />
+      <RouteFAQ />
       <DisclaimerSection />
     </main>
     <Footer />

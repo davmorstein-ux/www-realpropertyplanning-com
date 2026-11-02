@@ -13,6 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const APPLICATION_STEPS = [
   {
     step: "1",
@@ -616,6 +617,7 @@ const AFHLicensingCertification = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
       <NextQuestions />
     </main>

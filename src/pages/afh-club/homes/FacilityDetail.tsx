@@ -10,6 +10,7 @@ import { CONTRACT_LABELS, SPECIALTY_LABELS, type AFHFacility } from "@/data/afh/
 import { getCityIndexEntry, loadCity } from "@/data/afh/directory";
 import { listingsForFacility } from "@/data/afhAddressMatch";
 import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "@/data/afhListings";
+import { MEDICAID_CONTRACT_SENTENCE, medicaidRowValue } from "@/data/afh/medicaidWording";
 import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "@/data/afh/inspectionRecord";
 
 import RppArrow from "@/components/RppArrow";
@@ -173,6 +174,7 @@ const FacilityDetail = () => {
                 {a.street}, {a.city}, Washington, licensed by DSHS for{" "}
                 {facility.licensedBeds}{" "}
                 {facility.licensedBeds === 1 ? "resident" : "residents"}.
+                {facility.acceptsMedicaid && <> {MEDICAID_CONTRACT_SENTENCE}</>}
               </p>
             </div>
           </div>
@@ -206,7 +208,7 @@ const FacilityDetail = () => {
                   />
                   <Row
                     label="Medicaid"
-                    value={facility.acceptsMedicaid ? "Accepted" : facility.contracts.length ? "Not accepted (no Medicaid contract)" : "Not accepted — private pay only"}
+                    value={medicaidRowValue(facility)}
                   />
                   {facility.contactName && (
                     <Row label="Provider contact" value={facility.contactName} />

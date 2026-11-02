@@ -122,7 +122,7 @@ export const POLICY_PAGES: PolicyPage[] = [
         heading: "Adult family home directory",
         paragraphs: [
           "The directory of licensed adult family homes is built from the Department of Social and Health Services (DSHS) Adult Family Home Locator, using the county exports from its Advanced Lookup for all 39 Washington counties. Each home's page shows the date its data was retrieved.",
-          "For each home the directory keeps the fields DSHS publishes: license number, name, address, county, contact name, phone, licensed capacity (beds), specialty designations (dementia, mental health, developmental disabilities), DSHS contracts, whether the home accepts Medicaid, and whether DSHS has inspection or investigation reports on file.",
+          "For each home the directory keeps the fields DSHS publishes: license number, name, address, county, contact name, phone, licensed capacity (beds), specialty designations (dementia, mental health, developmental disabilities), DSHS contracts, whether the home holds a DSHS Medicaid contract, and whether DSHS has inspection or investigation reports on file.",
           "Processing is limited to cleaning: standardizing city names and ZIP codes, correcting obvious typos in city names, and merging records DSHS lists more than once for multiple contracts. No field is added, estimated, or inferred. A home that does not appear in the DSHS locator is not listed as licensed.",
           "Limits: the directory is a snapshot. Licenses are issued, changed, and closed every week, so always confirm a home's current status in the DSHS locator. Homes are not rated or ranked, and a listing is not a recommendation.",
         ],

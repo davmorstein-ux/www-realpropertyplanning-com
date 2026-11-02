@@ -14,6 +14,7 @@ import NextQuestions from "@/components/NextQuestions";
 import WhichGuide from "@/components/WhichGuide";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const PROPERTY_OPTIONS = [
   {
     title: "Convert an Existing Home",
@@ -713,6 +714,7 @@ const AFHBuildingInspection = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
       <NextQuestions />
     </main>

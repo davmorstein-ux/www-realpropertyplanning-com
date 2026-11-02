@@ -10,6 +10,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
+import RouteFAQ from "@/components/RouteFAQ";
 
 const GREEN = "#0a5648";
 
@@ -331,6 +332,7 @@ const AFHSellingBusinessAtRetirement = () => (
       reason="afh-buy-sell"
       professional="broker"
     />
+    <RouteFAQ />
     <DisclaimerSection />
     <Footer />
   </div>

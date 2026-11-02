@@ -49,6 +49,7 @@ import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } fr
 import { AFH_FLOW_PAGES, AFH_FLOW_CHART_TEXT, AFH_RULES_PATH, afhFlowPrerenderSections } from "./src/data/afhFlow";
 import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
+import { routeFaqForMeta } from "./src/data/routeFaqs";
 import { readFileSync as readFileSyncForStats } from "node:fs";
 import {
   buildAiPages, sectionsFromRenderedHtml, RENDERED_TEXT_PREFIXES, buildAiGlossary, buildAiRuleChanges, buildAiDirectory, buildAiStats,
@@ -896,11 +897,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "For sellers and retiring operators — What transfers and what does not when an adult family home is sold, why the license never transfers, how to value the business separately from the real estate, and how to plan a retirement sale around the DSHS approval timeline.",
       "Five professional categories, independently engaged — Real estate brokerage, independent appraisal, business brokerage for the operation itself, management companies that handle day-to-day work under the owner's license, and investors who back qualified buyers. Each operates through a separate business that visitors contact directly and is responsible for its own services, fees, advice, and client relationships. Appraisal and brokerage are kept on separate transactions.",
     ],
-    faq: [
-      { q: "How many adult family homes are there in Washington?", a: "More than 6,000 statewide, according to DSHS licensing records, concentrated in King, Pierce, Snohomish, Spokane, Clark, and Thurston counties. AFH Club's directory lists every one by city, in all 39 counties. Most are licensed for six residents and most accept Medicaid." },
-      { q: "Can I buy an adult family home that is already operating?", a: "Yes. The real estate transfers like any home sale, but the DSHS license does not — the buyer must qualify for a new license through the Change of Ownership (CHOW) process before operating. Specialty contracts also do not transfer." },
-      { q: "Does AFH Club operate adult family homes?", a: "No. Real Property Planning is an independent educational resource. It does not own, operate, or manage any adult family home. Brokerage and appraisal services are provided by David Stein through his own licensed practice, not by the site." },
-    ],
+    faq: routeFaqForMeta("/afh-club"),
   },
   "/afh-club/building-inspection": {
     title: "AFH Building & Inspection Requirements | AFH Club | Real Property Planning",
@@ -914,10 +911,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Common modifications — Ramps, so a bedroom whose exit has stairs can be classified for residents who need help evacuating; grab bars at toilets, tubs and showers; escape windows in every resident bedroom; smoke alarms in each resident bedroom and CO alarms on each level; 27-inch interior doors in homes licensed after September 20, 2026; septic approval for occupancy count.",
       "The inspection process — Download the checklist and walk your own property against it first. Contact your local building official early; requirements vary by jurisdiction. If construction is needed, get the permit the work requires first and ask the building department whether it must be finaled before the AFH inspection. The building department completes the inspection section of the checklist, and DSHS will not license the home until the building official has approved it.",
     ],
-    faq: [
-      { q: "Does passing the WABO checklist mean the home is licensed?", a: "No. The signed checklist proves the building meets code. DSHS separately decides whether the provider and the home qualify for a license, after its own inspection." },
-      { q: "Do I need a permit before the AFH inspection?", a: "If any construction is involved — ramps, bathroom work, window changes, electrical — the work generally needs its own permit. Ask your local building department whether that work must pass its final inspection before the AFH building inspection." },
-    ],
+    faq: routeFaqForMeta("/afh-club/building-inspection"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/wabo-inspection-guide": {
@@ -927,10 +921,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "What is WABO and what is a WABO inspection for an Adult Family Home?",
     quickAnswerA: "WABO is the Washington Association of Building Officials, a nonprofit professional association — it is not the agency that licenses Adult Family Homes and generally does not inspect the property itself. A 'WABO inspection' is informal shorthand for the local building inspection performed by your city or county building department using the Adult Family Home Local Building Inspection Checklist, which WABO developed in cooperation with DSHS.",
     intro: "Everyone in the adult family home world says 'WABO inspection,' and almost no one means what the words say. This is the short version for buyers and prospective providers who need to know what actually happens and who does it.",
-    faq: [
-      { q: "Does WABO inspect adult family homes?", a: "Generally no. WABO is a professional association of building officials. The inspection is performed by your city or county building department using the checklist WABO developed with DSHS." },
-      { q: "Do I need the WABO inspection before I apply to DSHS?", a: "A passed local building inspection must be complete before DSHS can finish its own inspection and issue the license, so it is on the critical path." },
-    ],
+    faq: routeFaqForMeta("/afh-club/wabo-inspection-guide"),
     article: { datePublished: "2026-07-26", dateModified: "2026-09-28" },
   },
   "/afh-club/wabo-technical-guide": {
@@ -940,10 +931,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "What does the WABO Adult Family Home building inspection checklist cover?",
     quickAnswerA: "The checklist addresses resident bedroom exits and classifications, emergency escape windows, smoke and carbon monoxide alarms, doors and hardware, ramps and landings, stairs and handrails, bathroom grab bars, shower dimensions, and fire access and water supply. A passed checklist confirms the building meets AFH code requirements, but it is not the same as a DSHS license — DSHS separately decides whether the provider and home qualify for licensing. DSHS also has physical rules the checklist does not show: homes licensed after September 20, 2026 need interior doors of at least 27 inches wherever residents pass through (WAC 388-76-10715). A continuously licensed home that changes owners is exempt; a lapsed former AFH is not.",
     intro: "The checklist is the code standard an adult family home has to meet. This guide walks the checklist item by item, explains the bedroom classifications that drive most of the cost, and flags the items that most often cause delays.",
-    faq: [
-      { q: "What are Type S and Type NS bedroom classifications?", a: "Type S rooms require stairs to exit and have stricter egress requirements; Type NS rooms exit at grade level. Classification determines which residents may occupy the room and what window and door requirements apply." },
-      { q: "What most often delays a WABO inspection?", a: "Egress window size and sill height in sleeping rooms, ramp slope and handrails, bathroom clearances, and missing or non-interconnected alarms." },
-    ],
+    faq: routeFaqForMeta("/afh-club/wabo-technical-guide"),
     article: { datePublished: "2026-07-26", dateModified: "2026-09-28" },
   },
   "/afh-club/washington-afh-data": {
@@ -1093,12 +1081,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "How do I choose an adult family home in Washington?",
     quickAnswerA: "Build a shortlist from the state's licensing records, read each home's DSHS inspection record, then visit your top two or three, ideally at a mealtime. On the tour, ask who is on duty overnight, which specialty designations the home holds, whether it has a Medicaid contract, and exactly what your parent's care would cost. Ask for the home's Disclosure of Services and its last three years of inspection reports, and compare the homes on the same points before you decide.",
     intro: "A guide for Washington families choosing an adult family home for a parent or relative: how to narrow the list by location, care needs and payment, how to read a home's DSHS record, the questions to ask on a tour, and a worksheet for comparing two homes. AFH Club does not rate, rank or recommend individual homes.",
-    faq: [
-      { q: "What questions should I ask when touring an adult family home?", a: "Ask how many residents live there and how many the home is licensed for; whether the provider or a resident manager lives in the home; how many caregivers are on duty day and night; which specialty designations it holds (dementia, mental health, developmental disabilities); whether it works with a delegating nurse; how it handles falls and hospital returns; the private-pay base rate and care-level charges for your parent; whether it has a Medicaid contract; and ask for its Disclosure of Services and last three years of inspection reports." },
-      { q: "How do I compare two adult family homes?", a: "Compare the same facts for each: residents and licensed capacity, who lives in the home, staffing day and night, specialty designations, nurse delegation, Medicaid contract, the total monthly cost at your parent's care level (each home sets its own care levels), the DSHS record over three years, and what the Disclosure of Services says the home cannot do. Then visit both at a mealtime." },
-      { q: "What is an adult family home's Disclosure of Services?", a: "A DSHS form (10-508) each home completes describing what it provides: personal care, medication help, nursing and nurse delegation, specialty designations, staffing, languages, Medicaid and activities. Ask each home for it before you decide; what it says the home does not do matters as much as what it does." },
-      { q: "Can an adult family home ask my parent to leave?", a: "Only for set reasons under Washington's residents' rights law, such as needs the home can no longer meet, a danger to others, unpaid charges or the home closing, and normally with at least 30 days' written notice (RCW 70.129.110). Read the admission agreement's discharge terms before signing." },
-    ],
+    faq: routeFaqForMeta("/senior-living/choosing-an-adult-family-home"),
     article: { datePublished: "2026-10-04", dateModified: "2026-10-04" },
   },
   "/afh-club/violation-history-lookup": {
@@ -1108,10 +1091,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "How do I look up violation and inspection history for a Washington Adult Family Home?",
     quickAnswerA: "Go to the DSHS Adult Family Home Locator, search for the home, open the listing, and open the home's reports and inspection letters. There you'll find inspection reports and cited deficiencies, complaint investigation results, and enforcement letters. DSHS says the Locator shows limits and enforcement from the previous three years. If no documents are listed, that only means none are currently displayed, not that the home has a perfect history.",
     intro: "Adult family home inspection reports, complaint investigations, and enforcement actions are public. The DSHS Locator shows limits and enforcement from the previous three years, and each home must keep its last three years of inspection reports available for anyone to review. Knowing where to find them and how to read them is the single most useful thing a family can do before a placement.",
-    faq: [
-      { q: "What does it mean if the DSHS locator lists no documents for a home?", a: "Only that no documents are currently displayed. It does not mean the home has a spotless history. DSHS says the Locator shows limits and enforcement from the previous three years, so older records may not appear." },
-      { q: "What is a statement of deficiency?", a: "When DSHS finds an adult family home out of compliance, it sends an inspection report citing each deficiency and the rule involved. The home returns a signed attestation of correction within 10 calendar days (WAC 388-76-10930)." },
-    ],
+    faq: routeFaqForMeta("/afh-club/violation-history-lookup"),
     article: { datePublished: "2026-07-27", dateModified: "2026-09-28" },
   },
   /* Statute-based probate guides (Oct 11, 2026): src/data/statuteGuides.ts. */
@@ -1249,8 +1229,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "The hardest things to change matter most: enough main-level bedrooms of at least 80 square feet, living that works on one level, a step-free or rampable entry, enough main-level toilets (one for every five people living in the home, counting household members, and half baths count), and more than one way out at ground level. Each resident bedroom needs an escape window with a sill no higher than 44 inches and a clear opening at least 24 by 20 inches. Residents who need help evacuating must have an exit path with no stairs, so basement and upstairs bedrooms suit only residents who can get out on their own. Zoning is rarely the obstacle, because state law makes an adult family home a permitted residential use, and HOA rules that restrict adult family homes are unenforceable under RCW 64.38.060. Septic capacity, unpermitted additions, and fire access are the more common problems.",
     intro: "The AFH Property Score is a free screening tool for people evaluating a house for adult family home use. It asks about twenty questions that can be answered from a listing and its photos, scores the building out of 100 using cost to cure, and keeps feasibility issues separate from the score so a serious problem is never hidden inside a good number. It then lists the conversion projects the house is likely to need and builds a checklist of what to measure at the showing. It scores the real estate only. For a home that is already licensed, it adds an unscored review of what a buyer is actually acquiring, because a license never transfers with a house.",
     faq: [
-      { q: "Does a high AFH Property Score mean the home can be licensed?", a: "No. It means the property shows characteristics favorable for further evaluation. The home must still pass the local building official's adult family home inspection and meet DSHS licensing requirements, and the provider must qualify separately." },
-      { q: "Can a two-story house be an adult family home?", a: "Yes, but stairs limit who can live in a room. Residents who need help evacuating must have an exit path with no stairs, and an elevator, chairlift, or platform lift does not count. A bedroom reached by stairs can be used only by residents who can get out on their own." },
+      { q: "Does a high score mean the home can be licensed as an adult family home?", a: "No. It means the property shows characteristics favorable for further evaluation. The home must still pass the local building official's adult family home inspection and meet DSHS licensing requirements, and the provider must qualify separately." },
+      { q: "Can a two-story house or a house with a basement be an adult family home?", a: "Yes, but stairs limit who can live in a room. Residents who need help evacuating must have an exit path with no stairs, and an elevator, chairlift, or platform lift does not count. A bedroom reached by stairs can be used only by residents who can get out on their own." },
       { q: "Are zoning or an HOA a problem for an adult family home in Washington?", a: "Generally not. RCW 70.128.140 says an adult family home must be treated as a residential use and is a permitted use in all areas zoned residential or commercial, including single-family zones. RCW 64.38.060 says HOA governing documents may not limit the operation of a licensed adult family home, and makes conflicting provisions unenforceable; an HOA may still apply reasonable rules that cover every home, such as sign and landscaping standards." },
     ],
   },
@@ -1318,10 +1298,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "What buyers will ask — Limits on the residents the home can accept or on who can provide care must be posted in the home. DSHS tells buyers to ask the current owner about ongoing limits or exemptions and outstanding enforcement on the current license.",
       "Pricing and timing — Plan for a longer close than a residential sale. The seller must give DSHS and residents written notice 60 calendar days before the change (WAC 388-76-10106). Work with a broker who understands DSHS requirements and how to structure the real estate and business components.",
     ],
-    faq: [
-      { q: "Can I keep operating under the seller's license while my application is pending?", a: "No. The license is personal to the provider and does not transfer. The buyer cannot operate the home until DSHS issues a new license." },
-      { q: "How long does a CHOW take?", a: "DSHS will not estimate how long a change-of-ownership license takes; a complete application avoids delays. In late September 2026 DSHS was processing applications received in May 2026, and processing can take up to 60 days once an application is complete. Most applicants do not pass the first inspection." },
-    ],
+    faq: routeFaqForMeta("/afh-club/buying-selling"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/calculators": {
@@ -1344,10 +1321,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Building and permits — Highly variable. Permit fees depend on jurisdiction; some charge flat AFH fees, others by project cost. Septic systems must be approved for the number of people served.",
       "Revenue — Most homes hold a DSHS Medicaid contract; Medicaid rates are set by the state and vary by the resident's assessed care level. Private-pay rates are set by the provider.",
     ],
-    faq: [
-      { q: "What is the DSHS licensing fee for an adult family home?", a: "$450 per licensed bed per year, in place since July 2025 according to DSHS; a six-bed home pays $2,700. The amount is set in the state budget every two years and can change." },
-      { q: "Is liability insurance required?", a: "Yes, under WAC 388-76-10191: general and professional liability of at least $500,000 per occurrence and $1,000,000 aggregate. At the 2019 and 2024 average per-bed premiums, a six-bed home paid about $1,900 to $2,840 per year." },
-    ],
+    faq: routeFaqForMeta("/afh-club/costs-fees"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/market-report": {
@@ -1395,10 +1369,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Individual provider vs. entity provider — An individual holds the license personally and is responsible for every requirement; DSHS licenses each home separately. An entity (LLC, corporation, partnership) holds the license and designates an Entity Representative who meets all individual qualifications; a person may represent only one entity.",
       "Your path forward — Start Home Care Aide training (unless exempt) and enroll in AFH Administrator Training at a Washington community college. Have the home reviewed against the WABO checklist before applying. Use the DSHS locator to gauge how many licensed homes already operate in your ZIP code. Apply through the DSHS BAAU portal; DSHS posts its current processing timeline, and most applicants need more than one licensing inspection.",
     ],
-    faq: [
-      { q: "How much caregiving experience do I need?", a: "DSHS requires at least 1,000 hours of direct caregiving experience in the previous 60 months, or one of the approved professional exemptions." },
-      { q: "How long does it take to open an adult family home?", a: "DSHS posts its current processing timeline: in late September 2026 it was processing applications received in May 2026, and review can take up to 60 days once an application is complete. Most applicants do not pass the first licensing inspection, and building modifications can extend the timeline." },
-    ],
+    faq: routeFaqForMeta("/afh-club/getting-started"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/licensing-certification": {
@@ -1414,10 +1385,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "The application — Apply at baau.dshs.wa.gov. Avoid the characters &, =, +, and # in form fields; they cause submission errors. DSHS posts its current processing queue and allows up to 60 days once an application is complete. A passed local building inspection must be in hand before the DSHS inspection can be completed.",
       "Change of Ownership — Buying an existing home requires a complete new application. The prior license does not transfer. DSHS says a continuously licensed home is held to the building rules in place when it was first licensed.",
     ],
-    faq: [
-      { q: "Who has to pass a background check?", a: "The applicant and anyone affiliated with the application, household members over age 11, all caregivers, entity representatives and resident managers, and volunteers or noncaregiving staff with unsupervised access to residents." },
-      { q: "Can I skip Home Care Aide training?", a: "Only if you hold a listed exemption — RN, LPN, CNA, Medicare-certified home health aide, or a qualifying long-term care work history — with proof." },
-    ],
+    faq: routeFaqForMeta("/afh-club/licensing-certification"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/ownership-structure": {
@@ -1432,9 +1400,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Buying through an LLC — A clearer line between personal and business assets and a structure that supports adding partners, more homes, or a succession plan. Financing may require different underwriting, larger down payments, or higher rates, plus formation and maintenance costs.",
       "How to decide — How important is financing simplicity? How important is liability separation? Are you buying one home or building a larger operation? Do you need a structure that supports future partners or planning?",
     ],
-    faq: [
-      { q: "Does an LLC change the DSHS licensing process?", a: "An LLC becomes an entity provider. It must designate an Entity Representative who personally meets all training, experience, and background-check requirements, and one person may represent only one entity." },
-    ],
+    faq: routeFaqForMeta("/afh-club/ownership-structure"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/senior-living/what-is-an-adult-family-home": {
@@ -1476,10 +1442,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Reading an inspection report — Look for patterns rather than single events; whether the provider can explain what happened and what changed; whether citations involved resident harm or paperwork; and how long the current provider has operated this specific home, since ownership changes can reset the public record. Visit in person; records rarely tell the whole story.",
       "Public tools — The DSHS Adult Family Home Locator for status and three-year history; Residential Care Services annual data tables; the DSHS quarterly top-violations report; and the Complaint Resolution Unit at 1-800-562-6078.",
     ],
-    faq: [
-      { q: "How often are adult family homes inspected?", a: "At least every 18 months, unannounced, with a statewide average of 15 months; homes with three clean inspections in a row may go up to two years (RCW 70.128.070). Complaints are investigated separately whenever a concern is filed." },
-      { q: "What is a stop-placement order?", a: "A DSHS action that bars the home from admitting new residents until violations are corrected and stability is demonstrated. Existing residents may stay." },
-    ],
+    faq: routeFaqForMeta("/afh-club/regulations-compliance"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-club/resources": {
@@ -1505,10 +1468,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Specialty training — The provider, entity representative, and resident manager must complete dementia, mental health, or developmental disabilities specialty training before admitting or serving residents with those needs, or within 120 days if a current resident develops one.",
       "Continuing education — 12 hours by each birthday for providers, entity representatives, resident managers, and certified caregivers.",
     ],
-    faq: [
-      { q: "Where do I take AFH Administrator Training?", a: "Through community colleges contracted with DSHS. Use the DSHS training finder (Other Training, AFH Administrator Training) to find current classes." },
-      { q: "Do caregivers I hire need the same training?", a: "Non-exempt caregivers complete five hours of orientation and safety training before providing care, the 70-hour basic training within 120 days of hire, and Home Care Aide certification, and need DSHS name-and-date-of-birth and fingerprint background checks." },
-    ],
+    faq: routeFaqForMeta("/afh-club/training-education"),
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
   "/afh-submit": {
@@ -1542,7 +1502,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       { q: "Is hospice a place you move to?", a: "Usually not. In Washington, hospice is delivered by a licensed in-home services agency to wherever the person already lives. Free-standing hospice care centers exist for short stays when symptoms can't be managed at home." },
       { q: "Does Medicare pay for hospice?", a: "Yes, under Part A for a beneficiary certified as terminally ill who elects comfort care. Out-of-pocket is limited to a copayment of up to $5 per prescription and 5% of the Medicare-approved amount for inpatient respite care." },
       { q: "What does Medicare not pay for under hospice?", a: "Room and board. A resident of an adult family home or assisted living on hospice still pays the home's monthly rate, or continues under Medicaid or other coverage. Hospice pays for the hospice; the residence is separate." },
-      { q: "Does 24-hour hospice mean someone is there around the clock?", a: "No. It means the hospice team is on call around the clock and visits on a schedule. Continuous care exists only for short crises. Daily supervision and personal care still come from family, private caregivers, or the home's staff." },
+      { q: "Does '24-hour hospice' mean someone is there around the clock?", a: "No. It means the hospice team is on call around the clock and visits on a schedule. Continuous care exists only for short crises. Daily supervision and personal care still come from family, private caregivers, or the home's staff." },
       { q: "Can an adult family home take a hospice resident?", a: "Many can, and many do. Ask which hospice agencies the provider works with and whether they have cared for residents through end of life before." },
     ],
     article: { datePublished: "2026-09-14", dateModified: "2026-09-30" },
@@ -2334,9 +2294,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "If the provider dies or can no longer run the home — The license does not pass to the family or estate. Every home must keep a written succession plan (WAC 388-76-10201), and DSHS handles each case individually, depending on the home's advance planning and business structure. In an emergency that forces a change of ownership, a person who qualifies to be a provider can apply for a provisional license to keep the home operating. Residents who must move get 30 days' notice unless staying would endanger them (WAC 388-76-10615 to 10617). A change of ownership keeps the building rules the home was first licensed under; a home that closes and reopens must meet current rules. Source: DSHS Residential Care Services licensing staff, October 2026.",
       "Valuing the business — An operating home can sell for more than the same house as a residence; a residential appraisal values only the real estate. Independent appraisal of the real estate and separate valuation of the business keep the two from being confused.",
     ],
-    faq: [
-      { q: "Can I sell the business and keep the building?", a: "Yes. Some owners lease the property to the new operator and keep the real estate as an investment. It separates the two assets and requires a written lease and a buyer able to qualify for the license." },
-    ],
+    faq: routeFaqForMeta("/afh-club/selling-your-business-at-retirement"),
     article: { datePublished: "2026-07-22", dateModified: "2026-10-05" },
   },
 

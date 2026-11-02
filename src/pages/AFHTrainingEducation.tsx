@@ -13,6 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const TRAINING_REQUIREMENTS = [
   {
     title: "75-Hour HCA Training",
@@ -619,6 +620,7 @@ const AFHTrainingEducation = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
       <NextQuestions />
     </main>

@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import NextQuestions from "@/components/NextQuestions";
+import RouteFAQ from "@/components/RouteFAQ";
 
 const label = {
   fontSize: 15,
@@ -400,6 +401,7 @@ const AFHViolationHistory = () => (
     <AuthorByline context="afh" />
       <BackToAFHClub />
     <CTASection />
+    <RouteFAQ />
     <DisclaimerSection />
     <Footer />
   </>

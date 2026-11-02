@@ -22,6 +22,7 @@ import { listingsForFacility } from "../afhAddressMatch";
 import { afhListings, formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
 import { directoryNextSteps } from "./nextSteps";
 import { cityGuide, type Seg } from "./cityGuide";
+import { MEDICAID_CONTRACT_SENTENCE, medicaidListLabel, medicaidRowValue } from "./medicaidWording";
 import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "./inspectionRecord";
 
 /* ------------------------------------------------------------------ */
@@ -202,9 +203,7 @@ const facilityRow = (f: Facility) => {
     `<p style="margin:4px 0 0;color:#1c1917">${esc(f.address.street)}, ${esc(f.address.city)}, WA ${esc(
       f.address.zip,
     )} — licensed for ${f.licensedBeds}</p>` +
-    `<p style="margin:4px 0 0;color:#1c1917">${esc(spec)} — ${
-      f.acceptsMedicaid ? "accepts Medicaid" : f.contracts.length ? "no Medicaid contract" : "private pay only"
-    }</p>` +
+    `<p style="margin:4px 0 0;color:#1c1917">${esc(spec)} — ${medicaidListLabel(f)}</p>` +
     `<p style="margin:4px 0 0;color:#1c1917;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)} · <a href="${attr(dshsReportsUrl(f.licenseNumber))}" rel="noopener" style="color:#1a365d">DSHS inspection record</a>${f.hasReports ? " (documents posted)" : " (none posted when checked)"}</p>` +
     `</li>`
   );
@@ -373,7 +372,7 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility, cityHomes: Facili
       f.specialties.length ? f.specialties.map((s) => SPECIALTY_LABELS[s] ?? s).join(", ") : "None on file",
     ],
     ["DSHS contracts", f.contracts.length ? f.contracts.map((c) => CONTRACT_LABELS[c] ?? c).join(", ") : "No contract"],
-    ["Medicaid", f.acceptsMedicaid ? "Accepted" : f.contracts.length ? "Not accepted (no Medicaid contract)" : "Not accepted — private pay only"],
+    ["Medicaid", medicaidRowValue(f)],
     ...(f.contactName ? ([["Provider contact", f.contactName]] as Array<[string, string]>) : []),
     ...(f.phone ? ([["Phone", f.phone]] as Array<[string, string]>) : []),
     ["Address", `${ad.street}, ${ad.city}, WA ${ad.zip}`],
@@ -388,15 +387,15 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility, cityHomes: Facili
         f.licensedBeds,
         "resident",
         "residents",
-      )}. It ${f.acceptsMedicaid ? "accepts Medicaid" : f.contracts.length ? "has no Medicaid contract" : "is private pay only"}${
+      )}. ${f.acceptsMedicaid ? MEDICAID_CONTRACT_SENTENCE : f.contracts.length ? "It has no Medicaid contract." : "It is private pay only."}${
         f.specialties.length
-          ? ` and carries the ${f.specialties.map((s) => SPECIALTY_LABELS[s] ?? s).join(", ")} specialty ${plural(
+          ? ` It carries the ${f.specialties.map((s) => SPECIALTY_LABELS[s] ?? s).join(", ")} specialty ${plural(
               f.specialties.length,
               "designation",
               "designations",
-            )}`
+            )}.`
           : ""
-      }.`,
+      }`,
     ),
   );
   parts.push(h2("DSHS licensing record"));
