@@ -133,3 +133,6 @@ bold, navy) are the one exception. The card rule that shrinks headings inside
 - One front door each: estate = `/estate-probate-inherited-property`, find a professional = `/featured-professionals` (its "who do I need?" guide is `/building-your-professional-team`). `/resources`, `/professionals`, `/professionals-services`, `/roles`, `/planning` are redirects now; never link to them.
 - Breadcrumb line under the header: `src/components/Breadcrumbs.tsx`, trail from the site maps (`src/lib/breadcrumbs.ts`). Not shown on the homepage, on pages with section tabs, or on the two flow-chart guides (they have their own).
 - City probate pages: `src/data/cityProbatePages.ts`; county pages link them.
+
+## Google Analytics: production host only (Nov 2, 2026)
+GA4 `G-0X2GPKCW65` is set up in the `ga-gate` block of `index.html` and starts only when the host is exactly `realpropertyplanning.com` and the browser does not declare automation (`navigator.webdriver`, HeadlessChrome, Lighthouse, PageSpeed). Previews and copies (Lovable, pages.dev, workers.dev, localhost) send nothing. `gtag()` is always defined so custom events never throw. `src/test/gaGate.test.ts` runs the real script; keep the marker comments. Audit and background: the "GA4 Audit: realpropertyplanning.com" doc (Nov 2, 2026). Never add a second tag or ID.
