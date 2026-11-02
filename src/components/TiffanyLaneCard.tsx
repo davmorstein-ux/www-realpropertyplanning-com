@@ -1,6 +1,7 @@
 import ProviderTile from "@/components/ProviderTile";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import nyLifeLogo from "@/assets/new-york-life-logo.webp";
+import KariFrinkTile, { KARI_FINANCIAL_SPECIALTY } from "@/components/KariFrinkTile";
 
 const TIFFANY_BIO = `With a deep personal understanding of how life transitions impact families, I focus on guiding retirees — and their loved ones — through every step of their financial journey. After witnessing my own family navigate the complexities of Alzheimer's and elder care, I've dedicated my career to helping others plan with confidence. I work closely with retirees and their adult children, offering guidance so families can navigate estate planning, downsizing, and legacy protection together. Let's ensure everyone involved is supported, and your next chapter is exactly as you envision.
 
@@ -10,6 +11,7 @@ const TiffanyLaneCard = () => (
   <section className="py-10 md:py-14 bg-background">
     <div className="container px-6 lg:px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+        <KariFrinkTile specialty={KARI_FINANCIAL_SPECIALTY} />
         <ProviderTile
           name="Tiffany Lane"
           title="Financial Professional"
