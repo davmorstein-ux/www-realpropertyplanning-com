@@ -526,3 +526,22 @@ export const ACTIVE_AFH_PROFESSIONAL_GROUPS = NEUTRAL_ORDER.filter((g) => g.peop
 
 /** Every featured person as one flat list, each tagged with their profession, in section order. */
 export const AFH_FEATURED_PEOPLE: FeaturedEntry[] = entriesOf(NEUTRAL_ORDER);
+
+/**
+ * "People who help with this" on AFH Club pages (Nov 2, 2026, owner's go):
+ * which professional groups appear at the end of a page. Shown by
+ * AFHTopicProfessionals.tsx; empty groups are skipped. Lenders first appear on
+ * the financing pages, so an investor reading about money sees who lends.
+ */
+const LENDERS = ["mortgage-lending", "business-purpose-financing", "sba-lending"];
+export const AFH_TOPIC_GROUPS: Record<string, string[]> = {
+  "/afh-club/dscr-loans-adult-family-homes": LENDERS,
+  "/afh-club/afh-financing-calculator": LENDERS,
+  "/afh-club/afh-roi-calculator": LENDERS,
+  "/afh-club/before-you-buy-an-adult-family-home": LENDERS,
+};
+export const afhGroupsForTopic = (path: string): AFHProfessionalGroup[] =>
+  (AFH_TOPIC_GROUPS[path.replace(/\/+$/, "")] ?? [])
+    .map((id) => AFH_PROFESSIONAL_GROUPS.find((g) => g.id === id))
+    .filter((g): g is AFHProfessionalGroup => !!g && g.people.length > 0)
+    .map((g) => ({ ...g, people: [...g.people].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name))) }));

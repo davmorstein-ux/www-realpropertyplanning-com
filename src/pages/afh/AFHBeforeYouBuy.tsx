@@ -12,6 +12,7 @@ import { AFH_GREEN, AFH_FLOW_BASE } from "@/data/afhFlow";
 import { BEFORE_YOU_BUY, BYB_LAYERS, BYB_CLAIMS, BYB_FAQS, type BybLink } from "@/data/afhBeforeYouBuy";
 
 import RppArrow from "@/components/RppArrow";
+import AFHTopicProfessionals from "@/components/AFHTopicProfessionals";
 /**
  * Before You Buy an Adult Family Home: What to Verify (Oct 3, 2026). Words in
  * src/data/afhBeforeYouBuy.ts (shared with the prerender). Linked from the
@@ -167,6 +168,7 @@ const AFHBeforeYouBuy = () => (
       </Block>
 
       <PageFAQ faqs={BYB_FAQS} heading="Before You Buy: Common Questions" eyebrow="Frequently Asked Questions" id="afh-before-you-buy" />
+      <AFHTopicProfessionals />
     </main>
     <AuthorByline context="afh" />
     <BackToAFHClub />
