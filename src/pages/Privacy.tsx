@@ -12,7 +12,9 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  * corresponds to something the site actually does as of 2026-09-30:
  *
  *   Google Analytics 4      index.html, gtag G-0X2GPKCW65 — loads on every
- *                           page, before any consent step
+ *                           page, before any consent step; only on the
+ *                           realpropertyplanning.com host and not in browsers
+ *                           that declare automation (Nov 2, 2026)
  *   Referral click events   providerTracking.ts — a provider_contact_click
  *                           event when a visitor taps a featured
  *                           professional's phone, email, or website link.

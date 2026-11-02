@@ -20,21 +20,40 @@
          itself loads after the page has finished loading (Oct 6, 2026), so its
          ~150 KB of script no longer competes with the page on a phone. Queued
          events are sent when it arrives. A visitor who leaves before the page
-         finishes loading is no longer counted. -->
+         finishes loading is not counted.
+
+         PRODUCTION ONLY, HUMANS ONLY (Nov 2, 2026, GA4 audit). The same build
+         also runs on the Lovable preview, lovable.app, pages.dev and
+         workers.dev; every load there was counted as a new Direct visitor.
+         Analytics now starts only on the exact production host, and not in
+         browsers that declare automation (navigator.webdriver, or an explicit
+         HeadlessChrome / Lighthouse / PageSpeed user agent). Nothing about the
+         page changes for anyone; crawlers get the same HTML.
+         gtag() is always defined so the site's custom events never throw; off
+         production they only go into an unread dataLayer.
+         Tested by src/test/gaGate.test.ts (it runs this script). The marker
+         comments below must stay. -->
+    <!-- ga-gate:start -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0X2GPKCW65');
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          var s = document.createElement('script');
-          s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0X2GPKCW65';
-          document.head.appendChild(s);
-        }, 0);
-      });
+      (function () {
+        var ua = navigator.userAgent || "";
+        var automated = navigator.webdriver === true || /HeadlessChrome|Chrome-Lighthouse|Google Page Speed|PageSpeed/i.test(ua);
+        if (location.hostname !== "realpropertyplanning.com" || automated) return;
+        gtag('js', new Date());
+        gtag('config', 'G-0X2GPKCW65');
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0X2GPKCW65';
+            document.head.appendChild(s);
+          }, 0);
+        });
+      })();
     </script>
+    <!-- ga-gate:end -->
     <meta name="google-site-verification" content="WqzgPFUggfXVdfdb1HYv-dQdznpmIejwblRWHLJGvRc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Real Property Planning" />
