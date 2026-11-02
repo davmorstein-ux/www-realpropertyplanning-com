@@ -12,6 +12,7 @@ import audioAsset from "@/assets/afh-regulations-compliance.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const ENFORCEMENT_LEVELS = [
   {
     level: "License Conditions",
@@ -861,6 +862,7 @@ const AFHRegulationsCompliance = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
     </main>
     <Footer />

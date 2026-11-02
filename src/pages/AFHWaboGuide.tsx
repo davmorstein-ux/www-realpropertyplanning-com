@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import WhichGuide from "@/components/WhichGuide";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const label = {
   fontSize: 15,
   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
@@ -291,6 +292,7 @@ const AFHWaboGuide = () => (
     <AuthorByline context="afh" />
       <BackToAFHClub />
     <CTASection />
+    <RouteFAQ />
     <DisclaimerSection />
     <Footer />
   </>

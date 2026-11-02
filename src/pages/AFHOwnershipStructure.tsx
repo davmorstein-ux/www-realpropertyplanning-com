@@ -13,6 +13,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-ownership-structure.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import RouteFAQ from "@/components/RouteFAQ";
 
 const DECIDE_QUESTIONS = [
   {
@@ -657,6 +658,7 @@ const AFHOwnershipStructure = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
     </main>
     <Footer />

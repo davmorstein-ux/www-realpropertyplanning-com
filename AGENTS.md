@@ -136,3 +136,9 @@ bold, navy) are the one exception. The card rule that shrinks headings inside
 
 ## Google Analytics: production host only (Nov 2, 2026)
 GA4 `G-0X2GPKCW65` is set up in the `ga-gate` block of `index.html` and starts only when the host is exactly `realpropertyplanning.com` and the browser does not declare automation (`navigator.webdriver`, HeadlessChrome, Lighthouse, PageSpeed). Previews and copies (Lovable, pages.dev, workers.dev, localhost) send nothing. `gtag()` is always defined so custom events never throw. `src/test/gaGate.test.ts` runs the real script; keep the marker comments. Audit and background: the "GA4 Audit: realpropertyplanning.com" doc (Nov 2, 2026). Never add a second tag or ID.
+
+## Audit fixes (Nov 2, 2026)
+- FAQ markup must match visible text. Questions for a page without its own FAQ section live in `src/data/routeFaqs.ts`; `<RouteFAQ />` shows them (placed before DisclaimerSection) and vite.config.ts builds the FAQPage markup from the same list. When a route's `faq` in ROUTE_METADATA reworded a question the page already shows, use the page's exact wording.
+- AFH Medicaid wording lives ONLY in `src/data/afh/medicaidWording.ts` (owner-approved): a home with the base contract "holds a DSHS Medicaid contract, so it can accept Medicaid payment. Ask the home whether it has a Medicaid opening." Never write "accepts Medicaid" as a promise of a bed.
+- Old /cities/<city> addresses go to the matching city page (src/data/redirects.ts); everything else under /cities/ still goes to /counties.
+- No "Last updated" dates from git: history before Aug 23, 2026 is one import commit, and sitewide edits touch page files. Dates come only from articleRecords.ts after a real review.

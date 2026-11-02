@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { AFHFacility } from "@/data/afh/types";
 import { SPECIALTY_LABELS } from "@/data/afh/types";
 import { dshsReportsUrl } from "@/data/afh/inspectionRecord";
+import { medicaidListLabel } from "@/data/afh/medicaidWording";
 
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
@@ -55,7 +56,7 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
           ? facility.specialties.map((s) => SPECIALTY_LABELS[s]).join(" · ")
           : "No specialty designations on file"}
         {" — "}
-        {facility.acceptsMedicaid ? "accepts Medicaid" : facility.contracts.length ? "no Medicaid contract" : "private pay only"}
+        {medicaidListLabel(facility)}
       </p>
 
       <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#1c1917" }}>

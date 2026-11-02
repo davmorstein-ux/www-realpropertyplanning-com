@@ -13,6 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const STARTUP_COSTS = [
   {
     category: "DSHS Annual License Fee",
@@ -615,6 +616,7 @@ const AFHCostsFees = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
       <NextQuestions />
     </main>

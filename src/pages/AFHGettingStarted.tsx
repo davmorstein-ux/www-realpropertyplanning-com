@@ -14,6 +14,7 @@ import NextQuestions from "@/components/NextQuestions";
 import WhichGuide from "@/components/WhichGuide";
 
 import RppArrow from "@/components/RppArrow";
+import RouteFAQ from "@/components/RouteFAQ";
 const REALITY_CHECKS = [
   {
     q: "Are you available around the clock?",
@@ -817,6 +818,7 @@ const AFHGettingStarted = () => (
       <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
+      <RouteFAQ />
       <DisclaimerSection />
       <NextQuestions />
     </main>

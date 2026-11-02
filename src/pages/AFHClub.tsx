@@ -15,6 +15,7 @@ import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/d
 
 import RppArrow from "@/components/RppArrow";
 import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
+import RouteFAQ from "@/components/RouteFAQ";
 /**
  * PAGE-SCOPED STYLES
  *
@@ -1488,6 +1489,7 @@ const AFHClub = () => {
         </section>
 
         <CTASection />
+        <RouteFAQ />
         <DisclaimerSection />
       </main>
       <Footer />

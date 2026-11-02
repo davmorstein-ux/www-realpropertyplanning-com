@@ -39,6 +39,7 @@ import NextQuestions from "@/components/NextQuestions";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { DSHS_LOCATOR_URL } from "@/data/afh/inspectionRecord";
+import RouteFAQ from "@/components/RouteFAQ";
 
 const URL = "https://realpropertyplanning.com/senior-living/choosing-an-adult-family-home";
 const rcw = (cite: string) => `https://app.leg.wa.gov/RCW/default.aspx?cite=${cite}`;
@@ -378,6 +379,7 @@ const ChoosingAnAdultFamilyHome = () => (
     </main>
     <AuthorByline context="care" />
     <BackToLongTermCare />
+    <RouteFAQ />
     <DisclaimerSection />
     <Footer />
   </>
