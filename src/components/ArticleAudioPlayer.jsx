@@ -89,7 +89,12 @@ function ForwardIcon({ size = 20, color = COLORS.ivoryMuted }) {
   );
 }
 
-export default function ArticleAudioPlayer({ audioSrc = "" }) {
+/* aiVoice (Nov 2, 2026, David): recordings made with his cloned voice say so in
+   the player's own subtitle, so listeners know whose voice it is and that it is
+   AI-made. Other recordings keep "AI-generated audio". */
+export const AI_VOICE_NOTE = "Narrated in the voice of David Stein, created with AI";
+
+export default function ArticleAudioPlayer({ audioSrc = "", aiVoice = false }) {
   const audioRef = useRef(null);
   const progressRef = useRef(null);
 
@@ -395,7 +400,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
           <HeadphoneIcon size={26} color={COLORS.brass} />
           <div>
             <div style={pillLabelStyle}>Listen to this Article</div>
-            <div className="rpp-dark-muted" style={pillSubStyle}>AI-generated audio · Real Property Planning</div>
+            <div className="rpp-dark-muted" style={pillSubStyle}>{aiVoice ? AI_VOICE_NOTE : "AI-generated audio · Real Property Planning"}</div>
           </div>
         </div>
       )}
@@ -408,7 +413,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
             <HeadphoneIcon size={30} color={COLORS.brass} />
             <div style={labelStyle}>
               <p style={titleStyle}>Listen to this Article</p>
-              <p style={subtitleStyle}>AI-generated audio overview · Real Property Planning</p>
+              <p style={subtitleStyle}>{aiVoice ? AI_VOICE_NOTE : "AI-generated audio overview · Real Property Planning"}</p>
             </div>
             <button
               style={dismissStyle}

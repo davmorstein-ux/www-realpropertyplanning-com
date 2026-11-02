@@ -9,6 +9,7 @@ import BackToLongTermCare from "@/components/BackToLongTermCare";
 import { STATE_TERMS, TERM_FAMILIES, LAST_REVIEWED } from "@/data/afh/state-terms";
 import stats from "@/data/afh/stats.json";
 import ArticleCover from "@/components/ArticleCover";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 
 /* Washington counts come from the same DSHS locator snapshot as /afh-club/washington-afh-data. */
 const WA = stats.state;
@@ -191,6 +192,11 @@ const AFHWhatIsAnAFH = () => {
               Reviewed {reviewedLabel}. State terms and capacity limits change; verify with the agency listed
               before relying on this table.
             </p>
+
+            {/* David's narration, cloned voice (Nov 2, 2026), 9:29. */}
+            <div style={{ marginTop: 16 }}>
+              <ArticleAudioPlayer audioSrc="/audio/what-is-an-adult-family-home.mp3" aiVoice />
+            </div>
           </div>
         </section>
 
