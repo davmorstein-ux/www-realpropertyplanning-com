@@ -16,31 +16,31 @@ const WhenYouNeedExtraHelp = () => (
   >
     <SubH2>Most Estates Are Manageable. Some Are Not.</SubH2>
     <P>
-      A simple estate — a clear will, cooperative heirs, minimal debts, no real property — can often be administered without enormous difficulty, especially with good legal guidance.
+      A simple estate (a clear will, cooperative heirs, few debts, no real property) can often be administered without great difficulty, especially with good legal guidance.
     </P>
     <P>
-      But many estates aren't simple. And the ones that aren't can become genuinely overwhelming for an executor who is also grieving, working, and managing their own life.
+      Other estates are harder, particularly for an executor who is also grieving, working and managing their own life.
     </P>
-    <P>Here are the situations that typically require additional professional support.</P>
+    <P>These are the situations that typically require professional help.</P>
 
     <Divider />
 
     <SubH2>Complex or Large Estates</SubH2>
     <P>
-      Estates that involve significant assets — multiple properties, business interests, investment portfolios, or substantial retirement accounts — require careful coordination among attorneys, CPAs, financial advisors, and appraisers.
+      Estates with significant assets, such as multiple properties, business interests, investment portfolios or substantial retirement accounts, require careful coordination among attorneys, CPAs, financial advisors and appraisers.
     </P>
     <P>
       The tax implications alone can be significant: Washington State has its own estate tax with a relatively low exemption, and federal estate tax may also apply for larger estates. Decisions made early in the administration process can have major consequences for how much ultimately passes to heirs.
     </P>
     <P>
-      If you are administering an estate with assets of meaningful size or complexity, assembling an experienced professional team early is not optional — it's essential.
+      If the estate is large or complex, assemble an experienced professional team at the start of the administration, not partway through.
     </P>
 
     <Divider />
 
     <SubH2>Family Conflict and Contested Estates</SubH2>
     <P>
-      Few things are more painful than family conflict over an estate. It happens more often than most people expect — and it can turn a difficult process into an exhausting, expensive one.
+      Family conflict over an estate happens more often than most people expect, and it can turn a difficult process into a long, expensive one.
     </P>
     <P>Common flashpoints include:</P>
     <UL>
@@ -50,7 +50,7 @@ const WhenYouNeedExtraHelp = () => (
       <li>Concerns that one family member unduly influenced the deceased</li>
       <li>Disagreements about the value of assets</li>
     </UL>
-    <P>As executor, you are caught in the middle — legally obligated to administer the estate fairly while personally connected to the people involved.</P>
+    <P>As executor, you are legally obligated to administer the estate fairly, even though you are personally connected to the people involved.</P>
     <P>
       In these situations, an experienced probate attorney is essential. In some cases, a mediator can help resolve disputes without litigation. Real Property Planning does not refer anyone to attorneys or mediators; choose them yourself, and confirm an attorney's license with the Washington State Bar Association (wsba.org).
     </P>
@@ -59,29 +59,29 @@ const WhenYouNeedExtraHelp = () => (
 
     <SubH2>Out-of-State Property</SubH2>
     <P>
-      If the estate includes real property located in another state, a separate probate proceeding — called "ancillary probate" — may be required in that state. This means working with attorneys licensed in that jurisdiction, in addition to your Washington State attorney.
+      If the estate includes real property in another state, a separate probate proceeding in that state, called "ancillary probate," may be required. That means working with attorneys licensed in that state in addition to your Washington State attorney.
     </P>
-    <P>Out-of-state property also requires local professional support for appraisal, maintenance, and eventual sale. Look for professionals who work in the county where the property is.</P>
+    <P>Out-of-state property also needs local help with appraisal, upkeep and the eventual sale. Look for professionals who work in the county where the property is.</P>
 
     <Divider />
 
     <SubH2>A Missing or Disputed Will</SubH2>
     <P>
-      If no will can be found, the estate is "intestate" and Washington State law determines how assets are distributed — which may not reflect the deceased's actual wishes. If a will is found but its validity is contested, court proceedings may follow.
+      If no will can be found, the estate is "intestate," and Washington State law determines how assets are distributed. The result may not match what the deceased wanted. If a will is found but its validity is contested, court proceedings may follow.
     </P>
-    <P>Both situations require experienced legal counsel. Do not attempt to navigate a contested or intestate estate without an attorney.</P>
+    <P>Both situations require experienced legal counsel. Do not try to handle a contested or intestate estate without an attorney.</P>
 
     <Divider />
 
-    <SubH2>An Overwhelmed or Reluctant Executor</SubH2>
+    <SubH2>A Struggling or Reluctant Executor</SubH2>
     <P>
-      Sometimes the person named as executor simply cannot do the job — whether because of geographic distance, personal capacity, emotional state, or the demands of their own life. This is more common than people admit, and it is not a failure.
+      Sometimes the person named as executor cannot do the job because of distance, personal capacity, emotional state or the demands of their own life. The law allows for this.
     </P>
     <P>
-      Washington State law allows an executor to resign and have a successor appointed. Alternatively, a professional fiduciary — a licensed individual or company that serves as executor for a fee — can be engaged to handle some or all of the administration.
+      An executor can ask the court to accept a resignation and appoint a successor. Alternatively, a professional fiduciary (an individual or company that serves as executor for a fee) can be hired to handle some or all of the administration.
     </P>
     <P>
-      If you are feeling overwhelmed, talk to your attorney about your options. The estate and the heirs are better served by an executor who asks for help than by one who struggles through alone.
+      If you cannot keep up with the work, ask your attorney about these options. Asking for help early serves the estate and the heirs better than falling behind.
     </P>
 
     <Divider />
@@ -105,10 +105,10 @@ const WhenYouNeedExtraHelp = () => (
         than warmth. */}
     <SubH2>Where to Find That Help</SubH2>
     <P>
-      Real Property Planning is an educational resource, not a service provider — it holds no licenses and does not handle estates. What it offers is this library of guidance and a directory of independent Washington professionals: probate attorneys, CPAs, fiduciaries, senior move managers, and estate liquidators.
+      Real Property Planning is an educational resource, not a service provider. It holds no licenses and does not handle estates. It offers this library of guidance and a directory of independent Washington professionals: probate attorneys, CPAs, fiduciaries, senior move managers, and estate liquidators.
     </P>
     <P>
-      If the estate includes a home, {FEATURED_BROKER.name}, the featured broker on this site, can answer questions about the property directly. {brokerCredentialSentence.replace(/\.$/, "")} — so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would actually require are ones {FEATURED_BROKER.pronoun.subject} can speak to directly. Legal, tax, and care decisions belong with the professionals listed throughout this site.
+      If the estate includes a home, {FEATURED_BROKER.name}, the featured broker on this site, can answer questions about the property directly. {brokerCredentialSentence.replace(/\.$/, "")}, so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would require are ones {FEATURED_BROKER.pronoun.subject} can speak to. Legal, tax, and care decisions belong with the professionals listed throughout this site.
     </P>
   </ExecutorSubPageLayout>
 );

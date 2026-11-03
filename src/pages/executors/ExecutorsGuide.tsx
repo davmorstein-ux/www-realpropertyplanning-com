@@ -41,32 +41,32 @@ const firstSteps = [
   {
     number: "01",
     title: "Secure the Property Immediately",
-    body: "Change the locks, forward the mail, and confirm insurance is active. An unoccupied home is a liability — vandalism, water damage, or a lapsed policy can create problems that complicate the sale later.",
+    body: "Change the locks, forward the mail, and confirm insurance is active. Vandalism, water damage or a lapsed policy on an empty house can complicate the sale later.",
   },
   {
     number: "02",
     title: "Obtain Letters Testamentary",
-    body: "Before acting on behalf of the estate, the probate court must issue Letters Testamentary (or Letters of Administration if there is no will). Banks, title companies, and real estate agents all require this document.",
+    body: "If the estate goes through probate, the court must issue Letters Testamentary (or Letters of Administration if there is no will) before you can act for it. Banks, title companies and real estate agents will ask for them. Property held in a trust or passing by a transfer on death deed or survivorship follows its own route.",
   },
   {
     number: "03",
     title: "Commission a Date-of-Death Appraisal",
-    body: "A certified appraisal establishes the property's fair market value as of the date of death. This figure is essential for the estate tax return, cost-basis calculations, and defending the sale price to beneficiaries or the IRS.",
+    body: "A certified appraisal establishes the property's fair market value as of the date of death. That figure sets the heirs' stepped-up tax basis, is needed for an estate tax return if the estate is large enough to owe one, and supports the sale price if beneficiaries or the IRS question it.",
   },
   {
     number: "04",
     title: "Decide: Sell, Transfer, or Hold",
-    body: "Most estate properties are sold to close the estate and distribute cash to beneficiaries. Some families choose to transfer the home to a beneficiary or hold it temporarily. Each path has tax and timeline implications.",
+    body: "Most estate properties are sold to close the estate and distribute cash to beneficiaries. Some families transfer the home to a beneficiary or hold it for a while instead. Each option has different tax and timeline consequences.",
   },
   {
     number: "05",
     title: "Prepare and List the Property",
-    body: "Estate homes often need decluttering, cleaning, and minor repairs before going on market. Work with a real estate broker experienced in estate sales — not every agent understands probate timelines, court approvals, or fiduciary constraints.",
+    body: "Estate homes often need decluttering, cleaning, and minor repairs before going on market. Use a real estate broker experienced in estate sales; not every agent understands probate timelines, when court approval is needed, or fiduciary constraints.",
   },
   {
     number: "06",
     title: "Close and Distribute Proceeds",
-    body: "After debts, taxes, and costs of sale are satisfied, remaining proceeds are distributed to beneficiaries according to the will — or, if none exists, Washington State's intestacy laws.",
+    body: "After debts, taxes and costs of sale are paid, the remaining proceeds go to the beneficiaries under the will or, if there is no will, under Washington State's intestacy laws.",
   },
 ];
 
@@ -76,7 +76,7 @@ const commonMistakes = [
   "Skipping the date-of-death appraisal and relying on Zillow estimates",
   "Making repairs that exceed what the estate can recover in sale price",
   "Distributing assets to beneficiaries before all debts and taxes are paid",
-  "Failing to notify all heirs — even those not named in the will",
+  "Failing to notify all heirs, including those not named in the will",
   "Mixing estate funds with personal accounts",
   "Accepting the first offer without understanding Washington's probate sale process",
 ];
@@ -84,13 +84,13 @@ const commonMistakes = [
 const professionals = [
   {
     title: "Probate Attorney",
-    body: "A probate attorney guides the legal process — filing with the court, obtaining Letters Testamentary, and ensuring distributions are made correctly. This is the most important professional to engage first.",
+    body: "A probate attorney handles the legal process: filing with the court, obtaining Letters Testamentary, and making sure distributions are made correctly. This is the professional to engage first.",
     link: "/professionals/probate-attorneys",
     label: "Find Probate Attorneys",
   },
   {
     title: "Certified Real Estate Appraiser",
-    body: "A Washington State certified residential appraiser provides the date-of-death valuation required for tax purposes. This must be an independent, certified appraisal — not an online estimate.",
+    body: "A Washington State certified residential appraiser provides the date-of-death valuation used for tax basis and the estate inventory. An independent appraisal holds up far better than an online estimate if the value is ever questioned.",
     link: "/real-estate-appraiser",
     label: "Find Appraisers",
   },
@@ -102,7 +102,7 @@ const professionals = [
   },
   {
     title: "Estate Sale Company",
-    body: "Before the property can be sold, the contents often need to be cleared. An estate sale company handles pricing, marketing, and selling personal property — saving the executor significant time and effort.",
+    body: "Before the property can be sold, the contents often need to be cleared. An estate sale company prices, markets and sells the personal property, which saves the executor a great deal of time.",
     link: "/estate-liquidators",
     label: "Find Estate Sale Companies",
   },
@@ -131,10 +131,10 @@ const ExecutorsGuide = () => (
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p style={bodyText}>
-              Being named executor of an estate is an honor — and a responsibility that arrives at one of the hardest
-              moments in a family's life. Washington State calls this role the Personal Representative. Whether
-              the estate includes a family home, investment property, or a house full of decades of belongings, this guide
-              covers what to know about the real estate portion of the role.
+              This guide covers the real estate side of serving as executor of a Washington estate, from securing the
+              house to distributing the sale proceeds. Washington State calls this role the Personal Representative. The
+              same steps apply whether the estate holds a family home, an investment property or a house full of
+              decades of belongings.
             </p>
           </div>
         </div>
@@ -146,14 +146,14 @@ const ExecutorsGuide = () => (
           <div className="max-w-3xl mx-auto">
             <h2 style={sectionHeading}>What an Executor Actually Does</h2>
             <p style={{ ...bodyText, marginBottom: 18 }}>
-              An executor is named in a will to administer a deceased person's estate. If there is no will — or if
-              the named executor cannot serve — the court appoints an administrator. Either way, the role carries the
+              An executor is named in a will to administer a deceased person's estate. If there is no will, or if
+              the named executor cannot serve, the court appoints an administrator. Either way, the role carries the
               same legal weight: a fiduciary duty to act in the best interests of the estate and its beneficiaries.
             </p>
             <p style={bodyText}>
-              For most estates, the largest and most complex asset is real property. A family home carries emotional
-              weight, practical complications, and significant financial stakes. Getting it right — on timeline, on
-              price, within legal bounds — is one of the executor's most important responsibilities.
+              In most estates, real property is the largest and most complex asset. A family home has to be secured,
+              valued and usually sold, often while relatives disagree about it. Handling the house on time, at a fair
+              price and within the law is among the executor's main responsibilities.
             </p>
 
             <div
@@ -167,9 +167,9 @@ const ExecutorsGuide = () => (
             >
               <p style={{ ...bodyText, fontSize: 14 }}>
                 Washington uses the term <em>Personal Representative</em> rather than "executor." The role is
-                governed by the Washington Probate Act (RCW Title 11). Washington allows non-intervention
-                powers, meaning most executors can act without court approval for each transaction — but this
-                authority must be formally granted by the court.
+                governed by the Washington Probate Act (RCW Title 11). Washington courts can grant
+                nonintervention powers to the personal representative of a solvent estate, so they can act without
+                court approval for each transaction (RCW 11.68.011); the court must grant this authority.
               </p>
             </div>
           </div>
@@ -234,8 +234,8 @@ const ExecutorsGuide = () => (
           <div className="max-w-3xl mx-auto">
             <h2 style={sectionHeading}>Common Executor Mistakes</h2>
             <p style={{ ...bodyText, marginBottom: 18 }}>
-              Executors are held to a high standard — even when acting in good faith. These are the mistakes that most
-              often create legal exposure, delay the estate, or damage family relationships.
+              Executors are held to a high standard, even when they act in good faith. These mistakes most often
+              create legal exposure, delay the estate or damage family relationships.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -267,8 +267,8 @@ const ExecutorsGuide = () => (
           <div className="max-w-4xl mx-auto">
             <h2 style={sectionHeading}>Professionals an Executor Will Need</h2>
             <p style={{ ...bodyText, marginBottom: 24 }}>
-              Executors are not expected to handle everything alone. These are the key professionals involved in most
-              Washington State estate real estate situations.
+              Most Washington estates that include real estate involve these four professionals. Executors are not
+              expected to handle everything alone.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16 }}>
               {professionals.map((item) => (
@@ -318,7 +318,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: "#fff", padding: "64px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 style={sectionHeading}>Find the Right Professionals</h2>
+            <h2 style={sectionHeading}>Find Professionals</h2>
             <p style={{ ...bodyText, marginBottom: 28 }}>
               Real Property Planning's Find a Professional page lists independent professionals, including an appraiser, a
               broker and an estate liquidation service, whom you contact and hire directly. Choose a probate attorney yourself.

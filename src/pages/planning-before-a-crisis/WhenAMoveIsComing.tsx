@@ -16,56 +16,56 @@ const WhenAMoveIsComing = () => (
   >
     <SubH2>The Window Before the Crisis</SubH2>
     <P>
-      Sometimes the signs are there for months — a parent struggling at home, a recent health scare, a sense that things are shifting. This in-between period is an opportunity, not a crisis. Used well, it's the difference between a calm transition and a chaotic one.
+      The months between the first signs and the actual move are the time to prepare. The signs can be there for a long while: a parent struggling at home, a recent health scare, a gradual decline. Used well, this period lets the family make the move calmly instead of in a rush.
     </P>
 
     <Divider />
 
     <SubH2>Start Looking at Senior Living Options Now</SubH2>
     <P>
-      The single biggest mistake families make in this window is waiting. Senior living communities — particularly those with memory care or higher levels of support — can have waitlists. If a move becomes urgent and you haven't already started looking, your options narrow dramatically.
+      The biggest mistake families make in this window is waiting. Senior living communities, particularly those with memory care or higher levels of support, can have waitlists. If a move becomes urgent and you haven't started looking, your options narrow sharply.
     </P>
     <P><strong>What to do:</strong></P>
     <UL>
-      <li>Research what types of senior living exist: independent living, assisted living, adult family homes, memory care, continuing care retirement communities</li>
-      <li>Visit communities you're considering — not just virtually, but in person. The feel of a place matters enormously</li>
-      <li>Understand the cost structures. Many senior living options are private pay; knowing what something costs before you need it prevents financial shock</li>
-      <li>Ask about waitlists. If there's a community that seems like the right fit, get on the list now — even if a move isn't imminent</li>
+      <li>Learn the types of senior living: independent living, assisted living, adult family homes, memory care and continuing care retirement communities</li>
+      <li>Visit the places you're considering in person, not only online. How a place feels matters a great deal</li>
+      <li>Learn how each option is priced. Many senior living options are private pay, and knowing the cost before you need it avoids a financial shock</li>
+      <li>Ask about waitlists. If a community looks suitable, get on its list now, even if a move isn't imminent</li>
     </UL>
-    <P>This is research and relationship-building. It commits no one to anything. But it means that when the time comes, there are real options rather than whatever happens to have an opening.</P>
+    <P>This is research and relationship-building, and it commits no one to anything. When the time comes, the family has real options rather than whatever happens to have an opening.</P>
 
     <Divider />
 
     <SubH2>Have the Home Evaluated</SubH2>
     <P>
-      If a move is likely — even if it's still a year or two away — understanding the home's value and condition now is genuinely useful.
+      If a move is likely, even a year or two out, find out the home's value and condition now.
     </P>
     <P><strong>Why:</strong></P>
     <UL>
-      <li>If the home will need to be sold to fund care, knowing the likely net proceeds changes the financial picture entirely. Care costs in Washington State are significant; knowing what the home can contribute helps families plan realistically.</li>
-      <li>If the home needs preparation before going to market, knowing that in advance allows time to make decisions thoughtfully — getting bids, choosing what to fix, deciding what to leave as-is.</li>
-      <li>If family members will be co-inheriting or co-deciding, having an independent professional appraisal eliminates the guesswork and the arguments.</li>
+      <li>If the home will be sold to pay for care, the likely net proceeds shape the whole financial plan. Care in Washington State is expensive, and knowing what the home can contribute lets the family plan realistically.</li>
+      <li>If the home needs work before it goes on the market, knowing early leaves time to get bids, choose what to fix and decide what to leave as is.</li>
+      <li>If several family members will inherit or decide together, an independent professional appraisal gives everyone the same number and takes the guesswork, and most of the arguments, out of the value.</li>
     </UL>
 
     <Divider />
 
     <SubH2>Get Legal Documents Updated or Created</SubH2>
     <P>
-      This step is time-sensitive in a way that surprises many families: a person's ability to sign legal documents can be affected by cognitive decline, and once that threshold is crossed, the window to create or update powers of attorney, wills, and trusts may close.
+      Get powers of attorney, wills and trusts created or updated while your parent can still sign them. Cognitive decline can affect a person's ability to sign legal documents, and once that point is passed, the chance to create or update them may be gone.
     </P>
     <P>
-      If your loved one doesn't yet have these documents — or if the ones they have are outdated — now is the time. Not next year. Not after the next doctor's appointment.
+      If your parent doesn't have these documents yet, or the ones they have are out of date, do it now, not next year or after the next doctor's appointment.
     </P>
-    <P>A Washington State estate planning attorney can typically move through this process in a matter of weeks. The cost is modest relative to the protection it provides.</P>
+    <P>A Washington State estate planning attorney can prepare these documents; the cost is small next to what a court guardianship or conservatorship would cost later.</P>
 
     <Divider />
 
     <SubH2>Work With Professionals Who Understand This Kind of Transition</SubH2>
     <P>
-      Selling a family home — particularly one that has been lived in for decades, by someone who may still be living there — is different from a typical real estate transaction. It requires patience, sensitivity, coordination across family members, and experience with the particular dynamics of an estate or senior transition.
+      Selling a family home that someone has lived in for decades, and may still live in, is different from a typical real estate sale. It takes patience, tact, coordination among family members, and experience with estate and senior transitions.
     </P>
     <P>
-      The same is true for appraisers, attorneys, care managers, and financial advisors. Professionals who regularly work with seniors and their families understand the pace, the emotional complexity, and the practical constraints involved.
+      The same is true for appraisers, attorneys, care managers and financial advisors. Those who regularly work with older adults and their families understand the pace, the family dynamics and the practical limits involved.
     </P>
     <P>
       Real Property Planning explains what each of these professionals does, so you know who to call. Its Find a Professional page lists independent professionals you can contact directly.
@@ -73,9 +73,9 @@ const WhenAMoveIsComing = () => (
 
     <Divider />
 
-    <SubH2>You Don't Have to Figure This Out Alone</SubH2>
+    <SubH2>Where to Start</SubH2>
     <P>
-      If you're in this window — you can see a transition coming but haven't quite gotten started — a single conversation with the right professional can help clarify what the next steps actually are.
+      If you can see a move coming but haven't started, one conversation with a professional who handles these moves (an estate planning attorney, appraiser, broker or care manager) can clarify what the next steps are.
     </P>
   </PlanningSubPageLayout>
 );
