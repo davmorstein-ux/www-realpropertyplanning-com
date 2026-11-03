@@ -41,7 +41,7 @@ const ProbateAndLegalAuthority = () => (
     <SubH2>Do You Need Probate in Washington State?</SubH2>
     <P>Washington State has two main paths:</P>
     <P>
-      <strong>Full probate</strong> — required when the estate includes real property titled solely in the deceased's name, or when significant assets don't have beneficiary designations or co-owners. A personal representative (executor) is appointed by the court. Most are granted nonintervention powers, which let them settle the estate, including selling the house, without further court orders.
+      <strong>Full probate</strong> — usually required when the estate includes real property titled solely in the deceased's name, or when significant assets don't have beneficiary designations or co-owners. A house can still pass without probate in some cases, for example to a surviving spouse under a community property agreement (RCW 26.16.120). A personal representative (executor) is appointed by the court. Most are granted nonintervention powers, which let them settle the estate, including selling the house, without further court orders.
     </P>
     <P>
       <strong>Small estate affidavit</strong> — available when the whole probate estate, including any real estate, is worth $100,000 or less after liens. Forty days after the death, heirs can collect personal property such as bank accounts without probate. It cannot transfer real estate (RCW 11.62.010).
@@ -62,7 +62,7 @@ const ProbateAndLegalAuthority = () => (
       <strong>If there is no will:</strong> The court will appoint an administrator, typically the closest next of kin, to administer the estate under Washington's intestacy laws.
     </P>
     <P>
-      <strong>If no one has authority:</strong> If there is no will, no trust, and no one with legal authority, the family cannot legally sell property, access accounts, or make binding decisions without a court order. This situation — while fixable — is time-consuming and expensive to resolve.
+      <strong>If no one has authority:</strong> If there is no will, no trust, and no one with legal authority, the family cannot sell real estate or make binding decisions for the estate without a court order. Bank accounts and other personal property can sometimes be collected without court: if the probate estate is $100,000 or less, a successor can use a small estate affidavit 40 days after the death (RCW 11.62.010). This situation — while fixable — is time-consuming and expensive to resolve.
     </P>
 
     <Divider />
