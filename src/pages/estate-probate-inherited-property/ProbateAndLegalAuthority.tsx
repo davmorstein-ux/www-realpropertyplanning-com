@@ -17,20 +17,20 @@ const ProbateAndLegalAuthority = () => (
 
     <SubH2>Who Has the Authority to Make Decisions?</SubH2>
     <P>
-      Understanding probate and legal authority is the foundation of everything else. Without it, nothing can move forward — and mistakes made here are costly to undo.
+      Before anyone can sell the house or make binding decisions for the estate, someone has to have legal authority to act. Everything else depends on it, and mistakes made at this stage are costly to undo.
     </P>
 
     <Divider />
 
-    <SubH2>What Probate Is — and What It Isn't</SubH2>
+    <SubH2>What Probate Is, and What It Isn't</SubH2>
     <P>
       Probate is the court process for administering a deceased person's estate, though in Washington most estates are then handled with little court involvement. It involves validating the will, appointing an executor, notifying creditors, paying debts, and ultimately distributing assets to heirs.
     </P>
     <P>
-      Probate is not a punishment, and it's not always something to be feared. In Washington State, the probate process is relatively straightforward for most estates — though it does take time, typically six months to a year or more for an average estate.
+      In Washington State, the probate process is relatively straightforward for most estates, though it does take time: typically six months to a year or more for an average estate.
     </P>
     <P>
-      Not everything goes through probate. Assets that pass by beneficiary designation — life insurance, retirement accounts, accounts designated as "payable on death" — transfer directly to the named beneficiary outside of probate. Assets held in joint tenancy pass automatically to the surviving owner. Assets held in a properly funded living trust also pass outside of probate.
+      Not everything goes through probate. Assets that pass by beneficiary designation (life insurance, retirement accounts, accounts designated as "payable on death") transfer directly to the named beneficiary outside of probate. Assets held in joint tenancy pass automatically to the surviving owner. Assets held in a properly funded living trust also pass outside of probate.
     </P>
     <P>
       What typically does go through probate: assets owned solely in the deceased's name, including real property, bank accounts without beneficiary designations, and personal property of significant value.
@@ -41,19 +41,19 @@ const ProbateAndLegalAuthority = () => (
     <SubH2>Do You Need Probate in Washington State?</SubH2>
     <P>Washington State has two main paths:</P>
     <P>
-      <strong>Full probate</strong> — usually required when the estate includes real property titled solely in the deceased's name, or when significant assets don't have beneficiary designations or co-owners. A house can still pass without probate in some cases, for example to a surviving spouse under a community property agreement (RCW 26.16.120). A personal representative (executor) is appointed by the court. Most are granted nonintervention powers, which let them settle the estate, including selling the house, without further court orders.
+      <strong>Full probate</strong> is usually required when the estate includes real property titled solely in the deceased's name, or when significant assets don't have beneficiary designations or co-owners. A house can still pass without probate in some cases, for example to a surviving spouse under a community property agreement (RCW 26.16.120). A personal representative (executor) is appointed by the court. Most are granted nonintervention powers, which let them settle the estate, including selling the house, without further court orders.
     </P>
     <P>
-      <strong>Small estate affidavit</strong> — available when the whole probate estate, including any real estate, is worth $100,000 or less after liens. Forty days after the death, heirs can collect personal property such as bank accounts without probate. It cannot transfer real estate (RCW 11.62.010).
+      <strong>Small estate affidavit</strong> is available when the whole probate estate, including any real estate, is worth $100,000 or less after liens. Forty days after the death, heirs can collect personal property such as bank accounts without probate. It cannot transfer real estate (RCW 11.62.010).
     </P>
-    <P>An experienced probate attorney can quickly tell you which applies to your situation.</P>
+    <P>A probate attorney can tell you which applies to your situation.</P>
 
     <Divider />
 
     <SubH2>Who Has Legal Authority Over the Estate</SubH2>
-    <P>This is the question that determines what can and cannot happen:</P>
+    <P>Who has authority decides what can and cannot happen:</P>
     <P>
-      <strong>If there is a will:</strong> The person named as executor (called "personal representative" in Washington State) has authority — but only after being formally appointed by the court. Being named in the will alone is not sufficient. The will is filed with the Superior Court (any Washington county; a party can later ask to move the case to the county where the person lived), and the court must issue Letters Testamentary before the executor can legally act.
+      <strong>If there is a will:</strong> The person named as executor (called "personal representative" in Washington State) has authority, but only after being formally appointed by the court. Being named in the will alone is not sufficient. The will is filed with the Superior Court (any Washington county; a party can later ask to move the case to the county where the person lived), and the court must issue Letters Testamentary before the executor can legally act.
     </P>
     <P>
       <strong>If there is a trust:</strong> The named trustee has authority over assets held in the trust, generally without court involvement.
@@ -62,7 +62,7 @@ const ProbateAndLegalAuthority = () => (
       <strong>If there is no will:</strong> The court will appoint an administrator, typically the closest next of kin, to administer the estate under Washington's intestacy laws.
     </P>
     <P>
-      <strong>If no one has authority:</strong> If there is no will, no trust, and no one with legal authority, the family cannot sell real estate or make binding decisions for the estate without a court order. Bank accounts and other personal property can sometimes be collected without court: if the probate estate is $100,000 or less, a successor can use a small estate affidavit 40 days after the death (RCW 11.62.010). This situation — while fixable — is time-consuming and expensive to resolve.
+      <strong>If no one has authority:</strong> If there is no will, no trust, and no one with legal authority, the family cannot sell real estate or make binding decisions for the estate without a court order. Bank accounts and other personal property can sometimes be collected without court: if the probate estate is $100,000 or less, a successor can use a small estate affidavit 40 days after the death (RCW 11.62.010). This situation can be fixed, but it is time-consuming and expensive to resolve.
     </P>
 
     <Divider />
@@ -79,7 +79,7 @@ const ProbateAndLegalAuthority = () => (
       <li>Closing the estate</li>
     </UL>
     <P>
-      This is a fiduciary role — meaning the personal representative is legally required to act in the best interests of the estate and its beneficiaries, not their own interests.
+      This is a fiduciary role, meaning the personal representative is legally required to act in the best interests of the estate and its beneficiaries, not their own interests.
     </P>
 
     <Divider />
@@ -87,15 +87,15 @@ const ProbateAndLegalAuthority = () => (
     <SubH2>Common Legal Questions Families Have</SubH2>
     <SubH3>Do we need probate before selling the home?</SubH3>
     <P>
-      If the home was titled solely in the deceased's name, yes — probate (or at minimum a court order) is typically required before the property can be sold. A title company will not insure the sale without proper legal authority.
+      If the home was titled solely in the deceased's name, yes: probate (or at minimum a court order) is typically required before the property can be sold. A title company will not insure the sale without proper legal authority.
     </P>
     <SubH3>What if siblings disagree about selling?</SubH3>
     <P>
-      The personal representative has the legal authority and responsibility to administer the estate — including making decisions about property — based on the will and Washington State law, not by consensus among heirs. If heirs cannot agree, during probate the personal representative decides, under the will and the law; partition applies once the house has been distributed and the heirs own it together, when a co-owner can ask the court to divide or sell it (RCW 7.52.010).
+      The personal representative has the legal authority and responsibility to administer the estate, including making decisions about property, based on the will and Washington State law, not by consensus among heirs. If heirs cannot agree, during probate the personal representative decides, under the will and the law; partition applies once the house has been distributed and the heirs own it together, when a co-owner can ask the court to divide or sell it (RCW 7.52.010).
     </P>
     <SubH3>How long does probate take in Washington State?</SubH3>
     <P>
-      A straightforward estate typically takes six months to a year. More complex estates — contested wills, significant debts, multiple properties, out-of-state assets — can take longer.
+      A straightforward estate typically takes six months to a year. More complex estates (contested wills, significant debts, multiple properties, out-of-state assets) can take longer.
     </P>
 
     <Divider />

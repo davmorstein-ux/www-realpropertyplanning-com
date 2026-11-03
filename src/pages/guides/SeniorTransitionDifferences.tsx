@@ -16,17 +16,17 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 
 const keyDifferences = [
-  { title: "The Emotional Weight Is Different", text: "A conventional seller is usually excited about the next chapter — a bigger home, a new city, a fresh start. Senior transition sellers are often processing loss of independence, health changes, grief, or family tension. The emotional context affects every decision and communication." },
-  { title: "The Timeline Is Rarely Simple", text: "Senior transitions often involve coordinating with assisted living waitlists, care transitions, health events, and family schedules. The real estate timeline needs to align with — not conflict with — these other moving parts." },
+  { title: "The Emotional Weight Is Different", text: "A conventional seller is usually looking forward to the next move: a bigger home, a new city, a fresh start. Senior transition sellers are often dealing with loss of independence, health changes, grief, or family tension, and that context affects every decision and conversation." },
+  { title: "The Timeline Is Rarely Simple", text: "Senior transitions often involve coordinating with assisted living waitlists, care transitions, health events, and family schedules. The real estate timeline has to fit around these other moving parts rather than work against them." },
   { title: "The Property Typically Needs More Preparation", text: "A home lived in for 30 or 40 years usually has decades of accumulated belongings, deferred maintenance, outdated finishes, and condition issues that affect both presentation and value. Preparation requires sensitivity, planning, and experienced vendor coordination." },
-  { title: "Multiple Decision-Makers Are Involved", text: "Adult children, spouses, care coordinators, attorneys, and financial advisors may all have input. Clear communication with multiple stakeholders — while respecting the senior's autonomy and dignity — is essential." },
+  { title: "Multiple Decision-Makers Are Involved", text: "Adult children, spouses, care coordinators, attorneys, and financial advisors may all have input. Each of them needs to be kept informed, and the senior's autonomy and dignity have to be respected throughout." },
   { title: "Patience Is Not Optional", text: `Some families need weeks or months to process the decision before the home can be listed. Rushing the timeline to meet a sales quota creates anxiety and damages trust. ${FEATURED_BROKER.Role} works at the family's pace.` },
 ];
 
 const faqs = [
   { question: "How early should we start planning a senior home sale?", answer: "As early as possible. Even if a move is months away, early planning allows time for a property assessment, conversations about preparation, and realistic expectation-setting. Starting early reduces pressure and gives the family more control over timing." },
-  { question: `Can ${FEATURED_BROKER.role} work with a senior move manager or care coordinator?`, answer: `Absolutely. ${FEATURED_BROKER.Role} regularly collaborates with senior move managers, care coordinators, social workers, and placement specialists to ensure the real estate timeline supports the broader transition plan.` },
-  { question: "What if the senior is resistant to selling?", answer: `This is common and understandable. ${FEATURED_BROKER.Role} does not pressure anyone. ${FEATURED_BROKER.pronoun.Subject} provides information, answers questions, and help families understand their options — so the senior can participate in the decision at their own pace.` },
+  { question: `Can ${FEATURED_BROKER.role} work with a senior move manager or care coordinator?`, answer: `Yes. ${FEATURED_BROKER.Role} regularly collaborates with senior move managers, care coordinators, social workers, and placement specialists to ensure the real estate timeline supports the broader transition plan.` },
+  { question: "What if the senior is resistant to selling?", answer: `This is common. ${FEATURED_BROKER.Role} does not pressure anyone. ${FEATURED_BROKER.pronoun.Subject} provides information, answers questions, and helps families understand their options, so the senior can take part in the decision at their own pace.` },
   { question: "How does the home's condition affect the sale approach?", answer: `${FEATURED_BROKER.Role} evaluates the property's condition and recommends a preparation strategy that balances cost, timeline, and likely return. Some homes benefit from targeted updates; others are better sold in their current condition to specific buyer pools.` },
 ];
 
@@ -61,7 +61,7 @@ const SeniorTransitionDifferences = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Written for adult children and families helping a senior parent sell a longtime family home as part of a move into assisted living, downsizing, or relocating closer to family. When a senior is moving out of a longtime family home — whether to assisted living, a smaller residence, or closer to family — the sale process looks and feels fundamentally different from a conventional home transaction. Understanding these differences helps families plan realistically and choose the right professional support.
+          Written for adult children and families helping a senior parent sell a longtime family home as part of a move into assisted living, downsizing, or relocating closer to family. When a senior moves out of a longtime family home to assisted living, a smaller residence, or a place closer to family, the sale works differently from a conventional home transaction: in the emotions involved, the timing, and the work the house needs. Knowing these differences helps families plan realistically and choose professional support that suits the situation.
         </p>
         </div>
       </div>
@@ -72,7 +72,7 @@ const SeniorTransitionDifferences = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Makes Senior Transition Sales Different?</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            These are not simply old houses being sold. They are the center of a family's history, and the sale happens during one of the most emotionally difficult periods a family faces:
+            The house is usually the center of a family's history, and it is sold during an emotionally difficult period for the family. Five differences stand out:
           </p>
           <div className="space-y-6">
             {keyDifferences.map((diff, i) => (
@@ -92,7 +92,7 @@ const SeniorTransitionDifferences = () => (
 
     <MidPageCTA
       heading="Planning a Senior Housing Transition?"
-      body={`${FEATURED_BROKER.Role} works at the family's pace — with patience, clear communication, and experienced coordination throughout Washington State.`}
+      body={`${FEATURED_BROKER.Role} works at the family's pace, with patience, clear communication, and experienced coordination throughout Washington State.`}
       buttonText="Schedule a Consultation"
       microcopy="No pressure. Just practical guidance for your family's situation."
     />
@@ -105,7 +105,7 @@ const SeniorTransitionDifferences = () => (
             A conventional listing agent focuses on getting the home sold quickly. A broker experienced in senior transitions understands that the timeline, communication style, and preparation process need to account for the family's emotional and logistical reality.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            {FEATURED_BROKER.Role}'s dual credentials as a broker and certified appraiser mean the family gets accurate pricing grounded in the property's actual condition — not an inflated number designed to win the listing. {FEATURED_BROKER.pronoun.Possessive} experience with senior transitions means {FEATURED_BROKER.pronoun.subject} knows how to communicate with empathy, coordinate with care professionals, and manage the practical details so the family can focus on the people who matter most.
+            {FEATURED_BROKER.Role}'s dual credentials as a broker and certified appraiser mean the family gets accurate pricing grounded in the property's actual condition, not an inflated number designed to win the listing. {FEATURED_BROKER.pronoun.Possessive} experience with senior transitions means {FEATURED_BROKER.pronoun.subject} knows how to communicate with empathy, coordinate with care professionals, and manage the practical details so the family can concentrate on the move and on the senior.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition real estate</Link> or read about how families have described the experience on the <Link to="/testimonials" className="text-accent hover:text-gold underline underline-offset-4">testimonials page</Link>.
@@ -137,7 +137,7 @@ const SeniorTransitionDifferences = () => (
       heading="Continue Learning"
       steps={[
         { title: "How Probate Real Estate Works", description: "A step-by-step overview of the probate property sale process in Washington State.", href: "/guides/how-probate-real-estate-works" },
-        { title: "Inherited House Guide", description: "What to do with an inherited house — sell, keep, rent, or buy out co-inheritors.", href: "/guides/inherited-house-washington" },
+        { title: "Inherited House Guide", description: "What to do with an inherited house: sell, keep, rent, or buy out co-inheritors.", href: "/guides/inherited-house-washington" },
         { title: "Out-of-State Family Guide", description: "Managing a Washington property transition when you live far away.", href: "/guides/out-of-state-families" },
       ]}
     />
