@@ -18,7 +18,7 @@ const livingOptions = [
   {
     title: "Adult Family Homes",
     description:
-      "Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.",
+      "Smaller, home-like settings that offer personalized care for a limited number of residents. Often chosen by seniors who prefer a quieter, smaller setting.",
     path: "/senior-living/adult-family-homes",
   },
   {
@@ -100,7 +100,7 @@ const SeniorLivingAndRelocation = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              When a senior is moving out of their home, families face important decisions about where to go next — and what to do with the property they're leaving behind. This guide covers both sides of that transition, and where to find independent professionals for each.
+              When a senior is moving out of their home, the family has two decisions to make: where the senior will live next, and what to do with the property being left behind. This guide covers both sides of that transition, and where to find independent professionals for each.
             </p>
             </div>
           </div>
@@ -113,8 +113,8 @@ const SeniorLivingAndRelocation = () => {
                 Understanding Senior Living Options
               </h2>
               <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10 leading-relaxed">
-                Every family's situation is different. Understanding the range of options available is an important
-                first step in planning a thoughtful transition.
+                The main housing types differ in size, level of care and daily support. Knowing the range is a
+                useful first step in planning the move.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center">
@@ -276,8 +276,8 @@ const SeniorLivingAndRelocation = () => {
                 professionals who specialize in senior placement and care coordination.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Together, this resource can help ensure that housing decisions — both the home being left and the home
-                being chosen — are handled thoughtfully and with the family's best interests in mind.
+                The aim is to help the family plan both housing decisions together: the home being left and the
+                home being chosen.
               </p>
             </div>
           </div>

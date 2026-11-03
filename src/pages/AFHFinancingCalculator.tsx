@@ -37,7 +37,7 @@ const FAQS = [
   {
     question: "How much income does an adult family home need for a buyer to get an SBA loan?",
     answer:
-      "Lenders divide the home's net operating income by the annual loan payment (principal, interest, property tax and insurance) and want the result to be at least about 1.25× — one and a quarter times the payment. So the minimum net income is roughly 1.25 times the annual debt service at the proposed price. For a $2 million purchase financed with a 10%-down SBA 7(a) loan at current rates, that is in the region of $250,000 a year.",
+      "Lenders divide the home's net operating income by the annual loan payment (principal, interest, property tax and insurance) and want the result to be at least about 1.25× (one and a quarter times the payment). So the minimum net income is roughly 1.25 times the annual debt service at the proposed price. For a $2 million purchase financed with a 10%-down SBA 7(a) loan at current rates, that is in the region of $250,000 a year.",
   },
   {
     question: "Why is the income lower than what the owner takes home?",
@@ -214,11 +214,11 @@ const AFHFinancingCalculator = () => {
   const grossToday = monthlyTotal * 12;
   const costsToday = fixed + filledCount * variable + wages;
   const warnings: string[] = [];
-  if (grossToday > 0 && fixed > grossToday) warnings.push(`Fixed operating costs (${money(fixed)}) are larger than everything the home takes in a year (${money(grossToday)}). Check the fixed-cost figure — it is usually 25–45% of gross.`);
+  if (grossToday > 0 && fixed > grossToday) warnings.push(`Fixed operating costs (${money(fixed)}) are larger than everything the home takes in a year (${money(grossToday)}). Check the fixed-cost figure: it is usually 25–45% of gross.`);
   else if (grossToday > 0 && costsToday > grossToday) warnings.push(`Costs (${money(costsToday)}) are larger than the home's gross income (${money(grossToday)}). Check the fixed costs, variable cost and replacement wages.`);
   if (avgRate > 0 && variable > avgRate * 12) warnings.push(`Variable cost per resident (${money(variable)} a year) is more than a resident pays (${money(avgRate * 12)} a year). Check the figure.`);
-  if (loanRate > 20) warnings.push("Interest rate looks too high — enter it as a percentage, e.g. 9.5.");
-  if (down > 60) warnings.push("Down payment looks too high — enter it as a percentage, e.g. 10.");
+  if (loanRate > 20) warnings.push("Interest rate looks too high. Enter it as a percentage, e.g. 9.5.");
+  if (down > 60) warnings.push("Down payment looks too high. Enter it as a percentage, e.g. 10.");
 
   // Chart geometry (inline SVG, responsive via viewBox)
   const W = 760, H = 330, PL = 60, PR = 118, PT = 34, PB = 50;

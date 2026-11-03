@@ -22,6 +22,8 @@ Started Nov 3, 2026 on branch `editorial-audit`. Brief: owner's "Master Prompt â
 | Batch 8: spokane-county, whatcom-county, for-probate-attorneys, for-estate-planning-attorneys, professionals/estate-sale, professionals/financial-planners, guides/pricing-house-trust-estate, guides/how-probate-real-estate-works, guides/executor-sell-house-before-probate-washington, tacoma/olympia/bellevue probate pages, retirement-reverse-mortgage, preparing-home-for-sale-during-transition; shared lead-ins (JourneyOrientation) and the RelatedServices inherited-house blurb de-dashed | Live Nov 3 |
 | Batch 9: how-the-process-works, realtor, downsizing-preparing-for-transition, estate-liquidation, aging-life-care-managers, medicare-providers, legal-plans-identity-protection, guides/how-long-sell-probate-property, guides/heirs-disagree-selling-house, long-term-care/medicaid-and-long-term-care, long-term-care/short-term-nursing-home-stays, kitsap-county, counties hub, estate what-to-do-with-the-property, real-estate-attorneys, for-elder-law-attorneys; shared RelatedServices blurbs, RemodelWorthCallout and hub seal alt text de-dashed | Live Nov 3 |
 | Batch 10: thurston, franklin, clark, yakima counties; seattle and everett probate pages; guides/appraisal-vs-cma, date-of-death-valuation-property-appraisals; guides/executor-first-steps-house, guides/what-executors-should-do, resources/washington-executors-10-step-checklist; title-and-escrow, professionals/senior-housing-advisors, estate-liquidators, planning-before-a-crisis; long-term-care/hospital-discharge-planning, sell-house-fund-senior-living, afh-club/real-estate-broker. /senior-transitions page shell only: its text is in src/i18n/locales/en.json (deferred with /probate-estate-sales) | Live Nov 3 |
+| Batch 11 (large): 41 pages incl. Vancouver probate, legal duties, POA, taxes guide, appraisal-before-selling, FAQ, AFH retirement sale and WABO guide, senior-living hubs, what-is-an-AFH, hospice, WA Cares, professionals pages; 14 were already clean | Edited Nov 3, awaiting merge |
+| Batch 12 (final page-file pass): all remaining page files (~60 files / 75 URLs) incl. AFH Club hub and guides, probate guides, trustees, senior/services pages, resources; data-driven templates checked for page-level tells only | Edited Nov 3, awaiting merge |
 | Em-dash-only pass still due: legal-duties, working-with-professionals and every 'none'/'light' page | Not started |
 | All other pages | Not started (see inventory.csv status column) |
 
@@ -46,6 +48,11 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - /long-term-care/medicaid-and-long-term-care
 - /long-term-care/short-term-nursing-home-stays
 - /long-term-care/hospital-discharge-planning
+- /senior-living/what-is-an-adult-family-home
+- /articles/hospice-care
+- /afh-club/wabo-technical-guide (WABO)
+- /long-term-care/wa-cares
+- AFH narrated pages edited in batch 12: building-inspection, regulations-compliance, violation-history, ownership-structure, buying-selling, getting-started, training-education, licensing-certification, find-professional, costs-fees
 
 ## Claims flagged for fact review (meaning left unchanged)
 - silver-tsunami: 10,000/day in 2011; wave to ~2030; "Peak 65" most concentrated aging period; "vast majority" prefer aging in place; regional senior housing shortages; 20-25 more years after 65; caregiver shortage worsening. Sourced but not re-checked: 11,000/day and 4.1M/yr (Alliance for Lifetime Income), 1 in 5 by 2030 (Census), AARP 2024 savings figures.
@@ -137,3 +144,28 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - afh-real-estate-broker: "Every AFH sale is a CHOW" absolute (real-estate-only sale may not be); specialty designation claim unsourced; hardcoded 5.0/16 reviews and memberships; same four review tags on every card.
 - hospital-discharge: readmission research and "within 30 days" claims unsourced.
 - sell-house-fund-senior-living: memory care $9,000-10,000/mo unsourced; $1,130,000 home equity limit to confirm against HCA 2026; empty Affiliations H2.
+- BATCH 11 FIXES/FLAGS:
+- Fixed with verified facts: FAQ nonintervention powers now "the court grants ... (RCW 11.68.011)" (was "if the will grants"); EstateProbateInheritedProperty "named executor acts only after appointment"; ProbateAttorneys creditor notice no longer implied mandatory (twice).
+- power-of-attorney: "when they are no longer able" implies POA only works on incapacity; "only a PR or trustee can sell" absolute; WA durability default and co-agent default worth checking against RCW 11.125.
+- legal-duties: "simplified probate for smaller estates" (WA uses small-estate affidavit; split is nonintervention vs intervention); mortgages listed as debts to pay before distribution; accounting duty may overstate for nonintervention estates; several absolutes.
+- probate-attorneys: "At least four months" only if notice published; "A will goes through probate, a trust does not" absolute.
+- faq: "almost always yes" (need an attorney) reads as legal advice; letters without "if probate" qualifier.
+- taxes guide: REET "on all property sales" (exemptions exist); rate wording.
+- appraisal-before-selling: $400-$800, 10-20% unsourced.
+- afh-retirement-sale: "most applicants do not pass first inspection", "up to 60 days" uncited; partner/LLC change always a CHOW?
+- afh-valuation-estimator: 15% base cap rate unsourced (labelled assumption).
+- what-is-an-afh: other-state naming/caps unverified; "most carry DSHS specialty designations" hard-coded.
+- hospice: $7,000/mo example, "several visits a week" unsourced.
+- wa-cares: "several thousand to well over $10,000" unsourced.
+- senior-living hubs: "most residents pay privately", county list, $1,500/mo unsourced.
+- for-cpas: empty zero-width intro paragraph; all-caps H1. senior-living-advisors: "no cost to the family" without "ask how the advisor is paid".
+- out-of-state-families: promises an order of professionals it doesn't give.
+- Data-file text untouched: familySaleEstate.ts, medicaidAndTheHome.ts, myPlan.ts.
+- BATCH 12 FLAGS:
+- Data files still holding em dashes/tells (not yet edited): probatePillar.ts (10), probateFlow.ts (4), afhDscrLoans.ts (11), afhLenders.ts (7), afhListings.ts (19), afhMarketReport.ts (4), afhBeforeYouBuy.ts (3), afhFlow.ts (3), afhArticles.ts (2), fiftyFivePlus.ts (1), afhGlossary.ts (1); plus statuteGuides.json, mortgageAfterDeath.ts, sellParentsHouseDementia.ts, propertyTaxAfterDeath.ts, familySaleEstate.ts, medicaidAndTheHome.ts, myPlan.ts not reviewed; i18n en.json (seniorTransitions, probateEstateSales).
+- property-taxes-after-death: "One family's experience" story block (PTX_STORY in data file) conflicts with the no-stories rule.
+- sell-house-during-probate: "most estates operate under nonintervention powers" without the court-grant qualifier; letters of administration missing; "60 to 120 days" unsourced.
+- trustees: duty to notify beneficiaries and "most modern trusts grant a power of sale" need sources.
+- AFH: "most applicants do not pass the first inspection" (two pages); nurse/physician exemption list differs between Licensing and Getting Started; "household members over age 11" to check; Q4 2024 citation data labelled 2024-2025; property-score accessibility specs to check against WAC; $250,000/yr SBA example unsourced.
+- join-the-network: invites attorneys to apply (site makes no attorney referrals; listing is not referral).
+- afh-club hub: "never both appraised and brokered by the same person" absolute.

@@ -95,9 +95,9 @@ const LOOKUP_TOOLS = [
     label: "View DSHS Tables & Charts",
   },
   {
-    title: "Top AFH Citations — Q4 2024",
+    title: "Top AFH Citations: Q4 2024",
     description:
-      "DSHS quarterly report listing the most frequently cited violations across Washington Adult Family Homes. Essential reading for providers preparing for inspection.",
+      "DSHS quarterly report listing the most frequently cited violations across Washington Adult Family Homes. Useful for providers preparing for inspection.",
     url: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/2024%20Q4%20--%20Top%20AFH%20Citations.pdf",
     label: "Download Q4 2024 Report",
   },
@@ -197,7 +197,7 @@ const AFHRegulationsCompliance = () => (
           >
             Washington Adult Family Homes are licensed and regulated by DSHS Residential Care Services under WAC 388-76
             and RCW 70.128. This guide explains how inspections work, what enforcement actions mean, which violations
-            are cited most often — and how to look up any AFH in Washington's public database.
+            are cited most often, and how to look up any AFH in Washington's public database.
           </p>
           <p
             style={{
@@ -263,7 +263,7 @@ const AFHRegulationsCompliance = () => (
             DSHS licensors conduct <strong>unannounced inspections</strong> at least every 18 months, with a statewide
             average of 15 months. A home with no citations on its last three inspections, and no violations from
             complaint investigations in that time, may go up to two years (RCW 70.128.070). Because visits are unpredictable, providers
-            must maintain continuous compliance — not just prepare when an inspection is expected.
+            must maintain continuous compliance rather than prepare only when an inspection is expected.
           </p>
           <p
             style={{
@@ -295,7 +295,7 @@ const AFHRegulationsCompliance = () => (
               },
               {
                 title: "Complaint-Based Inspections",
-                body: "Triggered when someone files a concern with DSHS. Can range from minor administrative issues to serious safety incidents. Anyone can file a complaint — residents, families, or staff.",
+                body: "Triggered when someone files a concern with DSHS. Can range from minor administrative issues to serious safety incidents. Anyone can file a complaint, including residents, families, or staff.",
               },
             ].map((item) => (
               <div

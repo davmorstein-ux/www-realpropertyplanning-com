@@ -31,7 +31,7 @@ const TOPICS = [
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
     description:
-      "What it takes to open an Adult Family Home in Washington State — licensing basics, qualifications, and first steps.",
+      "What it takes to open an Adult Family Home in Washington State: licensing basics, qualifications, and first steps.",
   },
   {
     title: "Licensing & Certification",
@@ -55,7 +55,7 @@ const TOPICS = [
     title: "What Is WABO?",
     href: "/afh-club/wabo-inspection-guide",
     img: "/wabo-overview-cover.webp",
-    description: "A simple overview of WABO and the WABO inspection process — what it is, who inspects the home, and why it matters before buying.",
+    description: "A simple overview of WABO and the WABO inspection process: what it is, who inspects the home, and why it matters before buying.",
   },
   {
     title: "WABO Checklist & Technical Requirements",
@@ -85,7 +85,7 @@ const TOPICS = [
     title: "How to Finance an AFH",
     href: "/afh-club/how-to-finance-an-afh",
     img: "/afh-how-to-finance-cover.webp",
-    description: "Residential, SBA 7(a), SBA 504, or commercial — which loan fits, what the lender checks, and lenders that work with adult family homes.",
+    description: "Residential, SBA 7(a), SBA 504, or commercial: which loan fits, what the lender checks, and lenders that work with adult family homes.",
   },
   {
     title: "Can You Get a DSCR Loan for an AFH?",
@@ -213,8 +213,8 @@ const AFHResources = () => (
               maxWidth: 680,
             }}
           >
-            Everything you need to know about opening, operating, buying, or selling an Adult Family Home in Washington
-            State — organized by topic so you can go straight to what matters most.
+            Guides to opening, operating, buying, or selling an Adult Family Home in Washington
+            State, organized by topic.
           </p>
           <p
             className="rpp-afhres-start"

@@ -65,7 +65,7 @@ const FAQS = [
   {
     question: "Does '24-hour hospice' mean someone is there around the clock?",
     answer:
-      "No, and this is the misunderstanding that causes the most trouble. Washington's Medicaid rule (WAC 182-551-1000) describes hospice as a 24-hour-a-day program, with care coordinated by a hospice interdisciplinary team, meaning the team is on call and visits are scheduled as needed, not that a hospice worker stays in the home. Continuous care is available only during short crises. Day-to-day supervision and personal care still come from family, private caregivers, or the staff of the adult family home or facility where the person lives.",
+      "No. Washington's Medicaid rule (WAC 182-551-1000) describes hospice as a 24-hour-a-day program, with care coordinated by a hospice interdisciplinary team, meaning the team is on call and visits are scheduled as needed, not that a hospice worker stays in the home. Continuous care is available only during short crises. Day-to-day supervision and personal care still come from family, private caregivers, or the staff of the adult family home or facility where the person lives.",
   },
   {
     question: "Can an adult family home take a hospice resident?",
@@ -110,7 +110,7 @@ const HospiceCare = () => {
               <div className="text-center mb-8">
                 <img
                   src="/hospice-care-cover.webp"
-                  alt="Hospice care: a nurse holding the hand of an older woman resting at home — coordinated medical, personal, emotional and spiritual support when an illness is no longer being treated for cure"
+                  alt="Hospice care: a nurse holding the hand of an older woman resting at home, with coordinated medical, personal, emotional and spiritual support when an illness is no longer being treated for cure"
                   style={{ maxWidth: 340, width: "100%", height: "auto", borderRadius: 8, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}
                   width={1024}
                   height={1365}
@@ -150,8 +150,8 @@ const HospiceCare = () => {
               </p>
               <p className={pClass}>
                 What it is not: a building you move into, a replacement for the people who care for someone day to day,
-                or a way to make the cost of a residence disappear. Each of those misunderstandings shows up in family
-                conversations every week, so the rest of this guide takes them one at a time.
+                or a way to make the cost of a residence disappear. Each is a common misunderstanding, and the rest of this guide
+                takes them one at a time.
               </p>
 
               <h2 className={h2Class}>Where hospice can come</h2>
@@ -214,7 +214,7 @@ const HospiceCare = () => {
               <h3 className={h3Class}>Medicare does not pay for the residence</h3>
               <p className={pClass}>
                 Medicare states that it does not cover room and board when hospice is received at home, in a nursing
-                home, or in a hospice inpatient facility. This is the sentence families most need. If Mom lives in an
+                home, or in a hospice inpatient facility. If Mom lives in an
                 adult family home at $7,000 a month and goes on hospice, the home still costs $7,000 a month. Hospice
                 does not lower it, and it does not become "free care." What changes is that a nurse, an aide, a social
                 worker, and a chaplain now come to the home, and the medications and equipment for her comfort are
@@ -233,23 +233,23 @@ const HospiceCare = () => {
               <h2 className={h2Class}>What "24-hour hospice" actually means</h2>
               <p className={pClass}>
                 Washington's Medicaid rule (WAC 182-551-1000) describes hospice as a 24-hour-a-day program, with care
-                coordinated by a hospice interdisciplinary team. Read that carefully: the program is available around the clock, meaning a nurse
+                coordinated by a hospice interdisciplinary team. The program is available around the clock, meaning a nurse
                 is reachable at 3 a.m. and will come if needed. It does not mean a hospice worker stays in the home.
                 Routine hospice care is intermittent: scheduled visits, typically several a week, of varying length.
                 Continuous around-the-clock care exists as a distinct level for short crises, and it ends when the crisis
                 does.
               </p>
               <p className={pClass}>
-                The practical consequence is the one families underestimate. Someone still has to be there for the
+                In practice, someone still has to be there for the
                 hours between visits: to help with the bathroom, meals, turning, medications at the right time, and the
                 night. At home that is family or hired caregivers. In an adult family home or assisted living it is the
-                staff who were already caring for the resident, which is exactly why hospice layers so well onto those
-                settings rather than replacing them.
+                staff who were already caring for the resident, which is why hospice adds to those settings rather than
+                replacing them.
               </p>
 
               <h2 className={h2Class}>Hospice inside an adult family home</h2>
               <p className={pClass}>
-                Adult family homes are, by design, a good fit for hospice: a household of two to six residents (up to
+                Adult family homes are set up in a way that suits hospice: a household of two to six residents (up to
                 eight with DSHS approval) and caregivers present around the clock. Many homes in Washington care for
                 hospice residents; ask each provider about their experience. The hospice agency's
                 team visits the home, coordinates with the provider on medications and the plan of care, and supplies

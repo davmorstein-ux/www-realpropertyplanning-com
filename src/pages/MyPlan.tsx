@@ -139,7 +139,7 @@ const PAGE_CSS = `
     /* The screen arrow is a 1.1em masked box; without this reset the address
        text was squeezed into it and every link printed as a tall gap with a
        stray arrow (found Nov 1, 2026). */
-    .mp a.mp-link::after { content: " — realpropertyplanning.com" attr(data-href); display: inline; width: auto; height: auto; margin: 0; background: none; -webkit-mask: none; mask: none; vertical-align: baseline; font-weight: 400; color: #444; font-size: 11px; }
+    .mp a.mp-link::after { content: ": realpropertyplanning.com" attr(data-href); display: inline; width: auto; height: auto; margin: 0; background: none; -webkit-mask: none; mask: none; vertical-align: baseline; font-weight: 400; color: #444; font-size: 11px; }
     .mp-links { gap: 2px; margin-top: 4px; }
     .mp-plan > li { margin-bottom: 12px; }
     .mp-plan > li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }

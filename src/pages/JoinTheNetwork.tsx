@@ -73,17 +73,17 @@ const membershipBenefits = [
   {
     icon: Search,
     title: "Visibility",
-    text: "Your profile, logo, and contact information featured on the relevant pages of RealPropertyPlanning.com — where families and professionals are already looking for help.",
+    text: "Your profile, logo, and contact information shown on the relevant pages of RealPropertyPlanning.com, which families and professionals read when they are looking for help.",
   },
   {
     icon: Handshake,
-    title: "Referrals",
-    text: "Families, executors, and attorneys who need a professional in your specialty find listed members on the site's professional pages. Every listed professional has been met in person by the site's founder.",
+    title: "Being Found",
+    text: "Families, executors, and attorneys looking for a professional in your specialty can find listed members on the site's professional pages. Every listed professional has been met in person by the site's founder.",
   },
   {
     icon: Phone,
     title: "Collaboration",
-    text: `${FEATURED_BROKER.Role} works alongside attorneys, advisors, and care professionals regularly. Network members get a direct line to coordinate on shared clients when appropriate.`,
+    text: `${FEATURED_BROKER.Role} works with attorneys, advisors, and care professionals. Network members can get in touch to coordinate on shared clients when appropriate.`,
   },
 ];
 
@@ -157,7 +157,7 @@ const ApplicationForm = () => {
             Apply to Join the Network
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10 text-center">
-            Share a little about your practice. There's no cost and no commitment — just a quick introduction to show how your services fit.
+            Share a little about your practice. There's no cost and no commitment: a short introduction explaining what you do and who you serve.
           </p>
 
           <div className="bg-card border border-border rounded-xl p-7 md:p-10">
@@ -294,7 +294,7 @@ const JoinTheNetwork = () => {
                 Who Should Apply
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                Real Property Planning is a free resource for families and professionals navigating some of life's most complex transitions. It lists independent professionals who share a commitment to honest, client-centered service.
+                Real Property Planning is a free educational resource on probate, inherited property, estate sales and senior housing. It lists independent professionals who serve families and executors in these situations.
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 {professions.map((profession) => (
@@ -344,10 +344,10 @@ const JoinTheNetwork = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-                Ready to Be Found by the Families Who Need You?
+                Ready to Be Listed?
               </h2>
               <p className="text-primary-foreground text-lg leading-relaxed mb-8">
-                Getting listed on Real Property Planning is free, straightforward, and puts your services in front of a targeted audience that is actively looking for professionals like you.
+                Getting listed on Real Property Planning is free; nobody pays to be listed. Listings appear on the pages people read when they are looking for this kind of help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <a href="tel:+12069003015">

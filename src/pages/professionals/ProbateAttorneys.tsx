@@ -9,7 +9,7 @@ const ProbateAttorneys = () => {
       helpHeadline="How a Probate Attorney Helps Your Family"
       helpRows={[
         { icon: "📋", text: "Guides executors and personal representatives through every legal step of settling an estate" },
-        { icon: "⚖️", text: "Handles required court filings, creditor notices, and asset inventory documentation" },
+        { icon: "⚖️", text: "Handles court filings, creditor notices, and asset inventory documentation" },
         { icon: "🏠", text: "Coordinates property transfers and works alongside real estate professionals when a home must be sold" },
       ]}
       faqs={[
@@ -19,7 +19,7 @@ const ProbateAttorneys = () => {
         },
         {
           q: "Do I need a probate attorney in Washington State?",
-          a: "Washington State does not require an attorney for probate, but the process involves court filings, legal deadlines, and documentation that can be difficult to navigate alone — especially when real estate is involved. Most families find that having an experienced attorney saves time, money, and family conflict.",
+          a: "Washington State does not require an attorney for probate, but the process involves court filings, legal deadlines, and documentation that can be difficult to handle alone, especially when real estate is involved. An experienced attorney can often save time and money and reduce family conflict.",
         },
         {
           q: "How long does probate take in Washington?",
@@ -27,11 +27,11 @@ const ProbateAttorneys = () => {
         },
         {
           q: "When should I contact a probate attorney?",
-          a: "As soon as possible after a loved one passes. There are legal deadlines for filing with the court and notifying creditors. Early guidance helps avoid costly mistakes.",
+          a: "As soon as possible after a loved one passes. Probate has court deadlines, and if the personal representative chooses to publish a notice to creditors, claim deadlines follow from it. Early guidance helps avoid costly mistakes.",
         },
         {
           q: "What is the difference between a will and a trust in Washington State?",
-          a: "A will goes through probate court. A trust does not — it transfers assets directly to beneficiaries, which is faster and more private. An estate attorney can help families understand which applies to their situation.",
+          a: "A will goes through probate court. A trust does not: it transfers assets directly to beneficiaries, which is faster and more private. An estate attorney can help families understand which applies to their situation.",
         },
       ]}
       relatedProfessions={[

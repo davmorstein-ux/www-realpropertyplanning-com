@@ -127,10 +127,9 @@ const LongTermCareOptions = () => {
                 paddingLeft: 20,
               }}
             >
-              Long-term care decisions rarely arrive on a comfortable schedule. They often follow a hospital stay, a
-              sudden change in health, or a quiet realization that the current setting is no longer working. This hub
-              gathers the most important Washington State options in one place — so families can make informed,
-              unhurried choices.
+              This hub gathers the main Washington State long-term care options in one place. Care decisions often
+              follow a hospital stay or a sudden change in health, or come when the current setting is no longer
+              working, so it helps to know the options before then.
             </p>
             <p
               style={{
@@ -142,7 +141,7 @@ const LongTermCareOptions = () => {
               }}
             >
               Use the guides below to explore nursing homes, short-term stays, the Nurse Delegation Program, Medicaid
-              coverage, WA Cares, hospital discharge planning, and tools for finding the right care setting.
+              coverage, WA Cares, hospital discharge planning, and tools for choosing a care setting.
             </p>
           </div>
         </section>

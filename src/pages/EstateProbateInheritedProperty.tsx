@@ -27,17 +27,17 @@ const faqs = [
   {
     question: "Who actually has the authority to make decisions about the property?",
     answer:
-      "Typically, the personal representative (sometimes called the executor) named in the will, or appointed by the court if there isn't a will, holds that authority. Until that authority is formally established, it's generally best to hold off on major decisions like listing the property for sale.",
+      "Typically, the personal representative (sometimes called the executor) holds that authority once the court appoints them. The will usually names who should serve, and the court chooses if there isn't a will; a named executor acts only after appointment. Until that authority is formally established, it's generally best to hold off on major decisions like listing the property for sale.",
   },
   {
     question: "Can the home be sold before probate is fully finished?",
     answer:
-      "In many cases, yes, once the personal representative's authority is established — but the specifics depend on the estate and Washington's probate rules. It's worth confirming timing with the estate attorney handling the probate before moving forward.",
+      "In many cases, yes, once the personal representative's authority is established, but the specifics depend on the estate and Washington's probate rules. It's worth confirming timing with the estate attorney handling the probate before moving forward.",
   },
   {
     question: "What if the heirs don't agree on selling versus keeping the property?",
     answer:
-      "This comes up often. Starting from the same shared, objective information — an honest valuation and a clear picture of carrying costs — tends to make these conversations easier. In some cases a buyout between heirs, or bringing in a neutral third party, helps move things forward.",
+      "This comes up often. Starting from the same objective information (an independent valuation and a clear picture of carrying costs) tends to make these conversations easier. In some cases a buyout between heirs, or bringing in a neutral third party, helps move things forward.",
   },
   {
     question: "How long does probate and settling the property typically take?",
@@ -106,7 +106,7 @@ const EstateProbateInheritedProperty = () => {
 
         <IntentCTA
           heading="Dealing with an estate property?"
-          body="Whether you are the executor, an heir, or the attorney, the property side has its own timeline, valuation questions, and decisions about repairs and sale. Ask, and be pointed to the right guide or the right licensed professional."
+          body="For executors, heirs, and attorneys alike, the property side has its own timeline, valuation questions, and decisions about repairs and sale. Ask, and be pointed to the relevant guide or to a licensed professional."
           buttonText="Get connected about an estate property"
           reason="estate-property"
           professional="broker"

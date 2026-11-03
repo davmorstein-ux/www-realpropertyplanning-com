@@ -29,7 +29,7 @@ const CHOW_STEPS = [
   {
     step: "3",
     title: "Complete all provider qualifications",
-    body: "You must meet all current DSHS qualification requirements — training, certification, background check, caregiving experience — regardless of the seller's qualifications. The license does not transfer (WAC 388-76-10010). To buy a seven- or eight-bed home, you must already have been a licensed AFH provider for at least 24 months and meet the other conditions in WAC 388-76-10032.",
+    body: "You must meet all current DSHS qualification requirements (training, certification, background check, caregiving experience), regardless of the seller's qualifications. The license does not transfer (WAC 388-76-10010). To buy a seven- or eight-bed home, you must already have been a licensed AFH provider for at least 24 months and meet the other conditions in WAC 388-76-10032.",
   },
   {
     step: "4",
@@ -54,7 +54,7 @@ const SELLER_CONSIDERATIONS = [
     body: "Limits on the type of residents the home can accept, or on who can provide care, must be posted in the home. DSHS tells buyers to ask the current owner about any ongoing limits or exemptions and any outstanding enforcement on the current license, so expect those questions and answer them in writing.",
   },
   {
-    title: "Understand what transfers — and what does not",
+    title: "Understand what transfers and what does not",
     body: "The real estate transfers. The license does not, and neither do specialty contracts or the Medicaid contract. Residents decide whether to stay or move. Medicaid residents who stay need no new assessment, but they need new authorizations under the new owner's ProviderOne number. An Exception to Rule follows the resident.",
   },
   {
@@ -146,9 +146,9 @@ const AFHBuyingSelling = () => (
               maxWidth: 680,
             }}
           >
-            Buying or selling an Adult Family Home involves both a real estate transaction and a DSHS licensing process
-            running in parallel. Understanding how these two tracks interact — and where they diverge — is essential for
-            both buyers and sellers to protect their interests and their residents.
+            Buying or selling an Adult Family Home involves two processes running in parallel: a real estate transaction
+            and a DSHS licensing process. This page covers how the two interact and where they diverge, for buyers and
+            for sellers.
           </p>
         </div>
       </section>
@@ -197,7 +197,7 @@ const AFHBuyingSelling = () => (
             }}
           >
             CHOW stands for <strong>Change of Ownership</strong>. When an Adult Family Home is sold, DSHS requires the
-            new owner to apply for a completely new AFH license. The existing license does not transfer to the buyer —
+            new owner to apply for a completely new AFH license. The existing license does not transfer to the buyer:
             it is valid only for the seller and that address, and it closes when the seller relinquishes or surrenders
             it.
           </p>
@@ -211,7 +211,7 @@ const AFHBuyingSelling = () => (
             }}
           >
             This means the buyer must meet all current DSHS qualifications, complete the same training requirements,
-            pass a background check, and have the home inspected by DSHS as part of licensing — even if the home was
+            pass a background check, and have the home inspected by DSHS as part of licensing, even if the home was
             recently licensed.
           </p>
           <p
@@ -287,7 +287,7 @@ const AFHBuyingSelling = () => (
               margin: "0 0 20px",
             }}
           >
-            The CHOW Process — Step by Step
+            The CHOW Process: Step by Step
           </h2>
           <p
             style={{

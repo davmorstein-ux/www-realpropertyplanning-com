@@ -26,7 +26,7 @@ const REALITY_CHECKS = [
   },
   {
     q: "Are you comfortable with regulation?",
-    a: "DSHS conducts unannounced inspections. Documentation must be meticulous and continuous. Providers who resist process and paperwork struggle significantly.",
+    a: "DSHS conducts unannounced inspections. Documentation must be meticulous and continuous. Providers who resist process and paperwork tend to struggle.",
   },
   {
     q: "Do you have the financial runway?",
@@ -38,7 +38,7 @@ const REALITY_CHECKS = [
   },
   {
     q: "Can you communicate effectively in English?",
-    a: "Washington law requires that the provider, entity representative, and resident manager be literate and able to communicate in English — and that at least one staff member can respond appropriately to emergencies in English.",
+    a: "Washington law requires that the provider, entity representative, and resident manager be literate and able to communicate in English, and that at least one staff member can respond appropriately to emergencies in English.",
   },
 ];
 
@@ -53,7 +53,7 @@ const PROVIDER_TYPES = [
   {
     type: "Entity Provider",
     description:
-      "A business entity — such as an LLC, corporation, or partnership — that holds the AFH license. The entity must designate an Entity Representative who meets all individual qualification requirements. An individual may only be the entity representative for one entity provider.",
+      "A business entity (such as an LLC, corporation, or partnership) that holds the AFH license. The entity must designate an Entity Representative who meets all individual qualification requirements. An individual may only be the entity representative for one entity provider.",
     pros: [
       "Liability protection through business structure",
       "Can suit owners planning multiple homes or partners",
@@ -149,9 +149,9 @@ const AFHGettingStarted = () => (
               maxWidth: 680,
             }}
           >
-            An Adult Family Home is one of the most personally rewarding — and personally demanding — businesses in
-            Washington State. Before investing in training, building modifications, or licensing, it is essential to
-            understand what you are committing to and whether you meet the baseline requirements.
+            An Adult Family Home is a licensed care business run in a private residence, with residents who may need
+            help at any hour. Before investing in training, building modifications, or licensing, check what the work
+            involves and whether you meet the baseline requirements.
           </p>
           <p
             style={{
@@ -396,8 +396,8 @@ const AFHGettingStarted = () => (
                 margin: 0,
               }}
             >
-              <strong>Note:</strong> As of January 1, 2024, the DSHS <em>Prospective Provider Orientation class</em> — a separate one-day class for
-              license applicants, formerly required by WAC 388-76-10060 — is no longer required; DSHS repealed the rule (WSR 23-24-010)
+              <strong>Note:</strong> As of January 1, 2024, the DSHS <em>Prospective Provider Orientation class</em> (a separate one-day class for
+              license applicants, formerly required by WAC 388-76-10060) is no longer required; DSHS repealed the rule (WSR 23-24-010)
               because its content is covered in AFH Administrator Training. This is not the same thing as the two-hour caregiver orientation
               module inside the 75-hour Home Care Aide training, which is still required unless you are exempt.
               However, prospective providers are strongly encouraged to read the DSHS document{" "}
@@ -452,7 +452,7 @@ const AFHGettingStarted = () => (
               margin: "0 0 32px",
             }}
           >
-            These questions are meant to help prospective providers honestly evaluate their readiness. There are no right or wrong answers — only honest ones.
+            These questions cover what the rules require and what the daily work asks of a provider. Answer them before spending money on training or the home.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {REALITY_CHECKS.map((item, i) => (
@@ -531,9 +531,8 @@ const AFHGettingStarted = () => (
               margin: "0 0 32px",
             }}
           >
-            Washington State issues AFH licenses to either an individual or a business entity. Understanding the
-            difference before you apply will shape how you structure your business, your liability exposure, and your
-            ability to grow.
+            Washington State issues AFH licenses to either an individual or a business entity. The choice affects how
+            you structure the business, your liability exposure, and your ability to add homes later.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
             {PROVIDER_TYPES.map((item) => (
@@ -695,7 +694,7 @@ const AFHGettingStarted = () => (
                 step: "2",
                 title: "Complete required training",
                 detail:
-                  "Begin your 75-hour HCA training (if not exempt) and enroll in the AFH Administrator Training at a Washington community college. These take time — plan accordingly.",
+                  "Begin your 75-hour HCA training (if not exempt) and enroll in the AFH Administrator Training at a Washington community college. Both take time, so plan for them early.",
               },
               {
                 step: "3",
@@ -786,7 +785,7 @@ const AFHGettingStarted = () => (
                 url: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline",
               },
               {
-                label: "AFH Locator — Search Licensed Homes",
+                label: "AFH Locator: Search Licensed Homes",
                 url: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx",
               },
               {

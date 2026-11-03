@@ -28,7 +28,7 @@ import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
-  { question: "Can you list a house for sale while probate is still open?", answer: "Yes. In Washington State, once the executor or personal representative has been granted letters testamentary by the court, they have the authority to list and sell the property — even while other aspects of the estate are still being settled." },
+  { question: "Can you list a house for sale while probate is still open?", answer: "Yes. In Washington State, once the executor or personal representative has been granted letters testamentary by the court, they have the authority to list and sell the property, even while other aspects of the estate are still being settled." },
   { question: "Does the court have to approve the sale?", answer: "In most cases under Washington's nonintervention powers, the executor can sell without court approval. However, if the estate is under court supervision, the sale may require a hearing and confirmation. The estate attorney can clarify which applies." },
   { question: "What if one heir does not want to sell?", answer: "The executor's duty is to the estate as a whole, not to any single beneficiary's preference. If the will directs a sale or the estate needs liquidity, the executor generally has the authority to proceed. Clear communication and documentation are important." },
   { question: "How long does it take to sell a house during probate?", answer: "The timeline varies widely. Once legal authority is granted, preparing the house can take a few weeks, and listing to closing commonly takes 60 to 120 days, depending on condition, market, and family coordination. The probate process itself can add several months." },
@@ -104,19 +104,19 @@ const SellHouseDuringProbateWashington = () => (
         <div className="max-w-3xl mx-auto space-y-4">
 
           <p className="font-serif text-foreground font-semibold leading-snug text-center" style={{ fontSize: "22px" }}>
-            The short answer is yes — but timing, authority, and process all matter. Here's what you need to know.
+            Yes, once the court has given the executor authority. Timing, authority, and process all matter.
           </p>
 
           {/* Tile 1 */}
           <AccordionTile
             title="What This Means in Practice"
-            teaser="Most families assume nothing can happen until probate is finished. That's not accurate."
+            teaser="A sale does not have to wait until probate is finished."
           >
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              Many families assume that nothing can happen with a property until probate is completely finished. That is not accurate. Once the court appoints an executor and issues letters testamentary, the executor has the legal standing to list, market, negotiate, and close on a sale — often while other aspects of the estate are still being resolved.
+              A property sale does not have to wait until probate is completely finished. Once the court appoints an executor and issues letters testamentary, the executor has the legal standing to list, market, negotiate, and close on a sale, often while other aspects of the estate are still being resolved.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              In Washington, most estates operate under what is called "nonintervention powers." This means the executor can manage and sell estate assets without needing court approval for each transaction. This is a significant advantage — it allows the sale to proceed on a normal market timeline rather than waiting for a court hearing.
+              In Washington, most estates operate under what is called "nonintervention powers." This means the executor can manage and sell estate assets without needing court approval for each transaction. This is a significant advantage: it allows the sale to proceed on a normal market timeline rather than waiting for a court hearing.
             </p>
             <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "18px" }}>
               However, the executor must still act in the best interest of the estate and its beneficiaries. That means getting a fair price, documenting decisions, and communicating with heirs throughout the process.
@@ -129,15 +129,15 @@ const SellHouseDuringProbateWashington = () => (
             teaser="There are five specific mistakes that can create serious problems during a probate sale."
           >
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              Selling during probate is not complicated — but there are specific mistakes that can create real problems:
+              Selling during probate is not complicated, but these specific mistakes can create real problems:
             </p>
             <ul className="space-y-4">
               {[
-                "Listing the property before receiving letters testamentary — title companies will not close without proper documentation",
-                "Accepting an offer from a family member or neighbor without a professional valuation — this can expose the executor to claims of undervaluing the asset",
-                "Failing to communicate with all heirs before listing — even when the executor has full authority, surprises create conflict",
-                "Skipping property preparation because of urgency — a small investment in presentation often returns significantly more at sale",
-                "Assuming the estate attorney will manage the real estate process — attorneys handle the legal framework, but the property sale itself requires real estate expertise",
+                "Listing the property before receiving letters testamentary: title companies will not close without proper documentation",
+                "Accepting an offer from a family member or neighbor without a professional valuation, which can expose the executor to claims of undervaluing the asset",
+                "Failing to communicate with all heirs before listing: even when the executor has full authority, surprises create conflict",
+                "Skipping property preparation because of urgency, when a small investment in presentation often returns significantly more at sale",
+                "Assuming the estate attorney will manage the real estate process: attorneys handle the legal framework, but the property sale itself requires real estate expertise",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -150,16 +150,16 @@ const SellHouseDuringProbateWashington = () => (
           {/* Tile 3 */}
           <AccordionTile
             title="Factors That Affect the Decision"
-            teaser="Every probate sale is shaped by legal, financial, and family factors. Here are the most important ones."
+            teaser="Legal, financial, and family factors shape every probate sale."
           >
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              Every probate sale is shaped by a combination of legal, financial, and family factors. Here are the most important ones:
+              Four factors shape most probate sales:
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
               <strong className="text-foreground">Type of probate authority.</strong> Nonintervention powers give the executor broad discretion. Court-supervised estates may require a petition and hearing before the sale can close. Understanding which type applies to your situation is essential.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              <strong className="text-foreground">Property condition.</strong> Estate homes often need some level of preparation — cleanout, minor repairs, or staging. The condition directly affects pricing, time on market, and net proceeds to the estate.
+              <strong className="text-foreground">Property condition.</strong> Estate homes often need some level of preparation: cleanout, minor repairs, or staging. The condition directly affects pricing, time on market, and net proceeds to the estate.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
               <strong className="text-foreground">Heir expectations.</strong> If beneficiaries have different opinions about timing, pricing, or whether to sell at all, the executor needs clear communication and documentation. A professional <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">property valuation</Link> provides an objective basis for decisions.
@@ -178,24 +178,24 @@ const SellHouseDuringProbateWashington = () => (
               If you are an executor trying to decide whether to move forward with a sale during probate, here is a practical framework:
             </p>
             <ol className="space-y-4 list-decimal list-inside text-muted-foreground leading-relaxed" style={{ fontSize: "18px" }}>
-              <li><strong className="text-foreground">Confirm your authority</strong> — verify that letters testamentary have been issued and confirm whether you have nonintervention powers</li>
-              <li><strong className="text-foreground">Get a professional assessment</strong> — have a broker with estate property experience evaluate the home's condition and market value</li>
-              <li><strong className="text-foreground">Communicate with heirs</strong> — share the assessment results and proposed timeline before listing</li>
-              <li><strong className="text-foreground">Coordinate with the estate attorney</strong> — ensure the sale aligns with the overall estate administration plan</li>
-              <li><strong className="text-foreground">Prepare the property thoughtfully</strong> — identify what level of preparation will yield the best return without unnecessary delay</li>
+              <li><strong className="text-foreground">Confirm your authority.</strong> Verify that letters testamentary have been issued and confirm whether you have nonintervention powers</li>
+              <li><strong className="text-foreground">Get a professional assessment.</strong> Have a broker with estate property experience evaluate the home's condition and market value</li>
+              <li><strong className="text-foreground">Communicate with heirs.</strong> Share the assessment results and proposed timeline before listing</li>
+              <li><strong className="text-foreground">Coordinate with the estate attorney.</strong> Ensure the sale aligns with the overall estate administration plan</li>
+              <li><strong className="text-foreground">Prepare the property thoughtfully.</strong> Identify what level of preparation will yield the best return without unnecessary delay</li>
             </ol>
           </AccordionTile>
 
           {/* Tile 5 */}
           <AccordionTile
             title="When to Get Professional Guidance"
-            teaser="Probate sales are not the same as typical real estate transactions — here's why it matters."
+            teaser="Probate sales differ from typical real estate transactions in ways that affect the sale."
           >
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              Selling a house during probate is not the same as a typical real estate transaction. The legal requirements, family dynamics, and fiduciary responsibilities add layers of complexity that most real estate professionals rarely encounter.
+              Selling a house during probate is not the same as a typical real estate transaction. The legal requirements, family dynamics, and fiduciary responsibilities add layers of complexity that many real estate professionals rarely encounter.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              Working with a broker who understands probate real estate — including valuation, coordination with attorneys, and communication with multiple stakeholders — can make the difference between a smooth process and a stressful one.
+              Working with a broker who understands probate real estate, including valuation, coordination with attorneys, and communication with multiple stakeholders, can help the process go more smoothly.
             </p>
             <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "18px" }}>
               If you are unsure about timing, pricing, or how to handle the property, a conversation early in the process is far more valuable than waiting until problems arise.
@@ -271,7 +271,7 @@ const SellHouseDuringProbateWashington = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can help sort out the next steps.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

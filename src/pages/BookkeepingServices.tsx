@@ -54,19 +54,19 @@ const providers: Provider[] = [
 const faqs = [
   {
     q: "What is the difference between a bookkeeper and a CPA?",
-    a: "A bookkeeper maintains the day-to-day financial records of a business — recording transactions, reconciling accounts, tracking receivables and payables, and keeping the books current and accurate. A CPA is a licensed accountant who can prepare and sign tax returns, perform audits, and provide formal accounting opinions. The two roles are complementary rather than interchangeable: clean books from a bookkeeper make a CPA's work faster, cheaper, and more accurate at tax time.",
+    a: "A bookkeeper maintains the day-to-day financial records of a business: recording transactions, reconciling accounts, tracking receivables and payables, and keeping the books current and accurate. A CPA is a licensed accountant who can prepare and sign tax returns, perform audits, and provide formal accounting opinions. The two roles are complementary rather than interchangeable: clean books from a bookkeeper make a CPA's work faster, cheaper, and more accurate at tax time.",
   },
   {
     q: "What is a Certified QuickBooks ProAdvisor?",
-    a: "A Certified QuickBooks ProAdvisor has completed Intuit's certification program covering QuickBooks setup, reporting, and troubleshooting. The certification indicates demonstrated proficiency with the software specifically — how to configure a chart of accounts, structure recurring transactions, correct historical errors, and produce reports that a business owner can actually read and act on.",
+    a: "A Certified QuickBooks ProAdvisor has completed Intuit's certification program covering QuickBooks setup, reporting, and troubleshooting. The certification indicates demonstrated proficiency with the software specifically: how to configure a chart of accounts, structure recurring transactions, correct historical errors, and produce reports that a business owner can actually read and act on.",
   },
   {
     q: "Why do bookkeeping records matter when settling an estate?",
-    a: "If the person who died owned a business or held rental property, the executor inherits responsibility for its financial records. Incomplete or disorganized books make it harder to value the business, file a final return, identify outstanding obligations, and distribute assets accurately. Getting those records into order early is often the difference between a straightforward settlement and a prolonged one.",
+    a: "If the person who died owned a business or held rental property, the executor inherits responsibility for its financial records. Incomplete or disorganized books make it harder to value the business, file a final return, identify outstanding obligations, and distribute assets accurately. Getting those records in order early can keep a settlement from dragging on.",
   },
   {
     q: "How does bookkeeping fit alongside estate and transition planning?",
-    a: "Families going through a major transition are frequently coordinating several professionals at once — an attorney, a CPA, a real estate broker, sometimes a care manager. A bookkeeper keeps the underlying financial record accurate so each of those advisors is working from the same numbers. That reduces duplicated effort and the corrections that surface late in a process, when they are most expensive.",
+    a: "Families going through a major transition are often coordinating several professionals at once: an attorney, a CPA, a real estate broker, sometimes a care manager. A bookkeeper keeps the underlying financial record accurate so each of those advisors is working from the same numbers. That reduces duplicated effort and the corrections that surface late in a process, when they are most expensive.",
   },
   {
     q: "How do I choose a bookkeeper?",
@@ -123,7 +123,7 @@ const BookkeepingServices = () => (
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more`}
+                    aria-label={`${p.name}, ${p.title} at ${p.company}: Learn more`}
                     className="absolute inset-0 z-0 rounded-[inherit] focus-visible:outline-none"
                   />
                   <div className="tile-white__inner h-full">
@@ -191,7 +191,7 @@ const BookkeepingServices = () => (
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">What a Bookkeeper Does</h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
               Bookkeeping is the ongoing work of keeping a business's financial records accurate and current. It is
-              routine by design — and that routine is what makes everything downstream possible.
+              routine by design, and that routine is what the rest of the financial work depends on.
             </p>
 
             <div className="space-y-6">
@@ -239,9 +239,8 @@ const BookkeepingServices = () => (
               Bookkeeping and Life Transitions
             </h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Financial records rarely feel urgent until they suddenly are. When a business owner dies, retires, or
-              becomes unable to manage their own affairs, someone else inherits the books — often a family member with
-              no history with them and no obvious place to start.
+              When a business owner dies, retires, or becomes unable to manage their own affairs, someone else inherits
+              the books, often a family member with no history with them and no obvious place to start.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
               Executors settling an estate that includes a business or rental property face this directly. The business
@@ -250,10 +249,9 @@ const BookkeepingServices = () => (
               complete.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              Families in transition are usually coordinating several professionals at once — an attorney, a CPA, a real
+              Families in transition are usually coordinating several professionals at once: an attorney, a CPA, a real
               estate broker, sometimes a care manager. A bookkeeper keeps the financial record accurate so every advisor
-              is working from the same numbers, which is why bookkeeping belongs alongside the other services families
-              need during periods of change.
+              is working from the same numbers.
             </p>
           </div>
         </div>

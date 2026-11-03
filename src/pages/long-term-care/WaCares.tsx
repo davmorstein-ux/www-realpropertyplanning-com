@@ -103,8 +103,8 @@ const WaCares = () => {
               <li className={pClass + " mt-0"}>Education and consultation for family caregivers</li>
             </ul>
             <p className={pClass}>
-              One of the biggest advantages of WA Cares is flexibility. It may help people stay in their homes longer
-              before moving into a care setting.
+              Because the benefit covers a wide range of services, it may help people stay in their homes longer before
+              moving into a care setting.
             </p>
 
             <hr className={hrClass} />
@@ -163,18 +163,18 @@ const WaCares = () => {
 
             <h2 className={h2Class}>Adult Family Homes</h2>
             <p className={pClass}>
-              Washington has a strong network of licensed{" "}
+              Washington has many licensed{" "}
               <Link to="/afh-club/homes" className={inlineLink}>
                 Adult Family Homes
               </Link>
-              , which are an important part of long-term care planning for many families.
+              , which are part of long-term care planning for many families.
             </p>
             <p className={pClass}>
               These smaller residential homes care for two to six residents (up to eight with DSHS approval) in a home-like setting. Families
               often appreciate the more personal environment, lower resident count, and closer caregiver attention.
             </p>
             <p className={pClass}>
-              For some older adults, an Adult Family Home can be the right fit when living alone is no longer safe, but
+              For some older adults, an Adult Family Home can work well when living alone is no longer safe, but
               a larger facility is not yet necessary.
             </p>
 
@@ -234,7 +234,7 @@ const WaCares = () => {
 
             <h2 className={h2Class}>Planning Ahead Creates More Choices</h2>
             <p className={pClass}>
-              One of the most common mistakes families make is waiting until a health event forces a housing decision.
+              A common mistake is waiting until a health event forces a housing decision.
             </p>
             <p className={pClass}>
               Planning ahead gives families time to understand care options, compare costs, explore neighborhoods and
@@ -253,20 +253,19 @@ const WaCares = () => {
               planning, and home valuation and market insight.
             </p>
             <p className={pClass}>
-              Whether planning years in advance or helping a loved one through an unexpected transition, having clear
-              information can make a meaningful difference.
+              The guides are written for planning years in advance and for helping a family member through an
+              unexpected move.
             </p>
 
             <hr className={hrClass} />
 
             <h2 className={h2Class}>Final Thoughts</h2>
             <p className={pClass}>
-              The WA Cares Fund is an important step in helping Washington residents prepare for future long-term care
-              needs.
+              The WA Cares Fund helps Washington residents pay for part of their future long-term care.
             </p>
             <p className={pClass}>
-              While it may not cover every expense, it can provide valuable support when combined with thoughtful
-              housing decisions, retirement planning, and other financial resources.
+              It may not cover every expense, so it works best alongside housing decisions, retirement planning, and
+              other financial resources.
             </p>
             <p className={pClass}>The best time to begin long-term care planning is before care is needed.</p>
 
@@ -285,8 +284,8 @@ const WaCares = () => {
               <Link to="/senior-living-advisors" className={inlineLink}>
                 senior living advisors
               </Link>{" "}
-              who understand the full landscape of long-term care in Washington State. Explore the full library of
-              resources to start the conversation.
+              who work with long-term care questions in Washington State. The rest of the site's guides cover each
+              topic in more detail.
             </p>
           </div>
         </section>

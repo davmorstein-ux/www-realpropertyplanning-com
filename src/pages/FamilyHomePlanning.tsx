@@ -112,12 +112,12 @@ const GUIDES: Record<Topic, { heading: string; body: string; links: { title: str
 
 const FIRST_STEP: Record<Discussed, { title: string; body: string; link?: { title: string; href: string } }> = {
   yes: {
-    title: "You're ahead of most families.",
+    title: "Next comes the paperwork.",
     body: "The next step is usually the paperwork: how the home is owned, and whether someone can sign for your parents if they cannot. Steps 2 to 4 of the checklist cover it.",
   },
   "not-yet": {
     title: "Start with one conversation.",
-    body: "Most families haven't, and the first talk is the hardest. Ask what your parents want before anyone discusses what should happen.",
+    body: "The first talk is usually the hardest. Ask what your parents want before anyone discusses what should happen.",
     link: { title: "The Conversations Worth Having Now", href: "/planning-before-a-crisis/conversations-to-have" },
   },
   unsure: {
@@ -287,7 +287,7 @@ const FamilyHomePlanning = () => {
             <h1 className="fhp-h1">What will happen to the family home?</h1>
             <div className="fhp-rule" />
             <p className="fhp-p" style={{ maxWidth: 680 }}>
-              Whether your parents plan to stay, move, or one day leave the house to family, the decisions are easier made early,
+              If your parents plan to stay, move, or one day leave the house to family, those decisions are easier made early,
               together, and before anything forces them.
             </p>
             <p className="fhp-small">Three quick questions · about a minute · no email needed to see where to start</p>
