@@ -11,17 +11,17 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 const tiles = [
   {
     title: "Your First 30 Days",
-    description: "The immediate steps after being named executor — what to do, what to secure, and what can wait.",
+    description: "The first steps after being named executor: what to do, what to secure, and what can wait.",
     href: "/executor-responsibilities-first-steps/first-30-days",
   },
   {
     title: "Understanding Your Legal Duties",
-    description: "What executors and trustees are actually responsible for — and what happens if things go wrong.",
+    description: "What executors and trustees are responsible for, and what happens if things go wrong.",
     href: "/executor-responsibilities-first-steps/legal-duties",
   },
   {
     title: "What to Do With the Property",
-    description: "The home is usually the largest asset. Here's how to handle real estate in an estate.",
+    description: "How to handle real estate in an estate. The home is usually the largest asset.",
     href: "/executor-responsibilities-first-steps/property-decisions",
   },
   {
@@ -31,12 +31,12 @@ const tiles = [
   },
   {
     title: "Common Executor Mistakes",
-    description: "The mistakes that trip people up most often — and how to avoid them.",
+    description: "The mistakes executors make most often, and how to avoid them.",
     href: "/executor-responsibilities-first-steps/common-mistakes",
   },
   {
     title: "When You Need Extra Help",
-    description: "Complex estates, family conflict, out-of-state property — when to ask for more support.",
+    description: "When to get more help: complex estates, family conflict, out-of-state property.",
     href: "/executor-responsibilities-first-steps/when-you-need-extra-help",
   },
 ];

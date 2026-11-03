@@ -145,8 +145,8 @@ const PropertySideBand = () => (
             Questions About the Property Side?
           </h2>
           <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6">
-            {brokerCredentialSentence} If your planning involves a home — what it is worth, what condition it
-            is in, or what a sale would actually involve — those are questions he can answer directly.
+            {brokerCredentialSentence} If your planning involves a home (what it is worth, what condition it
+            is in, or what a sale would involve), those are questions he can answer directly.
           </p>
           <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-8">
             <strong>Call:</strong>{" "}

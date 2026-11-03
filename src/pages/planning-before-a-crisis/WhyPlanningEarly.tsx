@@ -17,7 +17,7 @@ const WhyPlanningEarly = () => (
   >
     <SubH2>The Moment Nobody Expects</SubH2>
     <P>
-      Most families don't plan for the moment a parent can no longer live alone — the conversation feels too heavy. But families who've been through it will tell you the hardest part wasn't the grief; it was making major decisions about property, money, and care while in the middle of it. A little planning, done quietly and early, changes all of that.
+      Planning early lets a family make decisions about property, money and care before a crisis forces them. Families often put off planning for the day a parent can no longer live alone because the conversation feels too heavy. The cost of waiting is having to make major decisions about the house, the money and care while dealing with the crisis itself. A little planning, done early, avoids most of that.
     </P>
 
     <Divider />
@@ -26,51 +26,51 @@ const WhyPlanningEarly = () => (
 
     <SubH3>Rushed real estate decisions</SubH3>
     <P>
-      When a home needs to be sold quickly — to fund care, to settle an estate, or because no one can manage it from a distance — there's rarely time to prepare it properly. Deferred maintenance goes unaddressed. Staging doesn't happen. The home hits the market before it's ready, and the family leaves money on the table. In a region like Western Washington, where property values are significant, that gap can easily reach tens of thousands of dollars.
+      When a home has to be sold quickly (to pay for care, to settle an estate, or because no one can manage it from a distance), there's rarely time to prepare it, and the family can leave money on the table. Deferred maintenance goes unaddressed, staging doesn't happen, and the home goes on the market before it's ready. In Western Washington, where property values are high, that gap can be large.
     </P>
 
     <SubH3>Legal gaps that freeze everything</SubH3>
     <P>
-      If an aging parent becomes incapacitated and no one has been given legal authority to act on their behalf, the family may find themselves unable to access bank accounts or sign real estate documents. Washington law lets close family make most medical decisions (RCW 7.70.065), but no one can manage the money or the house without a power of attorney or a court-appointed conservator — a slower, costlier, public process in which a judge, not the parent, decides who is in charge.
+      If an aging parent becomes incapacitated and no one has legal authority to act for them, the family may be unable to use the parent's bank accounts or sign real estate documents. Washington law lets close family make most medical decisions (RCW 7.70.065), but no one can manage the money or the house without a power of attorney or a court-appointed conservator. Conservatorship is a slower, costlier, public process in which a judge, not the parent, decides who is in charge.
     </P>
 
     <SubH3>Family conflict</SubH3>
     <P>
-      When nothing has been discussed, documented, or decided in advance, adult children often discover they have very different ideas about what should happen. Who gets the house? Should it be sold or kept? Who has the authority to decide? These disagreements — sometimes long-simmering — can fracture families at the worst possible moment.
+      When nothing has been discussed, documented or decided in advance, adult children often discover they disagree about who gets the house, whether to sell or keep it, and who has the authority to decide. These disagreements, some of them long-standing, can split families at the worst possible moment.
     </P>
 
     <SubH3>Missed planning opportunities</SubH3>
     <P>
-      Some options are only available with lead time. Gifting property to reduce estate tax exposure. Coordinating real estate decisions with Medicaid planning, which reviews gifts made in the five years before applying for long-term care. Updating beneficiary designations. Making repairs before a home goes on the market. Once a crisis hits, many of these doors close.
+      Some options are only available with lead time: gifting property to reduce estate tax exposure, coordinating real estate decisions with Medicaid planning (Medicaid reviews gifts made in the five years before an application for long-term care), updating beneficiary designations, and making repairs before a home goes on the market. Once a crisis hits, many of these options are gone.
     </P>
 
     <Divider />
 
     <SubH2>What Planning Early Actually Looks Like</SubH2>
     <P>
-      It doesn't require a team of lawyers or a formal family meeting. It can start with a conversation — between a parent and an adult child, over dinner, without any agenda other than understanding what the person actually wants.
+      Planning early doesn't require a team of lawyers or a formal family meeting. It can start with a conversation between a parent and an adult child about what the parent actually wants.
     </P>
     <P>From there, it typically means:</P>
     <UL>
-      <li>Making sure the right legal documents are in place (powers of attorney, a will or trust)</li>
+      <li>Making sure the needed legal documents are in place (powers of attorney, a will or trust)</li>
       <li>Having a realistic sense of what the home is worth and what condition it's in</li>
       <li>Understanding what senior housing options exist and what they cost</li>
-      <li>Knowing who the right professionals are — attorney, appraiser, real estate broker — before you urgently need them</li>
+      <li>Knowing which professionals to call (attorney, appraiser, real estate broker) before you urgently need them</li>
     </UL>
-    <P>None of this has to happen all at once. But starting somewhere, soon, is almost always worth it.</P>
+    <P>None of this has to happen at once, but it helps to start soon.</P>
 
     <Divider />
 
     <SubH2>A Note on What This Isn't</SubH2>
     <P>
-      Planning early isn't about expecting the worst, or rushing a parent into decisions they're not ready to make. It's about honoring the time you have — and using it to make sure that when the time comes, the people you love aren't left scrambling.
+      Planning early isn't about expecting the worst or rushing a parent into decisions they're not ready to make. It means using the time available so that, when a move or a death comes, the family isn't left scrambling.
     </P>
 
     <Divider />
 
     <SubH2>Need Guidance on the Real Estate Side?</SubH2>
     <P>
-      Real Property Planning is a resource hub for families and professionals navigating senior housing transitions and estate property in Washington State. Its guides explain which professional fits each stage — appraisers, brokers, attorneys, and care managers — and its Find a Professional page lists independent professionals you can contact directly.
+      Real Property Planning is a resource hub for families and professionals handling senior housing transitions and estate property in Washington State. Its guides explain which professional handles each stage (appraisers, brokers, attorneys and care managers), and its Find a Professional page lists independent professionals you can contact directly.
     </P>
   </PlanningSubPageLayout>
 );
