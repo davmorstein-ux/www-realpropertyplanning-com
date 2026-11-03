@@ -63,78 +63,78 @@ const SeniorHousingCosts = () => {
               <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
               <ArticleCover src="/Senior_Housing_Costs.webp" alt="Cover art: Senior Housing Costs" width={1024} height={1365} />
               <h2 className={h2Class + " mt-0"}>The Real Cost of Senior Housing</h2>
-              <p className={leadClass}>What families need to know before they start comparing options</p>
+              <p className={leadClass}>What each type of senior housing costs in Washington, what drives the price, and what to ask before comparing</p>
 
               <p className={pClass}>
-                There is a moment in most families when the question shifts from <em>"Should we start looking?"</em> to <em>"How much is this actually going to cost?"</em> It happens at kitchen tables, in parking lots after difficult doctor's appointments, and in late-night phone calls between siblings who live in different states.
+                In Washington, senior housing runs from about $3,145 a month for independent living (an industry estimate) to about $13,155 for a semi-private nursing home room (Washington median, CareScout 2025 survey). Where a person lands in that range depends mostly on how much daily care they need.
               </p>
               <p className={pClass}>
-                The honest answer is: it depends. But that answer, while true, is not very useful. What families actually need is a framework — a way to understand not just what senior housing costs today, but what drives those costs, what's included, and how expenses are likely to change over time.
+                The monthly figure is only part of the comparison. It also helps to know what drives the cost, what the fee includes, and how expenses are likely to change over time.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Why the Numbers Vary So Widely</h2>
               <p className={pClass}>
-                Senior housing is not a single product. It is a spectrum of living arrangements, each built around a different level of support.
+                Senior housing is not a single product. It is a range of living arrangements, each built around a different level of support.
               </p>
               <p className={pClass}>
-                At one end, <strong>independent living</strong> is designed for older adults who want a simpler, maintenance-free lifestyle — no more lawn care, no more fixing the furnace, meals available when you want them. At the other end, <strong>memory care</strong> delivers round-the-clock specialized support for individuals living with Alzheimer's or dementia, with enhanced staffing, secure environments, and structured programming.
+                At one end, <strong>independent living</strong> is for older adults who want a simpler life without home maintenance: no lawn care, no furnace repairs, and meals available when they want them. At the other end, <strong>memory care</strong> provides round-the-clock support for people living with Alzheimer's or another dementia, with more staff, secured buildings and a structured daily routine.
               </p>
               <p className={pClass}>
-                Between those two poles sit assisted living, adult family homes (licensed private homes caring for a small number of residents, common in Washington), continuing care retirement communities, affordable senior housing, and the option many families don't initially think of as "senior housing" at all: aging in place with professional support. Nursing homes, for people who need skilled medical care every day, sit beyond memory care and cost more still.
+                Between those two sit assisted living, adult family homes (licensed private homes caring for a small number of residents, common in Washington), continuing care retirement communities, affordable senior housing, and an option families often don't think of as "senior housing" at all: aging in place with professional support. Nursing homes, for people who need skilled medical care every day, sit beyond memory care and cost more still.
               </p>
               <p className={pClass}>
-                Each has a different pricing structure. Each includes different services. And each carries a different set of long-term financial implications.
+                Each has a different pricing structure, includes different services, and carries different long-term costs.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Independent Living: The Entry Point</h2>
               <p className={pClass}>
-                Independent living is generally the most affordable of the senior housing options — not because the communities are less desirable, but because they don't include daily personal care.
+                Independent living is generally the least expensive senior housing option, because it does not include daily personal care. This site uses an estimate of about $3,145 a month: no survey publishes a Washington figure, and Seattle-area communities often charge more.
               </p>
               <p className={pClass}>
-                Monthly fees typically bundle together rent, utilities, maintenance, housekeeping, meals, transportation, and social activities. For many older adults, the value isn't just financial. It's the relief of a more manageable daily life, surrounded by peers, with responsibilities lifted.
+                The monthly fee typically bundles rent, utilities, maintenance, housekeeping, meals, transportation and social activities. Residents also give up the work of keeping up a house and live among peers.
               </p>
               <p className={pClass}>
-                If your parent is active, healthy, and simply ready for a change, independent living often delivers an exceptional quality of life at a cost that surprises families — sometimes favorably.
+                For a parent who is active, healthy and ready for a change, independent living can offer a good quality of life, and the cost sometimes turns out lower than families expect.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Assisted Living: Housing Plus Care</h2>
               <p className={pClass}>
-                When personal care enters the picture, so does a higher price tag. Assisted living communities provide housing alongside help with the activities of daily life — bathing, dressing, medication management — along with meals, housekeeping, and social support.
+                Assisted living costs more because it adds personal care. The Washington median is about $7,550 a month (CareScout 2025 survey), roughly 22% above the national median. Communities provide housing plus help with daily activities such as bathing, dressing and medication management, along with meals, housekeeping and social support.
               </p>
               <p className={pClass}>
-                What many families don't realize until they're deep in the process is that assisted living pricing is often tiered. The base rate covers housing and a baseline of services. As care needs increase, monthly costs typically rise with them. A resident who needs minimal assistance today may need significantly more in two years.
+                Pricing is often tiered, which families may not learn until they are well into the process. The base rate covers housing and a baseline of services, and monthly costs typically rise as care needs increase. A resident who needs little help today may need much more in two years.
               </p>
               <p className={pClass}>
-                This is one of the most important questions to ask any assisted living community: <em>How is pricing structured, and how might it change as my loved one's needs evolve?</em>
+                Ask every assisted living community: <em>How is pricing structured, and how might it change as my loved one's needs change?</em>
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Memory Care: Specialized Support at a Premium</h2>
               <p className={pClass}>
-                Memory care usually carries the highest monthly costs of any senior housing option short of a nursing home, and for good reason. These communities require enhanced staffing ratios, purpose-built physical environments, and specialized programming designed around the unique needs of individuals living with cognitive decline.
+                Short of a nursing home, memory care usually costs the most of any senior housing option. This site's working estimate for Washington is about $9,500 a month, roughly 25% above assisted living; CareScout publishes no memory care figure. A semi-private nursing home room has a Washington median of about $13,155 a month (CareScout 2025 survey).
               </p>
               <p className={pClass}>
-                The higher price reflects not just care, but expertise and safety. For families navigating dementia, memory care provides something that cannot be easily quantified: peace of mind.
+                The higher price pays for more staff per resident, buildings designed to keep residents safe, staff trained in dementia care, and daily activities planned for people with cognitive decline.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>CCRCs: Stability at a Price</h2>
               <p className={pClass}>
-                Continuing care retirement communities, known as CCRCs, offer something the other options generally don't — a contractual commitment to care across multiple life stages. Residents move in while they're healthy and independent, knowing that if their needs change, the community will be there to meet them.
+                Continuing care retirement communities (CCRCs) offer something the other options generally don't: a contractual commitment to care across several stages of life. Residents move in while they are healthy and independent, and the community provides more care if their needs change.
               </p>
               <p className={pClass}>
-                The pricing model is distinctive. CCRCs typically charge a substantial entrance fee — sometimes quite large — plus an ongoing monthly fee that covers housing, meals, maintenance, and access to higher levels of care if needed.
+                CCRCs typically charge a one-time entrance fee, which can run into the hundreds of thousands of dollars, plus an ongoing monthly fee that covers housing, meals, maintenance and access to higher levels of care if needed. This site estimates the monthly service fee at about $3,353; no survey publishes a CCRC figure.
               </p>
               <p className={pClass}>
-                For families who value long-term predictability and want to avoid the disruption of multiple moves, CCRCs can be a sound investment. But the contracts are complex, and careful review before signing is essential.
+                For people who want long-term predictability and fewer moves, a CCRC can be a sound investment. The contracts are complex, so review them carefully before signing.
               </p>
               <p className={pClass}>
                 <em>Learn more in the <Link to="/articles/ccrc-costs" className={inlineLink}>guide to CCRC costs</Link>.</em>
@@ -144,10 +144,10 @@ const SeniorHousingCosts = () => {
 
               <h2 className={h2Class}>Affordable Senior Housing: Real Options for Limited Budgets</h2>
               <p className={pClass}>
-                Not every family is working with unlimited resources, and the senior housing industry has pathways designed for those with more modest means. Affordable senior housing programs typically offer income-based or subsidized rent, making them accessible when private-market options are not.
+                Affordable senior housing programs typically offer income-based or subsidized rent, which puts them within reach when private-market options are not.
               </p>
               <p className={pClass}>
-                The tradeoff is availability. Waitlists are common, sometimes stretching months or years. If affordable senior housing is likely to be part of your plan, the time to apply is before the need becomes urgent.
+                The tradeoff is availability. Waitlists are common and can stretch for months or years. If affordable senior housing is likely to be part of the plan, apply before the need becomes urgent.
               </p>
               <p className={pClass}>
                 <em>Learn more in the <Link to="/articles/affordable-senior-housing" className={inlineLink}>guide to affordable senior housing</Link>.</em>
@@ -157,10 +157,10 @@ const SeniorHousingCosts = () => {
 
               <h2 className={h2Class}>Aging in Place: Freedom With Fine Print</h2>
               <p className={pClass}>
-                Many older adults want to stay home. It's where their memories live, where they know every corner of every room, where they feel most like themselves. Aging in place with professional support makes this possible — through in-home care, meal delivery, transportation assistance, housekeeping, and home modifications that improve safety.
+                Aging in place may start as the least expensive option, but its cost climbs as care needs grow. Professional support at home can include in-home care, meal delivery, transportation, housekeeping, and home modifications that improve safety.
               </p>
               <p className={pClass}>
-                What families often underestimate is how costs can escalate. Aging in place may begin as the most affordable option. As care needs grow, however, the hours of in-home support multiply — and so does the monthly expense. At some point, a senior living community may become not just more supportive, but more cost-effective.
+                At Washington's median rate of about $45 an hour for in-home care (CareScout 2025 survey) and about 44 hours a week, that comes to roughly $8,580 a month, more than the assisted living median. As needs grow, the hours multiply, and at some point a senior living community may be both more supportive and less expensive.
               </p>
               <p className={pClass}>The comparison is worth making carefully, with real numbers.</p>
 
@@ -168,10 +168,10 @@ const SeniorHousingCosts = () => {
 
               <h2 className={h2Class}>The Questions That Matter Most</h2>
               <p className={pClass}>
-                Before choosing any senior housing option, these are the questions every family should be asking:
+                Before choosing any senior housing option, ask:
               </p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>What is the monthly base rate — and what exactly does it include?</li>
+                <li>What is the monthly base rate, and what exactly does it include?</li>
                 <li>What services cost extra?</li>
                 <li>Is there a second-person fee?</li>
                 <li>How often do rates increase, and by how much?</li>
@@ -179,20 +179,20 @@ const SeniorHousingCosts = () => {
                 <li>Is there a move-in fee or deposit?</li>
               </ul>
               <p className={pClass}>
-                The goal is to understand the <em>true</em> monthly cost — not just the advertised figure — and how that cost is likely to change over time.
+                The goal is to know the <em>true</em> monthly cost, not just the advertised figure, and how that cost is likely to change over time.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Cost Is a Factor. It Shouldn't Be the Only One.</h2>
               <p className={pClass}>
-                Senior housing costs are real, and planning for them matters. But the families who make the best decisions are the ones who weigh cost alongside safety, support, quality of life, and the specific needs of the person who will actually be living there.
+                Plan for the cost, but weigh it alongside safety, support, quality of life and the needs of the person who will live there.
               </p>
               <p className={pClass}>
-                The right answer is different for every family. What stays the same is the importance of asking the right questions early — before a health crisis forces a rushed decision — and building a plan that can flex as circumstances change.
+                Ask these questions early, before a health crisis forces a rushed decision, and build a plan that can adjust as circumstances change.
               </p>
               <p className={pClass}>
-                When the time comes to make a move, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can help coordinate the transition, reduce the stress of relocating, and make the process feel less overwhelming for everyone involved.
+                For the move itself, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate the transition and take on much of the work of relocating.
               </p>
 
               <hr className={hrClass} />

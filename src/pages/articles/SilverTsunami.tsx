@@ -61,180 +61,148 @@ const SilverTsunami = () => {
                 The Silver Tsunami Is Here
               </div>
               <h3 className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 italic">
-                America's aging population is reshaping housing, care, and the future of communities — ready or not
+                How America's aging population is reshaping housing, care and communities
               </h3>
 
               <hr className="my-8 border-border" />
 
-              <p className={pClass}>It started quietly, as most demographic shifts do.</p>
               <p className={pClass}>
-                In 2011, the first Baby Boomers turned 65. There were no headlines, no emergency summits, no collective
-                preparation. Just the steady, inevitable turning of the calendar — and the beginning of what
-                demographers had been warning about for decades.
+                "Silver Tsunami" is the name demographers give to the Baby Boom generation reaching retirement age, and
+                to the pressure that puts on housing, retirement savings and care.
               </p>
               <p className={pClass}>
-                They called it the Silver Tsunami. And now, more than a decade in, the wave is at full height.
+                It began in 2011, when the first Baby Boomers turned 65. More than a decade later, the number of
+                Americans turning 65 each year is at its highest.
               </p>
 
               <hr className="my-8 border-border" />
 
               <h2 className={h2Class}>More Than 11,000 Americans Turn 65 Every Day</h2>
-              <p className={pClass}>Let that number settle for a moment.</p>
               <p className={pClass}>
-                Not per week. Not per month. Every day from 2024 through 2027, more than 11,000 Americans cross the
-                threshold into what is still called "retirement age" — more than 4.1 million a year, according to the
-                Alliance for Lifetime Income's Peak 65 research. "Retirement age" is a term that increasingly fails to
-                capture the complexity of what follows.
+                Every day from 2024 through 2027, more than 11,000 Americans turn 65, or more than 4.1 million a year,
+                according to the Alliance for Lifetime Income's Peak 65 research. That age is still called "retirement
+                age," though it says little about the decades that follow.
               </p>
               <p className={pClass}>
                 The wave began in 2011, when the oldest Boomers first hit 65, at roughly 10,000 a day. It will continue
                 until about 2030, when the youngest members of that generation follow. The stretch from 2024 through 2027
-                has been dubbed <strong>"Peak 65"</strong> — the most concentrated period of aging in American history.
+                has been dubbed <strong>"Peak 65"</strong>: the most concentrated period of aging in American history.
               </p>
               <p className={pClass}>
                 By 2030, when all Boomers will be older than 65, about 1 in 5 Americans will be 65 or older, according
-                to the U.S. Census Bureau. This is not
-                a temporary surge. It is a permanent restructuring of the country itself.
+                to the U.S. Census Bureau. That is a lasting change in the makeup of the country, not a temporary surge.
               </p>
 
               <hr className="my-8 border-border" />
 
               <h2 className={h2Class}>The Wave Nobody Was Ready For</h2>
               <p className={pClass}>
-                The Silver Tsunami is not simply about birthdays. It is about what happens when millions of people
-                simultaneously begin navigating the same set of decisions — where to live, how to pay for care, what to
-                do when the family home no longer fits the life being lived inside it.
+                The Silver Tsunami means millions of people facing the same decisions at the same time: where to live,
+                how to pay for care, and what to do when the family home no longer fits the person living in it.
               </p>
-              <p className={pClass}>And those decisions are being made, in many cases, without a clear roadmap.</p>
               <p className={pClass}>
-                Every day, families sit down at kitchen tables and try to figure out what comes next for a parent who
-                can no longer drive, a spouse whose memory is slipping, a sibling who lives alone three states away.
-                They are not failing to plan because they don't care. They're failing to plan because the landscape is
-                genuinely complicated — and because most people spend their lives avoiding the conversation until
-                circumstances force it.
+                Families often make those decisions without a plan. The trigger is usually a parent who can no longer
+                drive, a spouse whose memory is slipping, or a sibling who lives alone three states away. The options
+                are complicated, and most people put off the conversation until circumstances force it. With so many
+                people needing housing and care at once, waiting costs more than it used to.
               </p>
-              <p className={pClass}>The Silver Tsunami makes that avoidance increasingly costly.</p>
 
               <hr className="my-8 border-border" />
 
               <h2 className={h2Class}>Where Will Everyone Live?</h2>
               <p className={pClass}>
-                The most pressing question the Silver Tsunami raises is also the most fundamental:{" "}
-                <em>where will everyone live?</em>
+                Housing is the most pressing question the Silver Tsunami raises. Most older adults, when asked, say they
+                want to stay home. Aging in place is the preferred option for the vast majority of seniors, because home
+                is familiar.
               </p>
               <p className={pClass}>
-                Most older adults, when asked, say they want to stay home. Aging in place is the preferred option for
-                the vast majority of seniors — and for good reason. Home is familiar. Home is where the memories are.
-                Home is where a person still feels most like themselves.
+                Staying home has a price. As care needs grow, so do the hours of support required. Home modifications,
+                in-home aides, transportation help and meal delivery add up, and families often don't see the total
+                until the bills arrive.
               </p>
               <p className={pClass}>
-                But staying home has a price. As care needs grow, so do the hours of support required. Home
-                modifications, in-home aides, transportation assistance, meal delivery — the costs accumulate, often
-                without families recognizing how much until the bills arrive.
+                When a move becomes necessary, the options aren't always there. Many regions are short of senior
+                housing: independent living communities, assisted living beds and memory care. In high-cost areas, the
+                gap between what's available and what's affordable can be wide.
               </p>
               <p className={pClass}>
-                When a move becomes necessary, the options aren't always there. Many regions face genuine shortages of
-                senior housing — not enough independent living communities, not enough assisted living beds, not enough
-                memory care facilities. In high-cost areas, the gap between what's available and what's affordable can
-                feel insurmountable.
-              </p>
-              <p className={pClass}>
-                A family might have significant home equity and still struggle to find a suitable, affordable place to
-                land.
+                A family can have significant home equity and still struggle to find a suitable, affordable place to
+                move.
               </p>
 
               <hr className="my-8 border-border" />
 
               <h2 className={h2Class}>The Financial Fault Line</h2>
               <p className={pClass}>
-                Beneath the Silver Tsunami runs a financial fault line that rarely gets discussed openly.
+                Many older adults have not saved enough for a long retirement. According to a 2024 AARP survey, one in
+                five Americans age 50 and older has no retirement savings, and more than half worry they will not have
+                enough money to last in retirement. Even people who have saved face longevity risk that most financial
+                plans weren't built to handle.
               </p>
               <p className={pClass}>
-                According to a 2024 AARP survey, one in five Americans age 50 and older has no retirement savings, and
-                more than half worry they will not have enough money to last in retirement. And even among those who have saved responsibly, longevity creates risk
-                that most financial plans weren't built to handle.
+                A person who retires at 65 today might reasonably expect to live another 20 or 25 years, and those years
+                may include periods of significant care need. The longer retirement lasts, the more can go wrong.
               </p>
               <p className={pClass}>
-                A person who retires at 65 today might reasonably expect to live another 20 or 25 years — years that may
-                include periods of significant care need. The financial math is unforgiving: the longer the runway, the
-                more that can go wrong.
+                Rising property taxes, insurance premiums, utilities, maintenance and healthcare costs put steady
+                pressure on fixed incomes. Some older adults put off a needed move because they can't see how the
+                numbers will work.
               </p>
               <p className={pClass}>
-                Rising property taxes, insurance premiums, utilities, maintenance, and healthcare costs place steady
-                pressure on fixed incomes. Many older adults delay necessary moves not because they want to, but because
-                the financial picture feels paralyzing.
-              </p>
-              <p className={pClass}>
-                This is exactly where early planning makes the greatest difference — not because planning eliminates
-                uncertainty, but because it expands the range of available choices. A financial planner who understands
-                senior housing costs can help families build a realistic long-term budget before a crisis narrows their
-                options to one.
+                Planning early doesn't remove the uncertainty, but it keeps more choices open. A financial planner who
+                understands senior housing costs can help a family build a realistic long-term budget before a crisis
+                narrows their options to one.
               </p>
 
               <hr className="my-8 border-border" />
 
-              <h2 className={h2Class}>The Caregiver Shortage Nobody Is Talking About</h2>
+              <h2 className={h2Class}>The Caregiver Shortage</h2>
               <p className={pClass}>
-                There is another dimension to the Silver Tsunami that tends to stay in the background: there aren't
-                enough people to care for everyone who will need care.
+                There aren't enough people to care for everyone who will need care.
               </p>
               <p className={pClass}>
-                The demand for professional caregivers — home health aides, memory care specialists, geriatric nurses —
-                is growing faster than the workforce to fill those roles. Facilities face staffing challenges. Families
-                seeking in-home care face waitlists and high costs.
+                Demand for professional caregivers (home health aides, memory care staff, geriatric nurses) is growing
+                faster than the workforce to fill those roles. Facilities face staffing shortages. Families looking for
+                in-home care face waitlists and high costs.
               </p>
               <p className={pClass}>
-                This shortage will intensify as the decade progresses. It is one of the least visible but most
-                consequential aspects of what Peak 65 means in practice.
+                The shortage is expected to get worse as the decade goes on, and it gets less attention than housing or
+                retirement savings.
               </p>
 
               <hr className="my-8 border-border" />
 
-              <h2 className={h2Class}>Planning Is the Only Antidote</h2>
+              <h2 className={h2Class}>Planning Is the Best Defense</h2>
               <p className={pClass}>
-                The families who navigate the Silver Tsunami most successfully share one characteristic: they started
-                the conversation before they had to.
+                Families who start the conversation before they have to keep more options open. The conversation is
+                rarely easy, but having it early means a parent can choose their next home instead of having one chosen
+                for them in a crisis, and money can be spent according to a plan instead of in a rush.
               </p>
               <p className={pClass}>
-                Not because the conversation is easy — it rarely is. But because doing it early means options remain
-                open. It means a parent gets to choose their next home rather than having one chosen for them in a
-                moment of crisis. It means financial resources are deployed strategically rather than spent reactively.
+                Planning means assessing future housing needs honestly, learning the full cost of senior living options,
+                reviewing financial resources, and building a team of professionals: an estate planning attorney, a
+                financial advisor, a senior living advisor, and possibly an Aging Life Care Manager who can coordinate
+                support services before a medical crisis.
               </p>
               <p className={pClass}>
-                Effective planning means evaluating future housing needs honestly, understanding the full cost of senior
-                living options, reviewing financial resources, and building a team of professionals — an estate
-                planning attorney, a financial advisor, a senior living advisor, perhaps an Aging Life Care Manager who
-                can help coordinate support services before a medical crisis changes everything.
-              </p>
-              <p className={pClass}>
-                When a transition does happen, a{" "}
+                When a move does happen, a{" "}
                 <Link to="/senior-move-managers" className={inlineLink}>
                   senior move manager
                 </Link>{" "}
-                can make what is often an overwhelming process feel organized, humane, and even — occasionally — like a
-                fresh start.
+                can organize the sorting, packing and setup so the family doesn't have to manage it alone.
               </p>
 
               <hr className="my-8 border-border" />
 
-              <h2 className={h2Class}>This Is Not a Crisis. It's a Transition.</h2>
+              <h2 className={h2Class}>A Transition to Plan For</h2>
               <p className={pClass}>
-                The Silver Tsunami gets framed as a looming catastrophe. And the challenges are real — in housing
-                supply, in caregiving capacity, in retirement security, in the infrastructure of communities that
-                weren't designed for a population this old.
+                The Silver Tsunami is often described as a looming catastrophe, and the challenges are real: housing
+                supply, caregiving capacity, retirement security, and communities that weren't designed for a
+                population this old.
               </p>
               <p className={pClass}>
-                But it is also, at its core, a story about people. About a generation that built a great deal, raised
-                families, worked hard, and is now navigating the final chapters of long lives. They deserve housing that
-                fits. Care that dignifies. Plans that actually work.
-              </p>
-              <p className={pClass}>
-                The question is not whether the Silver Tsunami is coming. It arrived over a decade ago, and it is still
-                rising.
-              </p>
-              <p className={pClass}>
-                The question is whether families, communities, and the country are ready to meet it with the
-                planning, the resources, and the compassion it demands.
+                It is also predictable. It began in 2011 and is still building, which gives families and communities
+                time to plan for it.
               </p>
 
               <hr className="my-8 border-border" />

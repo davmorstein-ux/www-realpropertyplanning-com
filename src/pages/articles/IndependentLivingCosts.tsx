@@ -58,51 +58,51 @@ const IndependentLivingCosts = () => {
               <ArticleCover src="/Independent_Living_Costs.webp" alt="Cover art: Independent Living Costs" width={979} height={1305} />
               <h2 className={h2Class + " mt-0"}>The Real Cost of Independent Living</h2>
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
-                What the monthly fee actually covers — and what the number on the brochure doesn't tell you
+                What the monthly fee covers, what it leaves out, and how to compare it with staying home
               </p>
               <ArticleAudioPlayer audioSrc={audioAsset.url} />
               <hr className={hrClass} />
 
               <p className={leadClass}>
-                Here is a conversation that happens in senior living advisors' offices more often than you'd think.
+                This site's working estimate for independent living is about $3,145 a month. It is an estimate, not a
+                survey median: no survey publishes a Washington figure, so it is a national industry figure, and
+                Seattle-area communities often charge more.
               </p>
               <p className={pClass}>
-                A family comes in having done their research. They've found a beautiful independent living community. They know the monthly rate. They've run the numbers and decided it's manageable. They're ready to move forward.
-              </p>
-              <p className={pClass}>
-                Then the advisor asks: <em>What's included in that rate?</em>
-              </p>
-              <p className={pClass}>Silence.</p>
-              <p className={pClass}>
-                It turns out they compared the advertised price to their mortgage payment. What they didn't account for were the meals, the housekeeping, the transportation, the utilities, the second-person fee for a spouse — services that, at their current home, they're already paying for separately, in ways they've never totaled up.
-              </p>
-              <p className={pClass}>
-                Understanding what independent living actually costs — not just what it appears to cost — is the difference between a decision that holds up over time and one that doesn't.
+                That fee usually covers much more than rent, so compare it with the full cost of running the current
+                home, not with the mortgage payment alone. A comparison against the mortgage leaves out meals,
+                housekeeping, transportation, utilities and any second-person fee for a spouse. At home those costs are
+                paid separately and rarely added up. Counting them is what tells you whether the move will still be
+                affordable years from now.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>What Independent Living Is, and Isn't</h2>
               <p className={pClass}>
-                Independent living is designed for older adults who don't need daily personal care but are ready for a simpler, more manageable way of life.
+                Independent living is housing for older adults who don't need daily personal care but want a simpler
+                household to run.
               </p>
               <p className={pClass}>
-                No more lawn. No more maintenance calls. No more driving to the grocery store in bad weather or eating alone because the house is quiet. In its place: a private apartment or cottage, meals available when you want them, housekeeping, transportation, fitness programs, and a community of peers.
+                It replaces the lawn, the maintenance calls and the grocery trips in bad weather with a private apartment
+                or cottage, meals available when you want them, housekeeping, transportation, fitness programs and a
+                community of peers.
               </p>
               <p className={pClass}>
-                The key distinction — and it matters enormously for cost comparisons — is that independent living does not include hands-on personal care. It's not assisted living. There are no aides helping with bathing or dressing, no medication management programs built into the base rate. It's housing designed around lifestyle and convenience, not clinical support.
+                The distinction that matters most for cost: independent living does not include hands-on personal care.
+                It is not assisted living. There are no aides helping with bathing or dressing, and no medication
+                management built into the base rate. That is the main reason it generally costs less than assisted
+                living, which has a Washington median of about $7,550 a month (CareScout 2025 survey).
               </p>
               <p className={pClass}>
-                For the right person, it's one of the most genuinely enjoyable chapters of later life. For someone whose needs have already crossed into daily care territory, it may not be enough.
+                It suits someone who is healthy and active. For someone whose needs already include daily care, it may
+                not be enough.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>What the Monthly Fee Actually Includes</h2>
-              <p className={pClass}>
-                This is where the comparison gets interesting — and where most families underestimate the value.
-              </p>
-              <p className={pClass}>Independent living monthly fees typically bundle together:</p>
+              <p className={pClass}>Independent living monthly fees typically bundle:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
                 <li>Rent and utilities</li>
                 <li>Weekly or daily housekeeping</li>
@@ -113,73 +113,93 @@ const IndependentLivingCosts = () => {
                 <li>Building maintenance and exterior upkeep</li>
               </ul>
               <p className={pClass}>
-                When you add up what those services cost in a private home — the utility bills, the cleaning service, the grocery runs, the gym membership, the home repairs — the gap between "senior living costs" and "staying home costs" often narrows considerably.
+                In a private home, each of those is a separate bill: utilities, a cleaning service, grocery runs, a gym
+                membership, home repairs. Added up, they often narrow the gap between the community's fee and the cost of
+                staying home.
               </p>
               <p className={pClass}>
-                The honest comparison isn't <em>monthly rent at the community</em> versus <em>mortgage payment</em>. It's <em>total monthly cost at the community</em> versus <em>total monthly cost of everything it takes to run the current home</em> — including the services that may need to be added as time goes on.
+                So the useful comparison is not <em>monthly rent at the community</em> versus <em>mortgage payment</em>.
+                It is <em>total monthly cost at the community</em> versus <em>total monthly cost of everything it takes to
+                run the current home</em>, including services that may need to be added as time goes on.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>What to Watch For Beyond the Base Rate</h2>
               <p className={pClass}>
-                Every independent living community has a base monthly rate. Most also have a list of charges that sit outside it.
+                Every independent living community has a base monthly rate, and most also charge for some things outside
+                it.
               </p>
               <p className={pClass}>Common additional costs include:</p>
               <p className={pClass}>
-                <strong>Move-in or community fees</strong> — one-time charges at the start, sometimes substantial, sometimes negotiable.
+                <strong>Move-in or community fees:</strong> one-time charges at the start, sometimes substantial,
+                sometimes negotiable.
               </p>
               <p className={pClass}>
-                <strong>Second-person fees</strong> — for couples, this is critical. The additional cost for a second resident can range from modest to significant, and it compounds over time.
+                <strong>Second-person fees:</strong> important for couples. The charge for a second resident can be
+                modest or significant, and it adds up over time.
               </p>
               <p className={pClass}>
-                <strong>Premium unit upgrades</strong> — larger floor plans, better views, updated finishes often carry higher monthly rates.
+                <strong>Premium unit upgrades:</strong> larger floor plans, better views and updated finishes often carry
+                higher monthly rates.
               </p>
               <p className={pClass}>
-                <strong>À la carte services</strong> — some communities bundle generously; others charge separately for extra meals, guest dining, laundry, or parking.
+                <strong>À la carte services:</strong> some communities bundle generously; others charge separately for
+                extra meals, guest dining, laundry or parking.
               </p>
               <p className={pClass}>
-                <strong>Rate increases</strong> — ask directly how often rates increase and by approximately how much. A community that is affordable today needs to remain affordable in three years.
+                <strong>Rate increases:</strong> ask directly how often rates go up and by roughly how much. A community
+                that is affordable today needs to stay affordable in three years.
               </p>
               <p className={pClass}>
-                None of these are red flags on their own. But they need to be understood before a decision is made, not discovered after move-in.
+                None of these is a red flag on its own. Find out about them before you sign, not after move-in.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Independent Living for Couples</h2>
               <p className={pClass}>
-                For couples, independent living deserves particularly careful evaluation — because it can be an exceptionally practical solution, or a financial stretch, depending on how the math works out.
+                For couples, independent living can be a practical solution or a financial stretch, depending on how the
+                math works out.
               </p>
               <p className={pClass}>
-                The appeal is real: both partners remain together, household responsibilities disappear, and daily life becomes genuinely easier. For couples where one partner is healthy and active and the other is beginning to need some support, independent living can be a bridge — a way to stay together while the situation evolves.
+                Both partners stay together, household chores go away, and daily life gets easier. When one partner is
+                healthy and active and the other is beginning to need some support, independent living can be a bridge
+                that lets them stay together while needs change.
               </p>
               <p className={pClass}>
-                The financial piece requires honest attention. The second-person fee changes the monthly total meaningfully. And couples should think through what happens if one partner's needs eventually require a higher level of care. Some independent living communities can accommodate additional services as needs grow; others cannot.
+                The second-person fee raises the monthly total noticeably, so include it from the start. Couples should
+                also think through what happens if one partner later needs a higher level of care. Some independent
+                living communities can add services as needs grow; others cannot.
               </p>
               <p className={pClass}>
-                A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> can help identify communities with the flexibility to evolve alongside a couple's changing needs.
+                A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> can help identify communities that can adapt as a couple's needs change.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Comparing Costs the Right Way</h2>
               <p className={pClass}>
-                The most useful comparison isn't between communities. It's between the community and the current home — with everything included.
+                Compare the community with the current home, with every cost included. That comparison tells you more
+                than comparing one community with another.
               </p>
               <p className={pClass}>
-                Take a piece of paper and write down everything the current home costs each month: mortgage or rent, utilities, insurance, property taxes, maintenance and repairs, cleaning help, transportation, groceries and meal costs, any in-home support services currently being used.
+                Write down everything the current home costs each month: mortgage or rent, utilities, insurance, property
+                taxes, maintenance and repairs, cleaning help, transportation, groceries and meal costs, and any in-home
+                support services currently being used.
               </p>
               <p className={pClass}>
-                Then get a full breakdown from the independent living community — not just the base rate, but every included service and every potential additional charge.
+                Then get a full breakdown from the independent living community: the base rate, every included service
+                and every possible additional charge.
               </p>
               <p className={pClass}>
-                For many families, the comparison is closer than they expected. For some, senior living turns out to be genuinely more cost-effective once all the variables are accounted for. For others, the numbers confirm that staying home — for now — remains the right call.
+                The result varies. Sometimes the two totals are closer than expected, and sometimes the community costs
+                less once everything is counted. Other times the numbers show that staying home makes sense for now.
               </p>
-              <p className={pClass}>Either way, the comparison is worth making with real numbers.</p>
-              <p className={pClass}>Questions worth asking every community:</p>
+              <p className={pClass}>Either way, use real numbers on both sides, not the advertised rate.</p>
+              <p className={pClass}>Questions to ask every community:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>What is the base monthly rate — and what does it include, specifically?</li>
+                <li>What is the base monthly rate, and exactly what does it include?</li>
                 <li>Are meals included? How many per day?</li>
                 <li>Are utilities included? Which ones?</li>
                 <li>What are the fees that fall outside the base rate?</li>
@@ -192,18 +212,20 @@ const IndependentLivingCosts = () => {
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Is Independent Living Worth the Cost?</h2>
-              <p className={pClass}>For the right person, genuinely yes.</p>
               <p className={pClass}>
-                The value of independent living isn't just measured in dollars. It's measured in the relief of a simpler life. In meals that don't require a trip to the grocery store. In maintenance problems that get handled without a phone call. In neighbors who understand what this chapter of life feels like from the inside.
+                Often, for someone who is healthy, active and ready to stop running a household, but who doesn't yet need
+                daily personal care.
               </p>
               <p className={pClass}>
-                For older adults who are healthy, active, and ready to shed the weight of running a household — but who don't yet need daily personal care — independent living often delivers an exceptional quality of life at a cost that holds up under scrutiny.
+                Part of the value isn't measured in dollars: meals without a trip to the grocery store, maintenance
+                problems handled without a phone call, and neighbors at the same stage of life.
               </p>
               <p className={pClass}>
-                The key is going in with clear eyes. Understanding what's included, what isn't, and how the numbers compare to the real cost of where they live today.
+                The cost holds up when you know what's included, what isn't, and how the total compares with the real
+                cost of the current home.
               </p>
               <p className={pClass}>
-                When the time comes to make the move, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate every detail of the transition — making a process that often feels daunting feel manageable, and even exciting.
+                Once a community is chosen, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate the planning, packing and setup.
               </p>
 
               <hr className={hrClass} />
