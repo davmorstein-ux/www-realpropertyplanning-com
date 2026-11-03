@@ -18,8 +18,8 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 const faqs = [
   { question: "Is it worth fixing up an inherited house before selling?", answer: "It depends on the property's condition, the local market, and the cost of repairs relative to the expected return. In some cases, targeted improvements yield a strong return. In others, the time and money invested do not come back at sale. A professional assessment helps determine which approach makes sense." },
   { question: "What repairs should you always make?", answer: "Safety issues (electrical hazards, structural problems, water damage) should always be addressed. Beyond safety, focus on high-impact, low-cost improvements: deep cleaning, fresh paint, landscaping cleanup, and removing clutter. These create the strongest impression for the lowest investment." },
-  { question: "Will buyers pay less for an as-is property?", answer: "Generally, yes — buyers discount for uncertainty. When a property is sold as-is, buyers factor in the cost of repairs plus a risk premium. However, the discount is sometimes smaller than the cost of making the repairs yourself, especially for older homes with extensive deferred maintenance." },
-  { question: "How do you decide between as-is and fixing up?", answer: "Get a professional assessment that includes estimated repair costs, projected return on investment, and a realistic timeline. Compare the expected net proceeds from both approaches. Factor in carrying costs — mortgage, insurance, utilities, and taxes — for the additional time repairs would take." },
+  { question: "Will buyers pay less for an as-is property?", answer: "Generally, yes. Buyers discount for uncertainty. When a property is sold as-is, buyers factor in the cost of repairs plus a risk premium. However, the discount is sometimes smaller than the cost of making the repairs yourself, especially for older homes with extensive deferred maintenance." },
+  { question: "How do you decide between as-is and fixing up?", answer: "Get a professional assessment that includes estimated repair costs, projected return on investment, and a realistic timeline. Compare the expected net proceeds from both approaches. Factor in carrying costs (mortgage, insurance, utilities and taxes) for the additional time repairs would take." },
   { question: "Can you sell an inherited house as-is in Washington State?", answer: "Yes. There is no legal requirement to make repairs before selling. A personal representative selling for an estate is exempt from Washington's seller disclosure form (RCW 64.06.010), but the estate still may not conceal material defects it knows about. Working with a broker who understands estate property helps ensure proper disclosure." },
 ];
 
@@ -55,10 +55,10 @@ const SellInheritedHouseAsIsOrFix = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Written for heirs, executors, and families weighing whether to invest in repairs on an inherited Washington State home or sell it as-is. There is no single right answer. The best approach depends on the property's condition, the local market, repair costs, and how much time and money the estate can invest. In many cases, a middle path — targeted improvements rather than full renovation — produces the best outcome.
+          For heirs, executors and families deciding whether to repair an inherited Washington State home or sell it as-is. The answer depends on the property's condition, the local market, repair costs, and how much time and money the estate can put in. Often the best result comes from a middle path: targeted improvements rather than a full renovation.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          This guide helps you think through the decision using practical criteria rather than guesswork.
+          The sections below set out the factors that decide it and how to compare the two options.
         </p>
         </div>
       </div>
@@ -73,10 +73,10 @@ const SellInheritedHouseAsIsOrFix = () => (
             Inherited properties often come with years of deferred maintenance. The carpet may be worn, the kitchen outdated, the roof aging. Family members may feel pressure to "fix everything" before selling, while others push to sell immediately and move on.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Both instincts have merit, but neither is always correct. The decision should be based on numbers and professional assessment — not emotion, family pressure, or assumptions about what buyers want.
+            Either can be right, and neither always is. Base the decision on the numbers and a professional assessment, not on emotion, family pressure or assumptions about what buyers want.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            The key question is not "should we fix it up?" — it is "which improvements, if any, will return more than they cost, given the timeline and market conditions?"
+            The useful question is which improvements, if any, will return more than they cost, given the timeline and market conditions.
           </p>
         </div>
       </div>
@@ -94,13 +94,13 @@ const SellInheritedHouseAsIsOrFix = () => (
             <strong className="text-foreground">Local market conditions.</strong> In a strong seller's market, even as-is properties sell competitively. In a slower market, presentation matters more, and well-prepared homes stand out.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <strong className="text-foreground">Time constraints.</strong> Repairs take time — and time costs money in mortgage payments, insurance, utilities, and property taxes. If the estate needs liquidity quickly, a faster sale as-is may net more after carrying costs than a delayed sale with improvements.
+            <strong className="text-foreground">Time constraints.</strong> Repairs take time, and each month adds mortgage payments, insurance, utilities and property taxes. If the estate needs liquidity quickly, a faster sale as-is may net more after carrying costs than a delayed sale with improvements.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             <strong className="text-foreground">Available funds.</strong> If the estate does not have cash available for repairs, the as-is path may be the only practical option. Some executors fund improvements from estate accounts, but this requires careful documentation and sometimes court approval.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Neighborhood comparison.</strong> A professional <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">property assessment</Link> that includes comparable sales analysis reveals what similar homes in the neighborhood are selling for — and what level of condition buyers in that market expect.
+            <strong className="text-foreground">Neighborhood comparison.</strong> A professional <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">property assessment</Link> that includes comparable sales analysis reveals what similar homes in the neighborhood are selling for, and what condition buyers in that market expect.
           </p>
         </div>
       </div>
@@ -108,7 +108,7 @@ const SellInheritedHouseAsIsOrFix = () => (
 
     <MidPageCTA
       heading="Not Sure What Makes Sense?"
-      body="A professional property assessment can show you the numbers — estimated repair costs, projected returns, and realistic market value in current and improved condition."
+      body="A professional property assessment can show you the numbers: estimated repair costs, projected returns, and realistic market value in current and improved condition."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
@@ -119,15 +119,15 @@ const SellInheritedHouseAsIsOrFix = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">The Middle Path: Targeted Improvements</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            In many estate situations, the best outcome comes from a strategic middle path — not a full renovation, but targeted improvements that create the strongest impression for the lowest cost:
+            For many estate homes, the best result comes from targeted improvements rather than a full renovation. These make the strongest impression for the least money:
           </p>
           <ul className="space-y-4">
             {[
-              "Professional deep cleaning — including carpets, windows, and exterior",
-              "Fresh paint in neutral colors — one of the highest-return improvements",
-              "Landscaping cleanup — curb appeal is the first impression and sets buyer expectations",
-              "Decluttering and staging — removing decades of belongings transforms how a home shows",
-              "Minor repairs — leaky faucets, broken light fixtures, sticky doors, loose handrails",
+              "Professional deep cleaning, including carpets, windows and the exterior",
+              "Fresh paint in neutral colors, usually among the highest-return improvements",
+              "Landscaping cleanup: the outside is what buyers see first, and it sets their expectations",
+              "Decluttering and staging: a house cleared of decades of belongings shows very differently",
+              "Minor repairs: leaky faucets, broken light fixtures, sticky doors, loose handrails",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -136,7 +136,7 @@ const SellInheritedHouseAsIsOrFix = () => (
             ))}
           </ul>
           <p className="text-muted-foreground leading-relaxed mt-6">
-            These improvements typically cost a few thousand dollars and can add significantly more to the sale price. A broker experienced in estate property can identify which specific improvements make sense for your home and market.
+            These improvements typically cost a few thousand dollars and can add significantly more to the sale price. A broker who regularly sells estate property can say which of these make sense for your house and market.
           </p>
         </div>
       </div>
@@ -149,11 +149,11 @@ const SellInheritedHouseAsIsOrFix = () => (
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Common Mistakes to Avoid</h2>
           <ul className="space-y-4">
             {[
-              "Renovating to personal taste rather than market appeal — estate properties should be prepared for broad buyer appeal, not customized",
-              "Over-improving for the neighborhood — a $50,000 kitchen remodel does not make sense if the neighborhood price ceiling is $400,000",
-              "Underestimating the timeline — even simple improvements can take weeks when contractors are involved, and delays add carrying costs",
-              "Making decisions without a professional assessment — gut feelings about what buyers want are often inaccurate",
-              "Ignoring the as-is option out of pride — sometimes the smartest financial decision is selling without improvements",
+              "Renovating to personal taste rather than market appeal: prepare an estate property for the widest range of buyers, not to anyone's taste",
+              "Over-improving for the neighborhood: a $50,000 kitchen remodel does not make sense if the neighborhood price ceiling is $400,000",
+              "Underestimating the timeline: even simple improvements can take weeks once contractors are involved, and each delay adds carrying costs",
+              "Deciding without a professional assessment: guesses about what buyers want are often wrong",
+              "Ruling out an as-is sale out of pride: sometimes selling without improvements is the better financial decision",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -171,7 +171,7 @@ const SellInheritedHouseAsIsOrFix = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">When to Get Professional Guidance</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            This is a decision that benefits from objective, data-driven advice. A broker who understands estate property and has appraisal expertise can provide:
+            Figures from someone outside the family make this easier to decide. A broker who works with estate property and has appraisal expertise can provide:
           </p>
           <ul className="space-y-3">
             {[
@@ -188,7 +188,7 @@ const SellInheritedHouseAsIsOrFix = () => (
             ))}
           </ul>
           <p className="text-muted-foreground leading-relaxed mt-6">
-            This information transforms the decision from a stressful guessing game into a clear, informed choice.
+            With those figures in hand, the two options can be compared directly.
           </p>
         </div>
       </div>
@@ -231,7 +231,7 @@ const SellInheritedHouseAsIsOrFix = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">To talk through the numbers for a specific house, you can schedule a short conversation.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

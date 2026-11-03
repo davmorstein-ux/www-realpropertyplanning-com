@@ -9,7 +9,7 @@ const h2 = "font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6 l
 
 const whyReasons = [
   { title: "Empty Nest Transitions", body: "When children leave home, couples may realize they've grown apart. The shared purpose of parenting no longer masks deeper incompatibilities." },
-  { title: "Longer Life Expectancy", body: "People are living longer and healthier lives. A 60-year-old today may have 25+ years ahead — too long to spend in an unhappy marriage." },
+  { title: "Longer Life Expectancy", body: "People are living longer and healthier lives. A 60-year-old today may have 25+ years ahead, which is a long time to spend in an unhappy marriage." },
   { title: "Greater Financial Independence", body: "More women have independent careers and retirement savings, making divorce a financially viable option later in life." },
   { title: "Retirement Stress", body: "The transition to retirement can expose differences in lifestyle goals, spending habits, and how couples want to spend their time." },
   { title: "Caregiving Pressure", body: "Caring for aging parents or a spouse with health issues can create strain that becomes unsustainable over time." },
@@ -21,16 +21,16 @@ const keyDifferences = [
   { title: "Retirement assets may be hard to rebuild", body: "Dividing 401(k)s, pensions, and Social Security benefits at 55 or 65 leaves less time to recover financially." },
   { title: "Income may be fixed or reduced", body: "Post-retirement income is often limited. Supporting two households on one retirement plan is a significant challenge." },
   { title: "Health insurance and medical costs matter more", body: "Losing spousal health coverage before Medicare eligibility can create a costly gap. Medical expenses increase with age." },
-  { title: "The home may be the largest asset", body: "For many older couples, the family home represents the majority of their net worth — making its disposition the most critical financial decision." },
+  { title: "The home may be the largest asset", body: "For many older couples, the family home represents the majority of their net worth, so deciding what happens to it is often the biggest financial decision in the divorce." },
   { title: "Estate plans may become outdated immediately", body: "Wills, trusts, beneficiary designations, and powers of attorney all need immediate revision after a grey divorce." },
 ];
 
 const mistakes = [
-  "Assuming home value without market support — online estimates are not appraisals and rarely hold up in legal proceedings.",
-  "Keeping the home for emotional reasons only — attachment to the house can lead to financial overextension.",
-  "Waiting too long to prepare the property — deferred maintenance and market timing can cost tens of thousands.",
-  "Ignoring tax and retirement consequences — capital gains, stepped-up basis rules, and QDRO requirements all matter.",
-  "Leaving estate documents unchanged — failing to update wills, trusts, and beneficiaries can create unintended consequences.",
+  "Assuming home value without market support: online estimates are not appraisals and rarely hold up in legal proceedings.",
+  "Keeping the home for emotional reasons only: attachment to the house can lead to financial overextension.",
+  "Waiting too long to prepare the property: deferred maintenance and market timing can cost tens of thousands.",
+  "Ignoring tax and retirement consequences: capital gains, stepped-up basis rules, and QDRO requirements all matter.",
+  "Leaving estate documents unchanged: failing to update wills, trusts, and beneficiaries can create unintended consequences.",
 ];
 
 

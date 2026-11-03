@@ -28,15 +28,15 @@ const faqs = [
   },
   {
     q: "Can a trust sale be challenged by beneficiaries?",
-    a: "Yes. Beneficiaries can challenge a trust sale if they believe the trustee breached their fiduciary duty — for example by selling the property significantly below market value. A defensible, condition-based pricing strategy protects the trustee from such claims.",
+    a: "Yes. Beneficiaries can challenge a trust sale if they believe the trustee breached their fiduciary duty, for example by selling the property significantly below market value. A defensible, condition-based pricing strategy protects the trustee from such claims.",
   },
   {
     q: "What if the property is partly in a trust and partly in the estate?",
-    a: "This can happen when only some assets were transferred into a trust before death. An estate attorney should advise on how to handle the split — the real estate side will follow whichever process applies to how that specific property is titled.",
+    a: "This can happen when only some assets were transferred into a trust before death. An estate attorney should advise on how to handle the split. The real estate side follows whichever process applies to how that specific property is titled.",
   },
   {
     q: `Does ${FEATURED_BROKER.role} work with both executors and trustees?`,
-    a: `Yes. ${FEATURED_BROKER.Role} works regularly with both — as well as with the attorneys who represent them.`,
+    a: `Yes. ${FEATURED_BROKER.Role} works with both, and with the attorneys who represent them.`,
   },
   {
     q: "How quickly can a trust sale close compared to a probate sale?",
@@ -47,27 +47,27 @@ const faqs = [
 const probateBullets = [
   "The court appoints a personal representative to manage the estate",
   "Letters Testamentary or Letters of Administration are required before the executor has legal authority to sell",
-  "Washington is a non-supervised probate state — most sales do not require court approval of price or terms",
+  "Washington is a non-supervised probate state: most sales do not require court approval of price or terms",
   "The process usually takes six months to a year from opening probate to closing, and at least four months because of the creditor claim period",
   "All decisions must meet the executor's fiduciary duty to the estate and its beneficiaries",
 ];
 
 const trustBullets = [
-  "The property passes outside of probate entirely — no court involvement required",
+  "The property passes outside of probate entirely, with no court involvement required",
   "The trustee named in the trust document has immediate authority to sell",
-  "The sale can proceed much faster — sometimes within weeks of the grantor's death",
+  "The sale can proceed much faster, sometimes within weeks of the grantor's death",
   "The trustee still has fiduciary duties to the trust's beneficiaries",
-  "Pricing must still be defensible — beneficiaries can challenge a sale they believe was undervalued",
+  "Pricing must still be defensible: beneficiaries can challenge a sale they believe was undervalued",
 ];
 
 const comparisonRows = [
-  ["Court involvement", "Yes — probate court oversees the estate", "No — trust operates independently"],
+  ["Court involvement", "Yes: the probate court oversees the estate", "No: the trust operates independently"],
   ["Legal authority", "Letters Testamentary required", "Trustee authority per trust document"],
   ["Timeline", "Usually 6–12 months (at least 4)", "Weeks to months"],
   ["Court approval of price", "Not required in most WA cases", "Not required"],
   ["Fiduciary duty", "Executor owes duty to estate and heirs", "Trustee owes duty to beneficiaries"],
   ["Property title", "Held in decedent's name alone", "Held in trust name"],
-  ["Complexity", "Higher — court deadlines and documentation", "Lower — but trust terms must be followed"],
+  ["Complexity", "Higher (court deadlines and documentation)", "Lower, but trust terms must be followed"],
 ];
 
 const probateSituation = [
@@ -115,7 +115,7 @@ const ProbateVsTrustSaleWashington = () => (
     <main id="main-content">
       <ProbateStartHere />
       {/* Hero */}
-      <HeroBandTitle as="h1">Probate vs Trust Sale in Washington State — What's the Difference?</HeroBandTitle>
+      <HeroBandTitle as="h1">Probate vs Trust Sale in Washington State: What's the Difference?</HeroBandTitle>
 
         {/* Intro — moved out of the blue band so the band carries only the
             title. The text is the page's answer-style summary and is what
@@ -137,10 +137,10 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">Why This Distinction Matters</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              When a property owner passes away, the path to selling their real estate depends entirely on how that property was owned and titled. Two of the most common scenarios in Washington State are probate sales and trust sales — and they involve very different processes, timelines, and levels of legal oversight.
+              How real estate can be sold after its owner dies depends on how the property was owned and titled. In Washington State, two common routes are a probate sale and a trust sale, and they differ in process, timeline and level of legal oversight.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Getting this wrong at the start causes delays, legal complications, and unnecessary stress for families who are already in a difficult situation.
+              Starting down the wrong process causes delays and legal complications.
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">What Is a Probate Sale?</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A probate sale occurs when real property is part of a deceased person's estate and is sold through probate: the court must first appoint a personal representative, who then sells it, usually with nonintervention powers and no further court order. In Washington State, probate is usually required when a person dies owning property solely in their own name — with no co-owner, no beneficiary designation, and no trust holding title. One exception: spouses with a community property agreement can pass community property to the survivor without probate (RCW 26.16.120).
+              A probate sale occurs when real property is part of a deceased person's estate and is sold through probate: the court must first appoint a personal representative, who then sells it, usually with nonintervention powers and no further court order. In Washington State, probate is usually required when a person dies owning property solely in their own name, with no co-owner, no beneficiary designation, and no trust holding title. One exception: spouses with a community property agreement can pass community property to the survivor without probate (RCW 26.16.120).
             </p>
             <ul className="space-y-3">
               {probateBullets.map((b) => (
@@ -249,7 +249,7 @@ const ProbateVsTrustSaleWashington = () => (
               </div>
             </div>
             <p className="italic text-muted-foreground text-base mt-6 leading-relaxed">
-              Non-probate transfers — such as joint tenancy with right of survivorship, community property with right of survivorship, or a transfer-on-death deed — pass property directly to the surviving owner or named beneficiary without probate or a trust sale.
+              Non-probate transfers (such as joint tenancy with right of survivorship, community property with right of survivorship, or a transfer-on-death deed) pass property directly to the surviving owner or named beneficiary without probate or a trust sale.
             </p>
           </div>
         </div>
@@ -261,13 +261,13 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How {FEATURED_BROKER.roleTitle} Works With Both</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Whether a property is going through probate or trust administration, {FEATURED_BROKER.role} brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
+              {FEATURED_BROKER.Role} takes the same approach to probate and trust sales: condition-based pricing, coordinated preparation, and regular communication with the people involved.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              For probate sales, {FEATURED_BROKER.role} works directly with the executor and estate attorney — providing regular updates, handling all property preparation coordination, and ensuring the pricing documentation supports the executor's fiduciary obligations.
+              For probate sales, {FEATURED_BROKER.role} works with the executor and estate attorney, providing regular updates, coordinating property preparation, and documenting the pricing so it supports the executor's fiduciary obligations.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              For trust sales, {FEATURED_BROKER.role} works with the trustee and their legal counsel — moving quickly when the trust allows, and ensuring the sale price is well-documented and defensible to beneficiaries.
+              For trust sales, {FEATURED_BROKER.role} works with the trustee and their legal counsel, moving quickly when the trust allows and documenting the sale price so it can be defended to beneficiaries.
             </p>
             <AffiliationBadgeGrid />
           </div>
