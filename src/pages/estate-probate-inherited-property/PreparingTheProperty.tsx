@@ -13,65 +13,65 @@ const PreparingTheProperty = () => (
     bandTitle="PREPARING THE PROPERTY"
     disclaimer={DISCLAIMER}
   >
-    <SubH2>Getting the Property Ready — Without Overdoing It.</SubH2>
+    <SubH2>Getting the Property Ready Without Overdoing It</SubH2>
     <P>
-      Estate homes often need attention before they go to market. Knowing what to address — and what to leave alone — can make a significant difference in the final sale price.
+      Most estate homes need some work before they're listed. The question is how much. Money spent on the wrong things often doesn't come back at closing, and skipping the right things can lower the price by more than they would have cost.
     </P>
 
     <Divider />
 
     <SubH2>Every Estate Property Is Different</SubH2>
     <P>
-      Some estate homes are move-in ready. Others have decades of accumulated belongings, deferred maintenance, and systems that haven't been updated in years. Most fall somewhere in between.
+      Some estate homes are ready to show. Others hold decades of belongings, repairs that were put off for years, and a roof or furnace near the end of its life. Most fall somewhere in between.
     </P>
     <P>
-      The goal is not to make the home perfect. The goal is to present it in a way that attracts buyers and justifies the price — without spending more on preparation than it will return in the sale.
+      The aim isn't a perfect house. It's a house buyers can see clearly and that supports the asking price, without spending more on preparation than the sale will return.
     </P>
 
     <Divider />
 
     <SubH2>Step 1: Cleanout and Estate Liquidation</SubH2>
     <P>
-      Before anything else can be assessed or prepared, the home typically needs to be cleared of personal belongings. This is emotionally difficult and physically demanding — and it's often underestimated.
+      The house usually has to be emptied before anyone can judge its condition. This step tends to take longer than families expect, and it is hard work, physically and otherwise.
     </P>
     <P><strong>Options for the contents:</strong></P>
     <UL>
-      <li><strong>Family distribution</strong> — heirs take items of personal or sentimental value. This should happen before any estate sale or liquidation.</li>
-      <li><strong>Estate sale</strong> — a professional estate sale company manages the sale of remaining items, typically keeping a percentage of proceeds.</li>
-      <li><strong>Donation</strong> — items with no sale value can be donated to local organizations.</li>
-      <li><strong>Disposal</strong> — some items simply need to be removed and disposed of.</li>
+      <li><strong>Family distribution:</strong> heirs take items of personal or sentimental value. Do this before any estate sale or liquidation.</li>
+      <li><strong>Estate sale:</strong> an estate sale company sells what remains and usually keeps a percentage of the proceeds.</li>
+      <li><strong>Donation:</strong> items with no resale value can go to local charities.</li>
+      <li><strong>Disposal:</strong> whatever is left is hauled away.</li>
     </UL>
     <P>
-      A professional estate liquidator can manage this entire process, which saves the family significant time and emotional energy. Real Property Planning's Find a Professional page lists an independent estate liquidation service you can contact directly.
+      An estate liquidation company can handle all of this, from sorting to the sale to the final haul-away. Real Property Planning's Find a Professional page lists an independent estate liquidation service you can contact directly.
     </P>
 
     <Divider />
 
     <SubH2>Step 2: Assess the Property's Condition</SubH2>
     <P>
-      Once the home is cleared, its true condition becomes visible. Walk through the property — ideally with an experienced real estate professional — and make a clear-eyed list of:
+      Once the house is empty, its real condition shows. Walk through it, ideally with a real estate professional who regularly sees estate homes, and list:
     </P>
     <UL>
-      <li><strong>Immediate safety or habitability issues</strong> — these should be addressed regardless of whether the home is being sold</li>
-      <li><strong>Deferred maintenance</strong> — roof age, HVAC condition, plumbing and electrical systems</li>
-      <li><strong>Cosmetic condition</strong> — paint, flooring, fixtures, landscaping</li>
-      <li><strong>Items that would likely appear in a buyer's inspection</strong> — and whether they should be addressed proactively</li>
+      <li><strong>Safety or habitability problems:</strong> fix these whether or not the house is being sold.</li>
+      <li><strong>Deferred maintenance:</strong> the age and condition of the roof, heating, plumbing and electrical systems.</li>
+      <li><strong>Cosmetic condition:</strong> paint, flooring, fixtures and landscaping.</li>
+      <li><strong>Likely inspection items:</strong> what a buyer's inspector will probably flag, and whether to deal with it before listing.</li>
     </UL>
 
     <Divider />
 
     <SubH2>Step 3: Decide What's Worth Fixing</SubH2>
     <P>
-      This is where many families make expensive mistakes — either spending too much on improvements that don't return their cost in an estate sale, or doing nothing and accepting a lower price than necessary.
+      Families go wrong in both directions here. Some pay for upgrades that don't return their cost; others fix nothing and accept a lower price than they needed to.
     </P>
     <P><strong>General guidance:</strong></P>
     <UL>
-      <li><strong>Fix</strong> safety issues, obvious deferred maintenance, and items that will come up in inspection and affect financing</li>
-      <li><strong>Consider</strong> light cosmetic updates — fresh paint, cleaned carpets, improved curb appeal — that have a strong return</li>
-      <li><strong>Skip</strong> major renovations, full kitchen or bathroom remodels, and upgrades to personal taste. Estate buyers expect some updating; they're not paying full retail for a renovated home.</li>
+      <li><strong>Fix</strong> safety problems, obvious deferred maintenance, and anything that will come up in inspection or get in the way of a buyer's financing.</li>
+      <li><strong>Consider</strong> inexpensive cosmetic work, such as fresh paint, cleaned carpets and tidier landscaping, which usually pays for itself.</li>
+      <li><strong>Skip</strong> major renovations, kitchen or bathroom remodels, and changes that reflect personal taste. Buyers of estate homes expect to do some updating and price their offers accordingly.</li>
     </UL>
     <P>
-      An experienced estate real estate broker can walk through the property and give honest, practical advice about what matters and what doesn't — before money is spent.
+      A broker who regularly sells estate property can walk through the house and tell you what matters before any money is spent.
     </P>
 
     <RemodelWorthCallout />
@@ -80,20 +80,20 @@ const PreparingTheProperty = () => (
 
     <SubH2>Occupancy and Safety Considerations</SubH2>
     <P>
-      If someone is still living in the property — a surviving spouse, a caregiver, or another family member — the sale process requires additional sensitivity and planning. The timeline needs to accommodate the occupant, and their rights need to be respected.
+      If someone still lives in the house, such as a surviving spouse, a caregiver or another relative, the timeline has to allow for them and their rights have to be respected. Talk with the estate's attorney before setting a listing date.
     </P>
-    <P>A vacant home also has specific considerations:</P>
+    <P>An empty house has its own risks:</P>
     <UL>
-      <li><strong>Insurance</strong> — standard homeowner's policies may not cover vacant homes. A vacancy endorsement or separate policy may be needed.</li>
-      <li><strong>Security</strong> — vacant homes are targets for vandalism and theft. Regular check-ins, secure locks, and sometimes security systems are worth considering.</li>
-      <li><strong>Utilities</strong> — maintain heat, water, and electricity at levels that protect the property, especially in winter.</li>
+      <li><strong>Insurance:</strong> many homeowners policies limit coverage once a house has been vacant for a set period, often 60 days. Tell the insurer the house is empty and ask about a vacancy endorsement or a vacant-property policy.</li>
+      <li><strong>Security:</strong> empty houses attract theft and vandalism. Check on the house regularly, secure the locks, and consider a monitored alarm.</li>
+      <li><strong>Utilities:</strong> keep the heat, water and power on at levels that protect the house, especially in winter, when a frozen pipe can do serious damage.</li>
     </UL>
 
     <Divider />
 
-    <SubH2>Getting the Property Ready Without Getting Overwhelmed</SubH2>
+    <SubH2>Finding Help</SubH2>
     <P>
-      Real Property Planning explains each step. Its Find a Professional page lists independent professionals, including an estate liquidation service and the site's featured broker, whom you contact and hire directly; you are free to choose anyone.
+      Find a Professional lists independent professionals, including an estate liquidation service and the site's featured broker. You contact and hire them directly, and you're free to choose anyone.
     </P>
   </EstateSubPageLayout>
 );
