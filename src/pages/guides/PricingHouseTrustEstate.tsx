@@ -17,11 +17,11 @@ import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
-  { question: "Is pricing an estate home different from pricing a regular home?", answer: "Yes. Estate properties often have deferred maintenance, dated finishes, and condition issues that standard market comparisons do not capture. Pricing must account for the property's actual condition — not its potential after renovation. A broker with appraisal experience can make these adjustments accurately." },
-  { question: "Should I use a Zestimate or online estimate to price estate property?", answer: "No. Online valuation tools assume the property is in average condition. Estate homes are almost never in average condition. These tools routinely miss the mark by 10–20% or more, which can lead to overpricing (extended market time) or underpricing (lost estate value)." },
-  { question: "What is a valuation-informed pricing strategy?", answer: `It combines market comparison data (recent sales of similar properties) with condition-based adjustments (accounting for the property's actual state). ${FEATURED_BROKER.Role}'s appraisal credentials allow ${FEATURED_BROKER.pronoun.object} to make these adjustments with professional rigor, resulting in pricing that is both competitive and defensible.` },
-  { question: "How does the executor justify the sale price to beneficiaries?", answer: "Having a documented, professionally prepared pricing analysis protects the executor. It demonstrates that the price was based on objective market data and professional judgment — not guesswork or convenience. This is especially important when heirs have different expectations." },
-  { question: "Can a property in a trust be priced differently than one in probate?", answer: "The pricing methodology is the same — condition-based market analysis. The difference is in the legal authority: trust property can often be sold more quickly because it avoids probate court oversight. This timing advantage can affect strategy but not the underlying valuation approach." },
+  { question: "Is pricing an estate home different from pricing a regular home?", answer: "Yes. Estate properties often have deferred maintenance, dated finishes, and condition issues that standard market comparisons do not capture. The price has to reflect the property's actual condition, not its potential after renovation. A broker with appraisal training is better equipped to make these adjustments." },
+  { question: "Should I use a Zestimate or online estimate to price estate property?", answer: "No. Online valuation tools assume the property is in average condition, and estate homes rarely are. These tools routinely miss the mark by 10–20% or more, which can lead to overpricing (extended market time) or underpricing (lost estate value)." },
+  { question: "What is a valuation-informed pricing strategy?", answer: `It combines market comparison data (recent sales of similar properties) with condition-based adjustments (accounting for the property's actual state). ${FEATURED_BROKER.Role}'s appraisal training gives ${FEATURED_BROKER.pronoun.object} a disciplined method for these adjustments, which helps produce a price that is competitive and easier to defend.` },
+  { question: "How does the executor justify the sale price to beneficiaries?", answer: "A documented, professionally prepared pricing analysis helps protect the executor. It shows that the price was based on market data and professional judgment, not guesswork or convenience. This matters most when heirs have different expectations." },
+  { question: "Can a property in a trust be priced differently than one in probate?", answer: "The pricing method is the same: condition-based market analysis. The difference is legal authority. Trust property can often be sold more quickly because it avoids probate court oversight. That timing can affect strategy, but not the underlying valuation approach." },
 ];
 
 const jsonLd = articleSchema({
@@ -56,7 +56,7 @@ const PricingHouseTrustEstate = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Written for executors, trustees, and attorneys who need a defensible pricing approach for a home held in a trust or estate. Pricing estate and trust property requires a different approach than pricing a typical home sale. The property is usually in non-standard condition, the decision-makers often have competing interests, and the executor or trustee has a fiduciary obligation to act in the estate's best interest. Getting the price right protects everyone involved.
+          Written for executors, trustees, and attorneys who need a defensible pricing approach for a home held in a trust or estate. Pricing estate and trust property requires a different approach than pricing a typical home sale. The property is usually in non-standard condition, the decision-makers often have competing interests, and the executor or trustee has a fiduciary obligation to act in the estate's best interest. An accurate, documented price protects the fiduciary and the beneficiaries.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
           This guide explains why standard pricing methods fall short and what a valuation-informed approach looks like in practice.
@@ -77,7 +77,7 @@ const PricingHouseTrustEstate = () => (
             Estate and trust properties are different. The person who knew the home best is usually gone. The property may have years of deferred maintenance that the previous owner lived with comfortably but that significantly affects market value. The executor or trustee may never have been inside the home, or may not have visited in years.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            This means pricing cannot be done from a distance, from online data, or from memory. It requires a hands-on assessment by someone who understands both the local market and how to adjust for condition — which is precisely what <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">appraisal methodology</Link> is designed to do.
+            This means pricing cannot be done from a distance, from online data, or from memory. It requires a hands-on assessment by someone who understands both the local market and how to adjust for condition. That adjustment is what <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">appraisal methodology</Link> is designed to do.
           </p>
         </div>
       </div>
@@ -93,11 +93,11 @@ const PricingHouseTrustEstate = () => (
           </p>
           <ul className="space-y-4">
             {[
-              "Online estimates assume average condition — estate homes rarely qualify",
+              "Online estimates assume average condition, and estate homes rarely qualify",
               "Neighbor opinions reflect emotional attachment, not market reality",
               "Standard CMAs from agents who don't specialize in estate property often miss condition-based adjustments",
               "Family memories of 'what the house was worth' may be years or decades out of date",
-              "Tax assessments reflect assessed value, not market value — these can differ significantly",
+              "Tax assessments reflect assessed value, not market value, and the two can differ significantly",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -106,7 +106,7 @@ const PricingHouseTrustEstate = () => (
             ))}
           </ul>
           <p className="text-muted-foreground leading-relaxed mt-6">
-            The consequence of inaccurate pricing is significant. Overpricing leads to extended market time, price reductions, and stigma. Underpricing means the estate — and its beneficiaries — leave money on the table. Both outcomes can expose the executor or trustee to criticism or liability.
+            Overpricing leads to extended market time, price reductions, and a stale listing. Underpricing means the estate and its beneficiaries leave money on the table. Both outcomes can expose the executor or trustee to criticism or liability.
           </p>
         </div>
       </div>
@@ -121,13 +121,13 @@ const PricingHouseTrustEstate = () => (
             A valuation-informed pricing strategy combines three elements:
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <strong className="text-foreground">1. Market comparison.</strong> Identifying recent sales of genuinely comparable properties — not just homes in the same zip code, but homes of similar size, age, and condition in the same neighborhood or micro-market.
+            <strong className="text-foreground">1. Market comparison.</strong> Identifying recent sales of genuinely comparable properties: not just homes in the same zip code, but homes of similar size, age, and condition in the same neighborhood or micro-market.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <strong className="text-foreground">2. Condition-based adjustments.</strong> Systematically accounting for how the property's actual condition differs from the comparables. This is where appraisal training makes a critical difference — it is a disciplined framework for quantifying the impact of deferred maintenance, outdated systems, functional obsolescence, and needed repairs.
+            <strong className="text-foreground">2. Condition-based adjustments.</strong> Systematically accounting for how the property's actual condition differs from the comparables. Appraisal training helps here because it provides a disciplined framework for estimating the impact of deferred maintenance, outdated systems, functional obsolescence, and needed repairs.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">3. Preparation analysis.</strong> Evaluating whether targeted improvements could meaningfully increase the sale price relative to their cost. A $3,000 investment that adds $10,000 in value is worth making. A $20,000 renovation that adds $12,000 is not.
+            <strong className="text-foreground">3. Preparation analysis.</strong> Evaluating whether targeted improvements could meaningfully increase the sale price relative to their cost. For example, a $3,000 investment that adds $10,000 in value is worth making. A $20,000 renovation that adds $12,000 is not.
           </p>
         </div>
       </div>
@@ -135,7 +135,7 @@ const PricingHouseTrustEstate = () => (
 
     <MidPageCTA
       heading="Need Help Pricing an Estate Property?"
-      body={`${FEATURED_BROKER.Role}'s dual credentials as a broker and certified appraiser provide the pricing discipline that estate and trust property requires. A short conversation can help you understand your property's realistic market position.`}
+      body={`${FEATURED_BROKER.Role} is both a broker and a certified appraiser and uses appraisal methods when pricing estate and trust property. A short conversation can give you a realistic sense of where your property stands in the market.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
@@ -146,10 +146,10 @@ const PricingHouseTrustEstate = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Where Mistakes Happen</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            The most common mistake is emotional pricing. Family members remember what the home meant, not what it is worth in today's market in its current condition. This emotional attachment almost always leads to overpricing — which wastes time, costs money, and creates frustration.
+            The most common mistake is emotional pricing. Family members remember what the home meant, not what it is worth in today's market in its current condition. That attachment often leads to overpricing, which costs time and money.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Another frequent mistake is choosing a broker based on who gives the highest price estimate rather than who gives the most accurate one. Agents who tell you what you want to hear rather than what the market will bear are doing you a disservice — especially when you have fiduciary obligations to the estate.
+            Another frequent mistake is choosing a broker based on who gives the highest price estimate rather than who gives the most accurate one. Agents who tell you what you want to hear rather than what the market will bear are doing you a disservice, especially when you have fiduciary obligations to the estate.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Finally, some executors and trustees skip the assessment entirely, listing at a price "that feels right" or based on what a distant relative heard a nearby house sold for. Without understanding the specific property's condition-based value, this approach is a gamble with estate assets.
@@ -183,9 +183,9 @@ const PricingHouseTrustEstate = () => (
     <NextStepBlock
       heading="Continue Learning"
       steps={[
-        { title: "Appraisal vs. CMA in Estate Situations", description: "Understand the key differences between formal appraisals and market analyses — and when each is appropriate.", href: "/guides/appraisal-vs-cma" },
+        { title: "Appraisal vs. CMA in Estate Situations", description: "The key differences between formal appraisals and market analyses, and when each is appropriate.", href: "/guides/appraisal-vs-cma" },
         { title: "What Repairs Should Be Done Before Selling?", description: "A guide to deciding which improvements deliver a return and which ones to skip.", href: "/guides/repairs-before-selling-probate-home-washington" },
-        { title: "What Happens If Heirs Disagree?", description: "Practical guidance for navigating family disagreements about inherited property.", href: "/guides/heirs-disagree-selling-house" },
+        { title: "What Happens If Heirs Disagree?", description: "Options when family members disagree about inherited property.", href: "/guides/heirs-disagree-selling-house" },
       ]}
     />
 
@@ -195,7 +195,7 @@ const PricingHouseTrustEstate = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're dealing with this situation and want help thinking through your options, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">To talk through pricing for a specific trust or estate property, schedule a short conversation.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

@@ -107,7 +107,7 @@ const ALL: Record<string, RelatedLink> = {
   guideInheritedHouse: {
     href: "/guides/inherited-house-washington",
     label: "Inherited House in Washington",
-    description: "Sell, rent, or keep — how to think through an inherited property.",
+    description: "Sell, rent, or keep: how to think through an inherited property.",
   },
   guideOutOfState: {
     href: "/guides/out-of-state-families",

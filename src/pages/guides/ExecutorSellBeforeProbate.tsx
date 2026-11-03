@@ -16,11 +16,11 @@ import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
-  { question: "Can an executor list a house before probate is complete?", answer: "In most cases, no. The executor generally needs letters testamentary or letters of administration — issued by the court — before they have legal authority to sell. However, you can begin planning, assessing the property, and coordinating with professionals while probate is pending." },
+  { question: "Can an executor list a house before probate is complete?", answer: "In most cases, no. The executor generally needs letters testamentary or letters of administration, issued by the court, before they have legal authority to sell. You can still plan, have the property assessed and coordinate with professionals while probate is pending." },
   { question: "What if the will says the house should be sold?", answer: "Even when the will directs a sale, the executor typically still needs court-issued authority to proceed. The will expresses intent, but probate provides the legal mechanism. Work with the estate attorney to confirm what is needed before listing." },
-  { question: "Are there exceptions where probate is not required?", answer: "Yes. If the property was held in a living trust, in joint tenancy with right of survivorship, or as community property with right of survivorship, it may transfer outside of probate. Each situation is different — consult the estate attorney to confirm how the property is titled." },
-  { question: "How long does it take to get authority to sell in Washington?", answer: "Washington lets the court admit a will and appoint the executor as soon as the petition is presented (RCW 11.20.020); heirs are notified after the appointment (RCW 11.28.237), and letters issue once the executor's oath is filed and any required bond is posted. So in an uncontested case the wait is mostly preparing the petition and the county's processing time. A contested will, or a dispute over who should serve, can take months. Planning during this period is strongly recommended." },
-  { question: "What can I do while waiting for probate authority?", answer: "You can secure the property, maintain insurance, document condition, get a professional assessment, begin cleanout planning, and line up vendors. These steps save significant time once you have the legal authority to proceed." },
+  { question: "Are there exceptions where probate is not required?", answer: "Yes. If the property was held in a living trust, in joint tenancy with right of survivorship, or as community property with right of survivorship, it may transfer outside of probate. Ask the estate attorney to confirm how the property is titled." },
+  { question: "How long does it take to get authority to sell in Washington?", answer: "Washington lets the court admit a will and appoint the executor as soon as the petition is presented (RCW 11.20.020); heirs are notified after the appointment (RCW 11.28.237), and letters issue once the executor's oath is filed and any required bond is posted. So in an uncontested case the wait is mostly preparing the petition and the county's processing time. A contested will, or a dispute over who should serve, can take months. Use that time to plan the sale." },
+  { question: "What can I do while waiting for probate authority?", answer: "You can secure the property, maintain insurance, document condition, get a professional assessment, begin cleanout planning, and line up vendors. These steps can save time once you have the legal authority to proceed." },
 ];
 
 const jsonLd = articleSchema({
@@ -57,10 +57,10 @@ const ExecutorSellBeforeProbate = () => (
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Written for executors and personal representatives in Washington State who need to know whether they can list an estate property before probate is granted. Generally, no. In Washington State, an executor typically needs court-issued letters testamentary before they have legal authority to sell real property. However, there is a great deal you can — and should — do to prepare while probate is pending.
+              Written for executors and personal representatives in Washington State who need to know whether they can list an estate property before probate is granted. Generally, no. In Washington State, an executor typically needs court-issued letters testamentary before they have legal authority to sell real property. You can still do a good deal of preparation while probate is pending.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              This guide explains what authority is required, what exceptions may apply, and how to use the waiting period productively.
+              This guide explains what authority is required, what exceptions may apply, and what to do during the wait.
             </p>
             </div>
           </div>
@@ -72,13 +72,13 @@ const ExecutorSellBeforeProbate = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What This Means in Practice</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            When someone passes away and leaves real property, the estate typically goes through probate — a court process that validates the will, appoints the executor, and grants legal authority to manage and distribute assets.
+            When someone dies and leaves real property, the estate typically goes through probate: a court process that validates the will, appoints the executor, and grants legal authority to manage and distribute assets.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Until the court issues letters testamentary (or letters of administration if there is no will), the executor does not have the legal standing to sign a listing agreement, accept an offer, or transfer title. Attempting to sell without this authority can create serious legal complications.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            This does not mean you have to wait passively. The period between a loved one's passing and receiving court authority is an important planning window.
+            You do not have to sit idle. The time between the death and the court's grant of authority is a planning window.
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ const ExecutorSellBeforeProbate = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Common Situations</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Families find themselves in this question for many reasons:
+            The question usually comes up in situations like these:
           </p>
           <ul className="space-y-4">
             {[
@@ -107,7 +107,7 @@ const ExecutorSellBeforeProbate = () => (
             ))}
           </ul>
           <p className="text-muted-foreground leading-relaxed mt-6">
-            In all of these cases, the desire to move quickly is understandable — but acting without proper authority can expose the executor to personal liability.
+            In each case, acting without proper authority can expose the executor to personal liability, however understandable the wish to move quickly.
           </p>
         </div>
       </div>
@@ -133,9 +133,9 @@ const ExecutorSellBeforeProbate = () => (
 
     <MidPageCTA
       heading="Waiting for Probate Authority?"
-      body={`Use this time wisely. A short conversation with ${FEATURED_BROKER.name} can help you understand what to prepare now so you're ready to move forward as soon as legal authority is granted.`}
+      body={`A short conversation with ${FEATURED_BROKER.name} can help you sort out what to prepare now, so the property is closer to ready when legal authority is granted.`}
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance on the property questions."
+      microcopy="No obligation. Practical guidance on the property questions."
     />
 
     {/* Where Mistakes Happen */}
@@ -147,10 +147,10 @@ const ExecutorSellBeforeProbate = () => (
             The most common mistake is assuming the will gives you authority to sell. It does not. The will expresses the deceased person's wishes, but the court must validate those wishes and formally appoint you before you can act on behalf of the estate.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Another common mistake is accepting a verbal offer from a neighbor or family friend before the property has been properly assessed. Without understanding the home's actual market value, you risk selling for significantly less than it is worth — which can create problems with beneficiaries and potentially with the court.
+            Another common mistake is accepting a verbal offer from a neighbor or family friend before the property has been properly assessed. Without understanding the home's actual market value, you risk selling for significantly less than it is worth, which can create problems with beneficiaries and potentially with the court.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Finally, some executors delay getting professional help because they think nothing can happen until probate is complete. In reality, the planning you do during probate directly affects how smooth — and how profitable — the eventual sale will be.
+            Finally, some executors delay getting professional help because they think nothing can happen until probate is complete. In practice, the planning done during probate affects how smoothly the eventual sale goes and what it brings.
           </p>
         </div>
       </div>
@@ -162,17 +162,17 @@ const ExecutorSellBeforeProbate = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How to Approach This Decision</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            The best approach is to treat the probate waiting period as preparation time. Here is a practical sequence:
+            Treat the probate waiting period as preparation time, in roughly this order:
           </p>
           <ol className="space-y-4 list-decimal list-inside text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Secure the property</strong> — change locks, confirm insurance, keep utilities on</li>
-            <li><strong className="text-foreground">Work with the estate attorney</strong> — understand the probate timeline and what documentation is needed</li>
-            <li><strong className="text-foreground">Get a professional assessment</strong> — have a broker experienced in estate property evaluate condition and likely value</li>
-            <li><strong className="text-foreground">Begin preparation planning</strong> — identify cleanout needs, potential repairs, and vendor requirements</li>
-            <li><strong className="text-foreground">Communicate with heirs</strong> — share realistic expectations about timeline, value, and process</li>
+            <li><strong className="text-foreground">Secure the property</strong>: change locks, confirm insurance, keep utilities on</li>
+            <li><strong className="text-foreground">Work with the estate attorney</strong>: understand the probate timeline and what documentation is needed</li>
+            <li><strong className="text-foreground">Get a professional assessment</strong>: have a broker experienced in estate property evaluate condition and likely value</li>
+            <li><strong className="text-foreground">Begin preparation planning</strong>: identify cleanout needs, potential repairs, and vendor requirements</li>
+            <li><strong className="text-foreground">Communicate with heirs</strong>: share realistic expectations about timeline, value, and process</li>
           </ol>
           <p className="text-muted-foreground leading-relaxed mt-6">
-            This approach ensures that when legal authority arrives, you can move forward confidently rather than starting from scratch.
+            Then, when legal authority arrives, the groundwork is already in place.
           </p>
         </div>
       </div>
@@ -205,7 +205,7 @@ const ExecutorSellBeforeProbate = () => (
       steps={[
         { title: "What Executors Should Do Before Selling", description: "A step-by-step guide covering the first five things every executor should handle.", href: "/guides/what-executors-should-do" },
         { title: "How Probate Real Estate Works in Washington", description: "Understand the legal process, timeline, and key decisions involved in selling property through probate.", href: "/guides/how-probate-real-estate-works" },
-        { title: "Do I Need an Appraisal Before Selling?", description: "When a formal appraisal helps — and when a evidence-based market analysis may be enough.", href: "/guides/appraisal-before-selling-inherited-property" },
+        { title: "Do I Need an Appraisal Before Selling?", description: "When a formal appraisal helps, and when an evidence-based market analysis may be enough.", href: "/guides/appraisal-before-selling-inherited-property" },
       ]}
     />
 
@@ -215,7 +215,7 @@ const ExecutorSellBeforeProbate = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're dealing with this situation and want help thinking through your options, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you are handling an estate property and want help thinking through the options, a short conversation is a place to start.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

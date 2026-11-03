@@ -13,11 +13,11 @@ import TiffanyLaneCard from "@/components/TiffanyLaneCard";
 const faqs = [
   {
     q: "Do I need a financial advisor when I inherit property?",
-    a: "Not always required, but often very helpful. Inheriting real estate comes with tax implications — particularly around capital gains and the stepped-up basis — that a financial advisor can help you understand before you make any decisions about selling or keeping the property.",
+    a: "Not always, but it often helps. Inheriting real estate has tax implications, particularly for capital gains and the stepped-up basis. A financial advisor can help you understand them before you decide whether to sell or keep the property.",
   },
   {
     q: 'What is a "stepped-up basis" and why does it matter?',
-    a: 'When you inherit a home, its cost basis for tax purposes is "stepped up" to the market value at the time of the original owner\'s death — not what they originally paid. This often significantly reduces or eliminates capital gains tax if you sell the home shortly after inheriting it. A financial advisor or CPA can walk you through how this applies to your situation.',
+    a: 'When you inherit a home, its cost basis for tax purposes is "stepped up" to the market value at the time of the original owner\'s death, not what they originally paid. This often significantly reduces or eliminates capital gains tax if you sell the home shortly after inheriting it. A financial advisor or CPA can explain how this applies to your situation.',
   },
   {
     q: "What is Washington State's estate tax and who does it affect?",
@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: "How can a financial advisor help with the cost of assisted living?",
-    a: "Senior living costs vary widely in the Puget Sound area. A financial advisor can help families understand what's affordable, how to use home sale proceeds, and whether long-term care insurance or other resources apply. Planning early creates more options.",
+    a: "Senior living costs vary widely in the Puget Sound area. A financial advisor can help families understand what's affordable, how to use home sale proceeds, and whether long-term care insurance or other resources apply. Planning early usually leaves more options.",
   },
   {
     q: "What is the difference between a financial planner and a CPA for estate matters?",
-    a: "A CPA (Certified Public Accountant) focuses primarily on taxes — filing returns, calculating tax owed, and advising on tax strategy. A financial planner takes a broader view — investments, retirement income, long-term care planning, and overall financial goals. For estate matters, many families benefit from working with both.",
+    a: "A CPA (Certified Public Accountant) focuses primarily on taxes: filing returns, calculating tax owed, and advising on tax strategy. A financial planner takes a broader view that covers investments, retirement income, long-term care planning, and overall financial goals. For estate matters, it often makes sense to work with both.",
   },
 ];
 
@@ -81,21 +81,19 @@ const FinancialPlanners = () => {
               </h2>
               <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
                 <p>
-                  A financial planner or advisor can be an important part of the support team during major life
-                  transitions. For older adults and their families, they help clarify financial decisions related to
-                  retirement income, long-term care, housing changes, estate planning, and the costs involved in
-                  downsizing or relocation.
+                  A financial planner or advisor helps older adults and their families with the financial side of
+                  major life changes: retirement income, long-term care, housing changes, estate planning, and the
+                  costs of downsizing or relocation.
                 </p>
                 <p>
-                  Their role is to look at the bigger financial picture and help clients make informed choices that
-                  align with their goals, resources, and family circumstances. In situations involving a move, a change
-                  in living arrangement, or the administration of an estate, a financial planner or advisor can help
-                  bring structure and confidence to what may otherwise feel overwhelming.
+                  The planner looks at the whole financial picture and helps clients choose options that fit their
+                  goals, resources, and family circumstances. During a move, a change in living arrangement, or the
+                  administration of an estate, a planner can help put the decisions in order.
                 </p>
                 <p>
-                  What makes a good financial planner or advisor especially valuable is their ability to explain options
-                  clearly and help families move forward with practical, well-informed decisions. That kind of guidance
-                  can be especially reassuring when coordinating with real estate, legal, and estate professionals.
+                  A good planner explains the options clearly and helps the family settle on practical next steps.
+                  That matters when the financial decisions have to line up with the work of real estate, legal, and
+                  estate professionals.
                 </p>
               </div>
             </div>

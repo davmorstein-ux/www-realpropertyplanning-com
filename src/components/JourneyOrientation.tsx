@@ -31,7 +31,7 @@ const TONE_CONFIG: Record<
       "flex items-start gap-4 bg-card rounded-3xl border border-gold/25 shadow-sm px-6 py-5 md:px-7 md:py-6",
     title: "font-serif text-[28px] md:text-[34px] lg:text-[38px] text-navy font-semibold mb-3 text-center leading-tight",
     defaultTitle: "Who This Journey Often Supports",
-    leadIn: "Take this at your own pace — there's no rush.",
+    leadIn: "Take this at your own pace.",
   },
   probate: {
     // structured, stabilizing, organized
@@ -49,7 +49,7 @@ const TONE_CONFIG: Record<
       "flex items-start gap-4 bg-card rounded-2xl border border-border/40 px-5 py-4 md:px-6 md:py-5",
     title: "font-serif text-[28px] md:text-[34px] lg:text-[38px] text-navy font-semibold mb-3 text-center leading-tight",
     defaultTitle: "This Path Can Make Things Easier If…",
-    leadIn: "Practical, manageable steps — not all at once.",
+    leadIn: "Practical steps, one at a time.",
   },
   valuation: {
     // trustworthy, grounded, intelligent

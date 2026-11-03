@@ -19,6 +19,7 @@ Started Nov 3, 2026 on branch `editorial-audit`. Brief: owner's "Master Prompt â
 | Batch 5: spokane-probate-estate-real-estate, wills (+ secure will box), articles/wills-trusts-other-options, long-term-care/how-to-choose-care-settings, articles/ccrc-costs, san-juan-county, for-family-law-attorneys, articles/affordable-senior-housing. /probate-estate-sales deferred: its text lives in src/i18n/locales/en.json | Live Nov 3 |
 | Batch 6: jefferson-county, island-county, pacific-county, bellingham-probate-estate-real-estate, estate probate-and-legal-authority, articles/senior-housing-guide, guides/senior-transition-differences, estate-liquidation/learn-more, planning conversations-to-have | Live Nov 3 |
 | Batch 7: benton, lewis, pierce, snohomish, grays-harbor, skamania counties; resources/cpas-financial-advisors, understanding-senior-transitions, understanding-housing-care-options, professionals/home-preparation, estate professional-team, aging-in-place-staying-home-safely, guides/who-has-authority-sell-probate-property-washington, afh-club/how-to-finance-an-afh | Live Nov 3 |
+| Batch 8: spokane-county, whatcom-county, for-probate-attorneys, for-estate-planning-attorneys, professionals/estate-sale, professionals/financial-planners, guides/pricing-house-trust-estate, guides/how-probate-real-estate-works, guides/executor-sell-house-before-probate-washington, tacoma/olympia/bellevue probate pages, retirement-reverse-mortgage, preparing-home-for-sale-during-transition; shared lead-ins (JourneyOrientation) and the RelatedServices inherited-house blurb de-dashed | Edited Nov 3, awaiting merge |
 | Em-dash-only pass still due: legal-duties, working-with-professionals and every 'none'/'light' page | Not started |
 | All other pages | Not started (see inventory.csv status column) |
 
@@ -84,3 +85,15 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - who-has-authority: nonresident PR resident-agent requirement (RCW 11.36.010) not mentioned; co-owner card wording for survivorship.
 - home-preparation: "2-6 weeks" unsourced.
 - Shared "Take this at your own pace â€” there's no rush." line still has an em dash (shared component).
+- BATCH 8 FLAGS:
+- estate-sale: "sale of real property may require court approval" (softened from "typically requires"; nonintervention powers usually mean no court approval); 25-40% commission and 1-3 weeks unsourced.
+- whatcom-county: "San Juan ferry corridor" (WSF San Juan route leaves from Anacortes, Skagit County).
+- tacoma: Ruston is a separate town; "post-war homes across Hilltop" doubtful; "before 1950" and "sell within a few weeks" unsourced.
+- olympia: Lacey/Tumwater are separate cities; breadcrumb "Thurston County" links to /counties.
+- bellevue: Medina is a separate city; $1.5M-$5M range and 2% figure unsourced (math corrected: six figures only at the top end).
+- pricing-house-trust-estate: online tools "miss by 10-20% or more" unsourced.
+- how-probate-real-estate-works: names only letters testamentary (add "or letters of administration"?); "60 to 120 days" unsourced.
+- executor-sell-before-probate: TOD deeds and nonintervention powers not mentioned.
+- for-probate-attorneys: appraisal "referral resources" line reads oddly when broker is also the appraiser; FAQ question uses "you".
+- for-estate-planning-attorneys: appraiser credential stated unconditionally (other pages use SAME_PERSON).
+- retirement-reverse-mortgage: "tax-free", "no monthly payments" lack taxes/insurance/upkeep caveat; non-borrowing spouse protections not mentioned; lender bios (Bartel "informed decisions", McGinnis "top producers", "trusted") need owner decision.

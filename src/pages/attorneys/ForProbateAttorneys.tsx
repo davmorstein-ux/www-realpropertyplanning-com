@@ -29,9 +29,9 @@ import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER, SAME_PERS
 */
 
 const intersections = [
-  "What is the property actually worth in its current condition — not what an automated tool says, but a defensible, condition-adjusted market value?",
+  "What is the property actually worth in its current condition, as a defensible, condition-adjusted market value rather than an automated estimate?",
   "Should the property be sold as-is, or are there targeted improvements that would meaningfully improve the outcome?",
-  "How does an executor manage a property that's been vacant for months — insurance, utilities, security, maintenance?",
+  "How does an executor manage a property that's been vacant for months (insurance, utilities, security, maintenance)?",
   "How do heirs coordinate when they live in different states or have different opinions about timing and price?",
   "What does the sale timeline look like relative to the probate proceedings?",
 ];
@@ -45,53 +45,53 @@ const services = [
           <>As a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>, {FEATURED_BROKER.role} provides</>
         ) : (
           <>{FEATURED_BROKER.Role} provides</>
-        )} condition-adjusted market analysis that goes beyond a standard comparative market analysis. The result is a pricing position that holds up to scrutiny — from co-heirs, from the court, and from the estate attorney reviewing the documentation.
+        )} condition-adjusted market analysis that goes beyond a standard comparative market analysis. The aim is a price that holds up to scrutiny from co-heirs, the court, and the estate attorney reviewing the documentation.
       </>
     ),
   },
   {
     title: "Strategic Sale Guidance",
-    description: `${FEATURED_BROKER.Role} advises on timing, pricing, and preparation strategy with fiduciary defensibility in mind. Every repair recommendation is evaluated for return on investment. Every pricing decision is documented with comparable sales support.`,
+    description: `${FEATURED_BROKER.Role} advises on timing, pricing, and preparation strategy with fiduciary defensibility in mind. Repair recommendations are weighed against their likely return, and pricing recommendations are documented with comparable sales.`,
   },
   {
     title: "Property Preparation Coordination",
-    description: `From professional cleanout to targeted repairs to staging, ${FEATURED_BROKER.role} coordinates the full preparation process through independent local vendors — so the executor doesn't have to manage it and you don't have to track it down.`,
+    description: `From professional cleanout to targeted repairs to staging, ${FEATURED_BROKER.role} coordinates preparation through independent local vendors, so neither the executor nor the attorney has to manage it day to day.`,
   },
   {
     title: "Communication With All Parties",
-    description: `${FEATURED_BROKER.Role} serves as the single real estate point of contact — keeping executors, co-heirs, and the legal team informed with consistent, clear updates throughout the process.`,
+    description: `${FEATURED_BROKER.Role} serves as the single real estate point of contact and aims to keep executors, co-heirs, and the legal team informed with regular, clear updates.`,
   },
   {
     title: "Hands-On Local Support",
-    description: `For executors managing Washington State property from out of state, ${FEATURED_BROKER.role} handles the property locally — with photo updates, digital documentation, and remote coordination that makes the process manageable from anywhere.`,
+    description: `For executors managing Washington State property from out of state, ${FEATURED_BROKER.role} handles the property locally, with photo updates, digital documentation, and remote coordination so the executor can follow the sale from a distance.`,
   },
 ];
 
 const situations = [
   "Selling inherited property during active probate proceedings",
-  "Preparing a longtime family home for sale — often with decades of deferred maintenance",
+  "Preparing a longtime family home for sale, often with decades of deferred maintenance",
   "Coordinating among multiple heirs with different opinions on timing and value",
   "Managing the property on behalf of an out-of-state or out-of-area executor",
   "Providing a defensible market value assessment for estate documentation",
-  "Navigating a sale that involves court approval requirements",
+  "Handling a sale that involves court approval requirements",
 ];
 
 const faqs = [
   {
     question: `How does ${FEATURED_BROKER.role} support probate attorneys during property sales?`,
-    answer: `${FEATURED_BROKER.Role} handles the real estate side completely — property assessment, condition-based pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.`,
+    answer: `${FEATURED_BROKER.Role} handles the real estate side (property assessment, condition-based pricing, preparation coordination, listing, and sale management) and keeps the attorney informed along the way. Attorneys have a single point of contact for property questions. The goal is to keep the real estate side of probate administration simple so you can focus on the legal work.`,
   },
   {
     question: `What is the difference between a CMA and the valuation analysis ${FEATURED_BROKER.role} provides?`,
-    answer: `A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. ${FEATURED_BROKER.Role}'s condition-based pricing combines ${SAME_PERSON ? `${FEATURED_BROKER.pronoun.possessive} certified appraisal training` : "documented condition adjustments"} with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), ${FEATURED_BROKER.role} can discuss appropriate referral resources.`,
+    answer: `A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. ${FEATURED_BROKER.Role}'s condition-based pricing combines ${SAME_PERSON ? `${FEATURED_BROKER.pronoun.possessive} certified appraisal training` : "documented condition adjustments"} with current market data. The result is a condition-adjusted, comparable-supported price opinion that is usually more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), ${FEATURED_BROKER.role} can discuss appropriate referral resources.`,
   },
   {
     question: "Can you help when heirs disagree about value or timing?",
-    answer: `Yes — and this is one of the most common situations ${FEATURED_BROKER.role} works with. When heirs have received conflicting price opinions or have different views on what the property is worth, a clear, documented evidence-based analysis often resolves the disagreement faster than continued negotiation. ${FEATURED_BROKER.Role} can present the analysis to all parties — together or separately — and walk through the comparable data in plain language.`,
+    answer: `Yes. When heirs have received conflicting price opinions or have different views on what the property is worth, a clear, documented analysis based on comparable sales can settle the disagreement faster than continued negotiation. ${FEATURED_BROKER.Role} can present the analysis to all parties, together or separately, and walk through the comparable data in plain language.`,
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",
-    answer: `${FEATURED_BROKER.Role}'s service area is all of Washington State. For clients outside Washington, ${FEATURED_BROKER.role} can connect attorneys and clients with a licensed broker anywhere in the country through ${FEATURED_BROKER.pronoun.possessive} ${FEATURED_BROKER.brokerage} network.`,
+    answer: `${FEATURED_BROKER.Role}'s service area is all of Washington State. For clients outside Washington, ${FEATURED_BROKER.role} can connect attorneys and clients with a licensed broker in other states through ${FEATURED_BROKER.pronoun.possessive} ${FEATURED_BROKER.brokerage} network.`,
   },
 ];
 
@@ -118,12 +118,12 @@ const ForProbateAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Probate situations involve more than legal process. They involve families navigating loss, responsibility, and financial decisions they've never faced before — often on a timeline they don't control. When real estate is part of the estate, the{" "}
+            When real estate is part of a probate estate, the{" "}
             <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executor</Link>{" "}
-            and family are faced with questions about value, condition, timing, and coordination that most attorneys reasonably prefer to hand off to an experienced real estate professional.
+            and family face questions about value, condition, timing, and coordination that most attorneys reasonably prefer to hand off to a real estate professional. Those questions usually arrive while the family is dealing with a death and with financial decisions they haven't made before, often on a timeline they don't control.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            {FEATURED_BROKER.Role} works alongside probate attorneys throughout Washington State to provide defensible valuation, coordinated preparation, and a steady, professional presence through every step of the property sale.
+            {FEATURED_BROKER.Role} works with probate attorneys in Washington State to provide defensible valuation, coordinated preparation, and steady, professional communication during the property sale.
           </p>
         </div>
       </div>
@@ -137,7 +137,7 @@ const ForProbateAttorneys = () => (
             Where Real Estate and Probate Intersect
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            Your clients and their executors are navigating decisions they've likely never made before. The questions that come up most often:
+            Executors and their families are usually making these decisions for the first time. The questions that come up most often:
           </p>
           <div className="grid gap-4">
             {intersections.map((item, i) => (
@@ -148,7 +148,7 @@ const ForProbateAttorneys = () => (
             ))}
           </div>
           <p className="text-muted-foreground text-lg leading-relaxed mt-8">
-            These situations require both legal guidance and experienced real estate support — working together, not in parallel.
+            These questions call for both legal guidance and real estate support, and they go more smoothly when the attorney and the broker coordinate.
           </p>
         </div>
       </div>
@@ -189,7 +189,7 @@ const ForProbateAttorneys = () => (
             Common Situations
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Probate attorneys refer clients to {FEATURED_BROKER.role} in situations including:
+            Situations where {FEATURED_BROKER.role} can help include:
           </p>
           <ul className="space-y-4">
             {situations.map((item, i) => (
@@ -213,12 +213,12 @@ const ForProbateAttorneys = () => (
             Discuss a Client Situation
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            If you have a client navigating a{" "}
+            If you have a client with a{" "}
             <Link to="/probate-estate-sales" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">probate</Link>{" "}
-            property situation in Washington State, a brief conversation is usually the fastest way to determine how {FEATURED_BROKER.role} can support the case.
+            property situation in Washington State, a brief conversation is usually the fastest way to see whether and how {FEATURED_BROKER.role} can help.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            {FEATURED_BROKER.Role} works collaboratively with probate attorneys throughout the Puget Sound area and across Washington State, and is available for direct attorney consultations at your convenience.
+            {FEATURED_BROKER.Role} works with probate attorneys in the Puget Sound area and elsewhere in Washington State and is available to speak with attorneys directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`tel:${FEATURED_BROKER.phoneTel}`}>

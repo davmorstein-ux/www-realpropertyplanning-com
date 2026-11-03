@@ -19,32 +19,32 @@ const faqs = [
   {
     question: "How does selling an inherited home in Olympia work?",
     answer:
-      `Selling inherited property in Olympia typically requires legal authority through probate or trust administration before the home can be listed. ${FEATURED_BROKER.Role} coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.`,
+      `Selling inherited property in Olympia usually requires legal authority through probate or trust administration before the home can be listed. ${FEATURED_BROKER.Role} works with the estate attorney, trustee, or personal representative to assess the property, set a defensible price, manage preparation, and handle the sale, keeping everyone informed along the way.`,
   },
   {
     question: "What should I do first with an inherited Olympia property?",
     answer:
-      `Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. ${FEATURED_BROKER.Role} can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.`,
+      `Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. ${FEATURED_BROKER.Role} can evaluate the property, identify factors that affect value, and talk through the choices with you before anything is decided.`,
   },
   {
     question: `How does ${FEATURED_BROKER.role}'s appraisal background benefit Olympia property sales?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Olympia, where many estate properties reflect decades of ownership, this dual perspective helps families avoid pricing mistakes tied to deferred maintenance or outdated improvements.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} sets prices from what the property's condition and neighborhood-level sales actually show. Many Olympia estate properties reflect decades of ownership, and looking at them with an appraiser's eye can help families avoid pricing mistakes tied to deferred maintenance or outdated improvements.`,
   },
   {
     question: "Can you get help with a property transition tied to retirement or senior living?",
     answer:
-      `Yes. Many Olympia families reach out when a parent or loved one is transitioning into retirement, assisted living, or long-term care. ${FEATURED_BROKER.Role} helps coordinate the timing of the property sale with the transition, working with families and professionals to keep the process organized and manageable.`,
+      `Yes. Olympia families often get in touch when a parent or other relative is moving into retirement, assisted living, or long-term care. ${FEATURED_BROKER.Role} helps time the property sale around the move and works with the family and other professionals to keep things organized.`,
   },
   {
     question: "What if the property has been in the family for a long time and needs work?",
     answer:
-      `Long-held properties often have deferred maintenance, outdated systems, or accumulated personal belongings. ${FEATURED_BROKER.Role} evaluates what preparation is worth doing — and what isn't — based on the likely return, the timeline, and the family's goals. Not every home needs extensive renovation before sale.`,
+      `Long-held properties often have deferred maintenance, outdated systems, or accumulated personal belongings. ${FEATURED_BROKER.Role} evaluates which preparation is worth doing, and which isn't, based on the likely return, the timeline, and the family's goals. Not every home needs extensive renovation before sale.`,
   },
   {
     question: "How long does it take to sell an estate property in Olympia?",
     answer:
-      `Timelines depend on the legal process, property condition, and preparation needs. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a plan around your specific situation — including any coordination needed with family members, care transitions, or legal timelines.`,
+      `Timelines depend on the legal process, property condition, and preparation needs. ${FEATURED_BROKER.Role} can estimate a realistic schedule and plan the sale around it, including any coordination needed with family members, care transitions, or legal timelines.`,
   },
 ];
 
@@ -104,7 +104,7 @@ const OlympiaProbateEstate = () => {
         <ProbateStartHere />
 
       {/* Hero */}
-      <HeroBandTitle as="h1">Helping Families Navigate Estate Property in Olympia</HeroBandTitle>
+      <HeroBandTitle as="h1">Helping Families With Estate Property in Olympia</HeroBandTitle>
 
       {/* Intro — relocated out of the title band. The band carries the
           page title and nothing else, sitewide. */}
@@ -112,7 +112,7 @@ const OlympiaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            In Olympia, estate property decisions are often connected to retirement, downsizing, and long-term planning. A thoughtful approach can make the process much easier for everyone involved.
+            In Olympia, estate property decisions are often tied to retirement, downsizing, and long-term planning, so the timing of a sale deserves as much thought as the price.
           </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const OlympiaProbateEstate = () => {
               When Families in Olympia Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Olympia families often face property decisions during retirement transitions, after a loss, or when long-held homes need thoughtful attention. These are the situations that most often bring families to Real Property Planning:
+              Property questions in Olympia tend to come up at a retirement move, after a death, or when a long-held home needs work. These are the usual reasons families contact Real Property Planning:
             </p>
             <ul className="space-y-4">
               {[
@@ -154,13 +154,13 @@ const OlympiaProbateEstate = () => {
               Why Olympia Property Decisions Benefit From a Measured Approach
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Many estate properties in Olympia reflect decades of ownership — homes in neighborhoods like South Capitol, Eastside, and the greater Lacey-Tumwater corridor that have been well-loved but may need updating. Pacing and timing matter in these situations, because rushing a sale without proper preparation often leads to a lower outcome.
+              Many estate properties in Olympia reflect decades of ownership. Homes in neighborhoods like South Capitol and Eastside, and across the greater Lacey-Tumwater corridor, have often been well cared for but may need updating. Pacing matters here, because rushing a sale without proper preparation often leads to a lower price.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Property condition frequently reflects years of deferred maintenance, accumulated belongings, and systems that may need attention. A thoughtful assessment of what preparation is worth doing — and what isn't — can significantly improve both the sale price and the family's experience of the process.
+              Condition often shows years of deferred maintenance, accumulated belongings, and systems that may need attention. A careful look at which preparation is worth paying for, and which isn't, can improve the sale price and make the process easier on the family.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that helps Olympia families understand their property's true position in the market — and make decisions grounded in realistic expectations rather than guesswork.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} begins with value. Olympia families then have a realistic picture of where the property stands in the market and can decide from evidence rather than guesswork.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const OlympiaProbateEstate = () => {
         heading="Have a Property Situation in Olympia?"
         body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for families, executors, and professionals handling estate or inherited property in Olympia and throughout Thurston County.`}
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance on the property questions."
+        microcopy="No obligation to proceed. Expect a practical conversation about the property."
       />
 
       {/* Transition Section */}
@@ -182,13 +182,13 @@ const OlympiaProbateEstate = () => {
               Support Through Retirement and Life Transitions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Many Olympia families reach out when a parent or loved one is moving into retirement, downsizing, or transitioning into assisted living or long-term care. These moments are deeply personal, and the property decisions that accompany them deserve a calm, patient approach.
+              A common reason for the first call in Olympia is a parent's move: into retirement, into a smaller home, or into assisted living or long-term care. These are personal decisions, and the property side rarely benefits from being rushed.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.Role} works with families to coordinate timing, simplify decision-making, and keep the process manageable. {FEATURED_BROKER.pronoun.Subject} communicates clearly with all family members and professionals involved — reducing confusion and helping everyone stay aligned.
+              {FEATURED_BROKER.Role} works with families to coordinate timing, simplify decisions, and keep the process manageable. {FEATURED_BROKER.pronoun.Subject} keeps the family members and professionals involved informed, so everyone works from the same information.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether the timeline is flexible or driven by a care transition, having a steady, experienced resource who understands both the property and the emotional weight of the process can make a meaningful difference.
+              Some timelines are flexible; others are set by a move into care. In either case it helps to have one local contact who understands the property and the family's circumstances.
             </p>
           </div>
         </div>
@@ -202,7 +202,7 @@ const OlympiaProbateEstate = () => {
               How {FEATURED_BROKER.roleTitle} Can Help Make the Process More Manageable
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Every situation is different, but the approach follows a clear, structured framework designed to reduce uncertainty:
+              A typical sale moves through five stages, paced to the family's timing:
             </p>
             <ol className="space-y-6">
               {[
@@ -212,7 +212,7 @@ const OlympiaProbateEstate = () => {
                 },
                 {
                   title: "Assess the Property and Needs",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, evaluates its condition, and identifies what preparation — if any — would meaningfully improve the outcome.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, evaluates its condition, and identifies any preparation likely to improve the result.`,
                 },
                 {
                   title: "Develop a Clear Plan",
@@ -220,11 +220,11 @@ const OlympiaProbateEstate = () => {
                 },
                 {
                   title: "Coordinate Next Steps",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, family members, cleanout services, and contractors to keep the process organized and all parties informed.`,
+                  desc: `Attorneys, family members, cleanout services, and contractors all have a part; ${FEATURED_BROKER.pronoun.subject} coordinates them so the process stays organized and everyone stays informed.`,
                 },
                 {
                   title: "Guide the Process From Start to Finish",
-                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details with consistent communication, clear updates, and a patient approach that respects the family's pace.`,
+                  desc: `Through listing and closing, ${FEATURED_BROKER.pronoun.subject} manages the details, sends regular updates, and moves at a pace the family can keep up with.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -308,7 +308,7 @@ const OlympiaProbateEstate = () => {
               A Comfortable Next Step
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-              If you are handling a property in Olympia and want a steady, thoughtful approach, a short conversation can help you move forward with confidence.
+              If you are handling a property in Olympia, a short conversation can help you decide what to do first, and when.
             </p>
             <div className="flex justify-center">
               <Link to="/contact?reason=estate-property">

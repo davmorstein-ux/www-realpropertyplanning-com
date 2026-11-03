@@ -30,7 +30,7 @@ import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER} from "@/d
 
 const questions = [
   "The client wants to understand the current market value of a property held in trust",
-  "A life transition — health change, move to senior living, death of a spouse — triggers a planned or unplanned property sale",
+  "A life transition (a health change, a move to senior living, the death of a spouse) triggers a planned or unplanned property sale",
   "Timing a sale relative to tax planning, trust provisions, or beneficiary needs requires real estate input",
   "Multiple trustees or beneficiaries need to agree on pricing and preparation before a sale can proceed",
   "A property held in trust for years has deferred maintenance that affects its realistic market value",
@@ -48,8 +48,8 @@ const services = [
         >
           Washington State Certified Residential Appraiser
         </Link>{" "}
-        means clients can receive a condition-adjusted, methodology-based market assessment — not just a listing
-        agent's price opinion. This is especially valuable when valuation needs to support trust decisions,
+        means clients can receive a condition-adjusted, methodology-based market assessment rather than a listing
+        agent's price opinion. This can be especially useful when valuation needs to support trust decisions,
         beneficiary conversations, or planning-related financial analysis.
       </>
     ),
@@ -57,17 +57,17 @@ const services = [
   {
     title: "Strategic Sale Planning",
     description:
-      `${FEATURED_BROKER.Role} advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.`,
+      `${FEATURED_BROKER.Role} advises on timing, preparation, and market positioning in line with the broader estate plan and the client's situation. Recommendations on what to repair, when to list, and how to price take into account both the market and the fiduciary duties involved.`,
   },
   {
     title: "Coordination With Advisors",
     description:
-      `${FEATURED_BROKER.Role} works collaboratively with attorneys, CPAs, and financial planners, so that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.`,
+      `${FEATURED_BROKER.Role} works with attorneys, CPAs, and financial planners so that everyone involved in the client's plan is working from the same real estate information, with one point of contact and regular updates.`,
   },
   {
     title: "Property Preparation Oversight",
     description:
-      `When preparation is needed before a sale, ${FEATURED_BROKER.role} coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.`,
+      `When preparation is needed before a sale, ${FEATURED_BROKER.role} coordinates vendors, manages the process, and keeps the client and their advisors informed, so preparation adds as little as possible to their administrative work.`,
   },
 ];
 
@@ -93,16 +93,15 @@ const ForEstatePlanningAttorneys = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Estate planning is about clarity, protection, and long-term intent. But even the most carefully
-              structured plan can become complicated when real property is involved and it's time to act. The client
-              who understood their trust during the planning conversation may feel uncertain when the property
-              actually needs to be sold. The family member who agreed on paper may resist when it becomes real.
+              A carefully structured estate plan can still become complicated when real property is involved and it's
+              time to act. A client who understood the trust during the planning conversation may feel uncertain when
+              the property actually needs to be sold, and a family member who agreed on paper may resist when the sale
+              becomes real.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              {FEATURED_BROKER.Role} — a Washington State licensed real estate broker and certified residential appraiser — works
-              alongside estate planning attorneys to help clients move from strategy to execution, providing clear
-              valuation insight, coordinated sale planning, and a calm, professional presence during transitions that
-              matter.
+              {FEATURED_BROKER.Role}, a Washington State licensed real estate broker and certified residential appraiser, works
+              with estate planning attorneys to help clients carry out the real estate part of a plan, providing clear
+              valuation, coordinated sale planning, and calm, professional communication while the property is sold.
             </p>
           </div>
         </div>
@@ -116,8 +115,8 @@ const ForEstatePlanningAttorneys = () => (
               Where Real Estate and Estate Planning Intersect
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Many of your clients have a plan in place — but the real estate questions arise at the point of
-              execution, often years after the plan was drafted. The most common situations:
+              Real estate questions usually come up when a plan is carried out, often years after it was drafted.
+              Common situations:
             </p>
             <div className="grid gap-4">
               {questions.map((q, i) => (
@@ -164,12 +163,12 @@ const ForEstatePlanningAttorneys = () => (
               Discuss a Client Situation
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              If you work with clients who hold real property as part of their estate plan — and who will eventually
-              need to sell, transfer, or make decisions about that property — {FEATURED_BROKER.role} welcomes the opportunity to
-              be a resource for your practice.
+              If you work with clients who hold real property as part of their estate plan and will eventually need to
+              sell, transfer, or make decisions about that property, {FEATURED_BROKER.role} is available as a real estate
+              resource for your practice.
             </p>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              A brief conversation is the most efficient way to discuss how {FEATURED_BROKER.role} can support your clients in
+              A brief conversation is usually the quickest way to discuss how {FEATURED_BROKER.role} can support your clients in
               Washington State.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
