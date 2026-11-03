@@ -30,19 +30,19 @@ const SecureWillSection = () => {
           </h2>
 
           <p className="text-lg sm:text-xl font-semibold leading-relaxed mb-6" style={{ color: tealSub }}>
-            Upload and securely store your will in the blockchain cloud — ensuring easy, reliable access for you and your loved ones, now and in the future.
+            Upload and securely store your will in the blockchain cloud, so you and your loved ones can reach it now and in the future.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: bodyDark }}>
-            Your last will &amp; testament is one of the most important documents you will ever create. This secure digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
+            This digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: bodyDark }}>
-            Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
+            Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key, so only you, or those you authorize, can retrieve it when needed.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed mb-10" style={{ color: bodyDark }}>
-            This creates a single, reliable source of truth — giving you and your loved ones confidence in knowing exactly where to find your will and that it is the correct, verified version.
+            This creates a single, reliable record: you and your family know where to find your will and that it is the correct, verified version.
           </p>
         </div>
 

@@ -16,6 +16,7 @@ Started Nov 3, 2026 on branch `editorial-audit`. Brief: owner's "Master Prompt â
 | Batch 2: executor section (overview, first-30-days, common-mistakes, property-decisions, when-you-need-extra-help), executors-guide, planning: when-a-move-is-coming, why-planning-early, property-questions | Live Nov 3 |
 | Batch 3: articles library, what-to-do-with-the-house, for-attorneys (+ how-it-works), about, skagit-county, mason-county, lenders-and-financing-specialists, professionals/care-managers; shared county template text | Live Nov 3 |
 | Batch 4: long-term-care/nurse-delegation, long-term-care/nursing-homes, king-county, wahkiakum-county, cowlitz-county, estate first-steps, executors, guides/sell-inherited-house-as-is-or-fix, guides/probate-vs-trust-sale-washington, gray-divorce (+ its background component) | Live Nov 3 |
+| Batch 5: spokane-probate-estate-real-estate, wills (+ secure will box), articles/wills-trusts-other-options, long-term-care/how-to-choose-care-settings, articles/ccrc-costs, san-juan-county, for-family-law-attorneys, articles/affordable-senior-housing. /probate-estate-sales deferred: its text lives in src/i18n/locales/en.json | Edited Nov 3, awaiting merge |
 | Em-dash-only pass still due: legal-duties, working-with-professionals and every 'none'/'light' page | Not started |
 | All other pages | Not started (see inventory.csv status column) |
 
@@ -32,6 +33,10 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - /articles/silver-tsunami
 - /long-term-care/nurse-delegation
 - /long-term-care/nursing-homes
+- /articles/wills-trusts-other-options
+- /long-term-care/how-to-choose-care-settings
+- /articles/ccrc-costs
+- /articles/affordable-senior-housing
 
 ## Claims flagged for fact review (meaning left unchanged)
 - silver-tsunami: 10,000/day in 2011; wave to ~2030; "Peak 65" most concentrated aging period; "vast majority" prefer aging in place; regional senior housing shortages; 20-25 more years after 65; caregiver shortage worsening. Sourced but not re-checked: 11,000/day and 4.1M/yr (Alliance for Lifetime Income), 1 in 5 by 2030 (Census), AARP 2024 savings figures.
@@ -54,3 +59,10 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - sell-inherited-house: "few thousand dollars ... add significantly more", paint "highest-return" unsourced.
 - probate-vs-trust: trustee "immediate authority" overstates (acceptance, certification of trust); "non-supervised probate state" simplifies; pricing "protects" trustee is absolute; table row ignores community property exception.
 - gray-divorce: "risen sharply since 1990" and standard-of-living research uncited; $500,000 exclusion conditions omitted; community property presumption is rebuttable; WA revokes ex-spouse on many non-probate assets (RCW 11.07.010) but not ERISA plans; "dual perspective most agents can't offer" promotional.
+- BATCH 5 FLAGS:
+- san-juan-county: "Washington's only island county" doubtful (Island County); "Eastsound is the largest community" (Friday Harbor is the only incorporated town); "172 named islands", Orcas highest prices, family mostly in King/Snohomish/Pierce unsourced.
+- for-family-law-attorneys: neutrality / dual-agency wording still needs eXp designated broker review (existing code note); "methodology-based rather than opinion-based" BPO claim; service area "Washington State" vs "Puget Sound area" inconsistent.
+- spokane: "well-priced homes typically sell within a few weeks" unsourced.
+- wills: "the will determines who has the authority" loose (court appoints PR); broker valuations "hold up to legal scrutiny". Secure will box: "cannot be altered, lost, or misplaced" is absolute, and the box does not say the court needs the original signed will.
+- affordable-senior-housing: no sources or review date; Section 202 "about half have a service coordinator" unsourced; 30% of adjusted income / 62+ / 50% AMI uncited (match HUD rules).
+- wills-trusts-other-options: gifting line now "creditors, divorce, or financial trouble can become a risk to the family home".
