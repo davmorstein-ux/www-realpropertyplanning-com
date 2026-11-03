@@ -152,7 +152,7 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">What Is a Probate Sale?</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A probate sale occurs when real property is part of a deceased person's estate and is sold through probate: the court must first appoint a personal representative, who then sells it, usually with nonintervention powers and no further court order. In Washington State, probate is required when a person dies owning property solely in their own name — with no co-owner, no beneficiary designation, and no trust holding title.
+              A probate sale occurs when real property is part of a deceased person's estate and is sold through probate: the court must first appoint a personal representative, who then sells it, usually with nonintervention powers and no further court order. In Washington State, probate is usually required when a person dies owning property solely in their own name — with no co-owner, no beneficiary designation, and no trust holding title. One exception: spouses with a community property agreement can pass community property to the survivor without probate (RCW 26.16.120).
             </p>
             <ul className="space-y-3">
               {probateBullets.map((b) => (
