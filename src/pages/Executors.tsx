@@ -22,7 +22,7 @@ const roles = [
     image: executorImg,
     alt: "Executor reviewing estate documents at a desk",
     description:
-      "An executor — called a Personal Representative in Washington — is named in a will or appointed by the court to manage a deceased person's estate, including securing and eventually selling real property.",
+      "An executor (called a Personal Representative in Washington) is named in a will or appointed by the court to manage a deceased person's estate, including securing and eventually selling real property.",
     responsibilities: [
       "Secure and inventory estate assets, including real property",
       "Obtain court authority (Letters Testamentary)",
@@ -37,7 +37,7 @@ const roles = [
     image: poaImg,
     alt: "Power of attorney document with pen and estate planning book",
     description:
-      "A Power of Attorney lets one person (the agent) make decisions — including real estate decisions — on behalf of another person (the principal) who can no longer manage their own affairs.",
+      "A Power of Attorney lets one person (the agent) make decisions, including real estate decisions, on behalf of another person (the principal) who can no longer manage their own affairs.",
     responsibilities: [
       "Make financial and legal decisions on the principal's behalf",
       "Manage, maintain, or sell the principal's real property",
@@ -52,7 +52,7 @@ const roles = [
     image: trusteeImg,
     alt: "Trustee meeting with beneficiaries outside a family home",
     description:
-      "A trustee manages assets held in a trust — including real property — on behalf of the trust's beneficiaries, outside of court supervision.",
+      "A trustee manages assets held in a trust, including real property, on behalf of the trust's beneficiaries and outside of court supervision.",
     responsibilities: [
       "Administer trust assets according to the trust document",
       "Manage, maintain, and sell trust-owned real property",
@@ -77,7 +77,7 @@ const Executors = () => (
 
       <DirectAnswerBlock
         question="What does an executor need to know about handling real estate in Washington State?"
-        answer="An executor — legally called a Personal Representative — must secure the property, obtain court authority, arrange a date-of-death appraisal, and manage the sale carefully to protect both the estate and themselves from later disputes."
+        answer="An executor, legally called a Personal Representative, must secure the property, obtain court authority, arrange a date-of-death appraisal, and manage the sale carefully to protect both the estate and themselves from later disputes."
         supportSteps={[
           { label: "Executor", desc: "Named in a will or appointed by the court to administer the estate." },
           { label: "Power of Attorney", desc: "Acts on behalf of a living person, often before probate begins." },
@@ -89,8 +89,8 @@ const Executors = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              When someone is named to manage another person's property — whether through a will, a legal document, or a
-              trust — they take on a fiduciary role with real responsibilities. This page explains the three most common
+              Anyone named to manage another person's property through a will, a power of attorney or a trust takes on a
+              fiduciary role with real responsibilities. This page explains the three most common
               roles and links to detailed guidance for each.
             </p>
           </div>
@@ -279,12 +279,12 @@ const Executors = () => (
           {
             question: "What is a Personal Representative in Washington State?",
             answer:
-              "Personal Representative is Washington's legal term for what many people call an executor — the person named in a will, or appointed by the court, to administer a deceased person's estate. The role carries a fiduciary duty to act in the best interests of the estate and its beneficiaries, and it's governed by the Washington Probate Act (RCW Title 11).",
+              "Personal Representative is Washington's legal term for what many people call an executor: the person named in a will, or appointed by the court, to administer a deceased person's estate. The role carries a fiduciary duty to act in the best interests of the estate and its beneficiaries, and it's governed by the Washington Probate Act (RCW Title 11).",
           },
           {
             question: "Does an executor need court approval to sell a house in Washington?",
             answer:
-              "Washington allows non-intervention powers, which let most executors act — including selling estate real estate — without seeking separate court approval for each transaction, once that authority has been formally granted by the court. Confirm your specific authority with a probate attorney, since not every estate qualifies.",
+              "Washington allows nonintervention powers, which let most executors act, including selling estate real estate, without separate court approval for each transaction once the court has formally granted that authority. Confirm your specific authority with a probate attorney, since not every estate qualifies: under RCW 11.68.011, nonintervention powers go to the personal representative of a solvent estate.",
           },
           {
             question: "What is a date-of-death appraisal, and why does an executor need one?",
@@ -299,7 +299,7 @@ const Executors = () => (
           {
             question: "What's the biggest mistake executors make with estate real estate?",
             answer:
-              "Skipping the date-of-death appraisal and relying on an online estimate instead. Without an independent, certified valuation, an executor has little defense if a beneficiary later claims the property was sold below market value — and that gap in documentation is one of the most common sources of executor liability.",
+              "Skipping the date-of-death appraisal and relying on an online estimate instead. Without an independent, certified valuation, an executor has little defense if a beneficiary later claims the property was sold below market value, and that gap in documentation is a common source of executor liability.",
           },
         ]}
       />
