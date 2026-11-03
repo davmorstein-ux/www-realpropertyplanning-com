@@ -39,10 +39,9 @@ const CPAsFinancialAdvisors = () => (
               The Role of CPAs & Financial Advisors
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-              CPAs and financial advisors play a critical role in estate and inherited property situations — advising on
-              estate tax obligations, capital gains considerations, stepped-up basis calculations, and the financial
-              implications of holding versus selling property. Their guidance helps families and fiduciaries make
-              informed decisions.
+              CPAs and financial advisors handle the tax and financial side of estate and inherited property. They advise
+              families and fiduciaries on estate tax obligations, capital gains considerations, stepped-up basis
+              calculations, and the financial implications of holding versus selling property.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
               {FEATURED_BROKER.Role} works with CPAs and financial advisors to provide property-specific market data and{" "}

@@ -26,7 +26,7 @@ import RppArrow from "@/components/RppArrow";
 const faqs = [
   {
     q: "Can we list the house before Letters Testamentary are issued?",
-    a: `No — a title company will not close a sale without proper documentation of legal authority. However ${FEATURED_BROKER.role} can begin assessment and preparation work before authority is formally granted.`,
+    a: `No. A title company will not close a sale without proper documentation of legal authority. ${FEATURED_BROKER.Role} can begin assessment and preparation work before authority is formally granted.`,
   },
   {
     q: "How long does it take to get Letters Testamentary in Washington?",
@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "What if the personal representative lives out of state?",
-    a: `Out-of-state personal representatives can manage the entire process remotely. ${FEATURED_BROKER.Role} provides photo updates, digital document signing, and regular communication so the representative never has to travel to supervise the property.`,
+    a: `An out-of-state personal representative can usually handle the sale remotely. ${FEATURED_BROKER.Role} offers photo updates, digital document signing, and regular communication, so the representative does not need to travel to supervise the property.`,
   },
   {
     q: "Can a beneficiary sell the property if there is no will?",
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: "What happens if someone sells estate property without authority?",
-    a: "This can create serious legal liability for the unauthorized party and may cloud the property's title — causing significant delays and legal costs to resolve.",
+    a: "This can create serious legal liability for the unauthorized party and may cloud the property's title, which can take significant time and legal cost to resolve.",
   },
 ];
 
@@ -56,15 +56,15 @@ const nonSupervisedActions = [
 const otherAuthorityCards = [
   {
     title: "Trustee",
-    body: "If the property is held in a trust, the trustee — not a personal representative — has authority to sell. Trust sales operate outside of probate entirely.",
+    body: "If the property is held in a trust, the trustee (not a personal representative) has authority to sell. Trust sales operate outside of probate entirely.",
   },
   {
     title: "Power of Attorney",
-    body: "A power of attorney grants authority to act on behalf of a living person — it terminates at death. A power of attorney cannot authorize the sale of a deceased person's property.",
+    body: "A power of attorney grants authority to act on behalf of a living person. It terminates at death. A power of attorney cannot authorize the sale of a deceased person's property.",
   },
   {
     title: "Co-owner",
-    body: "If the property was owned jointly with right of survivorship, the surviving co-owner may have authority to sell — but this depends on how title was held and whether probate is still required for the deceased's share.",
+    body: "If the property was owned jointly with right of survivorship, the surviving co-owner may have authority to sell, but this depends on how title was held and whether probate is still required for the deceased's share.",
   },
 ];
 
@@ -125,10 +125,10 @@ const WhoHasAuthoritySellProbateProperty = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">Why Authority Matters Before Anything Else</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              One of the most common and costly mistakes families make is taking action on a probate property before the right person has legal authority to do so. Listing a home, accepting an offer, or even making repairs without proper authority can create legal liability and delay the entire estate process.
+              Nobody should act on a probate property until the right person has legal authority to do so. Listing a home, accepting an offer, or even making repairs without proper authority can create legal liability and delay the entire estate process.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Understanding who has authority — and when that authority is in place — is the first step before any real estate professional can legitimately act on an estate property.
+              Before any real estate professional can legitimately act on an estate property, you need to know who has authority and when that authority takes effect.
             </p>
           </div>
         </div>
@@ -138,21 +138,21 @@ const WhoHasAuthoritySellProbateProperty = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">The Personal Representative — Washington's Term for Executor</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">The Personal Representative: Washington's Term for Executor</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              In Washington State, the person with authority to manage and sell estate real property is called the personal representative — commonly known as an executor in other states.
+              In Washington State, the person with authority to manage and sell estate real property is called the personal representative, commonly known as an executor in other states.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
                 <h3 className="font-serif text-xl text-foreground font-semibold mb-3">Named in the will</h3>
                 <p className="text-base text-foreground/85 leading-relaxed">
-                  If the deceased left a valid will, it typically names a personal representative. That person must still petition the court to be formally appointed — being named in the will alone does not grant legal authority.
+                  If the deceased left a valid will, it typically names a personal representative. That person must still petition the court to be formally appointed. Being named in the will alone does not grant legal authority.
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
                 <h3 className="font-serif text-xl text-foreground font-semibold mb-3">Appointed by the court</h3>
                 <p className="text-base text-foreground/85 leading-relaxed">
-                  If there is no will — called dying intestate — or if the named personal representative is unable or unwilling to serve, the court appoints an administrator to fulfill the same role.
+                  If there is no will (called dying intestate), or if the named personal representative is unable or unwilling to serve, the court appoints an administrator to fulfill the same role.
                 </p>
               </div>
             </div>
@@ -167,10 +167,10 @@ const WhoHasAuthoritySellProbateProperty = () => (
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">What Are Letters Testamentary?</h2>
             <div className="rounded-lg border-l-4 border-primary bg-secondary p-6 md:p-8 shadow-sm space-y-5">
               <p className="text-base md:text-lg text-foreground leading-relaxed">
-                <span className="font-semibold">Letters Testamentary</span> is the court-issued document that formally grants the personal representative legal authority to act on behalf of the estate — including the authority to list, sell, and transfer real property.
+                <span className="font-semibold">Letters Testamentary</span> is the court-issued document that formally grants the personal representative legal authority to act on behalf of the estate, including the authority to list, sell, and transfer real property.
               </p>
               <p className="text-base md:text-lg text-foreground leading-relaxed">
-                Without Letters Testamentary, no real estate professional can legally close a sale on estate property. Title companies require this documentation before they will insure the transaction.
+                When the estate goes through probate, without Letters Testamentary (or Letters of Administration) no real estate professional can legally close a sale on estate property. Title companies require this documentation before they will insure the transaction.
               </p>
               <p className="text-base md:text-lg text-foreground leading-relaxed">
                 A similar document called <span className="font-semibold">Letters of Administration</span> is issued when there is no will and the court appoints an administrator instead.
@@ -187,7 +187,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Washington's Non-Supervised Probate Advantage</h2>
             <div className="rounded-lg border-2 border-gold bg-background p-6 md:p-8 shadow-sm">
               <p className="text-base md:text-lg text-foreground leading-relaxed mb-5">
-                Washington State operates under <span className="font-semibold">non-supervised probate</span> — also known as independent administration. Under this system, the personal representative can:
+                Most Washington estates use <span className="font-semibold">non-supervised probate</span>, also known as independent administration. When the court grants nonintervention powers (available to the personal representative of a solvent estate under RCW 11.68.011), the personal representative can:
               </p>
               <ul className="space-y-3 mb-5">
                 {nonSupervisedActions.map((b) => (
@@ -200,7 +200,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
                 ))}
               </ul>
               <p className="text-base md:text-lg text-foreground leading-relaxed">
-                This means the sale can proceed on a normal market timeline rather than waiting months for court hearings. However, the personal representative must still act within their fiduciary duty — pricing decisions must be defensible and all actions must serve the best interests of the estate and its beneficiaries.
+                The sale can therefore proceed on a normal market timeline rather than waiting months for court hearings. The personal representative must still act within their fiduciary duty: pricing decisions must be defensible and all actions must serve the best interests of the estate and its beneficiaries.
               </p>
             </div>
           </div>
@@ -230,10 +230,10 @@ const WhoHasAuthoritySellProbateProperty = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How {FEATURED_BROKER.roleTitle} Works Within This Framework</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.Role} regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. {FEATURED_BROKER.pronoun.Subject} understands exactly what documentation is required before a sale can proceed — and {FEATURED_BROKER.pronoun.subject} coordinates directly with legal counsel to ensure every step is properly authorized.
+              {FEATURED_BROKER.Role} regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. {FEATURED_BROKER.pronoun.Subject} knows what documentation is usually required before a sale can proceed, and {FEATURED_BROKER.pronoun.subject} coordinates with legal counsel so that each step is properly authorized.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.Role} can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.
+              {FEATURED_BROKER.Role} can begin working with the family before Letters Testamentary are issued: assessing the property, developing a pricing strategy, and coordinating preparation so the property is ready once legal authority is in place.
             </p>
             <AffiliationBadgeGrid />
           </div>

@@ -79,16 +79,16 @@ const pathways: Pathway[] = [
 ];
 
 const challenges = [
-  { title: "Emotional attachment to the home", body: "Decades of memories make change feel like loss. This is normal and worth honoring." },
+  { title: "Emotional attachment to the home", body: "Decades of memories can make a move feel like a loss. That reaction is normal." },
   { title: "Fear of losing independence", body: "Most resistance is really about control. Including the senior in decisions helps." },
   { title: "Family disagreements", body: "Siblings often see the same situation differently. Neutral information usually helps." },
-  { title: "Caregiver burnout", body: "Caregiving is invisible work. Recognizing the strain early prevents crisis." },
+  { title: "Caregiver burnout", body: "Caregiving is invisible work. Recognizing the strain early can prevent a crisis." },
   { title: "Financial stress", body: "Costs are often unclear at first. A financial advisor can help map realistic options." },
   { title: "Safety concerns", body: "Falls, medications, and isolation are common signals worth taking seriously." },
   { title: "Resistance to change", body: "Slowing down, listening, and giving choices typically softens resistance." },
-  { title: "Decision fatigue", body: "Too many choices at once paralyze families. One step at a time is enough." },
+  { title: "Decision fatigue", body: "Too many choices at once can stall a family. Taking decisions one at a time helps." },
   { title: "Timing pressure", body: "Hospital stays and safety events compress timelines. Preparation reduces panic." },
-  { title: "Feeling unprepared", body: "Most families have never done this before. You are not behind — you are starting." },
+  { title: "Feeling unprepared", body: "Most families are doing this for the first time. Learning the basics first is a reasonable place to start." },
 ];
 
 const considerations = [
@@ -117,7 +117,7 @@ const faqs = [
   {
     question: "What if a parent refuses help?",
     answer:
-      "Resistance is common and usually about loss of control. Listening, including the senior in decisions, and introducing changes gradually often eases the path forward.",
+      "Resistance is common and usually about loss of control. Listening, including the senior in decisions, and introducing changes gradually often help.",
   },
   {
     question: "How do housing decisions affect the home?",
@@ -147,12 +147,12 @@ const faqs = [
   {
     question: "What if everything feels overwhelming?",
     answer:
-      "That's normal. The site is built so you can take one calm step at a time. Read what's relevant, skip what isn't, and reach out when you're ready for a no-pressure conversation.",
+      "Start with the decision that is most urgent. The site is organized so you can read what applies to you and skip the rest, and you can get in touch when you want to talk it through.",
   },
 ];
 
 const continueJourney = [
-  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
+  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A practical guide to organizing and moving.", icon: iconHeartHands },
   { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
   { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconDocument },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
@@ -163,7 +163,7 @@ const nextSteps = [
   "Explore available housing, caregiving, and support options",
   "Discuss property, financial, and legal considerations",
   "Build a support team",
-  "Make informed decisions one step at a time",
+  "Make decisions one at a time, with the facts in hand",
 ];
 
 const jsonLd = articleSchema({
@@ -196,7 +196,7 @@ const UnderstandingSeniorTransitions = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              A guided roadmap for families and seniors navigating housing changes, caregiving concerns, downsizing, emotional decisions, property questions, and major life transitions.
+              This guide sets out the decisions that tend to come together when an older adult's living situation changes: housing, caregiving, downsizing, the family home and property questions, and the emotional side of each.
             </p>
             </div>
           </div>
@@ -207,7 +207,7 @@ const UnderstandingSeniorTransitions = () => {
           items={[
             "A move or downsizing is being considered",
             "A senior in your family needs more support",
-            "You want to plan a transition gently and calmly",
+            "You want to plan a transition without rushing it",
             "You are juggling housing, care, and the family home",
             "You are unsure what order to handle things in"
           ]}
@@ -219,15 +219,13 @@ const UnderstandingSeniorTransitions = () => {
             <div className="max-w-3xl mx-auto text-center">
               <HeartHandshake className="w-10 h-10 text-gold mx-auto mb-5" aria-hidden="true" />
               <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-4">
-                Transitions Can Feel Overwhelming
+                Several Decisions at Once
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed">
-                Major transitions later in life often involve emotional, financial,
-                family, housing, caregiving, and property-related decisions happening
-                at the same time. Many families feel overwhelmed, uncertain, or
-                unprepared for the number of decisions involved. This guide is
-                designed to help simplify the process and provide a calmer path
-                forward.
+                Major transitions later in life often bring emotional, financial,
+                family, housing, caregiving, and property decisions at the same
+                time, and few families have faced that many at once. This guide
+                separates them so they can be taken in order.
               </p>
             </div>
           </div>
@@ -297,13 +295,13 @@ const UnderstandingSeniorTransitions = () => {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  You Are Not Alone
+                  The Hard Parts
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Common Challenges Families Face
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what's hard often makes it easier to move forward.
+                  Each of these is common, and each has a practical first step.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -332,12 +330,12 @@ const UnderstandingSeniorTransitions = () => {
                   Educational Compass
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Many Families Do Not Know What Questions to Ask
+                  Questions Families Often Don't Know to Ask
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
                   Most people don't initially know how housing decisions connect to
                   property decisions, what legal planning may be needed, how
-                  caregiving impacts families emotionally, how quickly situations
+                  caregiving affects families emotionally, how quickly situations
                   may change, or which professionals may help guide the process.
                 </p>
               </div>
@@ -381,11 +379,10 @@ const UnderstandingSeniorTransitions = () => {
                   Keep Going
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
+                  Related Guides
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families navigating senior transitions often continue exploring
-                  these next steps.
+                  These guides go further into the next decisions.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -421,7 +418,7 @@ const UnderstandingSeniorTransitions = () => {
                   Simple Next Steps
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
+                  A Clear Action Plan
                 </h2>
               </div>
               <ol className="space-y-4">
@@ -459,7 +456,7 @@ const UnderstandingSeniorTransitions = () => {
 
         <IntentCTA
           heading="Working through a housing move for yourself or a parent?"
-          body="The home is usually the biggest piece of the plan — what it is worth, whether to sell before or after the move, and how the proceeds fit the cost of care. Talk through the housing and property options."
+          body="The home is usually the biggest piece of the plan: what it is worth, whether to sell before or after the move, and how the proceeds fit the cost of care. Talk through the housing and property options."
           buttonText="Talk through the housing and property options"
           reason="aging-parent"
           professional="broker"
