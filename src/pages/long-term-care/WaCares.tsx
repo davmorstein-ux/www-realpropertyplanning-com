@@ -90,7 +90,7 @@ const WaCares = () => {
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li className={pClass + " mt-0"}>In-home personal care</li>
-              <li className={pClass + " mt-0"}>Home health aides</li>
+              <li className={pClass + " mt-0"}>Professional nursing services</li>
               <li className={pClass + " mt-0"}>Adult Family Homes</li>
               <li className={pClass + " mt-0"}>Assisted living communities</li>
               <li className={pClass + " mt-0"}>Memory care</li>
@@ -100,7 +100,7 @@ const WaCares = () => {
               <li className={pClass + " mt-0"}>Transportation services</li>
               <li className={pClass + " mt-0"}>Meal delivery</li>
               <li className={pClass + " mt-0"}>Respite care</li>
-              <li className={pClass + " mt-0"}>Support for family caregivers</li>
+              <li className={pClass + " mt-0"}>Education and consultation for family caregivers</li>
             </ul>
             <p className={pClass}>
               One of the biggest advantages of WA Cares is flexibility. It may help people stay in their homes longer
@@ -113,8 +113,9 @@ const WaCares = () => {
             <p className={pClass}>Eligibility generally has two parts.</p>
             <p className={pClass}>
               First, a person must meet the program&apos;s contribution requirements. There are three ways to qualify:
-              contributing for 10 years without a break of five or more consecutive years; contributing for 3 of the
-              last 6 years; or, for people born before 1968, partial benefits after at least one year of contributions.
+              contributing for a total of 10 years; contributing for 3 of the last 6 years; or, for people born before
+              January 1, 1968, at least one year of contributions, which earns 10% of the full benefit for each year
+              contributed. A year counts only if you worked at least 500 hours in it.
             </p>
             <p className={pClass}>
               Second, a person must need help with three or more activities of daily living, such as bathing, dressing,
@@ -123,9 +124,10 @@ const WaCares = () => {
             <p className={pClass}>A formal assessment is used to determine benefit eligibility.</p>
             <p className={pClass}>
               People who move out of Washington can choose to keep their coverage if they have contributed for at least
-              three years and opt in within one year of moving; out-of-state benefits begin in July 2030. Starting in
-              January 2026, veterans with a service-connected disability rating of 70% or more and spouses of
-              active-duty service members can apply for an exemption from the premium. Details are at{" "}
+              three years and opt in within one year of moving; out-of-state benefits begin in July 2030. Veterans with a
+              service-connected disability rating of 70% or more, and spouses or registered domestic partners of
+              active-duty service members, can apply for an exemption from the premium (available since 2023); since
+              January 2026, active-duty members with civilian jobs and most visa holders are exempt automatically. Details are at{" "}
               <a
                 href="https://wacaresfund.wa.gov/"
                 className={inlineLink}
