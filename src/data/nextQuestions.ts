@@ -109,7 +109,7 @@ const Q = {
   },
   estateRecovery: {
     title: "Can the state claim the house after death?",
-    description: "Medicaid estate recovery in Washington, when it is deferred, and hardship waivers.",
+    description: "Medicaid estate recovery in Washington, when it is deferred, and hardship delays.",
     href: "/long-term-care/medicaid-and-the-family-home",
     image: { src: "/q-estateRecovery-v1.webp", w: 440, h: 430 },
   },
