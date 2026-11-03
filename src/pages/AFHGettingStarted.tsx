@@ -30,7 +30,7 @@ const REALITY_CHECKS = [
   },
   {
     q: "Do you have the financial runway?",
-    a: "Building modifications, training, insurance, and licensing are paid for before any revenue begins, and applicants must show proof of financial solvency (RCW 70.128.120). DSHS posts its current processing timeline: in late September 2026 it was working on applications received in May 2026, and review can take up to 60 days once an application is complete. Most applicants do not pass the first licensing inspection.",
+    a: "Building modifications, training, insurance, and licensing are paid for before any revenue begins, and applicants must show proof of financial solvency (RCW 70.128.120). DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), and review can take up to 60 days once an application is complete. Most applicants do not pass the first licensing inspection.",
   },
   {
     q: "Do you have caregiving experience?",
@@ -713,7 +713,7 @@ const AFHGettingStarted = () => (
                 step: "5",
                 title: "Submit your application to DSHS",
                 detail:
-                  "Apply online at the DSHS BAAU portal. Allow significant time: DSHS posts its current processing timeline, which in late September 2026 showed applications received in May 2026 being processed and up to 60 days once an application is complete. A licensing inspection is required, most applicants need more than one, and DSHS makes up to three visits. Contact baau@dshs.wa.gov for application questions.",
+                  "Apply online at the DSHS BAAU portal. Allow significant time: DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), and review can take up to 60 days once an application is complete. A licensing inspection is required, most applicants need more than one, and DSHS makes up to three visits. Contact baau@dshs.wa.gov for application questions.",
               },
             ].map((item, i) => (
               <div

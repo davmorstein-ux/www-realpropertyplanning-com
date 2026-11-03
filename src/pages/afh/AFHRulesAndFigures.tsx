@@ -88,7 +88,7 @@ const FAQS = [
   {
     question: "How long does it take to license an adult family home?",
     answer:
-      "DSHS does not promise a timeline. It posts its application queue online; in late September 2026 it was working on applications received in May 2026, and it allows up to 60 days once an application is complete. The local building inspection and the DSHS licensing inspection come on top of that.",
+      "DSHS does not promise a timeline. DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), and it allows up to 60 days once an application is complete. The local building inspection and the DSHS licensing inspection come on top of that.",
   },
   {
     question: "How are Washington adult family homes paid?",
@@ -283,8 +283,8 @@ const AFHRulesAndFigures = () => (
             <summary>How long does licensing take?</summary>
             <div>
             <p>
-              DSHS does not promise a timeline. It posts its application queue instead: in late September 2026 it was working on
-              applications received in May 2026, and it allows up to 60 days once an application is complete (
+              DSHS does not promise a timeline. It posts which month's applications it is working on instead (the month changes),
+              and it allows up to 60 days once an application is complete (
               <a className="afhp-link" href={BAAU_QUEUE} target="_blank" rel="noopener noreferrer">DSHS processing timeline</a>). The local
               building inspection must be passed before the home can be licensed. DSHS told AFH Club in writing that once it approves a
               license, it emails the license letter and license to the new provider within a day.

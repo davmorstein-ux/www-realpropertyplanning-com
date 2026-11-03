@@ -299,9 +299,9 @@ const AFHBuyingSelling = () => (
             }}
           >
             A CHOW buyer files a full license application. DSHS will not estimate how long a change-of-ownership license
-            takes; a complete application avoids delays. Its posted queue showed applications received in May 2026
-            being processed in late September 2026, and once an application is complete, processing can take up to 60
-            days.
+            takes; a complete application avoids delays. DSHS posts which month's applications it is working on (the month
+            changes, so check its processing timeline page), and once an application is complete, processing can take up
+            to 60 days.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {CHOW_STEPS.map((item, i) => (
