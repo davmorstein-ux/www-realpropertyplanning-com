@@ -66,11 +66,11 @@ const WillsTrustsOtherOptions = () => {
             <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
             <ArticleCover src="/Wills_Trusts_Other_Options.webp" alt="Cover art: Wills, Trusts & Other Options" width={1086} height={1448} />
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.75, color: "hsl(220 35% 18%)", marginBottom: 32, borderLeft: "4px solid #6b84ad", paddingLeft: 20 }}>
-              A house is never just a house. It is memory, leverage, shelter, status, and, for many families, the largest piece of wealth they will ever hand down. So when the time comes to decide how that property should move to the next generation, the question is not only legal. It is emotional, financial, and surprisingly personal.
+              The way a parent passes a house to their children decides how long the transfer takes, what it costs, who controls the property and what the children owe in tax if they sell. The house is often the largest asset a family hands down, so the choice is financial and personal as well as legal.
             </p>
 
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              Some parents want simplicity. Others want control. Some want privacy. And nearly everyone wants to avoid making life harder for their children. The trouble is that real estate does not transfer itself cleanly just because everyone agrees on the sentimental part. The method matters, and the method shapes everything that follows.
+              Some parents want simplicity, others want control or privacy, and nearly all want to avoid making life harder for their children. Agreeing on who should get the house does not transfer it. The legal method does, and each method shapes what follows.
             </p>
 
             {/* Section: Will */}
@@ -78,13 +78,13 @@ const WillsTrustsOtherOptions = () => {
               The familiar route: a will
             </h3>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              For generations, the will has been the default answer. It is clear, familiar, and easy to understand. You name the child or children, you describe what should happen, and in theory the matter is settled.
+              The will is the familiar default. It is clear and easy to understand: you name the child or children, describe what should happen to the house, and in theory that settles it.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              But a will has a catch that many families do not fully appreciate: it usually leads to probate. That means court involvement, public records, delay, and added cost. For a family that wants a smooth handoff, probate can feel like a bureaucratic insult layered on top of grief.
+              The catch is that a will usually leads to probate. That means court involvement, public records, delay, and added cost, all at a time when the family is grieving.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              A will still has its place. For some estates, it is enough. But when the home is the main asset, and when the family would rather not invite the courthouse into the story, a will can feel like the simplest answer to the wrong question.
+              For some estates, a will is enough. But when the home is the main asset and the family would rather keep the transfer out of court, a will alone may not do what they want.
             </p>
 
             {/* Section: Trust */}
@@ -92,13 +92,13 @@ const WillsTrustsOtherOptions = () => {
               The cleaner handoff: a trust
             </h3>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              This is where the revocable living trust enters the conversation. A trust can let real estate pass outside probate, which means more privacy, more flexibility, and less waiting around for a court to say what the family already knows.
+              A revocable living trust can let real estate pass outside probate, which means more privacy, more flexibility, and less waiting on a court.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              That makes a trust especially useful when the goal is not only to transfer property, but to control the terms of the transfer. Maybe a child should not receive the property outright until later. Maybe the home should be held for a time. Maybe one heir needs more structure than another. A trust can handle those details with far more grace than a will.
+              A trust is especially useful when the owner wants to set the terms of the transfer as well as make it. A child might receive the property outright only later, the home might be held for a time, or one heir might need more structure than another. A trust can handle those details far better than a will.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              But it asks something of the owner in return. The property must actually be moved into the trust — not merely discussed, drafted, or intended. If that step is skipped, the elegant plan can collapse into the same probate process everyone was trying to avoid.
+              It asks something of the owner in return: the property must actually be moved into the trust, not merely discussed, drafted, or intended. If that step is skipped, the house can end up in the probate process the trust was meant to avoid.
             </p>
 
             {/* Section: Gifting */}
@@ -106,16 +106,16 @@ const WillsTrustsOtherOptions = () => {
               The risky generosity of gifting early
             </h3>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Some parents look at the whole system and decide the answer is to give the house away while they are still alive. It sounds decisive. It sounds generous. It sounds, at first glance, like a way to eliminate uncertainty.
+              Some parents decide to give the house to their children while they are still alive, expecting a gift to be simple, generous and final.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
               Often it is none of those things.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Once real estate is gifted, the parent may lose control. The child's creditors, divorce, or financial trouble can suddenly become relevant to the family home. Tax consequences can also follow: a child who receives the house as a gift takes over the parent's original tax basis (a "carryover" basis), rather than the stepped-up basis an heir receives at death, so a later sale can mean a much larger capital gains bill. And a gift made within five years (60 months) before the parent applies for Medicaid long-term care can cause a penalty period without coverage. What looks like a clean transfer can become a long and expensive headache.
+              Once real estate is gifted, the parent may lose control. The child's creditors, divorce, or financial trouble can become a risk to the family home. Tax consequences can also follow: a child who receives the house as a gift takes over the parent's original tax basis (a "carryover" basis), rather than the stepped-up basis an heir receives at death, so a later sale can mean a much larger capital gains bill. And a gift made within five years (60 months) before the parent applies for Medicaid long-term care can cause a penalty period without coverage. A transfer meant to be simple can turn out slow and expensive.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              There are moments when lifetime gifting makes sense. But for most families, it is a move that should be treated with caution, not enthusiasm.
+              Lifetime gifting sometimes makes sense, but for most families it calls for caution.
             </p>
 
             {/* Section: Washington tools */}
@@ -123,13 +123,13 @@ const WillsTrustsOtherOptions = () => {
               Washington's practical shortcut
             </h3>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Washington homeowners have another tool worth knowing: the transfer on death deed (chapter 64.80 RCW). It is a fairly direct way to name who should receive the property after death, without sending the house through probate. It must be recorded with the county auditor before the owner's death, and it takes the same mental capacity as making a will. For a single residence, or a straightforward plan, it can be a smart and efficient option.
+              Washington homeowners have another option: the transfer on death deed (chapter 64.80 RCW). It names who should receive the property at the owner's death, without sending the house through probate. It must be recorded with the county auditor before the owner's death, and it takes the same mental capacity as making a will. For a single residence or a straightforward plan, it can be an efficient choice.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Still, it is not a full estate plan disguised as paperwork. It does not do everything a trust can do, and it does not resolve every family dynamic or incapacity issue. The property can still be reached by the owner's creditors and by Medicaid estate recovery. Married couples have a related Washington tool, the community property agreement, which can pass property to the surviving spouse without probate. It is useful, yes. But useful is not the same thing as complete.
+              It is not a full estate plan. It does not do everything a trust can do, and it does not resolve every family conflict or incapacity issue. The property can still be reached by the owner's creditors and by Medicaid estate recovery. Married couples have a related Washington tool, the community property agreement, which can pass property to the surviving spouse without probate. A transfer on death deed is useful, but it is not a complete plan.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              Joint ownership with right of survivorship is another path people sometimes try, often because it feels easy. The problem is that easy can be deceptive. Adding a child to title may seem like a shortcut, but it is a gift: it can create tax complications (the added share gets no step-up at death), ownership issues, unintended exposure to that child's personal financial life, and a Medicaid penalty if done within five years before applying for long-term care.
+              Joint ownership with right of survivorship is another route people try because it seems easy. Adding a child to title is a gift: it can create tax complications (the added share gets no step-up at death), ownership issues, exposure to that child's personal finances, and a Medicaid penalty if done within five years before applying for long-term care.
             </p>
 
             {/* Section: The forgotten question */}
@@ -140,10 +140,10 @@ const WillsTrustsOtherOptions = () => {
               Most people ask, <em>"Who gets the house?"</em>
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              That is a fair question. It is not the whole question.
+              That is a fair question, but it leaves out what comes after.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              The better question is what happens next. Will the children keep the home, rent it, sell it, or fight over it? Will one child want cash while another wants sentiment? Will the plan preserve value or quietly create resentment? A transfer that looks clean on paper can still produce a mess in real life if the family has not talked through the consequences. That is why the best estate plan is rarely just about legal mechanics. It is about anticipating human behavior, which is always more complicated than the deed itself.
+              The more useful question is what happens next: whether the children will keep the home, rent it, sell it, or fight over it, and whether one child wants cash while another wants to keep the house. A transfer that looks clean on paper can still cause conflict if the family has not talked through the consequences. A sound estate plan covers how the family is likely to act, not only the legal mechanics.
             </p>
 
             {/* Section: Decision */}
@@ -151,15 +151,15 @@ const WillsTrustsOtherOptions = () => {
               The decision that matters
             </h3>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              There is no universal winner. A will may be enough for a simple estate. A trust may be the better answer when privacy and control matter. A transfer on death deed may suit a Washington homeowner with a clear plan. Gifting may be appropriate in rare cases, though it carries the most risk. Joint ownership can be useful, but only when handled with eyes open.
+              There is no universal winner. A will may be enough for a simple estate. A trust may be the better answer when privacy and control matter. A transfer on death deed may suit a Washington homeowner with a clear plan. Gifting may be appropriate in rare cases, though it carries the most risk. Joint ownership can be useful, but only when the risks above are understood.
             </p>
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              The right choice is the one that fits the property, the family, and the life behind both. The goal is not simply to pass down a house. It is to pass it down without creating a second burden for the people who inherit it.
+              The best method is the one that fits the property and the family. The aim is to pass the house down without leaving the people who inherit it a second problem to solve.
             </p>
 
             {/* Closing pull quote */}
             <blockquote style={{ borderLeft: "4px solid #6b84ad", paddingLeft: 20, margin: "40px 0", fontStyle: "italic", fontSize: 20, lineHeight: 1.7, color: "hsl(220 35% 18%)", fontFamily: "'DM Sans', 'DM Sans Fallback', serif" }}>
-              "Good estate planning is not a final gesture. It is a well-made transition."
+              "Plan the transfer, and plan for what the family will do with the house afterward."
             </blockquote>
 
           </div>

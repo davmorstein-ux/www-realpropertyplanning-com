@@ -62,67 +62,64 @@ const CcrcCosts = () => {
               <ArticleCover src="/CCRC_Costs.webp" alt="Cover art: CCRC Costs" width={930} height={1240} />
               <h2 className={h2Class + " mt-0"}>CCRC Costs: What You're Really Buying</h2>
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
-                Continuing care retirement communities are expensive. Here's why some families consider them the smartest financial decision they ever made — and why others don't.
+                An entrance fee, a monthly fee and a contract type that decides how future care is paid for.
               </p>
               <hr className={hrClass} />
 
               <p className={leadClass}>
-                The first time most people hear the entrance fee for a continuing care retirement community, they go quiet.
+                A continuing care retirement community (CCRC) charges a one-time entrance fee plus a monthly fee, and in return offers independent living, assisted living and skilled nursing on one campus.
               </p>
               <p className={pClass}>
-                It's a number that tends to land hard. Large enough to feel alarming, unfamiliar enough to be difficult to evaluate. Is this reasonable? Is this worth it? What exactly are we paying for?
-              </p>
-              <p className={pClass}>
-                These are the right questions. And the answers, it turns out, depend entirely on what a family values — and how honestly they're willing to think about the future.
+                The entrance fee is usually the figure that stops people, because it is large and hard to compare with anything else. Whether it is worth paying depends on the contract type, the refund terms, and how much the resident values having future care arranged in advance.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>What a CCRC Actually Is</h2>
-              <p className={pClass}>A continuing care retirement community is, at its core, a promise.</p>
+              <p className={pClass}>A continuing care retirement community offers several levels of care on one campus, so a resident can stay as their needs change.</p>
               <p className={pClass}>
-                The promise is this: move in while you're healthy and independent, and we will be here for every stage of what comes after. Independent living today. Assisted living if you need it. Skilled nursing if it comes to that. All on the same campus, with the same staff who know you, without the upheaval of another move.
+                Residents move in while healthy and independent. Independent living comes first, assisted living follows if it is needed, and skilled nursing after that if it comes to it. All of it is on the same campus, with staff who already know the resident, and without another move.
               </p>
               <p className={pClass}>
-                For some older adults — particularly those who have watched a parent or friend go through the disorienting process of moving from one facility to another as their needs escalated — that promise has enormous value. For others, paying a large entrance fee for care they may never need feels like the wrong bet.
+                Some older adults, particularly those who have seen a parent or friend move from one facility to another as their needs grew, value that highly. Others would rather not pay a large entrance fee for care they may never need.
               </p>
               <p className={pClass}>
-                Both perspectives are legitimate. The question is which one reflects your situation.
+                Both views are reasonable; which one applies depends on your situation.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>The Two-Part Cost Structure</h2>
               <p className={pClass}>
-                CCRCs charge in a way that is different from every other senior housing option, which is part of what makes them confusing to evaluate.
+                CCRCs charge differently from other senior housing options, which is part of what makes them hard to evaluate.
               </p>
               <p className={pClass}>
                 <strong>The entrance fee</strong> is a one-time upfront payment, paid when a resident moves in. It can range from modest to very substantial depending on the community, the contract type, and the market. What it buys varies: in some contracts, it secures access to the full continuum of care at no additional charge. In others, it functions more like a deposit, partially or fully refundable under certain conditions.
               </p>
               <p className={pClass}>
-                <strong>The monthly fee</strong> covers ongoing expenses — housing, meals, housekeeping, maintenance, utilities, activities, and typically access to community amenities. Depending on the contract, it may also cover future care needs up to a certain level.
+                <strong>The monthly fee</strong> covers ongoing expenses: housing, meals, housekeeping, maintenance, utilities, activities, and typically access to community amenities. Depending on the contract, it may also cover future care needs up to a certain level.
               </p>
               <p className={pClass}>
-                The combination of these two figures is what makes CCRCs appear expensive at first glance. But the comparison only makes sense when set against the alternative: paying separately for independent living, then assisted living, then memory care or skilled nursing — each transition carrying its own costs, its own disruption, and its own uncertainty.
+                Together these two figures make CCRCs look expensive at first glance. The fair comparison is the alternative: paying separately for independent living, then assisted living, then memory care or skilled nursing, with each move carrying its own costs, disruption and uncertainty.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>The Three Types of CCRC Contracts</h2>
               <p className={pClass}>
-                This is the detail most families don't know to ask about — and it matters more than almost anything else.
+                The contract type decides how future care is paid for, and it is often the detail buyers don't know to ask about.
               </p>
               <p className={pClass}>
-                <strong>Type A — Life Care or Extensive Contract:</strong> The highest entrance fee, but it includes unlimited access to higher levels of care at little or no additional monthly cost. For residents who anticipate needing significant care over time, this can be the most financially protective option.
+                <strong>Type A, Life Care or Extensive Contract:</strong> The highest entrance fee, but it includes unlimited access to higher levels of care at little or no additional monthly cost. For residents who anticipate needing significant care over time, this can be the most financially protective option.
               </p>
               <p className={pClass}>
-                <strong>Type B — Modified Contract:</strong> A mid-range entrance fee with a limited number of days at higher care levels included. After that, care is billed at a discounted rate. A balance between upfront cost and future coverage.
+                <strong>Type B, Modified Contract:</strong> A mid-range entrance fee with a limited number of days at higher care levels included. After that, care is billed at a discounted rate. It balances upfront cost against future coverage.
               </p>
               <p className={pClass}>
-                <strong>Type C — Fee-for-Service Contract:</strong> The lowest entrance fee, but care at higher levels is billed at market rates when needed. Lower initial cost, but more financial exposure if significant care is eventually required.
+                <strong>Type C, Fee-for-Service Contract:</strong> The lowest entrance fee, but care at higher levels is billed at market rates when needed. The initial cost is lower, but the financial exposure is greater if significant care is eventually required.
               </p>
               <p className={pClass}>
-                Understanding which contract a community offers — and what it means in practice for your specific situation — is the single most important piece of CCRC due diligence. A <Link to="/professionals/financial-planners" className={inlineLink}>financial planner</Link> who understands senior housing can help model the long-term cost of each contract type against realistic care scenarios.
+                Knowing which contract a community offers, and what it means in practice for your situation, is the most important part of CCRC due diligence. A <Link to="/professionals/financial-planners" className={inlineLink}>financial planner</Link> who understands senior housing can help model the long-term cost of each contract type against realistic care scenarios.
               </p>
 
               <hr className={hrClass} />
@@ -143,21 +140,21 @@ const CcrcCosts = () => {
                 Depending on the contract type, it may also include a portion of future care costs.
               </p>
               <p className={pClass}>
-                What it often does <em>not</em> include: personal care services beyond what's covered by the contract, medication management, one-on-one attention, specialized therapies, or the cost of a second resident. These need to be understood clearly before a decision is made.
+                What it often does <em>not</em> include: personal care services beyond what's covered by the contract, medication management, one-on-one attention, specialized therapies, or the cost of a second resident. Confirm these before signing.
               </p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>For Couples, the Calculus Is Different</h2>
-              <p className={pClass}>CCRCs were, in many ways, designed with couples in mind.</p>
+              <p className={pClass}>CCRCs suit couples especially well.</p>
               <p className={pClass}>
-                The scenario they address better than any other option: two partners, one of whom is healthy and independent, one of whom is beginning to need more support. In a CCRC, both can remain on the same campus — in the same community, eating in the same dining room, living near each other — even as the level of care one receives increases.
+                They handle one situation better than other options: one partner is healthy and independent and the other is beginning to need more support. In a CCRC, both can stay on the same campus, in the same community and dining room and near each other, even as one partner's level of care increases.
               </p>
               <p className={pClass}>
-                That continuity has a value that is very difficult to put a dollar figure on.
+                That continuity is hard to put a dollar figure on.
               </p>
               <p className={pClass}>
-                What couples need to ask carefully: how does the pricing structure work when one partner transitions to a higher level of care? Does the contract cover both residents equally? What happens to the entrance fee arrangement if one partner passes away?
+                Questions for couples: how does the pricing structure work when one partner transitions to a higher level of care? Does the contract cover both residents equally? What happens to the entrance fee arrangement if one partner passes away?
               </p>
               <p className={pClass}>
                 A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> with CCRC experience can walk couples through these specific scenarios with the communities they're considering.
@@ -167,34 +164,34 @@ const CcrcCosts = () => {
 
               <h2 className={h2Class}>Is the Entrance Fee Refundable?</h2>
               <p className={pClass}>
-                This question trips up many families, and the answer varies widely.
+                It depends on the contract, and the terms vary widely.
               </p>
               <p className={pClass}>
-                Some communities offer a largely refundable entrance fee, returned to the resident or their estate when they leave or pass away — under some contracts only after the unit is re-occupied, so ask about timing. Others offer partial refunds on a declining scale. Others are non-refundable entirely. The refund terms come from the contract itself; Washington law does not require refundable fees to be held in trust.
+                Some communities offer a largely refundable entrance fee, returned to the resident or their estate when they leave or pass away (under some contracts only after the unit is re-occupied, so ask about timing). Others offer partial refunds on a declining scale. Others are non-refundable entirely. The refund terms come from the contract itself; Washington law does not require refundable fees to be held in trust.
               </p>
               <p className={pClass}>
-                The refund policy has significant implications for estate planning and for how families think about the entrance fee. A non-refundable entrance fee is, essentially, a prepayment for future care. A refundable one functions more like a security deposit.
+                The refund policy matters for estate planning and for how to think about the entrance fee. A non-refundable entrance fee is essentially a prepayment for future care. A refundable one works more like a security deposit.
               </p>
               <p className={pClass}>
-                Neither is inherently better. But families need to know which they're signing up for.
+                Neither is inherently better, but know which one you are signing.
               </p>
 
               <hr className={hrClass} />
 
-              <h2 className={h2Class}>When a CCRC Makes Sense — and When It Doesn't</h2>
-              <p className={pClass}>A CCRC tends to be the right choice when:</p>
+              <h2 className={h2Class}>When a CCRC Makes Sense, and When It Doesn't</h2>
+              <p className={pClass}>A CCRC tends to make sense when:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
                 <li>The older adult or couple values long-term certainty above most other considerations</li>
-                <li>There is genuine concern about future care needs and a desire to have them handled without additional decisions</li>
-                <li>The financial resources exist to fund the entrance fee without compromising overall security</li>
-                <li>The person is healthy enough to enter at the independent living level — most CCRCs require this</li>
-                <li>The specific community is a strong fit for lifestyle, location, and culture</li>
+                <li>There is real concern about future care needs and a wish to have them handled without further decisions</li>
+                <li>There is enough money to pay the entrance fee without compromising overall financial security</li>
+                <li>The person is healthy enough to enter at the independent living level (most CCRCs require this)</li>
+                <li>The specific community suits the person's lifestyle, preferred location and culture</li>
               </ul>
-              <p className={pClass}>It tends to be a less compelling choice when:</p>
+              <p className={pClass}>It tends to make less sense when:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>Financial resources are limited and the entrance fee creates meaningful strain</li>
-                <li>The older adult is already at a level of need that would require entering at assisted living rather than independent living</li>
-                <li>Flexibility is more important than certainty — a rental-based community offers more exit options</li>
+                <li>Financial resources are limited and the entrance fee would be a real strain</li>
+                <li>The older adult already needs enough care that they would have to enter at assisted living rather than independent living</li>
+                <li>Flexibility matters more than certainty; a rental-based community offers more exit options</li>
               </ul>
 
               <hr className={hrClass} />
@@ -202,15 +199,15 @@ const CcrcCosts = () => {
               <h2 className={h2Class}>Questions to Ask Before Committing</h2>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
                 <li>What is the entrance fee, and is any portion refundable?</li>
-                <li>What type of contract does this community use — Type A, B, or C?</li>
+                <li>What type of contract does this community use: Type A, B, or C?</li>
                 <li>What is the monthly fee, and what does it include specifically?</li>
-                <li>What triggers a move to a higher level of care — and who decides?</li>
+                <li>What triggers a move to a higher level of care, and who decides?</li>
                 <li>How are monthly fees likely to increase over time?</li>
                 <li>What happens if one spouse needs a higher level of care than the other?</li>
                 <li>What are the financial health indicators of the community itself?</li>
               </ul>
               <p className={pClass}>
-                That last question matters. A CCRC is a long-term financial relationship with an organization. Understanding the financial stability of that organization — its occupancy rates, its reserves, its history of fee increases — is part of due diligence that shouldn't be skipped.
+                The last question matters because a CCRC is a long-term financial relationship with an organization. Check its financial stability (occupancy rates, reserves and history of fee increases) as part of due diligence.
               </p>
               <p className={pClass}>
                 Washington law helps here. A continuing care retirement community must register with the Department of Social and Health Services (DSHS) and must give you its disclosure statement before you sign a residency agreement or pay an entrance fee. That statement includes its two most recent audited financial statements, the current range of each fee, its refund policies, and how much notice it gives before raising fees (<a href="https://lawfilesext.leg.wa.gov/law/RCW/RCW%20%2018%20%20TITLE/RCW%20%2018%20.390%20%20CHAPTER/RCW%20%2018%20.390%20.060.htm" target="_blank" rel="noopener noreferrer" className={inlineLink}>RCW 18.390.060</a>). Registration is not a license or an endorsement: DSHS reviews the application for completeness only (<a href="https://lawfilesext.leg.wa.gov/law/RCW/RCW%20%2018%20%20TITLE/RCW%20%2018%20.390%20%20CHAPTER/RCW%20%2018%20.390%20.040.htm" target="_blank" rel="noopener noreferrer" className={inlineLink}>RCW 18.390.040</a>). Ask for the disclosure statement early and read it alongside the contract.
@@ -220,16 +217,16 @@ const CcrcCosts = () => {
 
               <h2 className={h2Class}>The Bottom Line</h2>
               <p className={pClass}>
-                CCRCs are expensive. They are also, for the right family in the right situation, one of the most thoughtful ways to plan for the later chapters of a long life.
+                CCRCs are expensive. For someone with the means, good health at entry and a strong wish for certainty, they are a way to settle future care in advance.
               </p>
               <p className={pClass}>
-                The entrance fee buys something that has real value: the removal of future uncertainty. The knowledge that wherever this goes, there is a plan already in place, a community already known, a staff already familiar with the person who lives there.
+                What the entrance fee buys is less uncertainty: a plan already in place, a community the resident already knows, and staff already familiar with them if their needs change.
               </p>
               <p className={pClass}>
-                For families who have watched loved ones navigate multiple moves in their final years — each one more disorienting than the last — that removal of uncertainty is not a luxury. It is a profound act of planning.
+                That matters most to people who have seen a relative go through several moves late in life, each harder than the last.
               </p>
               <p className={pClass}>
-                When the time comes to make the move, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate every detail of the transition, making the beginning of this chapter feel as settled and welcoming as the promise behind it.
+                When it is time to move, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate the details of the transition.
               </p>
 
               <hr className={hrClass} />

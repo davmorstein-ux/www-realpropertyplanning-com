@@ -18,7 +18,7 @@ const willsFaqs = [
   {
     question: "Does Real Property Planning write or review wills?",
     answer:
-      `No. ${FEATURED_BROKER.Role} is not an attorney and does not provide legal advice. ${FEATURED_BROKER.pronoun.Subject} focuses exclusively on the real estate side — helping families, executors, and trustees understand property value and navigate the sale or transfer of real property referenced in a will.`,
+      `No. ${FEATURED_BROKER.Role} is not an attorney and does not provide legal advice. ${FEATURED_BROKER.pronoun.Subject} focuses only on the real estate side: helping families, executors, and trustees understand property value and handle the sale or transfer of real property referenced in a will.`,
   },
   {
     question: "Why does a will matter when selling a house?",
@@ -28,12 +28,12 @@ const willsFaqs = [
   {
     question: "What if there is no will?",
     answer:
-      `When someone passes without a will (intestate), Washington State law determines how property is distributed. The probate court appoints a personal representative. ${FEATURED_BROKER.Role} works with families in these situations regularly and can help coordinate with your attorney on the real estate side.`,
+      `When someone dies without a will (intestate), Washington State law determines how property is distributed. The probate court appoints a personal representative. ${FEATURED_BROKER.Role} works with families in these situations regularly and can help coordinate with your attorney on the real estate side.`,
   },
   {
     question: "Can an executor sell a house before probate is complete?",
     answer:
-      `Not before the court appoints the personal representative. Once appointed, the personal representative can sell before probate is closed — with nonintervention powers, usually without further court approval; without them, the sale needs the court's approval. ${FEATURED_BROKER.Role} helps executors understand timing, pricing, and preparation so the property is ready when the time comes.`,
+      `Not before the court appoints the personal representative. Once appointed, the personal representative can sell before probate is closed: with nonintervention powers, usually without further court approval; without them, the sale needs the court's approval. ${FEATURED_BROKER.Role} helps executors understand timing, pricing, and preparation so the property is ready when the time comes.`,
   },
   {
     question: "How does a will affect property valuation?",
@@ -85,9 +85,9 @@ const Wills = () => {
             <div className="container px-6 lg:px-8">
               <div className="max-w-3xl mx-auto">
                 <p className="text-muted-foreground leading-relaxed mb-4" style={{ fontSize: "18px" }}>
-                  A will is one of the most important documents in estate planning — and when real
-                  property is involved, the decisions it guides can shape a family's financial future
-                  for years to come.
+                  A will names who inherits and who should manage the estate. When the estate includes
+                  a house, it guides whether the property is kept, sold or divided, and those decisions
+                  have lasting financial consequences for the family.
                 </p>
                 <button
                   type="button"
@@ -114,8 +114,8 @@ const Wills = () => {
                 What Is a Will?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A will — sometimes called a "last will and testament" — is a legal document that
-                outlines how a person wants their assets distributed after they pass away. It names
+                A will, sometimes called a "last will and testament," is a legal document that
+                sets out how a person wants their assets distributed after they die. It names
                 beneficiaries, designates an executor (or personal representative) to carry out
                 those wishes, and can include specific instructions about property, personal items,
                 guardianship of minor children, and more.
@@ -137,12 +137,12 @@ const Wills = () => {
                 What a Will Does
               </h2>
               <ul className="space-y-4">
-                <CheckItem>Names who inherits specific assets — including real property</CheckItem>
+                <CheckItem>Names who inherits specific assets, including real property</CheckItem>
                 <CheckItem>Designates an executor or personal representative to manage the estate</CheckItem>
                 <CheckItem>Provides instructions for how property should be sold, transferred, or distributed</CheckItem>
                 <CheckItem>Can specify whether a home should be kept in the family or listed for sale</CheckItem>
                 <CheckItem>Establishes a framework that guides the probate court's decisions</CheckItem>
-                <CheckItem>May include conditions — such as a right of first refusal for a family member</CheckItem>
+                <CheckItem>May include conditions, such as a right of first refusal for a family member</CheckItem>
               </ul>
             </div>
           </section>
@@ -154,15 +154,15 @@ const Wills = () => {
                 Why Wills Matter When Real Estate Is Involved
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                For many families, a home is the most valuable asset in the estate. The will
-                determines who has the authority to make decisions about that property — and those
-                decisions carry real financial consequences.
+                The home is often the most valuable asset in an estate. The will determines who has
+                the authority to make decisions about it, and those decisions carry real financial
+                consequences.
               </p>
               <ul className="space-y-4">
                 <CheckItem>The executor named in the will can list and sell estate property only after the court appoints them and issues letters testamentary; property held in a trust, by a recorded transfer on death deed, in joint tenancy with right of survivorship, or under a community property agreement passes outside the will</CheckItem>
                 <CheckItem>Without a will, there is no named executor, so family members must ask the court to appoint a personal representative, and state law, not the person's wishes, decides who inherits</CheckItem>
                 <CheckItem>A will may require an appraisal for equitable distribution among multiple heirs</CheckItem>
-                <CheckItem>Tax obligations — including stepped-up basis calculations — depend on accurate property valuation at the date of death</CheckItem>
+                <CheckItem>Tax obligations, including stepped-up basis calculations, depend on accurate property valuation at the date of death</CheckItem>
                 <CheckItem>Disagreements between heirs about whether to sell or keep a property are more easily resolved when a will provides clear direction</CheckItem>
               </ul>
             </div>
@@ -177,9 +177,8 @@ const Wills = () => {
                 Common Family &amp; Executor Situations
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Most people in these situations didn't plan for this. Whether you're a first-time
-                executor, an heir who lives out of state, or a family trying to figure out what
-                comes next — the real estate side of a will can feel overwhelming.
+                Few executors or heirs expected the role. These are the situations that come up on
+                the real estate side of a will, and what each one involves.
               </p>
               <div className="space-y-6">
                 <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
@@ -187,7 +186,7 @@ const Wills = () => {
                     First-Time Executor
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    You've been named in a will as the executor — but you've never done this before.
+                    You've been named in a will as the executor, but you've never done this before.
                     You're not sure what to do with the house, whether to clean it out, when you can
                     sell, or how to price it. {FEATURED_BROKER.Role} walks executors through the real estate side step by
                     step.
@@ -200,8 +199,8 @@ const Wills = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     One sibling wants to sell. Another wants to keep the house. A third lives across
                     the country. When a will divides property among multiple beneficiaries, an
-                    independent, certified appraisal can provide the neutral ground everyone needs to
-                    move forward.
+                    independent, certified appraisal gives everyone the same neutral figure to work
+                    from.
                   </p>
                 </div>
                 <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
@@ -209,9 +208,9 @@ const Wills = () => {
                     Out-of-State Family Members
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Managing estate property from a distance is one of the most stressful situations
-                    {FEATURED_BROKER.Role} sees. {FEATURED_BROKER.pronoun.Subject} coordinates with attorneys, manages property access, and handles the
-                    preparation and sale — so you don't have to fly back and forth.
+                    Managing estate property from a distance is hard to do well.
+                    {FEATURED_BROKER.Role} coordinates with attorneys, manages property access, and handles the
+                    preparation and sale, so you don't have to fly back and forth.
                   </p>
                 </div>
                 <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
@@ -219,9 +218,9 @@ const Wills = () => {
                     No Will (Intestate)
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    When someone passes without a will, the process becomes more complex — but it
-                    doesn't have to be chaotic. {FEATURED_BROKER.Role} works with families and their attorneys to navigate
-                    the real estate side of intestate estates with the same care and precision.
+                    When someone dies without a will, family members must ask the court to appoint a
+                    personal representative, and state law decides who inherits. {FEATURED_BROKER.Role} works with
+                    families and their attorneys on the real estate side of intestate estates.
                   </p>
                 </div>
               </div>
@@ -232,17 +231,16 @@ const Wills = () => {
           <section className="py-16 sm:py-20 bg-background" data-nosnippet="true">
             <div className="mx-auto max-w-3xl px-6">
               <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6">
-                This Site Doesn't Provide Legal Advice — And Here's Why That Matters
+                This Site Doesn't Provide Legal Advice, and Why That Matters
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Real Property Planning is a free educational resource. It is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                That distinction is important. When families are navigating a will, they need
-                professionals who stay in their lane. {FEATURED_BROKER.Role} focuses on what {FEATURED_BROKER.pronoun.subject} does best — accurate property
-                valuation, thoughtful preparation, and steady guidance through the real estate side
-                of estate transitions — while working alongside the attorneys and advisors who handle
-                the legal and financial dimensions.
+                Executors settling a will need each question answered by the right professional.
+                {FEATURED_BROKER.Role} handles the real estate side (property valuation, preparation and
+                the sale) and works alongside the attorneys and advisors who handle the legal and
+                financial questions.
               </p>
             </div>
           </section>
@@ -256,16 +254,16 @@ const Wills = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 As both a certified appraiser and a licensed real
                 estate broker, {FEATURED_BROKER.role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, works with families, executors, and attorneys to handle
-                the real property side of estate administration — from the first conversation to the
+                the real property side of estate administration, from the first conversation to the
                 closing table.
               </p>
               <ul className="space-y-4">
                 <CheckItem>Certified appraisals for estate tax, equitable distribution, and stepped-up basis documentation</CheckItem>
                 <CheckItem>Market analysis and pricing strategy tailored to estate timelines</CheckItem>
-                <CheckItem>Property preparation — cleanout, repairs, staging — coordinated on your behalf</CheckItem>
+                <CheckItem>Property preparation (cleanout, repairs, staging) coordinated on your behalf</CheckItem>
                 <CheckItem>Steady communication with executors, heirs, and attorneys throughout the process</CheckItem>
                 <CheckItem>Support for out-of-state families who can't be on-site</CheckItem>
-                <CheckItem>A calm, experienced presence during one of the most difficult transitions a family can face</CheckItem>
+                <CheckItem>An experienced point of contact for the property while the family handles everything else</CheckItem>
               </ul>
 
               <div className="mt-10 text-center">
