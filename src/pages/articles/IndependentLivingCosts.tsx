@@ -64,9 +64,9 @@ const IndependentLivingCosts = () => {
               <hr className={hrClass} />
 
               <p className={leadClass}>
-                This site's working estimate for independent living is about $3,145 a month. It is an estimate, not a
-                survey median: no survey publishes a Washington figure, so it is a national industry figure, and
-                Seattle-area communities often charge more.
+                This site's working estimate for independent living is about $3,145 a month. No survey publishes a
+                Washington figure, so this estimate rests on a national industry figure; Seattle-area communities often
+                charge more.
               </p>
               <p className={pClass}>
                 That fee usually covers much more than rent, so compare it with the full cost of running the current
