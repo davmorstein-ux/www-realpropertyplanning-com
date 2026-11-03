@@ -34,8 +34,9 @@ const MedicaidAndLongTermCare = () => {
               Medicaid &amp; Long-Term Care in Washington State: What Families Need to Know
             </h2>
             <p className={leadClass}>
-              Medicaid is the largest payer of long-term care in America. Yet most families don&apos;t think about it
-              until a crisis forces the conversation. Here is what to know before that moment arrives.
+              Medicaid is the largest payer of long-term care in America, and in Washington it pays for care in nursing
+              homes, adult family homes, assisted living and at home. This guide covers who qualifies, how the spend-down
+              and look-back work, and why planning early matters.
             </p>
 
             <div className="mb-6">
@@ -43,10 +44,9 @@ const MedicaidAndLongTermCare = () => {
             </div>
 
             <p className={pClass}>
-              There is a common misconception about Medicaid that costs families dearly. Many people believe it is a
-              program for the very poor — something that doesn&apos;t apply to them, something they will never need.
-              Then a parent needs nursing home care. Then the bills arrive. Then savings begin to disappear faster than
-              anyone anticipated.
+              A common misconception is that Medicaid is only for the very poor and will never apply to your family.
+              That belief often lasts until a parent needs nursing home care and savings start going faster than anyone
+              expected.
             </p>
             <p className={pClass}>
               Medicaid is not just for people who have always had low incomes. Many middle-class families come to rely
@@ -62,8 +62,8 @@ const MedicaidAndLongTermCare = () => {
               personal care services, adult day health programs, and case management services.
             </p>
             <p className={pClass}>
-              The program that covers most of these services in Washington is called Apple Health — Washington&apos;s
-              Medicaid program. Long-term care services are administered through the Department of Social and Health
+              The program that covers most of these services in Washington is called Apple Health (Washington&apos;s
+              Medicaid program). Long-term care services are administered through the Department of Social and Health
               Services (DSHS) and its Home and Community Living Administration (HCLA), which took over the former Aging
               and Long-Term Support Administration&apos;s (ALTSA) programs in 2025.
             </p>
@@ -71,8 +71,8 @@ const MedicaidAndLongTermCare = () => {
               For older adults and individuals with disabilities who need long-term care, the relevant programs are
               typically Community First Choice (CFC), the COPES waiver (Community Options Program Entry System), and
               Medicaid Personal Care (MPC). PACE is another option for people 65 and older, or 55 to 64 and blind or
-              disabled, who live in a PACE service area and need nursing facility level of care. These programs help people receive care in the least restrictive setting possible — meaning at
-              home or in a smaller residential setting — before moving to a nursing facility.
+              disabled, who live in a PACE service area and need nursing facility level of care. These programs help people receive care in the least restrictive setting possible, meaning at
+              home or in a smaller residential setting, before moving to a nursing facility.
             </p>
 
             <hr className={hrClass} />
@@ -97,11 +97,11 @@ const MedicaidAndLongTermCare = () => {
             <p className={pClass}>
               The resource (asset) limit is $2,000 for a single person, or $3,000 for a married couple who both receive
               care. A primary residence, one vehicle, personal belongings, and certain other assets are exempt from the
-              asset calculation — though for nursing home and COPES coverage, home equity above $1,130,000 (2026) makes
+              asset calculation. However, for nursing home and COPES coverage, home equity above $1,130,000 (2026) makes
               the applicant ineligible unless a spouse, or a child who is under 21, blind or disabled, lives in the home.
             </p>
             <p className={pClass}>
-              For married couples, the rules are more complex. The community spouse — the partner who remains at home —
+              For married couples, the rules are more complex. The community spouse (the partner who remains at home)
               is entitled to keep a portion of the couple&apos;s assets, known as the Community Spouse Resource
               Allowance (up to $162,660 in 2026), as well as a minimum monthly income. These protections exist
               specifically to prevent the healthy spouse from being impoverished by the cost of the other&apos;s care.
@@ -119,20 +119,20 @@ const MedicaidAndLongTermCare = () => {
 
             <h2 className={h2Class}>The Medicaid Spend-Down in Washington</h2>
             <p className={pClass}>
-              Many families find themselves in what is called the spend-down — the process of using their own assets to
-              pay for care until they reach Medicaid eligibility thresholds.
+              Many families go through what is called the spend-down: using their own assets to pay for care until they
+              reach Medicaid eligibility thresholds.
             </p>
             <p className={pClass}>
               This is not a failure of planning. It is how the system is designed to work. Medicaid is a payer of last
               resort, meaning it steps in after other resources have been used. But the way assets are spent down
               matters enormously. Money spent on care is treated differently than money transferred to family members.
-              Washington State has a five-year (60-month) look-back period for asset transfers — meaning that gifts or
+              Washington State has a five-year (60-month) look-back period for asset transfers. Gifts or
               transfers for less than fair value made within five years before applying can cause a penalty period:
               months when Medicaid will not pay for long-term care, based on the amount given away. (This penalty does
               not apply to someone who needs only Community First Choice in-home care.)
             </p>
             <p className={pClass}>
-              This is precisely why early planning with an elder law attorney is so valuable. The strategies available
+              This is why early planning with an elder law attorney matters. The strategies available
               to families who plan five or more years in advance are substantially greater than those available to
               families who begin planning after a crisis.
             </p>
@@ -141,18 +141,17 @@ const MedicaidAndLongTermCare = () => {
 
             <h2 className={h2Class}>Medicaid and Adult Family Homes in Washington</h2>
             <p className={pClass}>
-              One of the most important things families in Washington State should know is that Medicaid covers care in
-              adult family homes — not just nursing homes.
+              In Washington State, Medicaid covers care in adult family homes, not just nursing homes.
             </p>
             <p className={pClass}>
               Adult family homes that are licensed by the state and contracted with DSHS can accept Medicaid residents.
-              For many families, this opens up a genuinely appealing option: a small, home-like residential setting with
+              This opens up another option: a small, home-like residential setting with
               personalized care, in a familiar neighborhood, at a cost covered by Medicaid.
             </p>
             <p className={pClass}>
               Most Washington adult family homes hold a Medicaid contract, but holding a contract is not the same as having a Medicaid bed open: many homes limit how many Medicaid residents they take. Families who
               anticipate needing Medicaid coverage for an adult family home placement should begin researching options
-              well before the need becomes urgent — because availability is limited and waitlists are common.
+              well before the need becomes urgent, because availability is limited and waitlists are common.
             </p>
 
             <hr className={hrClass} />
@@ -174,36 +173,36 @@ const MedicaidAndLongTermCare = () => {
 
             <h2 className={h2Class}>WA Cares: Washington&apos;s Long-Term Care Insurance Program</h2>
             <p className={pClass}>
-              Washington State has taken a step that no other state has taken: creating a mandatory public long-term
-              care insurance program for workers. Called WA Cares, the program began collecting premiums in 2023 and
+              Washington State is the only state that has created a mandatory public long-term care insurance program
+              for workers. Called WA Cares, the program began collecting premiums in 2023 and
               started paying benefits in July 2026.
             </p>
             <p className={pClass}>
               Eligible workers who have paid into the program and meet the benefit triggers can receive up to $36,500 in
-              lifetime benefits — an amount that grows with inflation — to use for a range of long-term care services
+              lifetime benefits (an amount that grows with inflation) to use for a range of long-term care services
               including personal care, facility care, transportation, meal delivery, and home modifications.
             </p>
             <p className={pClass}>
-              WA Cares is not a substitute for Medicaid. It is a supplemental benefit — a first layer of coverage that
-              can help families delay or reduce their reliance on Medicaid. For families with working members,
-              understanding how WA Cares fits into their long-term care plan is increasingly important.
+              WA Cares is not a substitute for Medicaid. It is a supplemental benefit: a first layer of coverage that
+              can help families delay or reduce their reliance on Medicaid. Families with working members should work
+              out how WA Cares fits into their long-term care plan.
             </p>
 
             <hr className={hrClass} />
 
             <h2 className={h2Class}>The Role of Medicaid Planning in Washington</h2>
             <p className={pClass}>
-              Medicaid planning is not about hiding assets or gaming the system. It is about understanding the rules —
-              which are complex, consequential, and frequently misunderstood — and making informed decisions with enough
-              time to make them well.
+              Medicaid planning is not about hiding assets or gaming the system. It is about understanding the rules,
+              which are complex, consequential and frequently misunderstood, and making decisions with enough time to
+              make them well.
             </p>
             <p className={pClass}>
-              The families who navigate Medicaid most successfully are the ones who started the conversation early. They
-              worked with an elder law attorney to understand their options. They worked with a financial planner who
-              understands long-term care costs. They made decisions deliberately, not under duress.
+              Families who start early can work with an elder law attorney to understand their options and with a
+              financial planner who understands long-term care costs, and make decisions deliberately rather than under
+              duress.
             </p>
             <p className={pClass}>
-              A financial planner who specializes in senior care costs can help families model realistic scenarios —
+              A financial planner who specializes in senior care costs can help families model realistic scenarios:
               what care might cost, how long assets might last, when Medicaid might become relevant, and what steps can
               be taken now to preserve options later.
             </p>
@@ -212,13 +211,12 @@ const MedicaidAndLongTermCare = () => {
 
             <h2 className={h2Class}>Starting the Medicaid Conversation Early</h2>
             <p className={pClass}>
-              If Medicaid may be part of your family&apos;s long-term care picture — even years from now — the time to
-              begin the conversation is today. Not because the rules are about to change, though they may. But because
-              the strategies available to you narrow significantly the closer you get to needing care.
+              If Medicaid may be part of your family&apos;s long-term care picture, even years from now, start the
+              conversation now. The rules may change, but the main reason is that the strategies available to you narrow
+              significantly the closer you get to needing care.
             </p>
             <p className={pClass}>
-              The families who plan early find themselves with choices. The families who wait find themselves with
-              fewer.
+              Families who plan early have more options than families who wait.
             </p>
 
             <hr className={hrClass} />
@@ -236,8 +234,7 @@ const MedicaidAndLongTermCare = () => {
               <Link to="/senior-living-advisors" className={inlineLink}>
                 senior living advisors
               </Link>{" "}
-              who understand the full landscape of long-term care in Washington State. Explore the full library of
-              resources to start the conversation.
+              who understand the full landscape of long-term care in Washington State.
             </p>
           </div>
         </section>

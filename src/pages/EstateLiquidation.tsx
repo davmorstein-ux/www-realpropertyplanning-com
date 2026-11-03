@@ -35,7 +35,7 @@ const EstateLiquidation = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Coordinating the sorting, valuing, and responsible distribution of a home's contents — so the property can move toward sale.
+            Estate liquidation is the sorting, valuing, and responsible distribution of a home's contents so the property can move toward sale.
           </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ const EstateLiquidation = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-foreground text-lg md:text-xl leading-[1.7] font-light">
-              Estate liquidators help families and individuals convert personal property into cash, typically following a death, divorce, downsizing, or relocation. They evaluate, organize, price, and sell the contents of a home through estate sales, online auctions, or buyouts. A professional estate liquidator handles everything from advertising and staging the sale to managing buyers and processing payments — relieving families of an overwhelming task during an already difficult time. Whether you need to clear out an entire home or sell a few high-value items, estate liquidators provide the expertise and resources to maximize the value of your belongings efficiently and respectfully.
+              Estate liquidators help families and individuals convert personal property into cash, typically following a death, divorce, downsizing, or relocation. They evaluate, organize, price, and sell the contents of a home through estate sales, online auctions, or buyouts. A professional estate liquidator usually handles the sale from advertising and staging to managing buyers and processing payments, which takes a large task off the family at a difficult time. Liquidators can clear out an entire home or sell a few high-value items, and they bring the experience and resources to get good value for the contents efficiently and respectfully.
             </p>
           </div>
         </div>

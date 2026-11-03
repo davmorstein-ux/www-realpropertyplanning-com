@@ -42,7 +42,7 @@ const pathways: Pathway[] = [
     letter: "2",
     title: "Preparing a Home for Sale",
     description:
-      "Understanding how organizing, repairs, cleanout, and preparation may affect stress, timing, and future property decisions.",
+      "How organizing, repairs, cleanout, and preparation can affect stress, timing, and later property decisions.",
     href: "/what-to-do-with-the-house",
     icon: iconHome,
   },
@@ -50,7 +50,7 @@ const pathways: Pathway[] = [
     letter: "3",
     title: "Helping a Parent or Loved One Downsize",
     description:
-      "Support for adult children and caregivers navigating emotional conversations, resistance, family coordination, and transition planning.",
+      "For adult children and caregivers handling difficult conversations, resistance, family coordination, and transition planning.",
     href: "/helping-an-aging-parent",
     icon: iconHeartHands,
   },
@@ -66,7 +66,7 @@ const pathways: Pathway[] = [
     letter: "5",
     title: "Understanding What To Keep, Donate, Sell, or Distribute",
     description:
-      "Helping families organize belongings thoughtfully while reducing overwhelm and family conflict.",
+      "How to sort belongings with less strain and less family conflict.",
     /* Was /estate-liquidation-learn-more, which is not a route and 404'd.
        The step is about deciding what to keep, donate, sell or distribute, so
        it points at the estate sale companies resource. */
@@ -75,7 +75,7 @@ const pathways: Pathway[] = [
   },
   {
     letter: "6",
-    title: "Building the Right Support Team",
+    title: "Building a Support Team",
     description:
       "Understanding how move managers, estate liquidators, care professionals, real estate professionals, appraisers, and advisors may help simplify the process.",
     href: "/building-your-professional-team",
@@ -84,14 +84,14 @@ const pathways: Pathway[] = [
 ];
 
 const challenges = [
-  { title: "Emotional attachment to belongings", body: "Items often carry decades of memory. Honoring that makes letting go easier." },
+  { title: "Emotional attachment to belongings", body: "Items often carry decades of memory. Allowing time for that usually makes letting go easier." },
   { title: "Feeling overwhelmed", body: "Starting with one drawer, one shelf, or one room is usually enough." },
   { title: "Family disagreements", body: "Clear communication and a written plan typically reduce friction." },
-  { title: "Time pressure", body: "Most timelines feel tighter than they are. Small daily progress adds up." },
+  { title: "Time pressure", body: "Many timelines have more room than they first seem to. Short, regular sessions add up." },
   { title: "Resistance to change", body: "Slowing down and including the senior in decisions usually softens resistance." },
-  { title: "Caregiver exhaustion", body: "Recognizing burnout early prevents bigger problems later." },
-  { title: "Fear of making mistakes", body: "Most decisions can be revisited. Perfection is not the goal." },
-  { title: "Organizing decades of belongings", body: "Sorting by category — papers, photos, kitchen — usually works better than by room." },
+  { title: "Caregiver exhaustion", body: "Noticing burnout early can prevent larger problems later." },
+  { title: "Fear of making mistakes", body: "Many decisions can be revisited later, so not every one has to be perfect." },
+  { title: "Organizing decades of belongings", body: "Sorting by category (papers, photos, kitchen) usually works better than sorting by room." },
   { title: "Preparing a home while managing emotions", body: "Separating practical tasks from emotional ones helps both move forward." },
   { title: "Coordinating multiple family members", body: "One shared plan and one point person reduce confusion." },
 ];
@@ -113,7 +113,7 @@ const faqs = [
   {
     question: "Where should families begin?",
     answer:
-      "Most families start with a single category — papers, photos, or one room — and build momentum from there. Identifying the timeline and any safety concerns early helps shape the plan.",
+      "A common starting point is a single category, such as papers or photos, or a single room, working outward from there. Settling the timeline and any safety concerns early helps shape the plan.",
   },
   {
     question: "How long does downsizing usually take?",
@@ -128,17 +128,17 @@ const faqs = [
   {
     question: "Should the home be cleaned out before valuation?",
     answer:
-      "Not necessarily. A certified appraiser or real estate professional can usually assess a home in its current condition. Cleaning out before listing may help — but valuation often comes first.",
+      "Not necessarily. A certified appraiser or real estate professional can usually assess a home in its current condition. Cleaning out before listing may help, but valuation often comes first.",
   },
   {
     question: "What belongings should families keep?",
     answer:
-      "There is no single right answer. Many families focus on items with strong personal meaning, useful daily objects, and a small number of pieces with financial or historical value.",
+      "There is no single right answer. Common priorities are items with strong personal meaning, useful everyday objects, and a small number of pieces with financial or historical value.",
   },
   {
     question: "How do families avoid conflict during cleanout?",
     answer:
-      "Agreeing in advance on how to handle sentimental items, valuables, and shared belongings — and putting decisions in writing — usually prevents most disagreements.",
+      "Agree in advance on how sentimental items, valuables, and shared belongings will be handled, and put those decisions in writing. That usually heads off many disagreements.",
   },
   {
     question: "What professionals may help coordinate the process?",
@@ -153,17 +153,17 @@ const faqs = [
   {
     question: "What if everything feels overwhelming?",
     answer:
-      "That is normal. Slowing down, focusing on one decision at a time, and bringing in a small support team usually changes the experience quickly.",
+      "Slowing down, taking one decision at a time, and bringing in a small support team usually makes the work more manageable.",
   },
   {
     question: "How do families reduce stress during transitions?",
     answer:
-      "Clear communication, realistic timelines, and professionals who share information with each other tend to replace pressure with a calmer, more manageable rhythm.",
+      "Clear communication, realistic timelines, and professionals who share information with each other tend to reduce pressure.",
   },
 ];
 
 const continueJourney = [
-  { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "Guidance for the emotional and logistical changes ahead.", icon: iconHeartHands },
+  { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "The emotional and practical changes that come with a senior move.", icon: iconHeartHands },
   { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
   { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconExecutor },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
@@ -174,8 +174,8 @@ const nextSteps = [
   "Understand the current transition and timing concerns",
   "Create a manageable downsizing plan",
   "Explore housing, property, and caregiving considerations",
-  "Build the right support team",
-  "Move through the process one step at a time",
+  "Build a support team",
+  "Work through the process one step at a time",
 ];
 
 const jsonLd = articleSchema({
@@ -216,9 +216,9 @@ const DownsizingPreparingForTransition = () => {
                 Downsizing & Preparing for a Transition
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
-                A guided roadmap for seniors and families navigating downsizing,
+                A guided roadmap for seniors and families dealing with downsizing,
                 organizing belongings, preparing for a move, housing transitions,
-                caregiving changes, and important property-related decisions.
+                caregiving changes, and related property decisions.
               </p>
               <a href="#pathways">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
@@ -250,9 +250,10 @@ const DownsizingPreparingForTransition = () => {
                 Downsizing Is Often Emotional
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed">
-                Homes hold decades of memory, routine, and family history. Feeling
-                overwhelmed or unsure where to begin is normal. This guide is
-                designed to make the process calmer and more manageable.
+                Downsizing means making practical decisions about a home that holds
+                decades of memory and routine, so it is common not to know where to
+                start. This guide sets out the main paths, the usual difficulties,
+                and the questions worth asking.
               </p>
             </div>
           </div>
@@ -322,13 +323,13 @@ const DownsizingPreparingForTransition = () => {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  You Are Not Alone
+                  What Makes It Hard
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Common Challenges Families Face
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what's hard often makes it easier to move forward.
+                  These come up often, each with a practical way to approach it.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -360,9 +361,9 @@ const DownsizingPreparingForTransition = () => {
                   Many People Don't Know What Questions to Ask
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Most families are unsure where to begin, how long downsizing may take,
-                  which professionals may help, or how housing and property decisions
-                  overlap.
+                  Common uncertainties include where to begin, how long downsizing may
+                  take, which professionals may help, and how housing and property
+                  decisions overlap.
                 </p>
               </div>
               <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_2px_8px_-4px_rgba(27,43,75,0.10)]">
@@ -405,10 +406,10 @@ const DownsizingPreparingForTransition = () => {
                   Keep Going
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
+                  Related Guides
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families preparing for a transition often continue exploring these next steps.
+                  Guides on the topics that usually come up next.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -444,7 +445,7 @@ const DownsizingPreparingForTransition = () => {
                   Simple Next Steps
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
+                  A Five-Step Action Plan
                 </h2>
               </div>
               <ol className="space-y-4">

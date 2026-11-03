@@ -48,12 +48,12 @@ const whenHelpful = [
 ];
 
 const howDavidHelps = [
-  "Property valuation insight — condition-adjusted market analysis from a certified appraisal perspective",
-  "Pricing strategy — positioning the property accurately for current market conditions in the specific neighborhood",
-  "Market analysis — comparable sales data and market trend context to support legal proceedings or settlement negotiations",
-  "Sale preparation recommendations — honest assessment of what to address before listing and what to leave",
-  "Vendor coordination — connecting clients with independent local professionals for cleanout, repairs, and staging",
-  "Full sale management — listing, marketing, showings, negotiation, and closing coordination",
+  "Property valuation insight: condition-adjusted market analysis informed by certified appraisal training",
+  "Pricing strategy: pricing the property for current market conditions in its neighborhood",
+  "Market analysis: comparable sales and market trends that can be used in legal proceedings or settlement negotiations",
+  "Sale preparation recommendations: what to address before listing and what to leave alone",
+  "Vendor coordination: connecting clients with independent local professionals for cleanout, repairs, and staging",
+  "Full sale management: listing, marketing, showings, negotiation, and closing coordination",
 ];
 
 const commonSituations = [
@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     question: "Do all real estate transactions need an attorney?",
-    answer: "Not always. Many transactions do not require one. However, when legal complexity arises, an attorney can be an important part of the team.",
+    answer: "Not always. Many transactions do not require one. When legal complexity arises, though, an attorney's involvement can matter.",
   },
 ];
 
@@ -115,10 +115,10 @@ const ForRealEstateAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Real estate matters don't always fit neatly into either the legal category or the brokerage category. Sometimes a client needs both — legal counsel to navigate rights, risks, and obligations, and an experienced real estate professional to assess the property, understand the market, and manage the practical path forward.
+            Some property matters are partly legal and partly practical. A client may need legal counsel on rights, risks, and obligations, and a real estate professional to assess the property, read the market, and handle the sale.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            {FEATURED_BROKER.Role} works alongside real estate attorneys to provide the property side of that equation — market analysis, valuation insight, preparation coordination, and sale management — while leaving the legal guidance where it belongs.
+            {FEATURED_BROKER.Role} can work alongside a client's real estate attorney on the property side (market analysis, valuation insight, preparation coordination, and sale management) and leaves legal questions to the attorney.
           </p>
         </div>
       </div>
@@ -179,7 +179,7 @@ const ForRealEstateAttorneys = () => (
             How {FEATURED_BROKER.roleTitle} Works Alongside Real Estate Attorneys
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            {FEATURED_BROKER.Role} does not provide legal advice. Instead, he provides the real estate expertise that complements legal counsel — particularly in situations where property condition, market value, or sale logistics are part of a larger legal matter:
+            {FEATURED_BROKER.Role} does not provide legal advice. {FEATURED_BROKER.pronoun.Subject} handles the real estate side, which matters most when property condition, market value, or sale logistics are part of a larger legal matter:
           </p>
           <ul className="space-y-4">
             {howDavidHelps.map((item, i) => (
@@ -205,7 +205,7 @@ const ForRealEstateAttorneys = () => (
             Common Situations Where Clients May Need Both Attorney and Real Estate Guidance
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Real estate attorneys and their clients benefit from {FEATURED_BROKER.role}'s support in situations including:
+            Situations where {FEATURED_BROKER.role} may be able to help include:
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {commonSituations.map((item, i) => (
@@ -234,11 +234,11 @@ const ForRealEstateAttorneys = () => (
             Discuss a Client Situation
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            When a client's legal matter involves real property in Washington State, {FEATURED_BROKER.role} provides a reliable, professional resource for the market and logistics side of the situation.
+            When a client's legal matter involves real property in Washington State, {FEATURED_BROKER.role} can help with the market and logistics side of the situation.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
             {FEATURED_BROKER.Role} serves clients throughout{" "}
-            <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. A brief conversation is usually the most efficient way to determine how he can support your client's situation.
+            <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. A brief conversation is usually the quickest way to find out whether {FEATURED_BROKER.pronoun.subject} can help with your client's situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`tel:${FEATURED_BROKER.phoneTel}`}>

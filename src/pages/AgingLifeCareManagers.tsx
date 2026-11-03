@@ -103,33 +103,33 @@ const AgingLifeCareManagers = () => (
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
-                An Aging Life Care Manager — also known as a geriatric care manager — is a trained
-                professional who helps older adults and their families navigate the complex challenges of
+                An Aging Life Care Manager (also known as a geriatric care manager) is a trained
+                professional who helps older adults and their families with the practical challenges of
                 aging. They assess physical, emotional, and environmental needs; coordinate medical care;
-                and serve as an advocate during major life transitions.
+                and act as an advocate during major life transitions.
               </p>
               <p>
                 These professionals often come from backgrounds in nursing, social work, or counseling,
-                and many hold certifications through the Aging Life Care Association (ALCA). Their role
-                is especially valuable when families live far apart, when a health crisis changes care
-                needs suddenly, or when multiple professionals — attorneys, real estate agents, financial
-                advisors — are involved and someone needs to keep the older adult's wellbeing at the center
-                of every decision.
+                and many hold certifications through the Aging Life Care Association (ALCA). The role
+                is especially useful when families live far apart, when a health crisis changes care
+                needs suddenly, or when several professionals (attorneys, real estate agents, financial
+                advisors) are involved and someone needs to keep the older adult's wellbeing at the center
+                of each decision.
               </p>
               <p>
                 Services typically include in-home assessments, care plan development, medication
                 management oversight, coordination with doctors and specialists, facility placement
                 guidance, and ongoing monitoring. When a housing transition is involved, an Aging Life
                 Care Manager can help families evaluate whether aging in place, assisted living, memory
-                care, or an adult family home is the right fit — and then ensure the move itself is
-                managed with compassion and attention to detail.
+                care, or an adult family home suits the person's needs, and then help see that the move
+                itself is handled with care and attention to detail.
               </p>
               <p>
                 Real Property Planning explains the real estate side of major transitions and lists independent
-                professionals, including Aging Life Care Managers, who help families through them. Whether the goal is selling a longtime
-                home to fund care, navigating a probate sale after a loss, or finding the right senior
-                housing solution, having a care manager involved helps the family stay focused on what
-                matters most.
+                professionals, including Aging Life Care Managers, who help families through them. When a
+                family is selling a longtime home to pay for care, handling a probate sale after a death,
+                or looking for senior housing, a care manager can help keep attention on the older adult's
+                needs.
               </p>
             </div>
           </div>

@@ -13,16 +13,16 @@ const WhatToDoWithTheProperty = () => (
     bandTitle="DECIDING WHAT TO DO WITH THE PROPERTY"
     disclaimer={DISCLAIMER}
   >
-    <SubH2>Sell, Keep, Rent, or Transfer — There's No Single Right Answer.</SubH2>
+    <SubH2>Sell, Keep, Rent, or Transfer: There's No Single Right Answer.</SubH2>
     <P>
-      The decision about what to do with an inherited or estate home is one of the most consequential your family will make. It deserves careful, unhurried thought.
+      An inherited or estate home can be sold, kept, rented, or transferred to an heir. The options differ in cost, ongoing work, and the legal steps involved, and none of them suits every estate. The decision is worth making slowly.
     </P>
 
     <Divider />
 
     <SubH2>Start With the Facts, Not the Feelings</SubH2>
     <P>
-      Decisions about a family home carry enormous emotional weight — and that's entirely appropriate. But the best decisions are made when the emotional and practical considerations are separated clearly.
+      A family home carries emotional weight, and that is normal. Decisions still go better when the emotional and practical questions are kept separate.
     </P>
     <P>Before deciding anything, establish the facts:</P>
     <UL>
@@ -43,12 +43,12 @@ const WhatToDoWithTheProperty = () => (
     </P>
     <P><strong>What to consider:</strong></P>
     <UL>
-      <li>The property may need preparation before going to market — cleaning, repairs, cosmetic updates. This takes time and costs money, but typically increases the sale price.</li>
-      <li>The timing of the sale may be constrained by probate — in Washington State, the personal representative can sell only after the court appoints them, and needs court approval for the sale itself only if the court did not grant nonintervention powers.</li>
-      <li>Estate sales often have a different dynamic than standard sales — multiple decision-makers, emotional attachment to the home, and timelines driven by legal and care considerations rather than market conditions.</li>
+      <li>The property may need preparation before going to market: cleaning, repairs, cosmetic updates. This takes time and costs money, but typically increases the sale price.</li>
+      <li>The timing of the sale may be constrained by probate. In Washington State, the personal representative can sell only after the court appoints them, and needs court approval for the sale itself only if the court did not grant nonintervention powers.</li>
+      <li>Estate sales often work differently from standard sales, with multiple decision-makers, emotional attachment to the home, and timelines driven by legal and care considerations rather than market conditions.</li>
     </UL>
     <P>
-      An experienced estate real estate broker understands these dynamics and can guide the family through the process without unnecessary pressure.
+      A broker who regularly sells estate property will be familiar with these issues and can help the family plan the sale around them.
     </P>
 
     <RemodelWorthCallout />
@@ -57,12 +57,12 @@ const WhatToDoWithTheProperty = () => (
 
     <SubH2>Option 2: Keep or Rent the Property</SubH2>
     <P>
-      Sometimes heirs want to keep a property — whether for sentimental reasons, because one heir wants to live in it, or because the family believes it has rental income potential.
+      Sometimes heirs want to keep a property: for sentimental reasons, because one heir wants to live in it, or because the family believes it has rental income potential.
     </P>
     <P><strong>What to consider:</strong></P>
     <UL>
       <li>If one heir wants to keep the property, they typically need to buy out the other heirs at the appraised value. This requires financing or liquid assets.</li>
-      <li>Renting a property is a business decision — it requires landlord responsibilities, ongoing maintenance, insurance, and tax reporting. It is not a passive income stream.</li>
+      <li>Renting a property is a business decision. It requires landlord responsibilities, ongoing maintenance, insurance, and tax reporting. It is not a passive income stream.</li>
       <li>Co-owning inherited property among multiple heirs is complicated. Disagreements about management, expenses, and eventual sale are common and can become expensive to resolve.</li>
     </UL>
     <P>
@@ -73,11 +73,11 @@ const WhatToDoWithTheProperty = () => (
 
     <SubH2>Option 3: Transfer the Property to an Heir</SubH2>
     <P>
-      A property can be transferred to one or more heirs as part of their inheritance — either as their entire share, or in combination with other assets.
+      A property can be transferred to one or more heirs as part of their inheritance, either as their entire share or in combination with other assets.
     </P>
     <P><strong>What to consider:</strong></P>
     <UL>
-      <li>The transfer must be handled properly through the probate process or trust administration — not informally.</li>
+      <li>The transfer must be handled properly through the probate process or trust administration, not informally.</li>
       <li>The heir who receives the property takes it with a stepped-up cost basis (the date-of-death value), which minimizes capital gains taxes if they sell later.</li>
       <li>If the property is transferred to multiple heirs as co-owners, the same complexity as "keeping" applies.</li>
     </UL>
@@ -86,18 +86,18 @@ const WhatToDoWithTheProperty = () => (
 
     <SubH2>When Heirs Disagree</SubH2>
     <P>
-      This is one of the most common and most painful situations in estate administration. One sibling wants to sell immediately. Another wants to keep the home in the family. A third lives across the country and just wants it resolved.
+      Disagreement among heirs about the house is common in estate administration, and it is hard on everyone involved. One sibling may want to sell right away, another to keep the home in the family, and a third, living across the country, just wants it resolved.
     </P>
     <P>A few things to keep in mind:</P>
     <UL>
-      <li>The personal representative has legal authority to administer the estate, including making property decisions, based on the will and Washington State law — not by consensus.</li>
+      <li>The personal representative has legal authority to administer the estate, including making property decisions, based on the will and Washington State law, not by consensus.</li>
       <li>If heirs cannot agree: during probate the personal representative decides, under the will and the law; partition applies once the house has been distributed and the heirs own it together, when a co-owner can ask the court to divide or sell it (RCW 7.52.010).</li>
-      <li>An experienced real estate professional and a good probate attorney can often help families reach a workable resolution without litigation.</li>
+      <li>A real estate professional and a probate attorney can often help heirs reach a workable resolution without litigation.</li>
     </UL>
 
     <Divider />
 
-    <SubH2>Getting the Right Guidance</SubH2>
+    <SubH2>Getting Guidance</SubH2>
     <P>
       For the real estate itself, you can contact the site's featured broker or featured certified appraiser directly, or hire any licensed professional you choose. For the legal side, choose a Washington-licensed probate attorney yourself.
     </P>

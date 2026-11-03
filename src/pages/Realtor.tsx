@@ -154,14 +154,14 @@ const Realtor = () => (
               phone={FEATURED_BROKER.phone}
               email={FEATURED_BROKER.email}
               website={FEATURED_BROKER.website}
-              specialty="Probate, estate, and trust property sales across Washington State — working with executors, trustees, and families navigating inherited real estate."
+              specialty="Probate, estate, and trust property sales across Washington State, working with executors, trustees, and families selling inherited real estate."
               bio={BROKER_BIO}
             />
           </div>
           <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
             {FEATURED_BROKER.name} is the featured real estate broker listed on Real Property Planning.{" "}
             {FEATURED_BROKER.pronoun.Possessive} real estate brokerage services are provided independently through{" "}
-            {FEATURED_BROKER.brokerage} — not through Real Property Planning.
+            {FEATURED_BROKER.brokerage}, not through Real Property Planning.
           </p>
           {/* The featured broker's professional memberships belong on HIS card,
               not on the hub's homepage (David, Sept 23). In colour. */}
@@ -177,19 +177,19 @@ const Realtor = () => (
           <div className="max-w-3xl mx-auto">
             <div className="text-muted-foreground text-base leading-relaxed mb-5 space-y-1">
               <p>
-                Washington State Licensed Real Estate Broker — {FEATURED_BROKER.name}'s real estate license is held
-                under {FEATURED_BROKER.brokerage}
+                Washington State Licensed Real Estate Broker. {FEATURED_BROKER.name}'s real estate license is held
+                under {FEATURED_BROKER.brokerage}.
               </p>
-              {SAME_PERSON && <p>Washington State Certified Residential Appraiser — {FEATURED_APPRAISER.firm}</p>}
+              {SAME_PERSON && <p>Washington State Certified Residential Appraiser, {FEATURED_APPRAISER.firm}</p>}
               <p>Real Estate License #{FEATURED_BROKER.licenseNumber}</p>
             </div>
             <div>
-              <p className="text-foreground font-semibold mb-2">Proud Member of the:</p>
+              <p className="text-foreground font-semibold mb-2">Member of:</p>
               <ul className="text-muted-foreground text-base leading-relaxed list-disc pl-6 space-y-1">
-                <li>ALCA — Aging Life Care Association</li>
-                <li>NAOSA — National Association of Senior Advocates</li>
-                <li>NAEPC — National Association of Estate Planners &amp; Councils</li>
-                <li>NAR — National Association of Realtors®</li>
+                <li>Aging Life Care Association (ALCA)</li>
+                <li>National Association of Senior Advocates (NAOSA)</li>
+                <li>National Association of Estate Planners &amp; Councils (NAEPC)</li>
+                <li>National Association of Realtors® (NAR)</li>
               </ul>
             </div>
           </div>

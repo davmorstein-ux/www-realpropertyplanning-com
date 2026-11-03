@@ -70,13 +70,13 @@ const ForElderLawAttorneys = () => (
           </h2>
           <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
             <p>
-              Elder law attorneys specialize in the legal needs of older adults and their families. Their practice covers a wide range of issues that arise as people age — from planning ahead for incapacity and long-term care to navigating Medicaid eligibility, guardianship, and the management of assets when someone can no longer make decisions for themselves.
+              Elder law attorneys focus on the legal needs of older adults and their families. Their work covers issues that come up with age, from planning ahead for incapacity and long-term care to Medicaid eligibility, guardianship, and managing assets when someone can no longer make decisions for themselves.
             </p>
             <p>
               Common areas of elder law practice include estate planning, powers of attorney, advance directives, Medicaid planning and spend-down strategies, conservatorship and guardianship, veterans' benefits, and the legal aspects of transitioning to assisted living or memory care.
             </p>
             <p>
-              Elder law attorneys often work closely with financial advisors, care managers, and real estate professionals to coordinate the full picture of a client's transition — ensuring that legal, financial, and housing decisions are aligned and made in the right sequence.
+              Elder law attorneys often work with financial advisors, care managers, and real estate professionals so that a client's legal, financial, and housing decisions fit together and happen in a sensible order.
             </p>
           </div>
         </div>

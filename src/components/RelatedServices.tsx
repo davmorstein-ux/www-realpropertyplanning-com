@@ -142,7 +142,7 @@ const ALL: Record<string, RelatedLink> = {
   guideRepairs: {
     href: "/guides/repairs-before-selling-probate-home-washington",
     label: "Repairs Before Sale",
-    description: "Which repairs the estate should pay for — and which it shouldn't.",
+    description: "Which repairs the estate should pay for, and which it shouldn't.",
   },
   guideAsIs: {
     href: "/guides/sell-inherited-house-as-is-or-fix",
@@ -382,7 +382,7 @@ function pickContextual(currentPath: string): { keys: Array<keyof typeof ALL>; h
       return {
         keys: ["slAssisted", "slAdultFamily", "moveElderly"],
         heading: "Related Senior-Living Options",
-        intro: "When independent living needs to step up — and how the home factors in.",
+        intro: "When independent living needs to step up, and how the home factors in.",
       };
     if (p.includes("nursing") || p.includes("skilled"))
       return {
