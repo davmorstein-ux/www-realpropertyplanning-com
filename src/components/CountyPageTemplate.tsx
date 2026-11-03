@@ -263,15 +263,15 @@ const CountyPageTemplate = ({
   const defaultCountyFaqs = [
     {
       question: `Can a ${countyName} probate property be listed before Letters are issued?`,
-      answer: `No. The property cannot be marketed until the personal representative receives Letters Testamentary or Letters of Administration from the ${countyName} Superior Court. ${FEATURED_BROKER.Role} does, however, use that waiting period for the date-of-death valuation walk-through, securing the home, lining up cleanout vendors, and preparing the marketing file — so the day Letters arrive, you are ready to list rather than starting from zero.`,
+      answer: `No. The property cannot be marketed until the personal representative receives Letters Testamentary or Letters of Administration from the ${countyName} Superior Court. ${FEATURED_BROKER.Role} does, however, use that waiting period for the date-of-death valuation walk-through, securing the home, lining up cleanout vendors, and preparing the marketing file, so the day Letters arrive, you are ready to list rather than starting from zero.`,
     },
     {
       question: `Is there anything specific to ${countyName} that affects how an estate property sells?`,
-      answer: `Yes — buyer expectations, inspection norms, and condition tolerance vary noticeably across ${countySlugUpper} County's submarkets (${cityList}, and surrounding communities). Pricing built on a county-wide average will frequently miss in either direction. Each property here is evaluated on its own block and condition, not pulled off an automated estimate.`,
+      answer: `Yes. Buyer expectations, inspection norms, and condition tolerance vary noticeably across ${countySlugUpper} County's submarkets (${cityList}, and surrounding communities). Pricing built on a county-wide average will frequently miss in either direction. Each property here is evaluated on its own block and condition, not pulled off an automated estimate.`,
     },
     {
       question: `Can the professionals in this network handle a ${countyName} estate sale if every heir lives out of state?`,
-      answer: `Routinely. Out-of-state personal representatives are one of the most common situations in ${countyName}. The professionals in this network handle the in-person walk-through, vendor coordination, photo and video updates, showings, and offer review — so the heirs almost never need to travel to ${countyName} to close.`,
+      answer: `Yes. Out-of-state personal representatives are common in ${countyName}. The professionals in this network handle the in-person walk-through, vendor coordination, photo and video updates, showings, and offer review, so the heirs almost never need to travel to ${countyName} to close.`,
     },
   ];
 
@@ -344,7 +344,7 @@ const CountyPageTemplate = ({
                     >
                       <img
                         src={COUNTY_LOGOS[countySlug]}
-                        alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
+                        alt={`${countyName}, Washington official seal: probate, estate, and senior transition real estate services`}
                         className="w-full h-full object-contain"
                         loading="eager"
                         sizes="100vw"
@@ -358,7 +358,7 @@ const CountyPageTemplate = ({
                     >
                       <img
                         src={COUNTY_LOGOS[countySlug]}
-                        alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
+                        alt={`${countyName}, Washington official seal: probate, estate, and senior transition real estate services`}
                         className="w-full h-full object-contain"
                         loading="eager"
                         sizes="100vw"
@@ -448,7 +448,7 @@ const CountyPageTemplate = ({
                 In {countyName}, most estate sales start one of three ways: a personal representative who has just
                 received Letters and needs to know what to do with the house first, an attorney whose client is stuck on
                 the property piece of the file, or an out-of-state heir who has not been inside the home in years. A first
-                conversation with {FEATURED_BROKER.role} is short and concrete — what the property is, who has authority,
+                conversation with {FEATURED_BROKER.role} is short and concrete: what the property is, who has authority,
                 and what's already been touched.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-5">
@@ -461,7 +461,7 @@ const CountyPageTemplate = ({
                 <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">
                   offer review
                 </Link>
-                , and closing. If you're earlier than that — still figuring out what you've inherited — start with the{" "}
+                , and closing. If you're earlier than that and still figuring out what you've inherited, start with the{" "}
                 <Link
                   to="/guides/inherited-house-washington"
                   className="text-accent hover:text-gold underline underline-offset-4"
@@ -516,7 +516,7 @@ const CountyPageTemplate = ({
                   </strong>{" "}
                   across {afh.cityCount} cities, with {afh.totalBeds.toLocaleString()} licensed beds. For families
                   weighing care options for a parent, these are often the least visible part of the senior housing
-                  market — six residents in an ordinary house, licensed and inspected by DSHS, and rarely listed
+                  market: six residents in an ordinary house, licensed and inspected by DSHS, and rarely listed
                   anywhere families can compare them.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-5">

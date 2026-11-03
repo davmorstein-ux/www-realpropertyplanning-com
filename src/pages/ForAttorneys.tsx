@@ -43,7 +43,7 @@ const ForAttorneys = () => (
           ].map(([title, desc]) => (
             <p key={title} className="text-2xl md:text-[1.7rem] leading-relaxed">
               <strong className="text-[#1B3A6B]">{title}</strong>
-              <span className="text-[#292420]"> — </span>
+              <span className="text-[#292420]">: </span>
               <span className="text-[#292420]">{desc}</span>
             </p>
           ))}
@@ -56,7 +56,7 @@ const ForAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#39332d] text-2xl md:text-[1.7rem] leading-[1.8]">
-            Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together, the independent professionals featured on Real Property Planning may be able to help. Each works through their own business.
+            Probate, estate planning, elder law, family law and divorce matters regularly raise real estate questions outside the scope of legal counsel. When a client needs a property valuation, a managed sale, or one professional to keep several parties on the same timeline, the independent professionals featured on Real Property Planning may be able to help. Each works through their own business.
           </p>
         </div>
       </div>
