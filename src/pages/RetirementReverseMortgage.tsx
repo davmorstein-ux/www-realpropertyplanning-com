@@ -40,7 +40,7 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
+          How a reverse mortgage can help pay for senior care while one spouse stays at home, and independent lending professionals you can contact directly.
         </p>
         </div>
       </div>
@@ -51,13 +51,13 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Real estate decisions are often closely tied to financing, retirement planning, and long-term financial strategy.
+            Decisions about a home are often tied to how retirement and care will be paid for.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            In some situations, selling a home is the right decision. In others, financing solutions may provide flexibility and allow homeowners to remain in their home.
+            Sometimes selling is the better option. In other cases, borrowing against the home lets the owner keep living in it.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Real Property Planning lists independent lending professionals who can help homeowners explore their options clearly and without pressure.
+            Real Property Planning lists independent lending professionals below who can explain the options.
           </p>
         </div>
       </div>
@@ -68,10 +68,10 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-            One of the most important — and least understood — applications of a reverse mortgage is helping families manage the cost of senior care when one spouse needs to move into a memory care facility, skilled nursing home, or assisted living community while the other remains at home.
+            A reverse mortgage can help pay for senior care when one spouse needs to move into a memory care facility, skilled nursing home, or assisted living community and the other stays at home. This use is often overlooked.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            For many retired couples, the family home represents their largest financial asset. A reverse mortgage allows the spouse remaining at home to convert a portion of that home equity into tax-free funds — without making monthly mortgage payments — while continuing to live in the home. Those funds can then be used to cover the cost of the other spouse's care facility, property taxes, homeowner's insurance, and everyday living expenses.
+            For many retired couples, the home is their largest financial asset. A reverse mortgage lets the spouse at home convert part of that equity into tax-free funds and keep living in the house without making monthly mortgage payments. The funds can go toward the other spouse's care facility, property taxes, homeowner's insurance, and everyday living expenses.
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ const RetirementReverseMortgage = () => (
               How It Works for Couples
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              A common reason seniors seek reverse mortgages is when one spouse requires care and needs to move into a skilled nursing or assisted living community. When both spouses are included on the reverse mortgage agreement and one moves into a care facility, the spouse remaining at home can continue to access the funds. Should the spouse receiving care pass away, the remaining spouse continues to live in the home undisturbed.
+              A common reason seniors take out a reverse mortgage is that one spouse needs to move into skilled nursing or assisted living. When both spouses are on the reverse mortgage agreement and one moves into a care facility, the spouse at home can keep drawing on the funds. If the spouse in care dies, the other spouse continues to live in the home.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const RetirementReverseMortgage = () => (
               Flexible Payment Options
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Reverse mortgage proceeds can be structured in several ways. Monthly payments create a steady income stream that can cover the monthly cost of a care facility. A line of credit can be particularly useful for unpredictable long-term care needs — and under many plans, unused credit grows over time, giving families more flexibility as needs change.
+              Reverse mortgage proceeds can be paid out in several ways. Monthly payments provide steady income that can cover the monthly cost of a care facility. A line of credit suits long-term care costs that are hard to predict, and under many plans the unused credit grows over time, which leaves more available as needs change.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ const RetirementReverseMortgage = () => (
               Important Considerations
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              If a borrower is away from the home for more than 12 consecutive months in a healthcare facility and there is no co-borrower living in the home, the loan may become due. This is why it is critical to structure the reverse mortgage correctly — with both spouses as co-borrowers whenever possible — before a care need arises. Medicaid eligibility rules for reverse mortgage borrowers are also complex and families should consult with a financial planner and elder law attorney before proceeding.
+              If a borrower is away from the home for more than 12 consecutive months in a healthcare facility and there is no co-borrower living in the home, the loan may become due. That is why the loan should be set up before a care need arises, with both spouses as co-borrowers whenever possible. Medicaid eligibility rules for reverse mortgage borrowers are also complex, so talk with a financial planner and an elder law attorney before proceeding.
             </p>
           </div>
 
@@ -265,13 +265,13 @@ const RetirementReverseMortgage = () => (
             How This Fits Into the Bigger Picture
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Every client's situation is different.
+            A reverse mortgage is one option among several.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Some choose to sell. Others explore financing options. Some do both as part of a long-term plan.
+            Some homeowners sell. Others borrow against the home. Some do both as part of a longer plan.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            The goal is to provide clarity — not push a specific path.
+            This page describes the options; it does not favor any of them.
           </p>
         </div>
       </div>
@@ -285,7 +285,7 @@ const RetirementReverseMortgage = () => (
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you're exploring whether selling, staying, or financing options make the most sense, Real Property Planning's Find a Professional page lists independent professionals you can contact directly to evaluate your situation.
+            To compare selling, staying, and borrowing against the home for your own situation, Real Property Planning's Find a Professional page lists independent professionals you can contact directly.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">

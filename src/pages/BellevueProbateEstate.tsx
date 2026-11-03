@@ -19,32 +19,32 @@ const faqs = [
   {
     question: "How does selling an inherited home in Bellevue work?",
     answer:
-      `Selling inherited property in Bellevue typically requires legal authority through probate or trust administration before the home can be listed. ${FEATURED_BROKER.Role} coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.`,
+      `An inherited Bellevue home usually can't be listed until someone has legal authority to sell it, through probate or trust administration. ${FEATURED_BROKER.Role} then works with the estate attorney, trustee, or personal representative on the property assessment, a defensible price, preparation, and the sale itself, and keeps all parties updated.`,
   },
   {
     question: "What should a trustee do first with a Bellevue property?",
     answer:
-      `Secure the property, review the trust terms with the estate attorney, and get a realistic assessment of the home's condition and current market value. ${FEATURED_BROKER.Role} can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.`,
+      `Secure the property, go over the trust terms with the estate attorney, and get a realistic read on the home's condition and current market value. ${FEATURED_BROKER.Role} can tour the home, point out what affects value, and explain your options before you settle on a plan.`,
   },
   {
     question: `How does ${FEATURED_BROKER.role}'s appraisal background benefit Bellevue property sales?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Bellevue's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} bases pricing on a condition assessment and neighborhood-level market analysis instead of automated estimates. At Bellevue price levels a small pricing error is a large dollar amount, and that kind of review can help families and fiduciaries avoid one.`,
   },
   {
     question: "Can you get help if multiple beneficiaries are involved?",
     answer:
-      `Yes. Multi-party situations are common in Bellevue estate and trust sales. ${FEATURED_BROKER.Role} provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.`,
+      `Yes. Bellevue estate and trust sales often involve several parties. ${FEATURED_BROKER.Role} keeps communication clear and documented so every party, local or out of state, has the same information. Pricing based on certified appraisal methodology can also help establish a defensible value when the parties need to agree.`,
   },
   {
     question: "What preparation is typically needed before selling a Bellevue estate property?",
     answer:
-      `It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. ${FEATURED_BROKER.Role} evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using ${FEATURED_BROKER.pronoun.possessive} appraisal background to make that assessment.`,
+      `It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. Drawing on ${FEATURED_BROKER.pronoun.possessive} appraisal background, ${FEATURED_BROKER.role} weighs whether targeted preparation (cleaning, repairs, or staging) would add more to the price than it costs in money and time.`,
   },
   {
     question: "How long does it take to sell an estate property in Bellevue?",
     answer:
-      `Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Bellevue homes typically sell within a few weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a plan around your specific situation and constraints.`,
+      `Timelines depend on the legal process, property condition, and preparation needs. When the home is prepared and the seller's authority is settled, a well-priced Bellevue listing typically sells within a few weeks. ${FEATURED_BROKER.Role} can plan around your particular constraints and tell you what to expect.`,
   },
 ];
 
@@ -104,7 +104,7 @@ const BellevueProbateEstate = () => {
         <ProbateStartHere />
 
       {/* Hero */}
-      <HeroBandTitle as="h1">Bellevue Estate & Trust Property Sales — Built for Higher-Value Homes</HeroBandTitle>
+      <HeroBandTitle as="h1">Bellevue Estate & Trust Property Sales: Built for Higher-Value Homes</HeroBandTitle>
 
       {/* Intro — relocated out of the title band. The band carries the
           page title and nothing else, sitewide. */}
@@ -112,7 +112,7 @@ const BellevueProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Bellevue estate sales often involve trust-owned property, multiple beneficiaries, and homes in the $1.5M–$5M range where a 2% pricing error becomes a six-figure mistake. Bridle Trails, Somerset, West Bellevue, and Newport Shores each carry their own buyer expectations — and the prep that makes sense for a Medina view home is rarely the prep that makes sense for a Crossroads condo.
+            Bellevue estate sales often involve trust-owned property, multiple beneficiaries, and homes in the $1.5M–$5M range, where a 2% pricing error reaches six figures at the top end. Bridle Trails, Somerset, West Bellevue, and Newport Shores each have their own buyer expectations, and the preparation that suits a Medina view home is rarely what suits a Crossroads condo.
           </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const BellevueProbateEstate = () => {
               When Families and Fiduciaries in Bellevue Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Property transitions in Bellevue often involve higher stakes, more parties, and greater sensitivity. These are the situations that most often bring families and professionals to Real Property Planning:
+              Bellevue property transitions often involve high values, several parties, and sensitive family matters. Families and professionals usually contact Real Property Planning for one of these reasons:
             </p>
             <ul className="space-y-4">
               {[
@@ -134,7 +134,7 @@ const BellevueProbateEstate = () => {
                 "Multiple family members or beneficiaries involved in decisions",
                 "High-value property where pricing mistakes can be costly",
                 "Home needing preparation before sale to meet Bellevue buyer expectations",
-                "Attorney or fiduciary seeking a reliable Eastside real estate resource",
+                "Attorney or fiduciary looking for a local Eastside real estate contact",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={22} className="mt-0.5 shrink-0" />
@@ -154,13 +154,13 @@ const BellevueProbateEstate = () => {
               Why Bellevue Properties Often Require a More Careful Approach
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Bellevue properties frequently carry higher values and greater pricing sensitivity than homes in surrounding communities. A mid-century rambler in Enatai, a newer construction in West Bellevue, and a family estate in Somerset each present very different opportunities — and risks. In estate and trust situations, understanding these distinctions is essential.
+              Bellevue homes often carry higher values and more pricing sensitivity than homes in surrounding communities. A mid-century rambler in Enatai, newer construction in West Bellevue, and a family estate in Somerset each come with different opportunities and risks, and an estate or trust sale has to account for those differences before a price is set.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Buyer expectations in Bellevue are also higher. Condition, presentation, and timing all influence the outcome. Listing a property before it's properly prepared — or pricing it without a clear understanding of the neighborhood market — can cost families tens of thousands of dollars.
+              Buyer expectations are higher too. Condition, presentation, and timing all affect the result. Listing before the property is properly prepared, or pricing it without a clear read on the neighborhood market, can cost a family tens of thousands of dollars.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating high-stakes property decisions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} begins with valuation. That supports defensible pricing and organized communication with attorneys and trustees when a lot of money rides on the decision.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const BellevueProbateEstate = () => {
         heading="Have a Property Situation in Bellevue?"
         body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, attorneys, trustees, and families handling inherited or trust-owned property in Bellevue and throughout King County.`}
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance on the property questions."
+        microcopy="The consultation carries no obligation and stays on the practical property questions."
       />
 
       {/* Coordination Section */}
@@ -182,13 +182,13 @@ const BellevueProbateEstate = () => {
               Support for Families, Trustees, and Busy Professionals
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Bellevue estate and trust property transitions often involve busy professionals, out-of-state beneficiaries, attorneys, and trustees who need a reliable local resource they can count on. {FEATURED_BROKER.Role} serves as a central point of coordination — managing the details so no one has to do it alone.
+              Bellevue estate and trust property transitions often involve busy professionals, out-of-state beneficiaries, attorneys, and trustees who need a local contact. {FEATURED_BROKER.Role} serves as a central point of coordination and handles the local details.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              That means clear communication with all parties, coordinating vendors for cleanout, repairs, and staging, overseeing property preparation, and handling the process with discretion. Whether you're a trustee managing responsibilities alongside a demanding career, an attorney advising a client, or a family member navigating an emotional transition, {FEATURED_BROKER.role} keeps things organized and moving forward.
+              In practice that means keeping all parties informed, coordinating vendors for cleanout, repairs, and staging, overseeing preparation, and handling the process with discretion. {FEATURED_BROKER.Role} keeps the work organized for a trustee balancing the role with a demanding job, an attorney advising a client, or a family member going through a hard transition.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Complex situations — multiple beneficiaries, sensitive family dynamics, or properties that require significant preparation — are handled with professionalism and care.
+              Multiple beneficiaries, sensitive family dynamics, and properties that need significant preparation are handled the same way: carefully and with discretion.
             </p>
           </div>
         </div>
@@ -202,29 +202,29 @@ const BellevueProbateEstate = () => {
               How {FEATURED_BROKER.roleTitle} Can Help With High-Stakes Property Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Every situation is different, but the approach follows a clear, structured framework designed to reduce uncertainty:
+              Each engagement differs in its details. The sequence is usually this:
             </p>
             <ol className="space-y-6">
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.Role} starts with a confidential conversation to understand who's involved, what authority exists, what the timeline looks like, and what matters most to the parties involved.`,
+                  desc: `The first step is a confidential conversation in which ${FEATURED_BROKER.role} learns who's involved, what authority exists, what the timeline looks like, and what each party needs from the sale.`,
                 },
                 {
                   title: "Reviewing the Property and Ownership Context",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, reviews the ownership structure, and identifies factors that may affect value, preparation needs, or the sales approach.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} inspects the home in person, reviews the ownership structure, and identifies factors that may affect value, preparation needs, or the sales approach.`,
                 },
                 {
                   title: "Eastside Pricing Strategy",
-                  desc: `Drawing on certified appraisal experience and Bellevue neighborhood-level market data, ${FEATURED_BROKER.role} develops pricing that's defensible, realistic, and designed to protect the interests of all parties.`,
+                  desc: `Pricing comes from certified appraisal methods and Bellevue neighborhood-level market data, with the aim of a figure that is realistic, defensible, and fair to all parties.`,
                 },
                 {
                   title: "Coordinating Preparation and Next Steps",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, trustees, cleanout vendors, contractors, and staging professionals to keep the process organized and all parties aligned.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} keeps attorneys, trustees, cleanout vendors, contractors, and stagers on the same schedule so the parties stay aligned.`,
                 },
                 {
-                  title: "Guiding the Sale With Clarity and Professionalism",
-                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details with consistent communication, clear updates, and a calm approach that keeps the process moving toward resolution.`,
+                  title: "Guiding the Sale Through Closing",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} manages the listing and closing details, keeps every party updated, and keeps the sale moving until it closes.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -309,7 +309,7 @@ const BellevueProbateEstate = () => {
               A Clear Next Step for Bellevue Property Decisions
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-              If you are handling an inherited or trust-owned property in Bellevue and want a calm, informed perspective, a short conversation can often bring immediate clarity.
+              If you are handling an inherited or trust-owned property in Bellevue, a short conversation can cover the value questions, the parties involved, and what to do first.
             </p>
             <div className="flex justify-center">
               <Link to="/contact?reason=estate-property">

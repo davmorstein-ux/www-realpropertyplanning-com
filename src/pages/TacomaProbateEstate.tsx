@@ -19,32 +19,32 @@ const faqs = [
   {
     question: "How does selling an inherited home work in Tacoma?",
     answer:
-      `Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. ${FEATURED_BROKER.Role} coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.`,
+      `Selling an inherited home in Tacoma usually means confirming legal authority (through probate or trust administration), evaluating the property's condition, and settling on a realistic pricing and preparation plan. ${FEATURED_BROKER.Role} coordinates the work from the first assessment through closing and keeps everyone involved updated on the timeline.`,
   },
   {
     question: "What should a Tacoma executor do first with an inherited property?",
     answer:
-      `Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.`,
+      `Start by securing the property and confirming that you have legal authority to act. Then get an honest read on its condition and value. Inherited homes in Tacoma often have years of deferred maintenance. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and lay out your options before you choose a course.`,
   },
   {
     question: `How does ${FEATURED_BROKER.role}'s appraisal background help with Tacoma properties?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} prices from a condition assessment and neighborhood-level market data rather than automated estimates. That helps in Tacoma, where property values can change considerably from one neighborhood to the next.`,
   },
   {
     question: "Can you get help if I live out of state but the property is in Tacoma?",
     answer:
-      `Yes. ${FEATURED_BROKER.Role} regularly works with out-of-state executors and family members managing Tacoma properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
+      `Yes. ${FEATURED_BROKER.Role} works with out-of-state executors and family members who manage Tacoma properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendors, preparation, and the sale, and sends updates along the way, which saves you trips you would otherwise have to make.`,
   },
   {
     question: "Should I fix up an inherited home in Tacoma before selling?",
     answer:
-      `It depends on the home's condition, your budget, and your timeline. ${FEATURED_BROKER.Role} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.`,
+      `That turns on three things: the home's condition, your budget, and your timeline. ${FEATURED_BROKER.Role} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to judge which improvements are likely to raise the sale price by more than they cost, and which aren't worth it. Sometimes selling as-is makes sense; other times a few targeted repairs make a real difference.`,
   },
   {
     question: "How long does it take to sell an estate property in Tacoma?",
     answer:
-      `Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a timeline around your specific situation.`,
+      `Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Well-priced Tacoma homes typically sell within a few weeks once authority is in place and the property is ready. ${FEATURED_BROKER.Role} can give you a realistic schedule for your own property.`,
   },
 ];
 
@@ -104,7 +104,7 @@ const TacomaProbateEstate = () => {
         <ProbateStartHere />
 
       {/* Hero */}
-      <HeroBandTitle as="h1">Inherited Tacoma Homes — North End Craftsmans to South End Ramblers</HeroBandTitle>
+      <HeroBandTitle as="h1">Inherited Tacoma Homes: North End Craftsmans to South End Ramblers</HeroBandTitle>
 
       {/* Intro — relocated out of the title band. The band carries the
           page title and nothing else, sitewide. */}
@@ -112,7 +112,7 @@ const TacomaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Many Tacoma estate homes were built before 1950 and carry decades of deferred maintenance — character-rich houses in the North End and Stadium District, mid-century ramblers in the South End, and post-war homes across Hilltop and Eastside. The right move is rarely "fix everything"; it's knowing which targeted repairs the Tacoma buyer pool will actually pay for, and which ones to skip.
+            Many Tacoma estate homes were built before 1950 and carry decades of deferred maintenance: older character houses in the North End and Stadium District, mid-century ramblers in the South End, and post-war homes across Hilltop and Eastside. Fixing everything is rarely the answer. The useful question is which repairs Tacoma buyers will actually pay for, and which ones to skip.
           </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const TacomaProbateEstate = () => {
               When Families in Tacoma Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Inheriting a property or becoming responsible for selling one is rarely something families plan for. These are some of the situations that bring Tacoma families and professionals to {FEATURED_BROKER.role}:
+              Tacoma families and professionals usually get in touch with {FEATURED_BROKER.role} in situations like these:
             </p>
             <ul className="space-y-4">
               {[
@@ -154,13 +154,13 @@ const TacomaProbateEstate = () => {
               Why Tacoma Estate Properties Need a Practical Strategy
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Tacoma includes a wide range of neighborhoods, price points, and property conditions — from the historic homes of Stadium District and Old Town to the mid-century ramblers of South Tacoma and the waterfront properties of Ruston and Point Defiance. What works in one area may not apply in another, and inherited homes often come with unique challenges that standard marketing doesn't address.
+              Tacoma covers a wide range of neighborhoods, price points, and property conditions, from the historic homes of Stadium District and Old Town to the mid-century ramblers of South Tacoma and the waterfront properties of Ruston and Point Defiance. What works in one area may not apply in another, and inherited homes often raise problems that standard marketing doesn't address.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Many inherited properties in Tacoma have been lived in for decades. Deferred maintenance, dated systems, and personal belongings are common. Practical strategy — knowing when to invest in preparation and when to sell as-is — matters as much as marketing. The wrong approach can cost families time, money, and unnecessary stress.
+              Many inherited properties in Tacoma have been lived in for decades. Deferred maintenance, dated systems, and personal belongings are common. Knowing when to spend on preparation and when to sell as-is matters as much as marketing, and getting it wrong can cost a family time and money.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective grounded in actual property condition and neighborhood-level market data. This dual expertise provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families navigating difficult decisions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} starts from value: the property's actual condition and neighborhood-level market data. That supports pricing that can be defended and clearer communication with attorneys and courts.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const TacomaProbateEstate = () => {
         heading="Have a Property Situation in Tacoma?"
         body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County.`}
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance on the property questions."
+        microcopy="There is no obligation; the call is about the practical property questions."
       />
 
       {/* Out-of-State / Coordination */}
@@ -182,13 +182,13 @@ const TacomaProbateEstate = () => {
               Support for Families Handling Property From a Distance
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Many families managing Tacoma estate property live elsewhere — across the state, across the country, or even internationally. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely adds significant stress during an already difficult time.
+              Families managing Tacoma estate property often live elsewhere: across the state, across the country, or abroad. Coordinating vendors, getting into the property, understanding local conditions, and running a sale remotely is a lot to take on from a distance.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.Role} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keep you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              {FEATURED_BROKER.Role} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} handles access to the house, lines up cleanout crews, contractors, and preparation vendors, stays in contact with attorneys and other parties, and keeps you updated. That cuts down on travel and makes it less likely that a task gets missed.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're managing from Portland, Phoenix, or across the country, {FEATURED_BROKER.role}'s goal is to make the process as clear and manageable as possible from wherever you are.
+              The arrangement is the same from Portland, Phoenix, or the other side of the country: {FEATURED_BROKER.role} aims to keep the process clear and manageable wherever you are.
             </p>
           </div>
         </div>
@@ -202,17 +202,17 @@ const TacomaProbateEstate = () => {
               How {FEATURED_BROKER.roleTitle} Can Help Bring Structure to the Process
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Every situation is different, but the approach follows a clear, repeatable framework:
+              Each estate differs in its details, though the work generally runs in this order:
             </p>
             <ol className="space-y-6">
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch — to understand who's involved, what authority exists, what the property looks like, and what the goals are.`,
+                  desc: `${FEATURED_BROKER.Role} begins with a conversation (not a sales pitch) to learn who's involved, what authority exists, what the property looks like, and what the goals are.`,
                 },
                 {
                   title: "Evaluating the Property",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, identifies issues that affect value, and notes what preparation might be worthwhile — and what isn't worth the cost or delay.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, identifies issues that affect value, and notes which preparation might be worthwhile and which isn't worth the cost or delay.`,
                 },
                 {
                   title: "Tacoma Pricing Strategy",
@@ -224,7 +224,7 @@ const TacomaProbateEstate = () => {
                 },
                 {
                   title: "Guiding the Process From Start to Finish",
-                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details so you can focus on what matters most. Clear updates, no surprises, and a calm, structured path to resolution.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} handles the details from listing through closing and sends updates as the sale progresses.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -310,7 +310,7 @@ const TacomaProbateEstate = () => {
               A Practical Next Step for Tacoma Families
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-              If you are dealing with an inherited or estate property in Tacoma and need help deciding what to do next, a short conversation can often make the path forward much clearer.
+              If you are dealing with an inherited or estate property in Tacoma and need help deciding what to do next, a short conversation can help sort out what to do first.
             </p>
             <div className="flex justify-center">
               <Link to="/contact?reason=estate-property">

@@ -35,7 +35,7 @@ const pathways: Pathway[] = [
     letter: "1",
     title: "Understanding What Preparation Actually Matters",
     description:
-      "Learn how families often evaluate repairs, updates, cleanout, safety issues, and market readiness before selling.",
+      "How to weigh repairs, updates, cleanout, safety issues, and market readiness before selling.",
     href: "/what-to-do-with-the-house",
     icon: iconHome,
   },
@@ -43,7 +43,7 @@ const pathways: Pathway[] = [
     letter: "2",
     title: "Deciding Whether Repairs Are Worth Doing",
     description:
-      "Guidance for understanding when repairs, updates, or improvements may help — and when they may create unnecessary stress or expense.",
+      "When repairs, updates, or improvements may help the sale, and when they may add cost and stress without paying off.",
     href: "/guides/repairs-before-selling-probate-home-washington",
     icon: iconDocument,
   },
@@ -51,7 +51,7 @@ const pathways: Pathway[] = [
     letter: "3",
     title: "Cleaning Out & Organizing the Home",
     description:
-      "Support for organizing belongings, reducing overwhelm, estate cleanout, donations, and preparing the property gradually.",
+      "Sorting belongings, estate cleanout, donations, and preparing the property in stages.",
     href: "/downsizing-preparing-for-transition",
     icon: iconHeartHands,
   },
@@ -59,7 +59,7 @@ const pathways: Pathway[] = [
     letter: "4",
     title: "Preparing an Inherited or Estate Property",
     description:
-      "Guidance involving probate, inherited homes, executor coordination, occupancy concerns, valuation, and family communication.",
+      "Probate, inherited homes, executor coordination, occupancy, valuation, and family communication.",
     href: "/estate-probate-inherited-property",
     icon: iconExecutor,
   },
@@ -67,31 +67,31 @@ const pathways: Pathway[] = [
     letter: "5",
     title: "Understanding As-Is vs Prepared Sales",
     description:
-      "Learn how different preparation levels may affect timing, stress, convenience, and marketability.",
+      "How the level of preparation may affect timing, effort, convenience, and marketability.",
     href: "/guides/sell-inherited-house-as-is-or-fix",
     icon: iconBookOpen,
   },
   {
     letter: "6",
-    title: "Building the Right Support Team",
+    title: "Building a Support Team",
     description:
-      "Understanding how real estate professionals, appraisers, estate liquidators, move managers, contractors, attorneys, and advisors may help simplify the process.",
+      "How real estate professionals, appraisers, estate liquidators, move managers, contractors, attorneys, and advisors can share the work.",
     href: "/building-your-professional-team",
     icon: iconAssisted,
   },
 ];
 
 const challenges = [
-  { title: "Emotional attachment to the home", body: "Decades of memory live in the walls. That attachment is real and worth honoring." },
-  { title: "Feeling overwhelmed by belongings", body: "Working in small sessions, one room or category at a time, usually feels manageable." },
+  { title: "Emotional attachment to the home", body: "A home lived in for decades carries memories, and that slows some decisions down. Allow extra time for those." },
+  { title: "Feeling overwhelmed by belongings", body: "Work in short sessions, one room or one category at a time." },
   { title: "Family disagreements", body: "A written plan and shared expectations typically reduce friction." },
-  { title: "Deciding what repairs are worthwhile", body: "Not every repair adds value. A professional opinion clarifies what truly matters." },
-  { title: "Time pressure", body: "Most timelines are more flexible than they first appear. A pause to plan often saves time later." },
-  { title: "Caregiver stress", body: "Recognizing burnout early prevents larger problems for the family and the property." },
-  { title: "Uncertainty about property value", body: "A certified appraisal or market analysis usually replaces guessing with clarity." },
+  { title: "Deciding what repairs are worthwhile", body: "Not every repair adds value. A real estate professional can say which ones are likely to pay off." },
+  { title: "Time pressure", body: "Timelines are often more flexible than they first appear, and a short pause to plan often saves time later." },
+  { title: "Caregiver stress", body: "Noticing burnout early can head off larger problems for the family and the property." },
+  { title: "Uncertainty about property value", body: "A certified appraisal or a market analysis gives the family a figure to work from instead of a guess." },
   { title: "Occupancy concerns", body: "Vacant or partially occupied homes need active care, insurance, and a clear plan." },
   { title: "Coordinating inherited property decisions", body: "Authority, valuation, and family alignment usually come before preparation begins." },
-  { title: "Fear of making costly mistakes", body: "Most mistakes are avoidable with one good conversation before spending money." },
+  { title: "Fear of making costly mistakes", body: "Many costly mistakes can be avoided by getting advice before spending money." },
 ];
 
 const considerations = [
@@ -110,12 +110,12 @@ const considerations = [
 const mistakes = [
   { title: "Spending too much on unnecessary repairs", body: "Many updates do not return their cost. A professional opinion helps prioritize." },
   { title: "Delaying decisions because the process feels overwhelming", body: "Small, steady steps usually move things forward faster than waiting for clarity." },
-  { title: "Throwing away important belongings too quickly", body: "Sentimental and valuable items deserve a careful first pass before disposal." },
+  { title: "Throwing away important belongings too quickly", body: "Go through the house carefully for sentimental and valuable items before anything is thrown out." },
   { title: "Ignoring safety or maintenance concerns", body: "Roof, water, and security issues compound quickly when left unaddressed." },
-  { title: "Guessing the property's value", body: "A certified appraisal protects family decisions and supports defensible choices." },
-  { title: "Failing to coordinate family communication", body: "Silence often becomes the source of the conflict families most want to avoid." },
-  { title: "Waiting too long to seek professional guidance", body: "A short conversation early usually prevents bigger problems later." },
-  { title: "Trying to handle everything alone", body: "A small, coordinated team typically reduces stress and protects the outcome." },
+  { title: "Guessing the property's value", body: "A certified appraisal gives the family a documented value to base decisions on." },
+  { title: "Failing to coordinate family communication", body: "When family members are not kept informed, disagreements become more likely." },
+  { title: "Waiting too long to seek professional guidance", body: "Getting advice early can head off bigger problems later." },
+  { title: "Trying to handle everything alone", body: "Sharing the work with a small, coordinated team usually makes it more manageable." },
 ];
 
 const faqs = [
@@ -137,12 +137,12 @@ const faqs = [
   {
     question: "Should we sell as-is?",
     answer:
-      "It depends on the property, the family's energy, and the timeline. As-is can simplify the process; targeted preparation may improve the outcome. A short consult usually clarifies which path fits.",
+      "It depends on the property, the family's energy, and the timeline. As-is can simplify the process; targeted preparation may improve the outcome. A short conversation with a real estate professional usually shows which makes more sense.",
   },
   {
     question: "What if family members disagree?",
     answer:
-      "Neutral information — a certified valuation, a written preparation plan, and clear roles — typically helps families find common ground.",
+      "Neutral information, such as a certified valuation, a written preparation plan, and clear roles, typically helps families agree on a plan.",
   },
   {
     question: "What if someone is still living in the home?",
@@ -152,29 +152,29 @@ const faqs = [
   {
     question: "Should valuation happen before repairs?",
     answer:
-      "Often, yes. Valuation in the home's current condition usually informs which repairs are worth doing — and which are not.",
+      "Often, yes. Valuation in the home's current condition usually shows which repairs are worth doing and which are not.",
   },
   {
     question: "What professionals may help coordinate the process?",
     answer:
-      "A real estate professional, certified appraiser, senior move manager, estate liquidator, contractor, and — when applicable — an attorney and CPA often work together.",
+      "A real estate professional, certified appraiser, senior move manager, estate liquidator, and contractor often work together, along with an attorney and CPA when needed.",
   },
   {
     question: "How do families reduce stress during preparation?",
     answer:
-      "Realistic timelines, one decision at a time, and a small, coordinated team usually replace pressure with a calmer rhythm.",
+      "Realistic timelines, one decision at a time, and a small, coordinated team usually make the work more manageable.",
   },
   {
     question: "What if everything feels overwhelming?",
     answer:
-      "That is normal. Slowing down, focusing on one room or one category, and starting with a single conversation often changes the experience quickly.",
+      "It often does at the start. Slowing down, working on one room or one category at a time, and starting with a single conversation usually help.",
   },
 ];
 
 const continueJourney = [
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
   { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconExecutor },
-  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
+  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "Organizing belongings and planning the move.", icon: iconHeartHands },
   { href: "/date-of-death-valuation-property-appraisals", title: "Date-of-Death Valuation & Property Appraisals", description: "Understand how valuation supports estate decisions.", icon: iconDocument },
   { href: "/executor-responsibilities-first-steps", title: "Executor Responsibilities & First Steps", description: "A first-step roadmap for executors and families.", icon: iconBookOpen },
 ];
@@ -182,9 +182,9 @@ const continueJourney = [
 const nextSteps = [
   "Understand the property's condition and transition needs",
   "Decide what preparation may actually be worthwhile",
-  "Organize belongings and reduce overwhelm gradually",
-  "Build the right support team",
-  "Move through the process one step at a time",
+  "Organize belongings in stages",
+  "Build a support team",
+  "Take the work one step at a time",
 ];
 
 const jsonLd = articleSchema({
@@ -256,13 +256,13 @@ const PreparingHomeForSaleDuringTransition = () => {
             <div className="max-w-3xl mx-auto text-center">
               <HeartHandshake className="w-10 h-10 text-gold mx-auto mb-5" aria-hidden="true" />
               <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-4">
-                Many Families Feel Overwhelmed by the Process
+                Several Decisions Arrive at Once
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed">
-                Preparing a longtime family home often involves emotional decisions,
-                belongings, repairs, and timing concerns at the same time. This guide
-                is designed to help families avoid expensive mistakes and move forward
-                more calmly.
+                Preparing a longtime family home for sale usually means handling
+                belongings, repairs, timing, and hard family decisions at the same
+                time. This guide sets out the steps and the mistakes that tend to
+                cost the most.
               </p>
             </div>
           </div>
@@ -332,13 +332,13 @@ const PreparingHomeForSaleDuringTransition = () => {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  You Are Not Alone
+                  What Gets in the Way
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Common Challenges Families Face
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what's hard often makes it easier to move forward.
+                  Each of these has a practical first step.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -370,8 +370,8 @@ const PreparingHomeForSaleDuringTransition = () => {
                   Many People Don't Know What Questions to Ask
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Most families are unsure how much preparation is necessary, which
-                  repairs matter, or how valuation connects to the decisions ahead.
+                  It is often unclear how much preparation is needed, which repairs
+                  matter, or how valuation connects to the decisions ahead.
                 </p>
               </div>
               <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_2px_8px_-4px_rgba(27,43,75,0.10)]">
@@ -408,7 +408,7 @@ const PreparingHomeForSaleDuringTransition = () => {
                   Common Mistakes to Avoid
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what often goes wrong makes it easier to plan well.
+                  Mistakes that come up often, and how to avoid them.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -446,10 +446,10 @@ const PreparingHomeForSaleDuringTransition = () => {
                   Keep Going
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
+                  Where to Go Next
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families preparing a home for sale often continue exploring these next steps.
+                  Related guides on selling, downsizing, valuation, and executor duties.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -485,7 +485,7 @@ const PreparingHomeForSaleDuringTransition = () => {
                   Simple Next Steps
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
+                  An Action Plan in Five Steps
                 </h2>
               </div>
               <ol className="space-y-4">
