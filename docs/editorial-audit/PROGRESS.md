@@ -20,6 +20,7 @@ Started Nov 3, 2026 on branch `editorial-audit`. Brief: owner's "Master Prompt â
 | Batch 6: jefferson-county, island-county, pacific-county, bellingham-probate-estate-real-estate, estate probate-and-legal-authority, articles/senior-housing-guide, guides/senior-transition-differences, estate-liquidation/learn-more, planning conversations-to-have | Live Nov 3 |
 | Batch 7: benton, lewis, pierce, snohomish, grays-harbor, skamania counties; resources/cpas-financial-advisors, understanding-senior-transitions, understanding-housing-care-options, professionals/home-preparation, estate professional-team, aging-in-place-staying-home-safely, guides/who-has-authority-sell-probate-property-washington, afh-club/how-to-finance-an-afh | Live Nov 3 |
 | Batch 8: spokane-county, whatcom-county, for-probate-attorneys, for-estate-planning-attorneys, professionals/estate-sale, professionals/financial-planners, guides/pricing-house-trust-estate, guides/how-probate-real-estate-works, guides/executor-sell-house-before-probate-washington, tacoma/olympia/bellevue probate pages, retirement-reverse-mortgage, preparing-home-for-sale-during-transition; shared lead-ins (JourneyOrientation) and the RelatedServices inherited-house blurb de-dashed | Live Nov 3 |
+| Batch 9: how-the-process-works, realtor, downsizing-preparing-for-transition, estate-liquidation, aging-life-care-managers, medicare-providers, legal-plans-identity-protection, guides/how-long-sell-probate-property, guides/heirs-disagree-selling-house, long-term-care/medicaid-and-long-term-care, long-term-care/short-term-nursing-home-stays, kitsap-county, counties hub, estate what-to-do-with-the-property, real-estate-attorneys, for-elder-law-attorneys; shared RelatedServices blurbs, RemodelWorthCallout and hub seal alt text de-dashed | Edited Nov 3, awaiting merge |
 | Em-dash-only pass still due: legal-duties, working-with-professionals and every 'none'/'light' page | Not started |
 | All other pages | Not started (see inventory.csv status column) |
 
@@ -41,6 +42,8 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - /articles/ccrc-costs
 - /articles/affordable-senior-housing
 - /articles/senior-housing-guide
+- /long-term-care/medicaid-and-long-term-care
+- /long-term-care/short-term-nursing-home-stays
 
 ## Claims flagged for fact review (meaning left unchanged)
 - silver-tsunami: 10,000/day in 2011; wave to ~2030; "Peak 65" most concentrated aging period; "vast majority" prefer aging in place; regional senior housing shortages; 20-25 more years after 65; caregiver shortage worsening. Sourced but not re-checked: 11,000/day and 4.1M/yr (Alliance for Lifetime Income), 1 in 5 by 2030 (Census), AARP 2024 savings figures.
@@ -97,3 +100,18 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - for-probate-attorneys: appraisal "referral resources" line reads oddly when broker is also the appraiser; FAQ question uses "you".
 - for-estate-planning-attorneys: appraiser credential stated unconditionally (other pages use SAME_PERSON).
 - retirement-reverse-mortgage: "tax-free", "no monthly payments" lack taxes/insurance/upkeep caveat; non-borrowing spouse protections not mentioned; lender bios (Bartel "informed decisions", McGinnis "top producers", "trusted") need owner decision.
+- BATCH 9 FIXES/FLAGS:
+- Fixed: heirs-disagree "What This Means in Practice" now says the PR decides during probate and heirs become co-owners after distribution (matched the page's own FAQ 3); Kitsap Kingston ferry now runs to Edmonds, not Seattle.
+- medicare-providers: "permanent" late penalties absolute (Part A penalty is time-limited; Extra Help exceptions); Part B premium "income-based" (standard premium plus IRMAA); "Annual Enrollment Period" (CMS: Open Enrollment); MA OEP limits not stated; "up to 100 days" lacks benefit-period/coinsurance detail; "directory is being built" stale; bios (Bolton, Gillespie) contain tells.
+- legal-plans: "Plans are not insurance" absolute (check WA regulation); older adults "targeted disproportionately" unsourced; Upchurch bio dated figures.
+- medicaid-and-ltc: "only state with a mandatory public LTC insurance program" (re-check); "largest payer of LTC", "most AFHs hold a Medicaid contract" unsourced; PACE "55 to 64 and blind or disabled" wording.
+- short-term-stays: "consistently see better outcomes" unsourced.
+- how-long-sell: cleanout "before legal authority is granted" (legal review); King/Pierce caseloads, 30-45 days unsourced; letters of administration not mentioned.
+- heirs-disagree: partition can divide or sell (ch. 7.52 RCW).
+- what-to-do-with-property: buyout "at the appraised value" too firm; step-up wording.
+- aging-life-care-managers: "certifications through ALCA" (CMC is from a separate certifying body); no listing standard sentence; bios contain promotional claims.
+- realtor: 5.0 / 16 reviews hardcoded; same four badges on every review; memberships unverified; service area "across Washington State" vs SEO "Puget Sound region".
+- how-the-process-works: "2-3 months" and $5k/$15k, $40k/$20k example unsourced; appraisal-training lens stated unconditionally.
+- for-real-estate-attorneys, for-estate-planning: appraiser credential stated without SAME_PERSON guard.
+- counties hub: paragraph 3 says "Select a county above" (cards are below, no city lists); SEO description names Yakima and Franklin but hub has no cards for them; King card "well over a million dollars" unsourced.
+- kitsap: "Scandinavian heritage" for Kingston doubtful.

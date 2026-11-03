@@ -28,37 +28,37 @@ const steps = [
   {
     number: "01",
     title: "Initial Consultation",
-    text: "Every sale begins with a conversation about the property, the people involved, and the circumstances driving the decision. A licensed broker listens to understand the full picture — legal authority, family dynamics, timeline pressures, and financial goals. Whether you are an executor managing your first estate, an attorney referring a client, or a family navigating a senior transition, this conversation establishes the foundation for everything that follows.",
+    text: "Every sale begins with a conversation about the property, the people involved, and the reasons for selling. A licensed broker asks about legal authority, family dynamics, timeline pressures, and financial goals. For an executor handling a first estate, an attorney referring a client, or a family helping a parent move, this conversation sets the plan for the steps that follow.",
   },
   {
     number: "02",
     title: "Property Review and Pricing Discussion",
-    text: "A licensed broker visits the property to assess its condition, identify features that affect value, and evaluate what the market is likely to see. The assessment draws on certified appraisal experience — giving you a realistic pricing perspective that accounts for deferred maintenance, outdated systems, unusual layouts, and condition-related factors that automated tools consistently miss.",
+    text: "A licensed broker visits the property to assess its condition, identify features that affect value, and evaluate what the market is likely to see. A broker with appraisal training can give a realistic pricing view that accounts for deferred maintenance, outdated systems, unusual layouts, and other condition factors that automated estimates often miss.",
   },
   {
     number: "03",
     title: "Coordination of Cleanout, Repairs, and Vendor Management",
-    text: "Many estate and inherited homes need significant work before they are ready for the market. Personal belongings need to be sorted and removed. Deferred repairs need to be addressed. Landscaping, cleaning, and sometimes light staging are needed to present the property effectively. A broker experienced in estate property coordinates this process — scheduling vendors, managing timelines, and overseeing the work so you do not have to be on-site or manage contractors yourself.",
+    text: "Estate and inherited homes often need significant work before they are ready for the market. Personal belongings need to be sorted and removed. Deferred repairs need to be addressed. Landscaping, cleaning, and sometimes light staging are needed to present the property effectively. A broker experienced in estate property can coordinate this: scheduling vendors, managing timelines, and overseeing the work so you do not have to be on-site or manage contractors yourself.",
   },
   {
     number: "04",
     title: "Listing Preparation and Marketing Strategy",
-    text: "Once the property is ready, your listing broker develops a marketing plan tailored to the home's specific strengths, target buyer profile, and local market conditions. This includes professional photography, compelling listing descriptions, strategic pricing, and targeted exposure through MLS, online platforms, and agent networks.",
+    text: "Once the property is ready, your listing broker develops a marketing plan tailored to the home's specific strengths, target buyer profile, and local market conditions. This includes professional photography, listing descriptions, pricing, and exposure through MLS, online platforms, and agent networks.",
   },
   {
     number: "05",
     title: "Offer Review, Negotiation, and Contract Management",
-    text: "When offers arrive, your broker reviews each one thoroughly — evaluating not just the price, but the terms, contingencies, financing strength, and closing timeline. The options are presented clearly, and your broker negotiates on your behalf to protect the estate's interests. In multi-offer situations, a broker helps you navigate competing bids with a strategy focused on certainty of closing and net proceeds.",
+    text: "When offers arrive, your broker reviews each one for price, terms, contingencies, financing strength, and closing timeline, lays out the options, and negotiates on your behalf to protect the estate's interests. With multiple offers, a broker can help you weigh competing bids with a focus on certainty of closing and net proceeds.",
   },
   {
     number: "06",
     title: "Escrow and Closing Coordination",
-    text: "From accepted offer to closing day, your broker manages the transaction details — inspection responses, appraisal coordination, title issues, repair negotiations, and communication with all parties including the buyer's agent, escrow officer, and your attorney if applicable. A broker tracks deadlines, anticipates problems, and keeps the transaction moving toward a successful close.",
+    text: "From accepted offer to closing day, your broker manages the transaction details: inspection responses, appraisal coordination, title issues, repair negotiations, and communication with all parties including the buyer's agent, escrow officer, and your attorney if applicable. A broker tracks deadlines, anticipates problems, and keeps the transaction moving toward closing.",
   },
   {
     number: "07",
     title: "Post-Sale Support",
-    text: "After closing, a good broker remains available for questions about final documentation, tax-related inquiries you may want to discuss with your CPA, or any loose ends related to the property. For families managing ongoing estate matters or additional properties, that continuity and single point of contact matters for future real estate needs.",
+    text: "After closing, a broker is usually still available for questions about final documentation, tax-related inquiries you may want to discuss with your CPA, or any loose ends related to the property. For families with ongoing estate matters or other properties, keeping the same contact can help with later real estate needs.",
   },
 ];
 
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: "Do I need to be local to manage an estate property sale?",
     answer:
-      "No. Many clients — especially executors and trustees — are managing property from out of state. A local broker can provide hands-on coordination and keep you informed through regular updates, so you can participate in decisions without needing to be physically present.",
+      "No. Executors and trustees often manage property from out of state. A local broker can handle the on-site coordination and send regular updates, so you can take part in decisions without being there in person.",
   },
   {
     question: "What happens if the property needs major repairs?",
@@ -86,7 +86,7 @@ const faqs = [
   {
     question: "How is an estate-focused broker different from a regular real estate agent?",
     answer:
-      "Most agents focus on listing and selling. A broker who specialises in estate property starts earlier — with property assessment, valuation analysis, preparation coordination, and family communication — and continues through closing and beyond. Appraisal credentials, where a broker holds them, add pricing depth that standard agents cannot offer.",
+      "Most agents focus on listing and selling. A broker who specialises in estate property usually starts earlier, with property assessment, valuation analysis, preparation coordination, and family communication, and continues through closing and beyond. Appraisal credentials, where a broker holds them, add pricing depth that most agents do not have.",
   },
 ];
 
@@ -235,8 +235,7 @@ const HowTheProcessWorks = () => {
                 How Is Selling Estate Property Different From a Standard Home Sale?
               </h2>
               <p className="text-foreground text-lg leading-relaxed mb-6">
-                Estate, probate, and senior transition sales are fundamentally different from conventional transactions.
-                Here's why:
+                Estate, probate, and senior transition sales differ from a conventional sale in three ways:
               </p>
               <Accordion type="single" collapsible className="space-y-3">
                 {[
@@ -248,12 +247,12 @@ const HowTheProcessWorks = () => {
                   {
                     value: "early",
                     q: "Why does an estate-focused broker start earlier than most agents?",
-                    a: "Early planning prevents the most common and costly mistakes. Work often begins before the property is ready to list — assessing condition, coordinating with attorneys, and helping families align on strategy.",
+                    a: "Early planning helps avoid the most common and costly mistakes. Work often begins before the property is ready to list: assessing condition, coordinating with attorneys, and helping families agree on a plan.",
                   },
                   {
                     value: "adapt",
                     q: "How does the process adapt to each situation?",
-                    a: "Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity. The process adapts — whether that means a compressed timeline for a court-ordered sale or a longer runway for family decision-making.",
+                    a: "Some clients need sale guidance right away. Others need time, planning, family coordination, or help with valuation. The timeline changes to fit: compressed for a court-ordered sale, longer when a family needs time to decide.",
                   },
                 ].map((item) => (
                   <AccordionItem
@@ -292,10 +291,10 @@ const HowTheProcessWorks = () => {
               </h2>
               <div className="space-y-5 text-foreground leading-relaxed">
                 <p>
-                  Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit
-                  vacant for months while legal authority is established, insurance and utility issues need to be
-                  managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance,
-                  maintenance, and HOA fees — continue to accumulate.
+                  Selling estate property usually takes more than listing it. These homes often sit vacant for months
+                  while legal authority is established, insurance and utility issues need to be managed, and the
+                  property's condition may deteriorate. Meanwhile, carrying costs (taxes, insurance, maintenance, and
+                  HOA fees) keep adding up.
                 </p>
                 <p>
                   Because these pressures are so common, a good licensed broker helps{" "}
@@ -303,11 +302,11 @@ const HowTheProcessWorks = () => {
                     executors
                   </Link>
                   , attorneys, and families build a timeline that accounts for legal proceedings, property
-                  preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+                  preparation, and market conditions, so the sale is timed for the estate's needs rather than for speed alone.
                   Real Property Planning explains how that works; the site's featured broker is one broker who does it, and you can contact the broker directly or hire anyone you choose.
                 </p>
                 <p>
-                  For properties that need work before listing, each potential improvement is evaluated through a{" "}
+                  For properties that need work before listing, each potential improvement can be weighed through a{" "}
                   <Link
                     to="/why-valuation-matters"
                     className="text-accent hover:text-gold underline underline-offset-4"
@@ -326,11 +325,11 @@ const HowTheProcessWorks = () => {
                   defensible decision-making.
                 </p>
                 <p>
-                  Families and executors throughout the Puget Sound area — from Seattle and Bellevue in King County to
-                  Everett and Edmonds in Snohomish County, Tacoma and Puyallup in Pierce County, and Bremerton and
-                  Silverdale in Kitsap County — face these same challenges. The right approach is the same regardless of
-                  location: assess the property honestly, develop a preparation strategy based on return on investment,
-                  price it correctly for its actual condition, and manage the sale with clear communication throughout.
+                  The same issues come up for families and executors across the Puget Sound area: Seattle and Bellevue
+                  in King County, Everett and Edmonds in Snohomish County, Tacoma and Puyallup in Pierce County, and
+                  Bremerton and Silverdale in Kitsap County. The approach does not change with location: assess the
+                  property honestly, plan preparation based on return on investment, price it for its actual condition,
+                  and keep everyone informed through the sale.
                 </p>
                 <p>
                   For{" "}
@@ -340,8 +339,8 @@ const HowTheProcessWorks = () => {
                   >
                     executors managing property from out of state
                   </Link>
-                  , a broker can handle the entire process remotely — with photo updates, digital document signing, and
-                  regular calls to keep you informed without requiring you to travel for every step.
+                  , a broker can usually handle the process remotely, using photo updates, digital document signing, and
+                  regular calls, so you do not have to travel for every step.
                 </p>
               </div>
             </div>

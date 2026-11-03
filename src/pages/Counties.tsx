@@ -38,7 +38,7 @@ const countyCards = [
     county: "King County",
     href: "/king-county",
     logo: kingCountyLogo,
-    intro: "Washington's largest and most competitive real estate market. Estate properties range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
+    intro: "Washington's largest county, with an active and competitive real estate market. Estate properties range from Capitol Hill bungalows to Eastside homes valued well over a million dollars, so accurate pricing and careful coordination matter.",
   },
   {
     county: "Snohomish County",
@@ -50,25 +50,25 @@ const countyCards = [
     county: "Pierce County",
     href: "/pierce-county",
     logo: pierceCountyLogo,
-    intro: "Military-adjacent communities, established Tacoma neighborhoods, and growing suburban areas each present unique challenges for estate sales. Pierce County properties often require careful condition assessment and realistic buyer-pool analysis.",
+    intro: "Military-adjacent communities, established Tacoma neighborhoods, and growing suburban areas each sell to different buyers. Pierce County estate properties often need a careful condition assessment and a realistic read of the local buyer pool.",
   },
   {
     county: "Kitsap County",
     href: "/kitsap-county",
     logo: kitsapCountyLogo,
-    intro: "Waterfront properties, naval community transitions, and rural acreage create a market where automated valuations consistently miss the mark. Local knowledge and condition-based pricing are essential here.",
+    intro: "Waterfront properties, naval community transitions, and rural acreage make a market where automated valuations often miss. Pricing here depends on local knowledge and the property's condition.",
   },
   {
     county: "Skagit County",
     href: "/skagit-county",
     logo: skagitCountyLogo,
-    intro: "Agricultural properties, small-town homes, and waterfront parcels in the Skagit Valley require a different approach than urban markets. Estate sales here often involve unique zoning, acreage, and condition considerations.",
+    intro: "Agricultural properties, small-town homes, and waterfront parcels in the Skagit Valley need a different approach than urban markets. Estate sales here often involve agricultural zoning, acreage, and condition questions.",
   },
   {
     county: "Clark County",
     href: "/clark-county",
     logo: clarkCountyLogo,
-    intro: "Cross-state families, Portland-area relocation dynamics, and a rapidly growing market make Clark County estate sales uniquely complex — especially for executors coordinating from Oregon or beyond.",
+    intro: "Cross-state families, Portland-area relocation, and a fast-growing market make Clark County estate sales more complicated, especially for executors coordinating from Oregon or farther away.",
   },
   {
     county: "Spokane County",
@@ -80,7 +80,7 @@ const countyCards = [
     county: "Thurston County",
     href: "/thurston-county",
     logo: thurstonCountyLogo,
-    intro: "State capital region with a mix of government-adjacent homes, established neighborhoods, and rural acreage. Retiree transitions and estate planning follow-through are especially common here.",
+    intro: "State capital region with a mix of government-adjacent homes, established neighborhoods, and rural acreage. Retiree transitions and follow-through on estate plans are common here.",
   },
   {
     county: "Whatcom County",
@@ -104,55 +104,55 @@ const countyCards = [
     county: "Grays Harbor County",
     href: "/grays-harbor-county",
     logo: graysHarborCountyLogo,
-    intro: "Grays Harbor spans the coastal communities of Ocean Shores and Westport to the urban twin cities of Aberdeen and Hoquiam. Estate and inherited properties here range from coastal cottages to rural timber parcels — each requiring a different pricing and preparation approach.",
+    intro: "Grays Harbor spans the coastal communities of Ocean Shores and Westport to the urban twin cities of Aberdeen and Hoquiam. Estate and inherited properties here range from coastal cottages to rural timber parcels, and each needs a different pricing and preparation approach.",
   },
   {
     county: "Island County",
     href: "/island-county",
     logo: islandCountyLogo,
-    intro: "Whidbey and Camano Islands offer waterfront living, rural character, and communities that attract retirees and second-home owners. Estate properties on the islands require locally informed guidance and coordination for families managing from the mainland.",
+    intro: "Whidbey and Camano Islands offer waterfront living, rural character, and communities that attract retirees and second-home owners. Estate properties on the islands need local knowledge and on-island coordination for families managing from the mainland.",
   },
   {
     county: "Jefferson County",
     href: "/jefferson-county",
     logo: jeffersonCountyLogo,
-    intro: `Jefferson County's Olympic Peninsula setting — from Port Townsend's Victorian waterfront to the rural Hood Canal communities — creates a distinctive market for estate and inherited properties. ${FEATURED_BROKER.Role} provides experienced guidance for executors and families throughout the area.`,
+    intro: `Jefferson County runs from Port Townsend's Victorian waterfront to the rural Hood Canal communities on the Olympic Peninsula, and estate and inherited properties sell differently in each. ${FEATURED_BROKER.Role} works with executors and families throughout the area.`,
   },
   {
     county: "Lewis County",
     href: "/lewis-county",
     logo: lewisCountyLogo,
-    intro: "Lewis County stretches from Chehalis and Centralia along I-5 to the rural communities of the Cascade foothills. Estate properties here often include older homes, rural acreage, and agricultural parcels that benefit from condition-based pricing and local coordination.",
+    intro: "Lewis County stretches from Chehalis and Centralia along I-5 to the rural communities of the Cascade foothills. Estate properties here often include older homes, rural acreage, and agricultural parcels that need condition-based pricing and local coordination.",
   },
   {
     county: "Mason County",
     href: "/mason-county",
     logo: masonCountyLogo,
-    intro: "Mason County's Hood Canal waterfront, Shelton's small-city character, and the surrounding rural communities create a varied market for estate and transition properties. Waterfront premiums, rural acreage, and limited comparable sales all call for experienced, on-the-ground guidance.",
+    intro: "Mason County's market includes Hood Canal waterfront, Shelton's small-city neighborhoods, and the surrounding rural communities. Waterfront premiums, rural acreage, and limited comparable sales all call for an on-site evaluation.",
   },
   {
     county: "Pacific County",
     href: "/pacific-county",
     logo: pacificCountyLogo,
-    intro: "Pacific County's Long Beach Peninsula, Raymond, and South Bend communities offer coastal and rural properties that attract a specific buyer pool. Estate sales here require pricing calibrated to the local market and buyer demographics — not broad regional averages.",
+    intro: "Pacific County's Long Beach Peninsula, Raymond, and South Bend have coastal and rural properties that attract a specific buyer pool. Estate sales here need pricing set for the local market and its buyers, not broad regional averages.",
   },
   {
     county: "San Juan County",
     href: "/san-juan-county",
     logo: sanJuanCountyLogo,
-    intro: "The San Juan Islands are one of Washington's most distinctive and sought-after real estate markets. Estate properties on San Juan, Orcas, Lopez, and the smaller islands require specialized valuation and coordination for families managing from the mainland or out of state.",
+    intro: "The San Juan Islands have no road connection to the mainland, and each island has its own real estate market. Estate properties on San Juan, Orcas, Lopez, and the smaller islands need careful valuation and coordination for families managing from the mainland or out of state.",
   },
   {
     county: "Skamania County",
     href: "/skamania-county",
     logo: skamaniCountyLogo,
-    intro: "Skamania County's Columbia River Gorge setting — anchored by Stevenson and the surrounding communities — creates a niche market for estate and rural properties. Limited comparable sales and unique property characteristics make experienced, locally informed guidance especially important here.",
+    intro: "Skamania County sits in the Columbia River Gorge, with Stevenson as its main community, and has a small market for estate and rural properties. Limited comparable sales and unusual property characteristics make local knowledge especially important here.",
   },
   {
     county: "Wahkiakum County",
     href: "/wahkiakum-county",
     logo: wahkiakumCountyLogo,
-    intro: `Wahkiakum County is one of Washington's least populated counties: a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. ${FEATURED_BROKER.Role} provides practical, honest guidance for families navigating property decisions in this distinctive area.`,
+    intro: `Wahkiakum County is one of Washington's least populated counties: a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. ${FEATURED_BROKER.Role} gives families practical, honest advice on property decisions here.`,
   },
 ];
 
@@ -176,10 +176,10 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. {FEATURED_BROKER.Role} provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning's guides now cover more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
+            Every county in Washington has its own market, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. {FEATURED_BROKER.Role} provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination suited to where the property actually sits. Real Property Planning's guides now cover more than 20 Washington counties, from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            As a licensed broker and state-certified residential appraiser, {FEATURED_BROKER.role} evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
+            As a licensed broker and state-certified residential appraiser, {FEATURED_BROKER.role} evaluates each property on its real condition and local market, not on generic statewide assumptions. Select a county below to learn more about service in that area.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             Select a county above to see the cities served in that area.
@@ -207,7 +207,7 @@ const Counties = () => {
                       >
                         <img
                           src={card.logo}
-                          alt={`${card.county}, Washington official seal — probate, estate, and senior transition real estate services`}
+                          alt={`${card.county}, Washington official seal: probate, estate, and senior transition real estate services`}
                           className="w-full h-full object-contain"
                           loading="lazy" sizes="100vw" decoding="async"/>
                       </span>
@@ -232,7 +232,7 @@ const Counties = () => {
               Services Available in Each County
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Whether the situation involves probate, an inherited home, a trust-owned property, or a senior transition, {FEATURED_BROKER.role} provides hands-on guidance through every step:
+              For probate, an inherited home, a trust-owned property, or a senior transition, {FEATURED_BROKER.role} provides hands-on help at each step:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (

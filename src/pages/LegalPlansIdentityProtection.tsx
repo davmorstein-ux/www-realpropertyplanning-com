@@ -54,31 +54,31 @@ const providers: Provider[] = [
 const faqs = [
   {
     q: "What is a legal service plan?",
-    a: "A legal service plan is a membership, paid monthly or annually, that gives members access to a law firm for certain everyday legal needs. Depending on the plan, that can include preparation of a will, review and updating of an existing will, phone consultations on personal legal questions, review of contracts and other documents, and letters or calls made on the member's behalf. Plans are not insurance and they do not cover every legal matter — coverage, exclusions, and fees vary by plan and by state, so ask for the plan documents before enrolling.",
+    a: "A legal service plan is a membership, paid monthly or annually, that gives members access to a law firm for certain everyday legal needs. Depending on the plan, that can include preparation of a will, review and updating of an existing will, phone consultations on personal legal questions, review of contracts and other documents, and letters or calls made on the member's behalf. Plans are not insurance, and they do not cover every legal matter. Coverage, exclusions, and fees vary by plan and by state, so ask for the plan documents before enrolling.",
   },
   {
     q: "Does a legal plan actually write my will?",
-    a: "Yes. Will preparation is a standard benefit of most legal service plans, and the will is drafted by attorneys at the plan's provider law firm — licensed lawyers, not the representative who sold you the plan. Most plans also cover reviewing and updating an existing will, often annually. Confirm the specifics before enrolling: whether the will is included at no extra charge or discounted, whether a spouse is covered, and whether related documents such as a durable power of attorney and a healthcare directive are included, since those two matter enormously for aging families and are not always part of the same benefit.",
+    a: "Usually, yes. Will preparation is a standard benefit of most legal service plans, and the will is drafted by attorneys at the plan's provider law firm: licensed lawyers, not the representative who sold you the plan. Most plans also cover reviewing and updating an existing will, often annually. Confirm the specifics before enrolling: whether the will is included at no extra charge or discounted, whether a spouse is covered, and whether related documents such as a durable power of attorney and a healthcare directive are included, since those two matter a great deal for aging families and are not always part of the same benefit.",
   },
   {
     q: "Is a plan will the same as hiring an estate planning attorney?",
-    a: "Not quite, though the gap is narrower than people assume — a real attorney does draft the document. The difference is scope. A plan will is generally a straightforward will, prepared efficiently. An estate planning attorney engaged directly will look at the whole picture: whether a trust would serve you better than a will, how Washington's community property rules affect your assets, incapacity and long-term care planning, Medicaid exposure, business succession, property held in more than one state, and estate tax questions. Families with a blended family, a business, a special-needs beneficiary, or a larger estate should work with a dedicated estate planning or elder law attorney. For a household whose main problem is that nobody has a will at all, a plan will is a substantial improvement over nothing.",
+    a: "Not quite, though the gap is narrower than people often assume: an attorney does draft the document. The difference is scope. A plan will is generally a straightforward will, prepared efficiently. An estate planning attorney engaged directly will look at the whole picture: whether a trust would serve you better than a will, how Washington's community property rules affect your assets, incapacity and long-term care planning, Medicaid exposure, business succession, property held in more than one state, and estate tax questions. Families with a blended family, a business, a special-needs beneficiary, or a larger estate should work with a dedicated estate planning or elder law attorney. For a household whose main problem is that nobody has a will at all, a plan will is a substantial improvement over nothing.",
   },
   {
     q: "What is identity theft protection and why does it matter for seniors?",
-    a: "Identity protection services monitor personal information — Social Security number, credit and financial accounts, medical identifiers — and alert you when that information appears somewhere it should not, including on the dark web. Most services also assign a specialist to help restore your identity if it is misused. Older adults are targeted disproportionately in identity and financial exploitation schemes, and the risk rises during exactly the transitions this site addresses: a move to senior living, settling an estate, or a period when several new people gain access to a household's paperwork.",
+    a: "Identity protection services monitor personal information (Social Security number, credit and financial accounts, medical identifiers) and alert you when that information appears somewhere it should not, including on the dark web. Most services also assign a specialist to help restore your identity if it is misused. Older adults are targeted disproportionately in identity and financial exploitation schemes, and the risk can rise during the transitions this site covers: a move to senior living, settling an estate, or a period when several new people gain access to a household's paperwork.",
   },
   {
     q: "Is LegalShield a law firm?",
-    a: "No. LegalShield is a legal service plan provider. It contracts with independent provider law firms, and those firms — not LegalShield — deliver the legal services to members. Associates who sell the plans, including Anthony Upchurch, are not attorneys and do not give legal advice. If you enroll, ask which provider law firm covers Washington State so you know who you would actually be speaking with.",
+    a: "No. LegalShield is a legal service plan provider. It contracts with independent provider law firms, and those firms, not LegalShield, deliver the legal services to members. Associates who sell the plans, including Anthony Upchurch, are not attorneys and do not give legal advice. If you enroll, ask which provider law firm covers Washington State so you know who you would actually be speaking with.",
   },
   {
     q: "How does this fit alongside the other professionals on this site?",
-    a: "A plan covers the ground floor: getting a will in place, keeping it current, looking over documents before they are signed, and answering the smaller questions that come up constantly during a transition. The more complex matters still route to the specialists — an elder law attorney for Medicaid and long-term care planning, an estate planning attorney for trusts and multi-state or blended-family estates, a CPA for estate and trust taxation, a real estate broker for the property itself.",
+    a: "A plan covers the ground floor: getting a will in place, keeping it current, looking over documents before they are signed, and answering the smaller questions that come up often during a transition. More complex matters still go to specialists: an elder law attorney for Medicaid and long-term care planning, an estate planning attorney for trusts and multi-state or blended-family estates, a CPA for estate and trust taxation, a real estate broker for the property itself.",
   },
   {
     q: "What should I ask before enrolling in any legal plan?",
-    a: "Ask for the plan's written summary of covered and excluded services, the monthly or annual cost and the minimum commitment, how to cancel, which provider law firm serves your state, what happens if you need a matter the plan does not cover and whether members receive a discounted hourly rate for it, and whether pre-existing legal matters are excluded. Read the plan documents rather than relying on a verbal summary, and take the time you need to decide — a legitimate representative will not press you to enroll on the spot.",
+    a: "Ask for the plan's written summary of covered and excluded services, the monthly or annual cost and the minimum commitment, how to cancel, which provider law firm serves your state, what happens if you need a matter the plan does not cover and whether members receive a discounted hourly rate for it, and whether pre-existing legal matters are excluded. Read the plan documents rather than relying on a verbal summary, and take the time you need to decide. A legitimate representative should not press you to enroll on the spot.",
   },
 ];
 
@@ -107,8 +107,8 @@ const LegalPlansIdentityProtection = () => (
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground font-semibold text-base md:text-lg leading-relaxed mb-6">
               Legal service plans cover attorney-prepared wills, document review, everyday legal questions, and identity
-              theft monitoring. They handle a great deal — but not everything an estate requires. This page explains
-              where the line falls.
+              theft monitoring. They cover many everyday needs, but not everything an estate requires. This page
+              explains where the line falls.
             </p>
           </div>
         </div>
@@ -207,7 +207,7 @@ const LegalPlansIdentityProtection = () => (
               <p className="text-foreground text-base leading-relaxed m-0">
                 <strong>Please note:</strong> LegalShield is a legal service plan provider, not a law firm. Its
                 associates, including the representative above, are not attorneys and cannot give legal advice or represent you.
-                Legal services under a plan — including preparing and reviewing wills — are performed by attorneys at
+                Legal services under a plan, including preparing and reviewing wills, are performed by attorneys at
                 independent provider law firms. For trusts, probate, elder law, or Medicaid matters, work directly with
                 a licensed Washington State attorney.
               </p>
@@ -224,8 +224,8 @@ const LegalPlansIdentityProtection = () => (
               What Legal Plans and Identity Protection Cover
             </h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              These are two different products, usually sold together. Understanding what each one does — and does not
-              do — makes it much easier to judge whether either is worth the monthly cost for your situation.
+              These are two different products, usually sold together. Knowing what each one does and does not do
+              makes it easier to judge whether either is worth the monthly cost for your situation.
             </p>
 
             <div className="space-y-6">
@@ -233,10 +233,10 @@ const LegalPlansIdentityProtection = () => (
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">Wills and Document Preparation</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   Attorneys at the plan's provider law firm prepare a will for the member, and review or update an
-                  existing one. Many plans include an annual review, which matters more than people expect — a will
+                  existing one. Many plans include an annual review, which matters: a will
                   written before a move, a remarriage, a death in the family, or the sale of a home may no longer say
                   what its author intended. For a household that has never gotten a will in place, this is usually the
-                  reason to consider a plan at all.
+                  main reason to consider a plan.
                 </p>
               </div>
 
@@ -253,8 +253,8 @@ const LegalPlansIdentityProtection = () => (
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">Identity Theft Monitoring</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   Ongoing monitoring of your personal and financial information, with alerts when that information
-                  surfaces where it should not — including on the dark web. Most services also assign a specialist to
-                  help restore your identity if it is misused, which is often the more valuable half of the product.
+                  surfaces where it should not, including on the dark web. Most services also assign a specialist to
+                  help restore your identity if it is misused, which may be the more useful part of the service.
                 </p>
               </div>
 
@@ -282,15 +282,15 @@ const LegalPlansIdentityProtection = () => (
             <p className="text-foreground text-lg leading-relaxed mb-6">
               A senior transition generates paperwork and exposure at the same time. A house goes on the market, a
               community contract needs signing, a moving company sends terms, a bank wants documentation, and a
-              household's records pass through more hands in six months than in the previous twenty years. Small legal
-              questions surface constantly, and most of them are too small to justify an hourly engagement but too
+              household's records pass through more hands in a few months than in many years before. Small legal
+              questions come up often, and most of them are too small to justify an hourly engagement but too
               important to guess at.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
               The same period raises identity risk. Older adults are targeted disproportionately in financial
-              exploitation schemes, and the window around a move, a hospitalization, or an estate settlement is when
-              families are least able to notice something wrong. Monitoring and a restoration specialist are worth
-              considering for that reason alone.
+              exploitation schemes, and the window around a move, a hospitalization, or an estate settlement is often
+              when families are least able to notice something wrong. That risk is the main reason monitoring and a
+              restoration specialist may be worth considering.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
               Real Property Planning is a neutral educational hub. It does not sell legal plans, receive legal fees, or

@@ -67,11 +67,11 @@ const providers: Provider[] = [
 const faqs = [
   {
     q: "What is the difference between Medicare and Medicaid?",
-    a: "Medicare is a federal health insurance program primarily for people age 65 and older, regardless of income. Medicaid is a joint federal and state program that helps cover healthcare costs for people with limited income and resources. Some people qualify for both programs simultaneously — known as 'dual eligibility' — which can provide more comprehensive coverage.",
+    a: "Medicare is a federal health insurance program primarily for people age 65 and older, regardless of income. Medicaid is a joint federal and state program that helps cover healthcare costs for people with limited income and resources. Some people qualify for both programs at the same time (known as 'dual eligibility'), which can provide more comprehensive coverage.",
   },
   {
     q: "When should I enroll in Medicare?",
-    a: "Most people become eligible for Medicare at age 65. Your Initial Enrollment Period begins three months before the month you turn 65 and extends three months after. Missing this window can result in late enrollment penalties that increase your premiums permanently. If you are still working and have employer coverage, special rules may apply — a Medicare specialist can help you navigate the timing.",
+    a: "Most people become eligible for Medicare at age 65. Your Initial Enrollment Period begins three months before the month you turn 65 and extends three months after. Missing this window can result in late enrollment penalties that increase your premiums permanently. If you are still working and have employer coverage, special rules may apply, and a Medicare specialist can help you work out the timing.",
   },
   {
     q: "What does Medicare cover in Washington State?",
@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     q: "How do I find a Medicare specialist near me?",
-    a: "A licensed Medicare specialist or insurance broker can help you compare plans, understand costs, and enroll in the right coverage for your situation. Look for someone who is licensed in Washington State, represents multiple carriers, and has experience working with seniors in transition. A directory of independent Medicare providers across Washington is being built — check back soon.",
+    a: "A licensed Medicare specialist or insurance broker can help you compare plans, understand costs, and enroll in coverage that suits your situation. Look for someone who is licensed in Washington State, represents multiple carriers, and has experience working with seniors in transition. A directory of independent Medicare providers across Washington is being built; check back soon.",
   },
   {
     q: "Does Medicare cover senior living or memory care facilities?",
@@ -208,7 +208,7 @@ const MedicareProviders = () => (
 
             <div className="space-y-6">
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Part A — Hospital Insurance</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Part A: Hospital Insurance</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   Covers inpatient hospital stays, skilled nursing facility care, hospice care, and some home health
                   services. Most people do not pay a premium for Part A if they or their spouse paid Medicare taxes
@@ -217,7 +217,7 @@ const MedicareProviders = () => (
               </div>
 
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Part B — Medical Insurance</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Part B: Medical Insurance</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   Covers doctor visits, outpatient care, preventive services, medical equipment, and some home health
                   services. Part B requires a monthly premium, which is income-based.
@@ -225,7 +225,7 @@ const MedicareProviders = () => (
               </div>
 
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Part C — Medicare Advantage</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Part C: Medicare Advantage</h3>
                 <p className="text-foreground text-base leading-relaxed">
                   An alternative to Original Medicare offered through private insurers. These plans bundle Part A, Part
                   B, and often Part D together, frequently adding dental, vision, and hearing benefits. Plan
@@ -235,11 +235,11 @@ const MedicareProviders = () => (
 
               <div className="bg-secondary rounded-lg p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                  Part D — Prescription Drug Coverage
+                  Part D: Prescription Drug Coverage
                 </h3>
                 <p className="text-foreground text-base leading-relaxed">
                   Covers prescription medications through private insurance plans approved by Medicare. Each plan has
-                  its own list of covered drugs (formulary) and cost structure. Enrolling on time is important — late
+                  its own list of covered drugs (formulary) and cost structure. Enrolling on time matters: late
                   enrollment can result in permanent premium penalties.
                 </p>
               </div>
@@ -256,22 +256,21 @@ const MedicareProviders = () => (
               Medicare and Life Transitions
             </h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Major life changes often bring Medicare decisions to the forefront. Whether a loved one is moving into
-              senior living, recovering from surgery, managing an estate after a loss, or transitioning from employer
-              coverage to retirement, the right Medicare plan can make a meaningful difference in both care quality and
-              cost.
+              Major life changes often bring Medicare decisions up. A move into senior living, recovery from surgery,
+              settling an estate after a death, or leaving employer coverage at retirement can each change which plan
+              makes sense, and the plan can make a real difference in both the care a person receives and what it
+              costs.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              During these transitions, families are often juggling multiple responsibilities at once — coordinating
-              with attorneys, managing property, supporting aging parents, and navigating unfamiliar systems. Having a
-              Medicare specialist on your team means one less thing to worry about, and one more area where you
-              can feel confident the right decisions are being made.
+              During these transitions, families are often handling several things at once: working with attorneys,
+              managing property, supporting aging parents, and dealing with unfamiliar systems. A Medicare specialist
+              can take on the plan comparison and enrollment questions, which leaves the family one less area to
+              research alone.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              Medicare planning belongs alongside the other essential services families need during times of
-              change — legal guidance, financial planning, real estate support, and senior care coordination. That is
-              why this site is building a directory of independent Medicare providers who understand the unique needs of seniors and
-              families in Washington State.
+              Medicare planning sits alongside the other help families often need during a transition: legal guidance,
+              financial planning, real estate support, and senior care coordination. That is why this site is building
+              a directory of independent Medicare providers who work with seniors and families in Washington State.
             </p>
           </div>
         </div>

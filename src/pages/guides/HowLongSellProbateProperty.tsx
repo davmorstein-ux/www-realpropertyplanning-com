@@ -19,13 +19,13 @@ const speedUp = [
   "Starting cleanout and planning while the court appointment is pending",
   "A property in good condition requiring minimal cleanout or repair",
   "Heirs who are aligned on pricing and timing from the start",
-  "An estate attorney and broker who communicate regularly and coordinate effectively",
+  "An estate attorney and broker who stay in regular contact",
   "A strong seller's market with high buyer demand",
 ];
 
 const slowDown = [
-  "Delays in filing the probate petition — every week of delay adds carrying costs",
-  "Extensive cleanout needed — homes with decades of belongings can take weeks to clear",
+  "Delays in filing the probate petition, since each week of delay adds carrying costs",
+  "Extensive cleanout: a home with decades of belongings can take weeks to clear",
   "Disagreements among heirs about pricing, timing, or whether to sell",
   "Deferred maintenance that must be assessed before accurate pricing can be set",
   "Title issues including liens, encumbrances, or unclear ownership",
@@ -34,11 +34,11 @@ const slowDown = [
 ];
 
 const faqs = [
-  { question: "What is the fastest a probate property can sell?", answer: "If the executor already has letters testamentary and the property is in good condition, the sale itself can close in as little as 30 to 45 days — similar to a standard real estate transaction. However, the total timeline including probate administration is usually longer." },
+  { question: "What is the fastest a probate property can sell?", answer: "If the executor already has letters testamentary and the property is in good condition, the sale itself can close in about 30 to 45 days, similar to a standard real estate transaction. The total timeline, including probate administration, is usually longer." },
   { question: "What delays probate property sales the most?", answer: "The most common delays are waiting for court-issued authority, property preparation and cleanout, disagreements among heirs, title issues, and deferred maintenance that surfaces during inspection. Planning ahead during the probate waiting period can reduce many of these delays." },
-  { question: "Can you speed up the process?", answer: "Yes, to a degree. Starting preparation during probate, getting a professional assessment early, coordinating with the estate attorney on timing, and communicating clearly with heirs all contribute to a smoother, faster process." },
+  { question: "Can you speed up the process?", answer: "Yes, to a degree. Starting preparation during probate, getting a professional assessment early, coordinating with the estate attorney on timing, and communicating clearly with heirs can all shorten the process." },
   { question: "Does the type of probate affect the timeline?", answer: "Significantly. Estates with nonintervention powers allow the executor to sell without court approval for each step. Court-supervised estates require hearings and confirmations that can add weeks or months to the process." },
-  { question: "What if the property needs significant repairs?", answer: "Properties needing major work take longer to sell — either because you invest time in repairs first, or because the buyer pool narrows. A professional assessment can help determine whether repairs are worth the investment or whether selling as-is makes more sense." },
+  { question: "What if the property needs significant repairs?", answer: "Properties needing major work usually take longer to sell, either because repairs take time first or because the buyer pool narrows. A professional assessment can help show whether repairs are worth the cost or whether selling as-is makes more sense." },
 ];
 
 const jsonLd = articleSchema({
@@ -74,11 +74,11 @@ const HowLongSellProbateProperty = () => (
               Written for executors, attorneys, and families who need a realistic timeline for selling a probate property in Washington State. The time from the death to the closing varies widely. It depends on how quickly the executor is appointed, the condition of the house, the market, and how quickly the family agrees.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
-              This guide breaks down the realistic timeline, explains what affects it, and shows how planning can shorten the process significantly.
+              This guide covers the two phases of the timeline, what affects each, and where planning can shorten it.
             </p>
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What This Means in Practice</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            The timeline for a probate property sale has two distinct phases: the legal phase (getting authority to sell) and the real estate phase (preparing, listing, and closing). Understanding both is essential for setting realistic expectations.
+            A probate property sale has two phases: the legal phase (getting authority to sell) and the real estate phase (preparing, listing, and closing). Each has its own delays.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             <strong className="text-foreground">Phase 1: Legal authority.</strong> The original will goes to the court, and the court may admit it and appoint the executor as soon as the petition is presented (RCW 11.20.020); heirs are notified after the appointment (RCW 11.28.237). Letters testamentary issue once the executor's oath is filed and any required bond is posted. In an uncontested case the wait is mostly preparing the petition and the county's processing time. Without a will, a petition by someone other than the surviving spouse needs 10 days' notice to the spouse unless the spouse waives it (RCW 11.28.131). A contested will or appointment can take months.
@@ -96,7 +96,7 @@ const HowLongSellProbateProperty = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Factors That Affect the Timeline</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            No two probate sales follow the same timeline. Here are the factors that have the greatest impact:
+            These factors have the greatest effect on the timeline:
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             <strong className="text-foreground">Court processing time.</strong> Different counties in Washington process probate at different speeds. King County and Pierce County tend to have heavier caseloads, which can mean longer wait times for hearings.
@@ -105,13 +105,13 @@ const HowLongSellProbateProperty = () => (
             <strong className="text-foreground">Property condition.</strong> A home that has been well-maintained can go to market quickly. A property with deferred maintenance, hoarding, or structural issues may need weeks or months of preparation before it is ready.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <strong className="text-foreground">Family coordination.</strong> When multiple heirs are involved — especially when they live in different states or have different opinions — communication and decision-making add time. Clear communication and a professional <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">property valuation</Link> help align expectations.
+            <strong className="text-foreground">Family coordination.</strong> When several heirs are involved, especially heirs in different states or with different opinions, communication and decision-making add time. Clear communication and a professional <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">property valuation</Link> help align expectations.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <strong className="text-foreground">Market conditions.</strong> A strong seller's market can shorten the listing-to-close timeline. A slower market or a property in a less desirable location may require more patience and strategic pricing.
+            <strong className="text-foreground">Market conditions.</strong> A strong seller's market can shorten the listing-to-close timeline. A slower market or a property in a less desirable location may need more time and careful pricing.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Title complications.</strong> Liens, boundary disputes, missing documents, or unclear ownership history can delay closing until resolved. A title review early in the process helps identify these issues before they become surprises.
+            <strong className="text-foreground">Title complications.</strong> Liens, boundary disputes, missing documents, or unclear ownership history can delay closing until resolved. A title review early in the process helps find these issues while there is time to resolve them.
           </p>
         </div>
       </div>
@@ -119,7 +119,7 @@ const HowLongSellProbateProperty = () => (
 
     <MidPageCTA
       heading="Wondering About Your Timeline?"
-      body={`Every situation is different. A short conversation with ${FEATURED_BROKER.name} can help you understand where you are in the process and what realistic expectations look like.`}
+      body={`A short conversation with ${FEATURED_BROKER.name} can help you see where you are in the process and what to expect from here.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
@@ -157,14 +157,14 @@ const HowLongSellProbateProperty = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How to Think Through This Situation</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            If you are an executor managing this process, the most important thing you can do is use the waiting period productively. Here is a practical approach:
+            If you are the executor, use the probate waiting period to prepare. A practical order of steps:
           </p>
           <ol className="space-y-4 list-decimal list-inside text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Start planning immediately</strong> — do not wait for letters testamentary to begin assessing the property and coordinating with professionals</li>
-            <li><strong className="text-foreground">Get a professional property assessment</strong> — understanding the home's condition and value early helps set realistic expectations for timeline and price</li>
-            <li><strong className="text-foreground">Begin cleanout and preparation</strong> — this is often the most time-consuming part, and it can happen before legal authority is granted</li>
-            <li><strong className="text-foreground">Communicate a realistic timeline to heirs</strong> — setting expectations early prevents pressure and conflict later</li>
-            <li><strong className="text-foreground">Coordinate with the estate attorney</strong> — align the property sale timeline with the overall estate administration plan</li>
+            <li><strong className="text-foreground">Start planning immediately.</strong> Do not wait for letters testamentary to begin assessing the property and coordinating with professionals.</li>
+            <li><strong className="text-foreground">Get a professional property assessment.</strong> Knowing the home's condition and value early helps set realistic expectations for timeline and price.</li>
+            <li><strong className="text-foreground">Begin cleanout and preparation.</strong> This is often the most time-consuming part, and it can happen before legal authority is granted.</li>
+            <li><strong className="text-foreground">Communicate a realistic timeline to heirs.</strong> Setting expectations early helps prevent pressure and conflict later.</li>
+            <li><strong className="text-foreground">Coordinate with the estate attorney.</strong> Align the property sale timeline with the overall estate administration plan.</li>
           </ol>
         </div>
       </div>
@@ -177,11 +177,11 @@ const HowLongSellProbateProperty = () => (
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Common Mistakes to Avoid</h2>
           <ul className="space-y-4">
             {[
-              "Telling heirs the sale will close quickly without accounting for probate timelines — this creates unrealistic expectations and unnecessary pressure",
+              "Telling heirs the sale will close quickly without accounting for probate timelines, which creates unrealistic expectations and unnecessary pressure",
               "Waiting until letters testamentary are issued to begin any planning, which loses time that could have gone to preparing the house",
-              "Rushing the property to market without proper preparation — a poorly presented home sells for less and may take longer to sell",
-              "Ignoring title issues until a buyer is under contract — this can delay or kill a sale at the worst possible moment",
-              "Not factoring in seasonal market conditions — listing in winter versus spring can meaningfully affect timeline and price",
+              "Rushing the property to market without proper preparation: a poorly presented home can sell for less and may take longer to sell",
+              "Ignoring title issues until a buyer is under contract, which can delay a sale or end it late in the process",
+              "Not factoring in seasonal market conditions: listing in winter rather than spring can affect both timeline and price",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -199,10 +199,10 @@ const HowLongSellProbateProperty = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">When to Get Professional Guidance</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            The best time to engage a real estate professional is during the probate waiting period — not after authority has been granted. Early involvement allows for better planning, more accurate timelines, and a smoother sale process.
+            Bring in a real estate professional during the probate waiting period rather than after authority has been granted. Early involvement leaves time to plan and gives a more accurate timeline.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            A broker experienced in probate and estate property can assess the home, recommend preparation strategies, coordinate with the estate attorney, and provide realistic expectations for price and timeline — all before the property is ready to list.
+            A broker experienced with probate and estate property can assess the home, suggest which preparation is worth doing, coordinate with the estate attorney, and give a realistic range for price and timeline, all before the property is ready to list.
           </p>
         </div>
       </div>
@@ -245,7 +245,7 @@ const HowLongSellProbateProperty = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">To talk through the timeline for a specific estate property, schedule a short conversation.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

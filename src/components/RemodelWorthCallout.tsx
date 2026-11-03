@@ -44,7 +44,7 @@ export default function RemodelWorthCallout({ style }: { style?: React.CSSProper
       </p>
       <p className="rpp-remodel-callout-p">
         Before spending money on an estate house, see what updates would likely add. Look up the house, enter what each
-        job would cost — paint, flooring, kitchen, roof — and get an estimate of the value afterward, from a broker's view
+        job would cost (paint, flooring, kitchen, roof) and get an estimate of the value afterward, from a broker's view
         and from what a buyer's appraiser is likely to support. For houses in King, Snohomish and Pierce counties.
       </p>
       <Link
