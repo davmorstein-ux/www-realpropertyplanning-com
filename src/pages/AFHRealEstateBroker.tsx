@@ -152,10 +152,10 @@ const AFHRealEstateBroker = () => (
               maxWidth: 680,
             }}
           >
-            Buying or selling an Adult Family Home is unlike any other real estate transaction. The real estate and the
-            DSHS license are handled separately, specialty contracts don't transfer, and the CHOW process
-            adds complexity that standard residential brokers rarely encounter. You need a broker who understands all of
-            it.
+            Buying or selling an Adult Family Home differs from a standard home sale. The real estate and the DSHS
+            license are handled separately, specialty contracts don't transfer, and the change of ownership (CHOW)
+            process adds steps that most residential brokers seldom handle. It helps to work with a broker who
+            understands each part.
           </p>
         </div>
       </section>{" "}
@@ -258,7 +258,7 @@ const AFHRealEstateBroker = () => (
               >
                 {FEATURED_BROKER.name} is the featured real estate broker listed on Real Property Planning.{" "}
                 {FEATURED_BROKER.pronoun.Possessive} real estate brokerage services are provided independently through{" "}
-                {FEATURED_BROKER.brokerage} — not through Real Property Planning.
+                {FEATURED_BROKER.brokerage}, not through Real Property Planning.
               </p>
               {/* His professional memberships, in colour, on his own card (David, Sept 23). */}
               <div style={{ marginTop: 20 }}>
@@ -291,25 +291,25 @@ const AFHRealEstateBroker = () => (
                   margin: "0 0 20px",
                 }}
               >
-                Why You Need a Specialist
+                Why a Specialist Helps
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 {[
                   {
                     title: "The license doesn't transfer",
-                    body: "Every AFH sale is a Change of Ownership (CHOW). The buyer must apply for a new DSHS license — requiring an understanding of both the real estate closing timeline and the DSHS licensing timeline simultaneously.",
+                    body: "Every AFH sale is a Change of Ownership (CHOW). The buyer must apply for a new DSHS license, so the real estate closing timeline and the DSHS licensing timeline have to be managed together.",
                   },
                   {
-                    title: "Valuing an AFH requires dual expertise",
-                    body: "An AFH's value includes the real estate and the licensed business operation — bed capacity, compliance history, census and income history all affect price, and because specialty contracts don't transfer, a buyer has to price in what must be requalified. A broker who is also a certified appraiser brings a rare combination of skills.",
+                    title: "Valuing an AFH covers the property and the business",
+                    body: "An AFH's value includes the real estate and the licensed business operation. Bed capacity, compliance history, census and income history all affect price, and because specialty contracts don't transfer, a buyer has to price in what must be requalified. A broker who is also a certified appraiser can assess both parts.",
                   },
                   {
                     title: "Specialty contracts need careful handling",
-                    body: "ECS and SBS specialty contracts don't transfer in a CHOW, and specialty designations such as dementia, mental health and developmental disabilities belong to the provider's training, not the house. A knowledgeable broker helps buyers understand what they are actually acquiring and what they will need to independently qualify for.",
+                    body: "ECS and SBS specialty contracts don't transfer in a CHOW, and specialty designations such as dementia, mental health and developmental disabilities belong to the provider's training, not the house. A broker familiar with AFH sales can help buyers see what they are actually acquiring and what they will need to qualify for on their own.",
                   },
                   {
                     title: "Compliance history matters more than curb appeal",
-                    body: "Checking the DSHS AFH Locator, understanding enforcement history, and asking the right due diligence questions before closing protects buyers from inheriting problems not visible in a standard inspection.",
+                    body: "Checking the DSHS AFH Locator, understanding enforcement history, and asking due diligence questions before closing can help protect buyers from inheriting problems a standard inspection won't show.",
                   },
                 ].map((item, i) => (
                   <div

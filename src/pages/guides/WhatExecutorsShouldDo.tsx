@@ -18,17 +18,17 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 
 const immediateSteps = [
   { title: "Secure the Property", text: "Change locks if needed, verify insurance coverage, and make sure utilities remain active. A vacant home is vulnerable to weather damage, vandalism, and liability issues." },
-  { title: "Confirm Your Legal Authority", text: "Work with the estate attorney to obtain letters testamentary or letters of administration. Until this authority is granted, you generally cannot sell the property — but you can begin planning." },
+  { title: "Confirm Your Legal Authority", text: "If the estate goes through probate, work with the estate attorney to obtain letters testamentary or letters of administration from the court. A named executor acts once the court appoints them and issues letters. Until then, you generally cannot sell the property, but you can begin planning." },
   { title: "Document the Property's Condition", text: "Take photos and notes of every room, including the exterior, garage, and yard. Note obvious maintenance issues, personal property, and anything that may affect sale value or require attention." },
-  { title: "Identify Key Stakeholders", text: "Determine who needs to be involved in decisions — co-executors, beneficiaries, attorneys, CPAs. Clear communication early prevents disagreements later." },
+  { title: "Identify Key Stakeholders", text: "Determine who needs to be involved in decisions: co-executors, beneficiaries, attorneys, CPAs. Clear communication early prevents disagreements later." },
   { title: "Get a Professional Property Assessment", text: "Contact a broker experienced in estate property to visit the home and provide a realistic assessment of condition, likely market value, and preparation needs. This is different from an online estimate." },
 ];
 
 const faqs = [
   { question: "Can I start working on the property before probate is filed?", answer: "You can secure the property, maintain insurance, and begin planning. However, selling, making major modifications, or disposing of significant personal property should generally wait until your legal authority is established. Consult the estate attorney for guidance specific to your situation." },
   { question: "Should I clean out the home before getting it assessed?", answer: `Not necessarily. A broker experienced in estate property can assess the home in its current condition. In fact, seeing the property before cleanout helps ${FEATURED_BROKER.role} understand the full scope of work needed and provide more accurate timeline and cost estimates.` },
-  { question: "What if I live out of state?", answer: `Many executors manage properties from a distance. ${FEATURED_BROKER.Role} serves as the local point of contact — coordinating property access, vendor management, preparation, and the sale process while keeping you informed through regular updates. Learn more about out-of-state property coordination.` },
-  { question: "How do I know if the property needs repairs before selling?", answer: `${FEATURED_BROKER.Role} evaluates each potential repair or improvement through a return-on-investment lens, informed by ${FEATURED_BROKER.pronoun.possessive} certified appraisal background. Some improvements significantly increase sale price; others are not worth the cost or delay. This analysis helps you make smart decisions with estate funds.` },
+  { question: "What if I live out of state?", answer: `Executors can manage a property from a distance. ${FEATURED_BROKER.Role} can serve as the local point of contact, coordinating property access, vendors, preparation, and the sale process, with regular updates to you. Learn more about out-of-state property coordination.` },
+  { question: "How do I know if the property needs repairs before selling?", answer: `${FEATURED_BROKER.Role} evaluates each potential repair or improvement through a return-on-investment lens, informed by ${FEATURED_BROKER.pronoun.possessive} certified appraisal background. Some improvements can raise the sale price; others are not worth the cost or delay. The analysis gives you a basis for deciding how to spend estate funds.` },
 ];
 
 const jsonLd = articleSchema({
@@ -65,10 +65,10 @@ const WhatExecutorsShouldDo = () => (
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Written for newly-appointed executors and personal representatives in Washington State preparing to manage and eventually sell an inherited home. If you have been named executor or personal representative and the estate includes real property, there are several important steps to take before the home can be listed for sale. Taking these steps in the right order protects the estate, prevents costly mistakes, and sets the stage for a smoother sale process.
+              Written for newly-appointed executors and personal representatives in Washington State preparing to manage and eventually sell an inherited home. If you are serving as executor or personal representative and the estate includes real property, several steps come before the home can be listed for sale. Done in order, they protect the estate and help you avoid costly mistakes once the sale begins.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              This guide covers the practical first steps — from securing the property through getting a professional assessment — so you know what to do, when to do it, and who to involve.
+              This guide runs from securing the property through getting a professional assessment, with what to do, when, and who to involve at each step.
             </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ const WhatExecutorsShouldDo = () => (
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">The First Five Steps Every Executor Should Take</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            These steps apply whether you live nearby or across the country, and whether the estate is simple or complex:
+            These steps apply to executors who live nearby and to those across the country, and to simple and complex estates alike:
           </p>
           <div className="grid gap-5">
             {immediateSteps.map((step, i) => (
@@ -103,13 +103,13 @@ const WhatExecutorsShouldDo = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Why Understanding the Property's Value Matters Early</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            One of the biggest mistakes executors make is relying on online estimates or family opinions to determine what an inherited home is worth. Estate properties are almost always in non-standard condition — which means automated valuation tools are unreliable and even well-intentioned family estimates can be significantly off.
+            Online estimates and family opinions are a weak basis for what an inherited home is worth. Estate properties are often in non-standard condition, so automated valuation tools can be unreliable and even well-intentioned family estimates can be significantly off.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Getting a professional property assessment early in the process helps with multiple decisions: whether to invest in repairs before selling, how to set realistic expectations with beneficiaries, how to plan the estate's finances during administration, and how to respond to early inquiries from potential buyers or neighbors.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            {FEATURED_BROKER.Role}'s dual background as a broker and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> means executors get valuation insight grounded in professional methodology — not guesswork.
+            {FEATURED_BROKER.Role} is a broker and also a <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link>, and applies appraisal methods to the pricing question. A broker's opinion of value is still not an appraisal.
           </p>
         </div>
       </div>
@@ -122,7 +122,7 @@ const WhatExecutorsShouldDo = () => (
 
     <MidPageCTA
       heading="Not Sure Where to Start?"
-      body={`Most executors are doing this for the first time. A short conversation with ${FEATURED_BROKER.name} can help you understand your options, assess the property, and plan practical next steps.`}
+      body={`If this is your first estate, a short conversation with ${FEATURED_BROKER.name} can help you understand your options, assess the property, and plan next steps.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
@@ -136,10 +136,10 @@ const WhatExecutorsShouldDo = () => (
             Inherited homes often need significant preparation before they are ready for the market. The personal belongings need to be sorted, donated, or removed. Deferred maintenance may need to be addressed. Landscaping, cleaning, and sometimes light staging are needed to present the property effectively.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            The key question is which improvements are worth the investment. A $5,000 kitchen cleanup might add $15,000 in sale price. A $40,000 renovation might add only $20,000. {FEATURED_BROKER.Role} evaluates each potential improvement using {FEATURED_BROKER.pronoun.possessive} appraisal background to estimate the likely return — helping you spend estate funds wisely.
+            The key question is which improvements are worth the investment. A $5,000 kitchen cleanup might add $15,000 in sale price. A $40,000 renovation might add only $20,000. {FEATURED_BROKER.Role} evaluates each potential improvement using {FEATURED_BROKER.pronoun.possessive} appraisal background to estimate the likely return, so estate funds go to the work most likely to pay back.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            A featured broker can coordinate the preparation process — scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> — so you don't have to manage contractors yourself.
+            A featured broker can coordinate preparation, including scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link>, so you are not managing each contractor yourself.
           </p>
         </div>
       </div>
@@ -154,7 +154,7 @@ const WhatExecutorsShouldDo = () => (
             Estate property sales involve multiple people with different interests, timelines, and emotional states. The estate attorney needs the real estate process to align with legal proceedings. Beneficiaries want to understand value and timing. Co-executors need to agree on decisions. CPAs may need information for tax planning.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            {FEATURED_BROKER.Role} acts as a single point of contact for the real estate side of the equation — communicating clearly with all parties, providing regular updates, and ensuring that decisions are documented and defensible. This reduces the executor's communication burden and keep the process moving forward.
+            {FEATURED_BROKER.Role} can act as a single point of contact for the real estate side, giving all parties regular updates and keeping a record of decisions. That can lighten the executor's communication load and keep the sale moving.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about how {FEATURED_BROKER.role} works with <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys and fiduciaries</Link> or explore the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">full sale process from consultation to closing</Link>.
@@ -189,7 +189,7 @@ const WhatExecutorsShouldDo = () => (
       heading="Continue Learning"
       steps={[
         { title: "How Probate Real Estate Works in Washington", description: "Understand the legal process, timeline, and key decisions involved in selling property through probate.", href: "/guides/how-probate-real-estate-works" },
-        { title: "Inherited House Guide", description: "Explore your options — sell, keep, rent, or buy out — with key financial and legal considerations.", href: "/guides/inherited-house-washington" },
+        { title: "Inherited House Guide", description: "Your options (sell, keep, rent, or buy out) and the key financial and legal considerations for each.", href: "/guides/inherited-house-washington" },
         { title: "Out-of-State Family Guide", description: "How to manage, prepare, and sell a Washington property when you live in another state.", href: "/guides/out-of-state-families" },
       ]}
     />
@@ -200,8 +200,8 @@ const WhatExecutorsShouldDo = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Ready to Talk About Your Situation?</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">Start with a simple conversation. {FEATURED_BROKER.Role} will listen, answer your questions, and outline practical next steps.</p>
-          <p className="text-primary-foreground/50 text-base mb-8">Whether you are just beginning or already feel behind, there is always a clear path forward.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">Start with a simple conversation. {FEATURED_BROKER.Role} can answer your questions and outline possible next steps.</p>
+          <p className="text-primary-foreground/50 text-base mb-8">You can reach out at the start of the estate or partway through it.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Conversation</Button></Link>
         </div>
       </div>

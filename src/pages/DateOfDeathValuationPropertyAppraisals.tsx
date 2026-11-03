@@ -43,7 +43,7 @@ const pathways: Pathway[] = [
     letter: "2",
     title: "When Is an Appraisal Needed?",
     description:
-      "Guidance for families trying to understand when appraisals, market analyses, or professional valuation opinions may be appropriate.",
+      "When an appraisal, a market analysis, or another professional valuation opinion may be appropriate.",
     href: "/why-valuation-matters",
     icon: iconDocument,
   },
@@ -51,7 +51,7 @@ const pathways: Pathway[] = [
     letter: "3",
     title: "Understanding Fair Market Value",
     description:
-      "Learn how market value is typically determined and why online estimates alone may not tell the full story.",
+      "How market value is typically determined and why online estimates alone may not be enough.",
     href: "/guides/appraisal-vs-cma",
     icon: iconBookOpen,
   },
@@ -100,7 +100,7 @@ const faqs = [
   {
     question: "When should valuation occur?",
     answer:
-      "Timing matters. Many families benefit from understanding value early — before major repairs, cleanout, or decisions about selling, keeping, or transferring the property.",
+      "Timing matters. It usually helps to know the value early: before major repairs, cleanout, or decisions about selling, keeping, or transferring the property.",
   },
   {
     question: "Should the property be cleaned out first?",
@@ -110,12 +110,12 @@ const faqs = [
   {
     question: "What if repairs are needed?",
     answer:
-      "The right approach depends on condition, market, and timing. Some properties benefit from light updates; others sell well as-is. A walk-through with an experienced professional can help compare options.",
+      "The approach depends on condition, market, and timing. Some properties benefit from light updates; others sell well as-is. A walk-through with an experienced professional can help compare options.",
   },
   {
     question: "What if family members disagree on value?",
     answer:
-      "Disagreements are common. A neutral, professionally prepared valuation often helps families align on a shared number and move forward calmly.",
+      "Disagreements are common. A neutral, professionally prepared valuation often helps family members agree on a shared number.",
   },
   {
     question: "Can online estimates be inaccurate?",
@@ -125,12 +125,12 @@ const faqs = [
   {
     question: "What professionals should families speak with?",
     answer:
-      "Families often consult an attorney, CPA, real estate professional, and — when appropriate — a licensed appraiser. Each plays a different role in helping families make informed decisions.",
+      "Families often consult an attorney, CPA, real estate professional, and, when appropriate, a licensed appraiser. Each plays a different role.",
   },
   {
     question: "How does valuation affect estate decisions?",
     answer:
-      "Valuation influences tax considerations, equitable distribution among heirs, sale pricing, and timing. Understanding value early often makes every other decision easier.",
+      "Valuation influences tax considerations, equitable distribution among heirs, sale pricing, and timing. Knowing the value early informs each of those decisions.",
   },
 ];
 
@@ -163,7 +163,7 @@ const continueJourney = [
   { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconHome },
   { href: "/estate-probate-inherited-property", title: "Estate, Probate & Inherited Property", description: "A guided path for executors, trustees, and heirs.", icon: iconDocument },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconAssisted },
-  { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
+  { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "The professionals an estate may involve and what each one does.", icon: iconBookOpen },
 ];
 
 const nextSteps = [
@@ -171,7 +171,7 @@ const nextSteps = [
   "Learn the differences between valuation options",
   "Consider timing, condition, and family concerns",
   "Build the right professional team",
-  "Make informed property decisions with better information",
+  "Make property decisions with better information",
 ];
 
 const jsonLd = articleSchema({
@@ -210,7 +210,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
             "You inherited property and need a stepped-up basis",
             "An attorney or CPA asked for a certified appraisal",
             "You are settling an estate or trust",
-            "You want a credentialed valuation — not just a Zillow estimate"
+            "You want a credentialed valuation, not just a Zillow estimate"
           ]}
         />
 
@@ -275,11 +275,11 @@ const DateOfDeathValuationPropertyAppraisals = () => {
                   Keep Going
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
+                  Related Guides
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families exploring valuation and property decisions often
-                  continue with these next steps.
+                  These guides cover the decisions that usually follow a
+                  valuation.
                 </p>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>

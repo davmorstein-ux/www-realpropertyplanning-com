@@ -31,8 +31,8 @@ const HospitalDischargePlanning = () => {
           <div className="max-w-[760px] mx-auto">
             <h2 className={h2Class + " mt-0"}>Planning Your Hospital Discharge: A Guide for Washington State Families</h2>
             <p className={leadClass}>
-              The moment of discharge is not the time to start planning. The families who do best are the ones who began
-              asking questions on the day of admission.
+              Start planning a hospital discharge on the day of admission, not on the day of discharge. This guide
+              explains how discharge works in Washington State, what to ask, and what the options are.
             </p>
 
             <div className="mb-6">
@@ -40,18 +40,13 @@ const HospitalDischargePlanning = () => {
             </div>
 
             <p className={pClass}>
-              A hospital stay rarely ends the way it begins. Someone goes in for one thing and comes out facing a
-              different landscape entirely — more fragile than before, with care needs that didn't exist a week ago, and
-              a discharge planner standing in the doorway with paperwork and a timeline.
+              A patient often leaves the hospital weaker than before, with new care needs, and the discharge date can
+              arrive quickly. The hospital needs the bed, the patient usually wants to go home, and the family may not
+              yet know what care at home will involve.
             </p>
             <p className={pClass}>
-              For families, this moment can feel overwhelming. The hospital wants the bed. The patient wants to go home.
-              And nobody has quite explained what going home is actually going to look like.
-            </p>
-            <p className={pClass}>
-              This guide is designed to change that — to help families in Washington State understand how hospital
-              discharge works, what questions to ask, and how to plan a transition that is safe, realistic, and
-              genuinely thought through.
+              The sections below cover who handles discharge planning, the questions to ask before leaving, the main
+              discharge options, and how to plan a transition that is safe and realistic.
             </p>
 
             <hr className={hrClass} />
@@ -63,9 +58,9 @@ const HospitalDischargePlanning = () => {
               across the country, hospital readmissions are common, costly, and frequently preventable.
             </p>
             <p className={pClass}>
-              The most common reasons for readmission are not medical failures. They are planning failures. Medications
-              that weren't managed correctly at home. Follow-up appointments that weren't made. Care needs that exceeded
-              what the family could provide. A home environment that wasn't safe for someone with new limitations.
+              Many readmissions trace back to planning gaps rather than medical problems: medications not managed
+              correctly at home, follow-up appointments not made, care needs beyond what the family could provide, or a
+              home that wasn't safe for someone with new limitations.
             </p>
             <p className={pClass}>
               Good discharge planning addresses all of these before the patient leaves the building.
@@ -77,7 +72,7 @@ const HospitalDischargePlanning = () => {
             <p className={pClass}>
               Hospitals must identify patients who need discharge planning, and a patient or family can ask for it. The
               primary professional responsible is
-              typically a hospital discharge planner — usually a social worker or case manager — whose job is to assess
+              typically a hospital discharge planner (usually a social worker or case manager), whose job is to assess
               the patient's post-discharge needs and help arrange appropriate services and settings.
             </p>
             <p className={pClass}>
@@ -95,10 +90,9 @@ const HospitalDischargePlanning = () => {
               coinsurance.
             </p>
             <p className={pClass}>
-              The discharge planner is a valuable resource — but they are managing many patients simultaneously, and
-              their primary obligation is to the hospital's timeline. Families who engage actively, ask specific
-              questions, and advocate clearly for their loved one's needs consistently achieve better outcomes than
-              those who defer entirely to the process.
+              The discharge planner is a useful resource, but they handle many patients at once and work to the
+              hospital's timeline. Families who take part, ask specific questions and state the patient's needs clearly
+              tend to get better plans than those who leave it all to the process.
             </p>
 
             <hr className={hrClass} />
@@ -109,14 +103,13 @@ const HospitalDischargePlanning = () => {
               What is the primary diagnosis, and what does recovery typically look like? What are the specific discharge
               instructions, and who is responsible for each element of follow-up care? What medications have been
               prescribed or changed, and does the patient or family understand how to manage them correctly? What level
-              of care will be needed at home — and is the home environment set up to provide it safely? Has a follow-up
+              of care will be needed at home, and is the home set up to provide it safely? Has a follow-up
               appointment been scheduled with the primary care physician or specialist? What warning signs should prompt
-              a call to the doctor or a return to the emergency room? If additional care is needed — physical therapy,
-              wound care, skilled nursing — has it been arranged, and does the patient know how to access it?
+              a call to the doctor or a return to the emergency room? If additional care is needed (physical therapy,
+              wound care, skilled nursing), has it been arranged, and does the patient know how to access it?
             </p>
             <p className={pClass}>
-              These are not difficult questions. But they are frequently left unasked, and the gaps they leave are where
-              readmissions happen.
+              These questions are often left unasked, and the gaps they leave are where readmissions happen.
             </p>
 
             <hr className={hrClass} />
@@ -126,13 +119,12 @@ const HospitalDischargePlanning = () => {
             <h3 className={h3Class}>Returning Home With Support</h3>
             <p className={pClass}>
               For patients who are stable and have manageable care needs, returning home with professional support is
-              often the right choice. This may include in-home care from a home health aide, skilled nursing visits,
+              often an option. This may include in-home care from a home health aide, skilled nursing visits,
               physical or occupational therapy at home, meal delivery, and transportation to follow-up appointments.
             </p>
             <p className={pClass}>
               Washington State has a range of home care agencies and services available. A discharge planner can help
-              identify appropriate providers, but families should feel empowered to ask about specific agencies and to
-              request referrals to providers they have researched independently.
+              identify appropriate providers, and families can also ask about specific agencies and request referrals to providers they have researched independently.
             </p>
 
             <h3 className={h3Class}>Short-Term Skilled Nursing Facility Care</h3>
@@ -143,14 +135,14 @@ const HospitalDischargePlanning = () => {
               emergency room does not count) and needs daily skilled care, Medicare covers skilled nursing facility care
               in full for days 1–20, then charges $217 a day (2026) for days 21–100. Nothing is covered after day 100,
               and coverage can end sooner if skilled care is no longer needed. Ask the hospital in writing whether your
-              loved one is an inpatient or under observation. Understanding this timeline before agreeing to a skilled
-              nursing placement is essential.
+              loved one is an inpatient or under observation, and understand this timeline before agreeing to a skilled
+              nursing placement.
             </p>
 
             <h3 className={h3Class}>Adult Family Homes and Assisted Living</h3>
             <p className={pClass}>
-              For patients whose care needs have changed significantly — and for whom returning to independent living is
-              no longer realistic — a hospital discharge may be the catalyst for a longer-term transition to an adult
+              When care needs have changed significantly and returning to independent living is no longer realistic, a
+              hospital discharge may be the catalyst for a longer-term transition to an adult
               family home or assisted living facility.
             </p>
             <p className={pClass}>
@@ -163,25 +155,25 @@ const HospitalDischargePlanning = () => {
                 Aging Life Care Manager
               </Link>{" "}
               can conduct a professional assessment of the patient's needs and help the family understand what level of
-              care is genuinely required.
+              care is actually required.
             </p>
 
             <hr className={hrClass} />
 
             <h2 className={h2Class}>The Role of the Family Caregiver</h2>
             <p className={pClass}>
-              Family members who will be providing or coordinating care after discharge play a critical role in the
-              process — and they deserve to be treated as full participants, not bystanders.
+              Family members who will provide or coordinate care after discharge should take part in the planning as
+              full participants, not bystanders.
             </p>
             <p className={pClass}>
               Before discharge, family caregivers should receive hands-on instruction in any care tasks they will be
-              performing — wound care, medication management, mobility assistance. They should know exactly who to call
-              if something goes wrong. And they should be honest with themselves and with the discharge team about what
-              they can realistically provide.
+              performing, such as wound care, medication management and mobility assistance. They should know exactly
+              who to call if something goes wrong, and they should be honest with the discharge team about what they
+              can realistically provide.
             </p>
             <p className={pClass}>
-              Caregiver burnout is real. The families who do best are not the ones who take on everything — they are the
-              ones who build a realistic support structure that includes professional help alongside family involvement.
+              Caregivers who take on everything alone risk burnout. A workable plan combines family involvement with
+              professional help.
             </p>
 
             <hr className={hrClass} />
@@ -193,13 +185,13 @@ const HospitalDischargePlanning = () => {
               gap between what was planned and what is actually happening becomes apparent.
             </p>
             <p className={pClass}>
-              Families should plan to be closely involved during this period — checking in frequently, confirming that
+              Families should plan to be closely involved during this period: checking in often, confirming that
               medications are being taken correctly, watching for the warning signs identified at discharge, and
-              ensuring that scheduled follow-up appointments are kept.
+              making sure scheduled follow-up appointments are kept.
             </p>
             <p className={pClass}>
-              If something does not feel right in the first few days, calling the doctor is always the right move. The
-              cost of a phone call is far lower than the cost of a readmission.
+              If something does not seem right in the first few days, call the doctor. A phone call costs far less than
+              a readmission.
             </p>
 
             <hr className={hrClass} />
@@ -283,17 +275,16 @@ const HospitalDischargePlanning = () => {
 
             <h2 className={h2Class}>Planning Before the Crisis</h2>
             <p className={pClass}>
-              The best time to think about hospital discharge planning is before anyone is in the hospital.
+              Discharge planning is easiest to start before anyone is in the hospital.
             </p>
             <p className={pClass}>
-              Families who have already discussed care preferences, identified a primary care physician, established
-              legal documents such as a durable power of attorney for health care and an advance directive, and built
-              relationships with the professionals who can help — an elder law attorney, a financial planner, an Aging
-              Life Care Manager — are substantially better positioned when a hospitalization occurs.
+              Families who have already discussed care preferences, identified a primary care physician, put in place
+              legal documents such as a durable power of attorney for health care and an advance directive, and
+              identified the professionals who can help (an elder law attorney, a financial planner, an Aging Life Care
+              Manager) are better prepared when a hospitalization occurs.
             </p>
             <p className={pClass}>
-              A hospitalization is a disruption. But for families who have planned ahead, it does not have to be a
-              crisis.
+              With that groundwork done, a hospitalization is still disruptive but less likely to become a crisis.
             </p>
 
             <hr className={hrClass} />
@@ -315,7 +306,7 @@ const HospitalDischargePlanning = () => {
               <Link to="/professionals/financial-planners" className={inlineLink}>
                 financial planners
               </Link>{" "}
-              who understand the full landscape of care in Washington State.{" "}
+              who work with care options in Washington State.{" "}
               <Link to="/guides-and-resources" className={inlineLink}>
                 Explore the full library of resources
               </Link>{" "}

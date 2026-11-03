@@ -140,25 +140,25 @@ const EstateLiquidators = () => (
             <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-2">What Estate Liquidators Do</h2>
             <p>
               Estate liquidators help families manage, value, and sell the personal property and household contents of a
-              home — most often during a senior transition, after a death, or as part of an estate settlement. Their
-              work helps families move forward without the burden of sorting through decades of accumulated belongings
-              on their own.
+              home, most often during a senior transition, after a death, or as part of an estate settlement. They take on
+              the sorting, pricing, and selling of decades of belongings that a family would otherwise handle on its
+              own.
             </p>
             <p>
               A professional estate liquidator will typically assess the contents of a home, organize and price items,
               market the sale, conduct the event, and handle unsold items through donation, consignment, or disposal.
-              Many also offer residential clear out services to leave the property empty and ready for the next step —
-              whether that is listing for sale, transferring to an heir, or preparing for rental.
+              Many also offer residential clear out services to leave the property empty and ready for the next step:
+              listing it for sale, transferring it to an heir, or preparing it for rental.
             </p>
             <p>
-              What makes a qualified estate liquidator especially valuable is their knowledge of fair market value for
-              antiques, collectibles, furniture, jewelry, and household goods — combined with the logistical experience
-              to run a well-organized sale that maximizes return for the family.
+              A qualified estate liquidator knows the fair market value of antiques, collectibles, furniture, jewelry,
+              and household goods, and has the logistical experience to run an organized sale that aims to get the
+              family a good return.
             </p>
             <p>
               Many estate liquidators hold memberships in professional organizations such as the American Society of
               Estate Liquidators (ASEL) or carry certifications from the International Society of Appraisers (ISA),
-              which reflect a commitment to ethical standards and professional practice.
+              which set standards of ethics and professional practice for their members.
             </p>
           </div>
         </div>

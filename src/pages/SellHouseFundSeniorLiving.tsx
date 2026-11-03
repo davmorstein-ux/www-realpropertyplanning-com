@@ -22,34 +22,34 @@ import MoveOrSellFirst from "@/components/guides/MoveOrSellFirst";
 const steps = [
   {
     title: "Understand what the home is actually worth",
-    body: `${SAME_PERSON ? `${FEATURED_BROKER.Role}'s dual credential as a Licensed Broker and Certified Residential Appraiser means families get a professional valuation — not a listing pitch.` : `${FEATURED_APPRAISER.Role} can provide a professional valuation — not a listing pitch.`} That number becomes the foundation for every financial decision that follows.`,
+    body: `${SAME_PERSON ? `${FEATURED_BROKER.Role}'s dual credential as a Licensed Broker and Certified Residential Appraiser means the valuation draws on appraisal methods, not a listing pitch.` : `${FEATURED_APPRAISER.Role} can provide a professional valuation, not a listing pitch.`} That number is the starting point for the financial decisions that follow.`,
   },
   {
     title: "Figure out the timeline",
-    body: `Three options: sell before the move, sell while the senior is in care, or use bridge financing. Each has tradeoffs. ${FEATURED_BROKER.Role} helps families choose the right path for their situation.`,
+    body: `Three options: sell before the move, sell while the senior is in care, or use bridge financing. Each has tradeoffs. ${FEATURED_BROKER.Role} can help families weigh them for their situation.`,
   },
   {
     title: "Prepare the home for sale",
-    body: `Cleanout, minor repairs, paint, landscaping, and staging — evaluated through a return-on-investment lens. ${FEATURED_BROKER.Role} coordinates every vendor so out-of-state families never have to fly in to supervise.`,
+    body: `Cleanout, minor repairs, paint, landscaping and staging, each judged by whether it is likely to pay for itself in the sale price. ${FEATURED_BROKER.Role} can coordinate vendors so out-of-state families usually do not need to fly in to supervise.`,
   },
   {
     title: "Price it correctly for its condition",
-    body: `Overpricing causes the home to sit and carrying costs to pile up. Underpricing leaves money on the table that could have funded months of additional care. ${SAME_PERSON ? `${FEATURED_BROKER.Role}'s appraisal background means` : "A certified appraiser's valuation means"} the price is set based on methodology — not optimism.`,
+    body: `Overpricing causes the home to sit and carrying costs to pile up. Underpricing leaves money on the table that could have funded months of additional care. ${SAME_PERSON ? `${FEATURED_BROKER.Role}'s appraisal background means` : "A certified appraiser's valuation means"} the price is based on methodology, not optimism.`,
   },
   {
     title: "Close and fund the care plan",
-    body: "Proceeds are distributed after paying off any remaining mortgage, closing costs, and fees. A financial planner or elder law attorney can help structure how those proceeds are held — particularly if Medicaid eligibility is a consideration.",
+    body: "Proceeds are distributed after paying off any remaining mortgage, closing costs, and fees. A financial planner or elder law attorney can help structure how those proceeds are held, particularly if Medicaid eligibility is a consideration.",
   },
 ];
 
 const faqs = [
   {
     q: "Can we sell the house if my parent still lives there?",
-    a: `Yes — but it requires sensitivity and careful coordination. ${FEATURED_BROKER.Role} has experience listing homes where the senior is still in residence and handles showings in a way that is respectful and minimally disruptive.`,
+    a: `Yes, with careful coordination. ${FEATURED_BROKER.Role} has listed homes where the senior still lives and schedules showings to keep disruption to a minimum.`,
   },
   {
     q: "Does selling the house affect Medicaid eligibility?",
-    a: "Often, yes. While your parent intends to return home, or a spouse or dependent relative lives there, the home is usually an exempt asset for Apple Health (Washington Medicaid) long-term care, within a home equity limit ($1,130,000 in 2026). Once the house is sold, the cash proceeds count toward the asset limit — $2,000 for a single person (WAC 182-513-1350) — so they are generally spent on care before Medicaid will pay. Giving proceeds away, or selling to family for less than fair value, within five years (60 months) before applying can cause a penalty period without coverage (WAC 182-513-1363). Consult an elder law attorney before selling if Medicaid is a current or future consideration.",
+    a: "Often, yes. While your parent intends to return home, or a spouse or dependent relative lives there, the home is usually an exempt asset for Apple Health (Washington Medicaid) long-term care, within a home equity limit ($1,130,000 in 2026). Once the house is sold, the cash proceeds count toward the asset limit ($2,000 for a single person, WAC 182-513-1350), so they are generally spent on care before Medicaid will pay. Giving proceeds away, or selling to family for less than fair value, within five years (60 months) before applying can cause a penalty period without coverage (WAC 182-513-1363). Consult an elder law attorney before selling if Medicaid is a current or future consideration.",
   },
   {
     q: "Will my parent owe capital gains tax on the sale?",
@@ -61,11 +61,11 @@ const faqs = [
   },
   {
     q: `Can ${FEATURED_BROKER.role} start before my parent has moved?`,
-    a: `Yes. ${FEATURED_BROKER.Role} can assess the home, develop a pricing strategy, and begin coordinating preparation work before the move happens — so everything is ready to go the moment the family gives the word.`,
+    a: `Yes. ${FEATURED_BROKER.Role} can assess the home, develop a pricing strategy, and begin coordinating preparation work before the move happens, so the home can be ready to list when the family decides to go ahead.`,
   },
   {
     q: "What if siblings disagree about selling?",
-    a: `This is very common. ${FEATURED_BROKER.Role} provides objective, data-based pricing guidance that gives all family members a shared foundation for the conversation — removing emotion from the financial decision.`,
+    a: `It happens often. ${FEATURED_BROKER.Role} can provide data-based pricing guidance so every family member is working from the same numbers, which can keep the financial question separate from the emotional ones.`,
   },
 ];
 
@@ -113,10 +113,10 @@ const SellHouseFundSeniorLiving = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              For most Washington State families, the home is the key to affording the care their parent needs.
+              In Washington State, a parent's home is often the main asset available to pay for their care.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              {FEATURED_BROKER.Role} coordinates the home sale with the care plan — so the timing and the proceeds work together.
+              {FEATURED_BROKER.Role} can coordinate the home sale with the care plan so the timing of the sale and the proceeds line up with the move.
             </p>
             </div>
           </div>
@@ -131,10 +131,10 @@ const SellHouseFundSeniorLiving = () => {
                 Why the Home Sale and the Care Decision Are Connected
               </h2>
               <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                Senior care in Washington State is expensive. The Washington median for assisted living is about $7,550 a month, and a semi-private nursing home room about $13,155 a month (CareScout 2025 survey); memory care typically costs more than assisted living — an estimate of roughly $9,000–$10,000 or more a month. Actual prices vary widely by area and care level, and Seattle-area prices run higher. For most families, Social Security and savings alone are not enough — the home is the primary asset available to bridge the gap.
+                Senior care in Washington State is expensive. The Washington median for assisted living is about $7,550 a month, and a semi-private nursing home room about $13,155 a month (CareScout 2025 survey); memory care typically costs more than assisted living (an estimate of roughly $9,000–$10,000 or more a month). Actual prices vary widely by area and care level, and Seattle-area prices run higher. When Social Security and savings are not enough, the home is often the main asset available to bridge the gap.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                That means two things have to happen at roughly the same time: your parent moves into care, and the home goes on the market. Getting the timing right — and the price right — directly affects how long the care can be funded and how much financial stress the family carries.
+                That means two things have to happen at roughly the same time: your parent moves into care, and the home goes on the market. The timing and the price of the sale directly affect how long the care can be funded and how much financial stress the family carries.
               </p>
             </div>
           </div>
@@ -204,17 +204,17 @@ const SellHouseFundSeniorLiving = () => {
                 <ul className="space-y-4 mb-6">
                   <li className="border-l-4 border-gold pl-5">
                     <p className="text-foreground text-base md:text-lg leading-relaxed">
-                      <span className="font-bold">At about $7,550/month for assisted living</span> (the Washington median, CareScout 2025 survey) — approximately 5 years of care funded
+                      <span className="font-bold">At about $7,550/month for assisted living</span> (the Washington median, CareScout 2025 survey): approximately 5 years of care funded
                     </p>
                   </li>
                   <li className="border-l-4 border-gold pl-5">
                     <p className="text-foreground text-base md:text-lg leading-relaxed">
-                      <span className="font-bold">At about $9,500/month for memory care</span> (an estimate; no survey covers memory care) — approximately 4 years of care funded
+                      <span className="font-bold">At about $9,500/month for memory care</span> (an estimate; no survey covers memory care): approximately 4 years of care funded
                     </p>
                   </li>
                 </ul>
                 <p className="italic text-foreground/85 text-base md:text-lg leading-relaxed">
-                  The example leaves out income taxes, rising care costs, and other income such as Social Security and pensions. Getting the home sold at the right price, at the right time, matters enormously to the family's long-term financial picture.
+                  The example leaves out income taxes, rising care costs, and other income such as Social Security and pensions. The sale price and timing have a large effect on how long the proceeds last.
                 </p>
               </div>
             </div>
@@ -291,7 +291,7 @@ const SellHouseFundSeniorLiving = () => {
                 Ready to Talk?
               </h2>
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed mb-8">
-                Most families start with a single question. {FEATURED_BROKER.Role} is happy to hear it — no pressure, no obligation.
+                Most families start with a single question. {FEATURED_BROKER.Role} can take it, with no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={`tel:${FEATURED_BROKER.phoneTel}`}>

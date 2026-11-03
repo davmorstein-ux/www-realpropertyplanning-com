@@ -21,32 +21,32 @@ const faqs = [
   {
     question: "How does selling a home in probate work in Seattle?",
     answer:
-      `Probate property sales in Seattle require court-granted authority before listing. ${FEATURED_BROKER.Role} coordinates with the estate attorney and personal representative to evaluate the property, manage preparation, develop a pricing strategy grounded in local market data, and guide the sale from start to finish — keeping all parties informed throughout.`,
+      `A Seattle home going through probate can't be listed until the court has given the personal representative authority to sell it. ${FEATURED_BROKER.Role} then handles the property side with the estate attorney and the personal representative: evaluating the house, managing preparation, setting a price from local sales data, and running the sale, with every party kept up to date.`,
   },
   {
     question: "What should an executor do first with a Seattle property?",
     answer:
-      `Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and market value. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.`,
+      `Lock up and secure the house first. Next, confirm that your legal authority to act is in place, then find out what condition the home is in and roughly what it is worth on the market. ${FEATURED_BROKER.Role} can tour the property, point out problems that would affect the price, and lay out the choices before you commit to one.`,
   },
   {
     question: `How does ${FEATURED_BROKER.role}'s appraisal background benefit Seattle sellers?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing strategy rooted in actual condition assessment and neighborhood-level market data — not automated estimates. This dual perspective is especially valuable in Seattle, where neighborhood pricing differences can be significant.`,
+      `${FEATURED_BROKER.Role} is licensed in Washington as a real estate broker and certified by the state as a residential appraiser, so the price starts from the home's actual condition and recent sales in its own neighborhood, not from an automated estimate. That matters in Seattle, where prices can differ considerably between neighborhoods.`,
   },
   {
     question: "Can you get help if I live out of state but the property is in Seattle?",
     answer:
-      `Yes. ${FEATURED_BROKER.Role} regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
+      `Yes. ${FEATURED_BROKER.Role} works with executors, trustees, and heirs who are handling a Seattle property from another state. ${FEATURED_BROKER.pronoun.Subject} can arrange access to the house, schedule vendors, oversee preparation, and handle the sale, sending updates as each step is done, which can save you trips to Seattle.`,
   },
   {
     question: "What should be done before listing an inherited home in Seattle?",
     answer:
-      `It depends on the property's condition, location, and your timeline. ${FEATURED_BROKER.Role} evaluates whether to sell as-is or invest in targeted preparation — using ${FEATURED_BROKER.pronoun.possessive} appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.`,
+      `The answer turns on the home's condition, where it sits, and how much time you have. ${FEATURED_BROKER.Role} weighs selling as-is against doing selected work first, and draws on ${FEATURED_BROKER.pronoun.possessive} appraisal background to estimate whether a given improvement would bring back more than it costs, counting the delay.`,
   },
   {
     question: "How long does it take to sell a probate property in Seattle?",
     answer:
-      `Timelines vary depending on the probate process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Seattle homes often sell within 2–4 weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a timeline around your specific situation.`,
+      `It depends on where the probate stands, the condition of the house, and the market at the time. Once the authority to sell is in place and the home is ready, well-priced Seattle homes often sell within 2–4 weeks. ${FEATURED_BROKER.Role} can sketch a realistic schedule for your property.`,
   },
 ];
 
@@ -106,7 +106,7 @@ const SeattleProbateEstate = () => {
         <ProbateStartHere />
 
       {/* Hero */}
-      <HeroBandTitle as="h1">Selling an Inherited Seattle Home — From Ballard to Beacon Hill</HeroBandTitle>
+      <HeroBandTitle as="h1">Selling an Inherited Seattle Home: From Ballard to Beacon Hill</HeroBandTitle>
 
       {/* Intro — relocated out of the title band. The band carries the
           page title and nothing else, sitewide. */}
@@ -114,7 +114,7 @@ const SeattleProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            A Capitol Hill condo, a West Seattle craftsman, and a Magnolia view home are three completely different sales — different buyer pools, different prep decisions, different price ceilings. Estate properties inside Seattle city limits reward neighborhood-specific pricing far more than they reward broad market averages.
+            Inside Seattle city limits, an estate home is best priced from its own neighborhood's sales rather than citywide averages. A Capitol Hill condo, a West Seattle craftsman, and a Magnolia view home are three different sales, each with its own buyers, preparation decisions, and price ceiling.
           </p>
           </div>
         </div>
@@ -128,14 +128,14 @@ const SeattleProbateEstate = () => {
               When Families in Seattle Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Most people don't plan for the moment they inherit a property or become responsible for selling one. These are some of the situations that bring families and professionals to {FEATURED_BROKER.role}:
+              The Seattle property questions that families and professionals bring to {FEATURED_BROKER.role} usually fall into one of these groups:
             </p>
             <ul className="space-y-4">
               {[
-                "Out-of-state executor managing a Seattle property from a distance",
-                "Long-held family home with years of deferred maintenance",
-                "Multiple heirs deciding whether to sell, keep, or divide the property",
-                "Property needing strategic preparation before going to market",
+                "Executor living out of state with a Seattle house to look after",
+                "Family home owned for decades, with repairs put off for years",
+                "Several heirs deciding whether to sell, keep, or divide the property",
+                "House that needs some preparation before it is listed",
                 "Uncertainty around pricing, valuation, and timing in Seattle's shifting market",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -156,13 +156,13 @@ const SeattleProbateEstate = () => {
               Why Seattle Properties Require Careful Strategy
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Seattle is not a one-size-fits-all market. A mid-century home in Ballard, a split-level in Rainier Beach, and a view property on Queen Anne each present different opportunities and challenges. Neighborhood-level pricing differences can be dramatic — and they matter enormously when the property is part of an estate.
+              Prices in Seattle can change sharply from one neighborhood to the next, and that matters when the property belongs to an estate. A mid-century house in Ballard, a split-level in Rainier Beach, and a view home on Queen Anne attract different buyers and call for different decisions.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Pricing strategy is critical. List too high and the property sits, raising questions from the court or other parties. Price too low and heirs lose value they're entitled to. In estate and probate situations, there's often less room for error.
+              Getting the list price right matters. A home priced too high can sit unsold and draw questions from the court or the other parties; one priced too low costs the heirs value they are entitled to. Estate and probate sales often leave less room for error.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families making difficult decisions.
+              {FEATURED_BROKER.Role} is a licensed Washington State real estate broker who is also a state-certified residential appraiser, and starts from the property's value. The aim is a price that can be explained and defended, clearer reporting to attorneys and the court, and firmer footing for families facing hard choices.
             </p>
           </div>
         </div>
@@ -171,9 +171,9 @@ const SeattleProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Seattle?"
-        body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County.`}
+        body={`Executors, attorneys, trustees, and families with inherited or estate property in Seattle or anywhere in King County can ask ${FEATURED_BROKER.name}, a licensed real estate broker, for a confidential property consultation.`}
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance on the property questions."
+        microcopy="There's no obligation, and the conversation stays on the property itself."
       />
 
       {/* Out-of-State */}
@@ -184,13 +184,13 @@ const SeattleProbateEstate = () => {
               Support for Out-of-State Executors
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Many executors and trustees managing Seattle property live hundreds or thousands of miles away. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely is stressful — especially when you're also grieving.
+              Executors and trustees for Seattle property often live hundreds or thousands of miles away. Lining up vendors, getting someone into the house, reading the local market, and selling from far away takes time and attention, at a point when you may also be grieving.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.Role} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keep you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              {FEATURED_BROKER.Role} can act as your contact on the ground in Seattle. {FEATURED_BROKER.pronoun.Subject} arranges entry to the house, coordinates cleanout crews, contractors, and stagers, talks with the attorneys and anyone else involved, and reports back as each piece is done. That means fewer trips for you and fewer loose ends to track from a distance.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're in California, Texas, New York, or overseas, {FEATURED_BROKER.role}'s goal is to make the process as clear and manageable as possible from wherever you are.
+              The arrangement does not change if you live in California, Texas, New York, or overseas; {FEATURED_BROKER.role}'s goal is a sale you can follow and manage from home.
             </p>
           </div>
         </div>
@@ -204,29 +204,29 @@ const SeattleProbateEstate = () => {
               How {FEATURED_BROKER.roleTitle} Can Help Simplify the Process
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Every situation is different, but the approach follows a clear, repeatable framework:
+              The details change from estate to estate. The order of the work usually doesn't:
             </p>
             <ol className="space-y-6">
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch — to understand who's involved, what authority exists, and what the goals are.`,
+                  desc: `${FEATURED_BROKER.Role} begins by talking through who is involved, who has authority to act, and what the family wants from the sale. It is a conversation, not a sales pitch.`,
                 },
                 {
                   title: "Property Review",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, identifies issues that may affect value, and notes what preparation might be worthwhile.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} walks through the house in person, records its condition and anything likely to affect value, and notes which preparation could pay off.`,
                 },
                 {
                   title: "Pricing Strategy",
-                  desc: `Using ${FEATURED_BROKER.pronoun.possessive} appraisal background and local market data, ${FEATURED_BROKER.pronoun.subject} develops a pricing strategy that's defensible, realistic, and tailored to the neighborhood and condition.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} sets a price from recent sales in the same Seattle neighborhood and the home's condition, applying ${FEATURED_BROKER.pronoun.possessive} appraisal training so the number is realistic and can be explained to everyone involved.`,
                 },
                 {
                   title: "Coordination",
-                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, co-executors, cleanout crews, contractors, and other parties to keep everyone aligned and the process moving.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} keeps the attorneys, co-executors, cleanout crews, and contractors on a shared schedule so no one is left waiting on someone else.`,
                 },
                 {
                   title: "Guiding the Process to Completion",
-                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details so you can focus on what matters most. Clear updates, no surprises, and a calm path to resolution.`,
+                  desc: `${FEATURED_BROKER.pronoun.Subject} runs the listing, the offers, and the closing, and keeps you posted until the sale is final.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -311,7 +311,7 @@ const SeattleProbateEstate = () => {
               A Calm, Clear Next Step
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-              If you're dealing with a property in Seattle and aren't sure what to do next, a short conversation can often bring immediate clarity.
+              If you have a Seattle property to deal with and no clear next step, a short conversation is often enough to settle the first decision.
             </p>
             <div className="flex justify-center">
               <Link to="/contact?reason=estate-property">

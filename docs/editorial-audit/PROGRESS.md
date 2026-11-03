@@ -21,6 +21,7 @@ Started Nov 3, 2026 on branch `editorial-audit`. Brief: owner's "Master Prompt â
 | Batch 7: benton, lewis, pierce, snohomish, grays-harbor, skamania counties; resources/cpas-financial-advisors, understanding-senior-transitions, understanding-housing-care-options, professionals/home-preparation, estate professional-team, aging-in-place-staying-home-safely, guides/who-has-authority-sell-probate-property-washington, afh-club/how-to-finance-an-afh | Live Nov 3 |
 | Batch 8: spokane-county, whatcom-county, for-probate-attorneys, for-estate-planning-attorneys, professionals/estate-sale, professionals/financial-planners, guides/pricing-house-trust-estate, guides/how-probate-real-estate-works, guides/executor-sell-house-before-probate-washington, tacoma/olympia/bellevue probate pages, retirement-reverse-mortgage, preparing-home-for-sale-during-transition; shared lead-ins (JourneyOrientation) and the RelatedServices inherited-house blurb de-dashed | Live Nov 3 |
 | Batch 9: how-the-process-works, realtor, downsizing-preparing-for-transition, estate-liquidation, aging-life-care-managers, medicare-providers, legal-plans-identity-protection, guides/how-long-sell-probate-property, guides/heirs-disagree-selling-house, long-term-care/medicaid-and-long-term-care, long-term-care/short-term-nursing-home-stays, kitsap-county, counties hub, estate what-to-do-with-the-property, real-estate-attorneys, for-elder-law-attorneys; shared RelatedServices blurbs, RemodelWorthCallout and hub seal alt text de-dashed | Live Nov 3 |
+| Batch 10: thurston, franklin, clark, yakima counties; seattle and everett probate pages; guides/appraisal-vs-cma, date-of-death-valuation-property-appraisals; guides/executor-first-steps-house, guides/what-executors-should-do, resources/washington-executors-10-step-checklist; title-and-escrow, professionals/senior-housing-advisors, estate-liquidators, planning-before-a-crisis; long-term-care/hospital-discharge-planning, sell-house-fund-senior-living, afh-club/real-estate-broker. /senior-transitions page shell only: its text is in src/i18n/locales/en.json (deferred with /probate-estate-sales) | Edited Nov 3, awaiting merge |
 | Em-dash-only pass still due: legal-duties, working-with-professionals and every 'none'/'light' page | Not started |
 | All other pages | Not started (see inventory.csv status column) |
 
@@ -44,6 +45,7 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - /articles/senior-housing-guide
 - /long-term-care/medicaid-and-long-term-care
 - /long-term-care/short-term-nursing-home-stays
+- /long-term-care/hospital-discharge-planning
 
 ## Claims flagged for fact review (meaning left unchanged)
 - silver-tsunami: 10,000/day in 2011; wave to ~2030; "Peak 65" most concentrated aging period; "vast majority" prefer aging in place; regional senior housing shortages; 20-25 more years after 65; caregiver shortage worsening. Sourced but not re-checked: 11,000/day and 4.1M/yr (Alliance for Lifetime Income), 1 in 5 by 2030 (Census), AARP 2024 savings figures.
@@ -115,3 +117,23 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - for-real-estate-attorneys, for-estate-planning: appraiser credential stated without SAME_PERSON guard.
 - counties hub: paragraph 3 says "Select a county above" (cards are below, no city lists); SEO description names Yakima and Franklin but hub has no cards for them; King card "well over a million dollars" unsourced.
 - kitsap: "Scandinavian heritage" for Kingston doubtful.
+- BATCH 10 FLAGS:
+- i18n pass needed: /senior-transitions (35 em dashes) and /probate-estate-sales text live in src/i18n/locales/en.json (other locales depend on it).
+- what-executors-should-do: applied approved qualifier (named executor acts once the court appoints them and issues letters; letters only if the estate goes through probate). $5k/$15k, $40k/$20k example unsourced; FAQ ends "Learn more about out-of-state property coordination." with no link.
+- washington-executors-checklist: steps array feeds HowTo JSON-LD; still has "One of the most important steps", "the right approach" (owner approval to edit).
+- executor-first-steps-house: "first week or two", "first month", vacancy-clause claims unsourced.
+- appraisal-vs-cma, for-real-estate-attorneys, for-estate-planning: appraiser credential stated without SAME_PERSON guard; Form 706 / estate tax threshold uncited.
+- date-of-death-valuation: pathway card "What Is a Date-of-Death Valuation?" links to /real-estate-appraiser.
+- seattle: "often sell within 2-4 weeks" unsourced; "draw questions from the court" overstated with nonintervention powers.
+- everett: "Silver Lake" is partly unincorporated county; neighborhood housing ages unsourced.
+- tacoma/spokane/bellevue/everett: "typically sell within a few weeks" unsourced.
+- clark: Woodland is mostly in Cowlitz County; "rural Battle Ground"; "Washington's tax advantages" (WA now has capital gains tax).
+- franklin: "northern half of the Tri-Cities"; FAQ questions in Franklin and Yakima are ungrammatical ("Can this be handled a ... sale").
+- thurston: government employment "stable buyer pool" unsourced.
+- yakima: "thirty years or more" unsourced.
+- title-and-escrow: "30 to 45 days" unsourced; "Provider listings coming soon" placeholder live.
+- senior-housing-advisors: no disclosure that commission-paid advisors may show only paying communities; service-area FAQ vs actual listings.
+- estate-liquidators: no listing-standard sentence.
+- afh-real-estate-broker: "Every AFH sale is a CHOW" absolute (real-estate-only sale may not be); specialty designation claim unsourced; hardcoded 5.0/16 reviews and memberships; same four review tags on every card.
+- hospital-discharge: readmission research and "within 30 days" claims unsourced.
+- sell-house-fund-senior-living: memory care $9,000-10,000/mo unsourced; $1,130,000 home equity limit to confirm against HCA 2026; empty Affiliations H2.
