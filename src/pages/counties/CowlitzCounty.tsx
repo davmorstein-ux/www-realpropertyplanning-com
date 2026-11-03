@@ -13,7 +13,7 @@ const CowlitzCounty = () => (
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Cowlitz County, Washington. Serving Longview, Kelso, Castle Rock & surrounding communities."
     cities={[
       "Longview", "Kelso", "Castle Rock", "Woodland", "Kalama",
-      "Cathlamet", "Ryderwood", "Silver Lake", "Toutle", "Ariel",
+      "Ryderwood", "Silver Lake", "Toutle", "Ariel",
     ]}
     localInsight={`Cowlitz County sits at the confluence of the Cowlitz and Columbia Rivers, with a real estate market shaped by its industrial roots, its rural land, and close-knit communities. Estate and probate properties range from the established neighborhoods of Longview (one of the first planned cities in the Pacific Northwest) to rural properties along the Toutle River corridor, and pricing them depends on the local market and on each community's own conditions. ${FEATURED_BROKER.Role} brings the perspective of a licensed broker and certified appraiser to Cowlitz County estate properties, working with families, executors, and attorneys on inherited and estate property.`}
     aeoQuestion="How does probate real estate work in Cowlitz County?"
