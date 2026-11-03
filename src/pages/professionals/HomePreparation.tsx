@@ -8,22 +8,22 @@ const HomePreparation = () => {
       metaDescription="Find contractors, cleaners, and staging professionals in the Puget Sound area who help prepare inherited homes and longtime family residences for a successful sale."
       helpHeadline="How Home Preparation Specialists Help Your Family"
       helpRows={[
-        { icon: "🔧", text: "Assess the home's condition and coordinate repairs, cleaning, and improvements that make the biggest difference to buyers" },
-        { icon: "🛋️", text: "Stage the home so it feels welcoming and well-maintained — helping it sell faster and for a stronger price" },
-        { icon: "🤝", text: "Work within estate and probate timelines, understanding that these situations require extra sensitivity and flexibility" },
+        { icon: "🔧", text: "Assess the home's condition and coordinate the repairs, cleaning, and improvements that make the biggest difference to buyers" },
+        { icon: "🛋️", text: "Stage the home so it looks well kept and uncluttered, which can help it sell faster and for a stronger price" },
+        { icon: "🤝", text: "Work within estate and probate timelines, with the flexibility and sensitivity these situations often require" },
       ]}
       faqs={[
         {
           q: "Does an inherited or estate home need to be prepared before selling?",
-          a: "In most cases, yes — even modest preparation makes a real difference. Homes that have been lived in for many years often benefit from deep cleaning, minor repairs, fresh paint, and decluttering. Buyers respond to homes that feel cared for, even if they're older.",
+          a: "In most cases, yes. Even modest preparation usually helps. Homes that have been lived in for many years often benefit from deep cleaning, minor repairs, fresh paint, and decluttering. Buyers tend to respond better to a home that looks well kept, even an older one.",
         },
         {
           q: "What is home staging and is it worth it?",
-          a: "Home staging involves arranging furniture and décor to help buyers visualize living in the space. Studies consistently show staged homes sell faster and often receive stronger offers than unstaged homes. For estate properties — which may have dated décor or feel lived-in — staging can make a significant difference.",
+          a: "Home staging involves arranging furniture and décor to help buyers picture living in the space. Staged homes often sell faster and can receive stronger offers than unstaged homes. Estate properties may have dated décor or look lived-in, so staging can make a noticeable difference.",
         },
         {
           q: "What repairs are most important before listing an estate home?",
-          a: "The highest-impact improvements are usually the simplest: fresh paint in neutral colors, deep cleaning throughout, cleaned or replaced carpets, and tidy landscaping. Major renovations rarely pay off in estate sales — the goal is to present the home as clean and well-maintained, not brand new.",
+          a: "The highest-impact improvements are usually the simplest: fresh paint in neutral colors, deep cleaning throughout, cleaned or replaced carpets, and tidy landscaping. Major renovations rarely pay off in estate sales. The goal is to present the home as clean and well maintained, not brand new.",
         },
         {
           q: "Can home preparation happen while the estate is still in probate?",
@@ -31,7 +31,7 @@ const HomePreparation = () => {
         },
         {
           q: "How long does it take to prepare an estate home for sale?",
-          a: "It depends on the home's condition, but most preparation takes 2–6 weeks. Coordinating the right professionals early — before the estate sale, if possible — keeps everything on schedule.",
+          a: "It depends on the home's condition, but most preparation takes 2–6 weeks. Bringing in the professionals you need early (before the estate sale, if possible) helps keep everything on schedule.",
         },
       ]}
       relatedProfessions={[

@@ -198,9 +198,9 @@ const UnderstandingHousingCareOptions = () => {
                   height={512}
                 />
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Keep Going</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">Continue Your Journey</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">Related Guides</h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families exploring housing and care options often need help understanding these next steps.
+                  These guides cover the decisions that usually come next.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">

@@ -53,28 +53,28 @@ const ProfessionalTeam = () => (
       </div>
     }
   >
-    <SubH2>The Right Team Makes Everything Easier.</SubH2>
+    <SubH2>Estate Administration Takes Several Professionals</SubH2>
     <P>
-      Estate administration touches legal, financial, real estate, and logistical territory. Having the right professionals in place — and coordinated — prevents costly mistakes and protects everyone involved.
+      Estate administration involves legal, financial, real estate, and logistical work. Having the professionals you need in place, and coordinated with each other, helps prevent costly mistakes and protects everyone involved.
     </P>
 
     <Divider />
 
     <SubH2>Why a Coordinated Team Matters</SubH2>
     <P>
-      Families navigating an estate often make the mistake of dealing with each professional in isolation — consulting the attorney but not the CPA, engaging a real estate agent without getting an appraisal first, making property decisions before legal authority is established.
+      A common mistake is dealing with each professional in isolation: consulting the attorney but not the CPA, engaging a real estate agent without getting an appraisal first, or making property decisions before legal authority is established.
     </P>
     <P>
-      A coordinated team — where the right professionals are engaged at the right time, and communicate with each other — is the difference between a smooth administration and a chaotic one.
+      When each professional is brought in at the right point and they communicate with each other, administration usually goes far more smoothly than when they work separately.
     </P>
-    <P>Here's who typically needs to be involved.</P>
+    <P>These are the professionals typically involved.</P>
 
     <Divider />
 
 
     <SubH2>Finding Independent Professionals</SubH2>
     <P>
-      Real Property Planning is a free resource for families navigating estate administration. It explains what each of these professionals does. Its Find a Professional page lists independent professionals the site's owner has met with personally; you contact and hire them directly, and you are free to choose anyone.
+      Real Property Planning is a free educational resource on estate administration. It explains what each of these professionals does. Its Find a Professional page lists independent professionals the site's owner has met with personally; you contact and hire them directly, and you are free to choose anyone.
     </P>
   </EstateSubPageLayout>
 );

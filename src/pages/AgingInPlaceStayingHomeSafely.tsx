@@ -35,7 +35,7 @@ const pathways: Pathway[] = [
     letter: "1",
     title: "Understanding Aging in Place",
     description:
-      "Learn what aging in place typically involves and how families often evaluate safety, support needs, independence, and future planning.",
+      "What aging in place usually involves, and how families weigh safety, support needs, independence and future planning.",
     href: "/understanding-senior-transitions",
     icon: iconHome,
   },
@@ -43,7 +43,7 @@ const pathways: Pathway[] = [
     letter: "2",
     title: "Evaluating Home Safety & Daily Living Concerns",
     description:
-      "Guidance involving mobility, fall prevention, medication management, daily routines, transportation, accessibility, and home safety considerations.",
+      "Mobility, fall prevention, medication management, daily routines, transportation, accessibility and home safety.",
     href: "/understanding-housing-care-options",
     icon: iconHelp,
   },
@@ -51,7 +51,7 @@ const pathways: Pathway[] = [
     letter: "3",
     title: "Understanding Caregiving & Support Options",
     description:
-      "Explore caregiving support, in-home care, family coordination, community resources, and assistance options that may help seniors remain at home longer.",
+      "In-home care, family caregiving, community resources and other help that may let a senior stay at home longer.",
     href: "/senior-living-and-relocation",
     icon: iconHeartHands,
   },
@@ -59,7 +59,7 @@ const pathways: Pathway[] = [
     letter: "4",
     title: "Planning Before a Crisis Develops",
     description:
-      "Understand how early planning may help families avoid rushed decisions during emergencies or sudden health changes.",
+      "How planning early may help families avoid rushed decisions after an emergency or a sudden change in health.",
     href: "/planning-before-a-crisis",
     icon: iconBookOpen,
   },
@@ -67,31 +67,31 @@ const pathways: Pathway[] = [
     letter: "5",
     title: "Understanding When Housing Changes May Be Needed",
     description:
-      "Guidance for families trying to recognize when additional support, assisted living, memory care, or housing transitions may need to be explored.",
+      "Signs that a senior may need more support at home, assisted living, memory care or a move.",
     href: "/understanding-housing-care-options",
     icon: iconAssisted,
   },
   {
     letter: "6",
-    title: "Building the Right Support Team",
+    title: "Building a Support Team",
     description:
-      "Understanding how caregivers, care advisors, attorneys, financial professionals, housing specialists, and property professionals may help guide the process.",
+      "What caregivers, care advisors, attorneys, financial professionals, housing specialists and property professionals can each help with.",
     href: "/building-your-professional-team",
     icon: iconTeam,
   },
 ];
 
 const challenges = [
-  { title: "Fear of losing independence", body: "Wanting to stay in control is natural. Most families find that the right support actually preserves independence longer." },
-  { title: "Resistance to accepting help", body: "Many seniors worry that accepting help means giving up autonomy. Small, gradual steps often feel easier than big changes." },
-  { title: "Caregiver burnout", body: "Family caregivers often juggle jobs, children, and their own health. Recognizing limits early helps everyone stay healthier." },
-  { title: "Home safety concerns", body: "Falls, medication mix-ups, and mobility risks are common worries. A home safety review usually brings clarity and peace of mind." },
-  { title: "Family disagreements", body: "Siblings and relatives may see the situation differently. A shared conversation with a neutral professional often aligns perspectives." },
-  { title: "Financial concerns", body: "Worrying about paying for care is normal. Exploring options early usually reveals more flexibility than families expect." },
-  { title: "Transportation limitations", body: "Driving changes can feel like losing freedom. Community resources, ride services, and local programs often fill the gap." },
-  { title: "Social isolation", body: "Staying connected matters for health and happiness. Planning for companionship and community is part of aging well at home." },
-  { title: "Medication and health management", body: "Managing prescriptions, appointments, and conditions can become complex. Coordinated support often simplifies the routine." },
-  { title: "Fear of making the wrong decision", body: "Most families feel this. The goal is not perfection — it is informed, caring decisions made one step at a time." },
+  { title: "Fear of losing independence", body: "Wanting to stay in control of your own life is understandable. Help at home, added early, can let a person live independently for longer." },
+  { title: "Resistance to accepting help", body: "Accepting help can feel like giving up autonomy. A small change is usually easier to agree to than a large one." },
+  { title: "Caregiver burnout", body: "Family caregivers often juggle jobs, children and their own health. Deciding early how much one person can take on protects the caregiver's health as well as the senior's." },
+  { title: "Home safety concerns", body: "Falls, medication mix-ups and mobility problems are the usual worries. A home safety review shows which risks are real and what would reduce them." },
+  { title: "Family disagreements", body: "Siblings and relatives may see the situation differently. A meeting led by a neutral professional, such as a care manager, can help the family agree on the facts." },
+  { title: "Financial concerns", body: "The cost of care is a common worry. Looking at how to pay for it before it is needed usually leaves more options open." },
+  { title: "Transportation limitations", body: "Giving up driving can feel like a loss of freedom. Ride services, community resources and local programs can often cover the trips that matter." },
+  { title: "Social isolation", body: "Isolation affects health as well as mood. A plan to stay at home should include regular contact with other people and the wider community." },
+  { title: "Medication and health management", body: "Prescriptions, appointments and health conditions can become complicated to manage. Having one person or service coordinate them usually makes the routine simpler." },
+  { title: "Fear of making the wrong decision", body: "There is rarely a single correct answer. Decisions can be made one at a time and revisited as needs change." },
 ];
 
 const considerations = [
@@ -108,31 +108,31 @@ const considerations = [
 ];
 
 const mistakes = [
-  { title: "Waiting until a crisis develops", body: "Emergency decisions are usually more stressful and more limited. Early planning creates calmer, better options." },
-  { title: "Ignoring safety concerns", body: "Small risks often become bigger problems. Addressing them early typically prevents larger consequences." },
-  { title: "Trying to handle caregiving alone", body: "One person cannot sustainably do it all. Building a small support team protects both the caregiver and the senior." },
-  { title: "Avoiding difficult conversations", body: "Silence usually increases anxiety. Honest, gentle conversations tend to bring families closer together." },
-  { title: "Delaying planning discussions", body: "It is never too early to talk about preferences and possibilities. Most families wish they had started sooner." },
-  { title: "Underestimating caregiver stress", body: "Burnout affects decision-making and health. Recognizing limits and accepting help is a strength, not a failure." },
-  { title: "Failing to coordinate support services", body: "Fragmented help often leaves gaps. A coordinated plan usually connects the right services at the right time." },
-  { title: "Avoiding future housing conversations", body: "Exploring options before they are needed keeps choices open and reduces fear about what might come next." },
+  { title: "Waiting until a crisis develops", body: "Decisions made in an emergency are usually rushed and limited to whatever is available at the time. Planning ahead leaves more choices." },
+  { title: "Ignoring safety concerns", body: "Small hazards are easier to fix before they cause a fall or an injury than after." },
+  { title: "Trying to handle caregiving alone", body: "One person cannot provide all the care indefinitely. Sharing it among family, paid help and community services protects both the caregiver and the senior." },
+  { title: "Avoiding difficult conversations", body: "Putting off the conversation usually makes it harder later. Talking early, while the senior can state their own preferences, means the plan reflects what they want." },
+  { title: "Delaying planning discussions", body: "Preferences about care, money and housing are easier to discuss before a decision is urgent." },
+  { title: "Underestimating caregiver stress", body: "Burnout affects a caregiver's health and judgment. Accepting help before reaching that point keeps care going." },
+  { title: "Failing to coordinate support services", body: "Separate services that are not coordinated leave gaps. A single plan, with one person keeping track of it, shows what is covered and what is not." },
+  { title: "Avoiding future housing conversations", body: "Looking at housing options before a move is needed keeps choices open and makes a later move less of a shock." },
 ];
 
 const faqs = [
   {
     question: "How do we know if it is still safe to remain at home?",
     answer:
-      "Families often look at fall risk, medication management, ability to prepare meals, mobility around the home, and whether the person can respond in an emergency. A professional home safety assessment can help clarify what is working and what may need attention.",
+      "Families often look at fall risk, medication management, ability to prepare meals, mobility around the home, and whether the person can respond in an emergency. A professional home safety assessment can show what is working and what may need attention.",
   },
   {
     question: "What support services may help?",
     answer:
-      "In-home care, meal delivery, transportation services, medication management, home modifications, and community programs may all help extend safe, independent living. The right mix depends on the individual's needs and preferences.",
+      "In-home care, meal delivery, transportation services, medication management, home modifications, and community programs may all help a person live safely and independently for longer. What helps depends on the individual's needs and preferences.",
   },
   {
     question: "What if a parent refuses help?",
     answer:
-      "Resistance is common and understandable. Starting with the smallest possible step, respecting their preferences, and involving a neutral third party such as a care advisor or geriatric care manager can often shift the conversation.",
+      "Resistance is common. Starting with the smallest possible step, respecting their preferences, and involving a neutral third party such as a care advisor or geriatric care manager can often shift the conversation.",
   },
   {
     question: "What home safety concerns should families watch for?",
@@ -142,12 +142,12 @@ const faqs = [
   {
     question: "When should families begin planning?",
     answer:
-      "Ideally before a crisis. Early conversations about preferences, finances, and support options give families more flexibility and calmer decision-making when needs change.",
+      "Ideally before a crisis. Talking early about preferences, finances and support options leaves more choices, and more time, when needs change.",
   },
   {
     question: "How do caregiving and housing decisions connect?",
     answer:
-      "As care needs increase, the home itself may need changes — or a different living arrangement may become more practical. Evaluating both together usually leads to smoother transitions.",
+      "As care needs increase, the home itself may need changes, or a different living arrangement may become more practical. Looking at care and housing together usually makes any transition smoother.",
   },
   {
     question: "What professionals may help guide the process?",
@@ -157,24 +157,24 @@ const faqs = [
   {
     question: "How do families reduce stress and conflict?",
     answer:
-      "Clear communication, shared information, defined roles, and a neutral professional to facilitate discussion typically reduce tension and help families move forward together.",
+      "Clear communication, shared information, defined roles, and a neutral professional to facilitate discussion typically reduce tension and make it easier to agree on next steps.",
   },
   {
     question: "What if situations change suddenly?",
     answer:
-      "Health events can shift needs quickly. Having a basic plan in place — including contact information, financial documents, and a sense of available options — helps families respond more calmly.",
+      "Health events can shift needs quickly. Having a basic plan in place, including contact information, financial documents and a sense of the available options, helps families respond more calmly.",
   },
   {
     question: "How do families avoid waiting too long?",
     answer:
-      "Schedule regular check-ins, watch for gradual changes, and normalize planning as a caring act rather than a sign of decline. Starting the conversation early keeps more options open.",
+      "Schedule regular check-ins, watch for gradual changes, and treat planning as ordinary preparation rather than a sign of decline. Starting the conversation early keeps more options open.",
   },
 ];
 
 const continueJourney = [
   { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Explore senior living, in-home care, and housing transitions.", icon: iconAssisted },
   { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "A guided overview of the senior transition process.", icon: iconIndependent },
-  { href: "/helping-an-aging-parent", title: "Helping an Aging Parent or Loved One", description: "Support for adult children navigating caregiving and family decisions.", icon: iconHeartHands },
+  { href: "/helping-an-aging-parent", title: "Helping an Aging Parent or Loved One", description: "For adult children handling caregiving and family decisions.", icon: iconHeartHands },
   { href: "/planning-before-a-crisis/legal-documents", title: "Estate Planning & Powers of Attorney", description: "How legal and financial planning may help protect families.", icon: iconEstatePlanning },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for property and housing choices.", icon: iconHome },
   { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "Which independent professionals handle each part of a transition.", icon: iconTeam },
@@ -184,8 +184,8 @@ const nextSteps = [
   "Understand current safety and caregiving concerns",
   "Explore support services and planning options",
   "Discuss future housing and transition considerations",
-  "Build the right support team",
-  "Make informed decisions one step at a time",
+  "Build a support team",
+  "Make decisions one step at a time, and revisit them as needs change",
 ];
 
 const jsonLd = articleSchema({
@@ -218,7 +218,7 @@ const AgingInPlaceStayingHomeSafely = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              A guided roadmap for seniors and families exploring safety, caregiving support, housing planning, home modifications, future transitions, and staying at home as long as possible.
+              Staying at home safely usually comes down to three things: the condition of the home, the help available with daily care, and a plan for what happens if needs change. This guide covers home safety, caregiving support, home modifications, housing planning and future transitions.
             </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ const AgingInPlaceStayingHomeSafely = () => {
           items={[
             "A parent or loved one wants to stay in their home",
             "You are evaluating safety, mobility, or daily support",
-            "You want to plan ahead — before a fall or crisis",
+            "You want to plan ahead, before a fall or crisis",
             "You are weighing in-home care vs. a future move",
             "You want practical guidance, not pressure to sell"
           ]}
@@ -245,11 +245,9 @@ const AgingInPlaceStayingHomeSafely = () => {
                 Many Seniors Want to Remain at Home
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed">
-                For many seniors, remaining at home represents independence, comfort, familiarity,
-                and emotional connection. Families often hope to support aging in place as long as
-                possible while also balancing safety, caregiving needs, health concerns, and future
-                planning. This guide is designed to help simplify the process and provide a calmer
-                path forward.
+                For many seniors, home means independence, comfort and familiarity. Supporting that
+                for as long as possible means weighing it against safety, care needs and health,
+                and planning for the point at which staying may no longer work.
               </p>
             </div>
           </div>
@@ -319,13 +317,13 @@ const AgingInPlaceStayingHomeSafely = () => {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  You Are Not Alone
+                  Where It Gets Hard
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Common Challenges Families Face
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what's hard often makes it easier to move forward.
+                  These problems come up often when a senior stays at home.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -357,9 +355,9 @@ const AgingInPlaceStayingHomeSafely = () => {
                   Many People Do Not Know What Questions to Ask
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Most families are unsure what warning signs to watch for, how caregiving stress
-                  may affect family dynamics, how quickly needs may change, what support options
-                  may exist, or how housing and property decisions may eventually connect.
+                  Families are often unsure which warning signs to watch for, how caregiving stress
+                  may affect the family, how quickly needs can change, what support exists, and how
+                  housing and property decisions eventually connect.
                 </p>
               </div>
               <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_2px_8px_-4px_rgba(27,43,75,0.10)]">
@@ -396,7 +394,7 @@ const AgingInPlaceStayingHomeSafely = () => {
                   Common Mistakes to Avoid
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what often goes wrong makes it easier to plan well.
+                  Each of these tends to narrow a family's options later.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -434,10 +432,10 @@ const AgingInPlaceStayingHomeSafely = () => {
                   Keep Going
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
+                  Related Guides
                 </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families exploring aging in place often continue with these next steps.
+                  Guides that cover the questions that usually come next.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

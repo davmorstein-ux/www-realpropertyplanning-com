@@ -7,7 +7,7 @@ const LewisCounty = () => (
     countyPath="/lewis-county"
     countySlug="lewis-county"
     heroH1="Lewis County, WA"
-    heroSubheading="Probate, estate, and senior transition real estate — practical guidance for families navigating inherited property along the I-5 corridor and into the Cascade foothills."
+    heroSubheading="Probate, estate, and senior transition real estate for families with inherited property along the I-5 corridor and into the Cascade foothills."
     belowHeroHeading="Serving Every Corner of Lewis County"
     seoTitle="Probate & Estate Real Estate in Lewis County, WA | Real Property Planning"
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Lewis County, Washington. Serving Chehalis, Centralia, Morton & surrounding communities."
@@ -15,9 +15,9 @@ const LewisCounty = () => (
       "Chehalis", "Centralia", "Morton", "Winlock", "Napavine",
       "Toledo", "Vader", "Pe Ell", "Randle", "Packwood",
     ]}
-    localInsight={`Lewis County stretches from the twin cities of Chehalis and Centralia along the I-5 corridor to the rural communities of the Cascade foothills and the Cowlitz River valley. It is a county of genuine contrasts — the commercial activity of Centralia and Chehalis, the quiet agricultural communities of Toledo and Winlock, and the mountain-gateway towns of Morton, Randle, and Packwood near Mount Rainier. Estate and inherited properties here span a wide range: older homes in established neighborhoods, rural acreage with outbuildings, agricultural parcels, and properties in communities where comparable sales are limited and local knowledge is essential. ${FEATURED_BROKER.Role} provides the condition-based pricing and practical coordination that Lewis County estate situations require.`}
+    localInsight={`Lewis County stretches from the twin cities of Chehalis and Centralia along the I-5 corridor to the rural communities of the Cascade foothills and the Cowlitz River valley. Its communities differ: Centralia and Chehalis are the commercial centers, Toledo and Winlock are quiet agricultural communities, and Morton, Randle, and Packwood are mountain-gateway towns near Mount Rainier. Estate and inherited properties here include older homes in established neighborhoods, rural acreage with outbuildings, agricultural parcels, and properties in communities where comparable sales are limited and local knowledge matters. ${FEATURED_BROKER.Role} provides condition-based pricing and practical coordination for Lewis County estate properties.`}
     aeoQuestion="How does probate real estate work in Lewis County?"
-    aeoAnswer="Lewis County probates are usually filed in the Lewis County Superior Court in Chehalis, though Washington allows filing in any county. Personal representatives must receive Letters Testamentary (or, without a will, Letters of Administration) before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from the initial date-of-death valuation through closing — with particular attention to the rural property characteristics and community-specific market dynamics that are common throughout Lewis County."
+    aeoAnswer="Lewis County probates are usually filed in the Lewis County Superior Court in Chehalis, though Washington allows filing in any county. Personal representatives must receive Letters Testamentary (or, without a will, Letters of Administration) before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families from the initial date-of-death valuation through closing, with particular attention to the rural property characteristics and community-specific market conditions common throughout Lewis County."
     aeoSupportFaqs={[
       {
         question: "What types of estate properties are most common in Lewis County?",
@@ -25,35 +25,35 @@ const LewisCounty = () => (
       },
       {
         question: "How are rural Lewis County properties with acreage or outbuildings handled in an estate sale?",
-        answer: `Rural properties with acreage, barns, shops, or agricultural features require hands-on evaluation that automated tools cannot provide. ${FEATURED_BROKER.Role}'s certified appraisal background is particularly valuable for these property types, where land characteristics, outbuilding condition, and access all affect value in ways that standard residential comparisons miss.`,
+        answer: `Rural properties with acreage, barns, shops, or agricultural features need a hands-on evaluation that automated tools cannot provide. ${FEATURED_BROKER.Role}'s certified appraisal background helps with these property types, where land characteristics, outbuilding condition, and access all affect value in ways that standard residential comparisons miss.`,
       },
     ]}
-    localExpertiseHeading="Lewis County's Real Estate Market — What Estate Sellers Need to Know"
+    localExpertiseHeading="Lewis County's Real Estate Market: What Estate Sellers Need to Know"
     localExpertiseBody={[
       "Lewis County's real estate market reflects its geography. Centralia and Chehalis serve as the county's commercial and residential hub, with a practical, value-oriented buyer pool and housing stock that ranges from older established homes to newer construction on the cities' edges. These communities have steady local demand and some spillover from buyers priced out of Pierce and Thurston County markets to the north.",
-      `The rural communities — Toledo, Winlock, Vader, Pe Ell, and the foothills towns — operate in a different market entirely. Limited comparable sales, rural property characteristics, and a smaller buyer pool mean that pricing accuracy is especially important and automated estimates are especially unreliable. Estate and inherited properties in these communities benefit most from the kind of on-the-ground, condition-based evaluation that ${FEATURED_BROKER.role} provides.`,
+      `The rural communities (Toledo, Winlock, Vader, Pe Ell, and the foothills towns) operate in a different market. Limited comparable sales, rural property characteristics, and a smaller buyer pool make accurate pricing especially important and automated estimates especially unreliable. Estate and inherited properties in these communities benefit most from an on-the-ground, condition-based evaluation, which ${FEATURED_BROKER.role} provides.`,
     ]}
     communitiesIntro={`${FEATURED_BROKER.Role} serves families, executors, and professionals throughout Lewis County, including:`}
     closingCtaBody={[
-      "Whether you're managing an inherited home in Centralia, rural acreage near Toledo, or a foothills property near Morton, a conversation can help bring clarity to what comes next.",
-      `${FEATURED_BROKER.Role} provides the locally informed, condition-based guidance that Lewis County's varied property types require.`,
+      "If you are managing an inherited home in Centralia, rural acreage near Toledo, or a foothills property near Morton, a conversation can cover its likely sale price and the work it needs first.",
+      `${FEATURED_BROKER.Role} can walk through a Lewis County property in person before any price is set.`,
     ]}
     countySpecificFaqs={[
       {
         question: "Can a Lewis County probate property be listed before Letters are issued?",
-        answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the superior court handling the estate (usually the Lewis County Superior Court in Chehalis). ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — so you're ready to move the moment Letters arrive.`,
+        answer: `No. The property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the superior court handling the estate (usually the Lewis County Superior Court in Chehalis). ${FEATURED_BROKER.Role} uses that waiting period for the valuation walk-through, securing the property, coordinating cleanout vendors, and preparing the marketing file, so the property can go on the market soon after Letters arrive.`,
       },
       {
         question: "How are agricultural or acreage properties valued in a Lewis County estate?",
-        answer: `Agricultural and acreage properties in Lewis County require valuation that accounts for land quality, outbuildings, irrigation or water rights, access, and the specific buyer pool for that type of property in that area. ${FEATURED_BROKER.Role}'s certified appraisal background provides the property-specific analysis these situations require — not a desktop estimate derived from residential comparables that don't apply.`,
+        answer: `Agricultural and acreage properties in Lewis County require valuation that accounts for land quality, outbuildings, irrigation or water rights, access, and the specific buyer pool for that type of property in that area. ${FEATURED_BROKER.Role}'s certified appraisal background supports the property-specific analysis these properties need, rather than a desktop estimate based on residential comparables that don't apply.`,
       },
       {
         question: "Can a Lewis County estate sale be managed for out-of-area heirs?",
-        answer: `Yes — and this is especially common in Lewis County, where many property owners have family living in the Seattle metro area or out of state. ${FEATURED_BROKER.Role} handles property assessment, vendor coordination, preparation, showings, and offer review locally — with regular updates so families don't need to travel to Lewis County to manage the process.`,
+        answer: `Yes. This is especially common in Lewis County, where many property owners have family living in the Seattle metro area or out of state. ${FEATURED_BROKER.Role} handles property assessment, vendor coordination, preparation, showings, and offer review locally, and sends regular updates so families don't need to travel to Lewis County to manage the process.`,
       },
       {
         question: "What should executors know about selling property in Lewis County's smaller communities?",
-        answer: `In smaller Lewis County communities — Pe Ell, Vader, Randle, Packwood — the buyer pool is limited and comparable sales may be sparse. This makes professional, on-the-ground valuation especially important and makes realistic pricing expectations critical from the start. ${FEATURED_BROKER.Role}'s experience with rural and small-community markets helps executors understand what their property will realistically attract and at what price.`,
+        answer: `In smaller Lewis County communities such as Pe Ell, Vader, Randle, and Packwood, the buyer pool is limited and comparable sales may be sparse. That makes an on-the-ground valuation especially important and realistic pricing expectations critical from the start. ${FEATURED_BROKER.Role} works with rural and small-community markets and can help executors understand what their property is likely to attract, and at what price.`,
       },
     ]}
   />

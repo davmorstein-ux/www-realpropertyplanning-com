@@ -30,11 +30,11 @@ const INK = "#141210";
 const fmtDate = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
 const SITUATIONS: { label: string; lane: LaneId; note: string }[] = [
-  { label: "The home only — and I will live there and run it", lane: "residential", note: "You are the buyer residential lenders can work with. Start with the owner-occupied lane; if the seller is also charging for the business, plan to pay that in cash or on seller terms." },
+  { label: "The home only, and I will live there and run it", lane: "residential", note: "You are the buyer residential lenders can work with. Start with the owner-occupied lane; if the seller is also charging for the business, plan to pay that in cash or on seller terms." },
   { label: "The home plus the existing licensed AFH business", lane: "sba7a", note: "You are buying a business with real estate attached. SBA 7(a) is built for exactly this and is the only route that finances the business portion." },
-  { label: "An AFH as an investment — someone else will operate it", lane: "portfolio", note: "Residential owner-occupied programs and most SBA structures are off the table. Portfolio or commercial lending is the lane, and expect to bring real cash." },
-  { label: "A house I will convert and license as an AFH", lane: "residential", note: "If you will live there, an owner-occupied residential loan — possibly a renovation program — is the usual start. There is no business to finance yet; the license comes after the work." },
-  { label: "Another location — I already own and run an AFH", lane: "sba7a", note: "Experienced operators have the widest choice: SBA 7(a) for a purchase with the business, 504 for the real estate, or portfolio lending if speed matters more than the down payment." },
+  { label: "An AFH as an investment, with someone else operating it", lane: "portfolio", note: "Residential owner-occupied programs and most SBA structures are off the table. Portfolio or commercial lending is the lane, and expect a large cash down payment." },
+  { label: "A house I will convert and license as an AFH", lane: "residential", note: "If you will live there, an owner-occupied residential loan (possibly a renovation program) is the usual start. There is no business to finance yet; the license comes after the work." },
+  { label: "Another location: I already own and run an AFH", lane: "sba7a", note: "Experienced operators have the widest choice: SBA 7(a) for a purchase with the business, 504 for the real estate, or portfolio lending if speed matters more than the down payment." },
 ];
 
 const FAQS = [
@@ -42,7 +42,7 @@ const FAQS = [
   { question: "Can I get a regular home mortgage on an adult family home?", answer: "Sometimes. A handful of Puget Sound lenders write owner-occupied residential mortgages on licensed AFHs for buyers who will live in the home and can qualify on their own income and credit. It is the cheapest money available and the lowest down payment, but it finances the house, not the business, and not every lender will do it." },
   { question: "What is the difference between SBA 7(a) and SBA 504?", answer: "7(a) is the general-purpose loan: one lender, about 10% down, up to 25 years, and it can include the business, working capital and closing costs. 504 pairs a bank with a Certified Development Company to finance owner-occupied real estate at a lower fixed rate, but it cannot finance the business portion." },
   { question: "Can I use a DSCR loan to buy an adult family home?", answer: "Sometimes. Many rental-property DSCR programs exclude care homes, but some lenders offer DSCR-style loans on adult family homes, and they differ in how they count income: gross resident income, income after expenses, or rent. Ask which before comparing offers. The site's guide to DSCR loans for adult family homes (/afh-club/dscr-loans-adult-family-homes) walks through the difference with one home measured three ways." },
-  { question: "What does the lender check before approving an AFH loan?", answer: "Whether the home's income covers the loan payment. The lender takes last year's net operating income — after operating costs and, for a buyer who will hire staff, the wages to replace the owners' own hours — and divides it by the annual debt service. Most want at least 1.25 times. Occupancy on the tax returns moves this more than anything else." },
+  { question: "What does the lender check before approving an AFH loan?", answer: "Whether the home's income covers the loan payment. The lender takes last year's net operating income (after operating costs and, for a buyer who will hire staff, the wages to replace the owners' own hours) and divides it by the annual debt service. Most want at least 1.25 times. Occupancy on the tax returns moves this more than anything else." },
   { question: "Does Real Property Planning recommend these lenders or get paid by them?", answer: `No. The list is informational and unpaid. Each lender is included because it publishes information showing it understands adult family homes; entries marked 'confirmed' are ones ${FEATURED_BROKER.name} has spoken with about their current AFH lending. RPP does not guarantee financing or terms, and a buyer's actual loan depends on the lender and the file.` },
 ];
 
@@ -71,7 +71,7 @@ const HowToFinanceAnAFH = () => {
             <ArticleCover src="/afh-how-to-finance-cover.webp" alt="Cover art: How to Finance an Adult Family Home" width={1024} height={1365} />
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>For buyers, sellers &amp; new operators</p>
             <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington State</h1>
-            <p style={{ ...p, maxWidth: 720, margin: 0 }}>Residential mortgage, SBA 7(a), SBA 504, or a commercial loan — which one fits depends on one question: are you buying a house, or a business that comes with a house?</p>
+            <p style={{ ...p, maxWidth: 720, margin: 0 }}>Which loan fits (a residential mortgage, SBA 7(a), SBA 504 or a commercial loan) depends on one question: are you buying a house, or a business that comes with a house?</p>
           </div>
         </div>
 
@@ -80,15 +80,15 @@ const HowToFinanceAnAFH = () => {
             {/* The one idea */}
             <div style={card}>
               <h2 style={{ ...h2, marginTop: 0 }}>Why an AFH is hard to finance the normal way</h2>
-              <p style={p}>An adult family home is a house that runs a licensed business. When you buy a house to live in, the lender looks at your income and the house's value. When you buy an adult family home, the house is what produces the income — through a business with residents, staff, and state contracts. That puts it in a gap between two kinds of lending.</p>
-              <p style={p}><strong>Residential lenders</strong> write loans against your personal income and a home you occupy. Many treat a licensed care business in the house as commercial use and decline; those that will lend generally do not count the AFH's revenue as your income. <strong>Commercial lenders</strong> write loans against a business's income, but on business terms: shorter loans, bigger down payments, and no appetite for the intangible part of the purchase — the license, the contracts, the residents — that a seller is charging for.</p>
-              <p style={{ ...p, marginBottom: 0 }}>The SBA programs exist to fill exactly that gap, which is why they finance most AFH sales. But they are not the only lane, and the cheapest one is often overlooked.</p>
+              <p style={p}>An adult family home is a house that runs a licensed business. When you buy a house to live in, the lender looks at your income and the house's value. When you buy an adult family home, the house is what produces the income, through a business with residents, staff, and state contracts. That puts it in a gap between two kinds of lending.</p>
+              <p style={p}><strong>Residential lenders</strong> write loans against your personal income and a home you occupy. Many treat a licensed care business in the house as commercial use and decline; those that will lend generally do not count the AFH's revenue as your income. <strong>Commercial lenders</strong> write loans against a business's income, but on business terms: shorter loans, bigger down payments, and no appetite for the intangible part of the purchase (the license, the contracts, the residents) that a seller is charging for.</p>
+              <p style={{ ...p, marginBottom: 0 }}>The SBA programs exist to fill exactly that gap, which is why they finance most AFH sales. But they are not the only lane, and the cheapest one, an owner-occupied residential mortgage, is often overlooked.</p>
             </div>
 
             {/* Chooser */}
             <div style={{ ...card, marginTop: 24, background: "#e6f2f0" }}>
               <h2 style={{ ...h2, marginTop: 0 }}>What are you buying?</h2>
-              <p style={p}>Pick the one that fits. The lane it points to is where to start — not the only door, but the one most likely to open.</p>
+              <p style={p}>Pick the one that fits. The lane it points to is the usual place to start, not the only option.</p>
               <div style={{ display: "grid", gap: 10 }}>
                 {SITUATIONS.map((s, i) => (
                   <button
@@ -180,13 +180,13 @@ const HowToFinanceAnAFH = () => {
                   </tbody>
                 </table>
               </div>
-              <p style={{ ...p, marginTop: 12, marginBottom: 0, fontSize: 17 }}>For a typical AFH purchase — a loan over $350,000 — the ceiling is <strong>{(SBA_RATE_BOX.primeRate + 3).toFixed(2)}%</strong>. That is a maximum, not a quote; strong files price below it. SBA publishes a separate table for fixed-rate 7(a) loans. Last verified {fmtDate(SBA_RATE_BOX.verifiedOn)}.</p>
+              <p style={{ ...p, marginTop: 12, marginBottom: 0, fontSize: 17 }}>For a typical AFH purchase (a loan over $350,000), the ceiling is <strong>{(SBA_RATE_BOX.primeRate + 3).toFixed(2)}%</strong>. That is a maximum, not a quote; strong files price below it. SBA publishes a separate table for fixed-rate 7(a) loans. Last verified {fmtDate(SBA_RATE_BOX.verifiedOn)}.</p>
             </div>
 
             {/* Lender's test */}
             <h2 style={h2}>What every lender checks</h2>
-            <p style={p}>Whichever lane, the lender's central question is the same: <strong>will the home's income cover the loan payment?</strong> They take last year's net operating income — after operating costs and, for a buyer who will hire staff, the wages needed to replace the hours the current owners work — and divide it by the annual loan payment. Most want at least <strong>1.25×</strong>: income one and a quarter times the payment.</p>
-            <p style={p}>Three things about that test surprise newcomers. It uses <strong>last year's tax returns</strong>, not projections. It counts <strong>every</strong> loan payment on the deal — house, business, seller note — because they are all paid from the same income. And it treats an <strong>owner-operator</strong> who will work in the home very differently from an <strong>investor</strong> who will hire staff; the same home supports a much higher price for the first.</p>
+            <p style={p}>In every lane, the lender's central question is the same: <strong>will the home's income cover the loan payment?</strong> They take last year's net operating income (after operating costs and, for a buyer who will hire staff, the wages needed to replace the hours the current owners work) and divide it by the annual loan payment. Most want at least <strong>1.25×</strong>: income one and a quarter times the payment.</p>
+            <p style={p}>Three things about that test surprise newcomers. It uses <strong>last year's tax returns</strong>, not projections. It counts <strong>every</strong> loan payment on the deal (house, business, seller note), because they are all paid from the same income. And it treats an <strong>owner-operator</strong> who will work in the home very differently from an <strong>investor</strong> who will hire staff; the same home supports a much higher price for the first.</p>
             <p style={p}>Occupancy moves this test more than anything else. Each additional resident adds a full year of rate while adding little to costs. Two residents can be the difference between a lender declining and approving at full price. <Link to="/afh-club/afh-financing-calculator" style={{ color: TEAL, fontWeight: 700 }}>The Occupancy &amp; Financing Calculator</Link> shows this for any home.</p>
             <p style={p}>Some lenders, including DSCR programs, count income differently: gross resident income rather than income after expenses, averaged over two years. The same home can pass one test easily and only just pass the other. <Link to="/afh-club/dscr-loans-adult-family-homes" style={{ color: TEAL, fontWeight: 700 }}>DSCR loans for adult family homes</Link> explains the difference and what to ask.</p>
 
@@ -197,15 +197,15 @@ const HowToFinanceAnAFH = () => {
                 <ul style={{ margin: 0, paddingLeft: 22 }}>
                   <li style={li}>Get pre-qualified in your lane before you shop. SBA closes in 45–90 days; start early.</li>
                   <li style={li}>Ask for two years of tax returns and the resident roster with payer types. That is what your lender will underwrite.</li>
-                  <li style={li}>Ask about the contracts. ECS, SBS and DDA contracts do not transfer on a sale — confirm you can qualify for your own before you price them in.</li>
+                  <li style={li}>Ask about the contracts. ECS, SBS and DDA contracts do not transfer on a sale. Confirm you can qualify for your own before you price them in.</li>
                   <li style={li}>Ask for a price allocation between house and business. It decides what you can finance and how.</li>
-                  <li style={li}>Consider asking for seller financing on the business. It replaces your most expensive loan.</li>
+                  <li style={li}>Consider asking for seller financing on the business. It can replace your most expensive loan.</li>
                 </ul>
               </div>
               <div style={card}>
                 <h3 style={{ ...h3, marginTop: 0 }}>If you're selling</h3>
                 <ul style={{ margin: 0, paddingLeft: 22 }}>
-                  <li style={li}>Price for the SBA buyer — most of the market. Their lender underwrites your returns and occupancy, not your hopes.</li>
+                  <li style={li}>Price for the SBA buyer, who makes up most of the market. Their lender underwrites your returns and occupancy, not projections.</li>
                   <li style={li}>Fill the beds before you list, or during it. Every resident on the returns raises the approvable price.</li>
                   <li style={li}>State the allocation between house and business in the listing.</li>
                   <li style={li}>Offer to carry the business portion. It widens the buyer pool and costs you little.</li>
@@ -215,7 +215,7 @@ const HowToFinanceAnAFH = () => {
             </div>
 
             <p style={{ ...p, marginTop: 28 }}>
-              Ready to look at what is on the market? See <Link to="/afh-club/listings" style={{ color: TEAL, fontWeight: 700 }}>adult family homes for sale in Washington</Link>: properties, businesses, and leases, each labeled by what is actually being sold.
+              For what is on the market now, see <Link to="/afh-club/listings" style={{ color: TEAL, fontWeight: 700 }}>adult family homes for sale in Washington</Link>: properties, businesses, and leases, each labeled by what is actually being sold.
             </p>
 
             {/* Disclaimer */}
