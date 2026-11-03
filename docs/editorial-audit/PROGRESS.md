@@ -17,6 +17,7 @@ Started Nov 3, 2026 on branch `editorial-audit`. Brief: owner's "Master Prompt â
 | Batch 3: articles library, what-to-do-with-the-house, for-attorneys (+ how-it-works), about, skagit-county, mason-county, lenders-and-financing-specialists, professionals/care-managers; shared county template text | Live Nov 3 |
 | Batch 4: long-term-care/nurse-delegation, long-term-care/nursing-homes, king-county, wahkiakum-county, cowlitz-county, estate first-steps, executors, guides/sell-inherited-house-as-is-or-fix, guides/probate-vs-trust-sale-washington, gray-divorce (+ its background component) | Live Nov 3 |
 | Batch 5: spokane-probate-estate-real-estate, wills (+ secure will box), articles/wills-trusts-other-options, long-term-care/how-to-choose-care-settings, articles/ccrc-costs, san-juan-county, for-family-law-attorneys, articles/affordable-senior-housing. /probate-estate-sales deferred: its text lives in src/i18n/locales/en.json | Live Nov 3 |
+| Batch 6: jefferson-county, island-county, pacific-county, bellingham-probate-estate-real-estate, estate probate-and-legal-authority, articles/senior-housing-guide, guides/senior-transition-differences, estate-liquidation/learn-more, planning conversations-to-have | Edited Nov 3, awaiting merge |
 | Em-dash-only pass still due: legal-duties, working-with-professionals and every 'none'/'light' page | Not started |
 | All other pages | Not started (see inventory.csv status column) |
 
@@ -37,6 +38,7 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - /long-term-care/how-to-choose-care-settings
 - /articles/ccrc-costs
 - /articles/affordable-senior-housing
+- /articles/senior-housing-guide
 
 ## Claims flagged for fact review (meaning left unchanged)
 - silver-tsunami: 10,000/day in 2011; wave to ~2030; "Peak 65" most concentrated aging period; "vast majority" prefer aging in place; regional senior housing shortages; 20-25 more years after 65; caregiver shortage worsening. Sourced but not re-checked: 11,000/day and 4.1M/yr (Alliance for Lifetime Income), 1 in 5 by 2030 (Census), AARP 2024 savings figures.
@@ -66,3 +68,10 @@ links, schema and FAQ content unchanged unless approved; facts only from verifie
 - wills: "the will determines who has the authority" loose (court appoints PR); broker valuations "hold up to legal scrutiny". Secure will box: "cannot be altered, lost, or misplaced" is absolute, and the box does not say the court needs the original signed will.
 - affordable-senior-housing: no sources or review date; Section 202 "about half have a service coordinator" unsourced; 30% of adjusted income / 62+ / 50% AMI uncited (match HUD rules).
 - wills-trusts-other-options: gifting line now "creditors, divorce, or financial trouble can become a risk to the family home".
+- BATCH 6 FLAGS:
+- jefferson-county: Sequim is in Clallam County but appears throughout (cities, SEO description, body, FAQs); "premier retirement destination", Victorian homes "among the most architecturally significant" unsourced; "relocated from Western Washington" though Jefferson is Western Washington.
+- island-county: "longest island in the contiguous US" disputed; "over 55 miles" unverified; "Admiralty Bay" in city list is a bay; ferry FAQ fits Whidbey, not Camano (bridge).
+- pacific-county: Skamokawa (Wahkiakum County) in city list; Raymond called a governmental center (South Bend is the seat); "most remote", Long Beach "most active market", "28-mile" spit unsourced.
+- probate-and-legal-authority: "joint tenancy passes automatically" needs "with right of survivorship" qualifier (RCW 64.28.010); administrator "closest next of kin" (spouse first, RCW 11.28.120).
+- estate-liquidation: 30-50% commission, 1-3 day sales unsourced.
+- senior-housing-guide: "families consistently report relief", "demand consistently outpaces supply" unsourced.

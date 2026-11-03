@@ -50,7 +50,7 @@ const EstateLiquidationLearnMore = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            A complete overview of how estate sales work, when families turn to professional liquidators, and what to expect at every step.
+            This page explains how estate sales work, when families hire a professional liquidator, what can be sold and how liquidators are paid.
           </p>
           </div>
         </div>
@@ -74,32 +74,32 @@ const EstateLiquidationLearnMore = () => (
 
       <Section id="what-is" title="What is an Estate Sale?">
         <p>
-          An estate sale is an organized, on-site sale of the contents of a home — furniture, household goods, collectibles, tools, artwork, and personal belongings — typically conducted over one to three days. Unlike a casual yard or garage sale, an estate sale is generally run by a professional liquidator who catalogs, prices, and stages every item in the home for sale to the public.
+          An estate sale is an organized, on-site sale of the contents of a home (furniture, household goods, collectibles, tools, artwork and personal belongings), typically held over one to three days. Unlike a yard or garage sale, an estate sale is generally run by a professional liquidator who catalogs, prices and stages the contents for sale to the public.
         </p>
         <p>
-          Estate sales are most often used when the entire contents of a household need to be dispersed at once, rather than a few unwanted items. They differ from auctions in that buyers walk through the home and purchase items at marked prices (with tag-down discounts on later days), rather than bidding competitively. The result is a faster, more comprehensive way to convert a lifetime of belongings into cash and clear the home for sale or transfer.
+          Estate sales are usually used when most or all of a household's contents need to go at once, not just a few unwanted items. They differ from auctions: buyers walk through the home and buy items at marked prices (with tag-down discounts on later days) instead of bidding. The aim is to turn the contents into cash in a short time and clear the home for sale or transfer.
         </p>
       </Section>
 
       <Section id="when" title="When Do People Need Estate Liquidation?">
         <p>
-          Estate liquidation is typically prompted by a major life transition. The most common situations include:
+          Estate liquidation usually follows a major change in a household. Common situations include:
         </p>
         <ul className="list-disc pl-6 space-y-3">
-          <li><strong className="font-medium">Death of a loved one</strong> — executors and heirs need to settle the estate and clear the home before sale or transfer.</li>
-          <li><strong className="font-medium">Divorce or separation</strong> — shared property must be valued, divided, or converted to cash.</li>
-          <li><strong className="font-medium">Downsizing</strong> — moving from a larger family home into a smaller residence or condo.</li>
-          <li><strong className="font-medium">Senior transitions</strong> — relocating to assisted living, memory care, or a family member's home.</li>
-          <li><strong className="font-medium">Out-of-state relocation</strong> — when moving the entire household is impractical or cost-prohibitive.</li>
+          <li><strong className="font-medium">A death in the family:</strong> executors and heirs need to settle the estate and clear the home before sale or transfer.</li>
+          <li><strong className="font-medium">Divorce or separation:</strong> shared property must be valued, divided, or converted to cash.</li>
+          <li><strong className="font-medium">Downsizing:</strong> moving from a larger family home into a smaller residence or condo.</li>
+          <li><strong className="font-medium">Senior transitions:</strong> relocating to assisted living, memory care, or a family member's home.</li>
+          <li><strong className="font-medium">Out-of-state relocation:</strong> moving the entire household is impractical or too expensive.</li>
         </ul>
         <p>
-          In each case, a professional liquidator brings structure, valuation expertise, and an established buyer network to a process that would otherwise overwhelm the family.
+          In each case, a professional liquidator can provide organization, pricing knowledge and an existing base of buyers for work that is a lot for a family to take on alone.
         </p>
       </Section>
 
       <Section id="process" title="How the Process Works">
         <p>
-          A professional estate liquidation typically follows a clear, repeatable sequence. While details vary by company, most sales move through five core stages.
+          A professional estate liquidation usually follows the same basic sequence. Details vary by company, but most sales go through five stages.
         </p>
         <ol className="list-decimal pl-6 space-y-4">
           <li>
@@ -112,10 +112,10 @@ const EstateLiquidationLearnMore = () => (
             <strong className="font-medium">Advertising and marketing.</strong> The sale is promoted through estate sale listing sites (such as EstateSales.net and EstateSales.org), email lists of regular buyers, social media, and signage.
           </li>
           <li>
-            <strong className="font-medium">Running the sale.</strong> Staff manage the home during open hours, greet buyers, answer questions, prevent theft, process payments, and apply tag-down discounts on later days to move remaining inventory.
+            <strong className="font-medium">Running the sale.</strong> Staff manage the home during open hours, greet buyers, answer questions, watch for theft, process payments, and apply tag-down discounts on later days to move remaining inventory.
           </li>
           <li>
-            <strong className="font-medium">Cleanup and final settlement.</strong> Unsold items are donated, recycled, or removed; the home is left broom-clean; and the family receives a settlement statement with itemized proceeds.
+            <strong className="font-medium">Cleanup and final settlement.</strong> Unsold items are donated, recycled or removed, the home is usually left broom-clean, and the family receives a settlement statement with itemized proceeds.
           </li>
         </ol>
       </Section>
@@ -125,10 +125,10 @@ const EstateLiquidationLearnMore = () => (
           Almost anything in a home with resale value can be included in an estate sale. Common categories include:
         </p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Furniture — sofas, dining sets, bedroom suites, desks, and outdoor furniture</li>
+          <li>Furniture (sofas, dining sets, bedroom suites, desks and outdoor furniture)</li>
           <li>Antiques and vintage pieces</li>
           <li>Fine and costume jewelry</li>
-          <li>Collectibles — coins, stamps, sports memorabilia, figurines</li>
+          <li>Collectibles (coins, stamps, sports memorabilia, figurines)</li>
           <li>Artwork, prints, and framed photographs</li>
           <li>China, glassware, silver, and kitchenware</li>
           <li>Household goods, linens, and small appliances</li>
@@ -137,16 +137,16 @@ const EstateLiquidationLearnMore = () => (
           <li>Vehicles, boats, RVs, and trailers (when applicable)</li>
         </ul>
         <p>
-          A professional liquidator will advise on which items are best suited for an on-site sale, which should be routed to specialty auction houses, and which are better donated or recycled.
+          A professional liquidator can advise on which items are best suited for an on-site sale, which should be routed to specialty auction houses, and which are better donated or recycled.
         </p>
       </Section>
 
       <Section id="compensation" title="How Estate Liquidators Are Compensated">
         <p>
-          Most estate liquidators work on a commission-based model, taking a percentage of total sales proceeds rather than charging the family up front. Commissions typically range from <strong className="font-medium">30% to 50%</strong>, depending on the scope of work, the value of the contents, the location, and any additional services such as full cleanout or appraisal coordination.
+          Most estate liquidators work on commission, taking a percentage of total sales proceeds rather than charging the family up front. Commissions typically range from <strong className="font-medium">30% to 50%</strong>, depending on the scope of work, the value of the contents, the location, and any additional services such as full cleanout or appraisal coordination.
         </p>
         <p>
-          Smaller estates or homes requiring extensive sorting and labor may carry a higher percentage or a minimum guaranteed fee. In some cases, a liquidator may offer a flat-rate buyout — purchasing the entire contents outright — when speed is the family's top priority. Reputable companies provide a written contract that clearly outlines the commission rate, included services, payout timing, and how unsold items will be handled.
+          Smaller estates or homes requiring extensive sorting and labor may carry a higher percentage or a minimum guaranteed fee. In some cases, a liquidator may offer a flat-rate buyout (purchasing the entire contents outright) when speed matters most to the family. Reputable companies provide a written contract that sets out the commission rate, included services, payout timing, and how unsold items will be handled.
         </p>
       </Section>
 

@@ -69,52 +69,50 @@ const SeniorHousingGuide = () => {
               <ArticleCover src="/The_Senior_Housing_Guide.webp" alt="Cover art: The Senior Housing Guide" width={1024} height={1365} />
               <h2 className={h2Class + " mt-0"}>The Senior Housing Guide</h2>
               <p className={leadClass}>
-                A clear, honest roadmap for one of the most important decisions a family will ever make
+                Six kinds of senior housing and care at home, what each provides, how each is paid for, and how
+                families choose among them
               </p>
 
               <p className={pClass}>
-                Nobody wakes up one morning, stretches, and thinks:{" "}
-                <em>Today is the day I figure out senior housing.</em>
+                The main senior housing arrangements are independent living, assisted living, memory care, continuing
+                care retirement communities (CCRCs), affordable senior housing, and aging in place with support at
+                home. They differ in how much daily care they include and in how they are priced. This guide covers each
+                one in turn and links to a fuller article on most of them.
               </p>
               <p className={pClass}>
-                It doesn't work that way. The conversation usually begins sideways — a fall that turned out fine, a
-                moment of confusion that lingered a little too long, a phone call from a neighbor who noticed the mail
-                piling up. Or sometimes it begins with the quieter, harder realization that a parent is simply lonely,
-                and that the house that once held a family now holds one person rattling around in too many rooms.
+                The subject usually comes up after a specific event: a fall that turned out fine, a spell of confusion
+                that lasted a little too long, a call from a neighbor who noticed the mail piling up. Sometimes it is the
+                realization that a parent living alone in the family house has become lonely.
               </p>
               <p className={pClass}>
-                However the conversation starts, what follows is often overwhelming. The options are unfamiliar. The
-                terminology is confusing. The costs are hard to pin down. And the emotional weight of the decision — for
-                the older adult and for the family — can make clear thinking difficult.
+                Most families then face unfamiliar options, confusing terms and costs that are hard to pin down. The
+                decision is also emotionally hard, for the older adult and for the family, and that makes clear thinking
+                more difficult.
               </p>
-              <p className={pClass}>This guide exists to change that.</p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>The Landscape, Plainly Mapped</h2>
               <p className={pClass}>
-                Senior housing is not a single thing. It is a spectrum of living arrangements, each designed around a
-                different level of need, a different kind of daily life, and a different financial structure.
+                Senior housing is a range of living arrangements. Each is built around a different level of need, a
+                different daily routine and a different way of paying.
               </p>
-              <p className={pClass}>Here is what that spectrum looks like.</p>
 
               <hr className={hrClass} />
 
               <h2 className={h2Class}>Independent Living: For Adults Ready for a Simpler Chapter</h2>
               <p className={pClass}>
-                Independent living is designed for older adults who don't need daily personal care — but who are ready
-                to shed the responsibilities that come with maintaining a home.
+                Independent living is for older adults who don't need daily personal care but want to stop maintaining
+                a home.
               </p>
               <p className={pClass}>
-                Think: no more lawn, no more furnace repairs, meals available when you want them, neighbors your own
-                age, activities on the calendar. Independent living communities offer private residences alongside
-                housekeeping, transportation, and social programming. For many residents, the experience is genuinely
-                freeing.
+                That means no lawn to mow and no furnace to repair, meals available when wanted, neighbors of a similar
+                age and activities on the calendar. Communities offer private residences with housekeeping,
+                transportation and social programs. For many residents, the change is freeing.
               </p>
               <p className={pClass}>
-                This is often the most accessible entry point into senior housing — and for active, healthy older
-                adults, it can deliver an exceptional quality of life at a cost that surprises families, sometimes
-                favorably.
+                It is often the easiest way into senior housing. For active, healthy older adults, the cost sometimes
+                compares better than families expect.
               </p>
               <p className={pClass}>
                 <em>
@@ -128,18 +126,18 @@ const SeniorHousingGuide = () => {
 
               <h2 className={h2Class}>Assisted Living: Independence, Supported</h2>
               <p className={pClass}>
-                When daily life starts to require a hand — help getting dressed in the morning, reminders to take
-                medications, assistance with bathing — assisted living is often the right next step.
+                When someone starts to need help getting dressed in the morning, reminders to take medications or
+                assistance with bathing, assisted living is often the next step.
               </p>
               <p className={pClass}>
-                These communities provide private or semi-private residences alongside personalized care, meals,
-                housekeeping, and social programming. The level of support is customized to the individual, which means
-                residents retain as much independence as possible while getting the help they actually need.
+                Residents live in private or semi-private residences and receive personal care, meals, housekeeping and
+                social programs. Support is adjusted to the individual, so residents keep as much independence as
+                possible and still get the help they need.
               </p>
               <p className={pClass}>
-                One thing families often don't anticipate: assisted living pricing is typically tiered. The base rate
-                covers housing and a baseline of care. As needs increase, so does the monthly cost. Understanding this
-                structure before choosing a community is essential.
+                Families often don't expect this: assisted living pricing is typically tiered. The base rate covers
+                housing and a baseline of care, and the monthly cost rises as needs increase. Find out how a community's
+                tiers work before choosing it.
               </p>
 
               <hr className={hrClass} />
@@ -151,11 +149,10 @@ const SeniorHousingGuide = () => {
                 designed around the specific challenges of cognitive decline.
               </p>
               <p className={pClass}>
-                The transition to memory care is often one of the hardest a family makes — not because the community
-                itself is difficult, but because the decision to move a loved one into specialized care carries enormous
-                emotional weight. What families consistently report afterward is relief. Relief that their person is
-                safe. Relief that trained professionals are present around the clock. Relief that the burden of constant
-                vigilance has lifted.
+                The move to memory care is often among the hardest decisions a family makes. The difficulty usually lies
+                in the decision to move a parent or spouse into specialized care, not in the community itself. What
+                families consistently report afterward is relief: their person is safe, trained staff are present around
+                the clock, and the family no longer has to keep constant watch.
               </p>
               <p className={pClass}>
                 <em>
@@ -169,21 +166,21 @@ const SeniorHousingGuide = () => {
 
               <h2 className={h2Class}>CCRCs: A Plan for Every Stage</h2>
               <p className={pClass}>
-                Continuing care retirement communities — CCRCs — offer something the other options generally don't: a
+                Continuing care retirement communities (CCRCs) offer something the other options generally don't: a
                 contract that can cover housing and care across multiple life stages. How much future care is promised,
                 and at what price, depends on the contract type, so read it closely.
               </p>
               <p className={pClass}>
-                Residents move in while they're healthy and independent. If their needs change over time, the community
-                is already there to meet them — moving through assisted living and skilled nursing without the upheaval
-                of finding a new place to live.
+                Residents move in while they're healthy and independent. If their needs change over time, the same
+                community provides assisted living and skilled nursing, so a change in care does not mean finding a new
+                place to live.
               </p>
               <p className={pClass}>
                 The pricing model reflects this long-term commitment. CCRCs typically charge a substantial entrance fee
                 plus ongoing monthly costs. For families who value predictability and want to avoid future relocations,
                 this can be a sound choice. But the contracts are complex. Washington requires a CCRC to give you a
                 disclosure statement, including audited financial statements, fee ranges, and refund policies, before
-                you sign or pay an entrance fee (RCW 18.390.060); careful review before signing is essential.
+                you sign or pay an entrance fee (RCW 18.390.060). Review it carefully before signing.
               </p>
               <p className={pClass}>
                 <em>
@@ -197,14 +194,13 @@ const SeniorHousingGuide = () => {
 
               <h2 className={h2Class}>Affordable Senior Housing: Real Options for Real Budgets</h2>
               <p className={pClass}>
-                Not every family is working with unlimited resources. Affordable senior housing programs — subsidized or
-                income-based communities designed for older adults with limited means — exist precisely because the
-                private market doesn't serve everyone.
+                Affordable senior housing programs are subsidized or income-based communities for older adults with
+                limited means. They exist because the private market doesn't serve everyone.
               </p>
               <p className={pClass}>
                 The tradeoff is availability. Demand consistently outpaces supply, and waitlists can stretch months or
-                years. If affordable senior housing is part of your long-term plan, the time to apply is well before the
-                need becomes urgent.
+                years. If affordable senior housing is part of your long-term plan, apply well before the need becomes
+                urgent.
               </p>
               <p className={pClass}>
                 <em>
@@ -218,18 +214,18 @@ const SeniorHousingGuide = () => {
 
               <h2 className={h2Class}>Aging in Place: Staying Home, With Support</h2>
               <p className={pClass}>
-                Most older adults, when asked, say they want to stay home. It's a deeply human preference — and with the
-                right support structure, it's often possible.
+                Most older adults, when asked, say they want to stay home. With enough support, that is often possible.
               </p>
               <p className={pClass}>
-                Aging in place with professional support means layering services onto an existing home: in-home care,
-                meal delivery, transportation assistance, housekeeping, and modifications that improve safety. It offers
-                familiarity and flexibility, and for many families it's the right answer, at least for a period of time.
+                Aging in place with professional support means adding services to an existing home: in-home care, meal
+                delivery, transportation assistance, housekeeping, and modifications that improve safety. It keeps
+                familiar surroundings and offers flexibility, and for many families it works, at least for a period of
+                time.
               </p>
               <p className={pClass}>
-                What families often underestimate is how costs can climb as care needs grow. What begins as a few hours
-                of help each week can evolve into something that rivals — or exceeds — the cost of a senior living
-                community. Running the real numbers, honestly and early, is the only way to know which path makes sense.
+                Families often underestimate how costs can climb as care needs grow. A few hours of help each week can
+                grow until it rivals, or exceeds, the cost of a senior living community. Working out the real numbers
+                early is the only way to know which option makes sense.
               </p>
               <p className={pClass}>
                 <em>
@@ -243,17 +239,15 @@ const SeniorHousingGuide = () => {
 
               <h2 className={h2Class}>How to Actually Choose</h2>
               <p className={pClass}>
-                There is no formula that spits out the right answer. Choosing the right senior housing option means
-                weighing care needs against financial resources against lifestyle preferences against what the older
-                adult themselves wants — which is a conversation that deserves to happen early, when there's still time
-                to honor it.
+                No formula settles it. The choice weighs care needs, money, lifestyle preferences and what the older adult
+                wants. That conversation is best held early, while there is still time to act on their wishes.
               </p>
-              <p className={pClass}>A few questions worth sitting with:</p>
+              <p className={pClass}>Useful questions:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
                 <li>
-                  What does daily life actually look like right now — and what might it look like in two or five years?
+                  What does daily life look like right now, and what might it look like in two or five years?
                 </li>
-                <li>What level of support is genuinely needed versus what feels like giving up too much?</li>
+                <li>What support is actually needed, as opposed to what would feel like giving up too much?</li>
                 <li>What can the family realistically afford, not just today but over the long term?</li>
                 <li>Is this a decision the older adult is driving, or one being made for them?</li>
               </ul>
@@ -262,7 +256,7 @@ const SeniorHousingGuide = () => {
                 <Link to="/senior-living-advisors" className={inlineLink}>
                   senior living advisor
                 </Link>{" "}
-                can help map realistic options to specific situations. Advisors are usually paid by the communities or
+                can match realistic options to a family's situation. Advisors are usually paid by the communities or
                 homes where a family moves, not by the family. In Washington, an elder placement agency must give you a
                 written disclosure statement before making a referral, including how its fee from a provider is
                 computed, and must tell you the amount of that fee if you ask (RCW 18.330.050).
@@ -272,26 +266,23 @@ const SeniorHousingGuide = () => {
 
               <h2 className={h2Class}>The One Thing That Changes Everything</h2>
               <p className={pClass}>
-                More than any other factor, the families who navigate senior housing well share one characteristic: they
-                started early.
+                Starting early matters more than any other factor in how well a senior housing decision goes.
               </p>
               <p className={pClass}>
-                Not because the conversation is easy. It rarely is. But because starting early means the older adult
-                gets to participate in the decision — to visit communities, to weigh options, to choose a life rather
-                than have one assigned during a crisis.
+                The conversation is rarely easy, but starting early lets the older adult take part in the decision:
+                visiting communities, weighing options and choosing how to live, instead of having that decided during a
+                crisis.
               </p>
               <p className={pClass}>
                 In a market shaped by rising demand and limited supply, waiting often means fewer choices at higher
-                costs under more pressure. The families who move first, even tentatively, find themselves with more room
-                to breathe.
+                costs under more pressure. Families who start sooner, even tentatively, have more time and more options.
               </p>
               <p className={pClass}>
                 When the time comes to make a move, a{" "}
                 <Link to="/senior-move-managers" className={inlineLink}>
                   senior move manager
                 </Link>{" "}
-                can help coordinate every detail of the transition — making what is often an overwhelming experience
-                feel organized, manageable, and even, occasionally, like the beginning of something good.
+                can help coordinate every detail of the move so the process stays organized and manageable.
               </p>
 
               <hr className={hrClass} />
