@@ -557,7 +557,7 @@
     "afh license processing time washington",
     "What is the DSHS wait for a new AFH license?"
    ],
-   "a": "DSHS does not promise a timeline. It posts its application queue online; in late September 2026 it was working on applications received in May 2026, and it allows up to 60 days once an application is complete. The local building inspection and the DSHS licensing inspection come on top of that.",
+   "a": "DSHS does not promise a timeline. It posts which month's applications it is working on (the month changes, so check its processing timeline page), and it allows up to 60 days once an application is complete. The local building inspection and the DSHS licensing inspection come on top of that.",
    "path": "/afh-club/washington-adult-family-home-guide/rules-and-key-figures",
    "pathTitle": "Washington State Adult Family Homes: Rules & Key Figures",
    "also": [
@@ -1148,7 +1148,7 @@
     "Can I apply for an AFH license before I purchase the property?",
     "apply for afh license before buying"
    ],
-   "a": "Build the closing date around your license. The buyer cannot operate until DSHS issues the new license, and DSHS will not estimate how long a change of ownership takes; a complete application avoids delays. Its posted queue showed applications received in May 2026 being processed in late September 2026, with up to 60 days once an application is complete. Meanwhile the seller keeps operating, after giving DSHS and each resident 60 days' written notice naming the buyer.",
+   "a": "Build the closing date around your license. The buyer cannot operate until DSHS issues the new license, and DSHS will not estimate how long a change of ownership takes; a complete application avoids delays. DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), and processing can take up to 60 days once an application is complete. Meanwhile the seller keeps operating, after giving DSHS and each resident 60 days' written notice naming the buyer.",
    "path": "/afh-club/before-you-buy-an-adult-family-home",
    "pathTitle": "Before You Buy an Adult Family Home: What to Verify",
    "also": [
@@ -1882,7 +1882,7 @@
     "How long does it typically take to sell an operating adult family home?",
     "how long to sell an AFH"
    ],
-   "a": "Longer than a typical home sale, mainly because of the buyer's DSHS license. DSHS will not estimate how long a change-of-ownership license takes. Its posted queue showed applications received in May 2026 being processed in late September 2026, processing can take up to 60 days once an application is complete, and most applicants do not pass the first inspection. Add the 60-day resident notice, and build that into your retirement planning.",
+   "a": "Longer than a typical home sale, mainly because of the buyer's DSHS license. DSHS will not estimate how long a change-of-ownership license takes. DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), processing can take up to 60 days once an application is complete, and most applicants do not pass the first inspection. Add the 60-day resident notice, and build that into your retirement planning.",
    "path": "/afh-club/selling-your-business-at-retirement",
    "pathTitle": "Selling Your AFH Business at Retirement"
   },
@@ -2723,7 +2723,7 @@
     "afh inspection every two years washington",
     "Will DSHS give me notice before inspecting my adult family home?"
    ],
-   "a": "Possibly. DSHS licensors make unannounced inspections at least every 18 months, with a statewide average of 15 months. A home with no citations on its last three inspections, and no violations from complaint investigations in that time, may go up to two years (RCW 70.128.070). Because visits are unpredictable, providers must stay in continuous compliance rather than prepare only when an inspection seems due.",
+   "a": "Possibly. DSHS inspects at least every 18 months, with an annual average of 15 months, and may make an unannounced inspection at any time. A home with no citations on its last three inspections, and no violations from complaint investigations in that time, may go up to two years (RCW 70.128.070). Because visits are unpredictable, providers must stay in continuous compliance rather than prepare only when an inspection seems due.",
    "path": "/afh-club/regulations-compliance",
    "pathTitle": "Understanding DSHS Inspections & Compliance",
    "also": [

@@ -43,7 +43,7 @@ const APPLICATION_STEPS = [
     step: "5",
     title: "Submit the online application",
     detail:
-      "Apply at the DSHS BAAU portal (baau.dshs.wa.gov). Avoid using the symbols &, =, +, or # in the application; DSHS asks applicants to spell them out. DSHS posts its current processing queue online: in late September 2026 it was working on applications received in May 2026, and it allows up to 60 days once an application is complete.",
+      "Apply at the DSHS BAAU portal (baau.dshs.wa.gov). Avoid using the symbols &, =, +, or # in the application; DSHS asks applicants to spell them out. DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), and it allows up to 60 days once an application is complete.",
   },
   {
     step: "6",

@@ -547,8 +547,8 @@ const AFHCostsFees = () => (
                 margin: 0,
               }}
             >
-              In late September 2026 DSHS was processing license applications received in May 2026, and it allows up
-              to 60 days once an application is complete. Most applicants do not pass the first inspection. Homes
+              DSHS posts which month's license applications it is working on (the month changes, so check its processing
+              timeline page), and it allows up to 60 days once an application is complete. Most applicants do not pass the first inspection. Homes
               typically do not reach full capacity immediately, so plan for a ramp-up period before revenue is stable.
               Consulting a CPA familiar with AFH operations before opening is strongly advised.
             </p>
