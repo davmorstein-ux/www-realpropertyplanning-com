@@ -73,16 +73,13 @@ const About = () => {
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Why This Site Exists</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Some of life's most consequential decisions happen during its hardest moments — when a parent passes away, when a family home needs to be sold, when a loved one can no longer live independently. These transitions involve real estate, legal paperwork, financial decisions, and family dynamics all at once. Most people have never faced any of it before.
+                  Some of the largest decisions a family makes come at a hard time: after a parent dies, when the family home has to be sold, or when someone can no longer live alone. These transitions involve real estate, legal paperwork, money, and family relationships all at once, and most people are facing them for the first time.
                 </p>
                 <p>
-                  Real Property Planning was built to help.
+                  Real Property Planning is an independent educational hub covering probate, estate real estate, inherited property, senior housing transitions, and related topics. It gives seniors, families, executors, and trustees plain-language guidance, including which kinds of professionals can help and when to bring them in.
                 </p>
                 <p>
-                  This site is an independent educational hub focused on probate, estate real estate, inherited property, senior housing transitions, and the many topics that intersect with them. It exists to give seniors, families, executors, and trustees plain-language guidance — and to help them understand what kinds of professionals can help, and when.
-                </p>
-                <p>
-                  Real Property Planning does not provide services. It does not represent any professional or company featured on this site. It exists for one purpose: to make an overwhelming process feel a little more manageable for the people going through it.
+                  Real Property Planning does not provide services. It does not represent any professional or company featured on this site. Its purpose is to explain these processes clearly to the people going through them.
                 </p>
               </div>
             </div>
@@ -103,7 +100,7 @@ const About = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <GoldCheck3D size={18} className="mt-1 shrink-0" />
-                    <span>Adult children and family members helping aging parents navigate major transitions</span>
+                    <span>Adult children and family members helping aging parents through major transitions</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <GoldCheck3D size={18} className="mt-1 shrink-0" />
@@ -111,7 +108,7 @@ const About = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <GoldCheck3D size={18} className="mt-1 shrink-0" />
-                    <span>Professionals — attorneys, CPAs, financial planners, and care managers — looking for reliable educational resources to share with the families they serve</span>
+                    <span>Professionals (attorneys, CPAs, financial planners, and care managers) looking for educational material to share with the families they serve</span>
                   </li>
                 </ul>
               </div>
@@ -140,7 +137,7 @@ const About = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <GoldCheck3D size={18} className="mt-1 shrink-0" />
-                    <span>Resources to help you ask better questions and make more informed decisions</span>
+                    <span>Resources to help you know what to ask and what to weigh before you decide</span>
                   </li>
                 </ul>
               </div>
@@ -178,19 +175,16 @@ const About = () => {
                   Real Property Planning was founded by David Stein, a Washington State Licensed Real Estate Broker and Washington State Certified Residential Appraiser.
                 </p>
                 <p>
-                  David spent years working alongside families through probate sales, estate appraisals, and senior housing transitions — and kept seeing the same pattern. People weren't short on options. They were short on clarity. Executors didn't know which step came first. Adult children didn't know who to trust. Families were navigating attorneys, appraisers, real estate agents, and care professionals all separately, with no one connecting the dots.
+                  David spent years working with families on probate sales, estate appraisals, and senior housing transitions, and saw the same problem again and again: the options existed, but it was hard to see how they fit together. Executors didn't know which step came first. Adult children didn't know whom to trust. Families dealt with attorneys, appraisers, real estate agents, and care professionals separately, and no one connected the pieces.
                 </p>
                 <p>
-                  Real Property Planning is his answer to that problem — a resource designed to fill the gap he kept encountering, and to give anyone touched by estate property, probate, or senior transitions a place to find honest guidance without feeling overwhelmed.
+                  He started Real Property Planning to fill that gap: one place where anyone dealing with estate property, probate, or a senior transition can find plain-language guidance.
                 </p>
                 <p>
-                  David's background spans construction and contracting, residential appraisal, real estate brokerage, and e-commerce — a combination that shaped both his analytical approach to property and his instinct for building systems that connect people with what they need.
+                  David's background includes construction and contracting, residential appraisal, real estate brokerage, and e-commerce.
                 </p>
                 <p>
-                  He founded this site because he believes the families going through these transitions deserve better than confusion. That belief is what drives every page on it.
-                </p>
-                <p>
-                  David Stein's real estate brokerage and appraisal services are offered separately through his own practice — not through Real Property Planning.
+                  David Stein's real estate brokerage and appraisal services are offered separately through his own practice, not through Real Property Planning.
                 </p>
               </div>
               {/* Clears the floated headshot. Without this, a short viewport can
@@ -212,7 +206,7 @@ const About = () => {
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Contact</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Questions about the site, a correction, or a professional who would like to be considered for the directory — all reach the same place.
+                  Questions about the site, corrections, and requests from professionals who would like to be considered for the directory all go to the same place.
                 </p>
               </div>
 

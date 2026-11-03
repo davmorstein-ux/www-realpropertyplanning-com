@@ -20,31 +20,31 @@ const STEPS: { n: string; title: string; body: string }[] = [
   {
     n: "2",
     title: "Property assessment",
-    body: `${FEATURED_BROKER.Role} conducts an on-site condition review${SAME_PERSON ? " and produces" : `, and ${FEATURED_APPRAISER.role} produces`} a date-of-death or current-market valuation supported by appraisal-grade analysis — defensible if the file ever requires it.`,
+    body: `${FEATURED_BROKER.Role} conducts an on-site condition review${SAME_PERSON ? " and produces" : `, and ${FEATURED_APPRAISER.role} produces`} a date-of-death or current-market valuation, supported by appraisal-grade analysis and defensible if the file ever requires it.`,
   },
   {
     n: "3",
     title: "Coordination with the estate or probate timeline",
-    body: `${FEATURED_BROKER.Role} aligns property work — securing, cleanout, vendor scheduling, and listing readiness — with letters testamentary, court calendars, and beneficiary timing as you direct.`,
+    body: `${FEATURED_BROKER.Role} aligns the property work (securing the home, cleanout, vendor scheduling and listing readiness) with letters testamentary, court calendars and beneficiary timing, as you direct.`,
   },
   {
     n: "4",
     title: "Listing or valuation delivery",
-    body: `Where a sale is the path, ${FEATURED_BROKER.role} manages preparation, pricing, marketing, offers, and negotiation. Where only a valuation is required, the report is delivered in a format suitable for court, IRS, or beneficiary use.`,
+    body: `If the property is to be sold, ${FEATURED_BROKER.role} manages preparation, pricing, marketing, offers and negotiation. If only a valuation is required, the report is delivered in a format suitable for court, IRS or beneficiary use.`,
   },
   {
     n: "5",
     title: "Closing and reporting back to attorney",
-    body: `${FEATURED_BROKER.Role} manages escrow through closing and provides a written close-out summary — net proceeds, key dates, signed documents, and any items the file should retain.`,
+    body: `${FEATURED_BROKER.Role} manages escrow through closing and provides a written close-out summary: net proceeds, key dates, signed documents and any items the file should retain.`,
   },
 ];
 
 const HANDLED: string[] = [
-  "Property condition coordination — securing the home, vendor scheduling, cleanout, and preparation",
+  "Property condition coordination: securing the home, vendor scheduling, cleanout and preparation",
   "Date-of-death and current-market valuations produced by a Washington State Certified Residential Appraiser",
   "Direct executor and personal-representative communication, with you copied as you direct",
   "Timeline management aligned with court dates, letters testamentary, and beneficiary expectations",
-  "Out-of-state heir coordination — remote document signing, family video updates, and travel-free sale management",
+  "Out-of-state heir coordination: remote document signing, video updates for the family, and a sale that needs no travel",
   "Beneficiary and sibling communication during multi-party situations",
   "Written status updates suitable for the file",
 ];
@@ -74,7 +74,7 @@ const ForAttorneysHowItWorks = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            This page is for Washington State estate and probate attorneys who refer clients for real estate services. It walks through exactly what happens after the referral, what {FEATURED_BROKER.role} handles on your behalf, and how to send a file over.
+            This page is for Washington State estate and probate attorneys who refer clients for real estate services. It covers what happens after the referral, what {FEATURED_BROKER.role} handles on your behalf, and how to send a file over.
           </p>
           </div>
         </div>
@@ -124,7 +124,7 @@ const ForAttorneysHowItWorks = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
-              What a Licensed Broker Handles So You Don't Have To
+              What a Licensed Broker Handles
             </h2>
             <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
               You stay the legal lead. The featured broker handles the property side from start to finish and reports back in writing.
@@ -155,11 +155,11 @@ const ForAttorneysHowItWorks = () => (
               What You Can Tell Your Client
             </h2>
             <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
-              Plain language you can use verbatim or adapt — written for elderly clients and grieving families.
+              Plain language you can use as written or adapt, for elderly clients and grieving families.
             </p>
             <blockquote className="p-6 md:p-8 rounded-xl border-l-4 border-[#6b84ad] bg-[#FAF7EE]">
               <p className="text-[#39332d] text-xl md:text-2xl leading-[1.8] font-serif italic">
-                &ldquo;For the house, I&rsquo;d like to introduce you to a licensed real estate broker who handles homes tied to estates, trusts, and family transitions across Washington State. I found them through Real Property Planning, a free resource for families in situations like yours. The broker is calm, experienced, and used to working with families during difficult times, and will take care of the property side from start to finish — assessing the home, coordinating any preparation, pricing it appropriately, and managing the sale — and will keep me informed along the way. You will have one steady point of contact. There is no pressure and no rush.&rdquo;
+                &ldquo;For the house, I&rsquo;d like to introduce you to a licensed real estate broker who handles homes tied to estates, trusts, and family transitions across Washington State. I found them through Real Property Planning, a free resource for families in situations like yours. The broker is experienced in working with families during difficult times and will handle the property side from start to finish: assessing the home, coordinating any preparation, pricing it and managing the sale. I will be kept informed along the way, and you will have one steady point of contact. There is no pressure and no rush.&rdquo;
               </p>
             </blockquote>
           </div>
@@ -180,14 +180,14 @@ const ForAttorneysHowItWorks = () => (
             <div className="space-y-5 mb-8">
               <p className="text-[#39332d] text-xl md:text-2xl leading-relaxed">
                 <strong className="text-[#1B3A6B]">Direct Line</strong>
-                <span> — </span>
+                <span>: </span>
                 <a href={`tel:${FEATURED_BROKER.phoneTel}`} className="underline underline-offset-4 hover:text-[#1B3A6B]">
                   {FEATURED_BROKER.phone}
                 </a>
               </p>
               <p className="text-[#39332d] text-xl md:text-2xl leading-relaxed">
                 <strong className="text-[#1B3A6B]">Email</strong>
-                <span> — </span>
+                <span>: </span>
                 <a
                   href="mailto:info@realpropertyplanning.com"
                   className="underline underline-offset-4 hover:text-[#1B3A6B] break-words"

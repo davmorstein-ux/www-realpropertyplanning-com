@@ -38,7 +38,7 @@ const decisions: Decision[] = [
     letter: "2",
     title: "Should We Keep the Home?",
     description:
-      "Explore family use, future occupancy, estate planning, carrying costs, maintenance, and long-term responsibilities.",
+      "Family use, future occupancy, estate planning, carrying costs, maintenance, and long-term responsibilities.",
     href: "/estate-probate-inherited-property",
     icon: iconExecutor,
   },
@@ -54,7 +54,7 @@ const decisions: Decision[] = [
     letter: "4",
     title: "Should We Transfer Ownership?",
     description:
-      "Learn why legal, tax, estate, and family considerations should be reviewed before transferring title.",
+      "Why the legal, tax, estate and family consequences should be reviewed before title is transferred.",
     href: "/guides/who-has-authority-sell-probate-property-washington",
     icon: iconDocument,
   },
@@ -62,7 +62,7 @@ const decisions: Decision[] = [
     letter: "5",
     title: "Should We Clean Out or Repair First?",
     description:
-      "Understand how cleanout, repairs, safety, and presentation may affect value, timing, and family stress.",
+      "How cleanout, repairs, safety and presentation can affect value, timing and family stress.",
     href: "/guides/repairs-before-selling-probate-home-washington",
     icon: iconHome,
   },
@@ -80,7 +80,7 @@ const continueJourney = [
   { href: "/date-of-death-valuation-property-appraisals", title: "Date-of-Death Valuation", description: "Learn when an estate valuation or appraisal may be needed.", icon: iconDocument },
   { href: "/preparing-home-for-sale-during-transition", title: "Preparing a Home for Sale", description: "Practical guidance for repairs, cleanout, and readiness.", icon: iconHome },
   { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconExecutor },
-  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
+  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "Practical steps for sorting belongings and moving.", icon: iconHeartHands },
   { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
 ];
 
@@ -121,7 +121,7 @@ const WhatToDoWithTheHouse = () => {
                 What Decision Are You Facing?
               </h2>
               <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                Choose the option closest to your situation for a calm, practical overview.
+                Pick the question closest to your situation. Each one links to a practical overview.
               </p>
             </div>
 
@@ -157,7 +157,7 @@ const WhatToDoWithTheHouse = () => {
               <div className="text-center mb-7">
                 <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
+                  Keep Reading
                 </h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

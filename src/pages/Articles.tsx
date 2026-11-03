@@ -36,7 +36,7 @@ const ARTICLES = [
     minutes: 5,
     listenMinutes: 7,
     img: "/The_Silver_Tsunami.webp",
-    description: "The surge of seniors is reshaping housing, care, and the future of communities — ready or not.",
+    description: "How the aging of the Baby Boomers is reshaping housing, care and communities.",
   },
   {
     title: "The Senior Housing Guide",
@@ -44,7 +44,7 @@ const ARTICLES = [
     minutes: 6,
     listenMinutes: 8,
     img: "/The_Senior_Housing_Guide.webp",
-    description: "A clear, honest roadmap for one of the most important decisions a family will ever make.",
+    description: "A plain overview of the main options, from independent living and assisted living to memory care, CCRCs and aging in place.",
   },
   {
     title: "Senior Housing Options",
@@ -52,7 +52,7 @@ const ARTICLES = [
     minutes: 7,
     listenMinutes: 5,
     img: "/Senior_Housing_Options.webp",
-    description: "A roadmap to informed decisions — before urgency makes the choice for you.",
+    description: "What each option offers, so you can compare them before an urgent need forces the choice.",
   },
   {
     title: "Senior Housing Costs",
@@ -61,7 +61,7 @@ const ARTICLES = [
     listenMinutes: 4,
     img: "/Senior_Housing_Costs.webp",
     description:
-      "What families need to know before they start comparing options — and what the brochure won't tell you.",
+      "What to know about cost before you start comparing options, including what the brochure leaves out.",
   },
   {
     title: "How to Choose Senior Housing",
@@ -69,7 +69,7 @@ const ARTICLES = [
     minutes: 6,
     listenMinutes: 5,
     img: "/How_to_Choose_Senior_Housing.webp",
-    description: "A step-by-step guide for families navigating one of life's most important decisions.",
+    description: "A step-by-step guide: assess needs and budget, compare options, tour, review the contract and move.",
   },
   {
     title: "Independent Living Costs",
@@ -77,7 +77,7 @@ const ARTICLES = [
     minutes: 6,
     listenMinutes: 5,
     img: "/Independent_Living_Costs.webp",
-    description: "What the monthly fee actually covers — and what the number on the brochure doesn't tell you.",
+    description: "What the monthly fee actually covers, and what the brochure price leaves out.",
   },
   {
     title: "Memory Care Costs",
@@ -85,7 +85,7 @@ const ARTICLES = [
     minutes: 6,
     listenMinutes: 6,
     img: "/Memory_Care_Costs.webp",
-    description: "What families need to know — and what no brochure will tell you about making this decision.",
+    description: "What memory care includes, the extra fees to watch for, and how to compare communities.",
   },
   {
     title: "CCRC Costs",
@@ -93,7 +93,7 @@ const ARTICLES = [
     minutes: 7,
     listenMinutes: 5,
     img: "/CCRC_Costs.webp",
-    description: "Continuing care retirement communities are expensive. Here's what you're really buying.",
+    description: "Continuing care retirement communities are expensive. What the entrance fee, monthly fee and contract type actually buy.",
   },
   {
     title: "Affordable Senior Housing",
@@ -102,7 +102,7 @@ const ARTICLES = [
     listenMinutes: 5,
     img: "/Affordable_Senior_Housing.webp",
     description:
-      "For older adults on fixed incomes, the right housing isn't just about comfort — it's about financial survival.",
+      "Income-based rent, waitlists and how to apply, for older adults living on fixed incomes.",
   },
   {
     title: "Aging in Place With Support",
@@ -111,7 +111,7 @@ const ARTICLES = [
     listenMinutes: 4,
     img: "/Aging_in_Place_With_Support.webp",
     description:
-      "Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.",
+      "Most older adults want to stay home. What that actually takes, and how to tell when it still works.",
   },
   {
     title: "Wills, Trusts, and Other Options",
@@ -119,7 +119,7 @@ const ARTICLES = [
     minutes: 5,
     listenMinutes: 4,
     img: "/Wills_Trusts_Other_Options.webp",
-    description: "How to pass real estate to your children — and the tradeoffs each method carries.",
+    description: "Ways to pass real estate to your children, and the tradeoffs of each.",
   },
   {
     title: "Hospice Care in Washington State",
@@ -127,7 +127,7 @@ const ARTICLES = [
     minutes: 6,
     listenMinutes: 5,
     img: "/hospice-care-cover.webp",
-    description: "Hospice comes to where a person lives — home, an adult family home, assisted living — and doesn't replace it. What Medicare pays, what it doesn't, and what \"24-hour\" really means.",
+    description: "Hospice comes to where a person lives (home, an adult family home, assisted living) and doesn't replace it. What Medicare pays, what it doesn't, and what \"24-hour\" really means.",
   },
   /* Moved here from the AFH Club resource library (Nov 2, 2026, David): it is
      written for families choosing a home for a parent, not for operators.
