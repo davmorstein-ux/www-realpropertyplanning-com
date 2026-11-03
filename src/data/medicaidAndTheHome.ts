@@ -22,7 +22,8 @@
  *     hardship (an heir's irreplaceable housing, sole income-producing asset);
  *     pre-death (TEFRA) lien when the person lives in a medical facility and is
  *     not reasonably expected to return home, not filed when a spouse,
- *     registered domestic partner, child under 21 or sibling lives there,
+ *     registered domestic partner, child under 21, blind or disabled child, or a
+ *     qualifying sibling (equity interest, lived there a year) lives there,
  *     released on return home; Office of Financial Recovery 800-562-6114
  *   - RCW 43.20B.080 (recovery), RCW 11.40.020 (notice to creditors to DSHS):
  *     already cited by the probate glossary
@@ -79,7 +80,7 @@ export const MTH_SECTIONS: MthSection[] = [
     heading: "If the house sits empty",
     paras: [
       "Keeping the house exempt does not keep it free. Property taxes, insurance, utilities and upkeep still have to be paid, and a vacant house may need different insurance; call the insurer once no one is living there.",
-      "If your parent lives in a medical facility and is not reasonably expected to return home, DSHS can place a lien on the house before death. It will not file one if a spouse, state-registered domestic partner, child under 21 or sibling lives there, and it releases the lien if your parent returns home. If the house is sold, DSHS recovers its costs from the proceeds.",
+      "If your parent lives in a medical facility and is not reasonably expected to return home, DSHS can place a lien on the house before death. It will not file one if a spouse, state-registered domestic partner, child under 21, blind or disabled child, or a sibling who has an equity interest in the home and lived there for at least a year before your parent entered the facility lives there, and it releases the lien if your parent returns home. If the house is sold, DSHS recovers its costs from the proceeds.",
     ],
     cites: [SRC.recoveryForm],
   },
@@ -115,7 +116,7 @@ export const MTH_SECTIONS: MthSection[] = [
     heading: "After death: estate recovery",
     paras: [
       "Washington seeks to recover what it paid for federally funded long-term services and supports received at age 55 or older, and state-funded services at any age, from the person's estate. That reaches the house, bank accounts and other property, including non-probate assets such as a house passing by transfer on death deed, and life estates. It is why the personal representative's notice to creditors goes to DSHS.",
-      "Recovery is deferred while the person's spouse survives, or a child under 21, or a child who is blind or disabled. DSHS can also grant an undue hardship waiver, for example when recovery would cost an heir housing they cannot replace, or when the property is an heir's only income-producing asset.",
+      "Recovery is deferred while the person's spouse survives, or a child under 21, or a child who is blind or disabled. An heir can also ask DSHS to delay recovery for undue hardship, for example when recovery would leave the heir without housing they can afford, when the property is the heir's only income-producing asset, or when the person leaves a state-registered domestic partner.",
       "Families can ask the DSHS Office of Financial Recovery about a specific estate at 800-562-6114.",
     ],
     cites: [SRC.recoveryForm, SRC.recovery, SRC.notice],
@@ -128,14 +129,14 @@ export const MTH_CHECKLIST: string[] = [
   "Get a documented value if the equity may be near the limit, or before any sale to family.",
   "Do not gift the house, add a child to the title, or sell it to family below value without advice from an elder law attorney.",
   "If the house will be sold, plan how the proceeds will pay for care and when to apply.",
-  "After a death, expect DSHS to receive the notice to creditors, and ask the Office of Financial Recovery about deferral or a hardship waiver if they may apply.",
+  "After a death, expect DSHS to receive the notice to creditors, and ask the Office of Financial Recovery about deferral or a hardship delay if they may apply.",
 ];
 
 export const MTH_FAQS = [
   {
     question: "Will Medicaid take my parent's house in Washington?",
     answer:
-      "Not while your parent is alive and qualifies: the home is generally exempt while they intend to return or a spouse or dependent relative lives there, within the equity limit. The risk comes after death, when Washington may recover the cost of long-term care from the estate, including the house. Recovery is deferred while a spouse, a child under 21, or a blind or disabled child survives, and hardship waivers exist.",
+      "Not while your parent is alive and qualifies: the home is generally exempt while they intend to return or a spouse or dependent relative lives there, within the equity limit. The risk comes after death, when Washington may recover the cost of long-term care from the estate, including the house. Recovery is deferred while a spouse, a child under 21, or a blind or disabled child survives, and an heir facing undue hardship can ask DSHS to delay recovery.",
   },
   {
     question: "Does my mother have to sell her house to qualify for Medicaid?",

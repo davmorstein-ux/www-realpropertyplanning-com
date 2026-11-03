@@ -70,8 +70,8 @@ const MedicaidAndLongTermCare = () => {
             <p className={pClass}>
               For older adults and individuals with disabilities who need long-term care, the relevant programs are
               typically Community First Choice (CFC), the COPES waiver (Community Options Program Entry System), and
-              Medicaid Personal Care (MPC). PACE is another option for people 55 and older who live in a PACE service
-              area. These programs help people receive care in the least restrictive setting possible — meaning at
+              Medicaid Personal Care (MPC). PACE is another option for people 65 and older, or 55 to 64 and blind or
+              disabled, who live in a PACE service area and need nursing facility level of care. These programs help people receive care in the least restrictive setting possible — meaning at
               home or in a smaller residential setting — before moving to a nursing facility.
             </p>
 

@@ -2093,7 +2093,7 @@
     "will the state put a lien on dad's home",
     "lien on parent's house medical facility"
    ],
-   "a": "It can, if she lives in a medical facility and is not reasonably expected to return home. DSHS will not file one if a spouse, state-registered domestic partner, child under 21, or sibling lives there, and it releases the lien if she returns home. If the house is sold, DSHS recovers its costs from the proceeds.",
+   "a": "It can, if she lives in a medical facility and is not reasonably expected to return home. DSHS will not file one if a spouse, state-registered domestic partner, child under 21, blind or disabled child, or a sibling who has an equity interest in the home and lived there for at least a year before she entered the facility lives there, and it releases the lien if she returns home. If the house is sold, DSHS recovers its costs from the proceeds.",
    "path": "/long-term-care/medicaid-and-the-family-home",
    "pathTitle": "Medicaid and the Family Home in Washington State"
   },
@@ -2107,7 +2107,7 @@
     "state claim on parent's house after death medicaid",
     "when is estate recovery deferred"
    ],
-   "a": "Yes, if she received long-term care paid by Medicaid or the state. Washington seeks to recover what it paid for federally funded long-term services received at age 55 or older, and state-funded services at any age, from the estate. That reaches non-probate assets too, such as a house passing by transfer on death deed, and life estates. Recovery is deferred while a spouse, a child under 21, or a blind or disabled child survives, and hardship waivers exist.",
+   "a": "Yes, if she received long-term care paid by Medicaid or the state. Washington seeks to recover what it paid for federally funded long-term services received at age 55 or older, and state-funded services at any age, from the estate. That reaches non-probate assets too, such as a house passing by transfer on death deed, and life estates. Recovery is deferred while a spouse, a child under 21, or a blind or disabled child survives, and an heir facing undue hardship can ask DSHS to delay recovery.",
    "path": "/long-term-care/medicaid-and-the-family-home",
    "pathTitle": "Medicaid and the Family Home in Washington State"
   },
