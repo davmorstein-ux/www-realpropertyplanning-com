@@ -2303,7 +2303,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Understanding Probate & Legal Authority | Real Property Planning",
     description: "What is probate, and do you need it? Who has legal authority to make decisions about the estate? Plain-language answers for Washington State families.",
     h1: "Probate and Who's in Charge",
-    intro: "Probate is the court process that puts someone in charge of the estate. In Washington, a house in the person's name alone usually needs it. Unless the house is in a trust, no one can sell it until the court appoints that person. Being named in the will isn't enough.",
+    intro: "Probate is the court process that puts someone in charge of the estate. In Washington, a house in the person's name alone usually needs it. Unless the house is in a trust or passes another way, such as to a spouse under a community property agreement, no one can sell it until the court appoints that person. Being named in the will isn't enough.",
   },
   "/executor-responsibilities-first-steps/when-you-need-extra-help": {
     title: "When Executors Need Extra Help | Real Property Planning",

@@ -55,7 +55,7 @@ export const ESTATE_SIMPLE_TOPICS: Record<string, SimpleTopic> = {
   "/estate-probate-inherited-property/probate-and-legal-authority": {
     title: "Probate and Who's in Charge",
     short:
-      "Probate is the court process that puts someone in charge of the estate. In Washington, a house in the person's name alone usually needs it. Unless the house is in a trust, no one can sell it until the court appoints that person. Being named in the will isn't enough.",
+      "Probate is the court process that puts someone in charge of the estate. In Washington, a house in the person's name alone usually needs it. Unless the house is in a trust or passes another way, such as to a spouse under a community property agreement, no one can sell it until the court appoints that person. Being named in the will isn't enough.",
     steps: [
       { title: "Check how the house is owned", text: "In their name alone, in a trust, or shared with someone else.", image: probate1 },
       { title: "Find out who is in charge", text: "The executor named in the will, the trustee of a trust, or, with no will, usually the closest family.", image: probate2 },

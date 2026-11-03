@@ -97,7 +97,7 @@ const AppraisalBeforeSelling = () => (
           </p>
           <ul className="space-y-4">
             {[
-              "The probate court requires a formal valuation as part of estate administration",
+              "The estate is selling under court supervision (without nonintervention powers): a private sale must bring at least 90% of an appraisal made within the past year (RCW 11.56.090)",
               "The estate needs a date-of-death value for federal estate tax purposes (estates over the filing threshold)",
               "Heirs disagree about the property's worth and need an independent, defensible opinion",
               "One heir wants to buy out the others and everyone needs to agree on fair market value",
