@@ -18,7 +18,7 @@ const topics = [
   {
     title: "Selling the Business and the Building Together",
     description:
-      "Why many retiring AFH owners sell both as a single transaction — and what buyers are actually paying for in each piece.",
+      "Why many retiring AFH owners sell both as a single transaction, and what buyers are paying for in each piece.",
   },
   {
     title: "DSHS Change of Ownership",
@@ -35,7 +35,7 @@ const topics = [
   },
   {
     title: "Timing Your Exit",
-    description: "Why AFH sales often take longer than a typical home sale — and how to plan your retirement timeline around it.",
+    description: "Why AFH sales often take longer than a typical home sale, and how to plan your retirement timeline around it.",
   },
   {
     title: "Getting an Accurate Valuation",
@@ -89,17 +89,17 @@ const faqs = [
   {
     question: "What happens to my DSHS license when I sell my Adult Family Home?",
     answer:
-      "Washington Adult Family Home licenses are not transferable (WAC 388-76-10010). Your license does not pass to the buyer with the business or the real estate — the buyer must file a new license application through the DSHS Change of Ownership process and qualify for a license of their own, including background checks, training, and an on-site DSHS inspection, before they can legally operate the home. If your home is licensed for seven or eight residents, the buyer must already have been a licensed AFH provider for at least 24 months and meet the other conditions in WAC 388-76-10032. Specialty contracts (ECS, SBS) and your Medicaid contract do not transfer either. Plan for this early, since it affects your closing timeline.",
+      "Washington Adult Family Home licenses are not transferable (WAC 388-76-10010). Your license does not pass to the buyer with the business or the real estate. The buyer must file a new license application through the DSHS Change of Ownership process and qualify for a license of their own, including background checks, training, and an on-site DSHS inspection, before they can legally operate the home. If your home is licensed for seven or eight residents, the buyer must already have been a licensed AFH provider for at least 24 months and meet the other conditions in WAC 388-76-10032. Specialty contracts (ECS, SBS) and your Medicaid contract do not transfer either. Plan for this early, since it affects your closing timeline.",
   },
   {
     question: "How do I value my AFH business separately from the real estate?",
     answer:
-      "A business's value comes from factors beyond the physical property — occupancy history, revenue and profitability, staff retention, the mix of Medicaid and private-pay residents, and the reputation you've built with families and referral sources. The license and contracts are not part of what transfers, since the buyer must obtain their own. A straightforward residential appraisal captures the real estate value, but it doesn't capture any of that operational value. Getting both pieces valued properly — the real estate and the operating business — gives you a realistic picture of what you're actually selling.",
+      "A business's value comes from factors beyond the physical property: occupancy history, revenue and profitability, staff retention, the mix of Medicaid and private-pay residents, and the reputation you've built with families and referral sources. The license and contracts are not part of what transfers, since the buyer must obtain their own. A straightforward residential appraisal captures the real estate value, but it doesn't capture any of that operational value. Valuing both pieces, the real estate and the operating business, gives you a realistic picture of what you are selling.",
   },
   {
     question: "What are my residents entitled to when I sell my AFH?",
     answer:
-      "You must give DSHS and each resident (or their representative) written notice 60 calendar days before the proposed change of ownership. The notice names you and the buyer, the home, the date, the resident's right to decide whether to stay or move, and any change in policies or operations that could affect them — for example, whether the new owner will serve Medicaid residents (WAC 388-76-10106). If DSHS grants priority processing, which you can request in writing, it may waive the 60 days, but notice is still required as early as possible (WAC 388-76-10107). Medicaid residents who stay need no new assessment, but they need new authorizations under the new owner's ProviderOne number.",
+      "You must give DSHS and each resident (or their representative) written notice 60 calendar days before the proposed change of ownership. The notice names you and the buyer, the home, the date, the resident's right to decide whether to stay or move, and any change in policies or operations that could affect them, for example whether the new owner will serve Medicaid residents (WAC 388-76-10106). If DSHS grants priority processing, which you can request in writing, it may waive the 60 days, but notice is still required as early as possible (WAC 388-76-10107). Medicaid residents who stay need no new assessment, but they need new authorizations under the new owner's ProviderOne number.",
   },
   {
     question: "What happens to an adult family home if the provider dies?",
@@ -109,12 +109,12 @@ const faqs = [
   {
     question: "How long does it typically take to sell an AFH business and building?",
     answer:
-      "AFH sales generally take longer than a typical residential sale, largely because of the buyer's DSHS license. DSHS will not estimate how long a change-of-ownership license takes; a complete application avoids delays. DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), processing can take up to 60 days once an application is complete, and most applicants do not pass the first inspection (DSHS allows at most three visits). Add the 60-day resident notice. Note that the buyer is applying for their own license through the Change of Ownership process rather than receiving yours — your license is not transferable. Building that timeline into your retirement planning, rather than assuming it'll move at typical real estate speed, avoids unwelcome surprises.",
+      "AFH sales generally take longer than a typical residential sale, largely because of the buyer's DSHS license. DSHS will not estimate how long a change-of-ownership license takes; a complete application avoids delays. DSHS posts which month's applications it is working on (the month changes, so check its processing timeline page), processing can take up to 60 days once an application is complete, and most applicants do not pass the first inspection (DSHS allows at most three visits). Add the 60-day resident notice. Note that the buyer is applying for their own license through the Change of Ownership process rather than receiving yours, because your license is not transferable. Build that timeline into your retirement plan rather than assuming the sale will move at typical real estate speed.",
   },
   {
     question: "Do I need a real estate broker who specializes in AFH transactions?",
     answer:
-      `It genuinely helps. An AFH sale involves real estate valuation, business valuation, DSHS licensing logistics, and resident-transition considerations all at once — a broker without specific AFH experience may handle the real estate side competently but miss the licensing and operational pieces that determine whether the transaction actually closes smoothly. ${FEATURED_BROKER.Role}, a Washington State licensed broker${SAME_PERSON ? " and certified appraiser" : ""} with AFH-specific experience, can walk you through what a realistic sale looks like for your specific home.`,
+      `It can help. An AFH sale involves real estate valuation, business valuation, DSHS licensing logistics, and resident transition all at once. A broker without AFH experience may handle the real estate side well but miss the licensing and operational pieces that can decide whether the transaction closes. ${FEATURED_BROKER.Role}, a Washington State licensed broker${SAME_PERSON ? " and certified appraiser" : ""} with AFH-specific experience, can explain what a realistic sale could look like for your home.`,
   },
 ];
 
@@ -166,18 +166,16 @@ const AFHSellingBusinessAtRetirement = () => (
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto text-foreground text-[17px] md:text-[18px] leading-relaxed space-y-4">
             <p>
-              Running an Adult Family Home for years — sometimes decades — builds something that's genuinely
-              difficult to walk away from: relationships with residents and their families, a trained staff who
-              trust your leadership, and a business that, done well, has real value beyond the four walls it sits
-              in. When retirement starts to feel real, the question isn't just "what's my house worth" — it's how to
-              responsibly transition everything you've built to someone who can carry it forward.
+              Retiring from an Adult Family Home means deciding what happens to three things: the house, the
+              operating business (residents, staff, referral relationships and occupancy history), and the license,
+              which cannot be sold. A well-run home has value beyond the real estate, and the plan has to cover the
+              residents and staff as well as the price.
             </p>
             <p>
-              Selling an AFH at retirement is meaningfully different from selling a typical home, or even a typical
-              small business. It runs on two tracks that have to work together: the real estate transaction, and the
-              DSHS Change of Ownership process. Your license does not transfer with the business or the real estate —
-              the buyer must complete the Change of Ownership process and qualify for a new Adult Family Home license
-              of their own. Getting both tracks right — and valued accurately — is what separates a well-planned exit
+              Selling an AFH at retirement differs from selling a typical home or a typical small business. It runs on two tracks that have to work together: the real estate transaction, and the
+              DSHS Change of Ownership process. Your license does not transfer with the business or the real estate.
+              The buyer must complete the Change of Ownership process and qualify for a new Adult Family Home license
+              of their own. Planning both tracks, and valuing the home accurately, is what separates a planned exit
               from a rushed one.
             </p>
           </div>

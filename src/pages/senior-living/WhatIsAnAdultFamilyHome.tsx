@@ -154,7 +154,7 @@ const AFHWhatIsAnAFH = () => {
                 margin: "0 0 20px",
               }}
             >
-              What is an adult family home — and what is it called in your state?
+              What is an adult family home, and what is it called in your state?
             </h1>
 
             {/* Quick answer: the first 60 words answer the question outright. */}
@@ -251,7 +251,7 @@ const AFHWhatIsAnAFH = () => {
             <ul style={{ paddingLeft: 22, margin: 0 }}>
               {TERM_FAMILIES.map(({ family, states }) => (
                 <li key={family} style={{ ...bodyText, margin: "0 0 10px" }}>
-                  <strong>{family}</strong> —{" "}
+                  <strong>{family}</strong>:{" "}
                   {states
                     .map((ab) => byAbbr.get(ab))
                     .filter(Boolean)
@@ -305,7 +305,7 @@ const AFHWhatIsAnAFH = () => {
             </div>
             <p style={{ ...bodyText, fontSize: 15, color: "#1c1917", marginTop: 16 }}>
               {STATE_TERMS.length} states listed. States not shown either fold small homes into their
-              general assisted living license or have not yet been reviewed. Corrections are welcome — the
+              general assisted living license or have not yet been reviewed. Corrections are welcome; the
               agency named in each row is the authority.
             </p>
           </div>

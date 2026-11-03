@@ -16,14 +16,14 @@ const HowThisSiteHelps = () => (
   >
     <SubH2>What This Site Is</SubH2>
     <P>
-      Real Property Planning is an educational resource hub for people navigating senior housing transitions, estate property, and inherited homes in Washington State. The site does not provide services directly. Instead, it offers clear information and a directory of featured providers and professionals so visitors can understand their options and decide who to contact next.
+      Real Property Planning is an educational resource hub for people dealing with senior housing transitions, estate property, and inherited homes in Washington State. The site does not provide services directly. Instead, it offers clear information and a directory of featured providers and professionals so visitors can understand their options and decide who to contact next.
     </P>
 
     <Divider />
 
     <SubH2>Who This Site Is For</SubH2>
     <UL>
-      <li><strong>Seniors</strong> thinking through what their next chapter could look like</li>
+      <li><strong>Seniors</strong> thinking through where and how they want to live next</li>
       <li><strong>Adult children</strong> helping aging parents plan or manage a transition</li>
       <li><strong>Executors, personal representatives, and trustees</strong> responsible for real property</li>
       <li><strong>Attorneys, CPAs, financial advisors, and care professionals</strong> looking for relevant resources to share with clients</li>
@@ -35,7 +35,7 @@ const HowThisSiteHelps = () => (
     <UL>
       <li><strong>Educational guides</strong> on probate, inherited property, senior housing options, and planning ahead</li>
       <li><strong>Plain-language explanations</strong> of key legal, financial, and real estate terms</li>
-      <li><strong>A directory of featured providers and professionals</strong> across Washington State — including CPAs, financial planners, senior living advisors, move managers, real estate brokers, certified residential appraisers, and a few independent attorneys (elder law and divorce). Real Property Planning does not refer anyone to attorneys: contact a listed attorney directly or choose your own, and confirm any lawyer's license with the Washington State Bar Association (wsba.org)</li>
+      <li><strong>A directory of featured providers and professionals</strong> across Washington State, including CPAs, financial planners, senior living advisors, move managers, real estate brokers, certified residential appraisers, and a few independent attorneys (elder law and divorce). Real Property Planning does not refer anyone to attorneys: contact a listed attorney directly or choose your own, and confirm any lawyer's license with the Washington State Bar Association (wsba.org)</li>
       <li><strong>Checklists and next-step prompts</strong> to help visitors organize their thinking</li>
     </UL>
 
@@ -52,7 +52,7 @@ const HowThisSiteHelps = () => (
 
     <SubH2>Areas Covered</SubH2>
     <P>
-      The featured providers listed on this site work throughout Washington State, with particularly strong coverage in Western Washington and the Puget Sound region — including Seattle, Bellevue, Kirkland, Redmond, Mercer Island, Issaquah, Everett, Edmonds, Lynnwood, Mukilteo, Mill Creek, Tacoma, University Place, Gig Harbor, Puyallup, Bainbridge Island, Poulsbo, Silverdale, Bremerton, Mount Vernon, Burlington, and Anacortes.
+      The featured providers listed on this site work throughout Washington State, especially in Western Washington and the Puget Sound region, including Seattle, Bellevue, Kirkland, Redmond, Mercer Island, Issaquah, Everett, Edmonds, Lynnwood, Mukilteo, Mill Creek, Tacoma, University Place, Gig Harbor, Puyallup, Bainbridge Island, Poulsbo, Silverdale, Bremerton, Mount Vernon, Burlington, and Anacortes.
     </P>
 
     <Divider />

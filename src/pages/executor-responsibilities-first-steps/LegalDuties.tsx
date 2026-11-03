@@ -15,13 +15,13 @@ const LegalDuties = () => (
   >
     <SubH2>The Role of an Executor</SubH2>
     <P>
-      An executor (called a "personal representative" in Washington State) is the person legally responsible for administering a deceased person's estate. This means collecting assets, paying debts, filing taxes, and ultimately distributing what remains to the heirs — all in accordance with the will and Washington State law.
+      An executor (called a "personal representative" in Washington State) is the person legally responsible for administering a deceased person's estate. This means collecting assets, paying debts, filing taxes, and ultimately distributing what remains to the heirs, all in accordance with the will and Washington State law.
     </P>
     <P>
       A trustee has a similar role but manages assets held in a trust, often over a longer period of time and according to the specific terms of the trust document.
     </P>
     <P>
-      Both roles carry fiduciary duties — meaning you are legally required to act in the best interests of the estate and its beneficiaries, not your own.
+      Both roles carry fiduciary duties, meaning you are legally required to act in the best interests of the estate and its beneficiaries, not your own.
     </P>
 
     <Divider />
@@ -35,17 +35,17 @@ const LegalDuties = () => (
 
     <SubH3>Duty of Care</SubH3>
     <P>
-      You are expected to manage estate assets with the same care a reasonable, prudent person would use with their own property. This means protecting assets, maintaining property, and making sound decisions — not letting things deteriorate through neglect.
+      You are expected to manage estate assets with the same care a reasonable, prudent person would use with their own property. This means protecting assets, maintaining property, and making sound decisions rather than letting things deteriorate through neglect.
     </P>
 
     <SubH3>Duty to Inform and Account</SubH3>
     <P>
-      Beneficiaries have the right to be kept informed. You are generally required to provide an accounting of estate assets, debts, and distributions — and to respond to reasonable requests for information from heirs.
+      Beneficiaries have the right to be kept informed. You are generally required to provide an accounting of estate assets, debts, and distributions, and to respond to reasonable requests for information from heirs.
     </P>
 
     <SubH3>Duty to Follow the Will</SubH3>
     <P>
-      Your job is to carry out the instructions in the will, not to interpret or override them. If the will says the house goes to one heir and the savings account to another, that is what must happen — regardless of what you personally think is fair.
+      Your job is to carry out the instructions in the will, not to interpret or override them. If the will says the house goes to one heir and the savings account to another, that is what must happen, regardless of what you personally think is fair.
     </P>
 
     <SubH3>Duty to Pay Debts Before Distributing Assets</SubH3>
@@ -55,15 +55,15 @@ const LegalDuties = () => (
 
     <Divider />
 
-    <SubH2>Personal Liability — What Executors Need to Know</SubH2>
+    <SubH2>Personal Liability: What Executors Need to Know</SubH2>
     <P>
-      This is the part most people don't realize until it's too late: executors can be held personally liable for mistakes made in administering the estate.
+      Executors can be held personally liable for mistakes made in administering the estate.
     </P>
     <P>
       If you distribute assets before paying debts and there isn't enough left to cover those debts, creditors may come after you personally. If you fail to file required tax returns, the IRS can pursue you. If you favor one heir unfairly, other beneficiaries can sue.
     </P>
     <P>
-      This is not meant to be alarming — most estates are administered without incident. But it is the reason why working with a probate attorney, even briefly, is strongly recommended for any estate of meaningful size or complexity.
+      Most estates are administered without incident, but this risk is the reason working with a probate attorney, even briefly, is strongly recommended for any estate of meaningful size or complexity.
     </P>
 
     <Divider />
@@ -145,7 +145,7 @@ const LegalDuties = () => (
       <li>Out-of-state assets</li>
       <li>A surviving spouse with community property interests</li>
     </UL>
-    <P>…professional guidance isn't optional — it's essential.</P>
+    <P>…professional guidance should be treated as essential.</P>
     <P>
       Real Property Planning does not refer anyone to attorneys. Choose a Washington-licensed probate attorney yourself; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).
     </P>

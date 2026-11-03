@@ -23,17 +23,17 @@ const needs = [
 const cards = [
   {
     title: "Real Estate Broker",
-    description: "A broker experienced in estate and inherited property handles listing, showings, negotiations, and closing — keeping out-of-state family informed throughout without requiring travel.",
+    description: "A broker experienced in estate and inherited property handles listing, showings, negotiations, and closing, and can keep out-of-state family informed without anyone having to travel.",
     href: "/realtor",
   },
   {
     title: "Certified Residential Appraiser",
-    description: "An independent appraisal establishes a defensible property value for estate, probate, or tax purposes — completed locally without the family needing to be present.",
+    description: "An independent appraisal establishes a defensible property value for estate, probate, or tax purposes. The appraiser does the work locally, so the family does not need to be present.",
     href: "/real-estate-appraiser",
   },
   {
     title: "Estate Cleanout & Move Management",
-    description: "Professionals who sort, pack, donate, and remove belongings from the property — coordinating the full cleanout so the home is ready for sale.",
+    description: "Professionals who sort, pack, donate, and remove belongings from the property, coordinating the full cleanout so the home is ready for sale.",
     href: "/senior-move-managers",
   },
   {
@@ -43,7 +43,7 @@ const cards = [
   },
   {
     title: "Estate Sale & Liquidation",
-    description: "When a home contains decades of belongings, estate sale professionals handle valuation, sale, and removal — often generating proceeds that offset preparation costs.",
+    description: "When a home contains decades of belongings, estate sale professionals handle valuation, sale, and removal. The proceeds can help offset preparation costs.",
     href: "/estate-liquidation",
   },
   {
@@ -98,7 +98,7 @@ const OutOfStateFamilies = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-foreground text-lg leading-relaxed">
-              Managing a Washington State property from another state is one of the most common situations families face during an estate or senior transition. Distance makes every step harder — coordinating access, assessing condition, managing vendors, and staying informed. This page explains which local professional handles each part of the process.
+              Managing a Washington State property from another state is a common situation during an estate or senior transition. Distance makes every step harder: coordinating access, assessing condition, managing vendors, and staying informed. This page explains which local professional handles each part of the process.
             </p>
           </div>
         </div>
@@ -153,7 +153,7 @@ const OutOfStateFamilies = () => (
               Not Sure Where to Start?
             </h2>
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-              Most out-of-state families don't know which professional they need first. This guide sets out the usual sequence, and Real Property Planning's Find a Professional page lists independent professionals you can contact directly.
+              From another state, it is often unclear which professional to call first. This guide sets out the usual sequence, and Real Property Planning's Find a Professional page lists independent professionals you can contact directly.
             </p>
             <Link to="/contact?reason=estate-property">
               <Button variant="gold" size="lg">

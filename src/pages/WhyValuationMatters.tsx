@@ -18,7 +18,7 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
-  "Reduces disagreements among heirs, co-owners, or family members about what a home is worth",
+  "Can reduce disagreements among heirs, co-owners, or family members about what a home is worth",
   "Clarifies whether repairs or improvements will meaningfully affect the sale outcome",
   "Helps attorneys, executors, and trustees fulfill fiduciary responsibilities with better-informed recommendations",
   "Improves sale planning by aligning price expectations with realistic market conditions",
@@ -27,15 +27,15 @@ const whyMatters = [
 const pricingMistakes = [
   {
     title: "Overpricing an Estate Property",
-    consequence: "The home sits on the market for months, accumulating carrying costs, losing buyer interest, and eventually selling for less than it would have at a realistic price. Heirs and executors grow frustrated.",
+    consequence: "The home sits on the market for months, accumulating carrying costs, losing buyer interest, and often selling for less than it would have at a realistic price.",
   },
   {
     title: "Underpricing an Inherited Home",
-    consequence: "The property sells quickly, but the estate leaves tens of thousands of dollars on the table. In fiduciary situations, this can create legal and ethical concerns.",
+    consequence: "The property sells quickly, but the estate can leave tens of thousands of dollars on the table. In fiduciary situations, this can create legal and ethical concerns.",
   },
   {
     title: "Ignoring Condition in Pricing",
-    consequence: "A price based on comparable homes that are in updated condition leads to appraisal failures, buyer financing issues, and deals that fall apart after weeks under contract.",
+    consequence: "A price based on comparable homes that are in updated condition can lead to low buyer appraisals, financing problems, and deals that fall apart after weeks under contract.",
   },
   {
     title: "Using Online Estimates for Estate Property",
@@ -55,11 +55,11 @@ const situations = [
 const faqs = [
   {
     question: "What is the difference between a CMA, a BPO, and an appraisal — and which one do I need?",
-    answer: "A CMA (Comparative Market Analysis) is a listing agent's pricing opinion based on recent comparable sales — useful for marketing, but not a formal valuation. A BPO is a broker's price opinion, often used by lenders and asset managers. An appraisal is a USPAP-compliant valuation by a state-licensed or certified appraiser, with documented adjustments and a supportable conclusion. For probate, trust accounting, divorce, or any situation where the number has to defend itself, you want an appraisal — or at minimum a CMA built by someone trained as an appraiser.",
+    answer: "A CMA (Comparative Market Analysis) is a listing agent's pricing opinion based on recent comparable sales. It is useful for marketing, but it is not a formal valuation. A BPO is a broker's price opinion, often used by lenders and asset managers. An appraisal is a USPAP-compliant valuation by a state-licensed or certified appraiser, with documented adjustments and a supportable conclusion. For probate, trust accounting, divorce, or any situation where the number has to defend itself, you usually want an appraisal, or at minimum a CMA built by someone trained as an appraiser.",
   },
   {
     question: "Can I get a date-of-death appraisal for stepped-up basis?",
-    answer: "Yes. A date-of-death valuation establishes the home's fair market value as of the day the owner passed away — the basis the IRS uses to calculate stepped-up basis for heirs. A certified appraiser can produce it as a formal appraisal report when the CPA or attorney requires one; when the situation allows less formality, a documented broker valuation may be enough.",
+    answer: "Yes. A date-of-death valuation establishes the home's fair market value as of the day the owner died. That value is what the IRS uses to calculate the heirs' stepped-up basis. A certified appraiser can produce it as a formal appraisal report when the CPA or attorney requires one; when the situation allows less formality, a documented broker valuation may be enough.",
   },
   {
     question: "We've already had two agents give us very different prices. How do we know which one to trust?",
@@ -69,7 +69,7 @@ const faqs = [
     ? [
         {
           question: `If ${FEATURED_BROKER.role} is also an appraiser, can ${FEATURED_BROKER.pronoun.subject} be the listing agent — isn't that a conflict?`,
-          answer: `${FEATURED_BROKER.Role} provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules — not bundled with the listing.`,
+          answer: `${FEATURED_BROKER.Role} provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules, not bundled with the listing.`,
         },
       ]
     : []),
@@ -148,7 +148,7 @@ const WhyValuationMatters = () => {
                     </div>
                     <div>
                       <p data-valuation-sub-question className="text-foreground mb-1 !text-[16px] !leading-[1.6] !font-semibold">Who benefits from valuation expertise?</p>
-                      <p data-valuation-sub-answer className="text-muted-foreground !leading-[1.7] text-base">Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales.</p>
+                      <p data-valuation-sub-answer className="text-muted-foreground !leading-[1.7] text-base">Executors, trustees, and attorneys who need defensible pricing, especially when there are several heirs or the sale is court-supervised.</p>
                     </div>
                   </div>
                 </AccordionContent>
@@ -233,7 +233,7 @@ const WhyValuationMatters = () => {
 
       <IntentCTA
         heading="Do you need an appraisal or a CMA?"
-        body="It depends on who will rely on the number — a court, the IRS, a lender, a buyer, or siblings. Ask which one your situation calls for before paying for either."
+        body="It depends on who will rely on the number: a court, the IRS, a lender, a buyer, or siblings. Ask which one your situation calls for before paying for either."
         buttonText="Ask whether you need an appraisal or a CMA"
         reason="sell-or-value"
         professional="appraiser"
@@ -242,9 +242,9 @@ const WhyValuationMatters = () => {
 
       <MidPageCTA
         heading="Need Help Pricing an Estate or Inherited Property?"
-        body={`${FEATURED_BROKER.Role} provides valuation-informed pricing strategy${SAME_PERSON ? " grounded in dual broker and appraiser experience" : ""}.`}
+        body={`${FEATURED_BROKER.Role} provides valuation-informed pricing strategy${SAME_PERSON ? " drawing on both broker and appraiser experience" : ""}.`}
         buttonText="Discuss a Property"
-        microcopy="No pressure. Just honest, market-grounded guidance."
+        microcopy="No pressure. Pricing guidance based on the local market."
       />
 
       </main>

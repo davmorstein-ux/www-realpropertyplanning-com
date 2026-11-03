@@ -75,7 +75,7 @@ const pathways: Pathway[] = [
   },
   {
     letter: "6",
-    title: "Building the Right Professional Team",
+    title: "Building Your Professional Team",
     description:
       "Understanding how attorneys, CPAs, appraisers, real estate professionals, estate liquidators, and advisors may help guide the process.",
     href: "/building-your-professional-team",
@@ -100,7 +100,7 @@ const faqs = [
   {
     question: "Do we need an appraisal?",
     answer:
-      "A certified appraisal often supports estate filings, family decisions, and pricing — and may be required for tax or legal purposes depending on the situation.",
+      "A certified appraisal often supports estate filings, family decisions, and pricing, and may be required for tax or legal purposes depending on the situation.",
   },
   {
     question: "What is a date-of-death valuation?",
@@ -120,22 +120,22 @@ const faqs = [
   {
     question: "What if heirs disagree?",
     answer:
-      "Neutral information — a certified valuation, a written plan, and clear roles — often helps families find common ground. An attorney or mediator may also help.",
+      "Neutral information (a certified valuation, a written plan, and clear roles) often helps heirs find common ground. An attorney or mediator may also help.",
   },
   {
     question: "What professionals may help guide the process?",
     answer:
-      "Families often work with an attorney, CPA, certified appraiser, real estate professional, estate liquidator, and — when relevant — a senior move manager.",
+      "Families often work with an attorney, CPA, certified appraiser, real estate professional, estate liquidator, plus a senior move manager when relevant.",
   },
   {
     question: "How long does the process usually take?",
     answer:
-      "Timelines vary by state, the estate, occupancy, and preparation needs. Many families move from initial conversation to sale over several months, sometimes longer.",
+      "Timelines vary by state, the estate, occupancy, and preparation needs. The time from a first conversation to a sale is often several months, sometimes longer.",
   },
   {
     question: "What if everything feels overwhelming?",
     answer:
-      "That is normal. Slowing down, focusing on one decision, and starting with a single conversation often changes the experience quickly.",
+      "Take one decision at a time, starting with the first step above that applies to you. A single conversation with the relevant professional can often settle what comes next.",
   },
 ];
 
@@ -186,9 +186,9 @@ const SellingAnInheritedHome = () => {
                 Guided Roadmap
               </p>
               <p className="text-lg md:text-xl leading-relaxed mb-7 max-w-2xl" style={{ color: "#1c1917" }}>
-                A guided roadmap for heirs, executors, trustees, and families
-                navigating inherited property decisions, probate questions, valuation
-                concerns, property preparation, and major life transitions.
+                A step-by-step roadmap for heirs, executors, trustees, and families
+                deciding what to do with inherited property: probate questions,
+                valuation, preparing the home, and the life changes that often come with it.
               </p>
               <a href="#pathways">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
@@ -207,7 +207,7 @@ const SellingAnInheritedHome = () => {
             "The property is going through probate or trust administration",
             "Multiple heirs are involved in the decision",
             "You want to understand taxes, basis, and timing",
-            "You need a calm, organized roadmap to a sale"
+            "You want an organized plan for getting to a sale"
           ]}
         />
 
@@ -217,13 +217,13 @@ const SellingAnInheritedHome = () => {
             <div className="max-w-3xl mx-auto text-center">
               <HeartHandshake className="w-10 h-10 text-gold mx-auto mb-5" aria-hidden="true" />
               <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-4">
-                Many Families Feel Overwhelmed by Inherited Property Decisions
+                Why Inherited Property Decisions Are Hard
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed">
                 Inherited homes often involve emotional attachment, family
                 coordination, legal questions, and uncertainty about where to begin.
-                This guide is designed to simplify the process and provide a calmer
-                path forward.
+                This guide splits the process into six steps, each with its own
+                page.
               </p>
             </div>
           </div>
@@ -355,7 +355,7 @@ const SellingAnInheritedHome = () => {
         </div>
         <IntentCTA
           heading="Selling as-is or preparing the home first?"
-          body="That decision depends on condition, market, timeline, and who is paying for the work. It is the question most inherited-home sellers get wrong by guessing. Ask it with the property in mind."
+          body="That decision depends on condition, market, timeline, and who is paying for the work. It is easy to get wrong by guessing, so ask it with the specific property in mind."
           buttonText="Ask about selling the inherited home"
           reason="estate-property"
           professional="broker"

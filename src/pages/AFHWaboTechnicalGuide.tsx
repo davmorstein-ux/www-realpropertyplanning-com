@@ -113,8 +113,8 @@ const AFHWaboTechnicalGuide = () => (
           </h1>
           <p style={{ ...body, margin: "0 0 16px", maxWidth: 680 }}>
             If you are opening, buying, remodeling, or expanding an Adult Family Home in Washington, the WABO
-            checklist process is one of the most important parts of the project. This article focuses on the
-            technical side of the process — what the checklist covers, who performs the inspection, what usually
+            checklist is a required step before DSHS licensing. This article covers the technical side of the
+            process: what the checklist covers, who performs the inspection, what usually
             causes delays, and why passing the checklist is only one part of the larger licensing process.
           </p>
           <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: 0 }}>
@@ -188,7 +188,7 @@ const AFHWaboTechnicalGuide = () => (
 
           <h3 style={h3}>Resident Bedrooms</h3>
           <p style={body}>
-            One of the most important parts of the checklist is how proposed sleeping rooms are classified. The room
+            A central part of the checklist is how proposed sleeping rooms are classified. The room
             layout, exit path, and accessibility all matter. A room that looks suitable as a bedroom may not qualify
             for AFH use if its egress or location does not meet the code requirements.
           </p>
@@ -211,7 +211,7 @@ const AFHWaboTechnicalGuide = () => (
 
           <h3 style={h3}>Ramps and Landings</h3>
           <p style={body}>
-            Ramps are another common issue. A ramp must do more than simply connect two elevations — it must have the
+            Ramps are another common issue. A ramp must do more than simply connect two elevations. It must have the
             right slope, proper landings, and compliant handrails or guards where required.
           </p>
           <p style={{ ...body, margin: 0 }}>
@@ -267,9 +267,8 @@ const AFHWaboTechnicalGuide = () => (
 
           <h3 style={h3}>Smoke and Carbon Monoxide Alarms</h3>
           <p style={body}>
-            Smoke and carbon monoxide alarms must be placed and installed correctly. The goal is not just to have
-            alarms in the home, but to ensure the alarm system works in a way that protects residents throughout the
-            dwelling.
+            Smoke and carbon monoxide alarms must be placed and installed correctly, so that the alarm system protects
+            residents throughout the dwelling.
           </p>
           <p style={{ ...body, margin: 0 }}>
             The inspector will consider location, coverage, and audibility. Individual battery alarms may not be
@@ -342,8 +341,8 @@ const AFHWaboTechnicalGuide = () => (
             not replace DSHS licensing or other due diligence.
           </p>
           <p style={{ ...body, margin: 0 }}>
-            If the goal is to buy, sell, or remodel an Adult Family Home successfully, the technical checklist should
-            be treated as a core part of the project from the start.
+            If you plan to buy, sell, or remodel an Adult Family Home, treat the technical checklist as a core part of
+            the project from the start.
           </p>
         </div>
       </section>

@@ -27,7 +27,7 @@ const whenCards = [
   {
     icon: <Heart className="h-6 w-6 text-gold" aria-hidden="true" />,
     title: "Medical Situations",
-    text: "When a loved one becomes suddenly incapacitated due to illness or injury, the agent may need to act quickly on real estate matters — including selling a home to fund care.",
+    text: "When a loved one becomes suddenly incapacitated due to illness or injury, the agent may need to act quickly on real estate matters, including selling a home to fund care.",
   },
   {
     icon: <Globe className="h-6 w-6 text-gold" aria-hidden="true" />,
@@ -45,17 +45,17 @@ const howWeHelpCards = [
   {
     icon: <ShieldCheck className="h-6 w-6 text-gold" aria-hidden="true" />,
     title: "Certified Home Valuation",
-    text: "A court-acceptable appraisal that establishes fair market value and protects the agent's decision-making.",
+    text: "An appraisal that documents fair market value and supports the agent's decision.",
   },
   {
     icon: <Briefcase className="h-6 w-6 text-gold" aria-hidden="true" />,
     title: "Real Estate Brokerage",
-    text: "Experienced representation for the sale of the property — from preparation through closing.",
+    text: "Representation for the sale of the property, from preparation through closing.",
   },
   {
     icon: <Heart className="h-6 w-6 text-gold" aria-hidden="true" />,
     title: "Calm Guidance",
-    text: "Patient, clear communication that respects both the agent's responsibility and the principal's dignity.",
+    text: "Clear communication that respects both the agent's responsibility and the principal's dignity.",
   },
   {
     icon: <Users className="h-6 w-6 text-gold" aria-hidden="true" />,
@@ -91,9 +91,9 @@ const PowerOfAttorney = () => {
       <main id="main-content">
 
         {/* Hero */}
-        <HeroBandTitle as="h1">Helping Those Who Hold Power of Attorney Navigate Real Estate in Washington State</HeroBandTitle>
+        <HeroBandTitle as="h1">Helping Those Who Hold Power of Attorney With Real Estate in Washington State</HeroBandTitle>
 
-        {/* Intro — relocated out of the title band. The band carries the
+        {/* Intro: relocated out of the title band. The band carries the
             page title and nothing else, sitewide. */}
         <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
@@ -115,10 +115,10 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>What Is Power of Attorney?</h2>
               <p className={pClass}>
-                Power of Attorney is a legal document that grants one person — the agent — the authority to make decisions on behalf of another person — the principal. In the context of real estate, a Power of Attorney may allow the agent to sell, manage, or make decisions about property owned by the principal when they are no longer able to do so themselves.
+                Power of Attorney is a legal document that grants one person (the agent) the authority to make decisions on behalf of another person (the principal). In the context of real estate, a Power of Attorney may allow the agent to sell, manage, or make decisions about property owned by the principal when they are no longer able to do so themselves.
               </p>
               <p className={pClass}>
-                In Washington State, a power of attorney ends if the principal becomes incapacitated unless the document says it survives incapacity (RCW 11.125.040). A power of attorney that does say so — a durable power of attorney — remains in effect, which makes it one of the most important legal tools in senior transition and estate planning. To be valid, it must be signed and dated, and either notarized or signed by two qualified witnesses (RCW 11.125.050). For real estate, have it notarized: title companies usually record the power of attorney with the deed, and the statute's rules requiring banks and others to accept a power of attorney apply to notarized ones. A power of attorney ends at the principal's death; after that, only a court-appointed personal representative or a trustee can sell.
+                In Washington State, a power of attorney ends if the principal becomes incapacitated unless the document says it survives incapacity (RCW 11.125.040). A power of attorney that does say so, called a durable power of attorney, remains in effect, which makes it a central document in senior transition and estate planning. To be valid, it must be signed and dated, and either notarized or signed by two qualified witnesses (RCW 11.125.050). For real estate, have it notarized: title companies usually record the power of attorney with the deed, and the statute's rules requiring banks and others to accept a power of attorney apply to notarized ones. A power of attorney ends at the principal's death; after that, only a court-appointed personal representative or a trustee can sell.
               </p>
             </div>
           </div>
@@ -165,10 +165,10 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>Why a Certified Appraisal Matters When Acting Under Power of Attorney</h2>
               <p className={pClass}>
-                When selling a property on behalf of someone else, an agent under Power of Attorney has a legal duty to act in the principal's best interests. A certified appraisal from a Washington State licensed appraiser establishes defensible fair market value — protecting the agent from any future questions about whether the property was sold fairly.
+                When selling a property on behalf of someone else, an agent under Power of Attorney has a legal duty to act in the principal's best interests. A certified appraisal from a Washington State licensed appraiser establishes a defensible fair market value, which helps protect the agent if anyone later asks whether the property was sold fairly.
               </p>
               <p className={pClass}>
-                It also provides documentation that courts, family members, and financial institutions may require. {FEATURED_APPRAISER.name}, the featured appraiser on this site ({FEATURED_APPRAISER.firm}, WA #{FEATURED_APPRAISER.licenseNumber}), provides certified residential appraisals that meet this standard throughout Washington State — independently of Real Property Planning, which holds no licenses.
+                It also provides documentation that courts, family members, and financial institutions may require. {FEATURED_APPRAISER.name}, the featured appraiser on this site ({FEATURED_APPRAISER.firm}, WA #{FEATURED_APPRAISER.licenseNumber}), provides certified residential appraisals that meet this standard throughout Washington State, independently of Real Property Planning, which holds no licenses.
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ const PowerOfAttorney = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className={h2Class + " text-center"}>How a Featured Broker and Appraiser Work With Agents Under Power of Attorney</h2>
               <p className={pClass + " text-center max-w-3xl mx-auto mb-10"}>
-                {FEATURED_BROKER.Role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, understands the unique position agents find themselves in — responsible for someone else's most valuable asset, often during a stressful and emotional time.
+                {FEATURED_BROKER.Role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, works with agents who are responsible for someone else's property, often its most valuable asset, and often during a stressful time.
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 {howWeHelpCards.map((card) => (
@@ -270,10 +270,10 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>Serving Power of Attorney Agents Throughout Washington State</h2>
               <p className={pClass}>
-                From Seattle and King County to Spokane, Bellingham, Tacoma, Olympia, and every community in between — {FEATURED_BROKER.Role} works with agents under Power of Attorney throughout Washington State.
+                From Seattle and King County to Spokane, Bellingham, Tacoma, Olympia, and every community in between, {FEATURED_BROKER.Role} works with agents under Power of Attorney throughout Washington State.
               </p>
               <p className={pClass}>
-                Whether the situation is straightforward or complex, {FEATURED_BROKER.role} is here to help you move forward with confidence.
+                {FEATURED_BROKER.Role} handles both straightforward and complex situations.
               </p>
             </div>
           </div>
@@ -284,10 +284,10 @@ const PowerOfAttorney = () => {
           <div className={contentWrap}>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground mb-4">
-                Not Sure Where to Start? That's Exactly Where Most People Are.
+                Not Sure Where to Start?
               </h2>
               <p className="text-primary-foreground/90 text-lg leading-relaxed mb-8">
-                A short conversation is usually the fastest way to get clarity. There is no obligation — just a practical talk about your situation and what makes sense next.
+                A short conversation is usually the fastest way to sort out the next step. There is no obligation: it is a practical talk about your situation and what makes sense next.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={`tel:${FEATURED_BROKER.phoneTel}`} className="rpp-poa-call no-underline inline-flex items-center justify-center gap-2 bg-white hover:bg-[#eef2f8] text-[#1B3A6B] font-semibold px-8 py-4 rounded-lg text-lg transition-colors">

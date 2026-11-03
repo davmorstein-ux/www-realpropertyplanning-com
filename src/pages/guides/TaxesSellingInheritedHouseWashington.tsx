@@ -18,8 +18,8 @@ import QuickAnswers from "@/components/QuickAnswers";
 import { TAXES_INHERITED_HOUSE as T } from "@/data/taxesInheritedHouse";
 
 const faqs = [
-  { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis — meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington's capital gains tax does not apply to any sale of real estate (RCW 82.87.050), so a Washington house is not subject to it. Consult a tax professional for your specific situation." },
-  { question: "What is a stepped-up basis?", answer: "When you inherit property, the IRS 'steps up' the cost basis to the fair market value at the date of the owner's death. This means you only owe capital gains tax on appreciation that occurs after that date — not on gains that accumulated during the original owner's lifetime." },
+  { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis, meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington's capital gains tax does not apply to any sale of real estate (RCW 82.87.050), so a Washington house is not subject to it. Consult a tax professional for your specific situation." },
+  { question: "What is a stepped-up basis?", answer: "When you inherit property, the IRS 'steps up' the cost basis to the fair market value at the date of the owner's death. This means you only owe capital gains tax on appreciation that occurs after that date, not on gains that accumulated during the original owner's lifetime." },
   { question: "Is there an estate tax in Washington State?", answer: "Yes. The Department of Revenue lists a Washington estate tax exclusion of $3,000,000 for deaths from July 1, 2026 ($3,076,000 for deaths from January to June 2026), with rates that depend on the date of death. The federal exclusion is far higher: $15 million per person for 2026. Whether the estate owes taxes depends on total estate value, not just the property." },
   { question: "How do you establish the value at date of death?", answer: "The most reliable way is through a professional appraisal conducted as close to the date of death as possible. This establishes the stepped-up basis and provides documentation for tax purposes. A certified residential appraiser can provide this valuation." },
   { question: "What if you rent the inherited property before selling?", answer: "If you convert the property to a rental before selling, the tax situation becomes more complex. You may need to account for depreciation recapture and the holding period changes. A CPA experienced with inherited property can advise on the implications." },
@@ -99,7 +99,7 @@ const TaxesSellingInheritedHouseWashington = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What This Means in Practice</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            When someone inherits a house, one of the first questions is usually about taxes. The concern is understandable — if a parent bought a home for $80,000 decades ago and it is now worth $650,000, does the heir owe taxes on that entire gain?
+            When someone inherits a house, an early question is usually about taxes: if a parent bought a home for $80,000 decades ago and it is now worth $650,000, does the heir owe taxes on that entire gain?
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Generally, no. The IRS provides what is called a "stepped-up basis," which resets the property's cost basis to its fair market value at the date of the owner's death. If you sell shortly after inheriting, there is typically little or no taxable gain.
@@ -141,7 +141,7 @@ const TaxesSellingInheritedHouseWashington = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Why Accurate Valuation Matters</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            The stepped-up basis depends entirely on establishing the property's fair market value at the date of death. If this value is not documented accurately, heirs may end up paying more in capital gains tax than necessary — or face challenges from the IRS.
+            The stepped-up basis depends entirely on establishing the property's fair market value at the date of death. If this value is not documented accurately, heirs may end up paying more in capital gains tax than necessary, or face challenges from the IRS.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             A <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">professional appraisal</Link> conducted close to the date of death provides the most reliable documentation. This is one of the few areas where the cost of an appraisal can directly save money in taxes.
@@ -155,7 +155,7 @@ const TaxesSellingInheritedHouseWashington = () => (
 
     <MidPageCTA
       heading="Need Help Understanding Your Property's Value?"
-      body={`An accurate valuation is the foundation for sound tax planning. ${FEATURED_BROKER.Role} can help you understand the property's current and historical value so you and your CPA can make informed decisions.`}
+      body={`An accurate valuation is the foundation for sound tax planning. ${FEATURED_BROKER.Role} can help you understand the property's current and historical value so you and your CPA have a number to work from.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
@@ -167,11 +167,11 @@ const TaxesSellingInheritedHouseWashington = () => (
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Common Mistakes to Avoid</h2>
           <ul className="space-y-4">
             {[
-              "Assuming you owe taxes on the full appreciation from original purchase price — the stepped-up basis usually eliminates most or all of this",
-              "Failing to get an appraisal at or near the date of death — this is the most important step for establishing your tax basis",
+              "Assuming you owe taxes on the full appreciation from the original purchase price; the stepped-up basis usually eliminates most or all of this",
+              "Failing to get an appraisal at or near the date of death, which is the most important step for establishing your tax basis",
               "Waiting too long to sell without understanding how additional appreciation affects your tax liability",
-              "Confusing estate tax with capital gains tax — they are separate and apply in different circumstances",
-              "Making decisions about the property without consulting a tax professional — what seems like a simple choice can have significant tax implications",
+              "Confusing estate tax with capital gains tax; they are separate and apply in different circumstances",
+              "Making decisions about the property without consulting a tax professional; what seems like a simple choice can have significant tax implications",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -189,13 +189,13 @@ const TaxesSellingInheritedHouseWashington = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">When to Get Professional Guidance</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Tax questions around inherited property sit at the intersection of real estate, estate law, and tax planning. No single professional has all the answers — this is a situation that benefits from coordination.
+            Tax questions around inherited property sit at the intersection of real estate, estate law, and tax planning. No single professional covers all of it, so the work benefits from coordination.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             A CPA or tax attorney can advise on the tax implications. An estate attorney manages the legal framework. And a real estate broker with appraisal expertise can provide the valuation documentation that supports the entire process.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            If you are uncertain about any aspect of the tax situation, getting professional guidance early is always less expensive than correcting mistakes later.
+            If you are uncertain about any aspect of the tax situation, getting professional guidance early is usually less expensive than correcting mistakes later.
           </p>
         </div>
       </div>
@@ -238,7 +238,7 @@ const TaxesSellingInheritedHouseWashington = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you want help with the valuation side of an inherited house sale, a short conversation is a reasonable place to start.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

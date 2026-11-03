@@ -61,17 +61,15 @@ const SeniorLivingAdvisors = () => (
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
-                A Senior Living Advisor is an experienced professional who helps older adults and their families
-                evaluate and select the right housing and care option — whether that is assisted living, memory care, an
-                adult family home, independent living, or in-home care support. Their guidance is especially valuable
-                when families feel overwhelmed by the number of options available and the complexity of making the right
-                choice for their loved one.
+                A Senior Living Advisor helps older adults and their families compare and choose a housing and care
+                option: assisted living, memory care, an adult family home, independent living, or in-home care support.
+                An advisor is most useful when a family faces many options at once and is unsure how they compare.
               </p>
               <p>
-                Senior Living Advisors typically have deep knowledge of the local care landscape, including which
-                communities and homes have strong reputations, availability, pricing structures, and the specific level
-                of care they provide. Many maintain large databases of communities and personally accompany families
-                on tours, helping them ask the right questions and compare their choices with clarity.
+                Senior Living Advisors typically know the local care options, including which communities and homes
+                have strong reputations, availability, pricing structures, and the specific level of care they provide.
+                Many maintain large databases of communities and personally accompany families on tours, helping them
+                ask useful questions and compare their choices.
               </p>
               <p>
                 Their role does not end at placement. Many Senior Living Advisors continue to advocate for their clients

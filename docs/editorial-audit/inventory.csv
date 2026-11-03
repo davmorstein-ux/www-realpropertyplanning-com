@@ -132,63 +132,63 @@ Nursing Home — Semi-Private Cost Calculator — Washington State,https://realp
 Estate Liquidators,https://realpropertyplanning.com/estate-liquidators,src/pages/EstateLiquidators.tsx,Probate & estate,361,8.3,2.3,light,batch 10 (live Nov 3),low
 "Probate & Estate Real Estate in Everett, WA",https://realpropertyplanning.com/everett-probate-estate-real-estate,src/pages/EverettProbateEstate.tsx,Probate & estate,1325,8.3,2.3,light,batch 10 (live Nov 3),low
 "Probate & Estate Real Estate in Yakima County, WA",https://realpropertyplanning.com/yakima-county,src/pages/counties/YakimaCounty.tsx,Other,849,8.2,2.2,light,batch 10 (live Nov 3),low
-"Can an Executor or Trustee Buy the House, or Sell It to Family?",https://realpropertyplanning.com/guides/executor-buy-or-sell-estate-house-to-family-washington,src/pages/guides/FamilySaleEstate.tsx,Probate & estate,1431,0.0,2.1,light,not started,low
-Selling Your Adult Family Home Business at Retirement,https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement,src/pages/AFHSellingBusinessAtRetirement.tsx,AFH Club,2360,6.8,2.1,light,not started,low
-WABO Checklist & Technical Requirements,https://realpropertyplanning.com/afh-club/wabo-technical-guide,src/pages/AFHWaboTechnicalGuide.tsx,AFH Club,1487,1.3,2.0,light,not started,low
+"Can an Executor or Trustee Buy the House, or Sell It to Family?",https://realpropertyplanning.com/guides/executor-buy-or-sell-estate-house-to-family-washington,src/pages/guides/FamilySaleEstate.tsx,Probate & estate,1431,0.0,2.1,light,batch 11 (awaiting merge),low
+Selling Your Adult Family Home Business at Retirement,https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement,src/pages/AFHSellingBusinessAtRetirement.tsx,AFH Club,2360,6.8,2.1,light,batch 11 (awaiting merge),low
+WABO Checklist & Technical Requirements,https://realpropertyplanning.com/afh-club/wabo-technical-guide,src/pages/AFHWaboTechnicalGuide.tsx,AFH Club,1487,1.3,2.0,light,batch 11 (awaiting merge),low
 In-home caregivers & support,https://realpropertyplanning.com/helping-an-aging-parent/needs-help-at-home/in-home-care,,Senior housing & care,507,7.9,1.9,none,not started,low
-"Probate & Estate Real Estate in Vancouver, WA",https://realpropertyplanning.com/vancouver-wa-probate-estate-real-estate,src/pages/VancouverWaProbateEstate.tsx,Probate & estate,1295,7.7,1.7,none,not started,low
-Understanding Your Legal Duties as Executor,https://realpropertyplanning.com/executor-responsibilities-first-steps/legal-duties,src/pages/executor-responsibilities-first-steps/LegalDuties.tsx,Probate & estate,1037,7.7,1.7,none,not started,low
-My Real Property Plan: a Free Step-by-Step Plan for WA Families,https://realpropertyplanning.com/my-plan,src/pages/MyPlan.tsx,Other,402,7.5,1.5,none,not started,low
-Bookkeeping Services in Washington State,https://realpropertyplanning.com/bookkeeping-services,src/pages/BookkeepingServices.tsx,Other,815,7.4,1.4,none,not started,low
-Do I Need an Appraisal Before Selling Inherited Property?,https://realpropertyplanning.com/guides/appraisal-before-selling-inherited-property,src/pages/guides/AppraisalBeforeSelling.tsx,Probate & estate,1483,7.4,1.4,none,not started,low
-Why Valuation Matters for Probate & Inherited Property,https://realpropertyplanning.com/why-valuation-matters,src/pages/WhyValuationMatters.tsx,Other,1080,7.4,1.4,none,not started,low
+"Probate & Estate Real Estate in Vancouver, WA",https://realpropertyplanning.com/vancouver-wa-probate-estate-real-estate,src/pages/VancouverWaProbateEstate.tsx,Probate & estate,1295,7.7,1.7,none,batch 11 (awaiting merge),low
+Understanding Your Legal Duties as Executor,https://realpropertyplanning.com/executor-responsibilities-first-steps/legal-duties,src/pages/executor-responsibilities-first-steps/LegalDuties.tsx,Probate & estate,1037,7.7,1.7,none,batch 11 (awaiting merge),low
+My Real Property Plan: a Free Step-by-Step Plan for WA Families,https://realpropertyplanning.com/my-plan,src/pages/MyPlan.tsx,Other,402,7.5,1.5,none,batch 11 (awaiting merge),low
+Bookkeeping Services in Washington State,https://realpropertyplanning.com/bookkeeping-services,src/pages/BookkeepingServices.tsx,Other,815,7.4,1.4,none,batch 11 (awaiting merge),low
+Do I Need an Appraisal Before Selling Inherited Property?,https://realpropertyplanning.com/guides/appraisal-before-selling-inherited-property,src/pages/guides/AppraisalBeforeSelling.tsx,Probate & estate,1483,7.4,1.4,none,batch 11 (awaiting merge),low
+Why Valuation Matters for Probate & Inherited Property,https://realpropertyplanning.com/why-valuation-matters,src/pages/WhyValuationMatters.tsx,Other,1080,7.4,1.4,none,batch 11 (awaiting merge),low
 What does my parent qualify for?,https://realpropertyplanning.com/helping-an-aging-parent/exploring-care-options/eligibility,,Senior housing & care,556,7.2,1.2,none,not started,low
-How Out-of-State Families Can Manage a WA Property Sale,https://realpropertyplanning.com/guides/out-of-state-families,src/pages/guides/OutOfStateFamilies.tsx,Other,849,7.1,1.1,none,not started,low
+How Out-of-State Families Can Manage a WA Property Sale,https://realpropertyplanning.com/guides/out-of-state-families,src/pages/guides/OutOfStateFamilies.tsx,Other,849,7.1,1.1,none,batch 11 (awaiting merge),low
 Executors Working With Professionals,https://realpropertyplanning.com/executor-responsibilities-first-steps/working-with-professionals,,Probate & estate,858,7.0,1.0,none,not started,low
-Taxes on Selling an Inherited House in WA (2026),https://realpropertyplanning.com/guides/taxes-selling-inherited-house-washington,src/pages/guides/TaxesSellingInheritedHouseWashington.tsx,Probate & estate,1995,5.0,1.0,none,not started,low
-Selling an Inherited Home — Calm Roadmap,https://realpropertyplanning.com/selling-an-inherited-home,src/pages/SellingAnInheritedHome.tsx,Probate & estate,1025,6.8,0.8,none,not started,low
-Power of Attorney & Real Estate in Washington State,https://realpropertyplanning.com/power-of-attorney,src/pages/PowerOfAttorney.tsx,Professionals,2683,4.8,0.7,none,not started,low
-Probate Real Estate FAQ,https://realpropertyplanning.com/faq,src/pages/FAQ.tsx,Other,2729,5.9,0.7,none,not started,low
+Taxes on Selling an Inherited House in WA (2026),https://realpropertyplanning.com/guides/taxes-selling-inherited-house-washington,src/pages/guides/TaxesSellingInheritedHouseWashington.tsx,Probate & estate,1995,5.0,1.0,none,batch 11 (awaiting merge),low
+Selling an Inherited Home — Calm Roadmap,https://realpropertyplanning.com/selling-an-inherited-home,src/pages/SellingAnInheritedHome.tsx,Probate & estate,1025,6.8,0.8,none,batch 11 (awaiting merge),low
+Power of Attorney & Real Estate in Washington State,https://realpropertyplanning.com/power-of-attorney,src/pages/PowerOfAttorney.tsx,Professionals,2683,4.8,0.7,none,batch 11 (awaiting merge),low
+Probate Real Estate FAQ,https://realpropertyplanning.com/faq,src/pages/FAQ.tsx,Other,2729,5.9,0.7,none,batch 11 (awaiting merge),low
 The Dos and Don'ts of Operating a Washington State Adult Family Home,https://realpropertyplanning.com/afh-club/dos-and-donts-operating-adult-family-home,src/pages/AFHDosAndDonts.tsx,AFH Club,4785,0.0,0.6,none,not started,low
-Nursing & Skilled Care | Senior Living,https://realpropertyplanning.com/senior-living/nursing-and-skilled-care,src/pages/senior-living/NursingAndSkilledCare.tsx,Senior housing & care,459,6.5,0.5,none,not started,low
-How This Site Helps,https://realpropertyplanning.com/planning-before-a-crisis/how-this-site-helps,src/pages/planning-before-a-crisis/HowThisSiteHelps.tsx,Other,615,6.5,0.5,none,not started,low
+Nursing & Skilled Care | Senior Living,https://realpropertyplanning.com/senior-living/nursing-and-skilled-care,src/pages/senior-living/NursingAndSkilledCare.tsx,Senior housing & care,459,6.5,0.5,none,batch 11 (awaiting merge),low
+How This Site Helps,https://realpropertyplanning.com/planning-before-a-crisis/how-this-site-helps,src/pages/planning-before-a-crisis/HowThisSiteHelps.tsx,Other,615,6.5,0.5,none,batch 11 (awaiting merge),low
 I Want to Plan Ahead: Questions & Answers,https://realpropertyplanning.com/questions/plan-ahead,src/pages/QuestionLibrary.tsx,Other,7818,0.8,0.3,none,not started,low
-AFH Valuation Estimator,https://realpropertyplanning.com/afh-club/afh-valuation-estimator,src/pages/AFHValuationEstimator.tsx,AFH Club,646,6.2,0.2,none,not started,low
+AFH Valuation Estimator,https://realpropertyplanning.com/afh-club/afh-valuation-estimator,src/pages/AFHValuationEstimator.tsx,AFH Club,646,6.2,0.2,none,batch 11 (awaiting merge),low
 AFH Club | Adult Family Home Resource Network,https://realpropertyplanning.com/afh-club,src/pages/AFHClub.tsx,AFH Club,4917,6.1,0.1,none,not started,low
 "Probate, Estate & Senior Transition Guidance in Washington State",https://realpropertyplanning.com,src/pages/RPPHomeV3.tsx,Other,377,0.0,0.0,none,not started,low
 Site Map,https://realpropertyplanning.com/sitemap,src/pages/Sitemap.tsx,Other,1523,2.0,0.0,none,not started,low
-"Estate, Probate & Inherited Property — Guided Journey",https://realpropertyplanning.com/estate-probate-inherited-property,src/pages/EstateProbateInheritedProperty.tsx,Probate & estate,588,5.1,0.0,none,not started,low
-Understanding the Property's Value,https://realpropertyplanning.com/estate-probate-inherited-property/property-value,src/pages/estate-probate-inherited-property/PropertyValue.tsx,Probate & estate,416,0.0,0.0,none,not started,low
-Cost of Care Calculator | Washington State Long-Term Care Costs,https://realpropertyplanning.com/cost-of-care-calculator,src/pages/CostOfCareHub.tsx,Senior housing & care,470,0.0,0.0,none,not started,low
+"Estate, Probate & Inherited Property — Guided Journey",https://realpropertyplanning.com/estate-probate-inherited-property,src/pages/EstateProbateInheritedProperty.tsx,Probate & estate,588,5.1,0.0,none,batch 11 (awaiting merge),low
+Understanding the Property's Value,https://realpropertyplanning.com/estate-probate-inherited-property/property-value,src/pages/estate-probate-inherited-property/PropertyValue.tsx,Probate & estate,416,0.0,0.0,none,batch 11 (awaiting merge),low
+Cost of Care Calculator | Washington State Long-Term Care Costs,https://realpropertyplanning.com/cost-of-care-calculator,src/pages/CostOfCareHub.tsx,Senior housing & care,470,0.0,0.0,none,batch 11 (awaiting merge),low
 Assisted Living Community Cost Calculator — Washington State,https://realpropertyplanning.com/cost-of-care-calculator/assisted-living,,Senior housing & care,721,5.5,0.0,none,not started,low
 Adult Family Home Cost Calculator — Washington State,https://realpropertyplanning.com/cost-of-care-calculator/adult-family-home,,Senior housing & care,809,4.9,0.0,none,not started,low
 Memory Care Cost Calculator — Washington State,https://realpropertyplanning.com/cost-of-care-calculator/memory-care,,Senior housing & care,735,5.4,0.0,none,not started,low
 Independent Living Community Cost Calculator — Washington State,https://realpropertyplanning.com/cost-of-care-calculator/independent-living,,Senior housing & care,757,5.3,0.0,none,not started,low
 In-Home Care (Non-Medical) Cost Calculator — Washington State,https://realpropertyplanning.com/cost-of-care-calculator/in-home-care,,Senior housing & care,724,5.5,0.0,none,not started,low
-Featured Professionals,https://realpropertyplanning.com/featured-professionals,src/pages/FeaturedProfessionals.tsx,Professionals,873,3.4,0.0,none,not started,low
-What Will Happen to the Family Home? A Free Planning Checklist,https://realpropertyplanning.com/family-home-planning,src/pages/FamilyHomePlanning.tsx,Other,362,0.0,0.0,none,not started,low
-Real Estate Guidance for CPAs,https://realpropertyplanning.com/for-cpas,src/pages/ForCPAs.tsx,Professionals,284,0.0,0.0,none,not started,low
+Featured Professionals,https://realpropertyplanning.com/featured-professionals,src/pages/FeaturedProfessionals.tsx,Professionals,873,3.4,0.0,none,batch 11 (awaiting merge),low
+What Will Happen to the Family Home? A Free Planning Checklist,https://realpropertyplanning.com/family-home-planning,src/pages/FamilyHomePlanning.tsx,Other,362,0.0,0.0,none,batch 11 (awaiting merge),low
+Real Estate Guidance for CPAs,https://realpropertyplanning.com/for-cpas,src/pages/ForCPAs.tsx,Professionals,284,0.0,0.0,none,batch 11 (awaiting merge),low
 Corrections Policy,https://realpropertyplanning.com/corrections-policy,src/pages/PolicyPage.tsx,Other,319,0.0,0.0,none,not started,low
-Assisted Living,https://realpropertyplanning.com/senior-living/assisted-living,src/pages/senior-living/AssistedLiving.tsx,Senior housing & care,476,4.2,0.0,none,not started,low
-Adult Family Homes,https://realpropertyplanning.com/senior-living/adult-family-homes,src/pages/senior-living/AdultFamilyHomes.tsx,Senior housing & care,674,5.9,0.0,none,not started,low
-Aging in Place,https://realpropertyplanning.com/senior-living/aging-in-place,src/pages/senior-living/AgingInPlace.tsx,Senior housing & care,324,3.1,0.0,none,not started,low
-Memory Care,https://realpropertyplanning.com/senior-living/memory-care,src/pages/senior-living/MemoryCare.tsx,Senior housing & care,496,4.0,0.0,none,not started,low
-How to Choose an Adult Family Home in WA: Tour Checklist,https://realpropertyplanning.com/senior-living/choosing-an-adult-family-home,src/pages/senior-living/ChoosingAnAdultFamilyHome.tsx,Senior housing & care,1277,0.0,0.0,none,not started,low
-Skilled Nursing Care,https://realpropertyplanning.com/senior-living/skilled-nursing,src/pages/senior-living/SkilledNursing.tsx,Senior housing & care,258,0.0,0.0,none,not started,low
-Independent Living,https://realpropertyplanning.com/senior-living/independent-living,src/pages/senior-living/IndependentLiving.tsx,Senior housing & care,526,3.8,0.0,none,not started,low
-What Is an Adult Family Home? Definition and What It's Called in Every State,https://realpropertyplanning.com/senior-living/what-is-an-adult-family-home,src/pages/senior-living/WhatIsAnAdultFamilyHome.tsx,Senior housing & care,2512,3.2,0.0,none,not started,low
-Probate Attorneys in Western Washington,https://realpropertyplanning.com/professionals/probate-attorneys,src/pages/professionals/ProbateAttorneys.tsx,Probate & estate,508,3.9,0.0,none,not started,low
-"Hospice Care in WA: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home",https://realpropertyplanning.com/articles/hospice-care-washington,src/pages/articles/HospiceCare.tsx,Senior housing & care,2063,0.0,0.0,none,not started,low
-Calculators: Cost of Care and Adult Family Home Tools,https://realpropertyplanning.com/calculators,src/pages/Calculators.tsx,Other,368,0.0,0.0,none,not started,low
-Add the Cost of Care Calculator to Your Website,https://realpropertyplanning.com/calculators/embed,src/pages/EmbedCalculators.tsx,Other,352,0.0,0.0,none,not started,low
-"Guides & Articles | Probate, Estate & Senior Transition Guidance",https://realpropertyplanning.com/guides-and-resources,src/pages/GuidesAndResources.tsx,Other,1406,2.1,0.0,none,not started,low
-Long-Term Care Options in Washington State,https://realpropertyplanning.com/long-term-care,src/pages/LongTermCareOptions.tsx,Senior housing & care,281,3.6,0.0,none,not started,low
-Will Medicaid Take My Parent's House in Washington State?,https://realpropertyplanning.com/long-term-care/medicaid-and-the-family-home,src/pages/long-term-care/MedicaidAndTheHome.tsx,Senior housing & care,1607,0.0,0.0,none,not started,low
-WA Cares Fund: How It Fits Into Long-Term Care Planning and Housing Decisions,https://realpropertyplanning.com/long-term-care/wa-cares,src/pages/long-term-care/WaCares.tsx,Senior housing & care,1296,0.0,0.0,none,not started,low
+Assisted Living,https://realpropertyplanning.com/senior-living/assisted-living,src/pages/senior-living/AssistedLiving.tsx,Senior housing & care,476,4.2,0.0,none,batch 11 (awaiting merge),low
+Adult Family Homes,https://realpropertyplanning.com/senior-living/adult-family-homes,src/pages/senior-living/AdultFamilyHomes.tsx,Senior housing & care,674,5.9,0.0,none,batch 11 (awaiting merge),low
+Aging in Place,https://realpropertyplanning.com/senior-living/aging-in-place,src/pages/senior-living/AgingInPlace.tsx,Senior housing & care,324,3.1,0.0,none,batch 11 (awaiting merge),low
+Memory Care,https://realpropertyplanning.com/senior-living/memory-care,src/pages/senior-living/MemoryCare.tsx,Senior housing & care,496,4.0,0.0,none,batch 11 (awaiting merge),low
+How to Choose an Adult Family Home in WA: Tour Checklist,https://realpropertyplanning.com/senior-living/choosing-an-adult-family-home,src/pages/senior-living/ChoosingAnAdultFamilyHome.tsx,Senior housing & care,1277,0.0,0.0,none,batch 11 (awaiting merge),low
+Skilled Nursing Care,https://realpropertyplanning.com/senior-living/skilled-nursing,src/pages/senior-living/SkilledNursing.tsx,Senior housing & care,258,0.0,0.0,none,batch 11 (awaiting merge),low
+Independent Living,https://realpropertyplanning.com/senior-living/independent-living,src/pages/senior-living/IndependentLiving.tsx,Senior housing & care,526,3.8,0.0,none,batch 11 (awaiting merge),low
+What Is an Adult Family Home? Definition and What It's Called in Every State,https://realpropertyplanning.com/senior-living/what-is-an-adult-family-home,src/pages/senior-living/WhatIsAnAdultFamilyHome.tsx,Senior housing & care,2512,3.2,0.0,none,batch 11 (awaiting merge),low
+Probate Attorneys in Western Washington,https://realpropertyplanning.com/professionals/probate-attorneys,src/pages/professionals/ProbateAttorneys.tsx,Probate & estate,508,3.9,0.0,none,batch 11 (awaiting merge),low
+"Hospice Care in WA: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home",https://realpropertyplanning.com/articles/hospice-care-washington,src/pages/articles/HospiceCare.tsx,Senior housing & care,2063,0.0,0.0,none,batch 11 (awaiting merge),low
+Calculators: Cost of Care and Adult Family Home Tools,https://realpropertyplanning.com/calculators,src/pages/Calculators.tsx,Other,368,0.0,0.0,none,batch 11 (awaiting merge),low
+Add the Cost of Care Calculator to Your Website,https://realpropertyplanning.com/calculators/embed,src/pages/EmbedCalculators.tsx,Other,352,0.0,0.0,none,batch 11 (awaiting merge),low
+"Guides & Articles | Probate, Estate & Senior Transition Guidance",https://realpropertyplanning.com/guides-and-resources,src/pages/GuidesAndResources.tsx,Other,1406,2.1,0.0,none,batch 11 (awaiting merge),low
+Long-Term Care Options in Washington State,https://realpropertyplanning.com/long-term-care,src/pages/LongTermCareOptions.tsx,Senior housing & care,281,3.6,0.0,none,batch 11 (awaiting merge),low
+Will Medicaid Take My Parent's House in Washington State?,https://realpropertyplanning.com/long-term-care/medicaid-and-the-family-home,src/pages/long-term-care/MedicaidAndTheHome.tsx,Senior housing & care,1607,0.0,0.0,none,batch 11 (awaiting merge),low
+WA Cares Fund: How It Fits Into Long-Term Care Planning and Housing Decisions,https://realpropertyplanning.com/long-term-care/wa-cares,src/pages/long-term-care/WaCares.tsx,Senior housing & care,1296,0.0,0.0,none,batch 11 (awaiting merge),low
 Professional Inclusion Standards,https://realpropertyplanning.com/professional-inclusion-standards,src/pages/PolicyPage.tsx,Professionals,402,0.0,0.0,none,not started,low
-Senior Living Advisors in Washington State,https://realpropertyplanning.com/senior-living-advisors,src/pages/SeniorLivingAdvisors.tsx,Senior housing & care,357,2.8,0.0,none,not started,low
+Senior Living Advisors in Washington State,https://realpropertyplanning.com/senior-living-advisors,src/pages/SeniorLivingAdvisors.tsx,Senior housing & care,357,2.8,0.0,none,batch 11 (awaiting merge),low
 Research and Data Methodology,https://realpropertyplanning.com/research-methodology,src/pages/PolicyPage.tsx,Other,779,0.0,0.0,none,not started,low
-"What It Costs to Live in an Adult Family Home, by City and County",https://realpropertyplanning.com/adult-family-home-costs,src/pages/AFHCostByLocation.tsx,Senior housing & care,662,1.5,0.0,none,not started,low
+"What It Costs to Live in an Adult Family Home, by City and County",https://realpropertyplanning.com/adult-family-home-costs,src/pages/AFHCostByLocation.tsx,Senior housing & care,662,1.5,0.0,none,batch 11 (awaiting merge),low
 Editorial Standards,https://realpropertyplanning.com/editorial-standards,src/pages/PolicyPage.tsx,Other,677,0.0,0.0,none,not started,low
 Hospital discharge planning,https://realpropertyplanning.com/helping-an-aging-parent/health-crisis/hospital-discharge,,Senior housing & care,506,5.9,0.0,none,not started,low
 Managing the home during a crisis,https://realpropertyplanning.com/helping-an-aging-parent/health-crisis/managing-the-home,,Senior housing & care,537,5.6,0.0,none,not started,low
