@@ -152,7 +152,7 @@ const countyCards = [
     county: "Wahkiakum County",
     href: "/wahkiakum-county",
     logo: wahkiakumCountyLogo,
-    intro: `Wahkiakum County is Washington's smallest county by population — a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. ${FEATURED_BROKER.Role} provides practical, honest guidance for families navigating property decisions in this distinctive area.`,
+    intro: `Wahkiakum County is one of Washington's least populated counties: a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. ${FEATURED_BROKER.Role} provides practical, honest guidance for families navigating property decisions in this distinctive area.`,
   },
 ];
 

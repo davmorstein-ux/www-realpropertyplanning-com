@@ -1594,7 +1594,6 @@ export const counties: CountyData[] = [
     slug: "jefferson-county",
     cities: [
       city("Port Townsend", "Jefferson County", "jefferson-county"),
-      city("Sequim", "Jefferson County", "jefferson-county"),
       city("Port Hadlock", "Jefferson County", "jefferson-county"),
       city("Quilcene", "Jefferson County", "jefferson-county"),
       city("Brinnon", "Jefferson County", "jefferson-county"),

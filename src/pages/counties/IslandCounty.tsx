@@ -13,7 +13,7 @@ const IslandCounty = () => (
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Island County, Washington. Serving Whidbey Island, Camano Island, Oak Harbor, Coupeville & surrounding communities."
     cities={[
       "Oak Harbor", "Coupeville", "Langley", "Freeland", "Clinton",
-      "Camano Island", "Greenbank", "Bayview", "Maxwelton", "Admiralty Bay",
+      "Camano Island", "Greenbank", "Bayview", "Maxwelton",
     ]}
     localInsight={`Island County includes Whidbey Island, the longest island in the contiguous United States, and Camano Island. The two have different characters and different real estate markets. Oak Harbor's naval-adjacent economy and family-oriented housing stock differ considerably from Coupeville's historic town, Langley's arts community, and the rural stretches of central and south Whidbey. Camano Island attracts retirees and second-home owners who want waterfront access and a quieter pace. An estate or inherited property in Island County needs guidance that accounts for island logistics, waterfront premiums, seasonal buyer patterns, and the community the property sits in. ${FEATURED_BROKER.Role} coordinates the full process for families, executors, and attorneys, including the practical work of managing an island property from the mainland.`}
     aeoQuestion="How does probate real estate work in Island County?"
