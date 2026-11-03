@@ -13,27 +13,27 @@ const faqs = [
   {
     question: "When should we actually start planning, if nothing feels urgent yet?",
     answer:
-      "As early as possible, while decisions can still be made calmly and with full input from everyone involved. Families rarely regret planning too soon — but often wish they'd started before a health change or emergency forced rushed decisions.",
+      "As early as possible, while decisions can still be made calmly and with full input from everyone involved. Starting before a health change or emergency means the decisions do not have to be rushed.",
   },
   {
     question: "What's the difference between a power of attorney and a court-appointed guardianship?",
     answer:
-      "A power of attorney is a document a person signs while they still have legal capacity, naming someone to act on their behalf. A guardianship or conservatorship is a court process that usually becomes necessary only if capacity is lost without one in place — and it's typically slower, more expensive, and less private. Having the right documents ahead of time is usually the better path.",
+      "A power of attorney is a document a person signs while they still have legal capacity, naming someone to act on their behalf. A guardianship or conservatorship is a court process that usually becomes necessary only if capacity is lost without one in place. It is typically slower, more expensive, and less private, so signing the documents ahead of time is usually the better path.",
   },
   {
     question: "Do we need an attorney to put these documents in place?",
     answer:
-      "For documents like powers of attorney, healthcare directives, wills, and trusts, working with an estate planning or elder law attorney licensed in Washington State helps ensure everything is valid and reflects your family's actual wishes. Real Property Planning does not refer anyone to attorneys; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).",
+      "For documents like powers of attorney, healthcare directives, wills, and trusts, working with an estate planning or elder law attorney licensed in Washington State helps make sure the documents are valid and reflect your family's wishes. Real Property Planning does not refer anyone to attorneys; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).",
   },
   {
     question: "What if family members don't agree on the plan?",
     answer:
-      "This is common, and it's part of why planning early helps — there's time for honest conversations rather than decisions made under pressure. Having documented wishes, and involving the right professionals, tends to reduce conflict rather than create it.",
+      "Disagreement is common, and it is one reason to plan early: there is time to talk it through instead of deciding under pressure. Written wishes, and professionals brought in where they are needed, tend to reduce conflict rather than create it.",
   },
   {
     question: "Should the property be appraised before anything happens?",
     answer:
-      "Understanding a home's current value is often a useful part of early planning, particularly for tax and estate purposes. An appraisal from a Washington State certified appraiser provides an independent, defensible figure to plan around.",
+      "It often helps. Knowing a home's current value is useful in early planning, particularly for tax and estate purposes. An appraisal from a Washington State certified appraiser provides an independent, defensible figure to plan around.",
   },
   {
     /* Moved here Oct 20, 2026 from the retired /what-should-we-do-first page
@@ -41,12 +41,12 @@ const faqs = [
        library still restates a live page. */
     question: "How do we avoid costly mistakes with the house?",
     answer:
-      "The most expensive mistakes come from acting before authority is confirmed, guessing at value, or making large repairs without input. Slow down and assemble the right team first — usually an attorney, a real estate professional, and often a CPA; senior situations may add a housing advisor and move manager. Families typically choose to sell, keep, rent, or transfer the home. The right answer depends on care costs, family goals, taxes, and timing.",
+      "The most expensive mistakes come from acting before authority is confirmed, guessing at value, or making large repairs without input. Slow down and put a team together first: usually an attorney, a real estate professional, and often a CPA; senior situations may add a housing advisor and move manager. The usual choices are to sell, keep, rent, or transfer the home, and which one fits depends on care costs, family goals, taxes, and timing.",
   },
   {
     question: "What actually happens if a family waits until a crisis hits?",
     answer:
-      "Typically, less time to weigh options, more pressure to make fast decisions, and a higher chance of family disagreement — often while also navigating an emotional health event. Planning ahead doesn't remove the difficulty of these situations, but it gives families more room to think clearly when it matters most.",
+      "Usually there is less time to weigh options, more pressure to decide quickly, and a higher chance of family disagreement, often while the family is also dealing with a health emergency. Planning ahead does not make these situations easy, but it leaves more room to think clearly.",
   },
 ];
 

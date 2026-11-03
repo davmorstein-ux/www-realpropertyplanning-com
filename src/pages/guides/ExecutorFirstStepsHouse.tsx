@@ -17,9 +17,9 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 import WhichGuide from "@/components/WhichGuide";
 
 const faqs = [
-  { question: "Should I change the locks on the estate property?", answer: "Yes, this is generally one of the first things to do. You want to control access to the property and protect it from unauthorized entry. Change the locks and keep a record of who has keys." },
+  { question: "Should I change the locks on the estate property?", answer: "Yes, usually early on. New locks put you in control of who can enter and help protect the house from unauthorized entry. Change the locks and keep a record of who has keys." },
   { question: "Do I need to keep paying the mortgage?", answer: "If there is a mortgage on the property, payments should continue to be made from estate funds to avoid default and foreclosure. Consult the estate attorney about how to handle this within the estate administration." },
-  { question: "Should I cancel utilities?", answer: "Generally, no — keep utilities on. You need heat or cooling to prevent damage, and you need electricity for maintenance visits and showings. Canceling utilities prematurely can lead to frozen pipes, mold, or other costly damage." },
+  { question: "Should I cancel utilities?", answer: "Generally, no. Keep utilities on. You need heat or cooling to prevent damage, and you need electricity for maintenance visits and showings. Canceling utilities prematurely can lead to frozen pipes, mold, or other costly damage." },
   { question: "When should I start cleaning out the house?", answer: "You can begin planning immediately, but coordinate with heirs about personal items and family belongings first. The actual cleanout can begin once there is agreement on what to keep, donate, and discard. This process takes longer than most people expect." },
   { question: "Do I need to notify the insurance company?", answer: "Yes. Most homeowner's insurance policies have specific requirements when a property becomes unoccupied. You may need a vacancy rider or a different type of policy. Failure to notify the insurer could void coverage." },
 ];
@@ -61,7 +61,7 @@ const ExecutorFirstStepsHouse = () => (
               Written for newly-appointed executors and personal representatives in Washington State who have just taken responsibility for an estate home. Secure the property, confirm insurance, and begin documenting its condition. These three steps protect the estate and give you a foundation for every decision that follows.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Being named executor often comes with immediate pressure to make decisions about the house. This guide walks through what to do first — and what can wait.
+              Being named executor often comes with immediate pressure to make decisions about the house. This guide sorts the first tasks from the ones that can wait.
             </p>
             </div>
           </div>
@@ -74,13 +74,13 @@ const ExecutorFirstStepsHouse = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What This Means in Practice</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            When someone passes and leaves real property, the executor suddenly becomes responsible for a physical asset — often from a distance, during a difficult emotional time, and without clear guidance on what to do first.
+            When the estate includes real property, the executor takes on a physical asset, often from a distance and without clear guidance on what to do first.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            The instinct is often to focus on selling the house as quickly as possible. That is understandable, but there are several important steps that need to happen first. Taking these steps in the right order protects you legally, protects the property physically, and sets the stage for a smoother process.
+            The instinct is often to sell the house quickly, but several steps come before any sale. Handled in order, they protect you legally, keep the house from physical damage, and make the later stages easier.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            You do not need to do everything at once. Prioritize security, insurance, and documentation — then move to planning and coordination as you get oriented.
+            You do not need to do everything at once. Start with security, insurance, and documentation, then move to planning and coordination as you get oriented.
           </p>
         </div>
       </div>
@@ -92,7 +92,7 @@ const ExecutorFirstStepsHouse = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">The First Five Steps</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            These should be addressed as soon as reasonably possible — ideally within the first week or two:
+            Address these as soon as reasonably possible, ideally within the first week or two:
           </p>
           <ol className="space-y-6 list-decimal list-inside text-muted-foreground leading-relaxed">
             <li>
@@ -117,7 +117,7 @@ const ExecutorFirstStepsHouse = () => (
 
     <MidPageCTA
       heading="Just Named as Executor?"
-      body={`The first few weeks can feel overwhelming. A short conversation with ${FEATURED_BROKER.name} can help you prioritize what matters most and understand the process ahead.`}
+      body={`A short conversation with ${FEATURED_BROKER.name} can help you put the property tasks in order and see what the process ahead involves.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
@@ -126,9 +126,9 @@ const ExecutorFirstStepsHouse = () => (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Can Wait — and What Should Not</h2>
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Can Wait and What Should Not</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Not everything needs to happen immediately. Here is a practical way to think about priorities:
+            Not everything needs to happen immediately. The tasks fall into four groups:
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             <strong className="text-foreground">Do now:</strong> Secure the property, confirm insurance, keep utilities on, begin documentation. These protect the estate from loss and liability.
@@ -140,7 +140,7 @@ const ExecutorFirstStepsHouse = () => (
             <strong className="text-foreground">Can wait until you have authority:</strong> Listing the property, making major repairs, accepting offers. These require legal standing and should not be rushed.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Should not wait:</strong> Do not delay getting a <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">professional valuation</Link>. Understanding the property's value early helps frame every subsequent conversation — with heirs, attorneys, and potential buyers.
+            <strong className="text-foreground">Should not wait:</strong> Do not delay getting a <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">professional valuation</Link>. Knowing the property's value early gives you a basis for later conversations with heirs, attorneys, and potential buyers.
           </p>
         </div>
       </div>
@@ -153,11 +153,11 @@ const ExecutorFirstStepsHouse = () => (
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Common Mistakes to Avoid</h2>
           <ul className="space-y-4">
             {[
-              "Letting heirs or family members take items from the house before a proper inventory — this creates disputes and legal complications",
-              "Canceling utilities to save money — the cost of water damage from frozen pipes far exceeds a few months of utility bills",
+              "Letting heirs or family members take items from the house before a proper inventory: this can lead to disputes and legal complications",
+              "Canceling utilities to save money: water damage from frozen pipes can cost far more than a few months of utility bills",
               "Accepting an offer from a neighbor or family friend without understanding the property's actual value",
-              "Making expensive repairs before getting a professional assessment — some repairs add value, but many do not",
-              "Trying to handle everything alone — executors who engage professionals early consistently have better outcomes and less stress",
+              "Making expensive repairs before getting a professional assessment: some repairs add value, but many do not",
+              "Trying to handle everything alone: bringing in professionals early spreads the work and can catch problems sooner",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -175,13 +175,13 @@ const ExecutorFirstStepsHouse = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">The Emotional Reality</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Being named executor is a responsibility that arrives during grief. You may be managing a family home full of memories while dealing with your own loss, family expectations, and legal obligations.
+            The executor role usually arrives during grief. You may be managing a family home full of memories while dealing with your own loss, family expectations, and legal obligations.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            It is normal to feel overwhelmed. It is normal to feel uncertain. And it is completely reasonable to ask for help — not because you cannot handle it, but because this is a complex situation that benefits from experience and support.
+            Asking for help is reasonable. An estate with a house combines legal, tax, and property questions, and each benefits from someone who has handled it before.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            The most effective executors are not the ones who do everything themselves. They are the ones who build a team of professionals — an attorney, a CPA, and a broker who understands estate property — and let that team share the weight.
+            Executors often divide the work among an attorney, a CPA, and a broker familiar with estate property, so no single person carries all of it.
           </p>
         </div>
       </div>
@@ -214,7 +214,7 @@ const ExecutorFirstStepsHouse = () => (
       steps={[
         { title: "Can You Sell a House During Probate in Washington?", description: "Understand what authority is needed and how the sale process works.", href: "/guides/sell-house-during-probate-washington" },
         { title: "How Long Does It Take to Sell a Probate Property?", description: "Realistic timelines and what affects them.", href: "/guides/how-long-sell-probate-property" },
-        { title: "What Executors Should Do Before Selling", description: "A step-by-step guide covering the five most important pre-sale decisions.", href: "/guides/what-executors-should-do" },
+        { title: "What Executors Should Do Before Selling", description: "A step-by-step guide to five steps that come before a sale.", href: "/guides/what-executors-should-do" },
       ]}
     />
 
@@ -224,7 +224,7 @@ const ExecutorFirstStepsHouse = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can often bring clarity.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you are handling an estate house and want to talk through the property questions, a short conversation is a reasonable place to start.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>

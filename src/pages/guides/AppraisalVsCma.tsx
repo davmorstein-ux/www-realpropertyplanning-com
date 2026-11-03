@@ -18,10 +18,10 @@ import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
-  { question: "Which should I get — an appraisal or a CMA?", answer: `It depends on the purpose. A CMA is typically used for listing pricing decisions. A formal appraisal is used when legal documentation, court submission, tax reporting, or lending requirements demand a certified independent valuation. ${FEATURED_BROKER.Role} can advise on which is appropriate for your situation.` },
-  { question: "Is a broker's CMA less reliable than an appraisal?", answer: `Not necessarily — but they serve different purposes. A CMA from a broker with appraisal training can be highly accurate and practically useful for pricing. A formal appraisal carries legal weight that a CMA does not. ${FEATURED_BROKER.Role}'s dual credentials mean ${FEATURED_BROKER.pronoun.possessive} market analyses incorporate appraisal-level discipline.` },
-  { question: "Do I need an appraisal before selling estate property?", answer: `It depends on the estate and court requirements. Some estates benefit from a formal appraisal for tax, distribution, or fiduciary purposes. Others can proceed with a professional market analysis. ${FEATURED_BROKER.Role} helps executors and attorneys determine which approach is appropriate.` },
-  { question: "Why do automated online estimates not work for estate property?", answer: "Automated valuation models (AVMs) use algorithms based on recent sales data and property characteristics from public records. They cannot assess physical condition, deferred maintenance, functional obsolescence, or the unique challenges of estate properties — all of which significantly affect actual market value." },
+  { question: "Which should I get — an appraisal or a CMA?", answer: `It depends on the purpose. A CMA is typically used to set a listing price. A formal appraisal is used when legal documentation, a court submission, tax reporting, or a lender calls for a certified independent valuation. ${FEATURED_BROKER.Role} can discuss which may be appropriate for your situation.` },
+  { question: "Is a broker's CMA less reliable than an appraisal?", answer: `Not necessarily, but they serve different purposes. A CMA from a broker with appraisal training can be accurate and useful for pricing. A formal appraisal carries legal weight that a CMA does not. ${FEATURED_BROKER.Role}'s market analyses draw on ${FEATURED_BROKER.pronoun.possessive} appraisal training, but they remain market opinions, not appraisals.` },
+  { question: "Do I need an appraisal before selling estate property?", answer: `It depends on the estate and court requirements. Some estates benefit from a formal appraisal for tax, distribution, or fiduciary purposes. Others can proceed with a professional market analysis. ${FEATURED_BROKER.Role} can help executors and attorneys weigh which approach may be appropriate.` },
+  { question: "Why do automated online estimates not work for estate property?", answer: "Automated valuation models (AVMs) use algorithms based on recent sales data and property characteristics from public records. They cannot assess physical condition, deferred maintenance, functional obsolescence, or the unique challenges of estate properties, all of which significantly affect actual market value." },
 ];
 
 const jsonLd = articleSchema({
@@ -59,7 +59,7 @@ const AppraisalVsCma = () => (
             answer are the ones searchers click. Text: src/data/shortAnswers.ts. */}
         <ShortAnswer path="/guides/appraisal-vs-cma" style={{ marginBottom: 24 }} />
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Written for executors, attorneys, and families who need to understand which kind of valuation a probate or estate file actually requires. A formal appraisal and a comparative market analysis (CMA) both aim to estimate property value — but they serve different purposes, carry different weight, and are produced differently. When a property is part of a probate case, trust, or estate, understanding this distinction helps executors, attorneys, and families make better-informed decisions.
+          Written for executors, attorneys, and families who need to know which kind of valuation a probate or estate file requires. A formal appraisal and a comparative market analysis (CMA) both aim to estimate property value, but they serve different purposes, carry different weight, and are produced differently. The difference matters when a property is part of a probate case, trust, or estate.
         </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ const AppraisalVsCma = () => (
             The quality of a CMA varies enormously depending on the broker's experience, analytical rigor, and understanding of the subject property's condition. A CMA from a broker with appraisal training and estate property experience will be substantially more reliable than one from an agent who primarily handles standard residential transactions.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            {FEATURED_BROKER.Role}'s CMAs incorporate appraisal-level analysis — including condition adjustments, functional obsolescence assessments, and effective age considerations — giving executors and attorneys a market opinion that is grounded in professional valuation methodology even when a formal appraisal is not required.
+            {FEATURED_BROKER.Role}'s CMAs draw on appraisal training, including condition adjustments, functional obsolescence assessments, and effective age considerations. When a formal appraisal is not required, this gives executors and attorneys a market opinion grounded in valuation methodology. It is still a CMA, not an appraisal.
           </p>
         </div>
       </div>
@@ -103,14 +103,14 @@ const AppraisalVsCma = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">When Does the Distinction Matter Most?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">Understanding when to use each tool prevents costly mistakes and supports better decision-making:</p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">Which one fits depends on what the value will be used for:</p>
           <div className="space-y-5">
             {[
               { title: "Estate Tax Reporting", text: "The IRS may require a formal appraisal for estate tax purposes, particularly for estates that exceed the federal estate tax exemption threshold. The appraisal establishes the property's fair market value as of the date of death." },
               { title: "Equitable Distribution Among Heirs", text: "When multiple beneficiaries need to agree on a property's value for buyout or distribution purposes, a formal appraisal provides an independent, credible basis for the discussion." },
               { title: "Court Requirements", text: "Some probate courts or specific estate circumstances may require or benefit from a formal appraisal. The estate attorney can advise whether this applies to your situation." },
-              { title: "Listing Price Strategy", text: "For the practical purpose of setting a competitive listing price, a well-prepared CMA from a broker with appraisal experience is typically sufficient — and more directly connected to current market conditions." },
-              { title: "Family Disagreements", text: "When heirs disagree about value, professional data — whether from an appraisal or a detailed CMA — helps move the conversation from opinion to evidence." },
+              { title: "Listing Price Strategy", text: "For the practical purpose of setting a competitive listing price, a well-prepared CMA from a broker with appraisal experience is typically sufficient and more directly connected to current market conditions." },
+              { title: "Family Disagreements", text: "When heirs disagree about value, professional data from an appraisal or a detailed CMA can move the conversation from opinion to evidence." },
             ].map((item, i) => (
               <div key={i} className="bg-card border border-border rounded-xl p-6">
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{item.title}</h3>
@@ -124,20 +124,20 @@ const AppraisalVsCma = () => (
 
     <MidPageCTA
       heading="Not Sure Which Approach You Need?"
-      body={`${FEATURED_BROKER.Role} can help you determine whether a formal appraisal, a detailed market analysis, or both would best serve your estate situation.`}
+      body={`${FEATURED_BROKER.Role} can talk through whether a formal appraisal, a detailed market analysis, or both would suit your estate situation.`}
       buttonText="Schedule a Consultation"
-      microcopy="No pressure. Just clear, professional guidance."
+      microcopy="A conversation, with no obligation."
     />
 
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Why Dual Broker/Appraiser Expertise Makes a Difference</h2>
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Why Appraisal Training Matters in a Broker's CMA</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Most real estate agents produce CMAs based primarily on square footage, bedroom count, and recent nearby sales. They may not have the training to account for the condition issues, functional obsolescence, and deferred maintenance that are common in estate and inherited properties.
+            Many real estate agents produce CMAs based primarily on square footage, bedroom count, and recent nearby sales. They may not have the training to account for the condition issues, functional obsolescence, and deferred maintenance that are common in estate and inherited properties.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            {FEATURED_BROKER.Role}'s certified appraisal background means {FEATURED_BROKER.pronoun.subject} evaluates properties the way a lender's appraiser would — assessing effective age, physical depreciation, functional utility, and condition adjustments that automated tools and standard agents miss. This produces more accurate pricing, fewer appraisal surprises during buyer financing, and stronger support for the executor's fiduciary obligations.
+            {FEATURED_BROKER.Role}'s certified appraisal background means {FEATURED_BROKER.pronoun.subject} looks at the factors a lender's appraiser would: effective age, physical depreciation, functional utility, and condition adjustments that automated tools and many agents miss. The aim is more accurate pricing, fewer problems when the buyer's lender appraises the property, and better support for the executor's fiduciary obligations.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters</Link> in estate property sales, or explore the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step process</Link>.
@@ -170,8 +170,8 @@ const AppraisalVsCma = () => (
     <NextStepBlock
       heading="Continue Learning"
       steps={[
-        { title: "Why Valuation Matters in Estate Real Estate", description: "Understand how professional valuation discipline protects executors, trustees, and families from costly pricing mistakes.", href: "/why-valuation-matters" },
-        { title: "Inherited House Guide for Washington Families", description: "Explore your options — sell, keep, rent, or buy out co-inheritors — with key financial and legal considerations.", href: "/guides/inherited-house-washington" },
+        { title: "Why Valuation Matters in Estate Real Estate", description: "How professional valuation discipline can help protect executors, trustees, and families from costly pricing mistakes.", href: "/why-valuation-matters" },
+        { title: "Inherited House Guide for Washington Families", description: "The options (sell, keep, rent, or buy out co-inheritors) and the key financial and legal considerations for each.", href: "/guides/inherited-house-washington" },
         { title: "How Probate Real Estate Works", description: "A step-by-step overview of the probate property sale process in Washington State.", href: "/guides/how-probate-real-estate-works" },
       ]}
     />
@@ -182,7 +182,7 @@ const AppraisalVsCma = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Need Pricing Guidance for an Estate Property?</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">A featured Washington broker who is also a certified appraiser can provide honest, market-grounded assessments through their own practice.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">A featured Washington broker who is also a certified appraiser can provide market-grounded assessments through their own practice.</p>
           <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Discuss a Property</Button></Link>
         </div>
       </div>

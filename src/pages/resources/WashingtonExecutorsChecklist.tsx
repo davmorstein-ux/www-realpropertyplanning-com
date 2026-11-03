@@ -119,7 +119,7 @@ const WashingtonExecutorsChecklist = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <p className="text-foreground text-xl md:text-2xl leading-relaxed font-medium">
-                When a home is part of an estate, most executors and families are forced to make important decisions quickly — often without a clear roadmap. This checklist is designed to help you understand the real estate side of the process, avoid common mistakes, and move forward with more confidence.
+                When a home is part of an estate, executors and families often have to make property decisions quickly and without a clear roadmap. This checklist sets out the real estate side of the process in ten steps, with the common mistakes to avoid along the way.
               </p>
             </div>
           </div>
@@ -160,10 +160,10 @@ const WashingtonExecutorsChecklist = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-                Need help navigating the real estate side of an estate?
+                Need help with the real estate side of an estate?
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-                {FEATURED_BROKER.Role} works with executors, trustees, and families to make informed property decisions with clarity, coordination, and structured, evidence-based strategy.
+                {FEATURED_BROKER.Role} works with executors, trustees, and families on the property decisions in this checklist, from valuation and preparation to sale strategy.
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 py-4 h-auto text-base tracking-wide">

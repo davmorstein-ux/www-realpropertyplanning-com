@@ -186,7 +186,7 @@ const SeniorTransitions = () => {
 
         <IntentCTA
           heading="Ready to talk through the move?"
-          body="Timing, the home's value, and how a sale fits the care plan are the questions families bring most often. Ask them here and be pointed to the right guide or professional."
+          body="Timing, the home's value, and how a sale fits the care plan are the questions families bring most often. Ask them here and be pointed to a relevant guide or professional."
           buttonText="Talk through the housing and property options"
           reason="aging-parent"
           professional="broker"

@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     q: "What is escrow and how does it work?",
-    a: "Escrow is a neutral third-party process that holds funds, documents, and instructions during a real estate transaction until all conditions of the sale are met. The escrow officer ensures that the buyer's funds, the seller's deed, and all required documents are properly exchanged at closing. This protects both parties from risk during the transfer.",
+    a: "Escrow is a neutral third-party process that holds funds, documents, and instructions during a real estate transaction until all conditions of the sale are met. The escrow officer makes sure that the buyer's funds, the seller's deed, and all required documents are properly exchanged at closing. This reduces the risk to both parties during the transfer.",
   },
   {
     q: "Why is title insurance important in probate and estate sales?",
-    a: "Estate and probate properties often have complex ownership histories — multiple heirs, outdated deeds, unresolved liens, or court orders. Title insurance protects the buyer (and their lender) against claims that may arise from these issues after the sale closes. Without it, a buyer could face legal challenges to their ownership.",
+    a: "Estate and probate properties often have complex ownership histories: multiple heirs, outdated deeds, unresolved liens, or court orders. Title insurance protects the buyer (and their lender) against claims that may arise from these issues after the sale closes. Without it, a buyer could face legal challenges to their ownership.",
   },
   {
     q: "Who pays for title insurance in Washington State?",
@@ -66,7 +66,7 @@ const TitleAndEscrow = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Title and escrow professionals are essential partners in every real estate closing. For probate, estate, and senior transition sales, their role is even more critical — ensuring clean title transfer, protecting all parties, and coordinating the details that bring a transaction to a successful close.
+            Title and escrow professionals handle two parts of every real estate closing: confirming who legally owns the property, and exchanging the money and documents between buyer and seller. In probate, estate, and senior transition sales, that work matters more. They help make sure title transfers cleanly, protect the parties, and coordinate the details needed to close.
           </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ const TitleAndEscrow = () => (
             <p className="text-foreground text-lg leading-relaxed mb-6">
               Every real estate transaction involves two critical functions: confirming that the seller has clear legal
               ownership of the property (title), and managing the secure exchange of funds and documents between buyer
-              and seller (escrow). These functions protect everyone involved — buyers, sellers, lenders, heirs, and
+              and seller (escrow). These functions protect everyone involved: buyers, sellers, lenders, heirs, and
               personal representatives.
             </p>
 
@@ -119,19 +119,18 @@ const TitleAndEscrow = () => (
             <p className="text-foreground text-lg leading-relaxed mb-6">
               Estate and probate real estate transactions are more complex than standard home sales. The property may
               have been owned for decades, with outdated deeds, unrecorded transfers, or liens that surface only during
-              a title search. The seller is often a personal representative or trustee acting on behalf of the estate —
+              a title search. The seller is often a personal representative or trustee acting on behalf of the estate,
               not the original owner.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              An experienced title and escrow team understands these complexities. They know how to work with court
-              documents, Letters Testamentary, trust certifications, and multi-heir situations. They can identify
-              potential issues early, coordinate with the estate attorney, and keep the closing on track even when
-              the circumstances are unusual.
+              Title and escrow teams experienced with estates know how to work with court documents, Letters
+              Testamentary, trust certifications, and multi-heir situations. They can identify potential issues early,
+              coordinate with the estate attorney, and help keep the closing on track when the circumstances are
+              unusual.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              For families navigating these transactions — especially from out of state — having a reliable title and
-              escrow partner provides peace of mind that the legal and financial details are being handled with precision
-              and care.
+              This matters most when the family is handling the sale from out of state and relies on the title and
+              escrow team to manage the legal and financial details of the closing.
             </p>
           </div>
         </div>
