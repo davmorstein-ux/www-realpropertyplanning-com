@@ -84,7 +84,7 @@ const PreparingTheProperty = () => (
     </P>
     <P>An empty house has its own risks:</P>
     <UL>
-      <li><strong>Insurance:</strong> many homeowners policies limit coverage once a house has been vacant for a set period, often 60 days. Tell the insurer the house is empty and ask about a vacancy endorsement or a vacant-property policy.</li>
+      <li><strong>Insurance:</strong> many homeowners policies limit coverage once a house has been vacant for a set period. Tell the insurer the house is empty and ask about a vacancy endorsement or a vacant-property policy.</li>
       <li><strong>Security:</strong> empty houses attract theft and vandalism. Check on the house regularly, secure the locks, and consider a monitored alarm.</li>
       <li><strong>Utilities:</strong> keep the heat, water and power on at levels that protect the house, especially in winter, when a frozen pipe can do serious damage.</li>
     </UL>
