@@ -35,10 +35,10 @@ const PropertyPreparationServices = () => (
               Getting an Estate Property Market-Ready
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-              Estate and transition properties often need cleanout, minor repairs, painting, landscaping, or light staging before listing. Property preparation services handle the hands-on work of transforming a home from its current condition into a property that shows well to buyers and commands a fair market price.
+              Estate and transition properties often need cleanout, minor repairs, painting, landscaping, or light staging before listing. Property preparation services handle the hands-on work of getting a home from its current condition to one that shows well to buyers.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.Role} coordinates with property preparation vendors as part of the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process</Link>. {FEATURED_BROKER.Role} evaluates which improvements are worth the investment and which are not — ensuring preparation decisions are guided by market data, not guesswork.
+              {FEATURED_BROKER.Role} coordinates with property preparation vendors as part of the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process</Link>. {FEATURED_BROKER.Role} looks at which improvements are likely to be worth the cost and which are not, based on market data.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">

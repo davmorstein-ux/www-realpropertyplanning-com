@@ -20,7 +20,7 @@ const PROPERTY_OPTIONS = [
     title: "Convert an Existing Home",
     icon: "🏠",
     description:
-      "The most common path. A single-family home you already own or purchase is evaluated against the AFH Local Building Inspection Checklist (DSHS 15-604). Modifications are made as needed — often ramps, bathroom changes, window changes, and alarm upgrades — and construction work usually needs its own permit from the local building department.",
+      "The most common path. A single-family home you already own or purchase is evaluated against the AFH Local Building Inspection Checklist (DSHS 15-604). Modifications are made as needed (often ramps, bathroom changes, window changes, and alarm upgrades), and construction work usually needs its own permit from the local building department.",
     pros: ["Lower total entry cost", "Faster to licensure than new build", "Established neighborhood context"],
     cons: [
       "May require costly structural changes",
@@ -35,7 +35,7 @@ const PROPERTY_OPTIONS = [
       "A new single-family home designed specifically as an AFH can be built to code from the ground up. This gives maximum control over layout, accessibility, and bedroom classification, but comes with the full cost and timeline of new residential construction.",
     pros: [
       "Optimal layout for AFH operations",
-      "No surprise renovation costs",
+      "Fewer unexpected renovation costs",
       "Can be laid out for 7-8 residents, though a provider must hold an initial license for 24 months before applying for more than 6 (WAC 388-76-10031)",
     ],
     cons: [
@@ -246,8 +246,8 @@ const AFHBuildingInspection = () => (
           >
             When people refer to getting a "WABO inspection" for an AFH, they mean the building inspection performed by
             your local building official using the WABO checklist.{" "}
-            <strong>WABO itself does not perform inspections</strong> — your local city or county building department
-            does, and it completes the inspection section of the checklist.
+            <strong>WABO itself does not perform inspections.</strong> Your local city or county building department
+            does the inspection, and it completes the inspection section of the checklist.
           </p>
           <p
             style={{
@@ -548,7 +548,7 @@ const AFHBuildingInspection = () => (
             >
               <strong>Septic systems require early attention.</strong> If your home is on a septic system, begin the
               inspection and approval process before submitting your DSHS application. Septic upgrades can involve
-              significant cost and delay — and cannot be resolved quickly.
+              significant cost and delay, and cannot be resolved quickly.
             </p>
           </div>
         </div>
@@ -677,7 +677,7 @@ const AFHBuildingInspection = () => (
                 textDecoration: "underline",
               }}
             >
-              DSHS AFH Building Inspections — Find Your Local Building Official <RppArrow />
+              DSHS AFH Building Inspections: Find Your Local Building Official <RppArrow />
             </a>
             <a
               href="https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf"

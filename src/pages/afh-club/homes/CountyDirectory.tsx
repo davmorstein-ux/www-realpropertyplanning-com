@@ -46,9 +46,8 @@ const CountyDirectory = () => {
           <div className="container px-5 md:px-8">
             <div className="max-w-3xl mx-auto text-foreground text-[17px] md:text-[18px] leading-relaxed space-y-4">
               <p>
-                Washington State licenses adult family homes to care for up to six residents — sometimes eight — in an
-                ordinary house in an ordinary neighborhood. There are far more of them than most families realize, and
-                no single place to compare them.
+                Washington State licenses adult family homes to care for up to six residents (sometimes eight) in an
+                ordinary house in an ordinary neighborhood. The state's records do not offer one place to compare them.
               </p>
               <p>
                 This directory covers{" "}
@@ -104,8 +103,8 @@ const CountyDirectory = () => {
                 }}
               >
                 <p style={{ margin: 0, fontSize: "18px", lineHeight: 1.5, fontWeight: 600, flex: "1 1 360px" }}>
-                  Budgeting first? See what an adult family home costs in any city or county — Medicaid rate range,
-                  private-pay range, and how many homes there accept Medicaid.
+                  Budgeting first? See what an adult family home costs in any city or county: Medicaid rate range,
+                  private-pay range, and how many homes there hold a DSHS Medicaid contract.
                 </p>
                 <Link
                   to="/adult-family-home-costs"

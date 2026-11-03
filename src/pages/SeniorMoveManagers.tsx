@@ -104,11 +104,9 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
-                Senior Move Managers are specialists who help older adults and their families plan and manage
-                the physical and emotional process of moving from a longtime home. Whether the destination is
-                an assisted living community, a family member's home, or a smaller independent residence, a
-                Senior Move Manager brings both practical expertise and compassionate support to one of life's
-                most significant transitions.
+                Senior Move Managers help older adults and their families plan and manage a move out of a
+                longtime home. The destination may be an assisted living community, a family member's home, or
+                a smaller independent residence.
               </p>
               <p>
                 Their services typically include space planning, sorting and organizing belongings, coordinating
@@ -117,9 +115,8 @@ const SeniorMoveManagers = () => (
                 providers to handle everything that remains after the move.
               </p>
               <p>
-                What sets a Senior Move Manager apart is their understanding of the emotional weight that comes
-                with leaving a home filled with memories. They work at the client's pace, with patience and
-                sensitivity, helping families make decisions that feel manageable rather than overwhelming.
+                The work is usually paced to the client, with decisions about belongings broken into smaller
+                steps so the family is not deciding everything at once.
               </p>
               <p>
                 Many Senior Move Managers are members of the National Association of Senior Move Managers

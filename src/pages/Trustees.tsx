@@ -81,19 +81,19 @@ const Trustees = () => (
       faqs={[
         {
           question: "What should a trustee do first when a trust includes real property?",
-          answer: `Confirm the trustee appointment in writing (a Certification of Trust or successor trustee acceptance), secure the property and insurance, locate the deed and title information, and obtain a current valuation — typically a date-of-death appraisal if the trust became irrevocable on the grantor's passing. ${FEATURED_BROKER.Role} handles the property-side steps and coordinates with the trust attorney.`,
+          answer: `Confirm the trustee appointment in writing (a Certification of Trust or successor trustee acceptance), secure the property and insurance, locate the deed and title information, and obtain a current valuation, typically a date-of-death appraisal if the trust became irrevocable on the grantor's death. ${FEATURED_BROKER.Role} can help with the property-side steps and coordinate with the trust attorney.`,
         },
         {
           question: "Does a trustee need a property appraisal before selling?",
-          answer: "In most cases, yes. A defensible written valuation — ideally a certified appraisal — protects the trustee from later claims that the property was sold below market value. It also establishes the new tax basis for beneficiaries and supports the trust accounting. Without one, a beneficiary who later thinks the price was too low has an easy argument.",
+          answer: "In most cases, yes. A defensible written valuation, ideally a certified appraisal, protects the trustee from later claims that the property was sold below market value. It also establishes the new tax basis for beneficiaries and supports the trust accounting. Without one, a beneficiary who later thinks the price was too low has an easy argument.",
         },
         {
           question: "Can a trustee sell property without beneficiary approval in Washington?",
-          answer: "Generally yes, if the trust document grants the trustee the power to sell real property — most modern Washington trusts do. The trustee still has a fiduciary duty to notify beneficiaries, document the pricing rationale, and act in the beneficiaries' best interest. Approval is not the same as notice; confirm both requirements with the trust attorney before listing.",
+          answer: "Generally yes, if the trust document grants the trustee the power to sell real property, as most modern Washington trusts do. The trustee still has a fiduciary duty to notify beneficiaries, document the pricing rationale, and act in the beneficiaries' best interest. Approval is not the same as notice; confirm both requirements with the trust attorney before listing.",
         },
         {
           question: "What is the trustee's liability if a property sells below market value?",
-          answer: "A trustee who acts prudently, obtains an independent valuation, exposes the property to the open market, and documents the decision-making is generally protected — even if a beneficiary later believes the price was too low. Liability arises when the file is thin: no appraisal, limited marketing, or undisclosed conflicts. Build that file as the sale happens, not after a beneficiary objects.",
+          answer: "A trustee who acts prudently, obtains an independent valuation, exposes the property to the open market, and documents the decision-making is generally protected, even if a beneficiary later believes the price was too low. Liability arises when the file is thin: no appraisal, limited marketing, or undisclosed conflicts. Build that file as the sale happens, not after a beneficiary objects.",
         },
       ]}
       heading="Common Trustee Questions"

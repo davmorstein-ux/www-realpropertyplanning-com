@@ -77,8 +77,8 @@ const TOPICS: Topic[] = [
         <>
           <p>
             Before buying a property, paying for renovations, or submitting a license application, spend meaningful time
-            with experienced AFH providers. Ask to observe the rhythm of an operating home, not just during a scheduled
-            tour, but during meals, shift changes, medication times, evening routines, and busy mornings.
+            with experienced AFH providers. Ask to observe the rhythm of an operating home beyond a scheduled
+            tour: during meals, shift changes, medication times, evening routines, and busy mornings.
           </p>
           <p>Ask owners what happens when:</p>
           <Ul
@@ -364,7 +364,7 @@ const TOPICS: Topic[] = [
           <p>
             Late entries and corrections should follow an established, transparent procedure. If something was missed,
             address the resident's immediate needs, notify the right people, document honestly, and fix the underlying
-            system. An organized record is not just for an inspector: it supports continuity of care and protects
+            system. An organized record serves more than an inspector: it supports continuity of care and protects
             residents, caregivers, and the provider.
           </p>
         </>

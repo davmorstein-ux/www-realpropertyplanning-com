@@ -1000,13 +1000,13 @@ const AFHClub = () => {
                   n: "02",
                   title: "Appraisal and valuation",
                   who: "Independent certified appraiser",
-                  body: "Independent valuation of the real estate. Appraisal and brokerage are kept on separate transactions \u2014 the same property is never both appraised and brokered by the same person.",
+                  body: "Independent valuation of the real estate. Appraisal and brokerage are kept on separate transactions: the same property is never both appraised and brokered by the same person.",
                 },
                 {
                   n: "03",
                   title: "Business and lease brokerage",
                   who: "Independent commercial broker",
-                  body: "Represents buyers and sellers of the business itself, and negotiates commercial leases. This is what makes it possible to treat the operation and the building as two separate, separately sellable assets.",
+                  body: "Represents buyers and sellers of the business itself, and negotiates commercial leases. That lets the operation and the building be treated as two separately sellable assets.",
                 },
                 {
                   n: "04",

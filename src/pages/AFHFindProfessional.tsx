@@ -147,7 +147,7 @@ const PROFESSIONAL_CATEGORIES = [
       "Familiarity with AFH valuation beyond residential comps",
       "Network of AFH-related professionals",
     ],
-    link: { label: `${FEATURED_BROKER.Role} — AFH Real Estate Services`, href: "/afh-club/real-estate-broker" },
+    link: { label: `${FEATURED_BROKER.Role}: AFH Real Estate Services`, href: "/afh-club/real-estate-broker" },
   },
   {
     title: "Bookkeepers",
@@ -273,7 +273,7 @@ const PROFESSIONAL_CATEGORIES = [
       /* Rewritten Oct 10, 2026: the old sentence said owners could "invest in the business without
          operating it directly", which WAC 388-76-11055 contradicts (an owner relieved of daily
          operations is treated as a change of ownership). Checked against WAC 388-76-11050 to 11060. */
-      "A management company can take on contracted work for an AFH owner: staffing and scheduling, billing, record-keeping, and compliance support. It does not take over the license. Under Washington rules, the licensed owner stays responsible for daily operations and resident care, must meet with the manager at least monthly and visit the home at least quarterly, and must file the management agreement with DSHS 60 days before it starts. Services vary widely — some handle everything from caregiver hiring to billing; others focus on compliance and record-keeping.",
+      "A management company can take on contracted work for an AFH owner: staffing and scheduling, billing, record-keeping, and compliance support. It does not take over the license. Under Washington rules, the licensed owner stays responsible for daily operations and resident care, must meet with the manager at least monthly and visit the home at least quarterly, and must file the management agreement with DSHS 60 days before it starts. Services vary widely: some handle everything from caregiver hiring to billing; others focus on compliance and record-keeping.",
     lookFor: [
       "Washington State operating experience",
       "DSHS compliance track record",
@@ -287,14 +287,14 @@ const PROFESSIONAL_CATEGORIES = [
     title: "CPAs Familiar with AFH Operations",
     icon: "📊",
     description:
-      "AFH tax and accounting has unique considerations — business income mixed with residential property, Medicaid rate structures, depreciation on modifications, payroll for caregivers, and licensing fee deductibility. A CPA with AFH experience will save you money and help you avoid costly errors.",
+      "AFH tax and accounting has its own considerations: business income mixed with residential property, Medicaid rate structures, depreciation on modifications, payroll for caregivers, and licensing fee deductibility. A CPA with AFH experience can help you avoid costly errors.",
     lookFor: [
       "Experience with Medicaid-contracted small businesses",
       "Understanding of AFH-specific deductions",
       "Payroll services for caregiving staff",
       "Estate and business transition planning",
     ],
-    link: { label: "Find a CPA — Resources Page", href: "/resources/cpas-financial-advisors" },
+    link: { label: "Find a CPA: Resources Page", href: "/resources/cpas-financial-advisors" },
   },
   {
     title: "AFH Inspectors & Compliance Consultants",

@@ -535,8 +535,8 @@ const AFHLicensingCertification = () => (
               margin: "0 0 24px",
             }}
           >
-            Specialty contracts — such as Expanded Community Services (ECS) and Specialized
-            Behavior Support (SBS) — are not transferable in a CHOW. The new owner needs approval from DSHS AFH program
+            Specialty contracts, such as Expanded Community Services (ECS) and Specialized
+            Behavior Support (SBS), are not transferable in a CHOW. The new owner needs approval from DSHS AFH program
             staff and new specialty contracts before providing or billing for those services.
           </p>
           <a
@@ -582,11 +582,11 @@ const AFHLicensingCertification = () => (
                 url: "https://www.dshs.wa.gov/altsa/residential-care-services/rcs-background-check-information",
               },
               {
-                label: "Disqualifying Crimes — WAC 388-113",
+                label: "Disqualifying Crimes: WAC 388-113",
                 url: "https://app.leg.wa.gov/WAC/default.aspx?cite=388-113",
               },
               {
-                label: "AFH Minimum Licensing Requirements — WAC 388-76",
+                label: "AFH Minimum Licensing Requirements: WAC 388-76",
                 url: "https://app.leg.wa.gov/wac/default.aspx?cite=388-76",
               },
               {

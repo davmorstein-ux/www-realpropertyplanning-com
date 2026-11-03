@@ -78,7 +78,7 @@ const housing: Card[] = [
   },
   {
     title: "Medicare & Benefits Advisors",
-    description: "Navigating Medicare, Medicaid, and care funding options.",
+    description: "Help with Medicare, Medicaid, and care funding options.",
     href: "/medicare-providers",
     image: "/tiles/set1/medicare-providers-tile.webp",
     alt: "Medicare and benefits advisors Washington State",
@@ -94,7 +94,7 @@ const housing: Card[] = [
   },
   {
     title: "Senior Move Managers",
-    description: "Sorting, packing, and coordinating a senior's move with patience and care.",
+    description: "Sorting, packing, and coordinating a senior's move.",
     href: "/senior-move-managers",
     image: "/tiles/set1/senior-move-managers-tile.webp",
     alt: "Senior move managers Washington State",

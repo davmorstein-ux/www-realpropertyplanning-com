@@ -29,7 +29,7 @@ const tiles = [
   },
   {
     title: "Get Guidance Early",
-    text: "Delays cost money. Carrying costs accumulate, conditions can deteriorate, and tax planning opportunities can be lost. An early no-pressure consultation helps everyone make better decisions.",
+    text: "Delays cost money. Carrying costs accumulate, conditions can deteriorate, and tax planning opportunities can be lost. An early, no-pressure conversation can help sort out the options before these costs build up.",
   },
 ];
 
@@ -42,17 +42,17 @@ const faqs = [
   {
     question: "Should I sell an inherited house as-is?",
     answer:
-      `It depends on the property's condition, your timeline, and the likely return on preparation investment. Some properties sell well as-is to investors or renovation buyers. Others benefit significantly from targeted preparation. ${FEATURED_BROKER.Role} evaluates each situation individually and recommends the approach most likely to protect value.`,
+      `It depends on the property's condition, your timeline, and the likely return on preparation investment. Some properties sell well as-is to investors or renovation buyers. Others benefit significantly from targeted preparation. ${FEATURED_BROKER.Role} can look at the property and talk through which approach may protect value best.`,
   },
   {
     question: "How soon can I sell an inherited house in Washington?",
     answer:
-      `Once legal authority is established (through probate, trust administration, or other means), the property can be listed for sale. Pre-listing preparation — assessment, cleanout, repairs — can begin earlier. ${FEATURED_BROKER.Role} helps create a realistic timeline aligned with your specific circumstances.`,
+      `Once legal authority is established (through probate, trust administration, or other means), the property can be listed for sale. Pre-listing preparation (assessment, cleanout, repairs) can begin earlier. ${FEATURED_BROKER.Role} can help sketch a realistic timeline for your circumstances.`,
   },
   {
     question: "What if there are multiple heirs who cannot agree?",
     answer:
-      `Disagreements among heirs are common. ${FEATURED_BROKER.Role} provides objective, data-driven market analysis that helps move conversations from opinion to evidence. For legal disputes, the estate attorney should be involved. ${FEATURED_BROKER.pronoun.Possessive} role is to provide clear real estate data and professional guidance.`,
+      `Disagreements among heirs are common. ${FEATURED_BROKER.Role} can provide a market analysis so the conversation starts from market data rather than opinion. For legal disputes, the estate attorney should be involved. ${FEATURED_BROKER.pronoun.Possessive} role is limited to real estate information.`,
   },
   {
     question: "Do I need to go through probate to sell an inherited house?",

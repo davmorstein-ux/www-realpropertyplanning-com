@@ -501,7 +501,7 @@ const AFHPropertyScore = () => {
         </div>
         <IntentCTA
           heading="Want a second opinion on this property?"
-          body="Send the address and what the score flagged, and be pointed to what to investigate before making an offer — licensing fit, layout, and the condition items that change value."
+          body="Send the address and what the score flagged, and be pointed to what to investigate before making an offer: licensing fit, layout, and the condition items that change value."
           buttonText="Ask about this property"
           reason="afh-buy-sell"
           professional="broker"

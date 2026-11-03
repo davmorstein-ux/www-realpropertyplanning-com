@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "What is mold remediation?",
-    a: "Mold remediation is more than wiping mold off a surface. The affected area is contained so spores do not spread through the house, moldy materials that cannot be cleaned are removed, the rest is cleaned and treated, and the moisture that let mold grow is found and fixed. Without that last step, it comes back.",
+    a: "Mold remediation is more than wiping mold off a surface. The affected area is contained so spores do not spread through the house, moldy materials that cannot be cleaned are removed, the rest is cleaned and treated, and the moisture that let mold grow is found and fixed. Without that last step, it usually comes back.",
   },
   {
     q: "Why do inherited and vacant houses so often have water damage or mold?",
@@ -116,7 +116,7 @@ const WaterMoldFireCleanup = () => (
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more`}
+                    aria-label={`${p.name}, ${p.title} at ${p.company}: Learn more`}
                     className="absolute inset-0 z-0 rounded-[inherit] focus-visible:outline-none"
                   />
                   <div className="tile-white__inner h-full">

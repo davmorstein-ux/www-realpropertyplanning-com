@@ -362,7 +362,7 @@ const AFHCostsFees = () => (
               margin: "0 0 20px",
             }}
           >
-            Liability Insurance — Plan Ahead
+            Liability Insurance: Plan Ahead
           </h2>
           <p
             style={{
@@ -575,7 +575,7 @@ const AFHCostsFees = () => (
                 label: "DSHS Application Processing Timeline",
                 url: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline",
               },
-              { label: "Medicaid Rates — WAC 388-105", url: "https://app.leg.wa.gov/wac/default.aspx?cite=388-105" },
+              { label: "Medicaid Rates: WAC 388-105", url: "https://app.leg.wa.gov/wac/default.aspx?cite=388-105" },
               {
                 label: "DSHS Current Rates (PDF)",
                 url: "https://www.dshs.wa.gov/sites/default/files/ALTSA/msd/documents/All_HCS_Rates.pdf",

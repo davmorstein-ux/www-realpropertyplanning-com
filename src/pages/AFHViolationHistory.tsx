@@ -120,7 +120,7 @@ const AFHViolationHistory = () => (
           <p style={{ ...body, margin: 0, maxWidth: 680 }}>
             Washington State provides free public access to Adult Family Home (AFH) inspection and enforcement
             records. These records support buyers and investors doing due diligence, show owners how their home's record
-            reads to others, and let anyone check a home's history. The challenge is not access — it's knowing where to look
+            reads to others, and let anyone check a home's history. The harder part is knowing where to look
             and how to interpret what you find.
           </p>
         </div>
@@ -180,11 +180,11 @@ const AFHViolationHistory = () => (
             medication, and operations.
           </p>
           <p style={body}>
-            A "deficiency" means a rule was not met — also called noncompliance or requirement not met. It does{" "}
+            A "deficiency" means a rule was not met (also called noncompliance or requirement not met). It does{" "}
             <strong>not</strong> automatically mean harm occurred.
           </p>
           <p style={{ ...body, margin: 0, fontWeight: 600 }}>
-            Focus on severity, frequency, and response — not just the number of citations.
+            Focus on severity, frequency, and response, not just the number of citations.
           </p>
         </div>
       </section>

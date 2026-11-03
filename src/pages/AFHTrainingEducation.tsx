@@ -66,11 +66,11 @@ const SPECIALTY_TRAININGS = [
     trigger: "Required before admitting or serving residents with developmental disabilities",
   },
   {
-    name: "Nurse Delegation — Core",
+    name: "Nurse Delegation: Core",
     trigger: "Required before a caregiver performs any delegated nursing task; the caregiver must also be a certified Home Care Aide or Nursing Assistant Certified",
   },
   {
-    name: "Nurse Delegation — Specialized Diabetes",
+    name: "Nurse Delegation: Specialized Diabetes",
     trigger: "Required, in addition to core, before a caregiver gives insulin injections under delegation",
   },
 ];
@@ -157,8 +157,9 @@ const AFHTrainingEducation = () => (
               maxWidth: 680,
             }}
           >
-            For AFH providers, training is not a one-time event — it is an ongoing professional responsibility. This page
-            outlines every required training, who must complete it, and where to find approved programs.
+            AFH providers complete several trainings before a license is issued, and, unless they are RNs, LPNs or
+            ARNPs, 12 hours of continuing education each year after that. This page lists each required training, who must complete it, and where to
+            find approved programs.
           </p>
         </div>
       </section>
@@ -200,7 +201,7 @@ const AFHTrainingEducation = () => (
               margin: "0 0 32px",
             }}
           >
-            All of the following must be completed before an AFH license is issued. Training takes time — build this
+            All of the following must be completed before an AFH license is issued. Training takes time, so build it
             into your planning timeline.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
@@ -319,7 +320,7 @@ const AFHTrainingEducation = () => (
               margin: "0 0 20px",
             }}
           >
-            AFH Administrator Training — In Detail
+            AFH Administrator Training: In Detail
           </h2>
           <p
             style={{
@@ -583,7 +584,7 @@ const AFHTrainingEducation = () => (
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
-              { label: "CareLearn Washington — Online CE Courses", url: "https://carelearnwa.com/" },
+              { label: "CareLearn Washington: Online CE Courses", url: "https://carelearnwa.com/" },
               {
                 label: "DSHS Training Requirements for AFHs",
                 url: "https://www.dshs.wa.gov/altsa/training/training-requirements-adult-family-homes",

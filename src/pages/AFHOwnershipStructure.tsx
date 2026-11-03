@@ -41,11 +41,11 @@ const DECIDE_QUESTIONS = [
 const CONSIDERATIONS = [
   {
     title: "Buying as an individual",
-    body: "Buying an AFH in your own name is often the simplest option. The closing process is usually more straightforward, the paperwork is lighter, and financing may be easier to obtain. Many traditional lenders are more comfortable lending to an individual than to a newly formed LLC, which can make this route appealing for first-time buyers or owner-operators who want to move quickly. The tradeoff is liability exposure — if you own the property personally, your personal assets may be more exposed if a problem arises.",
+    body: "Buying an AFH in your own name is often the simplest option. The closing process is usually more straightforward, the paperwork is lighter, and financing may be easier to obtain. Many traditional lenders are more comfortable lending to an individual than to a newly formed LLC, which can make this route appealing for first-time buyers or owner-operators who want to move quickly. The tradeoff is liability exposure: if you own the property personally, your personal assets may be more exposed if a problem arises.",
   },
   {
     title: "Buying through an LLC",
-    body: "Buying an AFH through an LLC is often attractive to buyers who want a clearer line between their personal assets and the property or business. An LLC can help create that separation. This structure can also be useful if you plan to own more than one AFH, bring in partners, or create a long-term business plan. The downside is that financing may be more complicated — lenders may require different underwriting, larger down payments, or higher interest rates, and there are added costs for forming and maintaining the entity.",
+    body: "Buying an AFH through an LLC is often attractive to buyers who want a clearer line between their personal assets and the property or business. An LLC can help create that separation. This structure can also be useful if you plan to own more than one AFH, bring in partners, or create a long-term business plan. The downside is that financing may be more complicated: lenders may require different underwriting, larger down payments, or higher interest rates, and there are added costs for forming and maintaining the entity.",
   },
 ];
 
@@ -132,8 +132,8 @@ const AFHOwnershipStructure = () => (
             }}
           >
             Buying an Adult Family Home is different from buying a typical house. In many cases, you are buying both a
-            home and a business location — which makes ownership structure one of the most important early decisions a
-            buyer can make.
+            home and a business location, which makes ownership structure an important early decision for a
+            buyer.
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ const AFHOwnershipStructure = () => (
             }}
           >
             One of the first questions buyers ask is whether they should purchase the property in their own name or
-            through a limited liability company, or LLC. There is no single right answer. The best choice depends on
+            through a limited liability company, or LLC. There is no single right answer. The answer depends on
             your financing, your risk tolerance, your tax and estate planning goals, and whether you are buying one AFH
             or planning to build a larger business.
           </p>
@@ -196,10 +196,10 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 24px",
             }}
           >
-            When you buy an Adult Family Home, you are not just deciding how to hold title. You are also deciding how
+            When you buy an Adult Family Home, you are deciding more than how to hold title. You are also deciding how
             the property will be financed, how liability will be handled, and how easy it may be to transfer ownership
             later. For some buyers, simplicity is the priority. For others, liability protection matters more. In many
-            cases, the right answer is a balance between convenience and protection.
+            cases, the answer is a balance between convenience and protection.
           </p>
           <div
             style={{
@@ -459,7 +459,7 @@ const AFHOwnershipStructure = () => (
             }}
           >
             A simple way to think about it is to ask four questions. If ease and speed matter most, individual ownership
-            may be the better fit. If protection and long-term structure matter more, an LLC may be worth the added
+            may suit you better. If protection and long-term structure matter more, an LLC may be worth the added
             complexity.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
@@ -560,9 +560,9 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 20px",
             }}
           >
-            The right structure depends on your goals, your lender, your legal planning, and the way you intend to
+            The structure that works depends on your goals, your lender, your legal planning, and the way you intend to
             operate the home. If you are considering an Adult Family Home purchase in Washington State, it helps to
-            think about both the real estate and business sides of the transaction. The right structure can make the
+            think about both the real estate and business sides of the transaction. A well-chosen structure can make the
             purchase easier to finance, easier to manage, and better aligned with your long-term plans.
           </p>
         </div>
