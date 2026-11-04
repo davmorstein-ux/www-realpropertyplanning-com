@@ -27,11 +27,11 @@
     "tiles": {
       "planAhead": {
         "title": "Plan Ahead",
-        "imgAlt": "Older couple reviewing an estate plan together at home"
+        "imgAlt": "Older couple on a sofa going over household papers and bills"
       },
       "helpingParent": {
         "title": "Help an Aging Parent",
-        "imgAlt": "Adult daughter hugging her senior mother on a couch"
+        "imgAlt": "Adult daughter with her arm around her elderly mother, holding her hand outdoors"
       },
       "handlingEstate": {
         "title": "Handle an Estate",
@@ -39,7 +39,7 @@
       },
       "needProfessional": {
         "title": "Find a Professional",
-        "imgAlt": "Man at a laptop browsing professional resources"
+        "imgAlt": "Older couple shaking hands with a professional across a desk"
       }
     }
   },
