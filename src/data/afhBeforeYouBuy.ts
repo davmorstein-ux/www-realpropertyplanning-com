@@ -128,7 +128,7 @@ export const BYB_FAQS = [
 ];
 
 export const BYB_PRERENDER_SECTIONS: string[] = [
-  `Short answer — ${BEFORE_YOU_BUY.SHORT_ANSWER}`,
-  ...BYB_LAYERS.map((l) => `Layer ${l.n}, ${l.name} — ${l.questions.join(" ")} More: ${l.link.label} (${l.link.href}).`),
-  `Claims to verify — ${BYB_CLAIMS.map((c) => `${c.claim} Verify: ${c.verify}`).join(" ")}`,
+  `Short answer: ${BEFORE_YOU_BUY.SHORT_ANSWER}`,
+  ...BYB_LAYERS.map((l) => `Layer ${l.n}, ${l.name}: ${l.questions.join(" ")} More: ${l.link.label} (${l.link.href}).`),
+  `Claims to verify: ${BYB_CLAIMS.map((c) => `${c.claim} Verify: ${c.verify}`).join(" ")}`,
 ];

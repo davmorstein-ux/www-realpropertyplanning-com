@@ -85,7 +85,7 @@ export const SH_SECTIONS: ShSection[] = [
     heading: "The real cost of staying home",
     paras: [
       "Staying home feels like the cheaper choice because the house is already paid for. But the house still costs money every month (property tax, insurance, utilities, repairs and, for some, a mortgage), and once a parent needs help, the care hours are added on top.",
-      `Care is the number that decides it. Washington's median for in-home care is about ${usd(HOURLY_RATE)} an hour, or about ${usd(IN_HOME.waMonthly)} a month for roughly 44 hours a week. A few hours a week is affordable for many families; round-the-clock care at home usually costs more than any residential setting.`,
+      `Care is the number that decides it. Washington's median for in-home care is about ${usd(HOURLY_RATE)} an hour, or about ${usd(IN_HOME.waMonthly)} a month for roughly 44 hours a week. A few hours a week costs far less; round-the-clock care at home usually costs more than any residential setting.`,
     ],
     cites: [CARESCOUT],
   },
@@ -137,7 +137,7 @@ export const SH_FAQS = [
 
 /** Plain-text version for the prerender (vite.config.ts). */
 export const SH_PRERENDER_SECTIONS: string[] = [
-  ...SH_SECTIONS.map((s) => `${s.heading} — ${s.paras.join(" ")}`),
+  ...SH_SECTIONS.map((s) => `${s.heading}: ${s.paras.join(" ")}`),
   "The page includes a worksheet: enter monthly income, housing costs, care hours and savings to see the monthly gap and how long savings would last.",
   "General information, not financial advice. Care costs are Washington medians from the CareScout Cost of Care Survey, 2025 data.",
 ];

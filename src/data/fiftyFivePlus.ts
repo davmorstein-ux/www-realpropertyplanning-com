@@ -111,7 +111,7 @@ export const FP_SECTIONS: FpSection[] = [
     id: "before-you-buy",
     heading: "What to get in writing before buying",
     paras: [
-      "The age policy, and how the community verifies ages. The homeowners' association declaration, bylaws and rules, or for a manufactured-home community the rental agreement and community rules. The current dues or lot rent, what they cover, and how they have changed. The rules on renting the home out, on guests and on younger residents. And, for a parent buying, the question families most often forget to ask: what happens to the home when the owner dies. Who may live there, who may buy it, and how the community approves a buyer all decide how easily the family can sell it later.",
+      "The age policy, and how the community verifies ages. The homeowners' association declaration, bylaws and rules, or for a manufactured-home community the rental agreement and community rules. The current dues or lot rent, what they cover, and how they have changed. The rules on renting the home out, on guests and on younger residents. And, for a parent buying, a question that is easy to overlook: what happens to the home when the owner dies. Who may live there, who may buy it, and how the community approves a buyer all decide how easily the family can sell it later.",
     ],
     cites: [],
   },
@@ -120,7 +120,7 @@ export const FP_SECTIONS: FpSection[] = [
     heading: "When the owner dies",
     paras: [
       "A home in a 55+ community passes through the estate like any other property: by will, by trust, or to heirs, with the personal representative or trustee in charge until it is sold or transferred. The costs keep coming. Association dues or lot rent are still owed every month, and the estate pays them.",
-      "Owning and living there are different questions. An heir under 55 can usually inherit the home, but the community's age policy decides whether the heir can live there, and its rules decide whether the home can be rented out. In a 62+ community, a younger heir generally cannot live there at all. Many families sell.",
+      "Owning and living there are different questions. An heir under 55 can usually inherit the home, but the community's age policy decides whether the heir can live there, and its rules decide whether the home can be rented out. In a 62+ community, a younger heir generally cannot live there at all. Selling is often the practical result.",
       "Selling needs more planning because the buyer has to qualify. In a manufactured-home community, the buyer takes over the lot rental agreement, and the landlord approves or refuses the buyer on the same basis as any new tenant, which in a 55+ community generally includes the age policy. The seller must notify the landlord in writing at least 15 days before the sale and confirm that taxes, rent and other charges are paid; the landlord must approve or refuse in writing at least 7 days before the transfer, and cannot unreasonably refuse. The home's title transfers through a county licensing office, and the county treasurer handles the excise tax paperwork.",
       "If the home sits on land the owner also owned, outside a community, it may have been converted to real property and is sold like a house.",
     ],
@@ -167,6 +167,6 @@ export const FP_SOURCES = [USC, CFR, HUM, R073, R090, AG, R325, SNO, {
 
 /** Plain-text version for the prerender (vite.config.ts). */
 export const FP_PRERENDER_SECTIONS: string[] = [
-  ...FP_SECTIONS.map((s) => `${s.heading.replace(/"/g, "")} — ${s.paras.join(" ")}`),
+  ...FP_SECTIONS.map((s) => `${s.heading.replace(/"/g, "")}: ${s.paras.join(" ")}`),
   "General information, not legal advice. Community age policies, fees and rules change; confirm them with the community before making a housing decision.",
 ];

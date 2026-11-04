@@ -182,8 +182,8 @@ export const isComplete = (s: Situation, a: Answers): boolean => visibleQuestion
 
 const PROS: PlanStep = {
   id: "pros",
-  title: "Line up the right professionals",
-  why: "Most families need some combination of an attorney, a broker, a tax adviser and help with the contents. Real Property Planning lists people its founder has met in person; you choose and hire them directly.",
+  title: "Line up the professionals you need",
+  why: "An estate with a house often needs some combination of an attorney, a broker, a tax adviser and help with the contents. Real Property Planning lists people its founder has met in person; you choose and hire them directly.",
   links: [
     { title: "Featured professionals", href: "/featured-professionals" },
     { title: "Building your professional team", href: "/estate-probate-inherited-property/professional-team" },
@@ -272,7 +272,7 @@ function estatePlan(a: Answers): PlanStep[] {
     family: {
       id: "protect",
       title: "Agree in writing on the family member living there",
-      why: "Who pays the bills, and until when, is the most common source of family disputes over an estate house.",
+      why: "Who pays the bills, and until when, is a common source of family disputes over an estate house.",
       links: [
         { title: "Executor property decisions", href: "/executor-responsibilities-first-steps/property-decisions" },
         { title: "When heirs disagree about selling", href: "/guides/heirs-disagree-selling-house" },
@@ -345,7 +345,7 @@ function estatePlan(a: Answers): PlanStep[] {
     undecided: {
       id: "decide",
       title: "Decide together: sell, keep or rent",
-      why: "Lay out the options with numbers before anyone takes a position. Most disagreements are about price and timing.",
+      why: "Lay out the options with numbers before anyone takes a position. Disagreements are often about price and timing.",
       links: [
         { title: "What to do with the property", href: "/estate-probate-inherited-property/what-to-do-with-the-property" },
         { title: "When heirs disagree about selling", href: "/guides/heirs-disagree-selling-house" },
@@ -504,7 +504,7 @@ function parentPlan(a: Answers): PlanStep[] {
       ? {
           id: "pay",
           title: "Plan how savings and the house cover the cost",
-          why: "For most families the house is the largest asset. When and how it's used shapes everything else.",
+          why: "The house is often the largest asset. When and how it's used shapes everything else.",
           links: [
             { title: "Paying for care", href: "/helping-an-aging-parent/finances-and-legal/paying-for-care" },
             { title: "WA Cares, Washington's long-term care benefit", href: "/long-term-care/wa-cares" },
@@ -535,7 +535,7 @@ function parentPlan(a: Answers): PlanStep[] {
     move: {
       id: "house",
       title: "Plan the move and the sale together",
-      why: "Most moves are paid for by the house. Timing the sale against the move avoids paying for two homes, or rushing.",
+      why: "The house often pays for the move. Timing the sale against the move avoids paying for two homes, or rushing.",
       links: [
         { title: "Selling a parent's house to pay for senior living", href: "/sell-house-fund-senior-living" },
         { title: "Downsizing and preparing for a transition", href: "/downsizing-preparing-for-transition" },
