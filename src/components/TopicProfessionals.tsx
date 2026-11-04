@@ -57,15 +57,20 @@ export default function TopicProfessionals({ path, style }: { path: string; styl
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
             {g.professionals.map((p) => (
               <li key={`${p.name}-${p.href}`} style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <img
-                  src={p.photo}
-                  alt=""
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width: 48, height: 48, borderRadius: "50%", objectFit: "cover", flex: "0 0 48px", background: "#eee" }}
-                />
+                {p.photo ? (
+                  <img
+                    src={p.photo}
+                    alt=""
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ width: 48, height: 48, borderRadius: "50%", objectFit: "cover", flex: "0 0 48px", background: "#eee" }}
+                  />
+                ) : (
+                  /* No headshot yet: plain circle so the row stays aligned. */
+                  <div aria-hidden="true" style={{ width: 48, height: 48, borderRadius: "50%", flex: "0 0 48px", background: "#eee" }} />
+                )}
                 <div style={{ fontSize: 17, lineHeight: 1.4 }}>
                   <Link to={p.href} style={{ color: NAVY, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
                     {p.name}

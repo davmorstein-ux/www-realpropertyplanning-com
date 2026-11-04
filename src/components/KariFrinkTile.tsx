@@ -1,5 +1,4 @@
 import ProviderTile from "@/components/ProviderTile";
-import kariPhoto from "@/assets/providers/kari-frink-wealth-advisor-lnw-seattle.webp";
 import lnwLogo from "@/assets/providers/lnw-logo.webp";
 
 /**
@@ -7,6 +6,10 @@ import lnwLogo from "@/assets/providers/lnw-logo.webp";
  * the owner asked: financial planning (/for-financial-planners and
  * /professionals/financial-planners) and the trust company side (/trustees).
  * The directory entries are in src/data/familyProfessionals.ts.
+ *
+ * Headshot removed Nov 3, 2026 at David's request until LNW sends an updated
+ * one. To restore: add the new file under src/assets/providers/, import it
+ * here as kariPhoto, and pass photo/photoAlt again (and in familyProfessionals.ts).
  */
 export const KARI_FRINK = {
   name: "Kari Frink, CFP®",
@@ -22,8 +25,6 @@ const KariFrinkTile = ({ specialty }: { specialty: string }) => (
     name={KARI_FRINK.name}
     title={KARI_FRINK.title}
     company={KARI_FRINK.company}
-    photo={kariPhoto}
-    photoAlt="Photo of Kari Frink, CFP, Wealth Advisor at LNW"
     logo={lnwLogo}
     logoAlt="LNW logo"
     phone={KARI_FRINK.phone}

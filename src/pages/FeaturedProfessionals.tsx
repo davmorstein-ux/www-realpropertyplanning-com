@@ -128,13 +128,18 @@ const FeaturedProfessionals = () => (
                     }}
                   >
                     <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-                      <img
-                        src={pro.photo}
-                        alt={`Photo of ${pro.name}`}
-                        style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      {pro.photo ? (
+                        <img
+                          src={pro.photo}
+                          alt={`Photo of ${pro.name}`}
+                          style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        /* No headshot yet: a plain circle keeps the card aligned with its neighbours. */
+                        <div aria-hidden="true" style={{ width: 64, height: 64, borderRadius: "50%", background: "#e7e0da", flexShrink: 0 }} />
+                      )}
                       <div style={{ minWidth: 0 }}>
                         <p
                           style={{
