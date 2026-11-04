@@ -157,7 +157,7 @@ export const MTH_FAQS = [
 
 /** Plain-text version for the prerender (vite.config.ts). */
 export const MTH_PRERENDER_SECTIONS: string[] = [
-  ...MTH_SECTIONS.map((s) => `${s.heading} — ${s.paras.join(" ")}`),
-  `Checklist — ${MTH_CHECKLIST.join(" ")}`,
+  ...MTH_SECTIONS.map((s) => `${s.heading}: ${s.paras.join(" ")}`),
+  `Checklist: ${MTH_CHECKLIST.join(" ")}`,
   "General information, not legal advice. Medicaid figures change each year. The site does not make referrals.",
 ];

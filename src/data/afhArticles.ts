@@ -86,8 +86,8 @@ export function afhArticleMeta(a: AFHArticle) {
     quickAnswerQ: a.title,
     quickAnswerA: mdToText(a.shortAnswer),
     sections: [
-      ...a.sections.map((s) => `${s.heading} — ${mdToText(s.body)}`),
-      ...(a.next ? [`What to do next — ${mdToText(a.next)}`] : []),
+      ...a.sections.map((s) => `${s.heading}${/[?.!:]$/.test(s.heading) ? "" : ":"} ${mdToText(s.body)}`),
+      ...(a.next ? [`What to do next: ${mdToText(a.next)}`] : []),
     ],
     faq: a.faqs.map((f) => ({ q: f.question, a: f.answer, ...(f.alts?.length ? { alts: f.alts } : {}) })),
     article: { datePublished: a.published, dateModified: a.reviewed },

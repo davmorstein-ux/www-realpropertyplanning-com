@@ -93,5 +93,5 @@ export const COUNTY_OFFICIAL_RESOURCES: Record<string, { checked: string; items:
 export const countyResourcesPrerender = (slug: string): string[] => {
   const r = COUNTY_OFFICIAL_RESOURCES[slug];
   if (!r) return [];
-  return [`Official county resources — ${r.items.map((i) => `${i.office} (${i.href}): ${i.use}`).join(" ")}`];
+  return [`Official county resources: ${r.items.map((i) => `${i.office} (${i.href}): ${i.use}`).join(" ")}`];
 };

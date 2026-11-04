@@ -46,7 +46,7 @@
   "costOfCare": {
     "headingPart1": "Cost of Care",
     "headingPart2": "Calculators",
-    "description": "Compare in-home care, assisted living, memory care, and more — in Washington versus national medians.",
+    "description": "Compare in-home care, assisted living, memory care, and more in Washington versus national medians.",
     "cta": "Calculate My Costs"
   },
   "afhClub": {
@@ -67,7 +67,7 @@
     "heroTitle": "PROBATE & ESTATE PROPERTY SALES",
     "directAnswer": {
       "question": "How does selling a house through probate work in Washington State?",
-      "answer": "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage; when you need a broker or appraiser, you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
+      "answer": "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority, usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps (evaluation, preparation, listing, negotiation, and closing) but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage; when you need a broker or appraiser, you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
       "step1Label": "Before Authority",
       "step1Desc": "Property is assessed and a plan is developed while legal authority is pending.",
       "step2Label": "During Probate",
@@ -93,7 +93,7 @@
     },
     "whatMakesDifferent": {
       "heading": "What Makes Estate Property Sales Different",
-      "intro": "Estate property sales are genuinely different from standard real estate transactions — and treating them like ordinary listings is where families and executors most often run into trouble.",
+      "intro": "Estate property sales differ from standard real estate transactions, and treating them like ordinary listings is where families and executors often run into trouble.",
       "legalAuthority": {
         "alt": "Legal authority in probate property sales",
         "title": "Legal Authority",
@@ -112,7 +112,7 @@
       "honestPricing": {
         "alt": "Honest pricing for estate property",
         "title": "Honest Pricing",
-        "description": "Value must reflect actual condition — not automated estimates."
+        "description": "Value must reflect actual condition, not an automated estimate."
       },
       "emotionalComplexity": {
         "alt": "Emotional complexity in family estate decisions",
@@ -128,11 +128,11 @@
     "timeline": {
       "heading": "Timing and Coordination in Probate Sales",
       "step1Title": "Before Legal Authority Is Granted",
-      "step1Desc": "A property can be assessed and a plan developed before legal authority is formally granted — so families and executors are prepared when the time comes.",
+      "step1Desc": "A property can be assessed and a plan developed before legal authority is formally granted, so families and executors are ready once it is.",
       "step2Title": "During Active Probate",
-      "step2Desc": "Once authority is established, preparation, pricing, and listing can proceed in step with the legal proceedings — coordinated with the estate's attorney and other professionals.",
+      "step2Desc": "Once authority is established, preparation, pricing, and listing can proceed in step with the legal proceedings, coordinated with the estate's attorney and other professionals.",
       "step3Title": "Post-Probate or Trust Distribution",
-      "step3Desc": "After probate closes or a trust distribution is planned, the property can move toward preparation, marketing, and sale — with every repair decision evaluated for return on investment.",
+      "step3Desc": "After probate closes or a trust distribution is planned, the property can move toward preparation, marketing, and sale, with every repair decision evaluated for return on investment.",
       "seeFullProcess": "See how the full process works"
     },
     "faq": {
@@ -140,7 +140,7 @@
       "heading": "Probate & Estate Sale Questions",
       "q1": {
         "question": "What is the difference between probate property and inherited property in Washington?",
-        "answer": "Probate property is sold through the court process — the estate must go through Washington's probate process, and legal authority (Letters Testamentary) is required before a sale can proceed. Inherited property that passes outside probate, such as through a living trust or joint tenancy with right of survivorship, generally has fewer legal hurdles but can still involve significant complexity around valuation, family agreement, and tax basis."
+        "answer": "Probate property is sold through the court process: the estate must go through Washington's probate process, and legal authority (Letters Testamentary) is required before a sale can proceed. Inherited property that passes outside probate, such as through a living trust or joint tenancy with right of survivorship, generally has fewer legal hurdles but can still involve significant complexity around valuation, family agreement, and tax basis."
       },
       "q2": {
         "question": "Can a house be sold before probate is finalized in Washington State?",
@@ -148,15 +148,15 @@
       },
       "q3": {
         "question": "Who decides how an estate property is priced?",
-        "answer": "Pricing an estate property responsibly starts with an independent, defensible valuation — not an automated online estimate. Because these properties often reflect deferred maintenance or years of accumulated condition, an accurate current-condition assessment protects the executor from later disputes with beneficiaries and supports a fiduciarily sound sale."
+        "answer": "Pricing an estate property responsibly starts with an independent, defensible valuation, not an automated online estimate. Because these properties often reflect deferred maintenance or years of accumulated condition, an accurate current-condition assessment protects the executor from later disputes with beneficiaries and supports a fiduciarily sound sale."
       },
       "q4": {
         "question": "Why do estate and probate sales take longer than typical home sales?",
-        "answer": "Multiple decision-makers must align, court timelines can affect when a sale can close, and property condition often requires more preparation — repairs, cleanout, or vendor coordination — before listing. Each of these adds time compared to a standard resale, but a clear plan and experienced guidance keep the process moving as efficiently as Washington law allows."
+        "answer": "Multiple decision-makers must align, court timelines can affect when a sale can close, and property condition often requires more preparation (repairs, cleanout, or vendor coordination) before listing. Each of these adds time compared to a standard resale."
       },
       "q5": {
         "question": "What qualifications should a broker have to handle a probate or estate sale?",
-        "answer": "Look for a broker with specific, hands-on experience in probate and estate transactions — someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning lists a featured Washington State licensed broker who is also a certified residential appraiser and works through their own brokerage."
+        "answer": "Look for a broker with specific, hands-on experience in probate and estate transactions: someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning lists a featured Washington State licensed broker who is also a certified residential appraiser and works through their own brokerage."
       }
     }
   },
@@ -171,7 +171,7 @@
     "heroTitle": "Senior Housing & Transitions",
     "directAnswer": {
       "question": "How do I sell a senior parent's home in Washington State?",
-      "answer": "Selling a longtime family home during a senior transition usually involves more than a standard listing — coordinating with care providers, out-of-state siblings, move managers, and sometimes an attorney or financial planner, all at a pace the family can manage. Real Property Planning explains each step and lists independent professionals for each one, including a featured licensed broker and certified appraiser who can provide condition-based pricing so the home sells for a fair, defensible value.",
+      "answer": "Selling a longtime family home during a senior transition usually involves more than a standard listing. It means coordinating with care providers, out-of-state siblings, move managers, and sometimes an attorney or financial planner, all at a pace the family can manage. Real Property Planning explains each step and lists independent professionals for each one, including a featured licensed broker and certified appraiser who can provide condition-based pricing aimed at a fair, defensible value.",
       "bullet1": "Guides for moving at the family's own pace, with no pressure to rush a decision",
       "bullet2": "A directory of independent move managers, senior living advisors, and estate liquidators you can contact directly",
       "bullet3": "A featured appraiser or broker can provide a condition-based valuation through their own independent business, rather than an automated estimate",
@@ -179,26 +179,26 @@
     },
     "whatGoesInto": {
       "heading": "What Goes Into a Senior Transition?",
-      "body": "When a senior leaves a longtime home — whether moving to assisted living, a memory care community, a smaller residence, or closer to family — it rarely involves just real estate. It's a coordinated process that touches nearly every part of a family's life. Real Property Planning explains who handles each step, and its Find a Professional page lists independent professionals you can contact directly."
+      "body": "When a senior leaves a longtime home to move to assisted living, a memory care community, a smaller residence, or closer to family, the move rarely involves only real estate. Several professionals usually take part. Real Property Planning explains who handles each step, and its Find a Professional page lists independent professionals you can contact directly."
     },
     "whoHelps": {
       "heading": "Who Helps With a Senior Transition?",
       "moveManagers": {
         "alt": "Senior move managers — Washington State senior transition specialists",
         "title": "Senior Move Managers",
-        "description": "Specialists who handle the physical side of a move — sorting, packing, coordinating movers, and setting up the new home. They work at the family's pace and are trained to handle the emotional weight of leaving a longtime residence.",
+        "description": "Specialists who handle the physical side of a move: sorting, packing, coordinating movers, and setting up the new home. They work at the family's pace, and many are experienced with the strain of leaving a longtime residence.",
         "cta": "Find a Move Manager"
       },
       "livingAdvisors": {
         "alt": "Senior living advisors — Washington State placement specialists",
         "title": "Senior Living Advisors",
-        "description": "Professionals who help families evaluate and choose the right next home — whether that's independent living, assisted living, memory care, or in-home support. They know local communities, availability, and costs.",
+        "description": "Professionals who help families evaluate and choose the next home, such as independent living, assisted living, memory care, or in-home support. They know local communities, availability, and costs.",
         "cta": "Find a Living Advisor"
       },
       "estateSale": {
         "alt": "Estate sale and liquidation services Washington State",
         "title": "Estate Sale & Liquidation",
-        "description": "When a home contains decades of belongings, estate sale professionals help families sort, value, and sell or donate items — clearing the home efficiently and respectfully before it goes on the market.",
+        "description": "When a home contains decades of belongings, estate sale professionals help families sort, value, and sell or donate items, clearing the home efficiently and respectfully before it goes on the market.",
         "cta": "Learn More"
       },
       "broker": {
@@ -210,31 +210,31 @@
       "appraiser": {
         "alt": "Certified real estate appraisers Washington State",
         "title": "Certified Appraiser",
-        "description": "An independent appraisal gives families an honest, defensible value for the home — useful for estate planning, trust administration, or simply knowing where you stand before making decisions.",
+        "description": "An independent appraisal gives families an honest, defensible value for the home, useful for estate planning, trust administration, or simply knowing where you stand before making decisions.",
         "cta": "Learn More"
       },
       "attorneys": {
         "alt": "Estate attorneys Washington State",
         "title": "Estate Attorneys",
-        "description": "Many senior transitions intersect with trust administration, power of attorney, or estate planning. An attorney ensures the legal side of the transition is handled properly alongside the real estate process.",
+        "description": "Many senior transitions intersect with trust administration, power of attorney, or estate planning. An attorney handles the legal side of the transition alongside the real estate process.",
         "cta": "Learn More"
       },
       "medicare": {
         "alt": "Medicare and benefits advisors Washington State",
         "title": "Medicare & Benefits Advisors",
-        "description": "Understanding Medicare, Medicaid, and other senior benefits is critical when a housing transition affects care funding. A benefits advisor helps families navigate coverage options, eligibility rules, and the financial impact of a move on existing or pending benefits.",
+        "description": "Understanding Medicare, Medicaid, and other senior benefits is critical when a housing transition affects care funding. A benefits advisor helps families understand coverage options, eligibility rules, and the financial impact of a move on existing or pending benefits.",
         "cta": "Find a Benefits Advisor"
       },
       "financial": {
         "alt": "Financial advisors and CPAs Washington State",
         "title": "Financial Advisors & CPAs",
-        "description": "Selling a longtime home has tax implications — capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
+        "description": "Selling a longtime home has tax implications: capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
         "cta": "Learn More"
       }
     },
     "notSure": {
       "heading": "Not Sure Where to Start?",
-      "body": "Most families don't know which professional they need first. That's okay. Real Property Planning offers guides for comparing the available steps and a directory of independent professionals throughout the Puget Sound area that you can contact directly.",
+      "body": "Most families don't know which professional they need first. Real Property Planning offers guides for comparing the available steps and a directory of independent professionals throughout the Puget Sound area that you can contact directly.",
       "button": "Start a Conversation"
     },
     "faq": {
@@ -242,11 +242,11 @@
       "heading": "Senior Transition Questions",
       "q1": {
         "question": "What's the first step in selling a senior's home in Washington?",
-        "answer": "Most families start by getting an honest sense of the home's value and condition, then deciding on next steps together — whether that's assisted living, a smaller home, or moving closer to family. Real Property Planning's guides explain the usual sequence of professionals before any decisions are made."
+        "answer": "Most families start by getting an honest sense of the home's value and condition, then deciding on next steps together, such as assisted living, a smaller home, or moving closer to family. Real Property Planning's guides explain the usual sequence of professionals before any decisions are made."
       },
       "q2": {
         "question": "Do I need a Power of Attorney to sell my parent's house?",
-        "answer": "If your parent can no longer manage their own affairs, the person acting as their agent under a Durable Power of Attorney typically needs that document in hand before signing on their behalf — banks, title companies, and real estate transactions all require it. An elder law or estate attorney can confirm the POA covers real estate authority specifically."
+        "answer": "If your parent can no longer manage their own affairs, the person acting as their agent under a Durable Power of Attorney typically needs that document in hand before signing on their behalf. Banks, title companies, and real estate transactions all require it. An elder law or estate attorney can confirm the POA covers real estate authority specifically."
       },
       "q3": {
         "question": "How long does it typically take to sell a senior's home?",
@@ -254,7 +254,7 @@
       },
       "q4": {
         "question": "Who helps coordinate a senior's move alongside the home sale?",
-        "answer": "A senior move manager typically handles the physical side — sorting, packing, and setting up the new home — while a senior living advisor helps evaluate placement options. Real Property Planning's Find a Professional page lists independent senior move managers and senior living advisors, as well as a broker and appraiser for the real estate side; you contact them directly."
+        "answer": "A senior move manager typically handles the physical side (sorting, packing, and setting up the new home), while a senior living advisor helps evaluate placement options. Real Property Planning's Find a Professional page lists independent senior move managers and senior living advisors, as well as a broker and appraiser for the real estate side; you contact them directly."
       },
       "q5": {
         "question": "Are there tax considerations when selling a longtime family home?",
@@ -302,7 +302,7 @@
     "marketplace": {
       "eyebrow": "Buy · Sell · Invest",
       "heading": "AFH Marketplace",
-      "description": "A dedicated Washington marketplace for buying and selling Adult Family Homes — property, business, or both.",
+      "description": "A dedicated Washington marketplace for buying and selling Adult Family Homes: property, business, or both.",
       "browseListings": "Adult Family Homes for Sale",
       "submitListing": "Submit a Listing",
       "browseDirectory": "Or browse every licensed adult family home in Washington by city"
@@ -315,11 +315,11 @@
       "heading": "What Is an Adult Family Home?",
       "paragraph1": "An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and Health Services (DSHS) to provide personal care, room, and board for two to six adults who are unrelated to the service provider, although qualified homes may be approved by DSHS for up to eight residents.",
       "paragraph2": "AFHs are permitted in all single-family residential zoning districts throughout Washington State and are regulated under WAC 388-76 and RCW 70.128.",
-      "paragraph3": "DSHS licensors conduct unannounced inspections on a regular cycle. Providers must maintain continuous compliance with licensing, training, building, and care standards — which is precisely why organized, reliable information matters."
+      "paragraph3": "DSHS licensors conduct unannounced inspections on a regular cycle. Providers must maintain continuous compliance with licensing, training, building, and care standards, which is why organized, reliable information matters."
     },
     "readyToBuySell": {
       "heading": "Ready to Buy or Sell an AFH?",
-      "description": "Browse Adult Family Homes for sale — property, business, or both. A dedicated Washington AFH buy/sell marketplace.",
+      "description": "Browse Adult Family Homes for sale: property, business, or both. A dedicated Washington AFH buy/sell marketplace.",
       "browseListings": "Adult family homes for sale",
       "sellYourAfh": "Sell Your AFH"
     },
@@ -379,13 +379,13 @@
         "note": "Estimate. No survey covers memory care; it typically runs about 25% above assisted living in the same area."
       },
       "nursing-semi": {
-        "label": "Nursing Home — Semi-Private",
+        "label": "Nursing Home (Semi-Private)",
         "shortLabel": "Nursing Home Shared Room",
         "unit": "monthly",
         "note": "Washington runs about 37% above the national median."
       },
       "nursing-private": {
-        "label": "Nursing Home — Private Room",
+        "label": "Nursing Home (Private Room)",
         "shortLabel": "Nursing Home Private Room",
         "unit": "monthly",
         "note": "Washington runs about 48% above the national median; private rooms cost more than shared ones."
@@ -444,7 +444,7 @@
       "currentlyRunsIn": "in Washington currently runs"
     },
     "printSummary": {
-      "title": "Senior Living Cost Calculator — Results Summary",
+      "title": "Senior Living Cost Calculator: Results Summary",
       "preparedVia": "Prepared via realpropertyplanning.com on {{date}}",
       "careType": "Care Type",
       "careTimeline": "Care Timeline",
@@ -460,13 +460,13 @@
       "rowPerMonth": "Per month",
       "rowPerYear": "Per year",
       "rowTotal": "Total over {{years}}-year plan",
-      "footer": "Washington medians from the CareScout Cost of Care Survey, 2025 data (published March 2026); memory care, adult family home, independent living and CCRC figures are estimates. Actual costs vary by region, provider, and level of care. For general planning only. Courtesy of Real Property Planning — realpropertyplanning.com."
+      "footer": "Washington medians from the CareScout Cost of Care Survey, 2025 data (published March 2026); memory care, adult family home, independent living and CCRC figures are estimates. Actual costs vary by region, provider, and level of care. For general planning only. Courtesy of Real Property Planning (realpropertyplanning.com)."
     },
     "whyCostsVary": {
       "eyebrow": "Key Concept",
       "heading": "Why Washington Costs More Than the National Average",
       "paragraph1": "Washington State consistently ranks above the national median across nearly every category of senior care. Higher regional labor costs, a competitive caregiving job market, and higher costs of living in metropolitan areas all contribute to this gap.",
-      "paragraph2Before": "An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care — worth exploring through",
+      "paragraph2Before": "An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care, worth exploring through",
       "afhClubLink": "AFH Club"
     }
   },
@@ -501,7 +501,7 @@
       "roleSelectPlaceholder": "Select one",
       "messageLabel": "Message *",
       "messagePlaceholder": "Share your question, suggest a resource, or ask about joining the professional network...",
-      "privacyNote": "🔒 Your information is used only to respond to your inquiry — never sold or shared for marketing.",
+      "privacyNote": "🔒 Your information is used only to respond to your inquiry and is never sold or shared for marketing.",
       "sendButton": "Send My Question",
       "sendingButton": "Sending...",
       "reasonLabel": "What brings you here? *",
@@ -522,7 +522,7 @@
     "toasts": {
       "verificationTitle": "Please complete the verification",
       "verificationDescription": "Check the verification box above the Send button, then try again.",
-      "successTitle": "Thanks — Message Received",
+      "successTitle": "Thanks, Message Received",
       "successDescription": "A reply is on its way shortly. Need to talk sooner? Call (206) 900-3015.",
       "errorTitle": "Something went wrong",
       "errorDescription": "Your message wasn't sent. Please try again, or call (206) 900-3015."

@@ -54,7 +54,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "How Probate Real Estate Works in Washington", href: "/guides/how-probate-real-estate-works" },
       { title: "Preparing the Property for Sale", href: "/estate-probate-inherited-property/preparing-the-property" },
       { title: "Probate Real Estate Sales in Washington State", href: "/probate-estate-sales" },
-      { title: "Probate vs Trust Sale in Washington — What's the Difference?", href: "/guides/probate-vs-trust-sale-washington" },
+      { title: "Probate vs Trust Sale in Washington: What's the Difference?", href: "/guides/probate-vs-trust-sale-washington" },
       { title: "Selling an Inherited Home", href: "/selling-an-inherited-home" },
       { title: "Understanding Probate & Legal Authority", href: "/estate-probate-inherited-property/probate-and-legal-authority" },
       { title: "Washington State Probate & Estate Glossary", href: "/probate-glossary" },
@@ -84,7 +84,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
     landing: { href: "/executor-responsibilities-first-steps", label: "Start here: an executor's first steps" },
     pieces: [
       { title: "Can an Executor Sell Before Probate in Washington?", href: "/guides/executor-sell-house-before-probate-washington" },
-      { title: "Common Executor Mistakes — and How to Avoid Them", href: "/executor-responsibilities-first-steps/common-mistakes" },
+      { title: "Common Executor Mistakes and How to Avoid Them", href: "/executor-responsibilities-first-steps/common-mistakes" },
       { title: "Executor's Guide", href: "/executors/executors-guide" },
       { title: "Understanding Your Legal Duties as Executor", href: "/executor-responsibilities-first-steps/legal-duties" },
       { title: "What Executors Should Do Before Selling a Home", href: "/guides/what-executors-should-do" },
@@ -196,7 +196,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
     pieces: [
       { title: "Building Your Professional Team", href: "/building-your-professional-team" },
       { title: "Frequently Asked Questions About Probate Real Estate", href: "/faq" },
-      { title: "Gray Divorce and Your Home — What Washington State Couples Need to Know", href: "/gray-divorce" },
+      { title: "Gray Divorce and Your Home: What Washington State Couples Need to Know", href: "/gray-divorce" },
       { title: "How the Process Works", href: "/how-the-process-works" },
     ],
   },

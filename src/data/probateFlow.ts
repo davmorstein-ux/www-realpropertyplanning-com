@@ -131,7 +131,7 @@ export const FLOW_PAGES: FlowPage[] = [
     watch: [
       { lead: "Being named in the will is not enough.", text: "Until the court issues letters, you can secure and insure the house but cannot sell it.", cite: { label: "RCW 11.68.090", href: rcw("11.68.090") } },
       PROPERTY_TAX,
-      { lead: "Notify heirs and DSHS.", text: "Heirs within 20 days of appointment (RCW 11.28.237); the notice to creditors is also mailed to DSHS, which can claim for Medicaid (RCW 11.40.020).", cite: { label: "RCW 11.40.020", href: rcw("11.40.020") } },
+      { lead: "Notify heirs and DSHS.", text: "Heirs within 20 days of appointment (RCW 11.28.237). The notice to creditors is optional, but if you give it, a copy is also mailed to DSHS, which can claim for Medicaid (RCW 11.40.020).", cite: { label: "RCW 11.40.020", href: rcw("11.40.020") } },
     ],
     next: { label: "Selling the house", href: SELLING_PATH },
   },

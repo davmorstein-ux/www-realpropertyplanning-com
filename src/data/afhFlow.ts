@@ -186,10 +186,10 @@ export const AFH_FLOW_PAGES: FlowPage[] = [
 export const AFH_FLOW_BY_SLUG = Object.fromEntries(AFH_FLOW_PAGES.map((p) => [p.slug, p])) as Record<string, FlowPage>;
 
 export const afhFlowPrerenderSections = (p: FlowPage): string[] => [
-  `Where this fits — ${p.trail.join(" → ")}.`,
+  `Where this fits: ${p.trail.join(" → ")}.`,
   ...p.summary,
-  `Steps, in order — ${p.steps.map((s, i) => `${i + 1}. ${s.label}: ${s.note}`).join(" ")}`,
-  `Watch out for — ${p.watch.map((w) => `${w.lead} ${w.text}${w.cite ? ` (${w.cite.label})` : ""}`).join(" ")}`,
+  `Steps, in order: ${p.steps.map((s, i) => `${i + 1}. ${s.label}: ${s.note}`).join(" ")}`,
+  `Watch out for: ${p.watch.map((w) => `${w.lead} ${w.text}${w.cite ? ` (${w.cite.label})` : ""}`).join(" ")}`,
   ...(p.next ? [`Next: ${p.next.label} (${p.next.href}).`] : []),
   `Back to the flow chart: ${AFH_FLOW_BASE}. Rules and key figures: ${AFH_RULES_PATH}.`,
 ];

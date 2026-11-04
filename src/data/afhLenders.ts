@@ -29,13 +29,13 @@ export const LANES: FinancingLane[] = [
     title: "Owner-occupied residential AFH financing",
     who: "You will live in the home and run it yourself.",
     summary:
-      "A handful of Puget Sound lenders write standard residential mortgages on licensed adult family homes when the buyer will occupy the home. It is the cheapest money available and the lowest down payment, but it is underwritten on the buyer's own qualifications, and it finances the house — not the business.",
+      "A handful of Puget Sound lenders write standard residential mortgages on licensed adult family homes when the buyer will occupy the home. It is the cheapest money available and the lowest down payment, but it is underwritten on the buyer's own qualifications, and it finances the house, not the business.",
     typical: ["Conventional or government-backed residential programs", "Down payments the lender publishes as low as 5% for qualified owner-occupants", "30-year fixed terms at residential rates", "Business portion paid in cash or on seller terms"],
-    tradeoffs: ["Owner-occupancy required", "Qualifying is on the buyer's income and credit; the home's business revenue may count only partly or not at all", "Not every lender will write it — use one that says it does"],
+    tradeoffs: ["Owner-occupancy required", "Qualifying is on the buyer's income and credit; the home's business revenue may count only partly or not at all", "Not every lender will write it; use one that says it does"],
   },
   {
     id: "sba7a",
-    title: "SBA 7(a) — business acquisition financing",
+    title: "SBA 7(a): business acquisition financing",
     who: "You are buying the licensed operating business along with the real estate.",
     summary:
       "The workhorse for AFH purchases. A bank lends; the SBA guarantees most of it, which lets the bank accept about 10% down, a 25-year term with no balloon, and a loan that includes the business, working capital and closing costs. The price is a higher, variable rate and a slower close.",
@@ -44,10 +44,10 @@ export const LANES: FinancingLane[] = [
   },
   {
     id: "sba504",
-    title: "SBA 504 — owner-occupied real estate",
+    title: "SBA 504: owner-occupied real estate",
     who: "You want a lower fixed rate on the property and can handle the business separately.",
     summary:
-      "A bank loan paired with a fixed-rate loan from a Certified Development Company. About 10% down, and the CDC portion is fixed for 25 years at a rate set off Treasury yields — cheaper than 7(a). It cannot finance the business portion, so that is paid in cash or on seller terms.",
+      "A bank loan paired with a fixed-rate loan from a Certified Development Company. About 10% down, and the CDC portion is fixed for 25 years at a rate set off Treasury yields, cheaper than 7(a). It cannot finance the business portion, so that is paid in cash or on seller terms.",
     typical: ["About 10% down", "CDC portion fixed for 25 years; bank portion at market", "Real estate and eligible improvements only"],
     tradeoffs: ["Business, goodwill and working capital are excluded", "Two lenders, two closings, more time"],
   },
