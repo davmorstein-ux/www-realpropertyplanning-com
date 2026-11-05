@@ -99,6 +99,8 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   "/long-term-care/hospital-discharge-planning": ["careManagers", "seniorLiving"],
   "/long-term-care/short-term-nursing-home-stays": ["careManagers"],
   "/gray-divorce": ["familyLaw", "financialPlanning", "cpas"],
+  /* Nov 6, 2026 (owner): the shared-housing page ends with the featured broker, since a reader usually sells a house first. */
+  "/senior-living/shared-housing": ["realEstate", "moveManagers", "financialPlanning"],
   // Adult family homes, family side (Oct 21, 2026)
   "/senior-living/choosing-an-adult-family-home": ["seniorLiving", "careManagers"],
   "/adult-family-home-costs": ["seniorLiving", "careManagers"],

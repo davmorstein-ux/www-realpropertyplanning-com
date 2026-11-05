@@ -155,6 +155,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "Independent Living", href: "/senior-living/independent-living" },
       { title: "Memory Care", href: "/senior-living/memory-care" },
       { title: "Nursing & Skilled Care", href: "/senior-living/nursing-and-skilled-care" },
+      { title: "Renting a Room in a Shared Home", href: "/senior-living/shared-housing" },
       { title: "Senior Housing Options", href: "/articles/senior-housing-options" },
       { title: "Senior Housing Options Explained", href: "/senior-living-and-relocation" },
       { title: "Skilled Nursing Care", href: "/senior-living/skilled-nursing" },

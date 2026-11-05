@@ -1932,6 +1932,15 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State.",
     h1: "Nursing & Skilled Care",
   },
+  "/senior-living/shared-housing": {
+    title: "Renting a Room in a Shared Home: Shared Housing for Seniors in Washington State (WA) | Real Property Planning",
+    description: "Shared housing for independent older adults in Washington State (WA): what a room in a shared home costs in King and Snohomish counties, the kinds of shared housing, the companies offering it, and what to check before signing.",
+    h1: "Renting a Room in a Shared Home",
+    quickAnswerQ: "Is renting a room in a shared home a good option for an older adult in Washington?",
+    quickAnswerA: "It can be, for someone who still manages their own care. A private bedroom in a shared house lets an older adult live near shopping, clinics and transit for far less than an apartment, with no house to keep up. Seattle-area rooms ran about $525 to $1,500 a month in November 2026. It is independent living with no services: once help with bathing, dressing or medications is needed, an adult family home or assisted living fits better.",
+    intro: "A plain-language guide for independent older adults in King and Snohomish counties who want to leave the upkeep of a house behind and keep costs down: who shared housing suits, what rooms cost, the kinds of shared housing, the companies offering rooms (HomeShare Online, Bungalow, PadSplit), how selling the house changes the math, and a checklist of what to check before signing.",
+    article: { datePublished: "2026-11-06", dateModified: "2026-11-06" },
+  },
   "/senior-living/skilled-nursing": {
     title: "Skilled Nursing Care",
     description: "Skilled Nursing Care facilities in Washington State providing 24-hour medical care and rehabilitation, often after hospitalization or for long-term clinical needs.",

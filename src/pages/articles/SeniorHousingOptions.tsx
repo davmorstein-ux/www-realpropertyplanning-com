@@ -100,6 +100,14 @@ const SeniorHousingOptions = () => {
                 The key limit: independent living does not include personal care. It is designed for adults who don't
                 need help with daily tasks, only relief from the work of running a household.
               </p>
+              <p className={pClass}>
+                On a tighter budget, a private room in a shared home gives the same freedom from upkeep, near shopping and
+                clinics, for far less than an apartment, though without meals or services. See{" "}
+                <Link to="/senior-living/shared-housing" className={inlineLink}>
+                  renting a room in a shared home
+                </Link>
+                .
+              </p>
 
               <hr className={hrClass} />
 

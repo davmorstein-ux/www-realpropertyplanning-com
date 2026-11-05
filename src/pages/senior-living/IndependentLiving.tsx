@@ -14,6 +14,14 @@ const FiftyFiveNote = (
         </Link>
         .
       </p>
+      {/* Nov 6, 2026 (owner): shared housing is the lower-cost independent-living option. */}
+      <p className="max-w-3xl mx-auto text-lg leading-relaxed text-foreground" style={{ marginTop: 16 }}>
+        On a tighter budget: a private room in a shared home can keep you near shopping and clinics for far less than an apartment.{" "}
+        <Link to="/senior-living/shared-housing" className="font-semibold text-primary underline underline-offset-4">
+          Renting a room in a shared home
+        </Link>
+        .
+      </p>
     </div>
   </section>
 );
