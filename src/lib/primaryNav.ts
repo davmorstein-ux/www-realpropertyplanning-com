@@ -103,6 +103,8 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Cost of Care Calculators", href: "/cost-of-care-calculator" },
       { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
       { name: "Downsizing & Preparing to Move", href: "/downsizing-preparing-for-transition" },
+      /* Nov 6, 2026 (owner): one click to the shared-housing page from any page. */
+      { name: "Shared Housing for Seniors", href: "/senior-living/shared-housing" },
       { name: "Long-Term Care", href: "/long-term-care" },
     ],
     /* Senior Living Advisors and Senior Move Managers left the menu (Nov 1,
