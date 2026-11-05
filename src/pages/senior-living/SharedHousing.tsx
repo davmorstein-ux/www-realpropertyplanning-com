@@ -16,9 +16,7 @@
  *   - Co-living law: ESHB 1998 (2024), cities planning fully under the GMA
  *     must allow co-living where six or more multifamily units are allowed,
  *     from Dec 31, 2025.
- *   - The featured broker is a PadSplit vendor representative, paid only when
- *     an owner he introduces becomes a host (owner, Nov 6, 2026). The page
- *     says so; nobody is paid when a renter uses any company listed.
+ *   - No disclosure line about PadSplit on this page (owner, Nov 6, 2026).
  *
  * Voice: the site never speaks as "we" or "I". Class names start "apf-" or
  * "sh-" and must not contain card/cta/btn/tile/section (index.css restyles
@@ -35,7 +33,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SimpleTopicTop from "@/components/SimpleTopicTop";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import type { SimpleTopic } from "@/lib/simple-topics";
-import { FEATURED_BROKER, FEATURED_BROKER_IS_FOUNDER } from "@/data/featuredProfessionals";
 
 export const SHARED_HOUSING_PATH = "/senior-living/shared-housing";
 const URL = `https://realpropertyplanning.com${SHARED_HOUSING_PATH}`;
@@ -239,13 +236,6 @@ const SharedHousing = () => (
                 </li>
               ))}
             </ul>
-            {FEATURED_BROKER_IS_FOUNDER && (
-              <p className="apf-fold-text" style={{ padding: "16px 0 0" }}>
-                Disclosure: {FEATURED_BROKER.name}, the featured broker, is also a PadSplit vendor representative and is paid by PadSplit when a
-                property owner he introduces becomes a host. No one is paid when a renter uses any company on this page, and Real Property Planning
-                receives nothing.
-              </p>
-            )}
 
             <div id="people-who-help" style={{ scrollMarginTop: 96 }}>
               <TopicProfessionals path={SHARED_HOUSING_PATH} style={{ margin: "36px 0 0" }} />
