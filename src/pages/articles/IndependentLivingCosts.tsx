@@ -225,6 +225,11 @@ const IndependentLivingCosts = () => {
                 cost of the current home.
               </p>
               <p className={pClass}>
+                If the monthly fee is more than the budget allows, a private room in a shared home offers the same freedom
+                from upkeep, near shopping and clinics, for far less, though without meals or services. See{" "}
+                <Link to="/senior-living/shared-housing" className={inlineLink}>renting a room in a shared home</Link>.
+              </p>
+              <p className={pClass}>
                 Once a community is chosen, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate the planning, packing and setup.
               </p>
 

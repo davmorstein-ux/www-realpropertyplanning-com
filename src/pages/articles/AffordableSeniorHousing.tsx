@@ -114,6 +114,11 @@ const AffordableSeniorHousing = () => {
               <p className={pClass}>
                 If affordable senior housing is likely to be part of the plan, apply now.
               </p>
+              <p className={pClass}>
+                For someone who still manages their own care, a private room in a shared home can be a lower-cost place to
+                live now, near shopping and clinics, while waiting for a unit. See{" "}
+                <Link to="/senior-living/shared-housing" className={inlineLink}>renting a room in a shared home</Link>.
+              </p>
 
               <hr className={hrClass} />
 

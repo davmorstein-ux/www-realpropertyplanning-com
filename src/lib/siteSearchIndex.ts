@@ -194,7 +194,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/", label: "Home" },
   { path: "/real-estate-appraiser", label: "Real Estate Appraiser" },
   { path: "/realtor", label: "Realtor" },
-  { path: "/senior-living/shared-housing", label: "Renting a Room in a Shared Home" },
+  { path: "/senior-living/shared-housing", label: "Renting a Room in a Shared Home (Affordable Rooms for Seniors)" },
   { path: "/retirement-reverse-mortgage", label: "Retirement Reverse Mortgage" },
   { path: "/san-juan-county", label: "San Juan County" },
   { path: "/search", label: "Search" },

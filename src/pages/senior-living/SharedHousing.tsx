@@ -185,8 +185,8 @@ const FOLDS: Fold[] = [
 const SharedHousing = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Renting a Room in a Shared Home: Shared Housing for Seniors in Washington State (WA) | Real Property Planning"
-      description="Shared housing for independent older adults in Washington State (WA): what a room in a shared home costs in King and Snohomish counties, the kinds of shared housing, the companies offering it, and what to check before signing."
+      title="Affordable Rooms for Rent for Seniors: Shared Housing in Washington State (WA) | Real Property Planning"
+      description="Affordable senior housing near Seattle: rooms for rent in shared homes for independent older adults in Washington State (WA). What rooms cost in King and Snohomish counties, who offers them, and what to check before signing."
       canonical={URL}
     />
     <BreadcrumbSchema

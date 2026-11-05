@@ -1933,8 +1933,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Nursing & Skilled Care",
   },
   "/senior-living/shared-housing": {
-    title: "Renting a Room in a Shared Home: Shared Housing for Seniors in Washington State (WA) | Real Property Planning",
-    description: "Shared housing for independent older adults in Washington State (WA): what a room in a shared home costs in King and Snohomish counties, the kinds of shared housing, the companies offering it, and what to check before signing.",
+    title: "Affordable Rooms for Rent for Seniors: Shared Housing in Washington State (WA) | Real Property Planning",
+    description: "Affordable senior housing near Seattle: rooms for rent in shared homes for independent older adults in Washington State (WA). What rooms cost in King and Snohomish counties, who offers them, and what to check before signing.",
     h1: "Renting a Room in a Shared Home",
     quickAnswerQ: "Is renting a room in a shared home a good option for an older adult in Washington?",
     quickAnswerA: "It can be, for someone who still manages their own care. A private bedroom in a shared house lets an older adult live near shopping, clinics and transit for far less than an apartment, with no house to keep up. Seattle-area rooms ran about $525 to $1,500 a month in November 2026. It is independent living with no services: once help with bathing, dressing or medications is needed, an adult family home or assisted living fits better.",

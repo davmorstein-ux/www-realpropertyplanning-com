@@ -205,7 +205,11 @@ const SeniorHousingOptions = () => {
                 they needed to.
               </p>
               <p className={pClass}>
-                If affordable senior housing is part of your plan, apply early.
+                If affordable senior housing is part of your plan, apply early. In the meantime, a{" "}
+                <Link to="/senior-living/shared-housing" className={inlineLink}>
+                  room in a shared home
+                </Link>{" "}
+                is another lower-cost option for someone who still manages their own care.
               </p>
               <p className={pClass}>
                 <em>

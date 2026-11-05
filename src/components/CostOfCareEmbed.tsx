@@ -182,6 +182,18 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           </div>
         )}
 
+        {/* Independent living only (owner, Nov 6, 2026): the cost-shock moment,
+            so point to the lower-cost shared-housing option. */}
+        {careType.id === "independent-living" && (
+          <p className="coc2-note coc-no-print" style={{ margin: "18px 0 0", fontSize: 18, lineHeight: 1.55, color: "#1c1917" }}>
+            <strong>More than your budget allows?</strong> A private room in a shared home can keep you near shopping and clinics for a
+            fraction of this.{" "}
+            <Link to="/senior-living/shared-housing" style={{ color: "#1B3A6B", fontWeight: 700 }}>
+              Renting a room in a shared home
+            </Link>
+          </p>
+        )}
+
         <div className="coc2-foot">
           <p className="coc2-source">
             {careType.estimate && <>{careType.note} </>}
