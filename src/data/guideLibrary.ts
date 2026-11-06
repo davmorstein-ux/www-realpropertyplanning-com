@@ -185,6 +185,11 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "Ways to Keep the Home", href: "/facing-foreclosure/keeping-the-home" },
       { title: "Selling Before the Sale", href: "/facing-foreclosure/selling-before-the-sale" },
       { title: "Avoiding Foreclosure Scams", href: "/facing-foreclosure/avoiding-scams" },
+      { title: "How Long Does Foreclosure Take in Washington State?", href: "/facing-foreclosure/how-long-does-foreclosure-take-washington" },
+      { title: "How long after a Notice of Trustee's Sale is the sale in Washington?", href: "/facing-foreclosure/can-i-stop-a-trustees-sale-washington" },
+      { title: "When is it too late to catch up on missed payments in Washington?", href: "/facing-foreclosure/what-is-a-notice-of-default-washington" },
+      { title: "Can I Stop a Trustee's Sale in Washington State?", href: "/facing-foreclosure/reverse-mortgage-foreclosure-property-taxes" },
+      { title: "What is the last day to stop a foreclosure sale by catching up in Washington?", href: "/facing-foreclosure/sell-house-during-foreclosure-washington" },
     ],
   },
   {

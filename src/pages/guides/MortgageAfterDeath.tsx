@@ -147,6 +147,8 @@ const MortgageAfterDeath = () => (
           <li><Link className="ptx-link" to="/guides/property-taxes-after-death-washington">Property Taxes After a Death in Washington</Link></li>
           <li><Link className="ptx-link" to="/guides/heirs-disagree-selling-house">When Heirs Disagree About Selling the House</Link></li>
           <li><Link className="ptx-link" to="/guides/who-has-authority-sell-probate-property-washington">Who Has Authority to Sell the House?</Link></li>
+          <li><Link className="ptx-link" to="/facing-foreclosure">Facing Foreclosure: Free Help and the Deadlines</Link></li>
+          <li><Link className="ptx-link" to="/facing-foreclosure/sell-house-during-foreclosure-washington">Can You Sell a House During Foreclosure in Washington?</Link></li>
           <li><Link className="ptx-link" to="/probate-glossary">Washington State Probate &amp; Estate Glossary</Link></li>
         </ul>
         <div className="ptx-note" style={{ marginTop: 24 }}>

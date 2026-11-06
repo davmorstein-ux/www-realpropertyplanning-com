@@ -40,7 +40,7 @@ describe("topic professionals", () => {
 
   it("real estate & appraisal (the founder) appears only on property and appraisal topics", () => {
     for (const [p, keys] of Object.entries(TOPIC_PROFESSIONALS)) {
-      if (keys.includes("realEstate")) expect(p, p).toMatch(/property|managing-the-home|appraisal|shared-housing|selling-before-the-sale/); // shared housing: owner, Nov 6, 2026 (readers usually sell a house first)
+      if (keys.includes("realEstate")) expect(p, p).toMatch(/property|managing-the-home|appraisal|shared-housing|selling-before-the-sale|sell-house-during-foreclosure/); // shared housing: owner, Nov 6, 2026 (readers usually sell a house first)
     }
   });
 

@@ -570,6 +570,11 @@ export const AppRoutes = () => (
       <Route path="/facing-foreclosure/keeping-the-home" element={<FacingForeclosure />} />
       <Route path="/facing-foreclosure/selling-before-the-sale" element={<FacingForeclosure />} />
       <Route path="/facing-foreclosure/avoiding-scams" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/how-long-does-foreclosure-take-washington" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/can-i-stop-a-trustees-sale-washington" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/what-is-a-notice-of-default-washington" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/reverse-mortgage-foreclosure-property-taxes" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/sell-house-during-foreclosure-washington" element={<FacingForeclosure />} />
       <Route path="/senior-living/assisted-living" element={<AssistedLiving />} />
       <Route path="/senior-living/skilled-nursing" element={<SkilledNursing />} />
       <Route path="/senior-living/aging-in-place" element={<AgingInPlace />} />

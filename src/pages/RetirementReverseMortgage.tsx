@@ -110,6 +110,14 @@ const RetirementReverseMortgage = () => (
             <p className="text-muted-foreground text-lg leading-relaxed">
               If a borrower is away from the home for more than 12 consecutive months in a healthcare facility and there is no co-borrower living in the home, the loan may become due. That is why the loan should be set up before a care need arises, with both spouses as co-borrowers whenever possible. Medicaid eligibility rules for reverse mortgage borrowers are also complex, so talk with a financial planner and an elder law attorney before proceeding.
             </p>
+            <p className="text-muted-foreground text-lg leading-relaxed" style={{ marginTop: 16 }}>
+              The borrower must also keep paying property taxes, homeowner's insurance and any association dues. Falling behind on those is
+              the most common reason reverse mortgages go into foreclosure. See{" "}
+              <Link to="/facing-foreclosure/reverse-mortgage-foreclosure-property-taxes" className="text-accent hover:text-gold underline underline-offset-4">
+                reverse mortgage foreclosure for unpaid property taxes
+              </Link>
+              .
+            </p>
           </div>
 
           <div>

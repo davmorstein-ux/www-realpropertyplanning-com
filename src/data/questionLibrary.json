@@ -1305,6 +1305,73 @@
    "a": "It is a bank or investment account with a named beneficiary, marked payable on death (POD) or transfer on death (TOD). Like the beneficiary on a life insurance policy or retirement account, the designation passes the account directly to that person at death, outside the will, and in most cases it controls whatever the will says. Review these designations regularly to make sure they still reflect your wishes, especially after a divorce, a death in the family or another major life change.",
    "path": "/planning-before-a-crisis/legal-documents",
    "pathTitle": "The Legal Documents That Matter Most"
+  },
+  {
+   "id": "PA-103",
+   "topic": "Behind on the mortgage",
+   "q": "How long does foreclosure take in Washington?",
+   "alts": [
+    "how long does a foreclosure take in washington state",
+    "how much time do I have before my house is foreclosed",
+    "when will the bank sell my house if I stop paying",
+    "washington foreclosure timeline"
+   ],
+   "a": "Usually many months. Before a Notice of Default on an owner-occupied home, the lender must write, call at least three times and offer to meet, then wait 30 or 90 days. The Notice of Trustee's Sale must come at least 90 days before the sale, or 120 days for most owner-occupied homes, and the homeowner can catch up and stop the sale until the eleventh day before it.",
+   "path": "/facing-foreclosure/how-long-does-foreclosure-take-washington",
+   "pathTitle": "How Long Does Foreclosure Take in Washington State?"
+  },
+  {
+   "id": "PA-104",
+   "topic": "Behind on the mortgage",
+   "q": "Can I stop a foreclosure sale in Washington?",
+   "alts": [
+    "can I stop a trustee's sale",
+    "how do I stop foreclosure on my house",
+    "is it too late to stop my foreclosure",
+    "stop foreclosure washington state"
+   ],
+   "a": "Often, yes. Catching up on the missed amount stops the sale until the eleventh day before it. An agreement with the lender, foreclosure mediation (which a housing counselor or attorney must request at least 90 days before the sale), or selling the house and closing first can also prevent it. The free housing counselor hotline is 1-877-894-HOME (4663).",
+   "path": "/facing-foreclosure/can-i-stop-a-trustees-sale-washington",
+   "pathTitle": "Can I Stop a Trustee's Sale in Washington State?"
+  },
+  {
+   "id": "PA-105",
+   "topic": "Behind on the mortgage",
+   "q": "What does a Notice of Default mean?",
+   "alts": [
+    "I got a notice of default what do I do",
+    "notice of default washington",
+    "does a notice of default mean I lose my house"
+   ],
+   "a": "It is the formal notice that the home loan is behind and that foreclosure can follow. It is not the sale, and there is still time: the next step would be a Notice of Trustee's Sale, at least 90 days before any sale. Call a free housing counselor at 1-877-894-HOME (4663), keep every notice, and ignore strangers offering to save the house.",
+   "path": "/facing-foreclosure/what-is-a-notice-of-default-washington",
+   "pathTitle": "What Does a Notice of Default Mean in Washington State?"
+  },
+  {
+   "id": "PA-106",
+   "topic": "Behind on the mortgage",
+   "q": "Can a reverse mortgage go into foreclosure over unpaid property taxes?",
+   "alts": [
+    "reverse mortgage foreclosure property taxes",
+    "can I lose my house with a reverse mortgage",
+    "mom is behind on property taxes with a reverse mortgage"
+   ],
+   "a": "Yes. The borrower must keep paying property taxes, insurance and any association dues, and falling behind on those is the most common reason reverse mortgages are foreclosed. HECM rules allow repayment plans and, for a borrower over 80 with a critical health condition in the household, an At-Risk Extension. Washington State's senior property tax programs can lower or defer the bill.",
+   "path": "/facing-foreclosure/reverse-mortgage-foreclosure-property-taxes",
+   "pathTitle": "Can a Reverse Mortgage Be Foreclosed for Unpaid Property Taxes?"
+  },
+  {
+   "id": "PA-107",
+   "topic": "Behind on the mortgage",
+   "q": "Can I sell my house during foreclosure?",
+   "alts": [
+    "can I sell my house in pre-foreclosure",
+    "sell house before foreclosure washington",
+    "can I still sell after a notice of trustee sale"
+   ],
+   "a": "Yes. The owner keeps ownership until the trustee's sale, so the house can be sold and closed before the sale date. The loan and missed payments are paid at closing and the rest of the money goes to the owner. Start early, because a sale usually takes several weeks to a few months to close.",
+   "path": "/facing-foreclosure/sell-house-during-foreclosure-washington",
+   "pathTitle": "Can I Sell My House During Foreclosure in Washington State?"
   }
  ],
  "aging-parent": [
@@ -3305,7 +3372,8 @@
     "house in living trust probate Washington",
     "Does a trust avoid probate for the house?",
     "house not deeded into trust",
-    "pour-over will house not in trust"
+    "pour-over will house not in trust",
+    "can the trustee sell a house held in a living trust without probate"
    ],
    "a": "Usually not, if the house was deeded into the trust before the death. The successor trustee takes over and can sell it, usually by giving the title company a certification of trust. But check the deed: signing a trust does not move the house into it. A house left in her own name usually goes through probate first, even when a will sends everything to the trust.",
    "path": "/washington-probate-guide/house-in-a-trust",

@@ -167,6 +167,7 @@ const PropertyTaxesAfterDeath = () => (
           <li><Link className="ptx-link" to="/washington-probate-guide">Washington State Probate &amp; Estate Property: The Complete Guide</Link></li>
           <li><Link className="ptx-link" to="/guides/executor-first-steps-house">What Should an Executor Do First With a House?</Link></li>
           <li><Link className="ptx-link" to="/guides/taxes-selling-inherited-house-washington">What Taxes Apply When Selling an Inherited House?</Link></li>
+          <li><Link className="ptx-link" to="/facing-foreclosure/reverse-mortgage-foreclosure-property-taxes">Reverse Mortgage Foreclosure for Unpaid Property Taxes</Link></li>
           <li><Link className="ptx-link" to="/probate-glossary">Washington State Probate &amp; Estate Glossary</Link></li>
         </ul>
         <div className="ptx-note" style={{ marginTop: 24 }}>
