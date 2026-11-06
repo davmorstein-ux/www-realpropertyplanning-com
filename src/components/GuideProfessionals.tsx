@@ -14,7 +14,7 @@ import { useLocation } from "react-router-dom";
 import TopicProfessionals from "@/components/TopicProfessionals";
 import { professionalsForTopic } from "@/data/topicProfessionals";
 
-const OWN_PLACEMENT = ["/helping-an-aging-parent", "/planning-before-a-crisis/", "/estate-probate-inherited-property/", "/senior-living/shared-housing"];
+const OWN_PLACEMENT = ["/helping-an-aging-parent", "/planning-before-a-crisis/", "/estate-probate-inherited-property/", "/senior-living/shared-housing", "/facing-foreclosure"];
 
 export default function GuideProfessionals() {
   const { pathname } = useLocation();

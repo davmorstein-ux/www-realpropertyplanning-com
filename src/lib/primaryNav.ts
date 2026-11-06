@@ -105,6 +105,8 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Downsizing & Preparing to Move", href: "/downsizing-preparing-for-transition" },
       /* Nov 6, 2026 (owner): one click to the shared-housing page from any page. */
       { name: "Affordable Rooms for Seniors", href: "/senior-living/shared-housing" },
+      /* Nov 6, 2026 (owner): the Facing Foreclosure section lives in this menu. */
+      { name: "Facing Foreclosure", href: "/facing-foreclosure" },
       { name: "Long-Term Care", href: "/long-term-care" },
     ],
     /* Senior Living Advisors and Senior Move Managers left the menu (Nov 1,

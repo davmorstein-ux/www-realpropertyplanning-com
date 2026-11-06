@@ -117,6 +117,7 @@ const MemoryCare = lazy(() => import("./pages/senior-living/MemoryCare"));
 const NursingAndSkilledCare = lazy(() => import("./pages/senior-living/NursingAndSkilledCare"));
 const IndependentLiving = lazy(() => import("./pages/senior-living/IndependentLiving"));
 const SharedHousing = lazy(() => import("./pages/senior-living/SharedHousing"));
+const FacingForeclosure = lazy(() => import("./pages/FacingForeclosure"));
 const AssistedLiving = lazy(() => import("./pages/senior-living/AssistedLiving"));
 const SkilledNursing = lazy(() => import("./pages/senior-living/SkilledNursing"));
 const AgingInPlace = lazy(() => import("./pages/senior-living/AgingInPlace"));
@@ -564,6 +565,11 @@ export const AppRoutes = () => (
       <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
       <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
       <Route path="/senior-living/shared-housing" element={<SharedHousing />} />
+      <Route path="/facing-foreclosure" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/free-help-and-deadlines" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/keeping-the-home" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/selling-before-the-sale" element={<FacingForeclosure />} />
+      <Route path="/facing-foreclosure/avoiding-scams" element={<FacingForeclosure />} />
       <Route path="/senior-living/assisted-living" element={<AssistedLiving />} />
       <Route path="/senior-living/skilled-nursing" element={<SkilledNursing />} />
       <Route path="/senior-living/aging-in-place" element={<AgingInPlace />} />

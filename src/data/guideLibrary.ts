@@ -177,6 +177,17 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
     ],
   },
   {
+    id: "facing-foreclosure",
+    label: "Behind on the mortgage",
+    landing: { href: "/facing-foreclosure", label: "Start here: Facing Foreclosure" },
+    pieces: [
+      { title: "Free Help and the Deadlines That Matter", href: "/facing-foreclosure/free-help-and-deadlines" },
+      { title: "Ways to Keep the Home", href: "/facing-foreclosure/keeping-the-home" },
+      { title: "Selling Before the Sale", href: "/facing-foreclosure/selling-before-the-sale" },
+      { title: "Avoiding Foreclosure Scams", href: "/facing-foreclosure/avoiding-scams" },
+    ],
+  },
+  {
     id: "long-term-care",
     label: "Long-term care",
     landing: { href: "/long-term-care", label: "Start here: understanding long-term care" },

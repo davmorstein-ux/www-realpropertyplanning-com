@@ -48,7 +48,7 @@ const SimpleTopicTop = ({ topic, next, talkHref }: Props) => (
           {next.label} <RppArrow />
         </Link>
       )}
-      {talkHref.startsWith("#") ? (
+      {talkHref.startsWith("#") || talkHref.startsWith("tel:") ? (
         <a href={talkHref} className="apf-talk">Or talk to someone</a>
       ) : (
         <Link to={talkHref} className="apf-talk">Or talk to someone</Link>
