@@ -395,8 +395,21 @@ const Header = () => {
              compositor. Nothing inside the header depends on the transform:
              the mobile menu is portalled to <body>, and the search and language
              dropdowns are position:absolute. */
-          transform: isMobile ? "none" : "translateZ(0)",
-          willChange: isMobile ? "auto" : "transform",
+          /* Nov 7, 2026: PHONES GET THE LAYER BACK, now that the mobile header
+             is FIXED. David's iPhone 15 screen recording (Safari) showed the
+             header wobbling 1-3 device pixels up and down on every scrolled
+             frame on the hub pages, still the moment scrolling stopped: Safari
+             was repainting the fixed bar with the page instead of moving it as
+             its own layer. The warning above was about a STICKY header (sticky
+             offset and transform reconciled on different threads); a fixed
+             element has no sticky offset, so that conflict cannot happen. If
+             the mobile header ever goes back to sticky, set this to "none" on
+             phones again. */
+          transform: "translate3d(0, 0, 0)",
+          WebkitTransform: "translate3d(0, 0, 0)",
+          WebkitBackfaceVisibility: "hidden",
+          backfaceVisibility: "hidden",
+          willChange: "transform",
           /* Strengthened from 14% to 30% opacity. Not a new dark rule: the
              header is cream and the hero photograph sits directly beneath it,
              so the tonal contrast already marks that boundary — a hard dark

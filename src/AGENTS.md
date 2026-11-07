@@ -89,6 +89,11 @@ sufficient; ask for a screenshot from the real phone when it matters.
   scrolling on iOS. A spacer `<div data-header-spacer>` right after `</header>`
   holds its place in the flow. **The fixed header and the spacer are a pair.**
   If the mobile header ever goes back to sticky, remove the spacer too.
+  Since Nov 7, 2026 the fixed header also carries `translate3d(0,0,0)` +
+  `backface-visibility: hidden` on phones (its own compositing layer): an
+  iPhone 15 screen recording showed it wobbling 1-3 device pixels on every
+  scrolled frame on the hub pages. That layer is safe only because the header
+  is fixed; on a sticky header it caused the original tremor.
 - **Tables:** on phones, `main table` scrolls sideways inside its own box. Table
   cells use `overflow-wrap: break-word`, never `anywhere`. With `anywhere` the
   browser lets a column shrink to one character wide, so tables with one long
