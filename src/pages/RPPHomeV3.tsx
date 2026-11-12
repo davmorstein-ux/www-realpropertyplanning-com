@@ -469,6 +469,28 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan em,
 html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { text-shadow: none !important; transform: none; font-weight: 700 !important; color: #A51F36 !important; }
 /* Gold underline under "next chapter" removed Nov 1, 2026 (David): the
    lettering stands on its own. The SVG is gone from both slogans. */
+/* PHONES, FIRST SCREEN (Nov 12, 2026, David chose layout "B" from three
+   mock-ups after a first-time-visitor audit). 900px and narrower only.
+   - The slogan sits BESIDE the photo on cream instead of in its own band
+     above it: "Your" / "next" / "chapter", three lines, left column.
+   - The photo fills the right column, cropped (cover) to keep the door.
+     object-position is tuned to rpp-hero-2042-mobile; re-check it if the
+     artwork changes.
+   - The row is short enough that all four journey tiles, labels included,
+     fit on a 390x792 first screen (the home-screen app on David's iPhone).
+   - No added text: a "free, independent place to start" line and a
+     "written by" line were mocked under the headline and David dropped
+     both (not necessary; the homepage names no one). Do not re-add.
+   No backticks in this block. */
+@media (max-width: 900px) {
+  html body main div.rpp-hero-figure.rpp-hero-figure { display: grid !important; grid-template-columns: 46% 54%; background: #f5f2ec; }
+  html body main div.rpp-hero-figure p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m { grid-column: 1; grid-row: 1; align-self: center; padding: 0 4px 0 16px !important; font-size: clamp(30px, 9.6vw, 60px) !important; line-height: 0.98 !important; }
+  html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m span.rpp-sl-line.rpp-sl-mid { text-align: left !important; }
+  html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { display: block !important; }
+  html body main div.rpp-hero-figure > picture { grid-column: 2; grid-row: 1; display: block; min-width: 0; }
+  html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img.rpp-hero-img { aspect-ratio: auto !important; width: 100% !important; height: clamp(150px, 41vw, 320px) !important; object-fit: cover !important; object-position: 97% 50% !important; }
+  html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim.rpp-hero-scrim { grid-column: 1 / -1; grid-row: 2; }
+}
 `;
 
 const tileMeta = [
