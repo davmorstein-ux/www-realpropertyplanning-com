@@ -482,6 +482,9 @@ html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { text
      "written by" line were mocked under the headline and David dropped
      both (not necessary; the homepage names no one). Do not re-add.
    No backticks in this block. */
+/* Nov 13, 2026, every width: the tile section ends with the full-width About
+   band, so it carries no bottom padding (a global rule was adding some). */
+html body main section#rpp-start-here.rpp-start-here, html body main section#rpp-start-here { padding-bottom: 0 !important; }
 @media (max-width: 900px) {
   html body main div.rpp-hero-figure.rpp-hero-figure { display: grid !important; grid-template-columns: 46% 54%; background: #f5f2ec; }
   html body main div.rpp-hero-figure p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m { grid-column: 1; grid-row: 1; align-self: center; padding: 0 4px 0 16px !important; font-size: clamp(30px, 9.6vw, 60px) !important; line-height: 0.98 !important; }
@@ -877,7 +880,10 @@ const RPPHomeV3 = () => {
         {/* Sections from here down sit on a lighter cream (#faf8f4, David Sept 23:
             "more alive"). The hero band and the lead-line strip above stay
             #f5f2ec because the artwork's paper field was colour-matched to it. */}
-        <section id="rpp-start-here" style={{ backgroundColor: "#faf8f4", padding: "2.5rem 0 4rem" }}>
+        {/* Bottom padding 0 (Nov 13, 2026): the section now ends with the About
+            band, which is full-width and coloured, so 4rem of cream under it
+            read as an empty strip before the guides. */}
+        <section id="rpp-start-here" style={{ backgroundColor: "#faf8f4", padding: "2.5rem 0 0" }}>
           <div className="rpp-start-inner" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             {/* 2rem, was 0.5rem. With the global h1-h4 margin-bottom of
                 0.4rem that left roughly 14px between a 56px heading and the
@@ -1382,6 +1388,18 @@ const RPPHomeV3 = () => {
             {/* ── What is Real Property Planning? ──────────────────── */}
             <AboutTheHub />
 
+          </div>
+        </section>
+
+        <HomepagePopularResources />
+        {/* ── Calculators (moved Nov 13, 2026, David, after the first-time-visitor
+            audit): the two calculator cards used to sit above "The guides people
+            open most". The guides answer what most visitors arrive with, so they
+            now come first and the calculators follow in their own section. The
+            card styles are the style blocks in the section above; they are not
+            scoped to it. ── */}
+        <section id="rpp-home-calculators" style={{ backgroundColor: "#faf8f4", padding: "3.5rem 0 4rem" }}>
+          <div className="rpp-start-inner" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             {/* ── Cost of Care Calculator — two columns ──────────────── */}
             <div>
               <a href="/cost-of-care-calculator" className="rpp-coc-card rpp-calc-photo-card group marquee-hover">
@@ -1483,8 +1501,6 @@ const RPPHomeV3 = () => {
              </div>
           </div>
         </section>
-
-        <HomepagePopularResources />
         {/* <HomepageTestimonials /> — hidden until real testimonials are collected */}
         <HomepageFAQ />
       </main>

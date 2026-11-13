@@ -50,7 +50,9 @@ const EXAMPLES = [
   /* Family-side examples only (Oct 18, 2026): AFH Club passes its own. The AFH
      licence-fee example that sat here belonged to AFH Club, not the family homepage. */
   "Should I fix up an inherited house before selling it?",
-  "How long does probate take in Washington?",
+  /* Two examples, not three (Nov 13, 2026, David, after the first-time-visitor
+     audit: the box was too tall on phones). The third, "How long does probate
+     take in Washington?", repeated the text shown inside the empty box. */
 ];
 
 interface Props {
@@ -68,7 +70,7 @@ interface Props {
   bare?: boolean;
 }
 
-export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "For example: How long does probate take?", bare = false }: Props) {
+export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "How long does probate take?", bare = false }: Props) {
   const id = useId();
   const [q, setQ] = useState("");
   const [asked, setAsked] = useState("");
@@ -80,6 +82,9 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
      into view (Oct 27, 2026, David). null = show them whole: before the page's code runs,
      with reduced motion, or if the list is already on screen when the page loads. */
   const examplesRef = useRef<HTMLDivElement>(null);
+  // Nov 13, 2026: the button is no longer greyed out while the box is empty (on a
+  // phone it read as broken). Pressing it with nothing typed moves the cursor into the box.
+  const inputRef = useRef<HTMLInputElement>(null);
   const [typed, setTyped] = useState<number | null>(null);
   const PAUSE = 10; // characters' worth of pause between questions
   const offsets = examples.reduce<number[]>((acc, x, i) => { acc.push(i === 0 ? 0 : acc[i - 1] + examples[i - 1].length + PAUSE); return acc; }, []);
@@ -139,18 +144,23 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
     <div className={`rpp-ask${bare ? " rpp-ask-bare" : ""}`} style={{ ["--ask" as string]: accent }}>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <h2 className="rpp-ask-h" id={`${id}-h`}>{title}</h2>
-      <p className="rpp-ask-sub">Type your question in plain words. You'll get the closest answer from the site's guides and the page to read next. Please leave out names and personal details.</p>
+      {/* One short line (Nov 13, 2026, David: the box was too tall). The sentence
+          explaining that answers come from the site's guides went; the button and
+          the answer itself say it. The privacy request stays. */}
+      <p className="rpp-ask-sub">Ask in plain words. No names or personal details.</p>
       <form
         className="rpp-ask-form"
         role="search"
         aria-labelledby={`${id}-h`}
         onSubmit={(e) => {
           e.preventDefault();
+          if (q.trim().length < 3) { inputRef.current?.focus(); return; }
           run(q);
         }}
       >
         <input
           className="rpp-ask-input"
+          ref={inputRef}
           type="text"
           enterKeyHint="search"
           maxLength={200}
@@ -162,7 +172,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
           placeholder={placeholder}
           aria-label="Your question"
         />
-        <button className="rpp-ask-send" type="submit" disabled={busy || q.trim().length < 3}>
+        <button className="rpp-ask-send" type="submit" disabled={busy}>
           {busy ? "Looking…" : "Get answer"}
         </button>
       </form>

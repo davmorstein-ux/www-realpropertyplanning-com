@@ -51,8 +51,11 @@ import HomepagePoints from "@/components/HomepagePoints";
  * so this block still needs keys added to translate with the other 7 locales.
  */
 const AboutTheHub = () => {
+  // No bottom margin (Nov 13, 2026): this band is now the last thing in its
+  // section (the calculators moved below the guides), so the next section
+  // starts right under it.
   return (
-    <div style={{ margin: "3.5rem 0 3.5rem" }}>
+    <div style={{ margin: "3.5rem 0 0" }}>
       <style dangerouslySetInnerHTML={{ __html: `
         /* Oct 8, 2026 (owner, after comparing Rocket Mortgage's homepage): no
            framed card. The section sits on a full-width soft band; the band is

@@ -12,10 +12,10 @@ import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
  * independent" pills were dropped (AFH Club has its own tile; "free" is in two
  * of the points and About is in the menu).
  *
- * Each point is a link. Garnet check badge (the logo door's colour) says "this
+ * Each point is a link. Garnet check badge (the logo door's colour; a thin ring since Nov 13, 2026) says "this
  * is included". The text arrows that used to end each line were removed (David,
  * Oct 25, 2026: "look cheap"); instead the check itself turns into an arrow:
- * the check rotates a quarter-turn and fades as a white arrow in the same
+ * the check rotates a quarter-turn and fades as an arrow in the same
  * stroke turns into place. It does this once soon after the page loads,
  * staggered across the four badges, and then stays an arrow (David: turning
  * back would be too much animation). No other motion. Under
@@ -53,11 +53,15 @@ export default function HomepagePoints() {
           <li key={p.to} className="rpp-hero-point">
             <Link to={p.to} className="rpp-hero-point-link" style={{ ["--rpp-nudge-delay" as string]: `${1800 + i * 600}ms` }}>
               <svg className="rpp-hero-badge" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
-                <circle cx="15" cy="15" r="15" fill="#9E1F3A" />
-                <g fill="none" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
+                {/* Nov 13, 2026 (David, after the first-time-visitor audit): a thin garnet
+                    RING with a garnet chevron, the same drawing as the site's one arrow
+                    (RppArrow, ring + chevron since Oct 29). It was the last solid disc
+                    left on the page. Proportions are RppArrow's, scaled 36 to 30. */}
+                <circle cx="15" cy="15" r="13.7" fill="none" stroke="#9E1F3A" strokeWidth="2.3" />
+                <g fill="none" stroke="#9E1F3A" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                   <polyline className="rpp-badge-check" points="9 15.5 13.2 19.6 21.2 10.8" />
                   {/* The site's one arrow shape: a heavy chevron (Oct 26, 2026). */}
-                  <polyline className="rpp-badge-arrow" points="13 8.8 18 15 13 21.2" strokeWidth="3.8" />
+                  <polyline className="rpp-badge-arrow" points="13 8.8 18 15 13 21.2" strokeWidth="3" />
                 </g>
               </svg>
               <span className="rpp-hero-point-text">
