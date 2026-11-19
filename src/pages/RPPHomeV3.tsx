@@ -416,23 +416,26 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      the rest of the site keeps the thin ring arrow. */
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label {
     position: relative; display: block !important; background: #FBF8F2;
-    padding: 12px 16px 6px; min-height: 0;
+    padding: 12px 12px 12px 16px; min-height: 0;
   }
   html body main .rpp-funnel-grid span.rpp-jt-rule.rpp-jt-rule { display: none !important; }
-  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { display: block !important; }
+  /* Nov 19, 2026 (David chose option "A"): title and arrow share ONE line,
+     which makes every tile about 20px shorter. */
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row { display: flex !important; align-items: center; justify-content: space-between; gap: 6px; }
   html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title {
     display: block;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
     font-weight: 600 !important;
     /* One line, sized from the tile width so the longest title ("Help an
-       Aging Parent", about 9.3em) fits the full label width; 24px cap. */
-    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 34px) / 9.3), 24px) !important;
+       Aging Parent", about 9.3em) fits beside the 26px arrow (label padding
+       28px + arrow 26px + gap 6px = 60px); 22px cap. */
+    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 62px) / 9.3), 22px) !important;
     line-height: 1.15 !important;
     color: #1f1c19 !important;
     letter-spacing: -0.005em;
     white-space: nowrap;
-    /* leaves the bottom row free for the button */
-    margin-bottom: 31px;
+    margin-bottom: 0;
+    min-width: 0;
   }
   /* Arrow (Oct 31, 2026, David): back to the sitewide thin ring with the
      chevron, in the tile's colour, instead of the solid round button. Four
@@ -440,8 +443,8 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
      colour coding at a fraction of the weight and matches every other
      arrow on the site. */
   html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow {
-    position: absolute; right: 10px; bottom: 7px;
-    width: 30px; height: 30px; border-radius: 50%;
+    position: static; flex: 0 0 26px;
+    width: 26px; height: 26px; border-radius: 50%;
     background: transparent; color: var(--tile); display: inline-flex; align-items: center; justify-content: center;
     box-shadow: none;
   }
@@ -470,7 +473,7 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
    165-210px wide; titles may wrap there. */
 @media (min-width: 901px) and (max-width: 1199px) {
   html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label { padding: 12px 12px 10px; }
-  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; white-space: normal; margin-bottom: 36px; }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 17px !important; white-space: normal; margin-bottom: 0; }
 }
 /* SLOGAN, THREE LINES (Oct 31, 2026, David). "Your" / "next chapter" in a
    bolder red italic (Playfair 700 italic) / "begins." A gold swoosh under the
