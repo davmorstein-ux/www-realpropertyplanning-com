@@ -117,7 +117,7 @@ html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner {
   display: grid; grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas: "slogan door" "line door";
   column-gap: clamp(24px, 5vw, 96px); align-items: center;
-  padding: clamp(18px, 2.6vw, 40px) 0 clamp(14px, 2vw, 30px);
+  padding: clamp(14px, 2vw, 30px) 0 clamp(6px, 1vw, 14px);
 }
 html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan {
   grid-area: slogan; align-self: end; margin: 0 !important;
@@ -137,12 +137,17 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line {
 html body main div.rpp-door-hero div.rpp-door-inner > picture { /* no class on <picture>: vite.config.ts matches a bare <picture> tag for the preload */ grid-area: door; display: block; line-height: 0; }
 html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img {
   display: block; width: auto !important; max-width: none !important;
-  height: clamp(260px, 27vw, 400px) !important; aspect-ratio: 600 / 1103;
+  /* Height follows the window height too, so the question and all four tiles stay on a laptop's first screen. */
+  height: clamp(220px, min(24vw, 40vh), 380px) !important; aspect-ratio: 600 / 1103;
 }
 @media (min-width: 901px) {
   /* No photograph any more, so the tiles no longer overlap the hero's bottom edge. */
   html body main div.rpp-funnel-block.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid.rpp-funnel-grid { margin-top: 0 !important; }
   html body main section#rpp-start-here.rpp-start-here, html body main section#rpp-start-here { padding-top: 0.5rem !important; }
+}
+@media (min-width: 901px) and (max-height: 799px) {
+  /* Short laptop screens (1366x768): a little less door so the tiles still fit. */
+  html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img { height: clamp(200px, min(24vw, 35vh), 380px) !important; }
 }
 @media (max-width: 900px) {
   html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner {
@@ -354,7 +359,8 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     html body main h1#rpp-tagline { margin-top: clamp(12px, 2.2vh, 30px) !important; }
     html body main h1#rpp-tagline span.rpp-tagline-line-v2.rpp-tagline-line-v2 { font-size: clamp(17px, min(1.5vw, 2.9vh), 23px) !important; }
   }
-  html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 2; margin: 1.1rem 0 0 !important; }
+  /* Nov 19, 2026 (David, after the door hero): the question goes back ABOVE the tiles on laptops too. */
+  html body main div.rpp-funnel-block > div.rpp-funnel-head.rpp-funnel-head { order: 0; margin: 0 0 1.1rem !important; }
   html body main div.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid {
     order: 1;
     width: var(--rpp-gw); max-width: none !important;
@@ -652,9 +658,8 @@ const RPPHomeV3 = () => {
                 0.4rem that left roughly 14px between a 56px heading and the
                 tile tops, so the heading read as a label stuck to the tiles
                 rather than one introducing them. */}
-            {/* Heading + tiles wrapper (Oct 29, 2026): above 900px HERO_WIDE_CSS
-                makes this a flex column and puts the heading UNDER the tiles,
-                which sit on the hero's bottom edge. Phones keep heading-first. */}
+            {/* Heading + tiles wrapper (Oct 29, 2026). Since Nov 19, 2026 the
+                heading is above the tiles at every width (see HERO_WIDE_CSS). */}
             <div className="rpp-funnel-block">
             <div className="rpp-funnel-head" style={{ textAlign: "center", marginBottom: "2rem" }}>
               <h2
