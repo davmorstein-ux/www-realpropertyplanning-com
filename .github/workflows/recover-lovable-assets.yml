@@ -1,0 +1,60 @@
+# One-off (Nov 19, 2026, approved by David): since the Nov 1 move to Cloudflare,
+# files that Lovable hosted (src/**/*.asset.json pointing at /__l5e/assets-v1/...)
+# no longer load: provider headshots, logos and the article narrations. This job
+# downloads each one from the Lovable project host and commits the real file next
+# to its .asset.json, so the site can import it directly. Delete once done.
+name: Recover Lovable-hosted assets
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/recover-lovable-assets.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download every .asset.json file
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, sys, urllib.request
+          hosts = [
+            "https://6765fce2-0e35-400f-abd2-11b0c1cc1e3b.lovableproject.com",
+            "https://id-preview--6765fce2-0e35-400f-abd2-11b0c1cc1e3b.lovable.app",
+          ]
+          bad = []
+          for f in sorted(glob.glob("src/**/*.asset.json", recursive=True)):
+              d = json.load(open(f))
+              out = f[: -len(".asset.json")]
+              if os.path.exists(out) and os.path.getsize(out) == d["size"]:
+                  continue
+              data = None
+              for h in hosts:
+                  try:
+                      req = urllib.request.Request(h + d["url"], headers={"User-Agent": "Mozilla/5.0"})
+                      got = urllib.request.urlopen(req, timeout=120).read()
+                      if len(got) == d["size"]:
+                          data = got; break
+                      print(f"size mismatch {f} via {h}: {len(got)} != {d['size']}")
+                  except Exception as e:
+                      print(f"fail {f} via {h}: {e}")
+              if data is None:
+                  bad.append(f); continue
+              open(out, "wb").write(data)
+              print(f"ok {out} {len(data)}")
+          print("FAILED:", bad)
+          if bad: sys.exit(1)
+          PY
+      - name: Commit recovered files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add -A src
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -m "Recover Lovable-hosted assets as real files (headshots, logos, narrations)"
+          git push
