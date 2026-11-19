@@ -407,19 +407,17 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
                 </a>
               </p>
               <p style={{ margin: 0 }}>
-                <strong>One more step for the newsletter:</strong> a link to confirm your address is on its way to your inbox. Nothing else is sent until you click it.
+                <strong>You're also on the newsletter list.</strong> Every issue has an unsubscribe link at the bottom.
               </p>
             </>
           )}
         </div>
       ) : status === "done" ? (
-        /* role="status" announces without stealing focus. The confirmation
-           step is stated plainly — otherwise someone who never clicks the
-           confirmation link believes they subscribed. */
+        /* role="status" announces without stealing focus. Single opt-in since
+           Nov 19, 2026: the address is on the list as soon as it is sent. */
         <p className="rpp-news-done" role="status">
-          <strong>Please check your email.</strong> A message has been sent asking you to
-          confirm your address — you will not be added to the list until you do. If it does
-          not arrive within a few minutes, it may be in your spam folder.
+          <strong>You're subscribed.</strong> The next newsletter will arrive at the address you
+          entered. Every issue has an unsubscribe link at the bottom.
         </p>
       ) : (
         <form onSubmit={handleSubmit} noValidate>
