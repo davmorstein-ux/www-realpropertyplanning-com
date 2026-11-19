@@ -37,12 +37,10 @@ import heroDesktop2880 from "@/assets/hero/rpp-hero-2042-2880.webp";
    smaller. */
 /* rpp-hero-2042-mobile (Oct 30, 2026, David chose layout "B" for phones): a
    913x500 crop of the wide 2042 photo, room and door centred, used under the
-   slogan, which sits on cream above it. */
-import heroMobile from "@/assets/hero/rpp-hero-2042-mobile.webp";
+   slogan, which sits on cream above it. Retired Nov 19, 2026: phones now
+   show the whole wide photo (see PHONES, FIRST SCREEN below). */
 /* A true 900px copy (Oct 7, 2026): the srcSet below called the 1200px file
    "900w", so phones downloaded more than they needed. */
-import heroMobile640 from "@/assets/hero/rpp-hero-2042-mobile-640.webp";
-import heroMobile1370 from "@/assets/hero/rpp-hero-2042-mobile-1370.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -469,15 +467,18 @@ html body main p.rpp-hero-slogan.rpp-hero-slogan.rpp-hero-slogan em,
 html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { text-shadow: none !important; transform: none; font-weight: 700 !important; color: #A51F36 !important; }
 /* Gold underline under "next chapter" removed Nov 1, 2026 (David): the
    lettering stands on its own. The SVG is gone from both slogans. */
-/* PHONES, FIRST SCREEN (Nov 12, 2026, David chose layout "B" from three
-   mock-ups after a first-time-visitor audit). 900px and narrower only.
-   - The slogan sits BESIDE the photo on cream instead of in its own band
-     above it: "Your" / "next" / "chapter", three lines, left column.
-   - The photo fills the right column, cropped (cover) to keep the door.
-     object-position is tuned to rpp-hero-2042-mobile; re-check it if the
-     artwork changes.
-   - The row is short enough that all four journey tiles, labels included,
-     fit on a 390x792 first screen (the home-screen app on David's iPhone).
+/* PHONES, FIRST SCREEN (Nov 19, 2026, David chose it from a mock-up:
+   "Hero: whole photo, full width", slogan below). Replaces the Nov 12
+   layout "B" (slogan beside a half-width photo), which cropped the photo
+   to a tall sliver around the door.
+   - Phones show the ENTIRE wide photo, the same picture as laptops
+     (rpp-hero-2042 / -1280, 2154x730), uncropped across the full width:
+     about 132px tall on a 390px phone. David asked for the whole image,
+     not the old 913x500 phone crop, which cut off both sides of the room.
+     The -mobile files are no longer used by this page.
+   - "Your next chapter" on ONE centred line under the strip (same Playfair
+     slogan and red as before; only the arrangement changed).
+   - The tiles themselves are unchanged (David chose "hero only").
    - No added text: a "free, independent place to start" line and a
      "written by" line were mocked under the headline and David dropped
      both (not necessary; the homepage names no one). Do not re-add.
@@ -486,13 +487,13 @@ html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { text
    band, so it carries no bottom padding (a global rule was adding some). */
 html body main section#rpp-start-here.rpp-start-here, html body main section#rpp-start-here { padding-bottom: 0 !important; }
 @media (max-width: 900px) {
-  html body main div.rpp-hero-figure.rpp-hero-figure { display: grid !important; grid-template-columns: 46% 54%; background: #f5f2ec; }
-  html body main div.rpp-hero-figure p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m { grid-column: 1; grid-row: 1; align-self: center; padding: 0 4px 0 16px !important; font-size: clamp(30px, 9.6vw, 60px) !important; line-height: 0.98 !important; }
-  html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m span.rpp-sl-line.rpp-sl-mid { text-align: left !important; }
-  html body main p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { display: block !important; }
-  html body main div.rpp-hero-figure > picture { grid-column: 2; grid-row: 1; display: block; min-width: 0; }
-  html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img.rpp-hero-img { aspect-ratio: auto !important; width: 100% !important; height: clamp(150px, 41vw, 320px) !important; object-fit: cover !important; object-position: 97% 50% !important; }
-  html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim.rpp-hero-scrim { grid-column: 1 / -1; grid-row: 2; }
+  html body main div.rpp-hero-figure.rpp-hero-figure { display: grid !important; grid-template-columns: minmax(0, 1fr); background: #f5f2ec; }
+  html body main div.rpp-hero-figure > picture { grid-column: 1; grid-row: 1; display: block; min-width: 0; }
+  html body main .rpp-hero-figure img.rpp-hero-img.rpp-hero-img.rpp-hero-img { aspect-ratio: auto !important; width: 100% !important; height: auto !important; aspect-ratio: 2154 / 730 !important; object-fit: cover !important; object-position: 50% 50% !important; }
+  html body main div.rpp-hero-figure p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m { grid-column: 1; grid-row: 2; align-self: center; padding: 8px 12px 0 !important; text-align: center !important; font-size: clamp(28px, 8.8vw, 52px) !important; line-height: 1.05 !important; }
+  html body main div.rpp-hero-figure p.rpp-hero-slogan-m.rpp-hero-slogan-m span.rpp-sl-line.rpp-sl-line { display: inline !important; text-align: center !important; white-space: nowrap; }
+  html body main div.rpp-hero-figure p.rpp-hero-slogan-m.rpp-hero-slogan-m.rpp-hero-slogan-m em { display: inline !important; }
+  html body main .rpp-hero-figure > div.rpp-hero-scrim.rpp-hero-scrim.rpp-hero-scrim { grid-column: 1; grid-row: 3; }
 }
 `;
 
@@ -562,10 +563,10 @@ const RPPHomeV3 = () => {
           <picture>
           <source
             media="(max-width: 900px)"
-            srcSet={`${heroMobile640} 640w, ${heroMobile} 913w, ${heroMobile1370} 1370w`}
+            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 2154w`}
             sizes="100vw"
-            width={913}
-            height={500}
+            width={1280}
+            height={434}
           />
           <img
             id="rpp-hero-image"
