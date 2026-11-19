@@ -429,7 +429,7 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     /* One line, sized from the tile width so the longest title ("Help an
        Aging Parent", about 9.3em) fits beside the 26px arrow (label padding
        28px + arrow 26px + gap 6px = 60px); 22px cap. */
-    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 62px) / 9.3), 22px) !important;
+    font-size: clamp(16px, calc(((var(--rpp-gw) - 72px) / 4 - 70px) / 10.2), 22px) !important; /* 10.2em + 8px spare: Playfair's "Help an Aging Parent" measured wider than 9.3em and touched its arrow */
     line-height: 1.15 !important;
     color: #1f1c19 !important;
     letter-spacing: -0.005em;
