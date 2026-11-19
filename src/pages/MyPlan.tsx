@@ -539,7 +539,7 @@ const MyPlan = () => {
                             </a>
                           </p>
                           <p style={{ margin: 0, fontSize: 17, lineHeight: 1.55 }}>
-                            <strong>One more step for the newsletter:</strong> a link to confirm your address has been emailed to you. Nothing else is sent until you click it.
+                            <strong>You're also on the newsletter list.</strong> Every issue has an unsubscribe link at the bottom.
                           </p>
                         </>
                       ) : undefined

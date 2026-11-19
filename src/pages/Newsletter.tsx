@@ -59,7 +59,7 @@ const Newsletter = () => (
           <h1 className="rpp-nl-h1">Newsletters</h1>
           <p className="rpp-nl-p">
             There are two, because they are written for different people. Sign up for one or both. Each is free and
-            occasional, you confirm your address before anything is sent, and you can unsubscribe at any time.
+            occasional, and you can unsubscribe at any time from a link in every issue.
           </p>
           <a href="#afh" className="rpp-nl-jump">Skip to the AFH Club newsletter</a>
         </div>

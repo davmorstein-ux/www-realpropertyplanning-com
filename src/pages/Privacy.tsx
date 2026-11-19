@@ -86,7 +86,7 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  * current practice — it is not a substitute for a lawyer reading it.
  */
 
-const UPDATED = "October 20, 2026";
+const UPDATED = "November 19, 2026";
 
 const Privacy = () => {
   return (
@@ -133,9 +133,10 @@ const Privacy = () => {
               </p>
               <p>
                 <strong>Newsletter.</strong> If you subscribe, the site collects your email address
-                and which page you subscribed from. Subscribing requires confirming through a link
-                sent to your email. Every newsletter includes an unsubscribe link, and unsubscribe
-                requests are acted on promptly.
+                and which page you subscribed from, and adds you to the list when you submit the
+                form. As a record of your request, the date and time and the network (IP) address
+                you subscribed from are kept with your subscription. Every newsletter includes an
+                unsubscribe link, and unsubscribe requests are acted on promptly.
               </p>
 
               <h2>Information collected automatically</h2>
