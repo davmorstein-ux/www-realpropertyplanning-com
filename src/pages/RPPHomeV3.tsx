@@ -22,13 +22,12 @@ import AskBox from "@/components/AskBox";
    laptop screen shows the whole room (ceiling, full door, floor) and the
    tiles still fit on the first screen. The door's foot sits ~63% down the
    frame, which leaves room for the tiles below it. */
-import heroDesktop from "@/assets/hero/rpp-hero-2042.webp";
-import heroDesktop1280 from "@/assets/hero/rpp-hero-2042-1280.webp";
+import doorLg from "@/assets/hero/rpp-hero-door-garnet-600.webp";
+import doorSm from "@/assets/hero/rpp-hero-door-garnet-300.webp";
 /* Oct 31, 2026: all hero files rebuilt from David's 4x upscale of the
    original (8616x2920), so they are sharper; plus a 2880 copy for
    high-resolution laptop screens and a 1370 phone copy for 3x iPhones.
    Same framing and the same phone crop (x 760, y 60, 913x500 at 2154 wide). */
-import heroDesktop2880 from "@/assets/hero/rpp-hero-2042-2880.webp";
 /* Phone crop zoomed out (Oct 28, 2026, David chose option "B"): cut wider
    from the same 2035 render, 2100x752 from x=1740 of the 3840 band (was
    1876 wide from x=1964), right edge kept, same 1200x430 shape, so the image
@@ -107,6 +106,56 @@ const REMODEL_LINES: [LucideIcon, string][] = [
   [BarChart3, "See two values: a broker's and an appraiser's"],
   [MapPin, "Built from recent local home sales"],
 ];
+
+/* DOOR HERO (Nov 19, 2026). Every rule is scoped to .rpp-door-hero and
+   written at high specificity with !important because index.css forces
+   main h1 to 26px, every h1-h4 margin, and p margins/line-height. */
+const DOOR_HERO_CSS = `
+html body main div.rpp-door-hero.rpp-door-hero { background: #faf8f4; }
+html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner {
+  width: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem)); margin: 0 auto; /* same width as the four tiles below, so the edges line up */
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "slogan door" "line door";
+  column-gap: clamp(24px, 5vw, 96px); align-items: center;
+  padding: clamp(18px, 2.6vw, 40px) 0 clamp(14px, 2vw, 30px);
+}
+html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan {
+  grid-area: slogan; align-self: end; margin: 0 !important;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+  font-weight: 800 !important; font-size: clamp(44px, 5.4vw, 80px) !important;
+  line-height: 1.02 !important; letter-spacing: -0.02em !important; color: #1c1917 !important;
+  text-shadow: 0 1px 1px rgba(40,25,15,0.10), 0 6px 10px rgba(40,25,15,0.12), 0 16px 28px rgba(40,25,15,0.14);
+  max-width: none !important; text-align: left !important;
+}
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line {
+  grid-area: line; align-self: start; margin: clamp(14px, 1.6vw, 24px) 0 0 !important; padding: 0 !important;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+  font-weight: 500 !important; font-size: clamp(19px, 1.75vw, 25px) !important;
+  line-height: 1.45 !important; letter-spacing: 0 !important; color: #2f2b27 !important;
+  max-width: 31em; text-align: left !important;
+}
+html body main div.rpp-door-hero div.rpp-door-inner > picture { /* no class on <picture>: vite.config.ts matches a bare <picture> tag for the preload */ grid-area: door; display: block; line-height: 0; }
+html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img {
+  display: block; width: auto !important; max-width: none !important;
+  height: clamp(260px, 27vw, 400px) !important; aspect-ratio: 600 / 1103;
+}
+@media (min-width: 901px) {
+  /* No photograph any more, so the tiles no longer overlap the hero's bottom edge. */
+  html body main div.rpp-funnel-block.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid.rpp-funnel-grid { margin-top: 0 !important; }
+  html body main section#rpp-start-here.rpp-start-here, html body main section#rpp-start-here { padding-top: 0.5rem !important; }
+}
+@media (max-width: 900px) {
+  html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner {
+    width: calc(100vw - 40px); grid-template-areas: "slogan door" "line line";
+    column-gap: 16px; padding: 18px 0 6px;
+  }
+  html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan {
+    align-self: center; font-size: clamp(34px, 10.4vw, 48px) !important; max-width: 6.4em !important;
+  }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line { margin-top: 10px !important; font-size: 18px !important; line-height: 1.4 !important; max-width: none; }
+  html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img { height: clamp(118px, 34vw, 170px) !important; }
+}
+`;
 
 const HERO_WIDE_CSS = `
 /* LAPTOP HERO (Oct 29, 2026, David approved the mock-up after several rounds).
@@ -532,327 +581,40 @@ const RPPHomeV3 = () => {
 
       <main id="main-content">
         <style dangerouslySetInnerHTML={{ __html: HERO_WIDE_CSS }} />
-        {/* ── Hero ── height driven by content, image is a background layer ── */}
-        <div
-          className="rpp-hero-figure"
-          style={{
-            position: "relative",
-            width: "100%",
-            overflow: "hidden",
-          }}
-        >
-          {/* <picture>, not one <img> with a mixed srcSet (Oct 25, 2026). The
-              desktop band (5.27:1) and the phone crop (2.79:1) are different
-              shapes. With both in one srcSet the <img> carried only the
-              desktop width/height, and iPhone Safari drew the phone crop at
-              the desktop shape: squashed to about half its height, the door
-              short and wide. Each <source> now carries its own width/height,
-              and index.css sets the matching aspect-ratio per breakpoint as a
-              backstop. The 900px split matches the tagline breakpoint. */}
-          {/* Phone slogan (Oct 30, 2026, layout "B"): on cream above the photo.
-              The laptop slogan lives in the scrim below and is hidden on phones;
-              this copy is hidden on laptops, so only one is ever shown. */}
-          {/* Three lines (Oct 31, 2026, David chose the stacked version):
-              "Your" / bold red italic "next chapter" with a gold swoosh under
-              it / "begins." Real text, not an image, so it stays sharp and
-              readable to search engines and screen readers. */}
-          <p className="rpp-hero-slogan-m"><span className="rpp-sl-box">
-            <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
-            <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span></span>
-          </p>
-          <picture>
-          <source
-            media="(max-width: 900px)"
-            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 2154w`}
-            sizes="100vw"
-            width={1280}
-            height={434}
-          />
-          <img
-            id="rpp-hero-image"
-            /* rpp-hero-2035 (Oct 27, 2026, night): David's re-render that keeps the sunlight
-               reflected on the navy wall (2034 had lost it). Same 4340x1450 size. At David's
-               request every crop keeps the whole right side of the scene: the laptop band is the
-               full width (no trim), so the mirror starts at 53% and clears the headline; the
-               phone crop is anchored to the right edge (left window to the plant, mirror out).
-               Left wall blended toward cream behind the headline as before.
-
-/* rpp-hero-2034 (Oct 27, 2026, evening): David's final render, 4340x1450 from a real
-               upscaler, much sharper than 2033 (garden, trim and rug). Same 1920x420 band and
-               1200x430 phone shape. The band is cut 3945 wide from x=285 (trimmed ~10% so the
-               door is a little larger), still shrunk to 1920 and 3840, never enlarged. Left wall
-               blended 55% toward cream behind the headline as before; the mirror starts at 52%
-               of the width, clear of the text.
-
-/* rpp-hero-2033 (Oct 27, 2026): David's new entryway render, upscaled with a real
-               upscaler to 4096x1368 (the 2032 file was soft: an AI enlargement of a small
-               render). Same scene and colours. The desktop band is now 1920x420 (4.57:1, was
-               1920x364) at David's choice, so the ceiling above the door AND the floor and rug
-               both show; the hero is about 40px taller on a laptop. 3840x840 for sharp screens,
-               both shrunk from the source, never enlarged. Phone crops keep 1200x430.
-               The headline overlays the left wall on laptops; that wall had dappled sun and
-               measured only 5.0:1 behind the charcoal text, and David saw it "fighting the
-               wall". The left half is blended 55% toward cream, full to 36% of the width and
-               feathered out by 50% (before the mirror): now 8.6:1 at its weakest, 9.7:1
-               median. Phone crops are untouched (the headline sits below the image there).
-
-               rpp-hero-2032 (Oct 22, 2026): the same 2031 render, upscaled by the
-               owner to 8000px because the hero looked soft on high-resolution
-               screens. Same crops (aligned to 2031 by image matching), the same
-               55% cream blend on the left wall (tagline contrast 6.2:1 at the
-               1st percentile, 7.4:1 median), and the left window's garbled view
-               replaced with the right window's. A 3840px desktop file serves
-               high-DPI screens and an 1800px phone file serves large phones
-               (with only 1200w, a 430px phone at 3x picked the DESKTOP crop).
-               sizes stays "(min-width: 901px) 1920px, 100vw".
-
-               rpp-hero-2031 (Oct 18, 2026): the owner's new entryway render with
-               a magenta door matching the logo, and (same evening, his idea) a navy
-               accent wall behind the door to echo the logo's A — regenerated in
-               ChatGPT so the wall carries the room's light rather than a flat fill.
-               Final render (Oct 18, 21:30): matching windows, clean trim, sunlight
-               on the navy wall; tagline contrast 7.33:1 minimum. Same 1920x364 band and the same
-               mobile crops. The render was warmer than 2030, so the left wall
-               (the tagline's column) was blended 55% toward cream, feathered out
-               before the mirror; navy on it measures 7.25:1 at its weakest
-               (2030 was 5.2:1; 7.1:1 with the navy-wall render). Re-measure if the artwork changes again.
-
-               rpp-hero-2030 (Oct 4, 2026): the same entryway photograph, recut
-               by the owner with more headroom — the lantern, ceiling line,
-               rug and right-hand planter are no longer clipped. Desktop
-               1920x364 (5.27:1); mobile 1200x430, cropped from the right so
-               the console, door and planter all show. The notes below
-               describe rpp-hero-2029, the previous cut of this image.
-
-               rpp-hero-2029 (Sept 2026): photographic entryway — cream wall,
-               console with mirror and olive branches, open brick-red front
-               door (#B0352A, the AFH Club logo door) onto a garden path.
-               Cut from a true panorama render, so the whole room fits the
-               band with nothing amputated. The left ~50% is plain sunlit
-               wall, and that column is the tagline's home. Navy on that
-               wall measures ~9:1. Mobile file is a 2.79:1 crop of the SAME
-               render centred on the door.
-
-               Replaced rpp-hero-2028, the watercolour of an open door on a
-               stone path; that art's notes below still describe the layout
-               rules, which are unchanged.
-
-               1920x340, 5.65:1. Shown at its own ratio, NOT cropped. The
-               artwork is the crop — see .rpp-hero-img in index.css, which is
-               height: auto / object-fit: contain for exactly this reason.
-
-               The field was colour-corrected to #F5F2EC with a luminance-
-               masked delta so the paper matches the page while the sunrise
-               keeps its warmth. Samples read #F4F1E9 to #F7F1EA. Edge sweep
-               is clean on all four sides — no white fringe, no bottom notch.
-
-               Two files, not a srcSet ladder. Desktop carries the paper
-               column; the mobile file is a tighter 2.79:1 crop centred on the
-               door with no column, because below 900px the tagline stacks
-               beneath the image instead of sitting on it.
-               102 KB and 76 KB. */
-            src={heroDesktop}
-            srcSet={`${heroDesktop1280} 1280w, ${heroDesktop} 2154w, ${heroDesktop2880} 2880w`}
-            /* Above 900px always the full desktop artwork (Oct 21, 2026). With
-               sizes="100vw" a 901-1200px window at 1x picked the 1200w MOBILE
-               crop, which has no plain wall on the left, so the headline sat
-               on the mirror. Below 900px the headline stacks under the image,
-               so the tighter crops are fine there. */
-            sizes="100vw"
-            width={2154}
-            /* Must match the file. The intrinsic ratio is what reserves
-               space before the image loads; a stale value here causes the
-               page to jump as it arrives. 1920x364 is the artwork's own
-               5.27:1 shape (was 1920x340 before Oct 4, 2026). This number has been wrong after an art swap
-               more than once; change it in the same commit as the images,
-               every time.
-
-               PREVIOUS ARTWORK WAS 4.66:1 (1920x412). The 2028 replacement
-               is a shorter band, so the hero is about 72px shorter at full
-               width. */
-            height={730}
-            alt={t("hero.imageAlt")}
-            /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
-               photograph at any width — it stacks beneath it.
-
-               This was the source of every hero problem so far. Overlaid text
-               needs a wash to stay legible, the wash has to be tuned to the
-               crop, and object-fit: cover crops differently at every viewport
-               width, so a wash tuned for desktop lands over the wrong part of
-               the picture on a phone. Any change to the artwork restarts that
-               work.
-
-               Stacking removes the whole class of problem: the image is shown
-               whole and undimmed at every width, and navy on cream is 10:1 and
-               cannot drift. The cost is vertical space — roughly 450px of
-               image at a 1440px window — which is why the crop is a 3.18:1
-               band rather than the original 2.37:1. */
-            className="rpp-hero-img block w-full"
-            loading="eager"
-            ref={setFetchPriority("high")}
-            /* No decoding="async" (Oct 7, 2026): this is the largest thing on the
-               first screen, and async decoding let the browser paint without it
-               and show it a frame or more later. The build also adds a preload
-               for it in <head> (heroPreload in vite.config.ts). */
-          />
-          </picture>
-          {/* Logo + tagline overlay — normal flow, so this content's own
-              height determines the hero's height on every screen size.
-
-              The two hero CTA buttons were removed: "Find the Right Starting
-              Point" only scrolled to tiles already visible in the same
-              viewport, and "Connect with a Specialist" duplicated the
-              "I Need a Professional" funnel tile below. */}
-          {/* rpp-hero-scrim: the white wash the tagline sits on. Classed so
-              index.css can flatten it below 640px — on a phone the hero band is
-              a fraction of its desktop height, so the second line of the
-              tagline lands near the bottom of this gradient where it is almost
-              fully transparent, over the brightest part of the photograph. */}
-          {/* Tagline band. Cream, in flow, directly beneath the image — no
-              scrim, no overlay, no gradient to maintain. */}
-          <div
-            className="rpp-hero-scrim"
-            style={{
-              /* OVERLAY, deliberately — but the justification changed with
-                 rpp-hero-2028 and the old one no longer applies. That
-                 artwork is NOT a flat field; it is painted paper with real
-                 texture. The reason overlay still works is measured, not
-                 structural: across the rows this block occupies, #2E5368
-                 holds AAA out to 59.8% of frame width, and the box ends at
-                 47.95%.
-
-                 top: 6%, NOT 20%. At 20% the block ran to ~76% of band
-                 height and line three sat 5px above the grass at 4.69:1.
-                 The clean column ends at 64%. At 6% the block ends at 48%
-                 and all three lines measure 7.18-7.25:1 on the live render.
-                 Anchor to the top; do not centre vertically.
-
-                 maxWidth stays at 43.75%. Narrowing it was considered and is
-                 unnecessary: the safe zone reaches 59.8%, which is also the
-                 headroom the longer locales need.
-
-                 IF THE ARTWORK IS REPLACED, RE-MEASURE both numbers before
-                 assuming the overlay still clears.
-
-                 Below 900px index.css returns this to static flow on cream:
-                 the mobile file is a tighter crop with no paper column, and
-                 the image is too short there to hold four lines. */
-              position: "absolute",
-              left: "4.2%",
-              /* Oct 24, 2026: 17% (was 6%). The header now casts a stone
-                 ledge shadow onto the photo, and at 6% the headline sat ~30px
-                 under it, crowding it. 17% gives ~70px of air at full width
-                 and still ends well above the dappled lower wall (block ends
-                 near 50%; the clean column ends at 64%). Still top-anchored —
-                 centring would put it over the busy sunlight. */
-              top: "17%",
-              maxWidth: "43.75%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-              padding: 0,
-              boxSizing: "border-box",
-            }}
-          >
-            {/* Tagline in #1B3A6B — the same navy used by the homepage
-                descriptor and the calculator tile's secondary text. */}
-            {/* Slogan (Oct 29, 2026, David): laptops and wider only (hidden at
-                900px and below in HERO_WIDE_CSS). A <p>, not a heading: the h1
-                below stays the page's real headline for search engines. */}
-            <p className="rpp-hero-slogan"><span className="rpp-sl-box">
-              <span className="rpp-sl-line">{t("hero.sloganStart")}</span>{" "}
-              <span className="rpp-sl-line rpp-sl-mid"><em>{t("hero.sloganAccent")}</em> <em>{t("hero.sloganAccent2")}</em></span></span>
+        {/* ── Hero (Nov 19, 2026, David's "door" concept) ──────────────────
+            Replaces the entryway photograph. Cream ground, the slogan in DM
+            Sans 800 with a soft layered shadow so it seems to float, the
+            description as the page's h1, and a garnet front door opening
+            OUTWARD toward the viewer (like the logo's door) onto a garden path.
+            The door art is David's ChatGPT render, recoloured to the logo's
+            garnet (#8F1A2B sampled from rpp-logo-v30), transparent PNG,
+            trimmed: rpp-hero-door-garnet-300/-600.webp (854x1570 source).
+            The <picture> keeps id="rpp-hero-image" because vite.config.ts
+            reads it to add the LCP preload links. Styles: DOOR_HERO_CSS. */}
+        <style dangerouslySetInnerHTML={{ __html: DOOR_HERO_CSS }} />
+        <div className="rpp-door-hero">
+          <div className="rpp-door-inner">
+            <p className="rpp-door-slogan">
+              {t("hero.sloganStart")} {t("hero.sloganAccent")} {t("hero.sloganAccent2")}.
             </p>
-            <h1 id="rpp-tagline" className={head3 ? "rpp-head3" : undefined} style={{ textAlign: "left", margin: 0 }}>
-              <span
-                className="rpp-tagline-line-v2"
-                style={{
-                  display: "block",
-                  /* DM Sans, matching the rest of the site. This tagline was
-                     the last Cormorant Garamond on the homepage.
-
-                     This exact comment previously claimed Source Serif 4 while
-                     the value beneath it said DM Sans, and it stayed wrong
-                     long enough to send a debugging session down the wrong
-                     path. If you change the value, change these words too.
-
-                     NOTE: index.css carries `main #rpp-tagline
-                     .rpp-tagline-line-v2` with !important, which BEATS this
-                     inline style. Changing this line alone does nothing —
-                     change both or neither. */
-                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                  fontSize: "clamp(28px, 4.4vw, 62px)",
-                  fontWeight: 600,
-                  fontStyle: "normal",
-                  color: "#272421",
-                  lineHeight: 1,
-                  letterSpacing: "0.01em",
-                  /* No text shadow. This white glow existed to lift NAVY text
-                     off the photograph, back when the tagline was overlaid on
-                     it. White letters on the navy band need no lift, and a
-                     white shadow behind white type only blurs its own edges —
-                     which is what made the tagline look soft and embossed. */
-                  /* Was clamp(8px, 1.5vw, 20px), which sat on top of the
-                     band padding above and read as one oversized gap. */
-                  marginTop: 0,
-                }}
-              >
-                {head3 ? (
-                  <>
-                    {t("hero.headA")}
-                    <br className="rpp-br-wide" /> {t("hero.headB")}
-                  </>
-                ) : (
-                  t("hero.taglineLine1")
-                )}
-              </span>
-              <span
-                className="rpp-tagline-line-v2"
-                style={{
-                  display: "block",
-                  /* DM Sans, matching the rest of the site. This tagline was
-                     the last Cormorant Garamond on the homepage.
-
-                     This exact comment previously claimed Source Serif 4 while
-                     the value beneath it said DM Sans, and it stayed wrong
-                     long enough to send a debugging session down the wrong
-                     path. If you change the value, change these words too.
-
-                     NOTE: index.css carries `main #rpp-tagline
-                     .rpp-tagline-line-v2` with !important, which BEATS this
-                     inline style. Changing this line alone does nothing —
-                     change both or neither. */
-                  fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                  fontSize: "clamp(28px, 4.4vw, 62px)",
-                  fontWeight: 600,
-                  fontStyle: "normal",
-                  color: "#272421",
-                  lineHeight: 1,
-                  letterSpacing: "0.01em",
-                  /* No text shadow. This white glow existed to lift NAVY text
-                     off the photograph, back when the tagline was overlaid on
-                     it. White letters on the navy band need no lift, and a
-                     white shadow behind white type only blurs its own edges —
-                     which is what made the tagline look soft and embossed. */
-                  /* Was 0.2em — about 6px at 31px — added on top of the
-                     1.12 line-height, so the two lines sat further apart than
-                     the leading intended and pushed the band taller. */
-                  marginTop: 0,
-                }}
-              >
-                {" "}
-                {head3 ? (
-                  <>
-                    {t("hero.headC")}
-                    <br className="rpp-br-wide" /> {t("hero.headD")}
-                  </>
-                ) : (
-                  t("hero.taglineLine2")
-                )}
-              </span>
+            <h1 id="rpp-hero-heading" className="rpp-door-line">
+              {head3 ? t("hero.doorLine") : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
             </h1>
-            <span className="rpp-tagline-rule" aria-hidden="true" />
+            <picture>
+              <source media="(max-width: 900px)" srcSet={`${doorSm} 300w, ${doorLg} 600w`} sizes="100px" width={300} height={552} />
+              <img
+                id="rpp-hero-image"
+                className="rpp-door-img"
+                src={doorLg}
+                srcSet={`${doorSm} 300w, ${doorLg} 600w`}
+                sizes="(min-width: 901px) 240px, 100px"
+                width={600}
+                height={1103}
+                alt={t("hero.doorAlt")}
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
 
