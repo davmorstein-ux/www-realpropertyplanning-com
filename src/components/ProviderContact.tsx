@@ -32,7 +32,7 @@ const ProviderContact = ({
 }: ProviderContactProps) => {
   if (!phone && !email) return null;
   return (
-    <div className={`relative z-10 flex flex-col items-center gap-1 mb-4 text-sm ${className}`}>
+    <div className={`relative z-10 flex flex-col items-center gap-1 mb-4 text-[17px] ${className}`}>
       {phone && (
         <a
           href={`tel:${stripPhone(phone)}`}

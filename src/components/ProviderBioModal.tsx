@@ -104,7 +104,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 <div
                   style={{
                     fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                    fontSize: 11,
+                    fontSize: 17,
                     letterSpacing: "0.12em",
                     color: "#c9d6ea",
                     textTransform: "uppercase",
@@ -115,7 +115,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 <div
                   style={{
                     fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                    fontSize: 11,
+                    fontSize: 17,
                     color: "rgba(255,255,255,0.65)",
                     marginTop: 2,
                   }}
@@ -136,7 +136,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               <p
                 style={{
                   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                  fontSize: 14,
+                  fontSize: 17,
                   color: "#1c1917",
                   lineHeight: 1.75,
                   marginBottom: 16,
@@ -158,7 +158,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   <div
                     style={{
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                      fontSize: 10,
+                      fontSize: 16,
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
@@ -168,7 +168,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 13, color: "#1c1917", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#1c1917", lineHeight: 1.6 }}>
                     {props.specialty}
                   </div>
                 </div>
@@ -186,7 +186,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 <div
                   style={{
                     fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
-                    fontSize: 10,
+                    fontSize: 16,
                     fontWeight: 700,
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
@@ -197,14 +197,14 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   Contact
                 </div>
                 {props.address && (
-                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 13, color: "#1c1917" }}>📍 {props.address}</div>
+                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#1c1917" }}>📍 {props.address}</div>
                 )}
                 {props.phone && (
                   <a
                     href={`tel:${props.phone.replace(/\D/g, "")}`}
                     style={{
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
-                      fontSize: 13,
+                      fontSize: 17,
                       color: "#142c52",
                       textDecoration: "none",
                       fontWeight: 700,
@@ -216,7 +216,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 {props.email && (
                   <a
                     href={`mailto:${props.email}`}
-                    style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 13, color: "#1B3A6B", textDecoration: "none" }}
+                    style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#1B3A6B", textDecoration: "none" }}
                   >
                     ✉️ {props.email}
                   </a>
@@ -226,7 +226,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     href={props.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 13, color: "#1B3A6B", textDecoration: "none" }}
+                    style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, color: "#1B3A6B", textDecoration: "none" }}
                   >
                     🌐 {props.website.replace(/^https?:\/\//, "")}
                   </a>
