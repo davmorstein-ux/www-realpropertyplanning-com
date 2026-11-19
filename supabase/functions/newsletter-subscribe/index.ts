@@ -1,21 +1,17 @@
 // ---------------------------------------------------------------------------
-// REDEPLOY MARKER — 2026-10-17 (AFH Club group ID filled in)
-// Earlier markers: 2026-10-16, 2026-08-15
+// REDEPLOY MARKER — 2026-11-19 (single opt-in + signup notice to info@)
+// Earlier markers: 2026-10-17, 2026-10-16, 2026-08-15
 //
-// This comment exists to change the file's contents and nothing else. Edge
-// functions deploy separately from the site: publishing rebuilds the React
-// app, but Supabase only redeploys a function when the function itself looks
-// changed. So setting `verify_jwt = false` in supabase/config.toml had no
-// effect — the running function was still the one deployed under the old
-// setting, and the browser kept reporting a bare CORS error.
+// Edge functions deploy separately from the site: Supabase only redeploys a
+// function when the function file itself changes, so this marker is bumped
+// whenever behaviour changes.
 //
-// Why a CORS error and not a 401: the browser sends a preflight OPTIONS
-// request before any cross-origin JSON POST, and by specification it attaches
-// no Authorization header. With verify_jwt on, the Supabase gateway rejected
-// that preflight before this file ran. The OPTIONS handler below was correct
-// the whole time and simply never executed.
-//
-// Safe to delete once the newsletter is confirmed working end to end.
+// Nov 19, 2026 — David switched the newsletter from double opt-in to single
+// opt-in. Analytics vs MailerLite showed 10 signups Nov 3–18 with only 3
+// confirmed; 7 never clicked the confirmation link and so never received
+// anything. The privacy policy and every on-page message were changed in the
+// same commit to say the address is added on submit. The consent record now
+// comes from opted_in_at + optin_ip sent below, plus the source tag.
 // ---------------------------------------------------------------------------
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
@@ -52,6 +48,49 @@ const OK = () =>
   new Response(JSON.stringify({ success: true }), {
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
+
+const NOTIFY_EMAIL = "info@realpropertyplanning.com";
+
+const esc = (v: unknown) =>
+  String(v ?? "")
+    .slice(0, 300)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+async function notifySignup(address: string, sourceTag: string, isAfh: boolean, isNew: boolean) {
+  try {
+    const resendKey = Deno.env.get("RESEND_API_KEY");
+    if (!resendKey) {
+      console.error("RESEND_API_KEY is not set; signup notice not sent");
+      return;
+    }
+    const listName = isAfh ? "AFH Club" : "Family (probate, inherited homes, senior moves)";
+    const page = sourceTag.split("|").slice(1).join("|") || "unknown";
+    const html = `
+      <h2>${isNew ? "New newsletter subscriber" : "Newsletter signup from an existing contact"}</h2>
+      <p><strong>Email:</strong> ${esc(address)}</p>
+      <p><strong>List:</strong> ${esc(listName)}</p>
+      <p><strong>Signed up from:</strong> ${esc(page)}</p>
+      <p style="color:#555;font-size:13px;">They are on the list now (single opt-in). Manage subscribers in MailerLite.</p>
+    `;
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${resendKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: "Real Property Planning <contact@realpropertyplanning.com>",
+        to: [NOTIFY_EMAIL],
+        subject: `${isNew ? "New subscriber" : "Signup (existing contact)"} — ${isAfh ? "AFH Club" : "Family"} newsletter`,
+        html,
+      }),
+    });
+    if (!res.ok) console.error("Signup notice failed:", res.status, await res.text());
+  } catch (err) {
+    console.error("Signup notice error:", err);
+  }
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -106,8 +145,8 @@ serve(async (req) => {
 
     /* Deliberately permissive. Strict email regexes reject valid addresses —
        long TLDs, plus-addressing, apostrophes — and the person rejected has no
-       way to argue. MailerLite validates properly, and double opt-in catches
-       anything that slips through. */
+       way to argue. MailerLite validates properly; Turnstile, the honeypot and
+       the timing check above keep bots out. */
     const address = String(email || "").trim();
     if (!address || !address.includes("@") || address.length < 5 || address.length > 254) {
       console.log("Rejected newsletter signup: malformed address");
@@ -120,15 +159,25 @@ serve(async (req) => {
       return OK();
     }
 
-    /* status: "unconfirmed" is what triggers MailerLite's confirmation email.
-       DO NOT change this to "active" — it would add people to the list without
-       consent, break the double opt-in the privacy policy promises in writing,
-       and destroy the timestamped consent record that matters for a licensed
-       broker mailing consumers.
+    /* Single opt-in (David's decision, Nov 19, 2026): status "active" puts the
+       person on the list the moment they submit — no confirmation email. If
+       this is ever changed back to "unconfirmed", the privacy policy
+       (src/pages/Privacy.tsx) and the "you're subscribed" messages in
+       NewsletterSignup.tsx, ResultSignup.tsx, MyPlan.tsx and
+       FamilyHomePlanning.tsx must change back with it.
+
+       Consent record: opted_in_at and optin_ip are stored on the MailerLite
+       subscriber, so there is still a timestamped record of who asked to be
+       added and from where. cf-connecting-ip is set by Cloudflare;
+       x-forwarded-for is the fallback.
 
        The source tag records WHICH form produced the signup (article end,
        footer, homepage), which is the whole reason per-location tracking was
        wanted. It is truncated because it comes from the client. */
+    const clientIp = (req.headers.get("cf-connecting-ip") ||
+      (req.headers.get("x-forwarded-for") || "").split(",")[0] || "").trim().slice(0, 64);
+    const optedInAt = new Date().toISOString().replace("T", " ").slice(0, 19);
+    const sourceTag = `${list === "afh" ? "afh" : "family"}|${String(source || "unknown")}`.slice(0, 120);
     const mlResponse = await fetch("https://connect.mailerlite.com/api/subscribers", {
       method: "POST",
       headers: {
@@ -138,9 +187,11 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         email: address,
-        status: "unconfirmed",
+        status: "active",
         groups: [groupFor(list)],
-        fields: { source: `${list === "afh" ? "afh" : "family"}|${String(source || "unknown")}`.slice(0, 120) },
+        fields: { source: sourceTag },
+        opted_in_at: optedInAt,
+        ...(clientIp ? { optin_ip: clientIp } : {}),
       }),
     });
 
@@ -152,7 +203,15 @@ serve(async (req) => {
       return OK();
     }
 
-    console.log("Newsletter signup accepted; confirmation email pending");
+    console.log("Newsletter signup accepted (single opt-in)");
+
+    /* Notice to info@ for every accepted signup (David asked Nov 19, 2026 —
+       MailerLite does not tell him when someone joins). 201 = new subscriber,
+       200 = an existing record was updated (e.g. someone who never confirmed
+       under the old double opt-in signing up again). A failure here is logged
+       only: the person is already on the list, and the caller must get the
+       same answer whatever happens. */
+    await notifySignup(address, sourceTag, list === "afh", mlResponse.status === 201);
     return OK();
   } catch (err) {
     console.error("newsletter-subscribe failed:", err);
