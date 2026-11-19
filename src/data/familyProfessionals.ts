@@ -11,6 +11,7 @@
 import { FEATURED_BROKER, FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, APPRAISER_PHOTO } from "@/data/featuredProfessionalAssets";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
+import kariFrinkPhoto from "@/assets/providers/kari-frink-wealth-advisor-lnw-seattle-v2.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import lauraPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
 import jennipherPhotoAsset from "@/assets/providers/jennipher-ama-family-first-at-home.webp.asset.json";
@@ -279,6 +280,7 @@ const groupsAsWritten: CategoryGroup[] = [
         role: "Wealth Advisor & Trust Services",
         company: "LNW",
         specialty: "Wealth management and financial planning for individuals and families, with trust services through LNW.",
+        photo: kariFrinkPhoto,
         href: "/for-financial-planners",
       },
       {
@@ -292,7 +294,7 @@ const groupsAsWritten: CategoryGroup[] = [
     ],
   },
   /* Added Nov 2, 2026 with Kari Frink (also under Financial Planning).
-     Her headshot is off both entries until LNW sends an updated one (Nov 3). */
+     Her updated LNW headshot went on both entries Nov 18, 2026. */
   {
     key: "trustServices",
     category: "Trust Services",
@@ -302,6 +304,7 @@ const groupsAsWritten: CategoryGroup[] = [
         role: "Wealth Advisor & Trust Services",
         company: "LNW",
         specialty: "Trust services through LNW, for families weighing a professional or co-trustee alongside a family member.",
+        photo: kariFrinkPhoto,
         href: "/trustees",
       },
     ],
