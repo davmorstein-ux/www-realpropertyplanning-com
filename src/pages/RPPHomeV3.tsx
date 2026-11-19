@@ -383,12 +383,14 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     border: 0 !important;
     border-radius: 16px;
     background: #FBF8F2;
-    box-shadow: 0 1px 1px rgba(39,36,33,0.10), 0 4px 8px rgba(39,36,33,0.10), 0 14px 28px rgba(39,36,33,0.16), 0 32px 60px rgba(39,36,33,0.22), 0 60px 110px rgba(39,36,33,0.24);
+    /* Nov 19, 2026 (David chose "AFTER"): lighter, tighter shadow. On the plain cream
+       hero the old five-layer float cast a grey band under the row. */
+    box-shadow: 0 1px 2px rgba(39,36,33,0.10), 0 4px 10px rgba(39,36,33,0.09), 0 12px 24px rgba(39,36,33,0.10);
   }
   html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link { position: relative; }
   html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after {
-    content: ""; position: absolute; left: 14%; right: 14%; bottom: -44px; height: 20px;
-    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(7px); opacity: 0.85;
+    content: ""; position: absolute; left: 14%; right: 14%; bottom: -18px; height: 20px;
+    border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(7px); opacity: 0.35;
     background: radial-gradient(ellipse at center, rgba(39,36,33,0.30) 0%, rgba(39,36,33,0.12) 45%, rgba(39,36,33,0) 72%);
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
@@ -399,9 +401,9 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt {
       transform: translateY(-8px);
       border-color: transparent;
-      box-shadow: 0 2px 2px rgba(39,36,33,0.10), 0 6px 12px rgba(39,36,33,0.10), 0 20px 36px rgba(39,36,33,0.16), 0 42px 72px rgba(39,36,33,0.22), 0 76px 130px rgba(39,36,33,0.26);
+      box-shadow: 0 2px 3px rgba(39,36,33,0.10), 0 6px 14px rgba(39,36,33,0.10), 0 18px 32px rgba(39,36,33,0.13);
     }
-    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.12); opacity: 0.55; }
+    html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:hover::after { transform: scaleX(1.12); opacity: 0.25; }
   }
   @media (prefers-reduced-motion: reduce) {
     html body main .rpp-funnel-grid div.rpp-jt.rpp-jt, html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link::after { transition: none; }
