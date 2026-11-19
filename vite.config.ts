@@ -1143,7 +1143,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Newsletters: Washington State Families and AFH Club | Real Property Planning",
     description: "Two free, occasional newsletters: one for Washington State (WA) families dealing with inherited homes, probate, senior moves and the cost of care, and one for adult family home buyers, owners and investors.",
     h1: "Newsletters",
-    intro: "There are two newsletters, written for different people. The family newsletter covers inherited homes, probate, senior moves and what care costs in Washington. The AFH Club newsletter covers adult family homes for sale and recent sales, DSHS rate and rule changes, and the Washington State AFH Market Report. Both are free and occasional, ask you to confirm your address before anything is sent, and can be unsubscribed from at any time.",
+    intro: "There are two newsletters, written for different people. The family newsletter covers inherited homes, probate, senior moves and what care costs in Washington. The AFH Club newsletter covers adult family homes for sale and recent sales, DSHS rate and rule changes, and the Washington State AFH Market Report. Both are free and occasional, and can be unsubscribed from at any time.",
   },
   "/family-home-planning": {
     title: "What Will Happen to the Family Home? A Free Planning Checklist | Real Property Planning",
