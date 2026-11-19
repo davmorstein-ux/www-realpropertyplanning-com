@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/the-silver-tsunami.mp3.asset.json";
+import audioAsset from "@/assets/the-silver-tsunami.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 const sectionBase = "py-14 md:py-20";
@@ -52,7 +52,7 @@ const SilverTsunami = () => {
           <div className={contentWrap}>
             <article className={proseWrap}>
               <div className="mb-8">
-                <ArticleAudioPlayer audioSrc={audioAsset.url} />
+                <ArticleAudioPlayer audioSrc={audioAsset} />
               </div>
               <ArticleCover src="/The_Silver_Tsunami.webp" alt="Cover art: The Silver Tsunami" width={1086} height={1448} />
 

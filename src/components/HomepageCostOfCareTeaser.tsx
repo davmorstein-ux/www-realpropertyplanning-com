@@ -1,4 +1,4 @@
-import teaserAsset from "@/assets/cost-of-care-teaser.webp.asset.json";
+import teaserAsset from "@/assets/cost-of-care-teaser.webp";
 
 const HomepageCostOfCareTeaser = () => (
   <a
@@ -17,7 +17,7 @@ const HomepageCostOfCareTeaser = () => (
     }}
   >
     <img
-      src={teaserAsset.url}
+      src={teaserAsset}
       alt="Cost of Care Calculator — compare Washington senior care costs to national averages"
       style={{
         width: "100%",

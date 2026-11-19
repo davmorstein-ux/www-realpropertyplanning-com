@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/the-senior-housing-guide.mp3.asset.json";
+import audioAsset from "@/assets/the-senior-housing-guide.mp3";
 import ArticleCover from "@/components/ArticleCover";
 import RppArrow from "@/components/RppArrow";
 const sectionBase = "py-14 md:py-20";
@@ -64,7 +64,7 @@ const SeniorHousingGuide = () => {
           <div className={contentWrap}>
             <article className={proseWrap}>
               <div className="mb-6">
-                <ArticleAudioPlayer audioSrc={audioAsset.url} />
+                <ArticleAudioPlayer audioSrc={audioAsset} />
               </div>
               <ArticleCover src="/The_Senior_Housing_Guide.webp" alt="Cover art: The Senior Housing Guide" width={1024} height={1365} />
               <h2 className={h2Class + " mt-0"}>The Senior Housing Guide</h2>

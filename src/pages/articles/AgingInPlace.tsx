@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/aging-in-place.mp3.asset.json";
+import audioAsset from "@/assets/aging-in-place.mp3";
 import ArticleCover from "@/components/ArticleCover";
 import WhichGuide from "@/components/WhichGuide";
 
@@ -62,7 +62,7 @@ const AgingInPlace = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset} /></div>
               <ArticleCover src="/Aging_in_Place_With_Support.webp" alt="Cover art: Aging in Place With Support" width={930} height={1240} />
               <p className={leadClass}>
                 Most older adults want to stay home. This guide covers what that takes, what it costs, and the signs that it is no longer working.

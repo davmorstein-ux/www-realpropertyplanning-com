@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/memory-care-costs.mp3.asset.json";
+import audioAsset from "@/assets/memory-care-costs.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 import RppArrow from "@/components/RppArrow";
@@ -59,7 +59,7 @@ const MemoryCareCosts = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap} ref={articleRef}>
-              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset} /></div>
               {/* "In this article" (Oct 27, 2026): built from this article's own h2s. */}
               <ArticleContents articleRef={articleRef} />
               <ArticleCover src="/Memory_Care_Costs.webp" alt="Cover art: Memory Care Costs" width={1086} height={1448} />

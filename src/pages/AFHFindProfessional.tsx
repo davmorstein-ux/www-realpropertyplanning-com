@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/afh-find-a-professional.mp3.asset.json";
+import audioAsset from "@/assets/afh-find-a-professional.mp3";
 import { AFH_FEATURED_SECTIONS, AFH_HEADSHOT_RING, type AFHProfessional } from "@/data/afhProfessionals";
 import ArticleCover from "@/components/ArticleCover";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
@@ -532,7 +532,7 @@ const AFHFindProfessional = () => (
       {/* Audio Player */}
       <section style={{ background: "#f5f2ec", padding: "48px 24px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          <ArticleAudioPlayer audioSrc={audioAsset} />
         </div>
       </section>
 

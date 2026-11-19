@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/affordable-senior-housing.mp3.asset.json";
+import audioAsset from "@/assets/affordable-senior-housing.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 import RppArrow from "@/components/RppArrow";
@@ -59,7 +59,7 @@ const AffordableSeniorHousing = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset} /></div>
               <ArticleCover src="/Affordable_Senior_Housing.webp" alt="Cover art: Affordable Senior Housing" width={930} height={1240} />
               <p className={leadClass}>
                 Affordable senior housing is lower-cost housing for older adults with limited income. It provides a place to live, not care, and waitlists are often long, so it pays to apply early. Below: what is available, how it works and what to ask.

@@ -9,7 +9,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/afh-buying-selling.mp3.asset.json";
+import audioAsset from "@/assets/afh-buying-selling.mp3";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
@@ -155,7 +155,7 @@ const AFHBuyingSelling = () => (
 
       <section style={{ background: "#f5f2ec", padding: "32px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          <ArticleAudioPlayer audioSrc={audioAsset} />
         </div>
       </section>
 

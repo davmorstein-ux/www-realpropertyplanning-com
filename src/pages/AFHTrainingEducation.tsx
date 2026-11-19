@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/afh-training-and-education-requirements.mp3.asset.json";
+import audioAsset from "@/assets/afh-training-and-education-requirements.mp3";
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
@@ -144,7 +144,7 @@ const AFHTrainingEducation = () => (
             AFH Training & Education Requirements
           </h1>
           <div className="mb-6">
-            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+            <ArticleAudioPlayer audioSrc={audioAsset} />
           </div>
           <p
             style={{

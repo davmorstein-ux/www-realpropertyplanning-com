@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/senior-housing-options.mp3.asset.json";
+import audioAsset from "@/assets/senior-housing-options.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 
@@ -56,7 +56,7 @@ const SeniorHousingOptions = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset} /></div>
               <ArticleCover src="/Senior_Housing_Options.webp" alt="Cover art: Senior Housing Options" width={1024} height={1365} />
               <h2 className={h2Class + " mt-0"}>Senior Housing Options</h2>
               <p className={leadClass}>The main types of senior housing, who each one suits, and why it helps to start before a crisis</p>

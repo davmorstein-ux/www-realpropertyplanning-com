@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/getting-started.mp3.asset.json";
+import audioAsset from "@/assets/getting-started.mp3";
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 import WhichGuide from "@/components/WhichGuide";
@@ -136,7 +136,7 @@ const AFHGettingStarted = () => (
             Is an Adult Family Home Right for You?
           </h1>
           <div style={{ marginBottom: 24 }}>
-            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+            <ArticleAudioPlayer audioSrc={audioAsset} />
           </div>
           <p
             style={{

@@ -143,3 +143,7 @@ GA4 `G-0X2GPKCW65` is set up in the `ga-gate` block of `index.html` and starts o
 - Old /cities/<city> addresses go to the matching city page (src/data/redirects.ts); everything else under /cities/ still goes to /counties.
 - No "Last updated" dates from git: history before Aug 23, 2026 is one import commit, and sitewide edits touch page files. Dates come only from articleRecords.ts after a real review.
 - Unknown addresses return a real 404 (wrangler.jsonc `not_found_handling: "404-page"`, dist/404.html written in vite.config.ts). Every route must therefore have its own built file; a route that only works client-side would now answer 404. Retired addresses get a redirect in src/data/redirects.ts.
+
+## Lovable-hosted files (`*.asset.json`) — do not use (Nov 19, 2026)
+
+Files uploaded through Lovable's editor arrive as `name.ext.asset.json` pointers to `/__l5e/assets-v1/...`, which only Lovable's host served. Since the Nov 1 move to Cloudflare those addresses return nothing (headshots, logos and 20 article narrations were silently missing until Nov 19). All 50 were recovered as real files beside their `.asset.json` and every import now points at the real file. Import images and audio as normal files from `src/assets/` (or `public/`); if a new `.asset.json` appears, download the file it points to and import that instead.

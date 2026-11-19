@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/afh-licensing-and-certification.mp3.asset.json";
+import audioAsset from "@/assets/afh-licensing-and-certification.mp3";
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
 
@@ -115,7 +115,7 @@ const AFHLicensingCertification = () => (
       <section style={{ background: "#f5f2ec", padding: "64px 24px 56px", borderBottom: "1px solid #e6dfd3" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div className="mb-6">
-            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+            <ArticleAudioPlayer audioSrc={audioAsset} />
           </div>
           <ArticleCover src="/afh-licensing-certification.webp" alt="Cover art: AFH Licensing & Certification" width={1086} height={1448} />
           <p

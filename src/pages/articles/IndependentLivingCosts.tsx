@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/independent-living-costs.mp3.asset.json";
+import audioAsset from "@/assets/independent-living-costs.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 import RppArrow from "@/components/RppArrow";
@@ -60,7 +60,7 @@ const IndependentLivingCosts = () => {
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 What the monthly fee covers, what it leaves out, and how to compare it with staying home
               </p>
-              <ArticleAudioPlayer audioSrc={audioAsset.url} />
+              <ArticleAudioPlayer audioSrc={audioAsset} />
               <hr className={hrClass} />
 
               <p className={leadClass}>

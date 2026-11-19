@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/afh-regulations-compliance.mp3.asset.json";
+import audioAsset from "@/assets/afh-regulations-compliance.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 import RppArrow from "@/components/RppArrow";
@@ -218,7 +218,7 @@ const AFHRegulationsCompliance = () => (
       {/* Audio Player */}
       <section style={{ background: "#f5f2ec", padding: "48px 24px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          <ArticleAudioPlayer audioSrc={audioAsset} />
         </div>
       </section>
 

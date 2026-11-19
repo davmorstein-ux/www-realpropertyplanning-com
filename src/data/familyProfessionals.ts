@@ -14,8 +14,8 @@ import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.
 import kariFrinkPhoto from "@/assets/providers/kari-frink-wealth-advisor-lnw-seattle-v2.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import lauraPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
-import jennipherPhotoAsset from "@/assets/providers/jennipher-ama-family-first-at-home.webp.asset.json";
-import nicolePhotoAsset from "@/assets/providers/nicole-aging-wisdom.webp.asset.json";
+import jennipherPhotoAsset from "@/assets/providers/jennipher-ama-family-first-at-home.webp";
+import nicolePhotoAsset from "@/assets/providers/nicole-aging-wisdom.webp";
 import ericPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
@@ -36,8 +36,8 @@ import anthonyUpchurchPhoto from "@/assets/providers/anthony-upchurch-legal-plan
 import { LYNN_LIEDLE } from "@/data/afhProfessionals";
 import nicoleJohnsonPhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-books-on-the-rock.webp";
 
-const jennipherPhoto = jennipherPhotoAsset.url;
-const nicolePhoto = nicolePhotoAsset.url;
+const jennipherPhoto = jennipherPhotoAsset;
+const nicolePhoto = nicolePhotoAsset;
 
 export interface Professional {
   name: string;

@@ -7,7 +7,7 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/how-to-pass-real-estate-to-your-children.mp3.asset.json";
+import audioAsset from "@/assets/how-to-pass-real-estate-to-your-children.mp3";
 import ArticleCover from "@/components/ArticleCover";
 
 const relatedResources = [
@@ -63,7 +63,7 @@ const WillsTrustsOtherOptions = () => {
               Wills, Trusts, and Other Options
             </h2>
 
-            <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+            <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset} /></div>
             <ArticleCover src="/Wills_Trusts_Other_Options.webp" alt="Cover art: Wills, Trusts & Other Options" width={1086} height={1448} />
             <p style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.75, color: "hsl(220 35% 18%)", marginBottom: 32, borderLeft: "4px solid #6b84ad", paddingLeft: 20 }}>
               The way a parent passes a house to their children decides how long the transfer takes, what it costs, who controls the property and what the children owe in tax if they sell. The house is often the largest asset a family hands down, so the choice is financial and personal as well as legal.

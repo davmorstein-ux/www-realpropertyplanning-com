@@ -8,10 +8,10 @@ import BackToProfessionals from "@/components/BackToProfessionals";
 import ProviderTile from "@/components/ProviderTile";
 import lauraPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
 import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.webp";
-import jennipherPhoto from "@/assets/providers/jennipher-ama-family-first-at-home.webp.asset.json";
-import familyFirstLogo from "@/assets/providers/family-first-at-home-logo.webp.asset.json";
-import nicolePhoto from "@/assets/providers/nicole-aging-wisdom.webp.asset.json";
-import agingWisdomLogo from "@/assets/providers/aging-wisdom-logo.webp.asset.json";
+import jennipherPhoto from "@/assets/providers/jennipher-ama-family-first-at-home.webp";
+import familyFirstLogo from "@/assets/providers/family-first-at-home-logo.webp";
+import nicolePhoto from "@/assets/providers/nicole-aging-wisdom.webp";
+import agingWisdomLogo from "@/assets/providers/aging-wisdom-logo.webp";
 
 const LAURA_BIO = `Silver & Sage Consulting, LLC is led by Laura A. Silverstein, MSW — an experienced Aging Life Care Manager who guides older adults, adults with disabilities, and their families through complex life transitions. Laura provides advocacy, comprehensive assessments, ongoing care management, consultation, and crisis intervention, and helps families navigate placement decisions with clarity and compassion. Her work centers on helping clients live as safely and independently as possible while giving families the information, referrals, and support they need to make confident decisions.`;
 
@@ -65,9 +65,9 @@ const AgingLifeCareManagers = () => (
               name="Jennipher Ama"
               title="President, RN, CMC"
               company="Family First at Home"
-              photo={jennipherPhoto.url}
+              photo={jennipherPhoto}
               photoAlt="Photo of Jennipher Ama, President of Family First at Home"
-              logo={familyFirstLogo.url}
+              logo={familyFirstLogo}
               logoAlt="Family First at Home logo"
               phone="(866) 412-3861"
               email="intake@familyfirstathome.com"
@@ -80,9 +80,9 @@ const AgingLifeCareManagers = () => (
               name="Nicole Amico Kane, MSW, LICSW, CMC"
               title="Director of Care Management, Certified Care Manager"
               company="Aging Wisdom"
-              photo={nicolePhoto.url}
+              photo={nicolePhoto}
               photoAlt="Photo of Nicole Amico Kane, MSW, LICSW, CMC — Director of Care Management at Aging Wisdom"
-              logo={agingWisdomLogo.url}
+              logo={agingWisdomLogo}
               logoAlt="Aging Wisdom logo"
               phone="(206) 456-5155"
               email="inquiries@agingwisdom.com"
