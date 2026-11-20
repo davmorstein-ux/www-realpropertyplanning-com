@@ -111,6 +111,15 @@ const REMODEL_LINES: [LucideIcon, string][] = [
    written at high specificity with !important because index.css forces
    main h1 to 26px, every h1-h4 margin, and p margins/line-height. */
 const DOOR_HERO_CSS = `
+/* ONE FONT ON THE HOMEPAGE (Nov 19, 2026, David): every heading, tile title and
+   card on the homepage uses DM Sans, like the "Your next chapter." slogan; the
+   Playfair serif headings made the page mix two fonts. Scoped to this page's
+   <main> only; the rest of the site still uses Playfair headings until David decides. */
+html body main#main-content.rpp-home-one-font, html body main#main-content.rpp-home-one-font * {
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+}
+html body main#main-content.rpp-home-one-font :is(h1, h2, h3, h4) { font-weight: 700 !important; letter-spacing: -0.01em !important; }
+html body main#main-content.rpp-home-one-font .rpp-funnel-grid span.rpp-jt-title.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-weight: 700 !important; letter-spacing: -0.005em !important; }
 html body main div.rpp-door-hero.rpp-door-hero { background: #faf8f4; }
 html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner {
   width: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem)); margin: 0 auto; /* same width as the four tiles below, so the edges line up */
@@ -596,7 +605,7 @@ const RPPHomeV3 = () => {
       <HomeTileIntro />
       <Header />
 
-      <main id="main-content">
+      <main id="main-content" className="rpp-home-one-font">
         <style dangerouslySetInnerHTML={{ __html: HERO_WIDE_CSS }} />
         {/* ── Hero (Nov 19, 2026, David's "door" concept) ──────────────────
             Replaces the entryway photograph. Cream ground, the slogan in DM
