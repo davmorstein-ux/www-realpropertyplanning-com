@@ -645,7 +645,7 @@ const RPPHomeV3 = () => {
         <div className="rpp-door-hero">
           <div className="rpp-door-inner">
             <p className="rpp-door-slogan">
-              {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}.
+              {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
               {head3 ? (
