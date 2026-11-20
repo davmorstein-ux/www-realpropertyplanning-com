@@ -192,7 +192,12 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door
   html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topic + span.rpp-door-topic::before {
     content: "·"; color: #8F1A2B; font-weight: 800; padding: 0 0.45em 0 0;
   }
-  html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img { height: clamp(118px, 34vw, 170px) !important; }
+  html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img { height: clamp(96px, 27vw, 150px) !important; }
+  /* Nov 19, 2026 (David, on his iPhone): pull everything up so more of the tiles
+     show above Safari's toolbar: smaller door, tighter list, shorter tile photos. */
+  html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner { padding: 12px 0 2px; }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line { margin-top: 6px !important; line-height: 1.32 !important; }
+  html body main .rpp-funnel-grid .rpp-funnel-img.rpp-funnel-img.rpp-funnel-img { aspect-ratio: 16 / 9 !important; object-position: 50% 35%; }
 }
 `;
 
