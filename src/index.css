@@ -5785,10 +5785,18 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
   --rpp-pulse-duration: 900ms;
   --rpp-pulse-scale: 1.03;
   --rpp-pulse-easing: ease-in-out;
+  --rpp-intro-pulse-scale: 1.015; /* homepage tile wave: half the click pulse (Nov 20, 2026, David: too strong) */
 }
 /* Animates the separate `scale` property, not `transform`: several tiles and
    buttons set transform with !important (hover lifts), which would silently
    cancel a transform animation. `scale` combines with them instead. */
+@keyframes rpp-intro-double-pulse {
+  0%   { scale: 1; }
+  25%  { scale: var(--rpp-intro-pulse-scale); }
+  50%  { scale: 1; }
+  75%  { scale: var(--rpp-intro-pulse-scale); }
+  100% { scale: 1; }
+}
 @keyframes rpp-double-pulse {
   0%   { scale: 1; }
   25%  { scale: var(--rpp-pulse-scale); }
@@ -5804,7 +5812,7 @@ html body [data-pulse].rpp-pulsing {
 /* Homepage tile wave (HomeTileIntro.tsx): the same double pulse, played
    once per tile in order when the row first comes into view. */
 html body [data-home-tile].rpp-intro-pulse {
-  animation: rpp-double-pulse var(--rpp-pulse-duration) var(--rpp-pulse-easing) 1 both !important;
+  animation: rpp-intro-double-pulse var(--rpp-pulse-duration) var(--rpp-pulse-easing) 1 both !important;
   transform-origin: center center;
   backface-visibility: hidden;
 }

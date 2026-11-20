@@ -13,6 +13,10 @@
  * - Skipped entirely under prefers-reduced-motion.
  * - Plays once per browser session (sessionStorage, wrapped in try/catch).
  * - Stops the moment the visitor clicks, taps or presses a key.
+ * - Nov 20, 2026 (David): waits for the hero door to finish opening
+ *   (DoorHero sets data-door="open" on .rpp-door-hero), then a short pause,
+ *   so the two motions never overlap; and the wave is gentler (1.5%, see
+ *   --rpp-intro-pulse-scale in index.css) than the click pulse (3%).
  * - Uses its own class (rpp-intro-pulse), not rpp-pulsing, so it never
  *   interferes with PulseNavigator or the click tracking that checks that class.
  */
@@ -82,6 +86,29 @@ export default function HomeTileIntro() {
       stopObservers.push(away);
     };
 
+    /** Run fn once the homepage door has finished opening (or at once if
+        there is no door, it is already open, or it never reports within 6 s). */
+    const AFTER_DOOR_MS = 500;
+    const afterDoor = (fn: () => void) => {
+      const hero = document.querySelector<HTMLElement>(".rpp-door-hero");
+      if (!hero || hero.dataset.door === "open") {
+        fn();
+        return;
+      }
+      let done = false;
+      const go = () => {
+        if (done) return;
+        done = true;
+        mo.disconnect();
+        timers.push(window.setTimeout(fn, AFTER_DOOR_MS));
+      };
+      const mo = new MutationObserver(() => {
+        if (hero.dataset.door === "open") go();
+      });
+      mo.observe(hero, { attributes: true, attributeFilter: ["data-door"] });
+      timers.push(window.setTimeout(go, 6000));
+    };
+
     const io = new IntersectionObserver(
       (entries) => {
         if (started) return;
@@ -89,7 +116,7 @@ export default function HomeTileIntro() {
         // visitor sees the wave from the start.
         if (entries.some((e) => e.target === tiles[tiles.length - 1] && e.intersectionRatio >= 0.6)) {
           io.disconnect();
-          play();
+          afterDoor(play);
         }
       },
       { threshold: [0.6] },
