@@ -20,8 +20,11 @@
     "point2": "{{n}}+ calculators",
     "point3": "A path to licensed professionals",
     "point4": "Free newsletter",
-    "doorLine": "Guidance for Washington families navigating senior transitions, probate, and estate decisions.",
-    "doorAlt": "A red front door opening onto a sunny garden path"
+    "doorAlt": "A red front door opening onto a sunny garden path",
+    "doorLead": "Guidance for Washington State families navigating",
+    "doorTopic1": "Senior Transitions",
+    "doorTopic2": "Estate Decisions",
+    "doorTopic3": "Probate"
   },
   "funnel": {
     "heading": "What brings you here today?",

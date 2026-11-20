@@ -155,6 +155,19 @@ html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img {
   /* Height follows the window height too, so the question and all four tiles stay on a laptop's first screen. */
   height: clamp(220px, min(24vw, 40vh), 380px) !important; aspect-ratio: 600 / 1103;
 }
+/* Topics line (Nov 19, 2026, David chose "option A"): the lead sentence, then the
+   three topics in bold. Laptops: one line with garnet dots between them. Phones:
+   a short stacked list with a garnet dot before each (see the max-width block).
+   index.css forces spans in main to 16px regular, so size/weight are re-asserted. */
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span:is(.rpp-door-lead, .rpp-door-topics, .rpp-door-topic) {
+  font-family: inherit !important; font-size: inherit !important; line-height: inherit !important; letter-spacing: inherit !important;
+}
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-lead { font-weight: 500 !important; color: inherit !important; }
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topics { display: block; margin-top: 2px; }
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topic { font-weight: 700 !important; color: #1c1917 !important; white-space: nowrap; }
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topic + span.rpp-door-topic::before {
+  content: "·"; color: #8F1A2B; font-weight: 800; padding: 0 0.4em 0 0.1em;
+}
 @media (min-width: 901px) {
   /* No photograph any more, so the tiles no longer overlap the hero's bottom edge. */
   html body main div.rpp-funnel-block.rpp-funnel-block > div.rpp-funnel-grid.rpp-funnel-grid.rpp-funnel-grid { margin-top: 0 !important; }
@@ -173,6 +186,12 @@ html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img {
     align-self: center; font-size: clamp(34px, 10.4vw, 48px) !important; max-width: 6.4em !important;
   }
   html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line { margin-top: 10px !important; font-size: 18px !important; line-height: 1.4 !important; max-width: none; }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-lead::after { content: ":"; }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topic { display: block; }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topic::before,
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line span.rpp-door-topic + span.rpp-door-topic::before {
+    content: "·"; color: #8F1A2B; font-weight: 800; padding: 0 0.45em 0 0;
+  }
   html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img { height: clamp(118px, 34vw, 170px) !important; }
 }
 `;
@@ -624,7 +643,16 @@ const RPPHomeV3 = () => {
               {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}.
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
-              {head3 ? t("hero.doorLine") : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
+              {head3 ? (
+                <>
+                  <span className="rpp-door-lead">{t("hero.doorLead")}</span>{" "}
+                  <span className="rpp-door-topics">
+                    <span className="rpp-door-topic">{t("hero.doorTopic1")}</span>{" "}
+                    <span className="rpp-door-topic">{t("hero.doorTopic2")}</span>{" "}
+                    <span className="rpp-door-topic">{t("hero.doorTopic3")}</span>
+                  </span>
+                </>
+              ) : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
             </h1>
             <picture>
               <source media="(max-width: 900px)" srcSet={`${doorSm} 300w, ${doorLg} 600w`} sizes="100px" width={300} height={552} />
