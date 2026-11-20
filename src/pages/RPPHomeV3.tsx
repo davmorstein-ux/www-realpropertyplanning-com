@@ -22,8 +22,7 @@ import AskBox from "@/components/AskBox";
    laptop screen shows the whole room (ceiling, full door, floor) and the
    tiles still fit on the first screen. The door's foot sits ~63% down the
    frame, which leaves room for the tiles below it. */
-import doorLg from "@/assets/hero/rpp-hero-door-garnet-600.webp";
-import doorSm from "@/assets/hero/rpp-hero-door-garnet-300.webp";
+import DoorHero from "@/components/DoorHero";
 /* Oct 31, 2026: all hero files rebuilt from David's 4x upscale of the
    original (8616x2920), so they are sharper; plus a 2880 copy for
    high-resolution laptop screens and a 1370 phone copy for 3x iPhones.
@@ -142,6 +141,11 @@ html body main div.rpp-door-hero p.rpp-door-slogan span.rpp-door-accent.rpp-door
   color: #8F1A2B !important; font-family: inherit !important; font-weight: 800 !important;
   font-size: inherit !important; letter-spacing: inherit !important; font-style: normal !important; line-height: inherit !important;
 }
+/* Nov 20, 2026 (David): while the door opens (src/components/DoorHero.tsx),
+   "next" starts charcoal and fades to the door's garnet, starting a beat after
+   the door and finishing as it stops. data-door: closed | opening | open. */
+html body main div.rpp-door-hero[data-door="closed"] p.rpp-door-slogan span.rpp-door-accent.rpp-door-accent { color: #1c1917 !important; }
+html body main div.rpp-door-hero[data-door="opening"] p.rpp-door-slogan span.rpp-door-accent.rpp-door-accent { transition: color 950ms ease-in-out 250ms; }
 html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line {
   grid-area: line; align-self: start; margin: clamp(14px, 1.6vw, 24px) 0 0 !important; padding: 0 !important;
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
@@ -153,7 +157,7 @@ html body main div.rpp-door-hero div.rpp-door-inner > picture { /* no class on <
 html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img {
   display: block; width: auto !important; max-width: none !important;
   /* Height follows the window height too, so the question and all four tiles stay on a laptop's first screen. */
-  height: clamp(220px, min(24vw, 40vh), 380px) !important; aspect-ratio: 600 / 1103;
+  height: clamp(220px, min(24vw, 40vh), 380px) !important; aspect-ratio: 463 / 760;
 }
 /* Topics line (Nov 19, 2026, David chose "option A"): the lead sentence, then the
    three topics in bold. Laptops: one line with garnet dots between them. Phones:
@@ -642,8 +646,7 @@ const RPPHomeV3 = () => {
             The <picture> keeps id="rpp-hero-image" because vite.config.ts
             reads it to add the LCP preload links. Styles: DOOR_HERO_CSS. */}
         <style dangerouslySetInnerHTML={{ __html: DOOR_HERO_CSS }} />
-        <div className="rpp-door-hero">
-          <div className="rpp-door-inner">
+        <DoorHero alt={t("hero.doorAlt")}>
             <p className="rpp-door-slogan">
               {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}
             </p>
@@ -659,23 +662,7 @@ const RPPHomeV3 = () => {
                 </>
               ) : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
             </h1>
-            <picture>
-              <source media="(max-width: 900px)" srcSet={`${doorSm} 300w, ${doorLg} 600w`} sizes="100px" width={300} height={552} />
-              <img
-                id="rpp-hero-image"
-                className="rpp-door-img"
-                src={doorLg}
-                srcSet={`${doorSm} 300w, ${doorLg} 600w`}
-                sizes="(min-width: 901px) 240px, 100px"
-                width={600}
-                height={1103}
-                alt={t("hero.doorAlt")}
-                fetchPriority="high"
-                decoding="async"
-              />
-            </picture>
-          </div>
-        </div>
+        </DoorHero>
 
         {/* ── Three short points under the artwork (Oct 21, 2026, David chose
             "Option 2" over a sentence): replaced the beige box holding a
