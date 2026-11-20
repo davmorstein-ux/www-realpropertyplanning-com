@@ -5785,7 +5785,7 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
   --rpp-pulse-duration: 900ms;
   --rpp-pulse-scale: 1.03;
   --rpp-pulse-easing: ease-in-out;
-  --rpp-intro-pulse-scale: 1.015; /* homepage tile wave: half the click pulse (Nov 20, 2026, David: too strong) */
+  --rpp-intro-pulse-scale: 1.015; /* homepage tile wave: half the click pulse (Nov 20, 2026: the owner found 3% too strong) */
 }
 /* Animates the separate `scale` property, not `transform`: several tiles and
    buttons set transform with !important (hover lifts), which would silently
