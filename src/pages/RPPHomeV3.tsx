@@ -127,6 +127,12 @@ html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan {
   text-shadow: 0 1px 1px rgba(40,25,15,0.10), 0 6px 10px rgba(40,25,15,0.12), 0 16px 28px rgba(40,25,15,0.14);
   max-width: none !important; text-align: left !important;
 }
+/* Nov 19, 2026 (David): only "next" in the door's garnet, upright (italic was tried and declined).
+   index.css forces spans in main to regular weight/16px, so every font property is re-asserted. */
+html body main div.rpp-door-hero p.rpp-door-slogan span.rpp-door-accent.rpp-door-accent {
+  color: #8F1A2B !important; font-family: inherit !important; font-weight: 800 !important;
+  font-size: inherit !important; letter-spacing: inherit !important; font-style: normal !important; line-height: inherit !important;
+}
 html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line {
   grid-area: line; align-self: start; margin: clamp(14px, 1.6vw, 24px) 0 0 !important; padding: 0 !important;
   font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
@@ -606,7 +612,7 @@ const RPPHomeV3 = () => {
         <div className="rpp-door-hero">
           <div className="rpp-door-inner">
             <p className="rpp-door-slogan">
-              {t("hero.sloganStart")} {t("hero.sloganAccent")} {t("hero.sloganAccent2")}.
+              {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}.
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
               {head3 ? t("hero.doorLine") : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
