@@ -710,6 +710,13 @@ html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible div.rpp-
   outline: 3px solid #1B3A6B !important; outline-offset: 4px !important;
 }
 
+/* Plan link under the Ask box: quieter (Nov 21, 2026, David) - supersedes the
+   Nov 1 heavier 20px / 700-800 rule in index.css. */
+html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link { font-size: 17px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #57534e !important; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet { font-size: 17px !important; font-weight: 700 !important; line-height: 1.5 !important; color: #44403c !important; text-decoration: none !important; white-space: nowrap; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover,
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:focus-visible { text-decoration: underline !important; text-underline-offset: 3px; }
+
 /* ---- POPULAR GUIDES: lighter than the four cards ----
    Photos back to square (Nov 21, 2026, David): the 16:9 crop cut the tops
    and bottoms off the square still-lifes and "looks like a mistake". */
@@ -1358,10 +1365,11 @@ const RPPHomeV3 = () => {
             <div style={{ margin: "clamp(40px, 4vw, 56px) 0 4.5rem" }}>
               <AskBox />
               {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
-              <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "18px auto 0", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 19, lineHeight: 1.5, color: "#1c1917" }}>
+              <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "14px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 16, lineHeight: 1.5, color: "#57534e" }}>
+                {/* Quieter (Nov 21, 2026, David): a plain text link under the box, not a second call to action. */}
                 Not sure what to ask?{" "}
-                <Link to="/my-plan" className="rpp-heading-link" style={{ color: "#1B3A6B", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3, fontSize: 19 }}>
-                  Get a free step-by-step plan for your situation <RppArrow />
+                <Link to="/my-plan" className="rpp-myplan-quiet" style={{ color: "#44403c", fontWeight: 600, textDecoration: "none", fontSize: 16 }}>
+                  Get a free step-by-step plan
                 </Link>
               </p>
             </div>
