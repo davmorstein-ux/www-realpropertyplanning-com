@@ -185,9 +185,11 @@ const HomepagePopularResources = () => {
          (HomepageAFHStrip.tsx). Centred at every width. Later the same night
          David said it got lost ("the blue gets lost, the font could be
          larger"): now a solid band with large white type and a white button.
-         Colour is the logo door's garnet #9E1F3A, NOT navy: David, Nov 20,
-         2026, "NO MORE NAVY" (standing rule: the site already has too much
-         navy; see the colour notes). Never make this strip navy again. */
+         Final look (David, Nov 20, 2026, after "NO MORE NAVY"): white box with
+         only a garnet outline (no filled band); title words coloured
+         "Medicare" navy, "vs." garnet #9E1F3A, "Medicaid" green #0f6b56
+         (matches the comparison page's columns); "Compare them" a garnet
+         button with white text. Do not fill the box with navy or garnet. */
       .rpp-mvm-strip.rpp-mvm-strip {
         display: flex;
         flex-direction: column;
@@ -198,30 +200,30 @@ const HomepagePopularResources = () => {
         max-width: 860px;
         margin: 2rem auto 0;
         padding: 1.75rem 1.75rem 1.6rem;
-        background: #9E1F3A;
-        border: 0;
+        background: #ffffff;
+        border: 2px solid #9E1F3A;
         border-radius: 14px;
-        box-shadow: 0 10px 24px rgba(158, 31, 58, 0.24);
+        box-shadow: 0 6px 18px rgba(28, 25, 23, 0.08);
         text-align: center;
         transition: background-color 150ms ease, transform 150ms ease;
       }
       .rpp-mvm-strip.rpp-mvm-strip,
       .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; white-space: normal; }
       .rpp-mvm-strip:hover,
-      .rpp-mvm-strip:focus-visible { background: #84182F; }
+      .rpp-mvm-strip:focus-visible { background: #fdf7f8; }
       .rpp-mvm-words { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 100%; }
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 36px !important;
         font-weight: 800;
-        color: #ffffff !important;
+        color: #1c1917 !important;
         line-height: 1.15;
       }
       .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 20px !important;
         font-weight: 500;
-        color: #f3efe8 !important;
+        color: #1c1917 !important;
         line-height: 1.4;
       }
       .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go {
@@ -231,13 +233,17 @@ const HomepagePopularResources = () => {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 20px !important;
         font-weight: 800;
-        color: #9E1F3A !important;
-        background: #ffffff;
+        color: #ffffff !important;
+        background: #9E1F3A;
         border-radius: 10px;
         padding: 12px 24px;
         min-height: 52px;
         white-space: nowrap;
       }
+      .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { color: #1B3A6B !important; }
+      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { color: #9E1F3A !important; }
+      .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { color: #0f6b56 !important; }
+      .rpp-mvm-strip:hover span.rpp-mvm-go.rpp-mvm-go { background: #84182F; }
       @media (max-width: 640px) {
         .rpp-mvm-strip.rpp-mvm-strip { padding: 1.4rem 1.1rem 1.3rem; margin-top: 1.5rem; }
         .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 29px !important; }
@@ -333,7 +339,10 @@ const HomepagePopularResources = () => {
             about paying for senior living. Sits where the AFH Club strip was. */}
         <Link to="/medicare-vs-medicaid" className="rpp-mvm-strip marquee-hover">
           <span className="rpp-mvm-words">
-            <span className="rpp-mvm-title">Medicare vs. Medicaid</span>
+            <span className="rpp-mvm-title">
+              <span className="rpp-mvm-medicare">Medicare</span> <span className="rpp-mvm-vs">vs.</span>{" "}
+              <span className="rpp-mvm-medicaid">Medicaid</span>
+            </span>
             <span className="rpp-mvm-sub">What each pays for, who qualifies, and which one covers senior living</span>
           </span>
           <span className="rpp-mvm-go">
