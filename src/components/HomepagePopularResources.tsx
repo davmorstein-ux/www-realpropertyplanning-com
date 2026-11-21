@@ -189,7 +189,7 @@ const HomepagePopularResources = () => {
          picture on the right because the calculator block below has its
          picture on the left) with the words set in real HTML on the cream side. The government eagle seal was painted
          out of the Medicare card on purpose; do not put it back.
-         Words: "Medicare" navy, "vs." near-black #1c1917 (David, Nov 21, 2026; was garnet #9E1F3A), "Medicaid" green
+         Words: "Medicare" navy, "vs." near-black #1c1917 (owner, Nov 21, 2026; was garnet #9E1F3A), "Medicaid" green
          #0f6b56; flat garnet "Compare them" button. DM Sans only.
          Laptops: picture fills the banner, words on the left 57%.
          Under 860px: the cards picture on top, words below. */
@@ -231,7 +231,7 @@ const HomepagePopularResources = () => {
         white-space: normal;
       }
       .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { font-weight: 800 !important; font-size: inherit !important; color: #1B3A6B !important; }
-      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: 0.65em !important; color: #1c1917 !important; margin: 0 0.12em; } /* Nov 21, 2026 (David): smaller "vs." */
+      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: 0.65em !important; color: #1c1917 !important; margin: 0 0.12em; } /* Nov 21, 2026 (owner): smaller "vs." */
       .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { font-weight: 800 !important; font-size: inherit !important; color: #0f6b56 !important; }
       .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
