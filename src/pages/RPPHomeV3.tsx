@@ -710,9 +710,10 @@ html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible div.rpp-
   outline: 3px solid #1B3A6B !important; outline-offset: 4px !important;
 }
 
-/* ---- POPULAR GUIDES: shorter photos (were square), lighter than the four cards ---- */
+/* ---- POPULAR GUIDES: lighter than the four cards ----
+   Photos back to square (Nov 21, 2026, David): the 16:9 crop cut the tops
+   and bottoms off the square still-lifes and "looks like a mistake". */
 @media (min-width: 640px) {
-  html body main .rpp-pr-tile img.rpp-pr-photo-img.rpp-pr-photo-img.rpp-pr-photo-img { aspect-ratio: 16 / 9 !important; object-fit: cover; object-position: 50% 55%; }
   html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { font-size: clamp(18px, 1.4vw, 20px) !important; font-weight: 700 !important; }
   html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { box-shadow: none !important; }
 }
