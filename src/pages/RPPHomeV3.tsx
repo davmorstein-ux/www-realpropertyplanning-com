@@ -622,16 +622,26 @@ html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inne
   grid-template-rows: 1fr auto auto 1fr;
   grid-template-areas: ". door" "slogan door" "line door" ". door";
   justify-content: center;
-  column-gap: clamp(32px, 4.2vw, 72px);
+  /* Nov 21, 2026 (owner): door about 60-80px closer to the headline. The
+     sentence below no longer sets the column width (see the h1 rule), so this
+     gap is the real space between "chapter" and the door frame (plus ~25px
+     of the door image's own transparent margin). */
+  column-gap: clamp(40px, 3.6vw, 56px);
   align-items: center;
 }
 html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { align-self: end; }
 html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
   align-self: start;
-  max-width: 24em;
+  /* Width 0 + min-width 100%: the sentence wraps inside the headline's width
+     instead of widening the text column and pushing the door away. */
+  width: 0; min-width: 100%;
+  max-width: none;
+  /* A touch smaller (was clamp(19px, 1.75vw, 25px)) so the sentence fits the
+     headline's width on two lines at laptop and monitor sizes. */
+  font-size: clamp(18px, 1.62vw, 24px) !important;
+  text-wrap: wrap;
   font-weight: 500 !important;
   color: #1c1917 !important;
-  text-wrap: balance;
 }
 @media (max-width: 900px) {
   html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner {
@@ -645,7 +655,7 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
     align-self: center; font-size: clamp(32px, 9.4vw, 44px) !important;
   }
   html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
-    max-width: none; font-size: 18px !important; line-height: 1.4 !important; text-wrap: pretty;
+    width: auto; min-width: 0; max-width: none; font-size: 18px !important; line-height: 1.4 !important; text-wrap: pretty;
   }
 }
 
