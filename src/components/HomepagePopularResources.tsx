@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import RppArrow from "@/components/RppArrow";
+import mvmArt from "@/assets/perf/mvm-banner.webp";
+import mvmArtPhone from "@/assets/perf/mvm-banner-phone.webp";
 /* Oct 27, 2026 (performance): these images moved from public/ into src/assets so the build
    names them by content and browsers can cache them long-term (public/ files were served with
    no cache lifetime); the four object pictures also have 320px copies for their ~150px slot. */
@@ -180,75 +182,97 @@ const HomepagePopularResources = () => {
         border-color: #3d3833 !important;
       }
 
-      /* Medicare vs. Medicaid (Nov 20, 2026, David): took the AFH Club strip's
-         place under the guides; AFH Club moved near the bottom of the page
-         (HomepageAFHStrip.tsx). Centred at every width. Later the same night
-         David said it got lost ("the blue gets lost, the font could be
-         larger"): now a solid band with large white type and a white button.
-         Final look (David, Nov 20, 2026, after "NO MORE NAVY"): white box with
-         only a garnet outline (no filled band); title words coloured
-         "Medicare" navy, "vs." garnet #9E1F3A, "Medicaid" green #0f6b56
-         (matches the comparison page's columns); "Compare them" a garnet
-         button with white text. Do not fill the box with navy or garnet. */
+      /* Medicare vs. Medicaid banner (Nov 20, 2026, David). Several boxed
+         versions were rejected that evening ("cheapens the look of the
+         page"; "NO MORE NAVY" fills). Final: David's ChatGPT banner art
+         (cards on a desk, cream space on the right) with the words set in
+         real HTML on the cream side. The government eagle seal was painted
+         out of the Medicare card on purpose; do not put it back.
+         Words: "Medicare" navy, "vs." garnet #9E1F3A, "Medicaid" green
+         #0f6b56; flat garnet "Compare them" button. DM Sans only.
+         Laptops: picture fills the banner, words on the right 58%.
+         Under 860px: the cards picture on top, words below. */
       .rpp-mvm-strip.rpp-mvm-strip {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
+        position: relative;
+        display: block;
         width: 100%;
-        max-width: 860px;
+        max-width: 980px;
         margin: 2rem auto 0;
-        padding: 1.75rem 1.75rem 1.6rem;
-        background: #ffffff;
-        border: 2px solid #9E1F3A;
-        border-radius: 14px;
-        box-shadow: 0 6px 18px rgba(28, 25, 23, 0.08);
-        text-align: center;
-        transition: background-color 150ms ease, transform 150ms ease;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #e4ddd2;
+        background: #fbf6ee;
+        box-shadow: 0 10px 28px rgba(28, 25, 23, 0.10);
+        aspect-ratio: 1600 / 449;
+        text-align: left;
       }
       .rpp-mvm-strip.rpp-mvm-strip,
-      .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; white-space: normal; }
-      .rpp-mvm-strip:hover,
-      .rpp-mvm-strip:focus-visible { background: #fdf7f8; }
-      .rpp-mvm-words { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 100%; }
+      .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; }
+      .rpp-mvm-strip img.rpp-mvm-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+      .rpp-mvm-strip img.rpp-mvm-art-phone { display: none; }
+      .rpp-mvm-text {
+        position: absolute;
+        top: 0; bottom: 0; right: 0;
+        left: 42%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 0 32px 0 8px;
+      }
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 36px !important;
+        font-size: 40px !important;
         font-weight: 800 !important;
-        color: #1c1917 !important;
-        line-height: 1.15;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        white-space: normal;
       }
+      .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { font-weight: 800 !important; font-size: inherit !important; color: #1B3A6B !important; }
+      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: inherit !important; color: #9E1F3A !important; }
+      .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { font-weight: 800 !important; font-size: inherit !important; color: #0f6b56 !important; }
       .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 20px !important;
         font-weight: 500;
-        color: #1c1917 !important;
+        color: #3d3833 !important;
         line-height: 1.4;
+        white-space: normal;
       }
       .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go {
         display: inline-flex;
         align-items: center;
         gap: 10px;
+        margin-top: 4px;
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 20px !important;
+        font-size: 19px !important;
         font-weight: 800;
         color: #ffffff !important;
         background: #9E1F3A;
         border-radius: 10px;
-        padding: 12px 24px;
-        min-height: 52px;
+        padding: 11px 22px;
+        min-height: 50px;
         white-space: nowrap;
+        transition: background-color 150ms ease;
       }
-      .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { font-weight: 800 !important; font-size: inherit !important; color: #1B3A6B !important; }
-      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: inherit !important; color: #9E1F3A !important; }
-      .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { font-weight: 800 !important; font-size: inherit !important; color: #0f6b56 !important; }
-      .rpp-mvm-strip:hover span.rpp-mvm-go.rpp-mvm-go { background: #84182F; }
-      @media (max-width: 640px) {
-        .rpp-mvm-strip.rpp-mvm-strip { padding: 1.4rem 1.1rem 1.3rem; margin-top: 1.5rem; }
-        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 29px !important; }
+      .rpp-mvm-strip:hover span.rpp-mvm-go.rpp-mvm-go,
+      .rpp-mvm-strip:focus-visible span.rpp-mvm-go.rpp-mvm-go { background: #84182F; }
+      @media (max-width: 1000px) {
+        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 32px !important; }
         .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub { font-size: 18px !important; }
-        .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { justify-content: center; align-self: stretch; }
+      }
+      @media (max-width: 859px) {
+        .rpp-mvm-strip.rpp-mvm-strip { aspect-ratio: auto; max-width: 560px; }
+        .rpp-mvm-strip img.rpp-mvm-art { display: none; }
+        .rpp-mvm-strip img.rpp-mvm-art-phone { display: block; position: static; width: 100%; height: auto; aspect-ratio: 808 / 465; object-fit: cover; }
+        .rpp-mvm-text { position: static; align-items: center; text-align: center; padding: 18px 18px 22px; gap: 10px; }
+        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 30px !important; }
+        .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { align-self: stretch; justify-content: center; }
+      }
+      @media (max-width: 420px) {
+        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 26px !important; white-space: nowrap; }
+        .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub { font-size: 17px !important; }
       }
 
       @media (max-width: 1000px) {
@@ -337,16 +361,18 @@ const HomepagePopularResources = () => {
 
         {/* Medicare vs. Medicaid (Nov 20, 2026, David): the questions he hears most
             about paying for senior living. Sits where the AFH Club strip was. */}
-        <Link to="/medicare-vs-medicaid" className="rpp-mvm-strip marquee-hover">
-          <span className="rpp-mvm-words">
+        <Link to="/medicare-vs-medicaid" className="rpp-mvm-strip" aria-label="Medicare vs. Medicaid: compare them">
+          <img src={mvmArt} alt="" aria-hidden="true" className="rpp-mvm-art" width={1600} height={449} loading="lazy" decoding="async" />
+          <img src={mvmArtPhone} alt="" aria-hidden="true" className="rpp-mvm-art-phone" width={808} height={465} loading="lazy" decoding="async" />
+          <span className="rpp-mvm-text">
             <span className="rpp-mvm-title">
               <span className="rpp-mvm-medicare">Medicare</span> <span className="rpp-mvm-vs">vs.</span>{" "}
               <span className="rpp-mvm-medicaid">Medicaid</span>
             </span>
-            <span className="rpp-mvm-sub">What each pays for, who qualifies, and which one covers senior living</span>
-          </span>
-          <span className="rpp-mvm-go">
-            Compare them <RppArrow size={24} />
+            <span className="rpp-mvm-sub">What each pays for, who qualifies, and which one covers senior living.</span>
+            <span className="rpp-mvm-go">
+              Compare them <RppArrow size={24} />
+            </span>
           </span>
         </Link>
       </div>
