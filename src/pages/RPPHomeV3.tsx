@@ -81,6 +81,7 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageAFHStrip from "@/components/HomepageAFHStrip";
 import HomeTileIntro from "@/components/HomeTileIntro";
 import AboutTheHub from "@/components/AboutTheHub";
+import { CARE_CALCULATORS } from "@/lib/careCalculators";
 import RppArrow from "@/components/RppArrow";
 import { setFetchPriority } from "@/lib/imgPriority";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
@@ -601,16 +602,156 @@ html body main section#rpp-start-here.rpp-start-here, html body main section#rpp
 }
 `;
 
+/* PRESENTATION PASS (Nov 21, 2026, David, ahead of a Monday talk: "clean,
+   polished, easy to read from across the room"). Rendered as the LAST style
+   block in <main>, so at equal specificity it wins over DOOR_HERO_CSS,
+   HERO_WIDE_CSS and the funnel styles above. To undo, delete this block and
+   the tile order / hero sentence / cost list changes in the JSX.
+   No backticks in this block. */
+const PRESENTATION_CSS = `
+/* ---- HERO ---- */
+/* Headline: no shadow, about 10% smaller on laptops (was clamp(44px, 5.4vw, 80px)). */
+html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan {
+  text-shadow: none !important;
+  font-size: clamp(40px, 4.86vw, 72px) !important;
+}
+/* Copy and door: a centred pair with a smaller gap, the text block centred
+   on the door's height (the empty first and last rows share the slack). */
+html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner {
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr auto auto 1fr;
+  grid-template-areas: ". door" "slogan door" "line door" ". door";
+  justify-content: center;
+  column-gap: clamp(32px, 4.2vw, 72px);
+  align-items: center;
+}
+html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { align-self: end; }
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
+  align-self: start;
+  max-width: 24em;
+  font-weight: 500 !important;
+  color: #1c1917 !important;
+  text-wrap: balance;
+}
+@media (max-width: 900px) {
+  html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "slogan door" "line line";
+    justify-content: stretch;
+    column-gap: 16px;
+  }
+  html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan {
+    align-self: center; font-size: clamp(32px, 9.4vw, 44px) !important;
+  }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
+    max-width: none; font-size: 18px !important; line-height: 1.4 !important; text-wrap: pretty;
+  }
+}
+
+/* ---- FOUR STARTING CARDS ---- */
+@media (min-width: 901px) {
+  /* Wider column on laptops. The old "71vw + 8px" cap kept the tiles clear
+     of the door in the retired photo hero; the door now sits above the tiles,
+     so the cap only made the labels wrap. Same width for the hero, cards,
+     question box and panels below (--rpp-cw), so the edges still line up.
+     The door is a little shorter to pay for the taller photos. */
+  html body main#main-content { --rpp-cw: min(1120px, 80vw, calc(100vw - 3rem)); }
+  html body main div.rpp-funnel-block.rpp-funnel-block.rpp-funnel-block { --rpp-gw: min(1120px, 80vw, calc(100vw - 3rem)); }
+  html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner { width: min(1120px, 80vw, calc(100vw - 3rem)); }
+  html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img.rpp-door-img { height: clamp(200px, min(21vw, 34vh), 340px) !important; }
+  /* Label text centred in the label's height, so one-line and two-line
+     titles sit level across the row. */
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label.rpp-jt-label { display: flex !important; align-items: center; }
+  html body main .rpp-funnel-grid span.rpp-jt-row.rpp-jt-row.rpp-jt-row { width: 100%; }
+  /* Softer shadow, lighter edge, fainter ground shadow, smaller hover lift. */
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt.rpp-jt {
+    box-shadow: 0 1px 2px rgba(39,36,33,0.06), 0 6px 16px rgba(39,36,33,0.07) !important;
+    outline: 1px solid rgba(39,36,33,0.16);
+  }
+  html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link.rpp-jt-link::after { opacity: 0.16; }
+  /* Labels: bigger (16-22px before). Long titles wrap onto two balanced lines. */
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title.rpp-jt-title {
+    font-size: clamp(19px, calc(((var(--rpp-gw) - 72px) / 4 - 62px) / 8.6), 23px) !important;
+    line-height: 1.18 !important;
+  }
+  html body main .rpp-funnel-grid div.rpp-jt-label.rpp-jt-label.rpp-jt-label { padding: 14px 14px 14px 18px; }
+  html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow.rpp-jt-arrow { flex: 0 0 30px; width: 30px; height: 30px; }
+}
+@media (min-width: 901px) and (hover: hover) {
+  html body main .rpp-funnel-grid .group:hover div.rpp-jt.rpp-jt.rpp-jt {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(39,36,33,0.08), 0 12px 26px rgba(39,36,33,0.11) !important;
+  }
+}
+@media (max-width: 900px) {
+  html body main .rpp-funnel-grid div.rpp-jt.rpp-jt.rpp-jt {
+    outline: 1px solid rgba(39,36,33,0.16);
+    box-shadow: 0 1px 2px rgba(39,36,33,0.07), 0 6px 14px rgba(39,36,33,0.08) !important;
+  }
+  html body main .rpp-funnel-grid .rpp-jt span.rpp-jt-title.rpp-jt-title.rpp-jt-title.rpp-jt-title { font-size: 19px !important; }
+}
+/* One navy arrow on all four cards. */
+html body main .rpp-funnel-grid span.rpp-jt-arrow.rpp-jt-arrow.rpp-jt-arrow { color: #1B3A6B !important; }
+/* Keyboard focus: a thick navy ring around the whole card. The 1px edge
+   outline above would otherwise win over the older focus rule. */
+html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible { outline: none !important; }
+html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible div.rpp-jt.rpp-jt.rpp-jt {
+  outline: 3px solid #1B3A6B !important; outline-offset: 4px !important;
+}
+
+/* ---- POPULAR GUIDES: shorter photos (were square), lighter than the four cards ---- */
+@media (min-width: 640px) {
+  html body main .rpp-pr-tile img.rpp-pr-photo-img.rpp-pr-photo-img.rpp-pr-photo-img { aspect-ratio: 16 / 9 !important; object-fit: cover; object-position: 50% 55%; }
+  html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { font-size: clamp(18px, 1.4vw, 20px) !important; font-weight: 700 !important; }
+  html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { box-shadow: none !important; }
+}
+
+/* ---- COST OF CARE: same edges as the Medicare vs. Medicaid panel; preview list ---- */
+@media (min-width: 901px) {
+  html body main section#rpp-home-calculators div.rpp-start-inner.rpp-start-inner {
+    max-width: none !important; width: var(--rpp-cw); padding: 0 !important; margin: 0 auto !important;
+  }
+}
+html body main a.rpp-coc-card .rpp-coc-layout.rpp-coc-layout.rpp-coc-layout { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2rem; }
+html body main a.rpp-coc-card div.rpp-coc-compare { border-left: 1px solid #e2dbcf; padding-left: 2rem; }
+html body main a.rpp-coc-card ul.rpp-coc-compare-list.rpp-coc-compare-list.rpp-coc-compare-list { padding: 0 !important; border: 0 !important; }
+html body main a.rpp-coc-card span.rpp-coc-compare-head.rpp-coc-compare-head {
+  display: block; margin: 0 0 10px; font-size: 17px !important; font-weight: 700 !important;
+  letter-spacing: 0.02em; color: #1c1917 !important;
+}
+html body main a.rpp-coc-card ul.rpp-coc-compare-list.rpp-coc-compare-list { gap: 0.4rem; }
+html body main a.rpp-coc-card ul.rpp-coc-compare-list li { display: flex; align-items: center; gap: 10px; justify-content: flex-start; margin: 0 !important; }
+html body main a.rpp-coc-card ul.rpp-coc-compare-list li::before {
+  content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: #0b6a7a;
+}
+html body main a.rpp-coc-card ul.rpp-coc-compare-list li span.rpp-coc-opt-name.rpp-coc-opt-name { font-size: 18px !important; font-weight: 600 !important; }
+@media (max-width: 768px) {
+  html body main a.rpp-coc-card .rpp-coc-layout.rpp-coc-layout.rpp-coc-layout { grid-template-columns: 1fr; gap: 1rem; }
+  html body main a.rpp-coc-card div.rpp-coc-compare { border-left: 0; padding-left: 0; border-top: 1px solid #e2dbcf; padding-top: 1rem; }
+  html body main a.rpp-coc-card ul.rpp-coc-compare-list.rpp-coc-compare-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1rem; padding: 0 !important; border: 0 !important; }
+}
+@media (max-width: 520px) {
+  html body main a.rpp-coc-card ul.rpp-coc-compare-list.rpp-coc-compare-list { grid-template-columns: 1fr; }
+  html body main a.rpp-coc-card .rpp-coc-compare { order: 2; }
+}
+`;
+
+/* Nov 21, 2026 (David, before his Monday presentation): order is Help an
+   Aging Parent, Handle an Estate, Plan Ahead, Find a Professional, and every
+   arrow is navy (--tile drives the arrow, hover border and focus ring). */
+const TILE_NAVY = "#1B3A6B";
+/* Cost of Care preview list (Nov 21, 2026): the six calculators, most-asked first. */
+const COMPARE_ORDER = ["adult-family-home", "assisted-living", "in-home-care", "memory-care", "nursing-home", "independent-living"];
+const COMPARE_LABELS = COMPARE_ORDER
+  .map((slug) => CARE_CALCULATORS.find((c) => c.slug === slug))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c))
+  .map((c) => (c.shortLabel.endsWith("Home") ? `${c.shortLabel}s` : c.shortLabel));
 const tileMeta = [
-  { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#8A4214", imgSrc: tilePlanning },
-  { key: "helpingParent", href: "/helping-an-aging-parent", bgColor: "#246044", imgSrc: tileHelping },
-  { key: "handlingEstate", href: "/estate-probate-inherited-property", bgColor: "#25597e", imgSrc: tileEstate },
-  {
-    key: "needProfessional",
-    href: "/building-your-professional-team",
-    bgColor: "#662D56",
-    imgSrc: tileProfessionals,
-  },
+  { key: "helpingParent", href: "/helping-an-aging-parent", imgSrc: tileHelping },
+  { key: "handlingEstate", href: "/estate-probate-inherited-property", imgSrc: tileEstate },
+  { key: "planAhead", href: "/planning-before-a-crisis", imgSrc: tilePlanning },
+  { key: "needProfessional", href: "/building-your-professional-team", imgSrc: tileProfessionals },
 ] as const;
 
 
@@ -651,16 +792,9 @@ const RPPHomeV3 = () => {
               {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
-              {head3 ? (
-                <>
-                  <span className="rpp-door-lead">{t("hero.doorLead")}</span>{" "}
-                  <span className="rpp-door-topics">
-                    <span className="rpp-door-topic">{t("hero.doorTopic1")}</span>{" "}
-                    <span className="rpp-door-topic">{t("hero.doorTopic2")}</span>{" "}
-                    <span className="rpp-door-topic">{t("hero.doorTopic3")}</span>
-                  </span>
-                </>
-              ) : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
+              {/* Nov 21, 2026 (David): one plain sentence replaced the lead line and
+                  the three bold topics. Other languages keep their translated lines. */}
+              {head3 ? t("hero.doorLine") : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
             </h1>
         </DoorHero>
 
@@ -725,7 +859,7 @@ const RPPHomeV3 = () => {
             {/* Phones: 2 x 2 at half width (owner, Oct 5, 2026: the four stacked
                 full-width tiles were too large). Tablet stays 2-up, desktop 4-up. */}
             <div className="rpp-funnel-grid grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 lg:gap-9 mb-5" style={{ maxWidth: 1040, margin: "0 auto 1.25rem" }}>
-              {tileMeta.map(({ key, href, bgColor, imgSrc }) => {
+              {tileMeta.map(({ key, href, imgSrc }) => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
                 return (
@@ -735,7 +869,7 @@ const RPPHomeV3 = () => {
                     data-home-tile={key}
                     data-pulse
                     className="group block rpp-jt-link"
-                    style={{ textDecoration: "none", ["--tile" as string]: bgColor }}
+                    style={{ textDecoration: "none", ["--tile" as string]: TILE_NAVY }}
                   >
                     {/* JOURNEY TILE (Oct 29, 2026, David: the site "looks dated"; he
                         approved a flatter mock-up). White card, full-bleed photo,
@@ -1260,6 +1394,17 @@ const RPPHomeV3 = () => {
                   {/* Nov 20, 2026 (David, after an outside review): the six-option price
                       list was taken off the homepage card; it lives on the
                       calculator page. The card is photo, title, one sentence, link. */}
+                  {/* Nov 21, 2026 (David): the right side shows what can be compared,
+                      names only (prices stay on the calculator page). Derived from
+                      CARE_CALCULATORS, in COMPARE_ORDER. */}
+                  <div className="rpp-coc-compare">
+                    <span className="rpp-coc-compare-head">Compare monthly costs for</span>
+                    <ul className="rpp-coc-options rpp-coc-compare-list">
+                      {COMPARE_LABELS.map((label) => (
+                        <li key={label}><span className="rpp-coc-opt-name">{label}</span></li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </a>
 
@@ -1271,6 +1416,8 @@ const RPPHomeV3 = () => {
              </div>
           </div>
         </section>
+        {/* Last in <main> so it wins ties with the earlier blocks. */}
+        <style dangerouslySetInnerHTML={{ __html: PRESENTATION_CSS }} />
         {/* <HomepageTestimonials /> — hidden until real testimonials are collected */}
         {/* AFH Club strip, lowered here Nov 20, 2026 (David). */}
         <HomepageAFHStrip />
