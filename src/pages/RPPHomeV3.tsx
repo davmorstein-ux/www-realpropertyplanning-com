@@ -486,9 +486,16 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
     line-height: 1.15 !important;
     color: #1f1c19 !important;
     letter-spacing: -0.005em;
-    white-space: nowrap;
+    /* Nov 20, 2026: at common laptop widths (about 1100-1400px) the 16px
+       floor made "Help an Aging Parent" wider than its tile, so it ran into
+       the arrow. Titles may now wrap onto two balanced lines when they don't
+       fit; where they fit they stay on one line. */
+    white-space: normal;
+    text-wrap: balance;
+    overflow-wrap: normal;
     margin-bottom: 0;
     min-width: 0;
+    flex: 1 1 auto;
   }
   /* Arrow (Oct 31, 2026, David): back to the sitewide thin ring with the
      chevron, in the tile's colour, instead of the solid round button. Four
