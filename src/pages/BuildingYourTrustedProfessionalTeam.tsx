@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import JourneyShortcuts from "@/components/JourneyShortcuts";
 import { articleSchema } from "@/lib/schema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 import SimpleHubChoices from "@/components/SimpleHubChoices";
 import { TEAM_HUB_CHOICES, TEAM_NOT_SURE } from "@/lib/team-simple";
 
@@ -15,8 +14,6 @@ type Card = {
   title: string;
   description: string;
   href: string;
-  image: string;
-  alt: string;
   cta?: string;
 };
 
@@ -26,8 +23,6 @@ const legal: Card[] = [
     description:
       "Estate planning, probate, elder law, family law, divorce, and real estate attorneys throughout Washington State.",
     href: "/for-attorneys",
-    image: attorneysTileImg,
-    alt: "Attorneys Washington State",
     cta: "Meet the Attorneys",
   },
 ];
@@ -37,32 +32,24 @@ const financial: Card[] = [
     title: "CPAs",
     description: "Tax guidance, estate coordination, and compliance for probate and inherited assets.",
     href: "/for-cpas",
-    image: "/tiles/set1/cpas-tile.webp",
-    alt: "CPAs Washington State",
     cta: "Learn More",
   },
   {
     title: "Financial Planners",
     description: "Long-term financial planning, inherited asset guidance, and senior housing cost planning.",
     href: "/professionals/financial-planners",
-    image: "/tiles/set1/financial-planners-tile.webp",
-    alt: "Financial planners Washington State",
     cta: "Learn More",
   },
   {
     title: "Mortgage Lenders",
     description: "Financing options for estate, inherited, and transitional properties.",
     href: "/mortgage-lenders",
-    image: "/tiles/set1/mortgage-lenders-tile.webp",
-    alt: "Mortgage lenders Washington State",
     cta: "Learn More",
   },
   {
     title: "Certified Appraisers",
     description: "Independent property valuation for estate, probate, and trust purposes.",
     href: "/real-estate-appraiser",
-    image: "/tiles/set1/real-estate-appraisers-tile.webp",
-    alt: "Certified real estate appraisers Washington State",
     cta: "Learn More",
   },
 ];
@@ -72,32 +59,24 @@ const housing: Card[] = [
     title: "Senior Living Advisors",
     description: "Help evaluating assisted living, memory care, and housing options.",
     href: "/senior-living-advisors",
-    image: "/tiles/set1/senior-living-advisors-tile.webp",
-    alt: "Senior living advisors Washington State",
     cta: "Learn More",
   },
   {
     title: "Medicare & Benefits Advisors",
     description: "Help with Medicare, Medicaid, and care funding options.",
     href: "/medicare-providers",
-    image: "/tiles/set1/medicare-providers-tile.webp",
-    alt: "Medicare and benefits advisors Washington State",
     cta: "Learn More",
   },
   {
     title: "Aging Life Care Managers",
     description: "Guides seniors and families through housing, care, and life transition decisions.",
     href: "/aging-life-care-managers",
-    image: "/tiles/set1/aging-life-care-managers-tile.webp",
-    alt: "Aging Life Care Managers Washington State",
     cta: "Learn More",
   },
   {
     title: "Senior Move Managers",
     description: "Sorting, packing, and coordinating a senior's move.",
     href: "/senior-move-managers",
-    image: "/tiles/set1/senior-move-managers-tile.webp",
-    alt: "Senior move managers Washington State",
     cta: "Learn More",
   },
 ];
@@ -107,8 +86,6 @@ const property: Card[] = [
     title: "Real Estate Brokers",
     description: "Probate, estate, and senior transition property sales throughout Washington State.",
     href: "/realtor",
-    image: "/tiles/set1/real-estate-brokers-tile.webp?v=20260602b",
-    alt: "Real estate brokers Washington State",
     cta: "Learn More",
   },
   {
@@ -116,24 +93,18 @@ const property: Card[] = [
     description:
       "Companies that organize and conduct estate sales, residential clear outs, and personal property liquidation.",
     href: "/estate-liquidators",
-    image: "/tiles/set1/estate-liquidators-tile.webp?v=20260602b",
-    alt: "Estate liquidators Washington State — estate sales, appraisal, sorting, staging, marketing",
     cta: "Learn More",
   },
   {
     title: "Title & Escrow",
     description: "Closing coordination for estate and inherited property transactions.",
     href: "/title-and-escrow",
-    image: "/tiles/set1/title-escrow-tile.webp?v=20260602b",
-    alt: "Title and escrow Washington State",
     cta: "Learn More",
   },
   {
     title: "Probate & Estate Sales",
     description: "Specialized real estate guidance for court-supervised and estate property sales.",
     href: "/probate-estate-sales",
-    image: "/tiles/set1/probate-estate-sales-tile.webp?v=20260602b",
-    alt: "Probate and estate sales Washington State",
     cta: "Learn More",
   },
 ];

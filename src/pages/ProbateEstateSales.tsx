@@ -13,15 +13,15 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 
 import NextQuestions from "@/components/NextQuestions";
 import RppArrow from "@/components/RppArrow";
-// ── Data ── (images, hrefs — text pulled via t() in the component)
+// ── Data ── (hrefs; comparison tiles also carry images — text pulled via t() in the component)
 
 const whatMakesDifferentMeta = [
-  { key: "legalAuthority", image: "/tiles/set2/the-probate-process.webp", href: "/guides/who-has-authority-sell-probate-property-washington" },
-  { key: "decisionMakers", image: "/tiles/set2/executors.webp", href: "/executors" },
-  { key: "propertyCondition", image: "/tiles/set2/probate-estate-sales.webp?v=20260602b", href: "/how-the-process-works" },
-  { key: "honestPricing", image: "/tiles/set1/real-estate-appraisers.webp", href: "/why-valuation-matters" },
-  { key: "emotionalComplexity", image: "/tiles/set2/trustees.webp", href: "/testimonials" },
-  { key: "preparationStrategy", image: "/tiles/set3/home-values-pricing.webp", href: "/how-the-process-works" },
+  { key: "legalAuthority", href: "/guides/who-has-authority-sell-probate-property-washington" },
+  { key: "decisionMakers", href: "/executors" },
+  { key: "propertyCondition", href: "/how-the-process-works" },
+  { key: "honestPricing", href: "/why-valuation-matters" },
+  { key: "emotionalComplexity", href: "/testimonials" },
+  { key: "preparationStrategy", href: "/how-the-process-works" },
 ] as const;
 
 const comparisonMeta = [

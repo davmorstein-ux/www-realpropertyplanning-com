@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import type { ProfessionalNetworkTile } from "./professional-network-tiles-data";
+export interface ProfessionalNetworkTile {
+  title: string;
+  href: string;
+  imageSrc: string;
+  altText: string;
+}
 
 /**
  * Finalized premium professional-network tile.

@@ -1,25 +1,17 @@
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
-import ProfessionalNetworkCard from "@/components/ProfessionalNetworkCard";
-import { professionalNetworkCategories } from "@/components/professional-network-tiles-data";
+import ProfessionalNetworkCard, { type ProfessionalNetworkTile } from "@/components/ProfessionalNetworkCard";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";
 
-// Pull the same tile images already used on the homepage / professional network.
-const findTile = (title: string) => {
-  for (const cat of professionalNetworkCategories) {
-    const t = cat.tiles.find((x) => x.title === title);
-    if (t) return t;
-  }
-  throw new Error(`Tile not found: ${title}`);
-};
-
-const teamTiles = [
-  { ...findTile("Real Estate Brokers"), title: "Real Estate Broker" },
-  { ...findTile("Real Estate Appraisers"), title: "Certified Appraiser" },
-  { ...findTile("Probate Attorneys"), title: "Probate Attorney" },
-  { ...findTile("Senior Move Managers"), title: "Senior Move Manager" },
-  { ...findTile("Financial Planners"), title: "Financial Planner or CPA" },
+// Tile data inlined Nov 20, 2026 when the unused professional-network
+// tile list (and its AI-people images) was deleted.
+const teamTiles: ProfessionalNetworkTile[] = [
+  { title: "Real Estate Broker", href: "/realtor", imageSrc: "/tiles/set1/real-estate-brokers.webp?v=20260602b", altText: "Real estate brokers Washington State" },
+  { title: "Certified Appraiser", href: "/real-estate-appraiser", imageSrc: "/tiles/set1/real-estate-appraisers.webp?v=20260708a", altText: "Certified real estate appraisers Washington State" },
+  { title: "Probate Attorney", href: "/for-probate-attorneys", imageSrc: "/tiles/attorneys/probate-attorneys.webp", altText: "Probate attorneys Washington State" },
+  { title: "Senior Move Manager", href: "/senior-move-managers", imageSrc: "/tiles/set1/senior-move-managers.webp?v=20260708a", altText: "Senior move managers Washington State" },
+  { title: "Financial Planner or CPA", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp?v=20260708a", altText: "Financial planners for estate and senior transitions in Washington State" },
   // Oct 23, 2026: Senior Living Advisor removed (this page is about a property
   // after a death, not placing a parent); the estate liquidator works with the
   // senior move manager and the broker.
