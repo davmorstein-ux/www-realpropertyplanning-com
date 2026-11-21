@@ -215,7 +215,7 @@ const HomepagePopularResources = () => {
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 36px !important;
-        font-weight: 800;
+        font-weight: 800 !important;
         color: #1c1917 !important;
         line-height: 1.15;
       }
@@ -240,9 +240,9 @@ const HomepagePopularResources = () => {
         min-height: 52px;
         white-space: nowrap;
       }
-      .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { color: #1B3A6B !important; }
-      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { color: #9E1F3A !important; }
-      .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { color: #0f6b56 !important; }
+      .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { font-weight: 800 !important; font-size: inherit !important; color: #1B3A6B !important; }
+      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: inherit !important; color: #9E1F3A !important; }
+      .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { font-weight: 800 !important; font-size: inherit !important; color: #0f6b56 !important; }
       .rpp-mvm-strip:hover span.rpp-mvm-go.rpp-mvm-go { background: #84182F; }
       @media (max-width: 640px) {
         .rpp-mvm-strip.rpp-mvm-strip { padding: 1.4rem 1.1rem 1.3rem; margin-top: 1.5rem; }
