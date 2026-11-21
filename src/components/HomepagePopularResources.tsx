@@ -184,8 +184,10 @@ const HomepagePopularResources = () => {
          place under the guides; AFH Club moved near the bottom of the page
          (HomepageAFHStrip.tsx). Centred at every width. Later the same night
          David said it got lost ("the blue gets lost, the font could be
-         larger"): now a solid navy band with large white type and a white
-         button, so it reads as the one call-out on the cream page. */
+         larger"): now a solid band with large white type and a white button.
+         Colour is the logo door's garnet #9E1F3A, NOT navy: David, Nov 20,
+         2026, "NO MORE NAVY" (standing rule: the site already has too much
+         navy; see the colour notes). Never make this strip navy again. */
       .rpp-mvm-strip.rpp-mvm-strip {
         display: flex;
         flex-direction: column;
@@ -196,17 +198,17 @@ const HomepagePopularResources = () => {
         max-width: 860px;
         margin: 2rem auto 0;
         padding: 1.75rem 1.75rem 1.6rem;
-        background: #1B3A6B;
+        background: #9E1F3A;
         border: 0;
         border-radius: 14px;
-        box-shadow: 0 10px 24px rgba(27, 58, 107, 0.22);
+        box-shadow: 0 10px 24px rgba(158, 31, 58, 0.24);
         text-align: center;
         transition: background-color 150ms ease, transform 150ms ease;
       }
       .rpp-mvm-strip.rpp-mvm-strip,
       .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; white-space: normal; }
       .rpp-mvm-strip:hover,
-      .rpp-mvm-strip:focus-visible { background: #142d54; }
+      .rpp-mvm-strip:focus-visible { background: #84182F; }
       .rpp-mvm-words { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 100%; }
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
@@ -229,7 +231,7 @@ const HomepagePopularResources = () => {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 20px !important;
         font-weight: 800;
-        color: #1B3A6B !important;
+        color: #9E1F3A !important;
         background: #ffffff;
         border-radius: 10px;
         padding: 12px 24px;
