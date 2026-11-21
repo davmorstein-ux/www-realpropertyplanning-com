@@ -27,7 +27,7 @@ const tileMeta = [
   { key: "appraiser", image: "/tiles/set1/real-estate-appraisers-tile.webp", href: "/real-estate-appraiser" },
   { key: "attorneys", image: attorneysTileImg, href: "/for-attorneys" },
   { key: "medicare", image: "/tiles/set1/medicare-providers-tile.webp", href: "/medicare-providers" },
-  { key: "financial", image: "/tiles/set1/financial-planners-tile.webp", href: "/for-financial-planners" },
+  { key: "financial", image: "/tiles/set1/financial-planner-real-sq.webp", href: "/for-financial-planners" },
 ] as const;
 
 const SeniorTransitions = () => {

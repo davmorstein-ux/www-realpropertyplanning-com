@@ -11,7 +11,7 @@ const teamTiles: ProfessionalNetworkTile[] = [
   { title: "Certified Appraiser", href: "/real-estate-appraiser", imageSrc: "/tiles/set1/real-estate-appraisers.webp?v=20260708a", altText: "Certified real estate appraisers Washington State" },
   { title: "Probate Attorney", href: "/for-probate-attorneys", imageSrc: "/tiles/attorneys/probate-attorneys.webp", altText: "Probate attorneys Washington State" },
   { title: "Senior Move Manager", href: "/senior-move-managers", imageSrc: "/tiles/set1/senior-move-managers.webp?v=20260708a", altText: "Senior move managers Washington State" },
-  { title: "Financial Planner or CPA", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp?v=20260708a", altText: "Financial planners for estate and senior transitions in Washington State" },
+  { title: "Financial Planner or CPA", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planner-real.webp", altText: "Financial planners for estate and senior transitions in Washington State" },
   // Oct 23, 2026: Senior Living Advisor removed (this page is about a property
   // after a death, not placing a parent); the estate liquidator works with the
   // senior move manager and the broker.
