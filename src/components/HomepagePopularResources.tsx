@@ -182,13 +182,14 @@ const HomepagePopularResources = () => {
 
       /* Medicare vs. Medicaid (Nov 20, 2026, David): took the AFH Club strip's
          place under the guides; AFH Club moved near the bottom of the page
-         (HomepageAFHStrip.tsx). Same strip shape, navy rule, flat navy button. */
+         (HomepageAFHStrip.tsx). Same strip shape, navy rule, flat navy button.
+         Centred at every width (David, Nov 20, 2026). */
       .rpp-mvm-strip.rpp-mvm-strip {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 0.75rem 1.5rem;
+        justify-content: center;
+        gap: 0.85rem;
         width: 100%;
         max-width: 820px;
         margin: 1.75rem auto 0;
@@ -197,14 +198,14 @@ const HomepagePopularResources = () => {
         border: 1px solid #cfd6e2;
         border-left: 5px solid #1B3A6B;
         border-radius: 12px;
-        text-align: left;
+        text-align: center;
         transition: background-color 150ms ease, border-color 150ms ease;
       }
       .rpp-mvm-strip.rpp-mvm-strip,
       .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; }
       .rpp-mvm-strip:hover,
       .rpp-mvm-strip:focus-visible { background: #f5f7fb; border-color: #1B3A6B; }
-      .rpp-mvm-words { display: flex; flex-direction: column; gap: 4px; }
+      .rpp-mvm-words { display: flex; flex-direction: column; align-items: center; gap: 4px; }
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
         font-size: 24px !important;
@@ -234,8 +235,7 @@ const HomepagePopularResources = () => {
         white-space: nowrap;
       }
       @media (max-width: 640px) {
-        .rpp-mvm-strip.rpp-mvm-strip { flex-direction: column; align-items: stretch; text-align: center; padding: 1rem 1.25rem; }
-        .rpp-mvm-words { align-items: center; }
+        .rpp-mvm-strip.rpp-mvm-strip { padding: 1rem 1.25rem; }
         .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 22px !important; }
         .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { justify-content: center; }
       }
