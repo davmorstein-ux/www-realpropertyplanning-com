@@ -182,42 +182,44 @@ const HomepagePopularResources = () => {
 
       /* Medicare vs. Medicaid (Nov 20, 2026, David): took the AFH Club strip's
          place under the guides; AFH Club moved near the bottom of the page
-         (HomepageAFHStrip.tsx). Same strip shape, navy rule, flat navy button.
-         Centred at every width (David, Nov 20, 2026). */
+         (HomepageAFHStrip.tsx). Centred at every width. Later the same night
+         David said it got lost ("the blue gets lost, the font could be
+         larger"): now a solid navy band with large white type and a white
+         button, so it reads as the one call-out on the cream page. */
       .rpp-mvm-strip.rpp-mvm-strip {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.85rem;
+        gap: 1rem;
         width: 100%;
-        max-width: 820px;
-        margin: 1.75rem auto 0;
-        padding: 1.1rem 1.5rem;
-        background: #ffffff;
-        border: 1px solid #cfd6e2;
-        border-left: 5px solid #1B3A6B;
-        border-radius: 12px;
+        max-width: 860px;
+        margin: 2rem auto 0;
+        padding: 1.75rem 1.75rem 1.6rem;
+        background: #1B3A6B;
+        border: 0;
+        border-radius: 14px;
+        box-shadow: 0 10px 24px rgba(27, 58, 107, 0.22);
         text-align: center;
-        transition: background-color 150ms ease, border-color 150ms ease;
+        transition: background-color 150ms ease, transform 150ms ease;
       }
       .rpp-mvm-strip.rpp-mvm-strip,
-      .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; }
+      .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; white-space: normal; }
       .rpp-mvm-strip:hover,
-      .rpp-mvm-strip:focus-visible { background: #f5f7fb; border-color: #1B3A6B; }
-      .rpp-mvm-words { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+      .rpp-mvm-strip:focus-visible { background: #142d54; }
+      .rpp-mvm-words { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 100%; }
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 24px !important;
+        font-size: 36px !important;
         font-weight: 800;
-        color: #1B3A6B;
-        line-height: 1.2;
+        color: #ffffff !important;
+        line-height: 1.15;
       }
       .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 17px !important;
+        font-size: 20px !important;
         font-weight: 500;
-        color: #1c1917;
+        color: #f3efe8 !important;
         line-height: 1.4;
       }
       .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go {
@@ -225,19 +227,20 @@ const HomepagePopularResources = () => {
         align-items: center;
         gap: 10px;
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 18px !important;
-        font-weight: 700;
-        color: #ffffff;
-        background: #1B3A6B;
-        border-radius: 8px;
-        padding: 10px 18px;
-        min-height: 48px;
+        font-size: 20px !important;
+        font-weight: 800;
+        color: #1B3A6B !important;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 12px 24px;
+        min-height: 52px;
         white-space: nowrap;
       }
       @media (max-width: 640px) {
-        .rpp-mvm-strip.rpp-mvm-strip { padding: 1rem 1.25rem; }
-        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 22px !important; }
-        .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { justify-content: center; }
+        .rpp-mvm-strip.rpp-mvm-strip { padding: 1.4rem 1.1rem 1.3rem; margin-top: 1.5rem; }
+        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 29px !important; }
+        .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub { font-size: 18px !important; }
+        .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { justify-content: center; align-self: stretch; }
       }
 
       @media (max-width: 1000px) {
