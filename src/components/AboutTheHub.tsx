@@ -66,7 +66,7 @@ const AboutTheHub = () => {
           background: #f1ede5;
           box-shadow: 0 0 0 100vmax #f1ede5;
           clip-path: inset(0 -100vmax);
-          padding: 2.75rem 0;
+          padding: 1.1rem 0;
         }
 
         .rpp-abouthub-lead.rpp-abouthub-lead {
@@ -238,7 +238,7 @@ const AboutTheHub = () => {
         .rpp-abouthub-card .rpp-abouthub-why.rpp-abouthub-why + .rpp-abouthub-why.rpp-abouthub-why { border-top: 0; padding-top: 0; margin-top: 0.9rem !important; }
         @media (max-width: 760px) {
           .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list { grid-template-columns: 1fr; }
-          .rpp-abouthub-card.rpp-abouthub-card { padding: 2rem 0; }
+          .rpp-abouthub-card.rpp-abouthub-card { padding: 0.9rem 0; }
         }
       ` }} />
 
@@ -247,26 +247,13 @@ const AboutTheHub = () => {
             independent", "Plain answers", "Who to call") were removed. They repeated the
             points strip higher on the page, and the third claimed a directory of
             fiduciaries the site does not have. The lead now finishes its own sentence. */}
-        <p className="rpp-abouthub-lead rpp-abouthub-lead">
-          When aging, illness, probate, or settling an estate forces a decision about a home,{" "}
-          <span className="rpp-abouthub-name rpp-abouthub-name">Real Property Planning</span> is a free,
-          independent place to start.
-        </p>
-
-        {/* The four points (Oct 27, 2026, David): the proof of the sentence above. Their
-            hairlines replace the rule that sat above the paragraph below. */}
+        {/* Nov 20, 2026 (David, after an outside review): the band is now only
+            the four points, so the popular guides sit closer to the start.
+            Removed: the lead sentence ("... is a free, independent place to
+            start", the line David had already taken out from under the
+            headline on Nov 12) and the "no one looking at the whole picture"
+            paragraph. The fuller explanation lives on the About page. */}
         <HomepagePoints />
-
-        {/* Oct 30, 2026 (David, after an outside review: "too much text"): the three
-            paragraphs became one. The other two repeated the four points above
-            (free guides, a path to licensed professionals); this line is the one
-            reason for the site the points do not give. The fuller explanation
-            lives on the About page. */}
-        <p className="rpp-abouthub-why">
-          These decisions often involve an attorney, an appraiser, a care provider and several family
-          members at once, with no one looking at the whole picture.
-        </p>
-
       </div>
     </div>
   );

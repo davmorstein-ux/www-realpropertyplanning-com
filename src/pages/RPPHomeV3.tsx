@@ -82,11 +82,7 @@ import HomepageAFHStrip from "@/components/HomepageAFHStrip";
 import HomeTileIntro from "@/components/HomeTileIntro";
 import AboutTheHub from "@/components/AboutTheHub";
 import RppArrow from "@/components/RppArrow";
-import { formatCurrency } from "@/lib/careTypes";
-import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 import { setFetchPriority } from "@/lib/imgPriority";
-import { BarChart3, MapPin, Search, Wrench, type LucideIcon } from "lucide-react";
-import { careIconFor } from "@/lib/careIcons";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
 import calcPhotoRemodel from "@/assets/home/calc-photo-remodel.webp";
 import calcPhotoCare480 from "@/assets/home/calc-photo-care-480.webp";
@@ -97,15 +93,6 @@ import calcPhotoRemodel800 from "@/assets/home/calc-photo-remodel-800.webp";
    screen width on a phone; the 1200px file was being sent to every screen. */
 const CALC_PHOTO_SIZES = "(max-width: 768px) 100vw, 360px";
 
-/* Calculator cards, Oct 27, 2026 (David, from a ChatGPT layout): a photo on each card and an
-   icon on every line. Care icons (src/lib/careIcons.ts) take each option's own colour; the
-   remodel steps use amber. No navy icons (David: too much navy on the site). */
-const REMODEL_LINES: [LucideIcon, string][] = [
-  [Search, "Look up your house by address"],
-  [Wrench, "Enter what you would spend (or spent) on each part"],
-  [BarChart3, "See two values: a broker's and an appraiser's"],
-  [MapPin, "Built from recent local home sales"],
-];
 
 /* DOOR HERO (Nov 19, 2026). Every rule is scoped to .rpp-door-hero and
    written at high specificity with !important because index.css forces
@@ -642,7 +629,6 @@ const RPPHomeV3 = () => {
      "care types not currently rotating", which after the rotation was removed
      left an arbitrary subset: it omitted adult family homes, assisted living
      and memory care while advertising options the hub does not cover. */
-  const careOptions = CARE_CALCULATORS.map((o) => ({ option: o, care: careTypeFor(o) }));
 
   return (
     <>
@@ -1274,37 +1260,9 @@ const RPPHomeV3 = () => {
                     <span className="rpp-coc-cta">{t("costOfCare.cta")}</span>
                   </div>
 
-                  {/* Right column: the six options the hub actually covers,
-                      each with its figure. Drawn from CARE_CALCULATORS so the
-                      tile and the hub can never disagree. This replaces both
-                      the rotating figures and the old "other care types" list,
-                      which showed an arbitrary subset. */}
-                  <div className="rpp-coc-figs">
-                  {/* Oct 31, 2026 (outside review): say plainly these are estimates. */}
-                  <span className="rpp-coc-est">Typical monthly cost in Washington (estimates)</span>
-                  <ul className="rpp-coc-options">
-                    {careOptions.map(({ option, care }) => {
-                      const Icon = careIconFor(option.slug);
-                      return (
-                      <li key={option.slug}>
-                        <Icon className="rpp-calc-icon" aria-hidden="true" strokeWidth={1.9} style={{ ["--ic" as string]: option.color }} />
-                        <span
-                          className="rpp-coc-opt-name"
-                          style={{ ["--opt-color" as string]: option.color }}
-                        >
-                          {option.shortLabel}
-                        </span>
-                        <span
-                          className="rpp-coc-opt-figure"
-                          style={{ ["--opt-color" as string]: option.color }}
-                        >
-                          {formatCurrency(care.waMonthly)}
-                        </span>
-                      </li>
-                      );
-                    })}
-                  </ul>
-                  </div>
+                  {/* Nov 20, 2026 (David, after an outside review): the six-option price
+                      list was taken off the homepage card; it lives on the
+                      calculator page. The card is photo, title, one sentence, link. */}
                 </div>
               </a>
 
@@ -1325,14 +1283,8 @@ const RPPHomeV3 = () => {
                     <span className="rpp-calc-sub">See how much value a remodel could add to your home in King, Snohomish &amp; Pierce Counties.</span>
                     <span className="rpp-coc-cta">Try the calculator</span>
                   </div>
-                  <ul className="rpp-coc-options">
-                    {REMODEL_LINES.map(([Icon, line]) => (
-                      <li key={line}>
-                        <Icon className="rpp-calc-icon rpp-calc-icon-remodel" aria-hidden="true" strokeWidth={1.9} />
-                        <span className="rpp-coc-opt-name">{line}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Nov 20, 2026: remodel steps list removed from the homepage card
+                      (they are on the calculator page). */}
                 </div>
               </a>
 
