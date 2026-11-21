@@ -35,6 +35,7 @@ import { SHORT_ANSWERS } from "./src/data/shortAnswers";
 import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
+import { MVM_SHORT, MVM_TITLE, MVM_PRERENDER_SECTIONS, MVM_FAQS, MVM_PUBLISHED, MVM_REVIEWED } from "./src/data/medicareVsMedicaid";
 import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
@@ -1784,6 +1785,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "WA Cares Fund: How It Fits Into Long-Term Care Planning and Housing Decisions",
     description: "A guide to Washington's WA Cares Fund — how it's funded, what it may pay for, who qualifies, and how it fits alongside home equity, Medicaid, and other long-term care planning strategies.",
     h1: "WA Cares Fund: How WA Cares Fits Into Long-Term Care Planning and Housing Decisions",
+  },
+  "/medicare-vs-medicaid": {
+    title: "Medicare vs. Medicaid in Washington State (WA): Differences, Costs & Senior Living | Real Property Planning",
+    description: "Medicare vs. Medicaid (Apple Health) in Washington State (WA): who qualifies, what each pays for, Parts A to D, which pays for assisted living, adult family homes and nursing homes, when and how to apply, taxes, and how stocks count. 2026 figures.",
+    h1: MVM_TITLE,
+    quickAnswerQ: "What is the difference between Medicare and Medicaid in Washington State?",
+    quickAnswerA: MVM_SHORT,
+    intro: "A plain-language comparison for Washington families: who qualifies for each program, what each pays for, the parts of Medicare, which program pays for each kind of senior living, when and how to sign up, help with Medicare costs, having both, the 2027 federal changes, taxes, and how stocks and retirement accounts are treated. General information, not legal, tax or financial advice; figures are for 2026, with 2027 Medicare figures where announced.",
+    sections: MVM_PRERENDER_SECTIONS,
+    faq: MVM_FAQS,
+    article: { datePublished: MVM_PUBLISHED, dateModified: MVM_REVIEWED },
   },
   "/medicare-providers": {
     title: "Medicare Providers in Washington State | Real Property Planning",

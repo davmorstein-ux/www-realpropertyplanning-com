@@ -200,6 +200,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "How to Choose Between Care Settings: A Guide for Washington State Families", href: "/long-term-care/how-to-choose-care-settings" },
       { title: "Medicaid & Long-Term Care in Washington State: What Families Need to Know", href: "/long-term-care/medicaid-and-long-term-care" },
       { title: "Medicaid and the Family Home in Washington State", href: "/long-term-care/medicaid-and-the-family-home" },
+      { title: "Medicare vs. Medicaid in Washington State", href: "/medicare-vs-medicaid" },
       { title: "Nursing Homes in Washington State: What Families Need to Know", href: "/long-term-care/nursing-homes" },
       { title: "Planning Your Hospital Discharge: A Guide for Washington State Families", href: "/long-term-care/hospital-discharge-planning" },
       { title: "Short-Term Nursing Home Stays in Washington State: What Families Need to Know", href: "/long-term-care/short-term-nursing-home-stays" },

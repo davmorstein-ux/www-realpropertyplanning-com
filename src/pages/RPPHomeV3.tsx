@@ -78,6 +78,7 @@ const TILE_SMALL: Record<string, string> = {
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
+import HomepageAFHStrip from "@/components/HomepageAFHStrip";
 import HomeTileIntro from "@/components/HomeTileIntro";
 import AboutTheHub from "@/components/AboutTheHub";
 import RppArrow from "@/components/RppArrow";
@@ -1310,6 +1311,8 @@ const RPPHomeV3 = () => {
           </div>
         </section>
         {/* <HomepageTestimonials /> — hidden until real testimonials are collected */}
+        {/* AFH Club strip, lowered here Nov 20, 2026 (David). */}
+        <HomepageAFHStrip />
         <HomepageFAQ />
       </main>
       <Footer />

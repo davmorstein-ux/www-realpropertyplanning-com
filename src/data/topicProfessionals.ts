@@ -102,6 +102,7 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   /* Nov 6, 2026 (owner): the shared-housing page ends with the featured broker, since a reader usually sells a house first. */
   "/facing-foreclosure/selling-before-the-sale": ["realEstate"],
   "/facing-foreclosure/sell-house-during-foreclosure-washington": ["realEstate"], // owner, Nov 6, 2026: selling is ordinary brokerage
+  "/medicare-vs-medicaid": ["medicare", "elderLaw", "financialPlanning"],
   "/senior-living/shared-housing": ["realEstate"], // owner, Nov 6, 2026: only the featured broker here
   // Adult family homes, family side (Oct 21, 2026)
   "/senior-living/choosing-an-adult-family-home": ["seniorLiving", "careManagers"],

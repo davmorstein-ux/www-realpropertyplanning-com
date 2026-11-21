@@ -36,7 +36,11 @@ const MedicaidAndLongTermCare = () => {
             <p className={leadClass}>
               Medicaid is the largest payer of long-term care in America, and in Washington it pays for care in nursing
               homes, adult family homes, assisted living and at home. This guide covers who qualifies, how the spend-down
-              and look-back work, and why planning early matters.
+              and look-back work, and why planning early matters. For how Medicaid differs from Medicare, see{" "}
+              <Link to="/medicare-vs-medicaid" className={inlineLink}>
+                Medicare vs. Medicaid in Washington State
+              </Link>
+              .
             </p>
 
             <div className="mb-6">

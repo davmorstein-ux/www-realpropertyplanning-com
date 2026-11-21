@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import RppArrow from "@/components/RppArrow";
-import { useTranslation } from "react-i18next";
 /* Oct 27, 2026 (performance): these images moved from public/ into src/assets so the build
    names them by content and browsers can cache them long-term (public/ files were served with
    no cache lifetime); the four object pictures also have 320px copies for their ~150px slot. */
@@ -12,7 +11,6 @@ import popHouse from "@/assets/perf/popular-house-v3.webp";
 import popHouse320 from "@/assets/perf/popular-house-v3-400.webp";
 import popKeys from "@/assets/perf/popular-keys-v3.webp";
 import popKeys320 from "@/assets/perf/popular-keys-v3-400.webp";
-import afhGlyph from "@/assets/perf/afh-club-glyph.webp";
 
 /* Popular resources (Oct 26, 2026). David: the old icon tiles "look weak" and
    "appear as one large image versus 4 separate selections". Rebuilt with his
@@ -43,8 +41,6 @@ const resources = [
 ];
 
 const HomepagePopularResources = () => {
-  const { t } = useTranslation();
-
   return (
     <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -184,105 +180,68 @@ const HomepagePopularResources = () => {
         border-color: #3d3833 !important;
       }
 
-      /* AFH Club — a quiet, explicitly labeled door for the owner /
-         operator / investor audience. Deliberately a different shape from
-         the browse button above it: outlined strip, green left rule, and
-         the audience named up front, so the two never compete. */
-      .rpp-afh-strip.rpp-afh-strip {
+      /* Medicare vs. Medicaid (Nov 20, 2026, David): took the AFH Club strip's
+         place under the guides; AFH Club moved near the bottom of the page
+         (HomepageAFHStrip.tsx). Same strip shape, navy rule, flat navy button. */
+      .rpp-mvm-strip.rpp-mvm-strip {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
-        gap: 0.5rem 1.25rem;
+        justify-content: space-between;
+        gap: 0.75rem 1.5rem;
         width: 100%;
-        max-width: 720px;
-        min-height: 56px;
+        max-width: 820px;
         margin: 1.75rem auto 0;
-        padding: 0.85rem 1.5rem;
+        padding: 1.1rem 1.5rem;
         background: #ffffff;
-        border: 1px solid #cfd8d4;
-        border-left: 5px solid #0a5648;
-        border-radius: 10px;
-        text-align: center;
+        border: 1px solid #cfd6e2;
+        border-left: 5px solid #1B3A6B;
+        border-radius: 12px;
+        text-align: left;
         transition: background-color 150ms ease, border-color 150ms ease;
       }
-      .rpp-afh-strip.rpp-afh-strip,
-      .rpp-afh-strip.rpp-afh-strip * {
-        text-decoration: none !important;
-      }
-      .rpp-afh-strip:hover,
-      .rpp-afh-strip:focus-visible {
-        background: #f4f8f6;
-        border-color: #0a5648;
-      }
-      .rpp-afh-strip-label.rpp-afh-strip-label {
+      .rpp-mvm-strip.rpp-mvm-strip,
+      .rpp-mvm-strip.rpp-mvm-strip * { text-decoration: none !important; }
+      .rpp-mvm-strip:hover,
+      .rpp-mvm-strip:focus-visible { background: #f5f7fb; border-color: #1B3A6B; }
+      .rpp-mvm-words { display: flex; flex-direction: column; gap: 4px; }
+      .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 17px;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: #063e33;
-        margin: 0;
+        font-size: 24px !important;
+        font-weight: 800;
+        color: #1B3A6B;
+        line-height: 1.2;
       }
-      /* CTA carries the AFH Club wordmark (house glyph standing in for the
-         "A") on the Club's dark green, exactly as the Club's own hero draws
-         it. The glyph is cream with a red door, so it needs the dark ground. */
-      .rpp-afh-strip-cta.rpp-afh-strip-cta {
+      .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub {
+        font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
+        font-size: 17px !important;
+        font-weight: 500;
+        color: #1c1917;
+        line-height: 1.4;
+      }
+      .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go {
         display: inline-flex;
         align-items: center;
         gap: 10px;
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
-        font-size: 18px;
+        font-size: 18px !important;
         font-weight: 700;
         color: #ffffff;
-        /* The Club hero's forest green (#192A19), not the AFH teal. */
-        background: #192a19;
+        background: #1B3A6B;
         border-radius: 8px;
         padding: 10px 18px;
         min-height: 48px;
-        margin: 0;
-        border: none;
-        transition: background-color 0.15s ease;
-      }
-      .rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta {
-        background: #26402a;
-      }
-      .rpp-afh-strip-wordmark {
-        display: inline-flex;
-        align-items: center;
-        font-size: 22px;
-        letter-spacing: 0.04em;
-        line-height: 1;
-      }
-      .rpp-afh-strip-glyph {
-        height: 0.95em;
-        width: auto;
-        display: block;
-        margin-right: 1px;
-      }
-      .rpp-afh-strip-sr {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
         white-space: nowrap;
+      }
+      @media (max-width: 640px) {
+        .rpp-mvm-strip.rpp-mvm-strip { flex-direction: column; align-items: stretch; text-align: center; padding: 1rem 1.25rem; }
+        .rpp-mvm-words { align-items: center; }
+        .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 22px !important; }
+        .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { justify-content: center; }
       }
 
       @media (max-width: 1000px) {
         .rpp-pr-grid.rpp-pr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-      }
-      @media (max-width: 640px) {
-        .rpp-afh-strip.rpp-afh-strip {
-          flex-direction: column;
-          gap: 0.6rem;
-          padding: 1rem 1.25rem;
-        }
-        .rpp-afh-strip-label.rpp-afh-strip-label {
-          font-size: 15px;
-          letter-spacing: 0.05em;
-        }
       }
       /* PHONES (under 640px): four stacked rows, object left and words right,
          left-aligned, so each choice is its own clearly separate tap target
@@ -365,17 +324,15 @@ const HomepagePopularResources = () => {
           </Link>
         </div>
 
-        {/* AFH Club — relocated from the funnel section so the top of the
-            homepage speaks only to families. No SVG arrow here: the
-            afhClub.cta string already ends in an arrow in every locale. */}
-        <Link to="/afh-club" className="rpp-afh-strip marquee-hover">
-          <span className="rpp-afh-strip-label">{t("afhClub.eyebrow")}</span>
-          <span className="rpp-afh-strip-cta">
-            Explore
-            <span className="rpp-afh-strip-wordmark" aria-label="AFH Club">
-              <img src={afhGlyph} alt="" aria-hidden="true" className="rpp-afh-strip-glyph" width={200} height={194} />
-              <span className="rpp-afh-strip-sr">A</span>FH Club
-            </span>
+        {/* Medicare vs. Medicaid (Nov 20, 2026, David): the questions he hears most
+            about paying for senior living. Sits where the AFH Club strip was. */}
+        <Link to="/medicare-vs-medicaid" className="rpp-mvm-strip marquee-hover">
+          <span className="rpp-mvm-words">
+            <span className="rpp-mvm-title">Medicare vs. Medicaid</span>
+            <span className="rpp-mvm-sub">What each pays for, who qualifies, and which one covers senior living</span>
+          </span>
+          <span className="rpp-mvm-go">
+            Compare them <RppArrow size={24} />
           </span>
         </Link>
       </div>
