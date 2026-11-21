@@ -236,8 +236,9 @@ const AboutTheHub = () => {
         .rpp-abouthub-list .rpp-abouthub-tag.rpp-abouthub-tag { display: block; font-size: 14px !important; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B0352A !important; margin-bottom: 6px; }
         .rpp-abouthub-card .rpp-abouthub-why.rpp-abouthub-why { font-size: 18px; color: #2b2825; border-top-color: #d9d1c3; margin-top: 1.5rem !important; }
         .rpp-abouthub-card .rpp-abouthub-why.rpp-abouthub-why + .rpp-abouthub-why.rpp-abouthub-why { border-top: 0; padding-top: 0; margin-top: 0.9rem !important; }
-        /* Heading (Nov 21, 2026): match "Popular guides"; a sitewide h2 rule shrank it. */
-        html body main h2.rpp-abouthub-h.rpp-abouthub-h.rpp-abouthub-h.rpp-abouthub-h { font-size: clamp(32px, 3vw, 48px) !important; line-height: 1.2 !important; color: #272421 !important; text-align: center !important; margin: 0.9rem 0 0.4rem !important; }
+        /* Heading (Nov 21, 2026): a step smaller than "Popular guides" (32-48px) so the
+           band reads as a quick overview and the guides keep their own section. */
+        html body main h2.rpp-abouthub-h.rpp-abouthub-h.rpp-abouthub-h.rpp-abouthub-h { font-size: clamp(26px, 2.3vw, 36px) !important; line-height: 1.2 !important; color: #272421 !important; text-align: center !important; margin: 0.9rem 0 0.4rem !important; }
         @media (max-width: 760px) {
           .rpp-abouthub-list.rpp-abouthub-list.rpp-abouthub-list { grid-template-columns: 1fr; }
           .rpp-abouthub-card.rpp-abouthub-card { padding: 0.9rem 0; }
@@ -255,7 +256,7 @@ const AboutTheHub = () => {
             start", the line David had already taken out from under the
             headline on Nov 12) and the "no one looking at the whole picture"
             paragraph. The fuller explanation lives on the About page. */}
-        {/* Heading (Nov 21, 2026, David): same style as "Popular guides". */}
+        {/* Heading (Nov 21, 2026, David): a step smaller than "Popular guides". */}
         <h2 className="rpp-pr-heading rpp-abouthub-h" style={{ textAlign: "center", margin: "0.6rem 0 0" }}>What you&rsquo;ll find here</h2>
         <HomepagePoints />
       </div>
