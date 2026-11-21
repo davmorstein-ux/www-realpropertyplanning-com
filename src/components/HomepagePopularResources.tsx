@@ -185,12 +185,13 @@ const HomepagePopularResources = () => {
       /* Medicare vs. Medicaid banner (Nov 20, 2026, David). Several boxed
          versions were rejected that evening ("cheapens the look of the
          page"; "NO MORE NAVY" fills). Final: David's ChatGPT banner art
-         (cards on a desk, cream space on the right) with the words set in
-         real HTML on the cream side. The government eagle seal was painted
+         (cards on a desk on the RIGHT, cream space on the left: David put the
+         picture on the right because the calculator block below has its
+         picture on the left) with the words set in real HTML on the cream side. The government eagle seal was painted
          out of the Medicare card on purpose; do not put it back.
          Words: "Medicare" navy, "vs." garnet #9E1F3A, "Medicaid" green
          #0f6b56; flat garnet "Compare them" button. DM Sans only.
-         Laptops: picture fills the banner, words on the right 58%.
+         Laptops: picture fills the banner, words on the left 57%.
          Under 860px: the cards picture on top, words below. */
       .rpp-mvm-strip.rpp-mvm-strip {
         position: relative;
@@ -212,14 +213,14 @@ const HomepagePopularResources = () => {
       .rpp-mvm-strip img.rpp-mvm-art-phone { display: none; }
       .rpp-mvm-text {
         position: absolute;
-        top: 0; bottom: 0; right: 0;
-        left: 42%;
+        top: 0; bottom: 0; left: 0;
+        right: 43%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 12px;
-        padding: 0 32px 0 8px;
+        padding: 0 16px 0 44px;
       }
       .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
@@ -265,7 +266,7 @@ const HomepagePopularResources = () => {
       @media (max-width: 859px) {
         .rpp-mvm-strip.rpp-mvm-strip { aspect-ratio: auto; max-width: 560px; }
         .rpp-mvm-strip img.rpp-mvm-art { display: none; }
-        .rpp-mvm-strip img.rpp-mvm-art-phone { display: block; position: static; width: 100%; height: auto; aspect-ratio: 808 / 465; object-fit: cover; }
+        .rpp-mvm-strip img.rpp-mvm-art-phone { display: block; position: static; width: 100%; height: auto; aspect-ratio: 808 / 444; object-fit: cover; }
         .rpp-mvm-text { position: static; align-items: center; text-align: center; padding: 18px 18px 22px; gap: 10px; }
         .rpp-mvm-strip span.rpp-mvm-title.rpp-mvm-title { font-size: 30px !important; }
         .rpp-mvm-strip span.rpp-mvm-go.rpp-mvm-go { align-self: stretch; justify-content: center; }
@@ -363,7 +364,7 @@ const HomepagePopularResources = () => {
             about paying for senior living. Sits where the AFH Club strip was. */}
         <Link to="/medicare-vs-medicaid" className="rpp-mvm-strip" aria-label="Medicare vs. Medicaid: compare them">
           <img src={mvmArt} alt="" aria-hidden="true" className="rpp-mvm-art" width={1600} height={449} loading="lazy" decoding="async" />
-          <img src={mvmArtPhone} alt="" aria-hidden="true" className="rpp-mvm-art-phone" width={808} height={465} loading="lazy" decoding="async" />
+          <img src={mvmArtPhone} alt="" aria-hidden="true" className="rpp-mvm-art-phone" width={808} height={444} loading="lazy" decoding="async" />
           <span className="rpp-mvm-text">
             <span className="rpp-mvm-title">
               <span className="rpp-mvm-medicare">Medicare</span> <span className="rpp-mvm-vs">vs.</span>{" "}
