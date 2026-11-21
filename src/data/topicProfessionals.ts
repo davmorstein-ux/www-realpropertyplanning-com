@@ -103,6 +103,7 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   "/facing-foreclosure/selling-before-the-sale": ["realEstate"],
   "/facing-foreclosure/sell-house-during-foreclosure-washington": ["realEstate"], // owner, Nov 6, 2026: selling is ordinary brokerage
   "/medicare-vs-medicaid": ["medicare", "elderLaw", "financialPlanning"],
+  "/choosing-a-medicare-agent": ["medicare"],
   "/senior-living/shared-housing": ["realEstate"], // owner, Nov 6, 2026: only the featured broker here
   // Adult family homes, family side (Oct 21, 2026)
   "/senior-living/choosing-an-adult-family-home": ["seniorLiving", "careManagers"],

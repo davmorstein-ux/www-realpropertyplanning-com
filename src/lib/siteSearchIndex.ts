@@ -151,6 +151,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/long-term-care/hospital-discharge-planning", label: "Planning Your Hospital Discharge" },
   { path: "/long-term-care/how-to-choose-care-settings", label: "How to Choose Between Care Settings" },
   { path: "/long-term-care/medicaid-and-long-term-care", label: "Medicaid & Long-Term Care in Washington State" },
+  { path: "/choosing-a-medicare-agent", label: "How to Choose a Medicare Agent or Broker (questions to ask, how agents are paid, SHIBA)" },
   { path: "/medicare-vs-medicaid", label: "Medicare vs. Medicaid in Washington State (Parts A-D, who pays for senior living, taxes, stocks)" },
   { path: "/long-term-care/medicaid-and-the-family-home", label: "Medicaid and the Family Home" },
   { path: "/long-term-care/nurse-delegation", label: "The Nurse Delegation Program in Washington State" },

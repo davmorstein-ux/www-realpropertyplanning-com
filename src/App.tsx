@@ -285,6 +285,7 @@ const LTCShortTermNursingHomeStays = lazy(() => import("./pages/long-term-care/S
 const LTCNurseDelegation = lazy(() => import("./pages/long-term-care/NurseDelegation"));
 const LTCMedicaidAndLongTermCare = lazy(() => import("./pages/long-term-care/MedicaidAndLongTermCare"));
 const MedicareVsMedicaid = lazy(() => import("./pages/MedicareVsMedicaid"));
+const ChoosingMedicareHelp = lazy(() => import("./pages/ChoosingMedicareHelp"));
 const LTCMedicaidAndTheHome = lazy(() => import("./pages/long-term-care/MedicaidAndTheHome"));
 const SellParentsHouseDementia = lazy(() => import("./pages/guides/SellParentsHouseDementia"));
 const LTCWaCares = lazy(() => import("./pages/long-term-care/WaCares"));
@@ -769,6 +770,7 @@ export const AppRoutes = () => (
       <Route path="/long-term-care/nurse-delegation" element={<LTCNurseDelegation />} />
       <Route path="/long-term-care/medicaid-and-long-term-care" element={<LTCMedicaidAndLongTermCare />} />
       <Route path="/medicare-vs-medicaid" element={<MedicareVsMedicaid />} />
+      <Route path="/choosing-a-medicare-agent" element={<ChoosingMedicareHelp />} />
       <Route path="/long-term-care/medicaid-and-the-family-home" element={<LTCMedicaidAndTheHome />} />
       <Route path="/guides/sell-parents-house-dementia-washington" element={<SellParentsHouseDementia />} />
       <Route path="/long-term-care/wa-cares" element={<LTCWaCares />} />

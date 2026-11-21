@@ -102,7 +102,7 @@ export const MVM_COMPARE: CompareRow[] = [
     label: "Free, unbiased help",
     medicare: "SHIBA, the state's free Medicare advisers, run by the Washington State Office of the Insurance Commissioner.",
     medicaid: "Your local DSHS Home and Community Services office, or an elder law attorney for planning.",
-    medicareLinks: [LINKS.shiba, LINKS.shibaPhone],
+    medicareLinks: [LINKS.shiba, LINKS.shibaPhone, { label: "How to choose a Medicare agent", href: "/choosing-a-medicare-agent" }],
     medicaidLinks: [LINKS.dshsOffices, { label: "Elder law attorneys", href: "/for-elder-law-attorneys" }],
   },
 ];
@@ -175,7 +175,7 @@ export const MVM_FOLDS: Fold[] = [
       "Medicare: apply at ssa.gov, by calling Social Security at 1-800-772-1213, or at a local Social Security office. Medicare Advantage and Part D plans are compared and chosen at Medicare.gov or 1-800-MEDICARE. SHIBA, Washington's free and unbiased Medicare advisers, can sit down with you: 1-800-562-6900.",
       "Apple Health for long-term care: apply online at WashingtonConnection.org, by phone at 1-877-501-2233, or with the paper form HCA 18-005 mailed or faxed to DSHS Home and Community Services. A case manager then visits to assess the person's care needs. Expect to show bank and investment statements, income records and proof of any transfers in the last five years.",
     ],
-    links: [LINKS.ssaSignUp, LINKS.planCompare, LINKS.shiba, LINKS.waConnection, LINKS.form18005, LINKS.dshsOffices],
+    links: [LINKS.ssaSignUp, LINKS.planCompare, LINKS.shiba, { label: "How to choose someone to help you with Medicare", href: "/choosing-a-medicare-agent" }, LINKS.waConnection, LINKS.form18005, LINKS.dshsOffices],
   },
   {
     heading: "Help paying Medicare costs if income is low",

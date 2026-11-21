@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
@@ -204,6 +205,17 @@ const MedicareProviders = () => (
               Medicare is the federal health insurance program for Americans age 65 and older, as well as certain
               younger people with disabilities. It is divided into four parts, each covering different aspects of
               healthcare:
+            </p>
+            <p className="text-foreground text-lg leading-relaxed mb-6">
+              Choosing who helps you matters too. See{" "}
+              <Link to="/choosing-a-medicare-agent" className="underline underline-offset-2 font-semibold">
+                how to choose someone to help you with Medicare
+              </Link>{" "}
+              for questions to ask and how agents are paid, and{" "}
+              <Link to="/medicare-vs-medicaid" className="underline underline-offset-2 font-semibold">
+                Medicare vs. Medicaid
+              </Link>{" "}
+              for which program pays for what.
             </p>
 
             <div className="space-y-6">

@@ -36,6 +36,7 @@ import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { MVM_SHORT, MVM_TITLE, MVM_PRERENDER_SECTIONS, MVM_FAQS, MVM_PUBLISHED, MVM_REVIEWED } from "./src/data/medicareVsMedicaid";
+import { CMH_SHORT, CMH_TITLE, CMH_PRERENDER_SECTIONS, CMH_FAQS, CMH_PUBLISHED, CMH_REVIEWED } from "./src/data/choosingMedicareHelp";
 import { SELL_PARENTS_HOUSE_DEMENTIA, SPHD_PRERENDER_SECTIONS, SPHD_FAQS } from "./src/data/sellParentsHouseDementia";
 import { DSCR_LOANS, DSCR_FAQS, dscrPrerenderSections } from "./src/data/afhDscrLoans";
 import { AFH_MGMT, AFH_MGMT_FAQS, afhMgmtPrerenderSections } from "./src/data/afhManagementCompanies";
@@ -1785,6 +1786,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "WA Cares Fund: How It Fits Into Long-Term Care Planning and Housing Decisions",
     description: "A guide to Washington's WA Cares Fund — how it's funded, what it may pay for, who qualifies, and how it fits alongside home equity, Medicaid, and other long-term care planning strategies.",
     h1: "WA Cares Fund: How WA Cares Fits Into Long-Term Care Planning and Housing Decisions",
+  },
+  "/choosing-a-medicare-agent": {
+    title: "How to Choose a Medicare Agent or Broker in Washington State (WA) | Real Property Planning",
+    description: "How to choose a Medicare agent, broker or free SHIBA counselor in Washington State (WA): how agents are paid, what Medicare doesn't allow them to do, 12 questions to ask, warning signs, and how to check a license.",
+    h1: CMH_TITLE,
+    quickAnswerQ: "How do I choose a Medicare agent in Washington State?",
+    quickAnswerA: CMH_SHORT,
+    intro: "A neutral guide for people turning 65 and families helping them: the kinds of Medicare help (SHIBA, independent agents, company agents, fee-based advisers) and how each is paid, 12 questions to ask, what Medicare does not allow agents to do, signs to slow down, why the first Medigap decision matters, and where to check a license or report a problem in Washington State.",
+    sections: CMH_PRERENDER_SECTIONS,
+    faq: CMH_FAQS,
+    article: { datePublished: CMH_PUBLISHED, dateModified: CMH_REVIEWED },
   },
   "/medicare-vs-medicaid": {
     title: "Medicare vs. Medicaid in Washington State (WA): Differences, Costs & Senior Living | Real Property Planning",
