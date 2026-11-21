@@ -716,6 +716,21 @@ html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible div.rpp-
 @media (min-width: 640px) {
   html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { font-size: clamp(18px, 1.4vw, 20px) !important; font-weight: 700 !important; }
   html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { box-shadow: none !important; }
+  /* Smaller photos, whole image still shown (Nov 21, 2026, David: "too big").
+     Two-by-two rows with a small square photo beside the title, the same
+     layout phones already use. About 95px shorter on a laptop. */
+  html body main ul.rpp-pr-grid.rpp-pr-grid { grid-template-columns: 1fr 1fr !important; gap: 14px 18px !important; }
+  html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { flex-direction: row !important; align-items: stretch !important; padding: 0 !important; gap: 0 !important; min-height: 0; }
+  html body main .rpp-pr-tile span.rpp-pr-photo.rpp-pr-photo { flex: 0 0 118px !important; width: 118px !important; }
+  html body main .rpp-pr-tile img.rpp-pr-photo-img.rpp-pr-photo-img { width: 118px !important; height: 118px !important; aspect-ratio: 1 / 1; }
+  html body main .rpp-pr-tile span.rpp-pr-body.rpp-pr-body { flex: 1 1 auto; min-width: 0; justify-content: center !important; padding: 12px 68px 12px 22px !important; }
+  html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { white-space: normal !important; overflow-wrap: break-word; }
+  html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow { top: 50% !important; bottom: auto !important; transform: translateY(-50%); right: 20px !important; }
+}
+@media (min-width: 640px) and (max-width: 900px) {
+  html body main .rpp-pr-tile span.rpp-pr-body.rpp-pr-body { padding: 10px 50px 10px 14px !important; }
+  html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { font-size: 17px !important; }
+  html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow { right: 12px !important; }
 }
 
 /* ---- COST OF CARE: same edges as the Medicare vs. Medicaid panel; preview list ---- */
