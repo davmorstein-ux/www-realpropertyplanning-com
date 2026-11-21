@@ -231,7 +231,7 @@ const HomepagePopularResources = () => {
         white-space: normal;
       }
       .rpp-mvm-strip span.rpp-mvm-medicare.rpp-mvm-medicare { font-weight: 800 !important; font-size: inherit !important; color: #1B3A6B !important; }
-      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: inherit !important; color: #1c1917 !important; }
+      .rpp-mvm-strip span.rpp-mvm-vs.rpp-mvm-vs { font-weight: 800 !important; font-size: 0.65em !important; color: #1c1917 !important; margin: 0 0.12em; } /* Nov 21, 2026 (David): smaller "vs." */
       .rpp-mvm-strip span.rpp-mvm-medicaid.rpp-mvm-medicaid { font-weight: 800 !important; font-size: inherit !important; color: #0f6b56 !important; }
       .rpp-mvm-strip span.rpp-mvm-sub.rpp-mvm-sub {
         font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
