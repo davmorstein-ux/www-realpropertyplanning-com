@@ -362,6 +362,15 @@ html body main h1#rpp-tagline br.rpp-br-wide { display: none; }
        ~12px gap gives this width. Change it with the photo. */
     --rpp-gw: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem));
   }
+  /* ONE CONTENT WIDTH (Nov 20, 2026, David): the question box, the popular
+     guides and the Medicare vs. Medicaid banner take the same width as the
+     hero and the four tiles, so the left and right edges line up down the
+     page. Same formula as --rpp-gw above; backgrounds still run full width. */
+  html body main { --rpp-cw: min(1120px, 84vw, calc(71vw + 8px), calc(100vw - 3rem)); }
+  html body main .rpp-ask.rpp-ask { max-width: var(--rpp-cw) !important; width: var(--rpp-cw); }
+  html body main p.rpp-myplan-link.rpp-myplan-link { max-width: var(--rpp-cw) !important; }
+  html body main ul.rpp-pr-grid.rpp-pr-grid { width: var(--rpp-cw); margin: 0 auto !important; }
+  html body main a.rpp-mvm-strip.rpp-mvm-strip { max-width: var(--rpp-cw); }
   /* Short laptop screens (Oct 29, 2026, night): slightly narrower tiles, so
      the whole tiles fit on the first screen without cropping the photos. */
   @media (max-height: 780px) {
@@ -755,7 +764,9 @@ const RPPHomeV3 = () => {
                           srcSet={TILE_SMALL[imgSrc] ? `${TILE_XSMALL[imgSrc]} 420w, ${TILE_SMALL[imgSrc]} 640w, ${imgSrc} 1160w` : undefined}
                           sizes="(max-width: 1023px) 50vw, 260px"
                           alt={imgAlt}
-                          loading="lazy"
+                          loading="eager"
+                          fetchPriority="high"
+                          decoding="async"
                           width={1160}
                           height={793}
                           className="rpp-funnel-img"
@@ -820,7 +831,18 @@ const RPPHomeV3 = () => {
     .group:hover .rpp-jt-arrow.rpp-jt-arrow { transform: translateX(2px); }
   }
   .rpp-jt-link:focus-visible .rpp-jt { outline: 3px solid var(--tile); outline-offset: 3px; }
-  .rpp-jt-photo { line-height: 0; }
+  /* Keyboard focus (Nov 20, 2026): the sitewide 2px gold ring is faint on
+     cream. Tiles show the ring on the card, not around the link box. */
+  .rpp-jt-link:focus-visible { outline: none !important; }
+  .rpp-jt-link:focus-visible .rpp-jt { outline-width: 3px !important; }
+  main a.rpp-pr-tile:focus-visible, main a.rpp-mvm-strip:focus-visible, main a.rpp-coc-card:focus-visible {
+    outline: 3px solid #9E1F3A !important; outline-offset: 3px;
+  }
+  /* Nov 20, 2026: the four photos are on the first screen, so they load at
+     once (they were loading="lazy" and two showed blank for a moment in an
+     outside review). The box keeps the photo's shape and a warm placeholder
+     colour while it loads, so nothing jumps. */
+  .rpp-jt-photo { line-height: 0; background: #ece5da; }
   .rpp-jt-label.rpp-jt-label {
     flex: 1 1 auto;
     display: flex;

@@ -325,8 +325,9 @@ const HomepagePopularResources = () => {
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
-          <span className="rpp-pr-eyebrow">Popular Resources</span>
-          <h2 className="rpp-pr-heading">The guides people open most</h2>
+          {/* One heading (Nov 20, 2026, David): was "Popular Resources" over
+              "The guides people open most". */}
+          <h2 className="rpp-pr-heading">Popular guides</h2>
         </div>
 
         {/* Cards */}
