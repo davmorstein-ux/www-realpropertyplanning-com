@@ -64,6 +64,9 @@ const PAGE_CSS = `
   .mvm-page .apf-fold-body li { font-size: 18px; line-height: 1.6; color: #1c1917; margin: 0 0 8px; }
   .mvm-page .mvm-links { margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px; }
   .mvm-page .mvm-links a { font-size: 18px; font-weight: 700; color: ${NAVY}; }
+  .mvm-page .mvm-cell-links { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+  .mvm-page .mvm-cell-links a { font-size: 17px; font-weight: 700; color: ${NAVY}; text-decoration: underline; text-underline-offset: 3px; }
+  .mvm-page .mvm-medicaid .mvm-cell-links a, .mvm-page td:last-child .mvm-cell-links a { color: ${GREEN}; }
   /* Phones: tables become stacked rows so nothing scrolls sideways. */
   @media (max-width: 699px) {
     .mvm-page .mvm-wrap { display: none; }
@@ -77,7 +80,29 @@ const PAGE_CSS = `
   }
 `;
 
-type Row = { head: string; medicare: string; medicaid: string };
+type Ext = { label: string; href: string };
+type Row = { head: string; medicare: string; medicaid: string; medicareLinks?: Ext[]; medicaidLinks?: Ext[] };
+
+/** Official sites open in a new tab; phone numbers dial; site pages use the router. */
+const OutLink = ({ l }: { l: Ext }) =>
+  l.href.startsWith("/") ? (
+    <Link to={l.href}>{l.label}</Link>
+  ) : l.href.startsWith("tel:") ? (
+    <a href={l.href}>{l.label}</a>
+  ) : (
+    <a href={l.href} target="_blank" rel="noopener noreferrer">
+      {l.label}
+    </a>
+  );
+
+const CellLinks = ({ links }: { links?: Ext[] }) =>
+  links && links.length ? (
+    <span className="mvm-cell-links">
+      {links.map((l) => (
+        <OutLink key={l.href} l={l} />
+      ))}
+    </span>
+  ) : null;
 
 const CompareTable = ({ caption, firstCol, rows }: { caption: string; firstCol: string; rows: Row[] }) => (
   <>
@@ -95,8 +120,14 @@ const CompareTable = ({ caption, firstCol, rows }: { caption: string; firstCol: 
           {rows.map((r) => (
             <tr key={r.head}>
               <th scope="row">{r.head}</th>
-              <td>{r.medicare}</td>
-              <td>{r.medicaid}</td>
+              <td>
+                {r.medicare}
+                <CellLinks links={r.medicareLinks} />
+              </td>
+              <td>
+                {r.medicaid}
+                <CellLinks links={r.medicaidLinks} />
+              </td>
             </tr>
           ))}
         </tbody>
@@ -109,10 +140,12 @@ const CompareTable = ({ caption, firstCol, rows }: { caption: string; firstCol: 
           <div className="mvm-row-part mvm-medicare">
             <strong>Medicare</strong>
             {r.medicare}
+            <CellLinks links={r.medicareLinks} />
           </div>
           <div className="mvm-row-part mvm-medicaid">
             <strong>Medicaid (Apple Health)</strong>
             {r.medicaid}
+            <CellLinks links={r.medicaidLinks} />
           </div>
         </div>
       ))}
@@ -163,7 +196,7 @@ const MedicareVsMedicaid = () => (
             <CompareTable
               caption="Medicare and Medicaid compared"
               firstCol="Question"
-              rows={MVM_COMPARE.map((r) => ({ head: r.label, medicare: r.medicare, medicaid: r.medicaid }))}
+              rows={MVM_COMPARE.map((r) => ({ head: r.label, medicare: r.medicare, medicaid: r.medicaid, medicareLinks: r.medicareLinks, medicaidLinks: r.medicaidLinks }))}
             />
 
             <h2 className="apf-h2">Who pays for each kind of senior living</h2>
@@ -203,7 +236,7 @@ const MedicareVsMedicaid = () => (
                     {f.links && (
                       <div className="mvm-links">
                         {f.links.map((l) => (
-                          <Link key={l.href} to={l.href}>{l.label}</Link>
+                          <OutLink key={l.href} l={l} />
                         ))}
                       </div>
                     )}

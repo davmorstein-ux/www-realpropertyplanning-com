@@ -55,11 +55,33 @@ export const MVM_KEY_POINTS: string[] = [
   "Most families pay for long-term care privately first, and Medicaid steps in once savings are down to the limit. Planning ahead changes how that goes.",
 ];
 
+export interface Ext {
+  label: string;
+  href: string;
+}
+
 export interface CompareRow {
   label: string;
   medicare: string;
   medicaid: string;
+  /** Official links shown under the cell text (Nov 20, 2026, owner's request). */
+  medicareLinks?: Ext[];
+  medicaidLinks?: Ext[];
 }
+
+/* Official links, each opened and checked Nov 20, 2026. */
+export const LINKS = {
+  ssaSignUp: { label: "Sign up for Medicare at ssa.gov", href: "https://www.ssa.gov/medicare/sign-up" },
+  ssaPhone: { label: "Call Social Security: 1-800-772-1213", href: "tel:+18007721213" },
+  ssaOffice: { label: "Find a Social Security office", href: "https://www.ssa.gov/locator/" },
+  planCompare: { label: "Compare plans at Medicare.gov", href: "https://www.medicare.gov/plan-compare" },
+  waConnection: { label: "Apply at WashingtonConnection.org", href: "https://www.washingtonconnection.org" },
+  waPhone: { label: "Call Apple Health: 1-877-501-2233", href: "tel:+18775012233" },
+  form18005: { label: "Form HCA 18-005 (PDF)", href: "https://www.hca.wa.gov/assets/free-or-low-cost/18-005.pdf" },
+  shiba: { label: "SHIBA, free Medicare help", href: "https://www.insurance.wa.gov/insurance-resources/medicare/get-free-medicare-help-shiba" },
+  shibaPhone: { label: "Call SHIBA: 1-800-562-6900", href: "tel:+18005626900" },
+  dshsOffices: { label: "Find a DSHS Home and Community Services office", href: "https://www.dshs.wa.gov/office-locations" },
+} satisfies Record<string, Ext>;
 
 export const MVM_COMPARE: CompareRow[] = [
   { label: "Who runs it", medicare: "The federal government (Medicare, with Social Security handling sign-up).", medicaid: "Washington State with federal money. In Washington it is called Apple Health." },
@@ -69,8 +91,20 @@ export const MVM_COMPARE: CompareRow[] = [
   { label: "Doctors and hospitals", medicare: "Yes (Parts A and B).", medicaid: "Yes, and it fills gaps Medicare leaves for people who have both." },
   { label: "Prescriptions", medicare: "Yes, through a Part D plan or a Medicare Advantage plan.", medicaid: "For people with both, Medicare Part D covers drugs and Extra Help lowers the cost." },
   { label: "Long-term care (help with bathing, dressing, meals, medications)", medicare: "No.", medicaid: "Yes: at home, in adult family homes, in assisted living and in nursing homes." },
-  { label: "How to apply", medicare: "Through Social Security: ssa.gov, 1-800-772-1213, or a local office. Automatic if already collecting Social Security.", medicaid: "Washington Connection online, 1-877-501-2233, or form HCA 18-005 for long-term care." },
-  { label: "Free, unbiased help", medicare: "SHIBA, the state's free Medicare advisers: 1-800-562-6900.", medicaid: "Your local DSHS Home and Community Services office, or an elder law attorney for planning." },
+  {
+    label: "How to apply",
+    medicare: "Through Social Security: online, by phone, or at a local office. Automatic if already collecting Social Security.",
+    medicaid: "Online at Washington Connection, by phone, or with form HCA 18-005 for long-term care.",
+    medicareLinks: [LINKS.ssaSignUp, LINKS.ssaPhone, LINKS.ssaOffice],
+    medicaidLinks: [LINKS.waConnection, LINKS.waPhone, LINKS.form18005],
+  },
+  {
+    label: "Free, unbiased help",
+    medicare: "SHIBA, the state's free Medicare advisers, run by the Washington State Office of the Insurance Commissioner.",
+    medicaid: "Your local DSHS Home and Community Services office, or an elder law attorney for planning.",
+    medicareLinks: [LINKS.shiba, LINKS.shibaPhone],
+    medicaidLinks: [LINKS.dshsOffices, { label: "Elder law attorneys", href: "/for-elder-law-attorneys" }],
+  },
 ];
 
 export interface SettingRow {
@@ -95,7 +129,7 @@ export interface Fold {
   paras: string[];
   /** Optional list shown after the paragraphs. */
   list?: string[];
-  /** Internal links shown at the end of the fold. */
+  /** Links shown at the end of the fold (internal paths or official https links). */
   links?: { href: string; label: string }[];
 }
 
@@ -141,6 +175,7 @@ export const MVM_FOLDS: Fold[] = [
       "Medicare: apply at ssa.gov, by calling Social Security at 1-800-772-1213, or at a local Social Security office. Medicare Advantage and Part D plans are compared and chosen at Medicare.gov or 1-800-MEDICARE. SHIBA, Washington's free and unbiased Medicare advisers, can sit down with you: 1-800-562-6900.",
       "Apple Health for long-term care: apply online at WashingtonConnection.org, by phone at 1-877-501-2233, or with the paper form HCA 18-005 mailed or faxed to DSHS Home and Community Services. A case manager then visits to assess the person's care needs. Expect to show bank and investment statements, income records and proof of any transfers in the last five years.",
     ],
+    links: [LINKS.ssaSignUp, LINKS.planCompare, LINKS.shiba, LINKS.waConnection, LINKS.form18005, LINKS.dshsOffices],
   },
   {
     heading: "Help paying Medicare costs if income is low",
@@ -225,10 +260,12 @@ export const MVM_FAQS: { q: string; a: string }[] = [
   },
 ];
 
+const linkText = (l?: Ext[]) => (l ? " " + l.filter((x) => x.href.startsWith("http")).map((x) => `${x.label} (${x.href})`).join("; ") : "");
+
 /** Plain-text sections for the prerendered HTML. */
 export const MVM_PRERENDER_SECTIONS: string[] = [
   `Key points: ${MVM_KEY_POINTS.join(" ")}`,
-  ...MVM_COMPARE.map((r) => `${r.label}. Medicare: ${r.medicare} Medicaid: ${r.medicaid}`),
+  ...MVM_COMPARE.map((r) => `${r.label}. Medicare: ${r.medicare}${linkText(r.medicareLinks)} Medicaid: ${r.medicaid}${linkText(r.medicaidLinks)}`),
   ...MVM_SETTINGS.map((r) => `${r.setting}: Medicare ${r.medicare.toLowerCase()}; Medicaid ${r.medicaid.toLowerCase()}.`),
   ...MVM_FOLDS.map((f) => `${f.heading}. ${f.paras.join(" ")}${f.list ? " " + f.list.join(" ") : ""}`),
 ];
