@@ -22,6 +22,7 @@ import GuidanceGrid from "@/components/GuidanceGrid";
 
 import NextQuestions from "@/components/NextQuestions";
 import RppArrow from "@/components/RppArrow";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 interface Pathway {
   letter: string;
   title: string;
@@ -427,6 +428,12 @@ const PreparingHomeForSaleDuringTransition = () => {
             </div>
           </div>
         </section>
+
+        {/* Nov 21, 2026 (David): remodel calculator after the mistakes list
+            ("spending too much on unnecessary repairs"), not on the homepage. */}
+        <div className="px-6">
+          <RemodelWorthCallout wording="selling" />
+        </div>
 
         {/* FAQ */}
         <PageFAQ

@@ -84,11 +84,8 @@ import AboutTheHub from "@/components/AboutTheHub";
 import RppArrow from "@/components/RppArrow";
 import { setFetchPriority } from "@/lib/imgPriority";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
-import calcPhotoRemodel from "@/assets/home/calc-photo-remodel.webp";
 import calcPhotoCare480 from "@/assets/home/calc-photo-care-480.webp";
 import calcPhotoCare800 from "@/assets/home/calc-photo-care-800.webp";
-import calcPhotoRemodel480 from "@/assets/home/calc-photo-remodel-480.webp";
-import calcPhotoRemodel800 from "@/assets/home/calc-photo-remodel-800.webp";
 /* Oct 27, 2026 (performance): the photo panel is about 360px wide on a laptop and the
    screen width on a phone; the 1200px file was being sent to every screen. */
 const CALC_PHOTO_SIZES = "(max-width: 768px) 100vw, 360px";
@@ -1266,27 +1263,10 @@ const RPPHomeV3 = () => {
                 </div>
               </a>
 
-              {/* ── What's My Remodel Worth? (Oct 14, 2026, owner) ── same card as the
-                  cost of care calculator above, for King County homeowners. */}
-              <a href="/whats-my-remodel-worth" className="rpp-coc-card rpp-rmv-card rpp-calc-photo-card rpp-calc-photo-right group marquee-hover" style={{ marginTop: "1.5rem" }}>
-                <div className="rpp-calc-photo" aria-hidden="true">
-                  <img src={calcPhotoRemodel800} srcSet={`${calcPhotoRemodel480} 480w, ${calcPhotoRemodel800} 800w, ${calcPhotoRemodel} 1200w`} sizes={CALC_PHOTO_SIZES} alt="" width={1200} height={800} loading="lazy" decoding="async" />
-                </div>
-                <div className="rpp-coc-layout">
-                  <div className="rpp-coc-left">
-                    <h3 className="rpp-rmv-heading" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", margin: 0, lineHeight: 1.1 }}>
-                      {/* Renamed Oct 27, 2026 (David): "What's My Remodel Worth?" read as the
-                          remodel's cost. */}
-                      <span style={{ color: "#272421" }}>What's My Home Worth</span>{" "}
-                      <span style={{ color: "#14283a" }}>After Remodeling?</span>
-                    </h3>
-                    <span className="rpp-calc-sub">See how much value a remodel could add to your home in King, Snohomish &amp; Pierce Counties.</span>
-                    <span className="rpp-coc-cta">Try the calculator</span>
-                  </div>
-                  {/* Nov 20, 2026: remodel steps list removed from the homepage card
-                      (they are on the calculator page). */}
-                </div>
-              </a>
+              {/* Nov 21, 2026 (David): the "What's My Home Worth After Remodeling?"
+                  card was removed from the homepage. The calculator is linked
+                  from the pages about selling a house instead (see
+                  src/components/RemodelWorthCallout.tsx for the list). */}
 
              </div>
           </div>

@@ -11,7 +11,14 @@
  *   /guides/inherited-house-washington
  *   /washington-probate-guide/selling-the-house
  *   /guides/repairs-before-selling-probate-home-washington (Oct 20, 2026)
- * The homepage keeps its own link for general homeowners.
+ *   /guides/sell-inherited-house-as-is-or-fix (Nov 21, 2026, "selling" wording)
+ *   /preparing-home-for-sale-during-transition (Nov 21, 2026, "selling" wording)
+ *
+ * Nov 21, 2026 (David): the homepage card was removed — the calculator belongs
+ * beside the pages about selling a house, not on the homepage. The "selling"
+ * wording is for pages that are not only about estate houses (senior moves
+ * too), and for the as-is page, whose title already asks "fix it up or sell
+ * as-is?".
  *
  * Coverage: the calculator has data for King, Snohomish and Pierce counties
  * only, so the note says so. Wording says "estimate" on purpose.
@@ -21,7 +28,25 @@ import { Link } from "react-router-dom";
 import RppArrow from "@/components/RppArrow";
 const NAVY = "#1B3A6B";
 
-export default function RemodelWorthCallout({ style }: { style?: React.CSSProperties }) {
+const WORDING = {
+  estate: {
+    heading: "Fix it up or sell as-is?",
+    lead: "Before spending money on an estate house, see what updates would likely add.",
+  },
+  selling: {
+    heading: "Thinking about updates before listing?",
+    lead: "Before spending money on a house you plan to sell, see what updates would likely add.",
+  },
+} as const;
+
+export default function RemodelWorthCallout({
+  style,
+  wording = "estate",
+}: {
+  style?: React.CSSProperties;
+  wording?: keyof typeof WORDING;
+}) {
+  const w = WORDING[wording];
   return (
     <aside
       aria-labelledby="remodel-worth-callout"
@@ -40,10 +65,10 @@ export default function RemodelWorthCallout({ style }: { style?: React.CSSProper
     >
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <p id="remodel-worth-callout" className="rpp-remodel-callout-h">
-        Fix it up or sell as-is?
+        {w.heading}
       </p>
       <p className="rpp-remodel-callout-p">
-        Before spending money on an estate house, see what updates would likely add. Look up the house, enter what each
+        {w.lead} Look up the house, enter what each
         job would cost (paint, flooring, kitchen, roof) and get an estimate of the value afterward, from a broker's view
         and from what a buyer's appraiser is likely to support. For houses in King, Snohomish and Pierce counties.
       </p>

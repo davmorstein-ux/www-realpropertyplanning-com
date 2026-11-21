@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import RemodelWorthCallout from "@/components/RemodelWorthCallout";
 
 const faqs = [
   { question: "Is it worth fixing up an inherited house before selling?", answer: "It depends on the property's condition, the local market, and the cost of repairs relative to the expected return. In some cases, targeted improvements yield a strong return. In others, the time and money invested do not come back at sale. A professional assessment helps determine which approach makes sense." },
@@ -138,6 +139,9 @@ const SellInheritedHouseAsIsOrFix = () => (
           <p className="text-muted-foreground leading-relaxed mt-6">
             These improvements typically cost a few thousand dollars and can add significantly more to the sale price. A broker who regularly sells estate property can say which of these make sense for your house and market.
           </p>
+          {/* Nov 21, 2026 (David): the remodel calculator sits beside the
+              question it answers, here rather than on the homepage. */}
+          <RemodelWorthCallout wording="selling" style={{ margin: "32px 0 0" }} />
         </div>
       </div>
     </section>
