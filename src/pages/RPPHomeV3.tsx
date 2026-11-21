@@ -710,12 +710,18 @@ html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible div.rpp-
   outline: 3px solid #1B3A6B !important; outline-offset: 4px !important;
 }
 
-/* Plan link under the Ask box: quieter (Nov 21, 2026, David) - supersedes the
-   Nov 1 heavier 20px / 700-800 rule in index.css. */
-html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link { font-size: 17px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #57534e !important; }
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet { font-size: 17px !important; font-weight: 700 !important; line-height: 1.5 !important; color: #44403c !important; text-decoration: none !important; white-space: nowrap; }
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover,
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:focus-visible { text-decoration: underline !important; text-underline-offset: 3px; }
+/* Plan link under the Ask box (Nov 21, 2026, David's mock-up): question in
+   grey on one line, then the link in bold charcoal with a garnet underline and
+   the garnet ring arrow, so it reads as a link. Supersedes the Nov 1 rule in
+   index.css and the same-day quiet one-liner. */
+html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link { font-size: 18px !important; font-weight: 400 !important; line-height: 1.4 !important; color: #78716c !important; }
+html body main p.rpp-myplan-link.rpp-myplan-link span.rpp-myplan-q.rpp-myplan-q { display: block; font-size: clamp(17px, 1.4vw, 20px) !important; font-weight: 400 !important; color: #78716c !important; margin-bottom: 6px; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet { display: inline-flex; align-items: center; gap: 12px; font-size: clamp(20px, 1.9vw, 26px) !important; font-weight: 700 !important; line-height: 1.3 !important; color: #272421 !important; text-decoration: none !important; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet span.rpp-myplan-words { font-size: inherit !important; font-weight: 700 !important; color: #272421 !important; text-decoration: underline !important; text-decoration-color: #9E1F3A !important; text-decoration-thickness: 2px !important; text-underline-offset: 7px !important; transition: text-decoration-thickness 0.15s ease; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet svg.rpp-myplan-arrow { color: #9E1F3A; width: 1.2em; height: 1.2em; vertical-align: middle !important; transition: transform 0.15s ease; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover span.rpp-myplan-words { text-decoration-thickness: 3px !important; text-decoration-color: #84182F !important; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover svg.rpp-myplan-arrow { transform: translateX(3px); color: #84182F; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:focus-visible { outline: 3px solid #9E1F3A; outline-offset: 4px; border-radius: 4px; }
 
 /* ---- POPULAR GUIDES: lighter than the four cards ----
    Photos back to square (Nov 21, 2026, David): the 16:9 crop cut the tops
@@ -1365,11 +1371,13 @@ const RPPHomeV3 = () => {
             <div style={{ margin: "clamp(40px, 4vw, 56px) 0 4.5rem" }}>
               <AskBox />
               {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
-              <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "14px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 16, lineHeight: 1.5, color: "#57534e" }}>
-                {/* Quieter (Nov 21, 2026, David): a plain text link under the box, not a second call to action. */}
-                Not sure what to ask?{" "}
-                <Link to="/my-plan" className="rpp-myplan-quiet" style={{ color: "#44403c", fontWeight: 600, textDecoration: "none", fontSize: 16 }}>
-                  Get a free step-by-step plan
+              <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "22px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
+                {/* Two lines with a garnet underline and ring arrow (Nov 21, 2026,
+                    David's mock-up): the one-line grey version didn't read as a link. */}
+                <span className="rpp-myplan-q">Not sure where to start?</span>
+                <Link to="/my-plan" className="rpp-myplan-quiet">
+                  <span className="rpp-myplan-words">Get a free step-by-step plan</span>
+                  <RppArrow className="rpp-myplan-arrow" />
                 </Link>
               </p>
             </div>
