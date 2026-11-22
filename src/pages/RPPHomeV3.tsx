@@ -635,7 +635,18 @@ html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slog
    under it the width of the words. */
 html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan {
   font-size: clamp(46px, 5.6vw, 84px) !important; line-height: 1.0 !important;
-  width: fit-content; padding-bottom: 14px !important; border-bottom: 2px solid #a89a86;
+  width: fit-content; padding-bottom: 12px !important; border-bottom: 1px solid #a89a86;
+}
+/* Refinements (Nov 21, 2026, David via ChatGPT's review): "continued." a weight
+   lighter (Playfair 600, loaded) for elegance; rule 1px; the sentence closer to
+   the headline and a little wider than it, wrapped so no word ("probate")
+   sits alone on a line; door ~15% taller and closer. */
+html body main#main-content.rpp-home-one-font div.rpp-door-hero p.rpp-door-slogan span.rpp-door-accent.rpp-door-accent { font-weight: 600 !important; }
+html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { margin-top: 12px !important; text-wrap: pretty; }
+@media (min-width: 901px) {
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { min-width: max(100%, 19em); }
+  html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner.rpp-door-inner { column-gap: clamp(28px, 2.6vw, 40px); }
+  html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img.rpp-door-img.rpp-door-img { height: clamp(230px, min(24vw, 39vh), 390px) !important; }
 }
 /* The one exception to the homepage's one-font rule (rpp-home-one-font, which
    uses the #main-content id, so the override has to as well). */
@@ -671,7 +682,7 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
   html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan {
     align-self: center; font-size: clamp(32px, 9.4vw, 44px) !important;
   }
-  html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { font-size: clamp(36px, 10.6vw, 46px) !important; padding-bottom: 10px !important; }
+  html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { font-size: clamp(36px, 10.6vw, 46px) !important; padding-bottom: 9px !important; }
   html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
     width: auto; min-width: 0; max-width: none; font-size: 18px !important; line-height: 1.4 !important; text-wrap: pretty;
   }
