@@ -696,6 +696,15 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
   }
 }
 
+/* "What brings you here today?" a step down (Nov 21, 2026, David): smaller and
+   semi-bold on laptops so "Life, continued." is the only headline at the top.
+   The id selector beats the one-font rule's h1-h4 weight. Phones unchanged. */
+@media (min-width: 901px) {
+  html body main#main-content.rpp-home-one-font h2.rpp-funnel-heading.rpp-funnel-heading.rpp-funnel-heading {
+    font-size: clamp(28px, 2.4vw, 36px) !important; font-weight: 600 !important; letter-spacing: -0.005em !important;
+  }
+}
+
 /* ---- FOUR STARTING CARDS ---- */
 @media (min-width: 901px) {
   /* Wider column on laptops. The old "71vw + 8px" cap kept the tiles clear
