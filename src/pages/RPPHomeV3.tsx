@@ -828,7 +828,10 @@ const RPPHomeV3 = () => {
         <style dangerouslySetInnerHTML={{ __html: DOOR_HERO_CSS }} />
         <DoorHero alt={t("hero.doorAlt")}>
             <p className="rpp-door-slogan">
-              {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span> {t("hero.sloganAccent2")}
+              {/* Nov 21, 2026 (David): "Know what's next" replaced "Your next chapter",
+                  which only fitted the senior; an executor settling a parent's estate
+                  isn't starting a "chapter". "next" keeps the garnet fade with the door. */}
+              {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
               {/* Nov 21, 2026 (David): one plain sentence replaced the lead line and
