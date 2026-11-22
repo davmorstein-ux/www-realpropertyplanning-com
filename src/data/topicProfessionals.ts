@@ -61,7 +61,7 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   // Estate, Probate & Inherited Property (no attorneys until a probate attorney is listed)
   [`${EP}/property-value`]: ["realEstate"],
   [`${EP}/what-to-do-with-the-property`]: ["realEstate", "cpas", "mortgage"],
-  [`${EP}/preparing-the-property`]: ["estateLiquidation", "moveManagers", "cleanupRemediation"],
+  [`${EP}/preparing-the-property`]: ["estateLiquidation", "moveManagers"],
 
   /* Guides outside the three paths (Oct 20, 2026, David's go): each names
      these kinds of professional in its text but linked to none of them
@@ -71,13 +71,13 @@ export const TOPIC_PROFESSIONALS: Record<string, ProfessionalCategoryKey[]> = {
   // Probate and estate
   "/probate-glossary": ["cpas", "estateLiquidation"],
   "/washington-probate-guide/deadlines-and-key-rules": ["cpas"],
-  "/washington-probate-guide/selling-the-house": ["estateLiquidation", "cleanupRemediation"],
+  "/washington-probate-guide/selling-the-house": ["estateLiquidation"],
   "/guides/mortgage-after-death-washington": ["mortgage"],
   "/guides/taxes-selling-inherited-house-washington": ["cpas"],
-  "/guides/inherited-house-washington": ["cpas", "cleanupRemediation"],
+  "/guides/inherited-house-washington": ["cpas"],
   "/guides/probate-costs-washington": ["cpas"],
-  "/guides/what-executors-should-do": ["estateLiquidation", "cleanupRemediation"],
-  "/guides/executor-first-steps-house": ["cpas", "cleanupRemediation"],
+  "/guides/what-executors-should-do": ["estateLiquidation"],
+  "/guides/executor-first-steps-house": ["cpas"],
   "/executor-responsibilities-first-steps/legal-duties": ["cpas"],
   "/executor-responsibilities-first-steps/working-with-professionals": ["cpas", "financialPlanning"],
   "/executor-responsibilities-first-steps/when-you-need-extra-help": ["moveManagers", "estateLiquidation", "financialPlanning"],
