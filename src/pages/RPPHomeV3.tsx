@@ -669,6 +669,7 @@ html body main div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-sr {
 }
 html body main#main-content div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-l1.rpp-dm-l1 {
   display: block; font-size: 1.168625em !important; line-height: 1.0 !important; margin-left: -0.031em !important;
+  position: relative; top: 0.0233em; /* Nov 21, 2026: down 0.027em of the headline so the shorter-tailed comma sits on Life's baseline */
   color: #1c1917 !important; white-space: nowrap;
 }
 html body main#main-content div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-l2.rpp-dm-l2 {
@@ -676,8 +677,8 @@ html body main#main-content div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-l2.r
   margin-top: -0.19659em !important; white-space: nowrap;
 }
 html body main div.rpp-door-hero p.rpp-door-slogan img.rpp-dm-mark.rpp-dm-mark {
-  position: absolute !important; left: 2.028203em !important; top: 0.946332em !important;
-  width: 0.160483em !important; height: 0.372492em !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
+  position: absolute !important; left: 2.030147em !important; top: 0.969899em !important;
+  width: 0.158276em !important; height: 0.353077em !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
   pointer-events: none;
 }
 /* While the door opens, a charcoal copy sits on top and fades out in step with "continued." */
@@ -936,8 +937,8 @@ const RPPHomeV3 = () => {
                   <span className="rpp-dm-l1" aria-hidden="true">Life</span>
                   <span className="rpp-dm-l2" aria-hidden="true"><span className="rpp-door-accent">cont{"\u0131"}nued.</span></span>
                   {/* Nov 21, 2026: David's redrawn mark, head and dot identical; dot kept the same size and position. */}
-                  <img className="rpp-dm-mark" src={sloganCommaDot} alt="" aria-hidden="true" width={132} height={306} />
-                  <img className="rpp-dm-mark rpp-dm-mark-dark" src={sloganCommaDotDark} alt="" aria-hidden="true" width={132} height={306} />
+                  <img className="rpp-dm-mark" src={sloganCommaDot} alt="" aria-hidden="true" width={132} height={294} />
+                  <img className="rpp-dm-mark rpp-dm-mark-dark" src={sloganCommaDotDark} alt="" aria-hidden="true" width={132} height={294} />
                 </>
               ) : (
                 <><span className="rpp-door-start">{t("hero.sloganStart")}</span> <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}</>
