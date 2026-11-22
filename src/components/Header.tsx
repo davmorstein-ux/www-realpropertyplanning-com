@@ -21,8 +21,8 @@ import { PRIMARY_NAV } from "@/lib/primaryNav";
 import logo480 from "@/assets/perf/rpp-logo-v30-480.webp";
 import logo640 from "@/assets/perf/rpp-logo-v30-640.webp";
 import logo1280 from "@/assets/perf/rpp-logo-v30-1280.webp";
-import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp";
-import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
+// import marbleDesktop from "@/assets/perf/rpp-header-marble-v4.webp"; // marble off (Nov 21, 2026)
+// import marbleMobile from "@/assets/perf/rpp-header-marble-mobile-v5.webp";
 
 const NAV_FONT = { fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" };
 
@@ -344,7 +344,7 @@ const Header = () => {
              inside had to flip from light to dark when this changed — nav
              labels, carets, underlines, the divider and the hamburger. If this
              ever goes back to a dark colour, all of those flip back too. */
-          backgroundColor: "#F5F0E8",
+          backgroundColor: "#faf8f4",
           /* Subtle warm marble behind the whole header (Oct 24, 2026), to sit
              under the 3D logo. The marble is a separate image on purpose — the
              logo file is transparent — so the stone never shows a seam or a
@@ -365,9 +365,10 @@ const Header = () => {
              texture rather than a stone slab, so the flatter tiles and ring
              buttons below it don't fight it. Lower the 0.62 to bring the
              veins back. */
-          backgroundImage: isMobile
-            ? `linear-gradient(rgba(250,248,244,0.62), rgba(250,248,244,0.62)), url(${marbleMobile})`
-            : `linear-gradient(rgba(250,248,244,0.62), rgba(250,248,244,0.62)), url(${marbleDesktop})`,
+          /* Nov 21, 2026 (David): marble removed; plain ivory, the same colour
+             as the homepage below (#faf8f4), so the header and page read as one.
+             The marble imports are commented out at the top in case it ever comes back. */
+          backgroundImage: "none",
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",

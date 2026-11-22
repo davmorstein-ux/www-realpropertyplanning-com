@@ -177,7 +177,10 @@ const PrimaryNav = () => {
            suppression that used to sit here existed only because About stood
            apart in its own slot, where a divider would have implied it belonged
            to a rhythm it wasn't part of. It is part of that rhythm now. */
+        /* Nov 21, 2026 (David): dividers removed with the plain ivory header;
+           the spacing alone separates the items. Rule kept, switched off. */
         .rpp-pn-slot + .rpp-pn-slot::before {
+          display: none;
           content: "";
           position: absolute;
           left: calc(var(--pn-gap, 24px) / -2);
