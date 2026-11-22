@@ -639,12 +639,12 @@ html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slog
 }
 /* Refinements (Nov 21, 2026, David via ChatGPT's review): "continued." a weight
    lighter (Playfair 600, loaded) for elegance; rule 1px; the sentence closer to
-   the headline and a little wider than it, wrapped so no word ("probate")
+   the headline and wider than it (two lines on laptops), wrapped so no word ("probate")
    sits alone on a line; door ~15% taller and closer. */
 html body main#main-content.rpp-home-one-font div.rpp-door-hero p.rpp-door-slogan span.rpp-door-accent.rpp-door-accent { font-weight: 600 !important; }
 html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { margin-top: 12px !important; text-wrap: pretty; }
 @media (min-width: 901px) {
-  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { min-width: max(100%, 19em); }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { min-width: max(100%, 24.5em); } /* two lines on laptops (Nov 21, 2026, David) */
   html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner.rpp-door-inner { column-gap: clamp(28px, 2.6vw, 40px); }
   html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img.rpp-door-img.rpp-door-img { height: clamp(230px, min(24vw, 39vh), 390px) !important; }
 }
