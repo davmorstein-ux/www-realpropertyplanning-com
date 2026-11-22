@@ -661,7 +661,10 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
 }
 /* "Life, continued." with David's comma-to-dot mark (Nov 21, 2026). Offsets in em of
    the headline's font size, from his approved mock-up: Life 1.1686x, continued 1.015x,
-   "L" and "c" share a left edge, the dot sits centred over the top of the dotless i. */
+   "L" and "c" share a left edge, the dot sits centred over the top of the dotless i.
+   Nov 22, 2026: left 2.030147em -> 2.063em. It had been centred on the i's top serif,
+   which reaches left, so it read as shifted left; now centred on the stem (within
+   0.25px from 390px to 1920px wide). */
 html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan { position: relative; }
 html body main div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-sr {
   position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important;
@@ -677,7 +680,7 @@ html body main#main-content div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-l2.r
   margin-top: -0.19659em !important; white-space: nowrap;
 }
 html body main div.rpp-door-hero p.rpp-door-slogan img.rpp-dm-mark.rpp-dm-mark {
-  position: absolute !important; left: 2.030147em !important; top: 0.969899em !important;
+  position: absolute !important; left: 2.063em !important; top: 0.969899em !important;
   width: 0.158276em !important; height: 0.353077em !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
   pointer-events: none;
 }
