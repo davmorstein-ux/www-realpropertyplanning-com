@@ -630,6 +630,23 @@ html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inne
   align-items: center;
 }
 html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { align-self: end; }
+/* "Life, / continued." (Nov 21, 2026, David): serif (Playfair Display 800, already
+   loaded for this slogan), stacked, a little larger, with a thin warm taupe rule
+   under it the width of the words. */
+html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan {
+  font-size: clamp(46px, 5.6vw, 84px) !important; line-height: 1.0 !important;
+  width: fit-content; padding-bottom: 14px !important; border-bottom: 2px solid #a89a86;
+}
+/* The one exception to the homepage's one-font rule (rpp-home-one-font, which
+   uses the #main-content id, so the override has to as well). */
+html body main#main-content.rpp-home-one-font div.rpp-door-hero p.rpp-door-slogan,
+html body main#main-content.rpp-home-one-font div.rpp-door-hero p.rpp-door-slogan span {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-weight: 800 !important; letter-spacing: -0.005em !important;
+}
+html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan span.rpp-door-start.rpp-door-start {
+  display: block; font: inherit !important; color: inherit !important; letter-spacing: inherit !important;
+}
 html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
   align-self: start;
   /* Width 0 + min-width 100%: the sentence wraps inside the headline's width
@@ -654,6 +671,7 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
   html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan {
     align-self: center; font-size: clamp(32px, 9.4vw, 44px) !important;
   }
+  html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { font-size: clamp(36px, 10.6vw, 46px) !important; padding-bottom: 10px !important; }
   html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line {
     width: auto; min-width: 0; max-width: none; font-size: 18px !important; line-height: 1.4 !important; text-wrap: pretty;
   }
@@ -828,10 +846,11 @@ const RPPHomeV3 = () => {
         <style dangerouslySetInnerHTML={{ __html: DOOR_HERO_CSS }} />
         <DoorHero alt={t("hero.doorAlt")}>
             <p className="rpp-door-slogan">
-              {/* Nov 21, 2026 (David): "Know what's next" replaced "Your next chapter",
-                  which only fitted the senior; an executor settling a parent's estate
-                  isn't starting a "chapter". "next" keeps the garnet fade with the door. */}
-              {t("hero.sloganStart")} <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}
+              {/* Nov 21, 2026 (David): "Life, continued." (stacked) replaced "Know what's
+                  next", which replaced "Your next chapter" (that one only fitted the
+                  senior). Also the T-shirt slogan. "continued." keeps the garnet fade
+                  with the door. rpp-door-start is its own line (PRESENTATION_CSS). */}
+              <span className="rpp-door-start">{t("hero.sloganStart")}</span> <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
               {/* Nov 21, 2026 (David): one plain sentence replaced the lead line and
