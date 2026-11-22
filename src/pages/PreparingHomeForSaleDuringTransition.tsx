@@ -496,7 +496,8 @@ const PreparingHomeForSaleDuringTransition = () => {
                     key={step}
                     className="flex items-center gap-5 bg-white border border-gold/25 rounded-2xl p-5 shadow-[0_4px_14px_-8px_rgba(27,43,75,0.2)]"
                   >
-                    <span className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-[hsl(var(--gold-dark))] text-white font-serif text-2xl font-bold flex items-center justify-center">
+                    <span className="shrink-0 w-11 h-11 rounded-full font-sans font-semibold text-lg flex items-center justify-center"
+                      style={{ border: "1.5px solid #8F1A2B", color: "#8F1A2B", background: "#ffffff" }}>
                       {i + 1}
                     </span>
                     <span className="text-navy font-semibold text-lg md:text-xl leading-snug">

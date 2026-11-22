@@ -1,4 +1,10 @@
 import { Link } from "react-router-dom";
+import afhStepFind from "@/assets/icons/line-afh/afh-step-find.svg";
+import afhStepScore from "@/assets/icons/line-afh/afh-step-score.svg";
+import afhStepRevenue from "@/assets/icons/line-afh/afh-step-revenue.svg";
+import afhStepValue from "@/assets/icons/line-afh/afh-step-value.svg";
+import afhStepFinancing from "@/assets/icons/line-afh/afh-step-financing.svg";
+import afhStepConnect from "@/assets/icons/line-afh/afh-step-connect.svg";
 
 /**
  * The AFH buyer's decision sequence, made explicit (Sept 2026 audit): the five
@@ -7,12 +13,12 @@ import { Link } from "react-router-dom";
  * on; omit it for the overview on the calculators and buying pages.
  */
 export const AFH_BUYER_STEPS = [
-  { n: 1, label: "Find a property", href: "/afh-club/listings", hint: "Current listings and what has sold", icon: "/afh-step-find.webp" },
-  { n: 2, label: "Score the property", href: "/afh-club/afh-property-score", hint: "Layout, licensing fit, condition", icon: "/afh-step-score.webp" },
-  { n: 3, label: "Estimate revenue", href: "/afh-club/afh-roi-calculator", hint: "Census, rates, and operating margin", icon: "/afh-step-revenue.webp" },
-  { n: 4, label: "Estimate value", href: "/afh-club/afh-valuation-estimator", hint: "Real estate and business, separately", icon: "/afh-step-value.webp" },
-  { n: 5, label: "Test the financing", href: "/afh-club/afh-financing-calculator", hint: "Occupancy needed to carry the loan", icon: "/afh-step-financing.webp" },
-  { n: 6, label: "Get connected", href: "/contact?reason=afh-buy-sell", hint: "Talk it through before you make an offer", icon: "/afh-step-connect.webp" },
+  { n: 1, label: "Find a property", href: "/afh-club/listings", hint: "Current listings and what has sold", icon: afhStepFind },
+  { n: 2, label: "Score the property", href: "/afh-club/afh-property-score", hint: "Layout, licensing fit, condition", icon: afhStepScore },
+  { n: 3, label: "Estimate revenue", href: "/afh-club/afh-roi-calculator", hint: "Census, rates, and operating margin", icon: afhStepRevenue },
+  { n: 4, label: "Estimate value", href: "/afh-club/afh-valuation-estimator", hint: "Real estate and business, separately", icon: afhStepValue },
+  { n: 5, label: "Test the financing", href: "/afh-club/afh-financing-calculator", hint: "Occupancy needed to carry the loan", icon: afhStepFinancing },
+  { n: 6, label: "Get connected", href: "/contact?reason=afh-buy-sell", hint: "Talk it through before you make an offer", icon: afhStepConnect },
 ] as const;
 
 /* Oct 8, 2026: AFH Club hunter green replaces the retired maroon (#0a5648), and the
@@ -57,7 +63,7 @@ const AFHBuyerSteps = ({ current, compact = false, title }: { current?: number; 
       /* Step icons (owner's art, Oct 8, 2026), full band only, not the compact bar.
          Files are public/afh-step-<step>.webp, 240px square, trimmed and centred so
          all six sit at the same scale; any replacement needs the same treatment. */
-      .rpp-afhsteps img.rpp-afhsteps-ico { display: block; width: 84px; height: 84px; object-fit: contain; margin: 0 auto 4px; }
+      .rpp-afhsteps img.rpp-afhsteps-ico { display: block; width: 56px; height: 56px; object-fit: contain; margin: 10px auto 10px; }
       .rpp-afhsteps p.rpp-afhsteps-title { display: block; width: 100%; max-width: none !important; text-align: center !important; }
       /* index.css squeezes link line-height to 16px; give the box text room. */
       .rpp-afhsteps ol > li > a { line-height: 1.3 !important; }

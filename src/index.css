@@ -781,11 +781,11 @@ main,
   height: auto !important;
   width: auto !important;
   max-width: none !important;
-  border: 2px solid #1B3A6B !important;
+  border: 2px solid #8F1A2B !important;
   border-radius: 999px !important;
   box-sizing: border-box !important;
   background: #ffffff !important;
-  color: #1B3A6B !important;
+  color: #8F1A2B !important;
   font-family: "DM Sans", "DM Sans Fallback", sans-serif !important;
   font-size: 17px !important;
   font-weight: 800 !important;
@@ -801,7 +801,7 @@ span.gold-cta { pointer-events: none; }
 .gold-cta::after { content: none !important; display: none !important; }
 @media (hover: hover) {
   a:hover .gold-cta, .group:hover .gold-cta, a.gold-cta:hover, a:hover span.gold-cta {
-    background: #1B3A6B !important; color: #ffffff !important;
+    background: #8F1A2B !important; color: #ffffff !important;
   }
 }
 
@@ -4900,9 +4900,9 @@ main .rpp-answer-cta:hover {
    ------------------------------------------------------------ */
 
 /* Oct 26, 2026 (David: "too thin… difficult to click"): these are now
-   outlined navy pills at least 48px tall, the size of a fingertip, with the
-   arrow circle. The words stay navy on white until the card is hovered,
-   then the pill fills navy. Replaces the bare 15px text link. */
+   outlined pills (garnet since Nov 22, 2026) at least 48px tall, the size of a fingertip, with the
+   arrow circle. The words stay garnet on white until the card is hovered,
+   then the pill fills garnet. Replaces the bare 15px text link. */
 html body main .gold-cta.gold-cta,
 html body main .article-resource-btn.article-resource-btn {
   display: inline-flex !important;
@@ -4911,10 +4911,10 @@ html body main .article-resource-btn.article-resource-btn {
   gap: 10px !important;
   min-height: 48px !important;
   padding: 8px 10px 8px 18px !important;
-  border: 2px solid #1B3A6B !important;
+  border: 2px solid #8F1A2B !important;
   border-radius: 999px !important;
   background: #ffffff !important;
-  color: #1B3A6B !important;
+  color: #8F1A2B !important;
   font-size: 17px !important;
   font-weight: 800 !important;
   text-decoration: none !important;
@@ -4933,7 +4933,7 @@ html body main .gold-cta.gold-cta::after, html body main .article-resource-btn.a
 @media (hover: hover) {
   html body main a:hover .gold-cta.gold-cta, html body main .group:hover .gold-cta.gold-cta, html body main a.gold-cta.gold-cta:hover,
   html body main a:hover .article-resource-btn.article-resource-btn, html body main a.article-resource-btn.article-resource-btn:hover {
-    background: #1B3A6B !important; color: #ffffff !important;
+    background: #8F1A2B !important; color: #ffffff !important;
   }
 }
 
@@ -6883,4 +6883,11 @@ html body main .tile-white__face h3.rpp-sl-label.rpp-sl-label {
 html body main .tile-white__face h3.rpp-sl-label.rpp-sl-label span {
   font: inherit !important;
   color: inherit !important;
+}
+
+/* Nov 22, 2026: Learn More pill moved from navy to garnet sitewide (David).
+   AFH Club keeps its hunter green. */
+html body main .gold-cta.gold-cta.rpp-cta-afh { border-color: #0a5648 !important; color: #0a5648 !important; }
+@media (hover: hover) {
+  html body main a:hover .gold-cta.gold-cta.rpp-cta-afh, html body main .group:hover .gold-cta.gold-cta.rpp-cta-afh { background: #0a5648 !important; color: #ffffff !important; }
 }

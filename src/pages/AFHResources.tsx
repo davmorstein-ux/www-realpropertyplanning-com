@@ -476,7 +476,7 @@ const AFHResources = () => (
                 >
                   {topic.description}
                 </p>
-                <span className="gold-cta">
+                <span className="gold-cta rpp-cta-afh">
                   Explore Topic
                   <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1"> <RppArrow />
                   </span>
