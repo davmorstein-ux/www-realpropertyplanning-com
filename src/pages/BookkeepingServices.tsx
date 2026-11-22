@@ -45,53 +45,52 @@ const providers: Provider[] = [
   },
 ];
 
-/* FAQ CONTENT IS DELIBERATELY GENERAL.
-   These answers describe how bookkeeping works as a discipline and how it
-   intersects with estate and transition work. They do not give tax, legal, or
-   accounting advice, and they do not describe any service Real Property
-   Planning performs — RPP refers, it does not provide. Keep any future
-   additions to that same standard. */
+/* FAQ CONTENT IS DELIBERATELY GENERAL. AFH Club only (Nov 22, 2026: moved
+   from the family side and rewritten for adult family home owners).
+   These answers describe how bookkeeping works for an AFH. They do not give
+   tax, legal, or accounting advice, and they do not describe any service Real
+   Property Planning performs: the site provides no services, and never "we". */
 const faqs = [
   {
     q: "What is the difference between a bookkeeper and a CPA?",
-    a: "A bookkeeper maintains the day-to-day financial records of a business: recording transactions, reconciling accounts, tracking receivables and payables, and keeping the books current and accurate. A CPA is a licensed accountant who can prepare and sign tax returns, perform audits, and provide formal accounting opinions. The two roles are complementary rather than interchangeable: clean books from a bookkeeper make a CPA's work faster, cheaper, and more accurate at tax time.",
+    a: "A bookkeeper keeps the day-to-day records of the home: recording what comes in and goes out, reconciling the bank and card accounts, and keeping the books current. A CPA is a licensed accountant who prepares and signs tax returns and gives formal accounting and tax advice. Most AFH owners need both. Clean books from a bookkeeper make the CPA's work at tax time faster, cheaper and more accurate.",
   },
   {
     q: "What is a Certified QuickBooks ProAdvisor?",
-    a: "A Certified QuickBooks ProAdvisor has completed Intuit's certification program covering QuickBooks setup, reporting, and troubleshooting. The certification indicates demonstrated proficiency with the software specifically: how to configure a chart of accounts, structure recurring transactions, correct historical errors, and produce reports that a business owner can actually read and act on.",
+    a: "A Certified QuickBooks ProAdvisor has completed Intuit's certification program for QuickBooks setup, reporting and troubleshooting. For an AFH owner, that usually means help setting up accounts that match how the home is actually paid, fixing past entries, and producing monthly reports that are easy to read.",
   },
   {
-    q: "Why do bookkeeping records matter when settling an estate?",
-    a: "If the person who died owned a business or held rental property, the executor inherits responsibility for its financial records. Incomplete or disorganized books make it harder to value the business, file a final return, identify outstanding obligations, and distribute assets accurately. Getting those records in order early can keep a settlement from dragging on.",
+    q: "Should each adult family home have its own books?",
+    a: "If you own or operate more than one home, tracking each one separately is what shows which home is carrying the others: its own resident income, its own staffing cost, its own rent or mortgage. Whether each home should also be its own business entity or bank account is a question for your CPA or attorney.",
   },
   {
-    q: "How does bookkeeping fit alongside estate and transition planning?",
-    a: "Families going through a major transition are often coordinating several professionals at once: an attorney, a CPA, a real estate broker, sometimes a care manager. A bookkeeper keeps the underlying financial record accurate so each of those advisors is working from the same numbers. That reduces duplicated effort and the corrections that surface late in a process, when they are most expensive.",
+    q: "Why do buyers ask for my books when I sell my AFH?",
+    a: "When an adult family home is sold as a business, the price of the business rests on what it earns. Buyers, and the lenders financing them, usually ask for profit and loss statements and tax returns for recent years, and they compare them. Missing months, mixed personal and business spending, or numbers that do not match the tax returns can lower offers or stall the financing.",
   },
   {
-    q: "How do I choose a bookkeeper?",
-    a: "Look for someone whose experience matches the size and complexity of your operation, who is comfortable with the software you already use, and who explains your financial position in language you understand rather than only producing reports. Ask how often you will hear from them, what a typical month looks like, and how they handle a backlog if your books have fallen behind.",
+    q: "How do I choose a bookkeeper for an AFH?",
+    a: "Look for someone who understands income that arrives from several sources, such as Medicaid payments through ProviderOne and private pay, and a business where caregiver wages are the largest cost. Ask which software they use, how often you will hear from them, what a typical month looks like, and how they handle a backlog if your books have fallen behind.",
   },
 ];
 
 const BookkeepingServices = () => (
   <>
     <SEOHead
-      title="Bookkeeping Services in Washington State | AFH Club"
-      description="Connect with independent bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions."
+      title="Bookkeeping for Adult Family Home Owners in Washington | AFH Club"
+      description="Bookkeeping for Washington adult family home owners: tracking ProviderOne and private-pay income, caregiver payroll and expenses, books for more than one home, and the records buyers and lenders ask for when an AFH is sold. An independent bookkeeper to contact directly."
       canonical="https://realpropertyplanning.com/afh-club/bookkeeping-services"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
         { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
-        { name: "Bookkeeping Services", url: "https://realpropertyplanning.com/afh-club/bookkeeping-services" },
+        { name: "Bookkeeping for AFH Owners", url: "https://realpropertyplanning.com/afh-club/bookkeeping-services" },
       ]}
     />
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <HeroBandTitle as="h1">Bookkeeping Services in Washington State</HeroBandTitle>
+      <HeroBandTitle as="h1">Bookkeeping for Adult Family Home Owners</HeroBandTitle>
 
       {/* Featured Bookkeepers */}
       <section className="pt-10 md:pt-12 pb-12 md:pb-16 bg-secondary">
@@ -185,46 +184,40 @@ const BookkeepingServices = () => (
         </div>
       </section>
 
-      {/* What a Bookkeeper Does */}
+      {/* What a Bookkeeper Does for an AFH (Nov 22, 2026: rewritten for AFH owners) */}
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">What a Bookkeeper Does</h2>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">What a Bookkeeper Does for an AFH</h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Bookkeeping is the ongoing work of keeping a business's financial records accurate and current. It is
-              routine by design, and that routine is what the rest of the financial work depends on.
+              An adult family home is a small business with a few large, steady numbers: resident income, caregiver wages,
+              and the cost of the house. Bookkeeping keeps those numbers current, so you know where the home stands each month
+              instead of finding out at tax time.
             </p>
 
             <div className="space-y-6">
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Recording and Categorizing</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Resident Income</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Every transaction a business makes is recorded and assigned to the right account. Consistent
-                  categorization is what allows a report to answer a question rather than raise one.
+                  Medicaid payments through ProviderOne, private pay, and any other sources are recorded separately for each resident, so you can see what has been paid, what is still owed, and what each bed brings in.
                 </p>
               </div>
-
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Reconciliation</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Caregiver Payroll and Expenses</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Bank and credit card statements are matched against the books each month. Reconciliation is how errors
-                  and omissions get caught while they are still small and easy to correct.
+                  Staffing is usually the largest cost in an AFH. Wages, payroll taxes, food, supplies, utilities and repairs are recorded in their own accounts, so a rise in any of them shows up early.
                 </p>
               </div>
-
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Reporting</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Monthly Reconciliation</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Profit and loss statements, balance sheets, and cash flow reports turn a year of transactions into a
-                  picture an owner can act on. A good bookkeeper produces reports you can actually read.
+                  Bank and card statements are matched against the books every month. That is how a missed payment or a duplicated charge gets caught while it is still small.
                 </p>
               </div>
-
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Preparing for Tax Time</h3>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">Reports You Can Use</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Clean books hand your CPA a finished starting point instead of a reconstruction project. That usually
-                  means a faster return, fewer questions, and a smaller bill.
+                  A monthly profit and loss statement shows whether the home is making money at its current occupancy, and what an empty bed costs. Clean books also give your CPA a finished starting point at tax time.
                 </p>
               </div>
             </div>
@@ -232,27 +225,25 @@ const BookkeepingServices = () => (
         </div>
       </section>
 
-      {/* Bookkeeping and Life Transitions */}
+      {/* When the books matter most */}
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-              Bookkeeping and Life Transitions
+              When the Books Matter Most
             </h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              When a business owner dies, retires, or becomes unable to manage their own affairs, someone else inherits
-              the books, often a family member with no history with them and no obvious place to start.
+              <strong>Selling the home or the business.</strong> The value of an AFH business rests on what it earns, and
+              buyers and their lenders check that against your records and tax returns. Organized books from the last few
+              years make the business easier to value and easier to finance.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              Executors settling an estate that includes a business or rental property face this directly. The business
-              has to be valued, a final return has to be filed, outstanding obligations have to be identified, and
-              assets have to be distributed accurately. Every one of those steps rests on the underlying record being
-              complete.
+              <strong>Running more than one home.</strong> Separate books for each home show which one is doing well and
+              which one needs attention, instead of one combined number that hides both.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              Families in transition are usually coordinating several professionals at once: an attorney, a CPA, a real
-              estate broker, sometimes a care manager. A bookkeeper keeps the financial record accurate so every advisor
-              is working from the same numbers.
+              <strong>Borrowing or refinancing.</strong> A lender looking at an AFH wants to see that the income covers the
+              loan. Current, reconciled books answer that question quickly.
             </p>
           </div>
         </div>

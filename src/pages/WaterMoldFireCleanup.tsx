@@ -41,29 +41,31 @@ const providers: Provider[] = [
   },
 ];
 
-/* FAQ CONTENT IS DELIBERATELY GENERAL. It describes how this kind of cleanup
-   works, not any service Real Property Planning performs: the site provides
-   no services. Keep any future additions to that standard, and never "we". */
+/* FAQ CONTENT IS DELIBERATELY GENERAL. AFH Club only (Nov 22, 2026: moved
+   from the family side and rewritten for adult family home owners). It
+   describes how this kind of cleanup works in a home where residents live,
+   not any service Real Property Planning performs: the site provides no
+   services. Keep any future additions to that standard, and never "we". */
 const faqs = [
   {
     q: "What is biohazard cleanup?",
-    a: "Biohazard cleanup is the removal and disinfection of material that can carry disease, such as blood and other bodily fluids, sewage or animal waste. It is done by crews trained to work in protective equipment, contain the area, dispose of the material properly, and disinfect surfaces that ordinary cleaning would leave contaminated.",
+    a: "Biohazard cleanup is the removal and disinfection of material that can carry disease, such as blood and other bodily fluids, sewage or animal waste, beyond what routine cleaning in the home can safely handle. A trained crew works in protective equipment, contains the area, disposes of the material properly, and disinfects surfaces that ordinary cleaning would leave contaminated.",
   },
   {
     q: "What is mold remediation?",
-    a: "Mold remediation is more than wiping mold off a surface. The affected area is contained so spores do not spread through the house, moldy materials that cannot be cleaned are removed, the rest is cleaned and treated, and the moisture that let mold grow is found and fixed. Without that last step, it usually comes back.",
+    a: "Mold remediation is more than wiping mold off a surface. The affected area is contained so spores do not spread through the house, moldy materials that cannot be cleaned are removed, the rest is cleaned and treated, and the moisture that let mold grow is found and fixed. Without that last step, it usually comes back. For residents with breathing problems, containment matters as much as the removal.",
   },
   {
-    q: "Why do inherited and vacant houses so often have water damage or mold?",
-    a: "Nobody is there to notice a slow leak, a failed water heater or a damp crawl space, and a house that sits with the heat turned down holds more moisture. By the time the family walks in, a small problem can have spread. A prompt inspection and dry-out keeps the damage, and the cost, from growing while the estate is being settled.",
+    q: "Can residents stay in the home while the work is done?",
+    a: "It depends on the size of the job. A small, contained repair can often be done while residents stay, with the work area sealed off and kept away from their rooms. A larger water, mold or fire job may mean moving residents for a time. Plan it with the cleanup company before work starts, and check with your DSHS licensor about what you need to report if residents have to leave or their care is affected.",
   },
   {
-    q: "Does insurance pay for water, fire or mold cleanup?",
-    a: "Often for sudden events, such as a burst pipe or a fire, and less often for damage that built up slowly or for mold. Many policies also limit coverage once a house has been vacant for a while. Call the insurer before the work starts, and keep the cleanup company's written documentation for the claim and for the estate's records.",
+    q: "Does insurance pay for water, fire or mold cleanup in an AFH?",
+    a: "Often for sudden events, such as a burst pipe or a fire, and less often for damage that built up slowly or for mold. Policies for an adult family home can include both the building and the business, such as lost income while beds are empty. Call your insurer before the work starts, and keep the cleanup company's written documentation for the claim.",
   },
   {
-    q: "Should the problem be fixed before the house is sold?",
-    a: "Active water damage, mold and smoke odor tend to worry buyers, inspectors and lenders more than almost anything else, and some loans cannot close until they are dealt with. Once the house is clean, dry and sanitary, the broker can advise whether further preparation is worth the cost or whether to sell it as it is.",
+    q: "Should water damage or mold be fixed before selling an AFH?",
+    a: "Active water damage, mold and smoke odor tend to worry buyers, inspectors and lenders more than almost anything else, and some loans cannot close until they are dealt with. A buyer who plans to operate the home also has to get it licensed, so problems found in their inspection can hold up the sale. Fixing them first, with a written record of the work, usually keeps the sale moving.",
   },
 ];
 
@@ -71,7 +73,7 @@ const WaterMoldFireCleanup = () => (
   <>
     <SEOHead
       title="Biohazard, water, mold & fire cleanup in Washington State | AFH Club"
-      description="What water damage, mold, fire damage, biohazard and moisture cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly."
+      description="Biohazard, water, mold and fire cleanup in a Washington adult family home: what the work involves, keeping residents safe while it is done, insurance, and fixing problems before a sale. An independent cleanup professional to contact directly."
       canonical="https://realpropertyplanning.com/afh-club/water-mold-fire-cleanup"
     />
     <BreadcrumbSchema
@@ -211,7 +213,7 @@ const WaterMoldFireCleanup = () => (
               <div className="bg-secondary rounded-lg p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">Sanitizing</h3>
                 <p className="text-foreground text-base leading-relaxed">
-                  Surfaces are cleaned and disinfected after water damage, sewage, illness or a long vacancy.
+                  Surfaces are cleaned and disinfected after water damage, sewage or illness.
                 </p>
               </div>
               <div className="bg-secondary rounded-lg p-6">
@@ -231,26 +233,27 @@ const WaterMoldFireCleanup = () => (
         </div>
       </section>
 
-      {/* When families need it */}
+      {/* When an AFH needs it (Nov 22, 2026: rewritten for AFH owners) */}
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-              When Families Need It
+              When an Adult Family Home Needs It
             </h2>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              An inherited house that has sat empty is where this usually comes up: a leak nobody saw, a damp crawl
-              space, mold behind a wall, or a stale, musty smell. Before the house can be appraised, shown or sold,
-              the damage has to be found, dried out and cleaned up.
+              <strong>After a sudden event.</strong> A burst pipe, a sewage backup or a kitchen fire in a home where
+              residents live has to be dealt with quickly, both to stop the damage spreading and to keep residents safe.
+              The crew contains the work area, and the plan for where residents stay is made before work starts.
             </p>
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              It also comes up when a parent moves to assisted living or an adult family home and the house they leave
-              behind needs to be made ready, and after a fire or a burst pipe, when the work has to start quickly to
-              keep the damage from spreading.
+              <strong>When something is found.</strong> A damp crawl space, mold behind a wall or a musty smell is a
+              health concern for residents, and it can be flagged in an inspection. Finding the source and fixing it
+              is cheaper early than after it spreads.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
-              A trained crew does the work and documents it, so the family has a clear record for the insurer, the
-              estate and a future buyer, and can focus on what happens to the house next.
+              <strong>Before a sale or a new license.</strong> Buyers, inspectors and lenders look hard at water damage,
+              mold and smoke odor. A home that has been cleaned, dried and documented is easier to sell and easier for
+              the next operator to license.
             </p>
           </div>
         </div>

@@ -162,7 +162,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/lewis-county", label: "Lewis County" },
   { path: "/long-term-care", label: "Long Term Care Options" },
   { path: "/mason-county", label: "Mason County" },
-  { path: "/afh-club/bookkeeping-services", label: "Bookkeeping Services" },
+  { path: "/afh-club/bookkeeping-services", label: "Bookkeeping for AFH Owners" },
   { path: "/afh-club/water-mold-fire-cleanup", label: "Biohazard, water, mold & fire cleanup" },
   { path: "/medicare-providers", label: "Medicare Providers" },
   { path: "/senior-living/memory-care", label: "Memory Care" },
