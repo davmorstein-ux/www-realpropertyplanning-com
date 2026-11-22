@@ -56,7 +56,8 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
               style={{
                 height: "110px",
                 width: "auto",
-                mixBlendMode: isRealtor ? "screen" : "multiply",
+                /* Nov 22, 2026: the REALTOR® logo shows in its own colours (was "screen", which washed it out on light backgrounds). */
+                mixBlendMode: isRealtor ? "normal" : "multiply",
               }}
               className="max-w-full object-contain" sizes="100vw" decoding="async"/>
           );
