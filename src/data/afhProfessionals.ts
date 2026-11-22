@@ -32,8 +32,8 @@ import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from
  * step. Every page that shows a person now reads the record from here:
  *   - /afh-club/find-a-professional   everyone, grouped by role
  *   - /afh-club/real-estate-broker    the featured broker
- *   - /bookkeeping-services           Nicole Guzman Johnson
- *   - /water-mold-fire-cleanup        Lynn Liedle
+ *   - /afh-club/bookkeeping-services           Nicole Guzman Johnson
+ *   - /afh-club/water-mold-fire-cleanup        Lynn Liedle
  * Change a phone number, email, photo or bio HERE and all of them update.
  *
  * THE STANDARD FOR BEING LISTED, in the site owner's words: people he has met

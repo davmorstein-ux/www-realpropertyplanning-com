@@ -160,7 +160,7 @@ const PROFESSIONAL_CATEGORIES = [
       "Resident billing and Medicaid/private-pay receivables tracking",
       "Monthly financials clean enough to hand to a CPA or a buyer",
     ],
-    link: { label: "Bookkeeping for AFH owners", href: "/bookkeeping-services" },
+    link: { label: "Bookkeeping for AFH owners", href: "/afh-club/bookkeeping-services" },
   },
   {
     title: "Photographers",

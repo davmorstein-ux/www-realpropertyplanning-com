@@ -5,7 +5,7 @@ import { NICOLE_GUZMAN_JOHNSON } from "@/data/afhProfessionals";
 
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
+import BackLink from "@/components/BackLink";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderContact from "@/components/ProviderContact";
 import ProviderHoverPanel from "@/components/ProviderHoverPanel";
@@ -77,14 +77,15 @@ const faqs = [
 const BookkeepingServices = () => (
   <>
     <SEOHead
-      title="Bookkeeping Services in Washington State | Real Property Planning"
+      title="Bookkeeping Services in Washington State | AFH Club"
       description="Connect with independent bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions."
-      canonical="https://realpropertyplanning.com/bookkeeping-services"
+      canonical="https://realpropertyplanning.com/afh-club/bookkeeping-services"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Bookkeeping Services", url: "https://realpropertyplanning.com/bookkeeping-services" },
+        { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
+        { name: "Bookkeeping Services", url: "https://realpropertyplanning.com/afh-club/bookkeeping-services" },
       ]}
     />
     <Header />
@@ -284,7 +285,7 @@ const BookkeepingServices = () => (
       </section>
 
       <CTASection />
-      <BackToProfessionalsButton />
+      <BackLink to="/afh-club/find-a-professional" label="AFH Club professionals" center />
       <DisclaimerSection />
     </main>
     <Footer />

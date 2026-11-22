@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
@@ -81,55 +79,6 @@ const ForCPAs = () => (
           <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
             CPAs and tax professionals help people understand the financial and tax consequences of major decisions, including the sale, transfer, or ownership of real estate. When a senior is transitioning from a longtime home or a property is going through probate, they are especially important because they can help identify tax implications, coordinate financial records, and support decisions that affect timing, proceeds, and potential liabilities.
           </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Cross-link to bookkeeping.
-        Bookkeepers and CPAs are adjacent but distinct: a bookkeeper maintains
-        the records, a CPA files on them. Someone landing here with disorganised
-        books often needs the former first, so the link earns its place rather
-        than being a directory shortcut. It is deliberately NOT the only route
-        to /bookkeeping-services — a visitor looking for a bookkeeper has no
-        reason to open a page labelled CPAs. The card in Financial & Valuation
-        Professionals is the primary entrance; this is the secondary one. */}
-    <section className="py-10 md:py-12 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-4" style={{ color: "#246044" }}>
-            Looking for Bookkeeping Support?
-          </h2>
-          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-6">
-            A bookkeeper keeps financial records accurate and current throughout the year, which is what makes a CPA's
-            work at tax time faster and more accurate. If your books have fallen behind, or an estate includes a
-            business or rental property whose records need organising, that work comes first.
-          </p>
-          {/* Button component, NOT className="gold-cta" on the Link.
-              index.css carries
-                main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])
-              which matches the substring "cta" in "gold-cta" and forces a
-              #1B3A6B fill with white text at (0,3,2) specificity. But .gold-cta
-              itself sets padding: 0 0 5px 0, so the fill lands as a tight
-              maroon box around bare text — small, dark, and not obviously a
-              control. It is the same defect index.css documents for
-              .article-resource-btn a few rules below.
-
-              .gold-cta is a TEXT link meant to sit in a <span> INSIDE an <a>
-              (see the provider tiles), which is why its hover rule reads
-              a:hover .gold-cta::after. Used on the anchor itself it cannot
-              work. This section wants a real button anyway — large tap target,
-              matching BackToProfessionalsButton. */}
-          <div className="flex justify-center">
-            <Link to="/bookkeeping-services">
-              <Button
-                variant="navy3d"
-                size="lg"
-                className="px-8 py-4 h-auto min-h-[52px] text-base md:text-lg !border-2 !border-gold"
-              >
-                Bookkeeping Services
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
     </section>

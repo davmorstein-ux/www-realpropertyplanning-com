@@ -5,7 +5,7 @@ import { LYNN_LIEDLE } from "@/data/afhProfessionals";
 
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
+import BackLink from "@/components/BackLink";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderContact from "@/components/ProviderContact";
 import ProviderHoverPanel from "@/components/ProviderHoverPanel";
@@ -70,14 +70,15 @@ const faqs = [
 const WaterMoldFireCleanup = () => (
   <>
     <SEOHead
-      title="Biohazard, water, mold & fire cleanup in Washington State | Real Property Planning"
+      title="Biohazard, water, mold & fire cleanup in Washington State | AFH Club"
       description="What water damage, mold, fire damage, biohazard and moisture cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly."
-      canonical="https://realpropertyplanning.com/water-mold-fire-cleanup"
+      canonical="https://realpropertyplanning.com/afh-club/water-mold-fire-cleanup"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Biohazard, water, mold & fire cleanup", url: "https://realpropertyplanning.com/water-mold-fire-cleanup" },
+        { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
+        { name: "Biohazard, water, mold & fire cleanup", url: "https://realpropertyplanning.com/afh-club/water-mold-fire-cleanup" },
       ]}
     />
     <Header />
@@ -282,7 +283,7 @@ const WaterMoldFireCleanup = () => (
       </section>
 
       <CTASection />
-      <BackToProfessionalsButton />
+      <BackLink to="/afh-club/find-a-professional" label="AFH Club professionals" center />
       <DisclaimerSection />
     </main>
     <Footer />

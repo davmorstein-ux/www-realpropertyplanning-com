@@ -1213,11 +1213,11 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/bookkeeping-services",
+    path: "/afh-club/bookkeeping-services",
     links: [],
   },
   {
-    path: "/water-mold-fire-cleanup",
+    path: "/afh-club/water-mold-fire-cleanup",
     links: [],
   },
   {

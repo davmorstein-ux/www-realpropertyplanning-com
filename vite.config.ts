@@ -2172,13 +2172,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "How Real Property Planning handles information collected through this website, including contact forms, analytics, and third-party services.",
     h1: "Privacy Policy",
   },
-  "/bookkeeping-services": {
-    title: "Bookkeeping Services in Washington State | Real Property Planning",
+  "/afh-club/bookkeeping-services": {
+    title: "Bookkeeping Services in Washington State | AFH Club",
     description: "Connect with independent bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions.",
     h1: "Bookkeeping Services in Washington State",
   },
-  "/water-mold-fire-cleanup": {
-    title: "Biohazard, water, mold & fire cleanup in Washington State | Real Property Planning",
+  "/afh-club/water-mold-fire-cleanup": {
+    title: "Biohazard, water, mold & fire cleanup in Washington State | AFH Club",
     description: "What water damage, mold, fire damage, biohazard and moisture cleanup involves, when families settling an estate or moving a parent need it, and an independent cleanup professional in Washington State to contact directly.",
     h1: "Biohazard, water, mold & fire cleanup in Washington State",
     intro: "Biohazard, water, mold and fire cleanup deals with the damage itself and with what caused it, restoring the home to a clean, sanitary and livable condition. An inherited house that has sat empty is where this usually comes up: a leak nobody saw, a damp crawl space, mold behind a wall, or a musty smell.",

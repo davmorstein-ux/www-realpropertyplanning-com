@@ -342,7 +342,10 @@ export const REDIRECTS: SiteRedirect[] = [
      Property Plan answers that question; the hub now links there. */
   { from: "/what-should-we-do-first", to: "/my-plan" },
   // Oct 21, 2026: renamed the same day it was added (David: no "hoarding").
-  { from: "/hoarding-biohazard-cleanup", to: "/water-mold-fire-cleanup" },
+  { from: "/hoarding-biohazard-cleanup", to: "/afh-club/water-mold-fire-cleanup" },
+  // Nov 22, 2026 (David): these two belong to AFH Club only.
+  { from: "/bookkeeping-services", to: "/afh-club/bookkeeping-services" },
+  { from: "/water-mold-fire-cleanup", to: "/afh-club/water-mold-fire-cleanup" },
 ];
 
 /** Where a path finally lands after redirects. Link to this, never to a retired

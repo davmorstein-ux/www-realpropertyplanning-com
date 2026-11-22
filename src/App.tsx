@@ -433,8 +433,8 @@ export const AppRoutes = () => (
       <Route path="/wills" element={<Wills />} />
       <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
       <Route path="/gray-divorce" element={<GrayDivorce />} />
-      <Route path="/bookkeeping-services" element={<BookkeepingServices />} />
-      <Route path="/water-mold-fire-cleanup" element={<WaterMoldFireCleanup />} />
+      <Route path="/afh-club/bookkeeping-services" element={<BookkeepingServices />} />
+      <Route path="/afh-club/water-mold-fire-cleanup" element={<WaterMoldFireCleanup />} />
       <Route path="/medicare-providers" element={<MedicareProviders />} />
       <Route path="/legal-plans-identity-protection" element={<LegalPlansIdentityProtection />} />
       <Route path="/title-and-escrow" element={<TitleAndEscrow />} />

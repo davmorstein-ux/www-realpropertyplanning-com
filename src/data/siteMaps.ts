@@ -141,8 +141,6 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Medicare Providers", href: "/medicare-providers" },
           { title: "Title & Escrow Services", href: "/title-and-escrow" },
           { title: "Featured Senior Move Managers", href: "/featured-senior-move-managers" },
-          { title: "Bookkeeping Services", href: "/bookkeeping-services" },
-          { title: "Biohazard, water, mold & fire cleanup", href: "/water-mold-fire-cleanup" },
           { title: "Financing & Long-Term Planning", href: "/lenders-and-financing-specialists" },
           { title: "Reverse Mortgages & Retirement Financing", href: "/retirement-reverse-mortgage" },
           { title: "Legal Professionals", href: "/professionals/attorneys" },
@@ -375,6 +373,8 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           { title: "AFH Club Featured Professionals", href: "/afh-club/find-a-professional" },
+          { title: "Bookkeeping for AFH owners", href: "/afh-club/bookkeeping-services" },
+          { title: "Biohazard, water, mold & fire cleanup", href: "/afh-club/water-mold-fire-cleanup" },
           { title: "Hiring an AFH Management Company", href: "/afh-club/hiring-an-afh-management-company" },
           { title: "AFH Caregiver Board: Jobs and Caregivers", href: "/afh-club/caregivers" },
           { title: "AFH Real Estate Broker", href: "/afh-club/real-estate-broker" },
