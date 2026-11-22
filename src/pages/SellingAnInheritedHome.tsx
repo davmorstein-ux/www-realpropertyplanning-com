@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Compass, HeartHandshake, CheckCircle2 } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 
-import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
-import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
-import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
-import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
-import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
+import iconHome from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import iconDocument from "@/assets/icons/line/probate-document-icon-washington.svg";
+import iconExecutor from "@/assets/icons/line/probate-executors-services-icon-washington.svg";
+import iconBookOpen from "@/assets/icons/line/probate-guidance-book-open-icon-washington.svg";
+import iconHeartHands from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import iconAssisted from "@/assets/icons/line/senior-assisted-living-icon-washington.svg";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import IntentCTA from "@/components/IntentCTA";
@@ -272,8 +272,8 @@ const SellingAnInheritedHome = () => {
                   <div className="flex items-start gap-5 p-5 md:p-6">
                     <span
                       aria-hidden="true"
-                      className="shrink-0 flex items-center justify-center rounded-full font-serif font-bold text-xl"
-                      style={{ background: "#1B3A6B", color: "#ffffff", width: 44, height: 44 }}
+                      className="shrink-0 flex items-center justify-center rounded-full font-sans font-semibold text-lg"
+                      style={{ border: "1.5px solid #8F1A2B", color: "#8F1A2B", background: "#ffffff", width: 44, height: 44 }}
                     >
                       {p.letter}
                     </span>

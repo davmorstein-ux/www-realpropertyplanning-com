@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Compass, HeartHandshake, CheckCircle2 } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 
-import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
-import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
-import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
-import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
+import iconHeartHands from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import iconAssisted from "@/assets/icons/line/senior-assisted-living-icon-washington.svg";
+import iconHome from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import iconDocument from "@/assets/icons/line/probate-document-icon-washington.svg";
+import iconArrow from "@/assets/icons/line/property-guidance-arrow-icon-washington.svg";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import IntentCTA from "@/components/IntentCTA";
 
@@ -253,22 +253,17 @@ const UnderstandingSeniorTransitions = () => {
                   to={p.href}
                   className="marquee-hover group block bg-white border-2 border-gold/25 rounded-2xl shadow-[0_8px_24px_-12px_rgba(27,43,75,0.18)] hover:border-gold/55 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all overflow-hidden"
                 >
-                  <div className="flex flex-col md:flex-row items-stretch">
-                    <div className="md:w-44 bg-gradient-to-br from-navy to-[hsl(var(--navy-dark))] text-cream p-5 md:p-6 flex md:flex-col items-center md:items-start gap-4 md:gap-2">
-                      <span className="font-serif text-5xl text-gold font-bold leading-none">
+                  <div className="flex flex-row items-start">
+                    <div className="shrink-0 pl-5 pt-5 md:pl-6 md:pt-6">
+                      <span
+                        aria-hidden="true"
+                        className="rpp-pathway-badge flex items-center justify-center rounded-full font-sans font-semibold text-lg"
+                        style={{ border: "1.5px solid #8F1A2B", color: "#8F1A2B", background: "#ffffff", width: 44, height: 44 }}
+                      >
                         {p.letter}
-                      </span>
-                      <span className="text-cream uppercase tracking-widest text-xs font-bold">
-                        Pathway {p.letter}
                       </span>
                     </div>
                     <div className="flex-1 p-5 md:p-6 flex items-center gap-5">
-                      <img
-                        src={p.icon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0 hidden sm:block"
-                        loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                       <div className="flex-1">
                         <h3 className="font-serif text-xl md:text-2xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                           {p.title}

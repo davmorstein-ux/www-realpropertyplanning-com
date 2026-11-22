@@ -7,7 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
+import iconAttorneys from "@/assets/icons/line/probate-attorney-services-icon-washington.svg";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 import BackLink from "@/components/BackLink";

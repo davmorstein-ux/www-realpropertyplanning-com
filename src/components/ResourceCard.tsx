@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import iconDocument3d from "@/assets/icons/probate-document-icon-washington.webp";
+import iconDocument3d from "@/assets/icons/line/probate-document-icon-washington.svg";
 
 import RppArrow from "@/components/RppArrow";
 interface ResourceCardProps {

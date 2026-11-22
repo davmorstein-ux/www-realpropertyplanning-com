@@ -1,9 +1,9 @@
-import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
-import iconFinancialPlanning from "@/assets/icons/estate-financial-planning-icon-washington.webp";
-import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-hero-washington.webp";
-import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
-import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
-import iconExecutors from "@/assets/icons/probate-executors-services-icon-washington.webp";
+import iconAttorneys from "@/assets/icons/line/probate-attorney-services-icon-washington.svg";
+import iconFinancialPlanning from "@/assets/icons/line/estate-financial-planning-icon-washington.svg";
+import iconSeniorMoves from "@/assets/icons/line/senior-movers-relocation-hero-washington.svg";
+import iconAppraiser from "@/assets/icons/line/real-estate-appraiser-icon-washington.svg";
+import iconRealtor from "@/assets/icons/line/realtor-real-estate-agent-icon-washington.svg";
+import iconExecutors from "@/assets/icons/line/probate-executors-services-icon-washington.svg";
 
 const tiles = [
   { icon: iconRealtor, label: "Real Estate Broker" },

@@ -5,12 +5,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 
-import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
-import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
-import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
-import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
-import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
+import iconHome from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import iconDocument from "@/assets/icons/line/probate-document-icon-washington.svg";
+import iconExecutor from "@/assets/icons/line/probate-executors-services-icon-washington.svg";
+import iconHeartHands from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import iconBookOpen from "@/assets/icons/line/probate-guidance-book-open-icon-washington.svg";
+import iconArrow from "@/assets/icons/line/property-guidance-arrow-icon-washington.svg";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
 import ProbateStartHere from "@/components/ProbateStartHere";

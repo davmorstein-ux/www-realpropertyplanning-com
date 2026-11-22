@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/line/real-estate-email-contact-icon-washington.svg";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState, useEffect, useRef } from "react";

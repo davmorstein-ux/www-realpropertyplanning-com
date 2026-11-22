@@ -6,12 +6,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import iconSeniorLiving from "@/assets/icons/senior-living-placement-hero-washington.webp";
-import iconAfh3d from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
-import iconAssistedLiving3d from "@/assets/icons/senior-assisted-living-icon-washington.webp";
-import iconMemoryCare3d from "@/assets/icons/senior-memory-care-3d-icon-washington.webp";
-import iconNursingCare3d from "@/assets/icons/senior-nursing-care-icon-washington.webp";
-import iconIndependentLiving3d from "@/assets/icons/senior-independent-living-icon-washington.webp";
+import iconSeniorLiving from "@/assets/icons/line/senior-living-placement-hero-washington.svg";
+import iconAfh3d from "@/assets/icons/line/senior-adult-family-home-3d-washington.svg";
+import iconAssistedLiving3d from "@/assets/icons/line/senior-assisted-living-icon-washington.svg";
+import iconMemoryCare3d from "@/assets/icons/line/senior-memory-care-3d-icon-washington.svg";
+import iconNursingCare3d from "@/assets/icons/line/senior-nursing-care-icon-washington.svg";
+import iconIndependentLiving3d from "@/assets/icons/line/senior-independent-living-icon-washington.svg";
 import { Link } from "react-router-dom";
 
 const livingOptions = [
@@ -144,7 +144,7 @@ const SeniorLivingAndRelocation = () => {
                               <img
                                 src={iconAfh3d}
                                 alt="Adult Family Homes"
-                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                className="h-[56px] max-w-[64px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
                                 loading="lazy"
                                 sizes="100vw"
                                 decoding="async"
@@ -155,7 +155,7 @@ const SeniorLivingAndRelocation = () => {
                               <img
                                 src={iconAssistedLiving3d}
                                 alt="Assisted Living Communities"
-                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                className="h-[56px] max-w-[64px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
                                 loading="lazy"
                                 sizes="100vw"
                                 decoding="async"
@@ -166,7 +166,7 @@ const SeniorLivingAndRelocation = () => {
                               <img
                                 src={iconMemoryCare3d}
                                 alt="Memory Care"
-                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                className="h-[56px] max-w-[64px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
                                 loading="lazy"
                                 sizes="100vw"
                                 decoding="async"
@@ -177,7 +177,7 @@ const SeniorLivingAndRelocation = () => {
                               <img
                                 src={iconNursingCare3d}
                                 alt="Nursing & Skilled Care"
-                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                className="h-[56px] max-w-[64px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
                                 loading="lazy"
                                 sizes="100vw"
                                 decoding="async"
@@ -188,7 +188,7 @@ const SeniorLivingAndRelocation = () => {
                               <img
                                 src={iconIndependentLiving3d}
                                 alt="Independent Living"
-                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                className="h-[56px] max-w-[64px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
                                 loading="lazy"
                                 sizes="100vw"
                                 decoding="async"
@@ -202,7 +202,7 @@ const SeniorLivingAndRelocation = () => {
                           {/* Label area — fills remaining space */}
                           <div className="flex-1 w-full flex items-center justify-center text-center p-2">
                             <h3
-                              className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
+                              className="rpp-sl-label m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
                               style={{ lineHeight: "1.2" }}
                             >
                               {forcedLabelLines ? (

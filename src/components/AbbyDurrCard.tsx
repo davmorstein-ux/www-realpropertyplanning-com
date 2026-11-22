@@ -1,8 +1,8 @@
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
 import silverAgeLogo from "@/assets/silver-age-senior-living-advisors-logo.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
-import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/line/real-estate-email-envelope-3d-icon-washington.svg";
+import iconMapPin3d from "@/assets/icons/line/real-estate-location-pin-3d-icon-washington.svg";
+import iconGlobe3d from "@/assets/icons/line/real-estate-website-globe-3d-icon-washington.svg";
 
 const AbbyDurrCard = () => (
   <section className="py-16 lg:py-20 bg-background">

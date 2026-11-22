@@ -12,7 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import heroIcon from "@/assets/icons/line/probate-guidance-book-open-icon-washington.svg";
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";

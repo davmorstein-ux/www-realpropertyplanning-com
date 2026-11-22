@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
-import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
+import heroIcon from "@/assets/icons/line/real-estate-service-areas-map-icon-washington.svg";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 // Tone-specific FAQ sets — now meaningfully varied per tone, not generic per city
@@ -91,7 +91,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[7rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
             </div>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
               {city.name}, {city.county}

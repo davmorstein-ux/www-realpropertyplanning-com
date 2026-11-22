@@ -1,9 +1,9 @@
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
 import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
 import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
-import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/line/real-estate-email-envelope-3d-icon-washington.svg";
+import iconMapPin3d from "@/assets/icons/line/real-estate-location-pin-3d-icon-washington.svg";
+import iconGlobe3d from "@/assets/icons/line/real-estate-website-globe-3d-icon-washington.svg";
 
 const GinnysGirlsCard = () => (
   <section className="py-16 lg:py-20 bg-background">

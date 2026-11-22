@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconServiceAreas from "@/assets/icons/real-estate-service-areas-map-illustration-washington.webp";
+import iconServiceAreas from "@/assets/icons/line/real-estate-service-areas-map-illustration-washington.svg";
 import { services } from "@/lib/service-areas-data";
 import kingCountyLogo from "@/assets/counties/king-county-logo.webp";
 import snohomishCountyLogo from "@/assets/counties/snohomish-county-logo.webp";

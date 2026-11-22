@@ -1,5 +1,5 @@
 import { useState } from "react";
-import willVaultIcon from "@/assets/icons/estate-will-vault-secure-icon-washington.webp";
+import willVaultIcon from "@/assets/icons/line/estate-will-vault-secure-icon-washington.svg";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import SecureWillWizard from "@/components/SecureWillWizard";
 
@@ -62,11 +62,11 @@ const SecureWillSection = () => {
 
           {/* Icon – right on desktop, below bullets on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center px-0">
-            <div className="relative w-[300px] sm:w-96 lg:w-[450px] mx-auto will-vault-float">
+            <div className="relative w-[150px] lg:w-[190px] mx-auto will-vault-float">
               <img
                 src={willVaultIcon}
                 alt="Secure blockchain will vault with permanent time-stamp seal"
-                className="w-full drop-shadow-2xl"
+                className="w-full"
                 loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
               <button
                 onClick={() => setWizardOpen(true)}

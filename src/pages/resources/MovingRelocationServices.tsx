@@ -7,7 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
-import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import heroIcon from "@/assets/icons/line/probate-estate-resources-icon-washington.svg";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const MovingRelocationServices = () => (

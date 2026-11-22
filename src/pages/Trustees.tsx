@@ -7,7 +7,7 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconTrustees from "@/assets/icons/estate-trustees-services-icon-washington.webp";
+import iconTrustees from "@/assets/icons/line/estate-trustees-services-icon-washington.svg";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";

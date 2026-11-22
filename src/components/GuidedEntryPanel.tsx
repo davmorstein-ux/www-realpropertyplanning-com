@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import iconClipboard3d from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
-import iconHome3d from "@/assets/icons/probate-property-home-icon-washington.webp";
-import iconHeartHands3d from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconScale3d from "@/assets/icons/appraisal-property-scale-icon-washington.webp";
-import iconMappin3d from "@/assets/icons/real-estate-service-areas-icon-washington.webp";
-import iconHelp3d from "@/assets/icons/property-guidance-help-icon-washington.webp";
+import iconClipboard3d from "@/assets/icons/line/executors-clipboard-checklist-icon-washington.svg";
+import iconHome3d from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import iconHeartHands3d from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import iconScale3d from "@/assets/icons/line/appraisal-property-scale-icon-washington.svg";
+import iconMappin3d from "@/assets/icons/line/real-estate-service-areas-icon-washington.svg";
+import iconHelp3d from "@/assets/icons/line/property-guidance-help-icon-washington.svg";
 
 const options = [
   {
@@ -69,7 +69,7 @@ const GuidedEntryPanel = () => {
                   <div className="card-3d-premium__face flex items-center gap-5 p-5 sm:p-6">
                     {/* Icon — standalone 3D, no background */}
                     <div className="flex shrink-0 items-center justify-center w-[72px] sm:w-[80px]">
-                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-14 w-14 sm:h-16 sm:w-16 object-contain drop-shadow-md transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-14 w-14 sm:h-16 sm:w-16 object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                     </div>
 
                     {/* Text block */}

@@ -11,7 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import heroIcon from "@/assets/icons/line/probate-guidance-book-open-icon-washington.svg";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import RemodelWorthCallout from "@/components/RemodelWorthCallout";

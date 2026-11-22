@@ -1,7 +1,7 @@
 import jamesJacksonPhoto from "@/assets/james-jackson-estate-planning-attorney-seattle.webp";
 import ketterSheppardLogo from "@/assets/ketter-sheppard-law-firm-logo.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/line/real-estate-email-envelope-3d-icon-washington.svg";
+import iconMapPin3d from "@/assets/icons/line/real-estate-location-pin-3d-icon-washington.svg";
 
 const JamesJacksonCard = () => (
   <section className="py-16 lg:py-20 bg-background">

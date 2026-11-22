@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { articleSchema } from "@/lib/schema";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { Search, Handshake, Phone } from "lucide-react";
-import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/line/real-estate-email-contact-icon-washington.svg";
 
 const specialtyOptions = [
   "Elder Law Attorney",

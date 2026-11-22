@@ -7,12 +7,12 @@ import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 
-import iconProbate from "@/assets/icons/probate-attorney-services-icon-washington.webp";
-import iconEstatePlanning from "@/assets/icons/attorney-estate-planning-icon-washington.webp";
-import iconElderLaw from "@/assets/icons/attorney-elder-law-icon-washington.webp";
-import iconRealEstate from "@/assets/icons/real-estate-attorney-services-icon-washington.webp";
-import iconFamilyLaw from "@/assets/icons/attorney-family-law-property-icon-washington.webp";
-import iconDivorce from "@/assets/icons/attorney-divorce-property-icon-washington.webp";
+import iconProbate from "@/assets/icons/line/probate-attorney-services-icon-washington.svg";
+import iconEstatePlanning from "@/assets/icons/line/attorney-estate-planning-icon-washington.svg";
+import iconElderLaw from "@/assets/icons/line/attorney-elder-law-icon-washington.svg";
+import iconRealEstate from "@/assets/icons/line/real-estate-attorney-services-icon-washington.svg";
+import iconFamilyLaw from "@/assets/icons/line/attorney-family-law-property-icon-washington.svg";
+import iconDivorce from "@/assets/icons/line/attorney-divorce-property-icon-washington.svg";
 
 import RppArrow from "@/components/RppArrow";
 const attorneys = [

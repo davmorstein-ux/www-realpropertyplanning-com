@@ -7,7 +7,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.webp";
+import iconEstateLiquidation from "@/assets/icons/line/estate-liquidation-hero-washington.svg";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 
 import RppArrow from "@/components/RppArrow";

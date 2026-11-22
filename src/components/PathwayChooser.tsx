@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import seniorIcon from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import probateIcon from "@/assets/icons/probate-property-home-icon-washington.webp";
-import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.webp";
+import seniorIcon from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import probateIcon from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import proIcon from "@/assets/icons/line/professional-network-nodes-icon-washington.svg";
 import RppArrow from "@/components/RppArrow";
 
 const pathways = [
@@ -55,12 +55,12 @@ const PathwayChooser = () => {
               <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-gold to-gold-dark" aria-hidden="true" />
               <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5 sm:gap-6 p-6 sm:p-7 pl-7 sm:pl-9">
                 {/* Icon */}
-                <div className="shrink-0 flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-navy to-navy-dark shadow-inner">
+                <div className="shrink-0 flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#faf8f4] border border-[#e7e1d6]">
                   <img
                     src={p.icon}
                     alt=""
                     aria-hidden="true"
-                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
+                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain transition-transform duration-300 group-hover:scale-110"
                     loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                 </div>
 

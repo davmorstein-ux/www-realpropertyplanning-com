@@ -8,12 +8,12 @@ import ImageTile, { ImageTileStyles } from "@/components/ImageTile";
 import { TOPIC_IMAGES, type TopicImage } from "@/data/topicImages";
 import { articleSchema } from "@/lib/schema";
 
-import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
-import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
-import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
-import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
-import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
+import iconHeartHands from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import iconAssisted from "@/assets/icons/line/senior-assisted-living-icon-washington.svg";
+import iconHome from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import iconExecutor from "@/assets/icons/line/probate-executors-services-icon-washington.svg";
+import iconDocument from "@/assets/icons/line/probate-document-icon-washington.svg";
+import iconArrow from "@/assets/icons/line/property-guidance-arrow-icon-washington.svg";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
 import NextQuestions from "@/components/NextQuestions";

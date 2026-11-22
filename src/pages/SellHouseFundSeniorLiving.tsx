@@ -13,7 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
-import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washington.webp";
+import fundSeniorLivingIcon from "@/assets/icons/line/fund-senior-living-icon-washington.svg";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 import NextQuestions from "@/components/NextQuestions";
 import QuickAnswers from "@/components/QuickAnswers";

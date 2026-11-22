@@ -1,6 +1,6 @@
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconChat3d from "@/assets/icons/real-estate-consultation-chat-icon-washington.webp";
-import iconArrowRight3d from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/line/real-estate-phone-contact-icon-washington.svg";
+import iconChat3d from "@/assets/icons/line/real-estate-consultation-chat-icon-washington.svg";
+import iconArrowRight3d from "@/assets/icons/line/property-guidance-arrow-icon-washington.svg";
 
 interface WhatHappensNextProps {
   variant?: "light" | "dark";

@@ -5,7 +5,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "lucide-react";
-import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
+import poaIcon from "@/assets/icons/line/power-of-attorney-icon-washington.svg";
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import QuickAnswers from "@/components/QuickAnswers";

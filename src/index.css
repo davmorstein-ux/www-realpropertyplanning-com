@@ -6870,3 +6870,17 @@ html body #main-content section.rpp-county-hero.rpp-county-hero img[alt*="offici
     bottom: 9px !important;
   }
 }
+
+/* Senior living option tiles (Nov 22, 2026): the generic [class*="tile"] h3
+   rule makes headings a flex row, which laid "Adult Family / Homes" side by
+   side and clipped "Assisted Living Communities". Stack the label lines. */
+html body main .tile-white__face h3.rpp-sl-label.rpp-sl-label {
+  display: block !important;
+  overflow: visible !important;
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+}
+html body main .tile-white__face h3.rpp-sl-label.rpp-sl-label span {
+  font: inherit !important;
+  color: inherit !important;
+}

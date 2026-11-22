@@ -28,7 +28,7 @@ const COUNTY_ORDER = [
 ];
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
-import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
+import heroIcon from "@/assets/icons/line/real-estate-service-areas-map-icon-washington.svg";
 import bentonLogo from "@/assets/counties/benton-county-logo.webp";
 import clarkLogo from "@/assets/counties/clark-county-logo.webp";
 import kingLogo from "@/assets/counties/king-county-logo.webp";
@@ -371,7 +371,7 @@ const CountyPageTemplate = ({
                     src={heroIcon}
                     alt=""
                     aria-hidden="true"
-                    className="block w-full max-w-[15rem] h-auto object-contain"
+                    className="block w-full max-w-[7rem] h-auto object-contain"
                     loading="lazy"
                     sizes="100vw"
                     decoding="async"

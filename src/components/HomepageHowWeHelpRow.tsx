@@ -1,9 +1,9 @@
-import seniorIcon from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import probateIcon from "@/assets/icons/probate-property-home-icon-washington.webp";
-import propertyIcon from "@/assets/icons/real-estate-property-value-icon-washington.webp";
-import careIcon from "@/assets/icons/senior-living-placement-icon-washington.webp";
-import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.webp";
-import familyIcon from "@/assets/icons/real-estate-people-team-icon-washington.webp";
+import seniorIcon from "@/assets/icons/line/senior-care-heart-hands-icon-washington.svg";
+import probateIcon from "@/assets/icons/line/probate-property-home-icon-washington.svg";
+import propertyIcon from "@/assets/icons/line/real-estate-property-value-icon-washington.svg";
+import careIcon from "@/assets/icons/line/senior-living-placement-icon-washington.svg";
+import proIcon from "@/assets/icons/line/professional-network-nodes-icon-washington.svg";
+import familyIcon from "@/assets/icons/line/real-estate-people-team-icon-washington.svg";
 
 const items = [
   { icon: seniorIcon, label: "Helping an aging parent" },
