@@ -82,7 +82,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
   const resultRef = useRef<HTMLDivElement>(null);
   /* Example questions "type themselves" one after another the first time the list scrolls
      into view (Oct 27, 2026, David). null = show them whole: before the page's code runs,
-     with reduced motion, or if the list is already on screen when the page loads. */
+     or with reduced motion. */
   const examplesRef = useRef<HTMLDivElement>(null);
   // Nov 13, 2026: the button is no longer greyed out while the box is empty (on a
   // phone it read as broken). Pressing it with nothing typed moves the cursor into the box.
@@ -95,8 +95,10 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
     const el = examplesRef.current;
     if (!el || typeof window === "undefined" || !("IntersectionObserver" in window)) return;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-    const r = el.getBoundingClientRect();
-    if (r.top < window.innerHeight && r.bottom > 0) return; // already visible: leave whole
+    /* Nov 21, 2026 (David didn't see the typing): it used to skip the animation
+       when the examples were already on screen at load, which is what happens
+       after a refresh partway down the page (the browser restores the scroll)
+       or on a tall screen. Now it always types once, when they are in view. */
     setTyped(0);
     let timer: number | undefined;
     const io = new IntersectionObserver((entries) => {
