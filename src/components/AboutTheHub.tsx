@@ -68,9 +68,9 @@ const AboutTheHub = () => {
         html body main li.rpp-hero-point a.rpp-hero-point-link:hover span.rpp-hero-point-text.rpp-hero-point-text { text-decoration: underline !important; text-decoration-color: #8F1A2B !important; text-underline-offset: 4px; }
         .rpp-abouthub-card.rpp-abouthub-card {
           display: block;
-          background: #f1ede5;
-          box-shadow: 0 0 0 100vmax #f1ede5;
-          clip-path: inset(0 -100vmax);
+          /* Band removed Nov 21, 2026 (David): the strip sits on the page's own
+             ivory; the heading and the two hairlines set it apart. */
+          background: transparent;
           padding: 1.1rem 0;
         }
 
