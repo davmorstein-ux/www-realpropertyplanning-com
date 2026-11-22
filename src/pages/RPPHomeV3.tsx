@@ -84,6 +84,8 @@ import AboutTheHub from "@/components/AboutTheHub";
 import { CARE_CALCULATORS } from "@/lib/careCalculators";
 import RppArrow from "@/components/RppArrow";
 import { setFetchPriority } from "@/lib/imgPriority";
+import sloganCommaDot from "@/assets/home/slogan-comma-dot.webp";
+import sloganCommaDotDark from "@/assets/home/slogan-comma-dot-dark.webp";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
 import calcPhotoCare480 from "@/assets/home/calc-photo-care-480.webp";
 import calcPhotoCare800 from "@/assets/home/calc-photo-care-800.webp";
@@ -656,6 +658,32 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
   html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner.rpp-door-inner { column-gap: clamp(28px, 2.6vw, 40px); }
   html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img.rpp-door-img.rpp-door-img { height: clamp(230px, min(24vw, 39vh), 390px) !important; }
 }
+/* "Life, continued." with David's comma-to-dot mark (Nov 21, 2026). Offsets in em of
+   the headline's font size, from his approved mock-up: Life 1.1686x, continued 1.015x,
+   "L" and "c" share a left edge, the dot sits centred over the top of the dotless i. */
+html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan { position: relative; }
+html body main div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-sr {
+  position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important;
+  clip: rect(0 0 0 0) !important; clip-path: inset(50%) !important; white-space: nowrap !important; margin: -1px !important; padding: 0 !important;
+}
+html body main#main-content div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-l1.rpp-dm-l1 {
+  display: block; font-size: 1.168625em !important; line-height: 1.0 !important; margin-left: -0.031em !important;
+  color: #1c1917 !important; white-space: nowrap;
+}
+html body main#main-content div.rpp-door-hero p.rpp-door-slogan span.rpp-dm-l2.rpp-dm-l2 {
+  display: block; font-size: 1.015em !important; line-height: 1.0 !important; margin-left: -0.04em !important;
+  margin-top: -0.19659em !important; white-space: nowrap;
+}
+html body main div.rpp-door-hero p.rpp-door-slogan img.rpp-dm-mark.rpp-dm-mark {
+  position: absolute !important; left: 2.022578em !important; top: 0.934922em !important;
+  width: 0.17em !important; height: 0.378438em !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
+  pointer-events: none;
+}
+/* While the door opens, a charcoal copy sits on top and fades out in step with "continued." */
+html body main div.rpp-door-hero p.rpp-door-slogan img.rpp-dm-mark-dark.rpp-dm-mark-dark { opacity: 0 !important; filter: none !important; }
+html body main div.rpp-door-hero[data-door="closed"] p.rpp-door-slogan img.rpp-dm-mark-dark.rpp-dm-mark-dark.rpp-dm-mark-dark { opacity: 1 !important; }
+html body main div.rpp-door-hero[data-door="opening"] p.rpp-door-slogan img.rpp-dm-mark-dark.rpp-dm-mark-dark { transition: opacity 950ms ease-in-out 250ms; }
+
 /* The one exception to the homepage's one-font rule (rpp-home-one-font, which
    uses the #main-content id, so the override has to as well). */
 html body main#main-content.rpp-home-one-font div.rpp-door-hero p.rpp-door-slogan,
@@ -878,7 +906,24 @@ const RPPHomeV3 = () => {
                   next", which replaced "Your next chapter" (that one only fitted the
                   senior). Also the T-shirt slogan. "continued." keeps the garnet fade
                   with the door. rpp-door-start is its own line (PRESENTATION_CSS). */}
-              <span className="rpp-door-start">{t("hero.sloganStart")}</span> <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}
+              {t("hero.sloganStart") === "Life," && t("hero.sloganAccent") === "continued." ? (
+                <>
+                  {/* Nov 21, 2026 (David's design): the comma after "Life" flows down and
+                      becomes the dot on the "i" of "continued" (his exact shape, shortened
+                      tail, straightened, black-to-garnet blend). The "i" is a dotless i;
+                      the words are drawn for sighted visitors and the real text below is
+                      what search engines and screen readers get. Sizes and offsets are
+                      in em, measured from his approved mock-up, so it scales at every
+                      width. Styles: .rpp-dm-* in PRESENTATION_CSS. */}
+                  <span className="rpp-dm-sr">Life, continued.</span>
+                  <span className="rpp-dm-l1" aria-hidden="true">Life</span>
+                  <span className="rpp-dm-l2" aria-hidden="true"><span className="rpp-door-accent">cont{"\u0131"}nued.</span></span>
+                  <img className="rpp-dm-mark" src={sloganCommaDot} alt="" aria-hidden="true" width={132} height={294} />
+                  <img className="rpp-dm-mark rpp-dm-mark-dark" src={sloganCommaDotDark} alt="" aria-hidden="true" width={132} height={294} />
+                </>
+              ) : (
+                <><span className="rpp-door-start">{t("hero.sloganStart")}</span> <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}</>
+              )}
             </p>
             <h1 id="rpp-hero-heading" className="rpp-door-line">
               {/* Nov 21, 2026 (David): one plain sentence replaced the lead line and
