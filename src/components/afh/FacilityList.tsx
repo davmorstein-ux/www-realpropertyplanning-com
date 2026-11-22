@@ -66,7 +66,7 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-4"
-          style={{ color: "#1a365d" }}
+          style={{ color: "#0a5648" }}
           aria-label={`DSHS inspection record for ${facility.displayName} (opens in a new tab)`}
         >
           DSHS inspection record

@@ -54,7 +54,7 @@ const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 const FLAG_COLOR: Record<FlagLevel, { fg: string; bg: string; dot: string }> = {
   green: { fg: "#14532d", bg: "#f0fdf4", dot: "#16a34a" },
   yellow: { fg: "#713f12", bg: "#fefce8", dot: "#ca8a04" },
-  red: { fg: "#1B3A6B", bg: "#fef2f2", dot: "#dc2626" },
+  red: { fg: "#0a5648", bg: "#fef2f2", dot: "#dc2626" },
 };
 
 const PAGE_CSS = `
@@ -69,7 +69,7 @@ const PAGE_CSS = `
   .aps-root h2.aps-q { font-size: clamp(21px, 5.6vw, 27px) !important; line-height: 1.3 !important; margin: 22px 0 18px !important; }
   .aps-root h2.aps-score { font-size: clamp(46px, 13vw, 72px) !important; line-height: 1.05 !important; margin: 8px 0 6px !important; }
   .aps-root h2.aps-withheld { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; margin: 10px 0 10px !important; }
-  .aps-panel { background: #fff; border: 1px solid #d3dfe8; border-radius: 16px; padding: 1.6rem 1.4rem; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto 24px; overflow: hidden; }
+  .aps-panel { background: #fff; border: 1px solid #c4ddd5; border-radius: 16px; padding: 1.6rem 1.4rem; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto 24px; overflow: hidden; }
   .aps-panel.aps-banded { padding-top: 0; }
   .aps-band { display: flex; align-items: center; gap: 16px; background: ${PLUM_DARK}; margin: 0 -1.4rem 1.4rem; padding: 18px 1.4rem; }
   .aps-band svg { flex: 0 0 auto; }
@@ -77,7 +77,7 @@ const PAGE_CSS = `
   .aps-root .aps-band p.aps-bandtitle { margin: 0 !important; font-family: ${FONT} !important; font-size: clamp(22px, 3vw, 28px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #fff !important; }
   .aps-scorebox { background: ${TINT}; border-radius: 14px; padding: 18px 16px 14px; margin: 0 0 14px; }
   .aps-panel.aps-wide { max-width: 900px; }
-  .aps-opt { display: block; width: 100%; text-align: left; min-height: 58px; padding: 14px 18px; margin: 0 0 10px; border-radius: 10px; border: 1px solid #c9d7e2; background: #fff; color: ${INK}; font-family: ${FONT}; font-size: 18px !important; font-weight: 600; line-height: 1.35; cursor: pointer; }
+  .aps-opt { display: block; width: 100%; text-align: left; min-height: 58px; padding: 14px 18px; margin: 0 0 10px; border-radius: 10px; border: 1px solid #c4ddd5; background: #fff; color: ${INK}; font-family: ${FONT}; font-size: 18px !important; font-weight: 600; line-height: 1.35; cursor: pointer; }
   /* Hover only where there is a mouse. On a touch screen the last-tapped spot
      keeps its hover state, which made the option under it on the NEXT question
      look pre-selected. */
@@ -89,7 +89,7 @@ const PAGE_CSS = `
   .aps-go { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 26px; border-radius: 10px; border: 2px solid ${PLUM}; background: ${PLUM}; color: #fff !important; font-family: ${FONT}; font-size: 18px !important; font-weight: 700; cursor: pointer; text-decoration: none; }
   .aps-go.aps-ghost { background: #fff; color: ${PLUM_DARK} !important; }
   .aps-go:disabled { opacity: .45; cursor: not-allowed; }
-  .aps-field { width: 100%; min-height: 52px; padding: 10px 12px; border-radius: 8px; border: 1px solid #c9d7e2; font-family: ${FONT}; font-size: 18px; background: #fff; color: ${INK}; box-sizing: border-box; }
+  .aps-field { width: 100%; min-height: 52px; padding: 10px 12px; border-radius: 8px; border: 1px solid #c4ddd5; font-family: ${FONT}; font-size: 18px; background: #fff; color: ${INK}; box-sizing: border-box; }
   .aps-bar { height: 12px; border-radius: 6px; background: #eef1f4; overflow: hidden; }
   .aps-bar > span { display: block; height: 100%; background: ${PLUM}; border-radius: 6px; }
   .aps-row { display: flex; gap: 12px; flex-wrap: wrap; }

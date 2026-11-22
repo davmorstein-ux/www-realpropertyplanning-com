@@ -12,7 +12,7 @@ import { cityGuide, type CityGuideInput, type Seg } from "@/data/afh/cityGuide";
 
 import RppArrow from "@/components/RppArrow";
 const GREEN = "#0a5648";
-const NAVY = "#1B3A6B";
+const NAVY = "#0a5648";
 const linkStyle: React.CSSProperties = { color: NAVY, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 };
 
 const Segs = ({ segs }: { segs: Seg[] }) => (

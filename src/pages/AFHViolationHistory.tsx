@@ -17,7 +17,7 @@ const label = {
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
-  color: "#142c52",
+  color: "#084238",
   margin: "0 0 14px",
 };
 
@@ -25,7 +25,7 @@ const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
-  color: "#142c52",
+  color: "#084238",
   lineHeight: 1.2,
   margin: "0 0 20px",
 };
@@ -153,7 +153,7 @@ const AFHViolationHistory = () => (
             style={{
               background: "#f7f4ef",
               border: "1px solid #dfc9cb",
-              borderLeft: "4px solid #1B3A6B",
+              borderLeft: "4px solid #0a5648",
               borderRadius: 6,
               padding: "24px 28px",
               margin: "24px 0",

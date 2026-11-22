@@ -16,17 +16,17 @@ import RouteFAQ from "@/components/RouteFAQ";
 const ENFORCEMENT_LEVELS = [
   {
     level: "License Conditions",
-    color: "#1B3A6B",
-    bg: "#e8f2f9",
-    border: "#1B3A6B",
+    color: "#0a5648",
+    bg: "#eef5f2",
+    border: "#0a5648",
     description:
       "Requirements the provider must correct within a set timeframe. Used for lower-level or first-time violations. The home may continue operating while corrections are made.",
   },
   {
     level: "Civil Fines",
-    color: "#142c52",
+    color: "#084238",
     bg: "#fdf3e8",
-    border: "#1B3A6B",
+    border: "#0a5648",
     description:
       "Financial penalties, which by law become more severe for violations that are repeated, uncorrected, widespread, or a threat to residents: at least $100 per day per violation, up to $3,000 per incident, and up to $10,000 for a current or former provider operating an unlicensed home (RCW 70.128.160).",
   },
@@ -40,7 +40,7 @@ const ENFORCEMENT_LEVELS = [
   },
   {
     level: "License Suspension or Revocation",
-    color: "#142c52",
+    color: "#084238",
     bg: "#fce8e8",
     border: "#8b0000",
     description:
@@ -166,7 +166,7 @@ const AFHRegulationsCompliance = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -232,7 +232,7 @@ const AFHRegulationsCompliance = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -243,7 +243,7 @@ const AFHRegulationsCompliance = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -303,7 +303,7 @@ const AFHRegulationsCompliance = () => (
                 style={{
                   background: "#fff",
                   border: "1px solid #dccdce",
-                  borderTop: "3px solid #1B3A6B",
+                  borderTop: "3px solid #0a5648",
                   borderRadius: 6,
                   padding: "24px 24px 28px",
                 }}
@@ -313,7 +313,7 @@ const AFHRegulationsCompliance = () => (
                     fontSize: 17,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#142c52",
+                    color: "#084238",
                     margin: "0 0 12px",
                   }}
                 >
@@ -337,9 +337,9 @@ const AFHRegulationsCompliance = () => (
           {/* Important note box */}
           <div
             style={{
-              background: "#e8f2f9",
-              border: "1px solid #1B3A6B",
-              borderLeft: "4px solid #1B3A6B",
+              background: "#eef5f2",
+              border: "1px solid #0a5648",
+              borderLeft: "4px solid #0a5648",
               borderRadius: 6,
               padding: "20px 24px",
             }}
@@ -372,7 +372,7 @@ const AFHRegulationsCompliance = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -383,7 +383,7 @@ const AFHRegulationsCompliance = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -476,7 +476,7 @@ const AFHRegulationsCompliance = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -487,7 +487,7 @@ const AFHRegulationsCompliance = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -506,7 +506,7 @@ const AFHRegulationsCompliance = () => (
           >
             These are the ten rules DSHS cited most often in adult family homes in {CITATIONS_SOURCE.period}, from the
             most recent quarterly list DSHS has published (
-            <a href={CITATIONS_SOURCE.url} target="_blank" rel="noopener noreferrer" style={{ color: "#1B3A6B", textDecoration: "underline" }}>
+            <a href={CITATIONS_SOURCE.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0a5648", textDecoration: "underline" }}>
               DSHS Top AFH Citations
             </a>
             ). Most are record-keeping problems a good system prevents.
@@ -549,7 +549,7 @@ const AFHRegulationsCompliance = () => (
                       fontSize: 18,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
-                      color: "#142c52",
+                      color: "#084238",
                       margin: "0 0 8px",
                     }}
                   >
@@ -573,7 +573,7 @@ const AFHRegulationsCompliance = () => (
                       fontWeight: 600,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color: "#142c52",
+                      color: "#084238",
                     }}
                   >
                     {item.wac} · {item.count} citations
@@ -588,7 +588,7 @@ const AFHRegulationsCompliance = () => (
               marginTop: 32,
               background: "#fff",
               border: "1px solid #dccdce",
-              borderLeft: "4px solid #1B3A6B",
+              borderLeft: "4px solid #0a5648",
               borderRadius: 6,
               padding: "20px 24px",
             }}
@@ -609,7 +609,7 @@ const AFHRegulationsCompliance = () => (
                 href="https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/2024%20Q4%20--%20Top%20AFH%20Citations.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#1B3A6B", textDecoration: "underline" }}
+                style={{ color: "#0a5648", textDecoration: "underline" }}
               >
                 DSHS Q4 2024 Top AFH Citations PDF
               </a>
@@ -628,7 +628,7 @@ const AFHRegulationsCompliance = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -639,7 +639,7 @@ const AFHRegulationsCompliance = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -685,7 +685,7 @@ const AFHRegulationsCompliance = () => (
                     fontSize: 17,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#142c52",
+                    color: "#084238",
                     margin: "0 0 12px",
                   }}
                 >
@@ -713,12 +713,12 @@ const AFHRegulationsCompliance = () => (
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#142c52",
+                    color: "#084238",
                     textDecoration: "none",
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 6,
-                    borderBottom: "1px solid #1B3A6B",
+                    borderBottom: "1px solid #0a5648",
                     paddingBottom: 2,
                     width: "fit-content",
                   }}
@@ -733,9 +733,9 @@ const AFHRegulationsCompliance = () => (
           <div
             style={{
               marginTop: 32,
-              background: "#e8f2f9",
-              border: "1px solid #1B3A6B",
-              borderLeft: "4px solid #1B3A6B",
+              background: "#eef5f2",
+              border: "1px solid #0a5648",
+              borderLeft: "4px solid #0a5648",
               borderRadius: 6,
               padding: "20px 24px",
             }}
@@ -768,7 +768,7 @@ const AFHRegulationsCompliance = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -779,7 +779,7 @@ const AFHRegulationsCompliance = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -824,7 +824,7 @@ const AFHRegulationsCompliance = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#1B3A6B",
+                    background: "#0a5648",
                     marginTop: 9,
                   }}
                 />
@@ -834,7 +834,7 @@ const AFHRegulationsCompliance = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
-                      color: "#142c52",
+                      color: "#084238",
                       margin: "0 0 4px",
                       lineHeight: 1.5,
                     }}

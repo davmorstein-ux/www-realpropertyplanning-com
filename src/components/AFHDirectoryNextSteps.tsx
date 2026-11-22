@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { directoryNextSteps } from "@/data/afh/nextSteps";
 
 const GREEN = "#0a5648";
-const NAVY = "#1B3A6B";
+const NAVY = "#0a5648";
 
 export default function AFHDirectoryNextSteps({ city, style }: { city?: string; style?: React.CSSProperties }) {
   const groups = directoryNextSteps(city);

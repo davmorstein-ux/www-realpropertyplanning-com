@@ -26,7 +26,7 @@ a.rpp-backlink.rpp-backlink {
   font-size: 19px !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
-  color: #1B3A6B !important;
+  color: var(--rpp-accent, #1B3A6B) !important;
   text-decoration: none !important;
   background: transparent !important;
   border: 0 !important;
@@ -54,7 +54,7 @@ a.rpp-backlink span.rpp-backlink-text.rpp-backlink-text {
 @media (hover: hover) {
   a.rpp-backlink:hover span.rpp-backlink-disc { background: ${GREEN}; color: #ffffff; transform: translateX(-2px); }
 }
-a.rpp-backlink.rpp-backlink:focus-visible { outline: 3px solid #1B3A6B; outline-offset: 3px; border-radius: 8px; }
+a.rpp-backlink.rpp-backlink:focus-visible { outline: 3px solid var(--rpp-accent, #1B3A6B); outline-offset: 3px; border-radius: 8px; }
 `;
 
 type Props = { to: string; label: string; center?: boolean; className?: string; style?: React.CSSProperties };

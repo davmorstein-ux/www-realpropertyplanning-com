@@ -12,6 +12,10 @@
          to the same path on the bare host if that redirect is ever missing.
          Runs before anything else so no analytics hit is recorded on www. -->
     <script>
+      /* AFH Club is its own section in hunter green (Nov 22, 2026): mark the
+         page before first paint so no garnet flashes. ScrollToTop keeps the
+         class in step as visitors move between sections. */
+      if (location.pathname.indexOf("/afh-club") === 0 || location.pathname.indexOf("/afh-submit") === 0) document.documentElement.classList.add("rpp-afh");
       if (location.hostname === "www.realpropertyplanning.com") {
         location.replace("https://realpropertyplanning.com" + location.pathname + location.search + location.hash);
       }

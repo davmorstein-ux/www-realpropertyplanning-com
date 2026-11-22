@@ -125,7 +125,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -171,7 +171,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -182,7 +182,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -218,7 +218,7 @@ const AFHLicensingCertification = () => (
             style={{
               background: "#fff",
               border: "1px solid #dccdce",
-              borderTop: "3px solid #1B3A6B",
+              borderTop: "3px solid #0a5648",
               borderRadius: 6,
               padding: "24px",
             }}
@@ -228,7 +228,7 @@ const AFHLicensingCertification = () => (
                 fontSize: 17,
                 fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
-                color: "#142c52",
+                color: "#084238",
                 margin: "0 0 16px",
               }}
             >
@@ -253,7 +253,7 @@ const AFHLicensingCertification = () => (
                     width: 7,
                     height: 7,
                     borderRadius: "50%",
-                    background: "#1B3A6B",
+                    background: "#0a5648",
                     marginTop: 8,
                   }}
                 />
@@ -296,7 +296,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -307,7 +307,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -364,7 +364,7 @@ const AFHLicensingCertification = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
-                      color: "#142c52",
+                      color: "#084238",
                       margin: "0 0 6px",
                     }}
                   >
@@ -398,7 +398,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -409,7 +409,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -479,7 +479,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -490,7 +490,7 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -549,9 +549,9 @@ const AFHLicensingCertification = () => (
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               textDecoration: "none",
-              borderBottom: "1px solid #1B3A6B",
+              borderBottom: "1px solid #0a5648",
               paddingBottom: 2,
             }}
           >
@@ -564,11 +564,11 @@ const AFHLicensingCertification = () => (
       <section style={{ background: "#f7f4ef", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
-            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: "0 0 8px" }}
+            style={{ fontSize: 22, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#084238", margin: "0 0 8px" }}
           >
             Key DSHS Resources
           </h2>
-          <div style={{ width: 36, height: 2, background: "#1B3A6B", marginBottom: 24, borderRadius: 1 }} />
+          <div style={{ width: 36, height: 2, background: "#0a5648", marginBottom: 24, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               { label: "DSHS Online License Application", url: "https://baau.dshs.wa.gov/" },
@@ -603,7 +603,7 @@ const AFHLicensingCertification = () => (
                   fontSize: 17,
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
-                  color: "#1B3A6B",
+                  color: "#0a5648",
                   textDecoration: "underline",
                 }}
               >

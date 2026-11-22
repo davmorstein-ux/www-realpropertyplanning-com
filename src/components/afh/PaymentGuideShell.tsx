@@ -22,7 +22,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 export const TEAL = "#0f766e";
 export const TEAL_DARK = "#0b5b55";
-export const NAVY = "#1B3A6B";
+export const NAVY = "#0a5648";
 export const INK = "#141210";
 const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
 

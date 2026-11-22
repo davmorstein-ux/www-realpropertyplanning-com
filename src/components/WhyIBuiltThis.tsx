@@ -37,7 +37,7 @@ interface Props {
   style?: CSSProperties;
 }
 
-const WhyIBuiltThis = ({ note, accent = "#1B3A6B", style }: Props) => (
+const WhyIBuiltThis = ({ note, accent = "var(--rpp-accent, #1B3A6B)", style }: Props) => (
   <section className="rpp-why" aria-label={WHY_HEADING} style={{ borderLeft: `5px solid ${accent}`, ...style }}>
     <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <img className="rpp-why-photo" src={FOUNDER_PHOTO} alt={FOUNDER_PHOTO_ALT} width={72} height={72} loading="lazy" />

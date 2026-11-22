@@ -106,7 +106,7 @@ const AFHDscrLoans = () => {
               {[
                 { label: "On gross income", value: c.grossRatio, tone: "#7a4a00", bg: "#fef3c7" },
                 { label: "On net operating income", value: c.noiRatio, tone: TEAL_DARK, bg: "#e6f2f0" },
-                { label: "After the owner's pay", value: c.afterOwnerRatio, tone: NAVY, bg: "#e8eef7" },
+                { label: "After the owner's pay", value: c.afterOwnerRatio, tone: NAVY, bg: "#eef5f2" },
               ].map((r) => (
                 <div key={r.label} style={{ background: r.bg, borderRadius: 12, padding: "16px 14px", textAlign: "center", fontFamily: FONT }}>
                   <div style={{ fontSize: 40, fontWeight: 700, color: r.tone, lineHeight: 1.1 }}>{x(r.value)}</div>

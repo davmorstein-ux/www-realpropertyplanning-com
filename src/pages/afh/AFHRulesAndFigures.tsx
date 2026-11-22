@@ -145,7 +145,7 @@ const CSS = `
 .afhp tr:last-child td { border-bottom: 0; }
 .afhp td.afhp-topic { font-weight: 700; width: 24%; min-width: 130px; }
 .afhp td.afhp-src { white-space: nowrap; font-size: 15px; }
-.afhp a.afhp-link, .afhp td a, .afhp .afhp-small a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
+.afhp a.afhp-link, .afhp td a, .afhp .afhp-small a { color: #0a5648 !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhp .afhp-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
 .afhp .afhp-jump a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #b9cdc3; color: #0a5648 !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; font-weight: 600; text-decoration: none !important; }
 .afhp .afhp-jump a:hover, .afhp .afhp-jump a:focus-visible { background: #0a5648; color: #ffffff !important; }
@@ -156,7 +156,7 @@ const CSS = `
 .afhp ol.afhp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; }
 .afhp ol.afhp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #1c1917; }
 .afhp ol.afhp-steps li::marker { color: #0a5648; font-weight: 700; }
-.afhp ol.afhp-steps a { display: inline; color: #1B3A6B !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
+.afhp ol.afhp-steps a { display: inline; color: #0a5648 !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhp ol.afhp-steps span { display: block; font-size: 16px !important; line-height: 1.45; margin-top: 2px; }
 .afhp .afhp-qa { display: grid; gap: 34px; }
 .afhp .afhp-more { font-size: 16px !important; margin-top: 4px !important; }
@@ -170,7 +170,7 @@ const CSS = `
 .afhp ul.afhp-recent li span { color: #1c1917; font-size: 15px; }
 .afhp .afhp-small { font-size: 15px !important; color: #1c1917 !important; }
 .afhp .afhp-trail { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #1c1917; margin: 0 0 14px; }
-.afhp .afhp-trail a { color: #1B3A6B !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
+.afhp .afhp-trail a { color: #0a5648 !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhp details.afhp-fold { background: #ffffff; border: 1px solid #d5ddd9; border-radius: 12px; scroll-margin-top: 180px; }
 .afhp details.afhp-fold + details.afhp-fold { margin-top: 10px; }
 .afhp details.afhp-fold > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 18px; position: relative; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 19px; font-weight: 700; color: #192A19; }

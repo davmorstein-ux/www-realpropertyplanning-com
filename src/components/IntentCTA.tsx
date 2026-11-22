@@ -44,7 +44,7 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
     <section
       aria-label={heading}
       style={{
-        background: dark ? "#1B3A6B" : "#faf8f4",
+        background: dark ? "var(--rpp-accent, #1B3A6B)" : "#faf8f4",
         borderTop: dark ? "none" : "1px solid #e6e0d6",
         padding: "2.5rem 1.5rem",
       }}
@@ -71,8 +71,8 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
             display: "inline-block",
             padding: "14px 30px",
             borderRadius: 10, /* matches the flat navy buttons sitewide */
-            background: dark ? "#fff" : "#1B3A6B",
-            color: dark ? "#1B3A6B" : "#fff",
+            background: dark ? "#fff" : "var(--rpp-accent, #1B3A6B)",
+            color: dark ? "var(--rpp-accent, #1B3A6B)" : "#fff",
             fontWeight: 700,
             fontSize: 17,
             textDecoration: "none",

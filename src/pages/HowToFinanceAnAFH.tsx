@@ -24,7 +24,7 @@ import { revealById } from "@/lib/revealScroll";
 
 const TEAL = "#0f766e";
 const TEAL_DARK = "#0b5b55";
-const NAVY = "#1B3A6B";
+const NAVY = "#0a5648";
 const INK = "#141210";
 
 const fmtDate = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });

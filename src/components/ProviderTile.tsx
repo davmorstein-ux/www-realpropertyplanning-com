@@ -157,7 +157,7 @@ export default function ProviderTile({
             {/* Modal header */}
             <div
               style={{
-                background: "#142c52",
+                background: "var(--rpp-accent-dark, #142c52)",
                 padding: "20px 24px",
                 borderRadius: "8px 8px 0 0",
                 display: "flex",
@@ -291,7 +291,7 @@ export default function ProviderTile({
                   style={{
                     padding: "12px 14px",
                     background: "#f7f4ef",
-                    borderLeft: "3px solid #1B3A6B",
+                    borderLeft: "3px solid var(--rpp-accent, #1B3A6B)",
                     borderRadius: "0 4px 4px 0",
                   }}
                 >
@@ -302,7 +302,7 @@ export default function ProviderTile({
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "#1B3A6B",
+                      color: "var(--rpp-accent, #1B3A6B)",
                       marginBottom: 5,
                     }}
                   >
@@ -391,7 +391,7 @@ export default function ProviderTile({
                     sizes="100vw"
                     decoding="async"
                   />
-                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, fontWeight: 700, color: "#142c52" }}>
+                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, fontWeight: 700, color: "var(--rpp-accent-dark, #142c52)" }}>
                     {name}
                   </div>
                   <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 16, color: "#1c1917" }}>{title}</div>
@@ -415,7 +415,7 @@ export default function ProviderTile({
                     sizes="100vw"
                     decoding="async"
                   />
-                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, fontWeight: 700, color: "#142c52" }}>
+                  <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 17, fontWeight: 700, color: "var(--rpp-accent-dark, #142c52)" }}>
                     {name2}
                   </div>
                   <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 16, color: "#1c1917" }}>{title2}</div>
@@ -469,7 +469,7 @@ export default function ProviderTile({
                 width: "100%",
               }}
             >
-              <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 18, fontWeight: 700, color: "#142c52" }}>
+              <div style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontSize: 18, fontWeight: 700, color: "var(--rpp-accent-dark, #142c52)" }}>
                 {name}
               </div>
               {name2 && (
@@ -478,7 +478,7 @@ export default function ProviderTile({
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontSize: 18,
                     fontWeight: 700,
-                    color: "#142c52",
+                    color: "var(--rpp-accent-dark, #142c52)",
                     marginBottom: 4,
                   }}
                 >
@@ -516,7 +516,7 @@ export default function ProviderTile({
               fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
               fontSize: 17,
               fontWeight: 700,
-              color: "#142c52",
+              color: "var(--rpp-accent-dark, #142c52)",
             }}
           >
             {company}
@@ -570,7 +570,7 @@ export default function ProviderTile({
               e.stopPropagation();
               trackProviderClick({ provider: name, company, kind: "phone" });
             }}
-            style={{ fontSize: 17, color: "#1B3A6B", textDecoration: "none", fontWeight: 600 }}
+            style={{ fontSize: 17, color: "var(--rpp-accent, #1B3A6B)", textDecoration: "none", fontWeight: 600 }}
           >
             {phone}
           </a>
@@ -583,7 +583,7 @@ export default function ProviderTile({
               e.stopPropagation();
               trackProviderClick({ provider: name2 || name, company, kind: "phone" });
             }}
-            style={{ fontSize: 17, color: "#1B3A6B", textDecoration: "none", fontWeight: 600 }}
+            style={{ fontSize: 17, color: "var(--rpp-accent, #1B3A6B)", textDecoration: "none", fontWeight: 600 }}
           >
             {phone2}
           </a>
@@ -596,7 +596,7 @@ export default function ProviderTile({
               e.stopPropagation();
               trackProviderClick({ provider: name, company, kind: "email" });
             }}
-            style={{ fontSize: 17, color: "#1B3A6B", textDecoration: "none", overflowWrap: "anywhere", maxWidth: "100%" }}
+            style={{ fontSize: 17, color: "var(--rpp-accent, #1B3A6B)", textDecoration: "none", overflowWrap: "anywhere", maxWidth: "100%" }}
           >
             {email}
           </a>
@@ -609,7 +609,7 @@ export default function ProviderTile({
               e.stopPropagation();
               trackProviderClick({ provider: name2 || name, company, kind: "email" });
             }}
-            style={{ fontSize: 17, color: "#1B3A6B", textDecoration: "none", overflowWrap: "anywhere", maxWidth: "100%" }}
+            style={{ fontSize: 17, color: "var(--rpp-accent, #1B3A6B)", textDecoration: "none", overflowWrap: "anywhere", maxWidth: "100%" }}
           >
             {email2}
           </a>
@@ -626,7 +626,7 @@ export default function ProviderTile({
             e.stopPropagation();
             trackProviderClick({ provider: name, company, kind: "website" });
           }}
-          style={{ fontSize: 17, color: "#1B3A6B", textDecoration: "none" }}
+          style={{ fontSize: 17, color: "var(--rpp-accent, #1B3A6B)", textDecoration: "none" }}
         >
           {website.replace(/^https?:\/\//, "")}
         </a>

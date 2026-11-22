@@ -245,7 +245,7 @@ export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#142c52",
+            color: "var(--rpp-accent-dark, #142c52)",
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
@@ -253,16 +253,16 @@ export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
-            el.style.background = "#1B3A6B";
+            el.style.background = "var(--rpp-accent, #1B3A6B)";
             el.style.color = "#fff";
-            el.style.borderColor = "#1B3A6B";
+            el.style.borderColor = "var(--rpp-accent, #1B3A6B)";
             el.style.transform = "scale(1.1)";
             el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
             el.style.background = "#fff";
-            el.style.color = "#142c52";
+            el.style.color = "var(--rpp-accent-dark, #142c52)";
             el.style.borderColor = "#b9c6dc";
             el.style.transform = "scale(1)";
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
@@ -282,7 +282,7 @@ export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
             fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
             fontSize: 16,
             fontWeight: 700,
-            color: "#142c52",
+            color: "var(--rpp-accent-dark, #142c52)",
             minWidth: 72,
             textAlign: "center",
           }}
@@ -314,7 +314,7 @@ export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
                 <span
                   style={{
                     display: "block",
-                    background: isActive ? "#1B3A6B" : "#d2b2b4",
+                    background: isActive ? "var(--rpp-accent, #1B3A6B)" : "var(--rpp-accent-soft, #d2b2b4)",
                     borderRadius: 2,
                     width: isActive ? 24 : 8,
                     height: 4,
@@ -340,7 +340,7 @@ export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#142c52",
+            color: "var(--rpp-accent-dark, #142c52)",
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
@@ -348,16 +348,16 @@ export default function AFHCarousel({ categories, aspect }: AFHCarouselProps) {
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
-            el.style.background = "#1B3A6B";
+            el.style.background = "var(--rpp-accent, #1B3A6B)";
             el.style.color = "#fff";
-            el.style.borderColor = "#1B3A6B";
+            el.style.borderColor = "var(--rpp-accent, #1B3A6B)";
             el.style.transform = "scale(1.1)";
             el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
             el.style.background = "#fff";
-            el.style.color = "#142c52";
+            el.style.color = "var(--rpp-accent-dark, #142c52)";
             el.style.borderColor = "#b9c6dc";
             el.style.transform = "scale(1)";
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";

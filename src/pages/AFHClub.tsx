@@ -33,7 +33,7 @@ import RouteFAQ from "@/components/RouteFAQ";
  *
  * 2. DARK TEXT ON THE TEAL BAND
  *      body p:not(nav *)...   { color: #1c1917 !important }
- *      body h2, body h3, body h4 { color: #1B3A6B !important }
+ *      body h2, body h3, body h4 { color: #0a5648 !important }
  *    The section sets color: #ffffff, but that reaches children only by
  *    inheritance, and inheritance loses to any rule targeting the element
  *    directly. Hence brown paragraphs and a near-black heading on teal.
@@ -135,7 +135,7 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
     font-weight: 700 !important;
     letter-spacing: 0.22em !important;
     text-transform: uppercase !important;
-    color: #142c52 !important;
+    color: #084238 !important;
   }
   .rpp-afh-kicker.rpp-afh-kicker {
     font-size: 15px !important;
@@ -213,12 +213,12 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
      above — the solid one would become white on white. */
   .rpp-afh-marketplace .rpp-afh-btn-solid,
   .rpp-afh-marketplace .rpp-afh-btn-solid span {
-    color: #1B3A6B !important;
+    color: #0a5648 !important;
   }
   /* White on the dark band (flat navy buttons, Oct 2026). The class holds
      "btn", so the global button rule would paint it navy into the band. */
   html body .rpp-afh-marketplace a.rpp-afh-btn-solid.rpp-afh-btn-solid,
-  html body .rpp-afh-marketplace a.rpp-afh-btn-solid.rpp-afh-btn-solid span { background-color: #ffffff !important; color: #1B3A6B !important; box-shadow: none !important; }
+  html body .rpp-afh-marketplace a.rpp-afh-btn-solid.rpp-afh-btn-solid span { background-color: #ffffff !important; color: #0a5648 !important; box-shadow: none !important; }
   html body .rpp-afh-marketplace a.rpp-afh-btn-outline.rpp-afh-btn-outline { background-color: transparent !important; border: 2px solid #ffffff !important; }
   .rpp-afh-marketplace .rpp-afh-btn-outline,
   .rpp-afh-marketplace .rpp-afh-btn-outline span {
@@ -230,7 +230,7 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
   .rpp-afh-paths h2,
   .rpp-afh-paths h3,
   .rpp-afh-network h2,
-  .rpp-afh-network h3 { color: #142c52 !important; }
+  .rpp-afh-network h3 { color: #084238 !important; }
   .rpp-afh-paths p,
   .rpp-afh-network p { color: #1c1917 !important; }
   .rpp-afh-paths li,
@@ -628,12 +628,12 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
     transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
   }
   .rpp-afh-dest-card:hover {
-    border-color: #1B3A6B;
+    border-color: #0a5648;
     box-shadow: 0 6px 18px rgba(39, 36, 33, 0.13);
     transform: translateY(-2px);
   }
   .rpp-afh-dest-card:focus-visible {
-    outline: 3px solid #1B3A6B;
+    outline: 3px solid #0a5648;
     outline-offset: 3px;
   }
   /* The destination images are portrait posters with text in them, so they
@@ -653,7 +653,7 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
     font-size: 21px !important;
     font-weight: 700 !important;
     line-height: 1.3 !important;
-    color: #142c52 !important;
+    color: #084238 !important;
     margin: 0 0 8px !important;
   }
   .rpp-afh-dest-card p {
@@ -851,7 +851,7 @@ const AFHClub = () => {
           <div style={{ maxWidth: 1180, margin: "0 auto" }}>
             {/* Gaps in this block are set in PAGE_CSS (LEAD BLOCK SPACING): a sitewide
                 !important rule overrides inline margins on every p and heading. */}
-            <p className="rpp-afh-kicker rpp-afh-kicker-lead" style={{ color: "#1B3A6B", marginBottom: 26 }}>
+            <p className="rpp-afh-kicker rpp-afh-kicker-lead" style={{ color: "#0a5648", marginBottom: 26 }}>
               Buying, selling, and leasing in Washington State
             </p>
             <h2
@@ -875,11 +875,11 @@ const AFHClub = () => {
                 to financing. */}
             <div className="rpp-afh-lane-grid">
               {[
-                { title: "Selling", line: "Sell the home, the business, or both", to: "/afh-club/washington-adult-family-home-guide/selling", c: "#9b1c1c" },
-                { title: "Retiring", line: "Step back without selling", to: "/afh-club/selling-your-business-at-retirement", c: "#b07a06" },
-                { title: "Leasing", line: "Lease your house to an operator", to: "/afh-club/leasing-a-house-to-an-afh-operator", c: "#0b7a75" },
-                { title: "Investing", line: "Find homes before they list", to: "/afh-club/listings", c: "#3f7a12" },
-                { title: "Buying", line: "Buy your first home", to: "/afh-club/washington-adult-family-home-guide/buying", c: "#1553b8" },
+                { title: "Selling", line: "Sell the home, the business, or both", to: "/afh-club/washington-adult-family-home-guide/selling", c: "#0a5648" },
+                { title: "Retiring", line: "Step back without selling", to: "/afh-club/selling-your-business-at-retirement", c: "#0a5648" },
+                { title: "Leasing", line: "Lease your house to an operator", to: "/afh-club/leasing-a-house-to-an-afh-operator", c: "#0a5648" },
+                { title: "Investing", line: "Find homes before they list", to: "/afh-club/listings", c: "#0a5648" },
+                { title: "Buying", line: "Buy your first home", to: "/afh-club/washington-adult-family-home-guide/buying", c: "#0a5648" },
                 { title: "Managing", line: "Hire a management company", to: "/afh-club/hiring-an-afh-management-company", c: "#6a2aa6" },
               ].map((lane) => (
                 <Link key={lane.title} to={lane.to} className="rpp-afh-lane-tile" aria-label={`${lane.title}: ${lane.line}`} style={{ ["--lane-c" as string]: lane.c }}>
@@ -934,11 +934,11 @@ const AFHClub = () => {
             style={{ maxWidth: 1000, margin: "28px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", fontSize: 19, lineHeight: 1.7, color: "#1c1917" }}
           >
             <strong>{t("afhClubPage.startHere.lead")}</strong> {t("afhClubPage.startHere.start")}{" "}
-            <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+            <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#0a5648", textDecoration: "underline", textUnderlineOffset: 3 }}>
               {t("afhClubPage.startHere.guide")}
             </Link>{" "}
             {t("afhClubPage.startHere.and")}{" "}
-            <Link to="/afh-club/glossary" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+            <Link to="/afh-club/glossary" style={{ color: "#0a5648", textDecoration: "underline", textUnderlineOffset: 3 }}>
               {t("afhClubPage.startHere.glossary")}
             </Link>
           </p>
@@ -958,7 +958,7 @@ const AFHClub = () => {
            ================================================================== */}
         <section className="rpp-afh-network" style={{ background: "#ffffff", padding: "64px 24px 72px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p className="rpp-afh-kicker" style={{ color: "#1B3A6B", marginBottom: 14, textAlign: "center" }}>
+            <p className="rpp-afh-kicker" style={{ color: "#0a5648", marginBottom: 14, textAlign: "center" }}>
               Professionals in the directory
             </p>
             <h2
@@ -1038,7 +1038,7 @@ const AFHClub = () => {
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontSize: 30,
                       fontWeight: 700,
-                      color: "#1B3A6B",
+                      color: "#0a5648",
                       lineHeight: 1,
                       width: 54,
                       paddingTop: 4,
@@ -1095,9 +1095,9 @@ const AFHClub = () => {
                   gap: 10,
                   minHeight: 50,
                   padding: "12px 24px",
-                  border: "2px solid #1B3A6B",
+                  border: "2px solid #0a5648",
                   borderRadius: 10,
-                  background: "#1B3A6B",
+                  background: "#0a5648",
                   color: "#fff",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                   fontSize: 18,
@@ -1120,7 +1120,7 @@ const AFHClub = () => {
                 marginTop: 40,
                 background: "#f7f4ef",
                 border: "1px solid #dfc9cb",
-                borderLeft: "4px solid #142c52",
+                borderLeft: "4px solid #084238",
                 borderRadius: 4,
                 padding: "26px 28px",
               }}
@@ -1149,7 +1149,7 @@ const AFHClub = () => {
 
         <section style={{ background: "#fff", padding: "48px 24px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
-            <p className="rpp-afh-kicker" style={{ color: "#1B3A6B", marginBottom: 12 }}>
+            <p className="rpp-afh-kicker" style={{ color: "#0a5648", marginBottom: 12 }}>
               {t("afhClubPage.marketplace.eyebrow")}
             </p>
             <h2
@@ -1180,7 +1180,7 @@ const AFHClub = () => {
                 to="/afh-club/listings"
                 style={{
                   display: "inline-block",
-                  background: "#1B3A6B",
+                  background: "#0a5648",
                   color: "#fff",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 700,
@@ -1198,7 +1198,7 @@ const AFHClub = () => {
                 style={{
                   display: "inline-block",
                   background: "transparent",
-                  color: "#1B3A6B",
+                  color: "#0a5648",
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
@@ -1206,7 +1206,7 @@ const AFHClub = () => {
                   padding: "14px 32px",
                   borderRadius: 3,
                   textDecoration: "none",
-                  border: "2px solid #1B3A6B",
+                  border: "2px solid #0a5648",
                 }}
               >
                 {t("afhClubPage.marketplace.submitListing")}
@@ -1273,7 +1273,7 @@ const AFHClub = () => {
               fontSize: "clamp(28px, 3vw, 38px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               marginBottom: 48,
             }}
           >
@@ -1328,7 +1328,7 @@ const AFHClub = () => {
                     style={{
                       fontSize: "clamp(20px, 2vw, 24px)",
                       fontWeight: 700,
-                      color: "#142c52",
+                      color: "#084238",
                       margin: "0 0 8px",
                       lineHeight: 1.3,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
@@ -1350,7 +1350,7 @@ const AFHClub = () => {
                   </p>
                   <span
                     className="rpp-afh-kicker"
-                    style={{ color: "#142c52", display: "inline-flex", alignItems: "center", gap: 5 }}
+                    style={{ color: "#084238", display: "inline-flex", alignItems: "center", gap: 5 }}
                   >
                     {t("afhClubPage.exploreLabel")}
                     <RppArrow />
@@ -1372,7 +1372,7 @@ const AFHClub = () => {
                 fontSize: "clamp(30px, 3.5vw, 42px)",
                 fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                 fontWeight: 700,
-                color: "#142c52",
+                color: "#084238",
                 lineHeight: 1.2,
                 margin: "0 0 20px",
               }}

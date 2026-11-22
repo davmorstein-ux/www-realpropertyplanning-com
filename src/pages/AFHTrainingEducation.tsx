@@ -125,7 +125,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -174,7 +174,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -185,7 +185,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -227,7 +227,7 @@ const AFHTrainingEducation = () => (
                   }}
                 >
                   <h3
-                    style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52", margin: 0 }}
+                    style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#084238", margin: 0 }}
                   >
                     {item.title}
                   </h3>
@@ -282,7 +282,7 @@ const AFHTrainingEducation = () => (
                     fontWeight: 600,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#142c52",
+                    color: "#084238",
                     margin: 0,
                   }}
                 >
@@ -304,7 +304,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -315,7 +315,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -367,9 +367,9 @@ const AFHTrainingEducation = () => (
           </p>
           <div
             style={{
-              background: "#e8f2f9",
-              border: "1px solid #1B3A6B",
-              borderLeft: "4px solid #1B3A6B",
+              background: "#eef5f2",
+              border: "1px solid #0a5648",
+              borderLeft: "4px solid #0a5648",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -402,7 +402,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -413,7 +413,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -443,7 +443,7 @@ const AFHTrainingEducation = () => (
                 style={{
                   background: "#fff",
                   border: "1px solid #dccdce",
-                  borderLeft: "4px solid #1B3A6B",
+                  borderLeft: "4px solid #0a5648",
                   borderRadius: 6,
                   padding: "18px 22px",
                   display: "flex",
@@ -457,7 +457,7 @@ const AFHTrainingEducation = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#1B3A6B",
+                    background: "#0a5648",
                     marginTop: 7,
                   }}
                 />
@@ -467,7 +467,7 @@ const AFHTrainingEducation = () => (
                       fontSize: 18,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                       fontWeight: 700,
-                      color: "#142c52",
+                      color: "#084238",
                       margin: "0 0 4px",
                     }}
                   >
@@ -500,9 +500,9 @@ const AFHTrainingEducation = () => (
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               textDecoration: "none",
-              borderBottom: "1px solid #1B3A6B",
+              borderBottom: "1px solid #0a5648",
               paddingBottom: 2,
             }}
           >
@@ -521,7 +521,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -532,7 +532,7 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -607,7 +607,7 @@ const AFHTrainingEducation = () => (
                   fontSize: 17,
                   fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif",
                   fontWeight: 600,
-                  color: "#1B3A6B",
+                  color: "#0a5648",
                   textDecoration: "underline",
                 }}
               >

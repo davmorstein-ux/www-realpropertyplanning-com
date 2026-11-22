@@ -7,7 +7,7 @@ import type { Lender } from "@/data/afhLenders";
  * confirmed" label until David has spoken with the lender.
  */
 
-const NAVY = "#1B3A6B";
+const NAVY = "#0a5648";
 const INK = "#141210";
 
 export const fmtLenderDate = (iso: string) =>

@@ -221,11 +221,11 @@ const AFHResources = () => (
             style={{ fontSize: 18, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", lineHeight: 1.7, margin: "16px 0 0" }}
           >
             <strong>New here?</strong> Start with{" "}
-            <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+            <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#0a5648", textDecoration: "underline", textUnderlineOffset: 3 }}>
               Washington State Adult Family Homes: The Complete Guide
             </Link>
             , and keep the{" "}
-            <Link to="/afh-club/glossary" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+            <Link to="/afh-club/glossary" style={{ color: "#0a5648", textDecoration: "underline", textUnderlineOffset: 3 }}>
               AFH Glossary
             </Link>{" "}
             open for the acronyms.
@@ -260,7 +260,7 @@ const AFHResources = () => (
             title: "What Is an Adult Family Home?",
             href: "/senior-living/what-is-an-adult-family-home",
             img: "/afh-what-is-an-afh-cover.webp",
-            placeholder: "#1f3350",
+            placeholder: "#084238",
           },
           {
             title: "Licensing & Certification",
@@ -320,7 +320,7 @@ const AFHResources = () => (
             title: "Can You Get a DSCR Loan for an AFH?",
             href: "/afh-club/dscr-loans-adult-family-homes",
             img: "/afh-dscr-loans-cover-v2.webp",
-            placeholder: "#1b2a4a",
+            placeholder: "#084238",
           },
           {
             title: "Hiring a Management Company",
@@ -332,19 +332,19 @@ const AFHResources = () => (
             title: "Do AFHs Pay Taxes?",
             href: "/afh-club/do-adult-family-homes-pay-taxes",
             img: "/afh-taxes-cover.webp",
-            placeholder: "#1b2a4a",
+            placeholder: "#084238",
           },
           {
             title: "Leasing to an AFH Operator",
             href: "/afh-club/leasing-a-house-to-an-afh-operator",
             img: "/afh-leasing-cover.webp",
-            placeholder: "#1b2a4a",
+            placeholder: "#084238",
           },
           {
             title: "Getting Paid",
             href: "/afh-club/getting-paid-providerone-billing",
             img: "/afh-getting-paid-cover.webp",
-            placeholder: "#1b2a4a",
+            placeholder: "#084238",
           },
           {
             title: "Which Tier? The AFH Payment Field Guide",
@@ -386,7 +386,7 @@ const AFHResources = () => (
             title: "Washington AFHs by the Numbers",
             href: "/afh-club/washington-afh-data",
             img: "/afh-washington-data-cover.webp",
-            placeholder: "#0a2a4d",
+            placeholder: "#084238",
           },
           {
             title: "Find a Professional",
@@ -410,7 +410,7 @@ const AFHResources = () => (
             fontSize: "clamp(24px, 3.5vw, 36px)",
             fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
             fontWeight: 700,
-            color: "#142c52",
+            color: "#084238",
             lineHeight: 1.2,
             margin: "0 0 16px",
           }}
@@ -459,7 +459,7 @@ const AFHResources = () => (
                     fontSize: 20,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#142c52",
+                    color: "#084238",
                     margin: "0 0 8px",
                   }}
                 >

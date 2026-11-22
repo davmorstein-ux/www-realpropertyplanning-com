@@ -126,7 +126,7 @@ export const IMAGE_TILE_CSS = `
 .marquee-hover.rpp-itile::before { display: none !important; }
 `;
 
-export default function ImageTile({ to, title, description, img, w, h, color = "#1B3A6B" }: Props) {
+export default function ImageTile({ to, title, description, img, w, h, color = "var(--rpp-accent, #1B3A6B)" }: Props) {
   return (
     <Link
       to={to}

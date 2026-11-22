@@ -6,6 +6,13 @@ const ScrollToTop = () => {
   const { pathname, search, hash } = useLocation();
   const navigate = useNavigate();
 
+  /* AFH Club pages carry html.rpp-afh, which turns garnet and navy accents
+     hunter green (src/styles/afh-green.css). Nov 22, 2026. */
+  useEffect(() => {
+    const afh = pathname.startsWith("/afh-club") || pathname.startsWith("/afh-submit");
+    document.documentElement.classList.toggle("rpp-afh", afh);
+  }, [pathname]);
+
   // Redirect any URL with a trailing slash to the non-slash version (except root "/")
   useEffect(() => {
     if (pathname.length > 1 && pathname.endsWith("/")) {

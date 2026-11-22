@@ -117,7 +117,7 @@ const AFHBuyingSelling = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -169,7 +169,7 @@ const AFHBuyingSelling = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -180,7 +180,7 @@ const AFHBuyingSelling = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -229,9 +229,9 @@ const AFHBuyingSelling = () => (
           </p>
           <div
             style={{
-              background: "#e8f2f9",
-              border: "1px solid #1B3A6B",
-              borderLeft: "4px solid #1B3A6B",
+              background: "#eef5f2",
+              border: "1px solid #0a5648",
+              borderLeft: "4px solid #0a5648",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -250,7 +250,7 @@ const AFHBuyingSelling = () => (
                 href="https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#1B3A6B" }}
+                style={{ color: "#0a5648" }}
               >
                 DSHS AFH Locator
               </a>{" "}
@@ -271,7 +271,7 @@ const AFHBuyingSelling = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -282,7 +282,7 @@ const AFHBuyingSelling = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -340,7 +340,7 @@ const AFHBuyingSelling = () => (
                       fontSize: 17,
                       fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                       fontWeight: 700,
-                      color: "#142c52",
+                      color: "#084238",
                       margin: "0 0 6px",
                     }}
                   >
@@ -374,7 +374,7 @@ const AFHBuyingSelling = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -385,7 +385,7 @@ const AFHBuyingSelling = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
@@ -399,7 +399,7 @@ const AFHBuyingSelling = () => (
                 style={{
                   background: "#fff",
                   border: "1px solid #dccdce",
-                  borderLeft: "4px solid #1B3A6B",
+                  borderLeft: "4px solid #0a5648",
                   borderRadius: 6,
                   padding: "22px",
                 }}
@@ -409,7 +409,7 @@ const AFHBuyingSelling = () => (
                     fontSize: 17,
                     fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: "#142c52",
+                    color: "#084238",
                     margin: "0 0 10px",
                   }}
                 >
@@ -442,7 +442,7 @@ const AFHBuyingSelling = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#1B3A6B",
+              color: "#0a5648",
               margin: "0 0 16px",
             }}
           >
@@ -460,7 +460,7 @@ const AFHBuyingSelling = () => (
           >
             Looking to Buy or Sell an AFH?
           </h2>
-          <div style={{ width: 40, height: 2, background: "#1B3A6B", margin: "0 auto 24px", borderRadius: 1 }} />
+          <div style={{ width: 40, height: 2, background: "#0a5648", margin: "0 auto 24px", borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -485,7 +485,7 @@ const AFHBuyingSelling = () => (
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                color: "#1B3A6B",
+                color: "#0a5648",
                 background: "#ffffff",
                 padding: "14px 28px",
                 borderRadius: 4,

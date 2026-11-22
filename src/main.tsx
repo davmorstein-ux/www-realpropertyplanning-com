@@ -2,6 +2,8 @@ import { createRoot, hydrateRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
+/* AFH Club pages: garnet and navy accents become hunter green (generated; see scripts/gen-afh-green.py). */
+import "./styles/afh-green.css";
 import "./i18n/config";
 import { recoverFromChunkError } from "./lib/chunkRecovery";
 import { initSiteTracking } from "./lib/siteTracking";

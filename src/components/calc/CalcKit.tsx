@@ -250,10 +250,10 @@ export const CK_CSS = `
 .ck ul.ck-notes li strong { color: #14283a !important; font-size: 15px !important; }
 .ck .ck-waiting.ck-waiting { background: #f6f8fa; border: 1px dashed #c9d7e2; border-radius: 14px; padding: 22px 18px; text-align: center; font-size: 16px !important; color: #1f2933 !important; margin: 4px 0 14px; }
 .ck .ck-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 20px; margin-top: 6px; padding-top: 14px; border-top: 1px solid #dfe5ea; }
-.ck .ck-source.ck-source { flex: 1 1 340px; padding-left: 12px; border-left: 4px solid #1B3A6B; font-size: 14px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; }
+.ck .ck-source.ck-source { flex: 1 1 340px; padding-left: 12px; border-left: 4px solid var(--rpp-accent, #1B3A6B); font-size: 14px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; }
 .ck .ck-source a { color: #1f2933 !important; font-size: 14px !important; text-decoration: underline; text-underline-offset: 2px; }
 .ck .ck-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-.ck .ck-actions a, .ck .ck-actions button { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
+.ck .ck-actions a, .ck .ck-actions button { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: var(--rpp-accent, #1B3A6B) !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
 @media (max-width: 640px) {
   .ck .ck-head { padding: 18px 16px; gap: 12px; }
   .ck .ck-head svg { width: 42px; height: 42px; }

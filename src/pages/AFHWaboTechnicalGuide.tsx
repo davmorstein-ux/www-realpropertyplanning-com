@@ -19,7 +19,7 @@ const label = {
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
-  color: "#142c52",
+  color: "#084238",
   margin: "0 0 14px",
 };
 
@@ -27,7 +27,7 @@ const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
-  color: "#142c52",
+  color: "#084238",
   lineHeight: 1.2,
   margin: "0 0 20px",
 };
@@ -119,7 +119,7 @@ const AFHWaboTechnicalGuide = () => (
           </p>
           <p style={{ fontSize: 16, fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917", margin: 0 }}>
             New to WABO? Start with{" "}
-            <Link to="/afh-club/wabo-inspection-guide" style={{ color: "#1B3A6B", fontWeight: 600, textDecoration: "underline" }}>
+            <Link to="/afh-club/wabo-inspection-guide" style={{ color: "#0a5648", fontWeight: 600, textDecoration: "underline" }}>
               What Is WABO? A Simple Overview <RppArrow />
             </Link>
           </p>

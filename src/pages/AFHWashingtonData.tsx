@@ -161,7 +161,7 @@ const CSS = `
 .afhd tr.afhd-total td { font-weight: 700; background: #faf8f4; }
 .afhd .afhd-bar { display: block; height: 10px; border-radius: 0 4px 4px 0; background: #0a5648; min-width: 2px; }
 .afhd td.afhd-barcell { width: 38%; min-width: 120px; }
-.afhd a.afhd-link { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; }
+.afhd a.afhd-link { color: #0a5648 !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .afhd .afhd-note { background: #faf8f4; border-left: 4px solid #0a5648; border-radius: 8px; padding: 14px 18px; margin: 12px 0 0; }
 .afhd .afhd-note p { font-size: 16px !important; margin: 0 !important; }
 .afhd .afhd-small { font-size: 15px !important; color: #1c1917 !important; }

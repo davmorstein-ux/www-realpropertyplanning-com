@@ -73,7 +73,7 @@ const CSS = `
 .afhg dd { margin: 8px 0 0; }
 .afhg dd p.afhg-def { margin: 0 0 8px !important; }
 .afhg .afhg-meta { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px !important; color: #1c1917; line-height: 1.6; }
-.afhg a.afhg-link, .afhg .afhg-meta a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
+.afhg a.afhg-link, .afhg .afhg-meta a { color: #0a5648 !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhg .afhg-cats { display: grid; gap: 18px 28px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .afhg .afhg-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .afhg .afhg-cat h3 { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 6px !important; }

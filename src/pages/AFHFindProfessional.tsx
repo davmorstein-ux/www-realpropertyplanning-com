@@ -338,7 +338,7 @@ const AFHFindProfessional = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 14px",
             }}
           >
@@ -457,9 +457,9 @@ const AFHFindProfessional = () => (
         /* At two columns (480-767px) each label has ~200px: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
         @media (min-width: 520px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 3px solid ${AFH_HEADSHOT_RING}; box-sizing: border-box; margin-bottom: 8px !important; }
-        .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #142c52; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #084238; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
-        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #1B3A6B !important; } }
+        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #0a5648 !important; } }
         .rpp-afhpro .rpp-afhpro-card-license { height: 16px; white-space: nowrap; overflow: hidden; font-size: 11px; line-height: 16px; color: #1c1917; margin-top: 2px !important; }
         .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 17px; overflow-wrap: anywhere; }
         .rpp-afhpro .rpp-afhpro-card-phone { height: 17px; margin-top: 6px !important; white-space: nowrap; }
@@ -467,7 +467,7 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-email a { display: inline-block; line-height: 20px; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-card-site { height: 17px; margin-top: 3px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-line a { color: #1c1917; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
-        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #1B3A6B; text-decoration-color: #1B3A6B; } }
+        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #0a5648; text-decoration-color: #0a5648; } }
         .rpp-afhpro .rpp-afhpro-card-logo { height: 64px; margin-top: 12px !important; display: flex; align-items: center; justify-content: center; }
         .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link { display: inline-flex; align-items: center; justify-content: center; height: 100%; text-decoration: none !important; border: 0 !important; background: none !important; padding: 0 !important; }
         .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link::after { content: none !important; display: none !important; }
@@ -520,7 +520,7 @@ const AFHFindProfessional = () => (
       {/* The guide: what to look for in each kind of professional. Narrated by the audio below. */}
       <section className="rpp-afhpro" style={{ background: "#f5f2ec", padding: "56px 24px 0" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#142c52" }}>
+          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif", fontWeight: 700, color: "#084238" }}>
             What to look for in each kind of professional
           </h2>
           <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', 'DM Sans Fallback', sans-serif", color: "#1c1917" }}>
@@ -559,7 +559,7 @@ const AFHFindProfessional = () => (
                         fontSize: "clamp(20px, 2.5vw, 26px)",
                         fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
                         fontWeight: 700,
-                        color: "#142c52",
+                        color: "#084238",
                         margin: "0 0 14px",
                       }}
                     >
@@ -583,7 +583,7 @@ const AFHFindProfessional = () => (
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        color: "#142c52",
+                        color: "#084238",
                         margin: "0 0 10px",
                       }}
                     >
@@ -598,7 +598,7 @@ const AFHFindProfessional = () => (
                               width: 6,
                               height: 6,
                               borderRadius: "50%",
-                              background: "#1B3A6B",
+                              background: "#0a5648",
                               marginTop: 8,
                             }}
                           />
@@ -626,9 +626,9 @@ const AFHFindProfessional = () => (
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
-                            color: "#142c52",
+                            color: "#084238",
                             textDecoration: "none",
-                            borderBottom: "1px solid #1B3A6B",
+                            borderBottom: "1px solid #0a5648",
                             paddingBottom: 2,
                           }}
                         >
@@ -645,9 +645,9 @@ const AFHFindProfessional = () => (
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
-                            color: "#142c52",
+                            color: "#084238",
                             textDecoration: "none",
-                            borderBottom: "1px solid #1B3A6B",
+                            borderBottom: "1px solid #0a5648",
                             paddingBottom: 2,
                           }}
                         >
@@ -672,7 +672,7 @@ const AFHFindProfessional = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#142c52",
+              color: "#084238",
               margin: "0 0 16px",
             }}
           >
@@ -683,14 +683,14 @@ const AFHFindProfessional = () => (
               fontSize: "clamp(22px, 3.5vw, 32px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#142c52",
+              color: "#084238",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Join the Real Property Planning Network
           </h2>
-          <div style={{ width: 40, height: 2, background: "#1B3A6B", margin: "0 auto 24px", borderRadius: 1 }} />
+          <div style={{ width: 40, height: 2, background: "#0a5648", margin: "0 auto 24px", borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -714,7 +714,7 @@ const AFHFindProfessional = () => (
               letterSpacing: "0.16em",
               textTransform: "uppercase",
               color: "#fff",
-              background: "#1B3A6B",
+              background: "#0a5648",
               padding: "14px 28px",
               borderRadius: 4,
               textDecoration: "none",

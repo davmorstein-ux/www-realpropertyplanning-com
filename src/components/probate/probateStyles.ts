@@ -47,7 +47,7 @@ export const PROBATE_CSS = `
   .prp td.prp-topic { min-width: 0; margin-bottom: 4px; }
   .prp td.prp-src { margin-top: 6px; white-space: normal; }
 }
-.prp a.prp-link, .prp td a, .prp .prp-small a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
+.prp a.prp-link, .prp td a, .prp .prp-small a { color: var(--rpp-accent, #1B3A6B) !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .prp .prp-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
 .prp .prp-jump a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px; border-radius: 999px; background: #ffffff; border: 1px solid #b7cbd9; color: ${A} !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; font-weight: 600; text-decoration: none !important; }
 @media (hover: hover) { .prp .prp-jump a:hover { background: ${A}; color: #ffffff !important; } }
@@ -59,7 +59,7 @@ export const PROBATE_CSS = `
 .prp ol.prp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; }
 .prp ol.prp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #1c1917; }
 .prp ol.prp-steps li::marker { color: ${A}; font-weight: 700; }
-.prp ol.prp-steps a { display: inline; color: #1B3A6B !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
+.prp ol.prp-steps a { display: inline; color: var(--rpp-accent, #1B3A6B) !important; font-weight: 700; font-size: 17px !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .prp ol.prp-steps span { display: block; font-size: 16px !important; line-height: 1.45; margin-top: 2px; }
 .prp .prp-qa { display: grid; gap: 34px; }
 .prp .prp-more { font-size: 16px !important; margin-top: 4px !important; }
@@ -74,19 +74,19 @@ export const PROBATE_CSS = `
 
 export const PROBATE_CSS_EXTRA = `
 .prp .prp-trail { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 14px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 15px; color: #1c1917; }
-.prp .prp-trail a { color: #1B3A6B !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
+.prp .prp-trail a { color: var(--rpp-accent, #1B3A6B) !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 .prp .prp-trail .prp-sep { color: #8a97a3; }
 .prp ol.prp-big { list-style: none !important; margin: 0; padding: 0; counter-reset: prpstep; display: grid; gap: 12px; }
 .prp ol.prp-big li { counter-increment: prpstep; display: grid !important; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; background: #ffffff; border: 1px solid #d3dfe8; border-radius: 12px; padding: 14px 16px; }
 .prp ol.prp-big li::before { content: counter(prpstep); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: ${A}; color: #ffffff; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700; font-size: 19px; }
-.prp ol.prp-big a { display: inline; color: #1B3A6B !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700 !important; font-size: 19px !important; line-height: 1.35; text-decoration: underline !important; text-underline-offset: 3px; }
+.prp ol.prp-big a { display: inline; color: var(--rpp-accent, #1B3A6B) !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-weight: 700 !important; font-size: 19px !important; line-height: 1.35; text-decoration: underline !important; text-underline-offset: 3px; }
 .prp ol.prp-big span { display: block; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px !important; line-height: 1.45; color: #1c1917; margin-top: 4px; }
 .prp .prp-watch { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 820px) { .prp .prp-watch { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .prp .prp-watch > div { background: #fffaf0; border: 1px solid #ecd9a8; border-top: 4px solid #d9a521; border-radius: 10px; padding: 14px 16px; }
 .prp .prp-watch p { font-size: 16px !important; line-height: 1.5 !important; margin: 0 0 8px !important; }
 .prp .prp-watch p.prp-watch-lead { font-weight: 700 !important; color: #14283a !important; font-size: 17px !important; margin-bottom: 4px !important; }
-.prp .prp-watch a { color: #1B3A6B !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
+.prp .prp-watch a { color: var(--rpp-accent, #1B3A6B) !important; font-size: 15px !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; }
 .prp .prp-nextrow { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
 .prp a.prp-next { display: inline-flex; align-items: center; min-height: 52px; padding: 10px 22px; border-radius: 10px; background: ${A}; color: #ffffff !important; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px !important; font-weight: 700 !important; text-decoration: none !important; }
 @media (hover: hover) { .prp a.prp-next:hover { background: #1b4562; } }

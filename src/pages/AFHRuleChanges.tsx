@@ -81,26 +81,26 @@ const CSS = `
 .afhr .afhr-wrap { max-width: 960px; margin: 0 auto; }
 .afhr .afhr-narrow { max-width: 760px; }
 .afhr p { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
-.afhr .afhr-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0b5c8a !important; margin: 0 0 12px !important; }
+.afhr .afhr-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
 .afhr h1.afhr-h1 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(30px, 4.4vw, 44px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 18px !important; text-wrap: balance; }
 .afhr h2.afhr-h2 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 110px; }
 .afhr h3.afhr-h3 { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: 20px !important; line-height: 1.3 !important; font-weight: 700 !important; color: #0f1b2b !important; margin: 0 0 8px !important; }
 .afhr .afhr-hero { display: grid; gap: 28px; align-items: start; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 900px) { .afhr .afhr-hero { grid-template-columns: minmax(0, 1fr) 250px; } }
 .afhr .afhr-cover { width: 100%; max-width: 300px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(10,22,40,0.35); justify-self: center; }
-.afhr .afhr-answer { background: #ffffff; border: 1px solid #cfdbe6; border-left: 5px solid #0b5c8a; border-radius: 10px; padding: 18px 22px; }
+.afhr .afhr-answer { background: #ffffff; border: 1px solid #c4ddd5; border-left: 5px solid #0a5648; border-radius: 10px; padding: 18px 22px; }
 .afhr .afhr-answer p { font-size: 18px !important; margin: 0 0 10px !important; }
 .afhr .afhr-answer p:last-child { margin: 0 !important; }
-.afhr .afhr-label { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #0b5c8a !important; margin: 0 0 6px !important; }
+.afhr .afhr-label { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 6px !important; }
 .afhr ul.afhr-list, .afhr ol.afhr-list { margin: 0 0 14px 22px; padding: 0; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 18px; line-height: 1.7; color: #1c1917; }
 .afhr ul.afhr-list { list-style: disc !important; }
 .afhr ol.afhr-list { list-style: decimal !important; }
 .afhr .afhr-list li { display: list-item !important; margin-bottom: 8px; font-size: 18px !important; }
-.afhr a.afhr-link, .afhr .afhr-small a, .afhr td a, .afhr .afhr-card a { color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
+.afhr a.afhr-link, .afhr .afhr-small a, .afhr td a, .afhr .afhr-card a { color: #0a5648 !important; text-decoration: underline !important; text-underline-offset: 3px; font-size: inherit !important; }
 .afhr .afhr-small { font-size: 15px !important; color: #1c1917 !important; }
 .afhr .afhr-tablewrap { overflow-x: auto; border: 1px solid #e2ddd5; border-radius: 10px; background: #ffffff; }
 .afhr table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; color: #1c1917; }
-.afhr th { text-align: left; font-weight: 700; background: #f5f2ec; padding: 10px 14px; border-bottom: 1px solid #cfdbe6; }
+.afhr th { text-align: left; font-weight: 700; background: #f5f2ec; padding: 10px 14px; border-bottom: 1px solid #c4ddd5; }
 .afhr td { padding: 11px 14px; border-bottom: 1px solid #eee9e1; vertical-align: top; line-height: 1.5; }
 .afhr tr:last-child td { border-bottom: 0; }
 .afhr td.afhr-old { color: #6b4a2a; }
@@ -109,20 +109,20 @@ const CSS = `
 .afhr .afhr-kind { background: #ffffff; border: 1px solid #ddd6cc; border-radius: 10px; padding: 16px 18px; }
 .afhr .afhr-kind p { font-size: 16px !important; margin: 0 !important; }
 .afhr .afhr-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
-.afhr .afhr-filters button { padding: 8px 14px; border-radius: 999px; border: 1px solid #b7c9d8; background: #ffffff; color: #0b5c8a; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; }
-.afhr .afhr-filters button[aria-pressed="true"] { background: #0b5c8a; border-color: #0b5c8a; color: #ffffff; }
+.afhr .afhr-filters button { padding: 8px 14px; border-radius: 999px; border: 1px solid #c4ddd5; background: #ffffff; color: #0a5648; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; }
+.afhr .afhr-filters button[aria-pressed="true"] { background: #0a5648; border-color: #0a5648; color: #ffffff; }
 .afhr .afhr-cards { display: grid; gap: 14px; }
-.afhr .afhr-card { background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #0b5c8a; border-radius: 10px; padding: 18px 20px; scroll-margin-top: 110px; }
+.afhr .afhr-card { background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #0a5648; border-radius: 10px; padding: 18px 20px; scroll-margin-top: 110px; }
 .afhr .afhr-card.afhr-ended { border-left-color: #a39a8f; background: #faf8f4; }
 .afhr .afhr-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0 0 8px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 14px; }
 .afhr .afhr-chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #f5f2ec; color: #0f1b2b; font-weight: 600; }
-.afhr .afhr-chip.afhr-date { background: #0b5c8a; color: #ffffff; }
+.afhr .afhr-chip.afhr-date { background: #0a5648; color: #ffffff; }
 .afhr .afhr-chip.afhr-ended-chip { background: #e7e1d8; color: #1c1917; }
 .afhr .afhr-ba { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); margin: 8px 0 10px; }
 @media (min-width: 760px) { .afhr .afhr-ba { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .afhr .afhr-ba > div { border-radius: 8px; padding: 12px 14px; }
 .afhr .afhr-ba .afhr-was { background: #f7f1e8; }
-.afhr .afhr-ba .afhr-now { background: #eef5fa; }
+.afhr .afhr-ba .afhr-now { background: #eef5f2; }
 .afhr .afhr-ba p { font-size: 16px !important; line-height: 1.55 !important; margin: 0 !important; }
 .afhr .afhr-ba .afhr-balabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; margin: 0 0 4px !important; color: #1c1917 !important; }
 .afhr dl.afhr-dl { margin: 0; display: grid; gap: 6px; font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; font-size: 16px; line-height: 1.55; color: #2b2825; }
@@ -157,7 +157,7 @@ const AFHRuleChanges = () => {
       />
       <Header />
       <main id="main-content">
-        <section style={{ background: "#eef2f6", padding: "40px 16px 36px", borderBottom: "3px solid #0b5c8a" }}>
+        <section style={{ background: "#eef2f6", padding: "40px 16px 36px", borderBottom: "3px solid #0a5648" }}>
           {/* index.css zeroes the first section's top padding sitewide; the gap goes inside. */}
           <div className="afhr-wrap" style={{ paddingTop: 32 }}>
             <div className="afhr-hero">

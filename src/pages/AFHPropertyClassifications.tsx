@@ -19,14 +19,14 @@ const label = {
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
-  color: "#142c52",
+  color: "#084238",
   margin: "0 0 14px",
 };
 const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
   fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
   fontWeight: 700,
-  color: "#142c52",
+  color: "#084238",
   lineHeight: 1.2,
   margin: "0 0 20px",
 };
@@ -62,7 +62,7 @@ const badge = {
   marginRight: "10px",
   verticalAlign: "middle",
 };
-const linkStyle = { color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: "4px" };
+const linkStyle = { color: "#0a5648", textDecoration: "underline", textUnderlineOffset: "4px" };
 
 const CANONICAL = "https://realpropertyplanning.com/afh-club/afh-property-classifications";
 
@@ -130,7 +130,7 @@ const AFHPropertyClassifications = () => (
               fontSize: "clamp(30px, 4.5vw, 46px)",
               fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif",
               fontWeight: 700,
-              color: "#1B3A6B",
+              color: "#0a5648",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
