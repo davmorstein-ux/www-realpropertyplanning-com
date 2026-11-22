@@ -70,9 +70,13 @@ interface Props {
   placeholder?: string;
   /** Render without the outer card (when a page supplies its own). */
   bare?: boolean;
+  /** Compact homepage version (Nov 21, 2026, David): heading and privacy line on
+   *  one row, no example pills; the placeholder itself types the placeholder and
+   *  then each example in turn, erasing each, and ends blank. */
+  demo?: boolean;
 }
 
-export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "How long does probate take?", bare = false }: Props) {
+export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "How long does probate take?", bare = false, demo = false }: Props) {
   const id = useId();
   const [q, setQ] = useState("");
   const [asked, setAsked] = useState("");
@@ -116,6 +120,39 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /* Demo mode: type each question into the empty box's placeholder, erase it,
+     then the next; after the last the box is left blank. Starts when the box
+     scrolls into view; stops for good once the visitor focuses or types.
+     Reduced motion or no JS: the static placeholder. */
+  const formRef = useRef<HTMLFormElement>(null);
+  const [demoPh, setDemoPh] = useState<string | null>(null);
+  const demoStop = useRef(false);
+  useEffect(() => {
+    if (!demo) return;
+    const el = formRef.current;
+    if (!el || typeof window === "undefined" || !("IntersectionObserver" in window)) return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    const seq = [placeholder, ...examples];
+    const timers: number[] = [];
+    const later = (fn: () => void, ms: number) => { timers.push(window.setTimeout(() => { if (!demoStop.current) fn(); }, ms)); };
+    const io = new IntersectionObserver((entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
+      let t = 300;
+      seq.forEach((text) => {
+        for (let i = 0; i <= text.length; i++) { const n = i; later(() => setDemoPh(text.slice(0, n)), t); t += 55; }
+        t += 1700;
+        for (let i = text.length - 1; i >= 0; i--) { const n = i; later(() => setDemoPh(text.slice(0, n)), t); t += 22; }
+        t += 450;
+      });
+      later(() => setDemoPh(""), t);
+    }, { threshold: 0.6 });
+    setDemoPh("");
+    io.observe(el);
+    return () => { io.disconnect(); timers.forEach((x) => window.clearTimeout(x)); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [demo]);
+
   const run = async (text: string) => {
     const question = text.trim();
     if (question.length < 3) return;
@@ -147,13 +184,23 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
   return (
     <div className={`rpp-ask${bare ? " rpp-ask-bare" : ""}`} style={{ ["--ask" as string]: accent }}>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <h2 className="rpp-ask-h" id={`${id}-h`}>{title}</h2>
-      {/* One short line (Nov 13, 2026, David: the box was too tall). The sentence
-          explaining that answers come from the site's guides went; the button and
-          the answer itself say it. The privacy request stays. */}
-      <p className="rpp-ask-sub">Ask in plain words. No names or personal details.</p>
+      {demo ? (
+        <div className="rpp-ask-headrow">
+          <h2 className="rpp-ask-h" id={`${id}-h`}>{title}:</h2>
+          <p className="rpp-ask-sub">In plain words. No names or personal details.</p>
+        </div>
+      ) : (
+        <>
+          <h2 className="rpp-ask-h" id={`${id}-h`}>{title}</h2>
+          {/* One short line (Nov 13, 2026, David: the box was too tall). The sentence
+              explaining that answers come from the site's guides went; the button and
+              the answer itself say it. The privacy request stays. */}
+          <p className="rpp-ask-sub">Ask in plain words. No names or personal details.</p>
+        </>
+      )}
       <form
         className="rpp-ask-form"
+        ref={formRef}
         role="search"
         aria-labelledby={`${id}-h`}
         onSubmit={(e) => {
@@ -172,15 +219,16 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
           onChange={(e) => setQ(e.target.value)}
           onFocus={() => {
             loadData().catch(() => {});
+            if (demo) { demoStop.current = true; setDemoPh(""); }
           }}
-          placeholder={placeholder}
+          placeholder={demo && demoPh !== null ? demoPh : placeholder}
           aria-label="Your question"
         />
         <button className="rpp-ask-send" type="submit" disabled={busy}>
           {busy ? "Looking…" : "Get answer"}
         </button>
       </form>
-      {!res && !failed && examples.length > 0 && (
+      {!demo && !res && !failed && examples.length > 0 && (
         <div className="rpp-ask-examples" ref={examplesRef}>
           <span className="rpp-ask-try">Try:</span>
           {examples.map((x, i) => {
@@ -265,6 +313,9 @@ const CSS = `
 .rpp-ask.rpp-ask-bare { border: 0; padding: 0; background: transparent; }
 .rpp-ask h2.rpp-ask-h.rpp-ask-h { font-size: clamp(24px, 3vw, 30px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #14283a !important; margin: 0 0 6px !important; text-align: left; }
 .rpp-ask p.rpp-ask-sub.rpp-ask-sub { font-size: 20px !important; line-height: 1.5 !important; color: #2b2825 !important; margin: 0 0 14px !important; }
+.rpp-ask .rpp-ask-headrow { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; row-gap: 2px; margin: 0 0 14px; }
+.rpp-ask .rpp-ask-headrow h2.rpp-ask-h.rpp-ask-h, .rpp-ask .rpp-ask-headrow p.rpp-ask-sub.rpp-ask-sub { margin: 0 !important; }
+.rpp-ask .rpp-ask-headrow p.rpp-ask-sub.rpp-ask-sub { font-size: 18px !important; color: #57534e !important; }
 .rpp-ask .rpp-ask-form { display: flex; gap: 10px; flex-wrap: wrap; }
 .rpp-ask input.rpp-ask-input { flex: 1 1 320px; min-width: 0; min-height: 52px; font-size: 18px; padding: 10px 16px; border: 2px solid #b9b2a6; border-radius: 10px; color: #1c1917; background: #fff; box-sizing: border-box; }
 .rpp-ask input.rpp-ask-input:focus { outline: 3px solid color-mix(in srgb, var(--ask) 35%, transparent); border-color: var(--ask); }

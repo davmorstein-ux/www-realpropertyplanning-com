@@ -1481,7 +1481,7 @@ const RPPHomeV3 = () => {
             {/* Top margin (Oct 21, 2026, David): the box sat ~16px under the
                 tiles, and the tile pulse grows them 3% into that gap. */}
             <div style={{ margin: "clamp(40px, 4vw, 56px) 0 4.5rem" }}>
-              <AskBox />
+              <AskBox demo />
               {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
               <p className="rpp-myplan-link" style={{ ["--plan-bg" as string]: `url(${planLinkBanner})`, maxWidth: 860, margin: "22px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
                 {/* Two lines with a garnet underline and ring arrow (Nov 21, 2026,
