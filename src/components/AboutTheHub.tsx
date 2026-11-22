@@ -61,6 +61,11 @@ const AboutTheHub = () => {
            framed card. The section sits on a full-width soft band; the band is
            drawn with a spread shadow clipped to the sides, so the text keeps the
            page's column width. */
+        /* Icons instead of arrows (Nov 21, 2026): gap and hover. */
+        html body main li.rpp-hero-point a.rpp-hero-point-link.rpp-hero-point-link { gap: 10px; }
+        html body main li.rpp-hero-point a.rpp-hero-point-link:hover svg.rpp-hero-icon,
+        html body main li.rpp-hero-point a.rpp-hero-point-link:focus-visible svg.rpp-hero-icon { stroke: #8F1A2B; }
+        html body main li.rpp-hero-point a.rpp-hero-point-link:hover span.rpp-hero-point-text.rpp-hero-point-text { text-decoration: underline !important; text-decoration-color: #8F1A2B !important; text-underline-offset: 4px; }
         .rpp-abouthub-card.rpp-abouthub-card {
           display: block;
           background: #f1ede5;

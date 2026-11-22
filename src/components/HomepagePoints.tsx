@@ -26,6 +26,17 @@ import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
  * test that fails if the site holds fewer than the homepage claims — never
  * type a number here.
  */
+const ICONS: Record<string, JSX.Element> = {
+  // open book
+  "/guides-and-resources": <><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8V19c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z" /><path d="M12 6.3v13.5" /></>,
+  // calculator
+  "/calculators": <><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M8 7h8" /><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15h.01M8.5 18h.01M12 18h.01M15.5 18h.01" strokeWidth="2.4" /></>,
+  // envelope
+  "/newsletter": <><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6 8.5-6" /></>,
+  // person
+  "/featured-professionals": <><circle cx="12" cy="8" r="3.6" /><path d="M4.8 20c.8-3.7 3.7-5.8 7.2-5.8s6.4 2.1 7.2 5.8" /></>,
+};
+
 const POINTS = [
   { key: "hero.point1", n: HOMEPAGE_GUIDE_CLAIM, to: "/guides-and-resources" },
   { key: "hero.point2", n: HOMEPAGE_CALCULATOR_CLAIM, to: "/calculators" },
@@ -52,17 +63,11 @@ export default function HomepagePoints() {
         return (
           <li key={p.to} className="rpp-hero-point">
             <Link to={p.to} className="rpp-hero-point-link" style={{ ["--rpp-nudge-delay" as string]: `${1800 + i * 600}ms` }}>
-              <svg className="rpp-hero-badge" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
-                {/* Nov 13, 2026 (David, after the first-time-visitor audit): a thin garnet
-                    RING with a garnet chevron, the same drawing as the site's one arrow
-                    (RppArrow, ring + chevron since Oct 29). It was the last solid disc
-                    left on the page. Proportions are RppArrow's, scaled 36 to 30. */}
-                <circle cx="15" cy="15" r="13.7" fill="none" stroke="#9E1F3A" strokeWidth="2.3" />
-                <g fill="none" stroke="#9E1F3A" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline className="rpp-badge-check" points="9 15.5 13.2 19.6 21.2 10.8" />
-                  {/* The site's one arrow shape: a heavy chevron (Oct 26, 2026). */}
-                  <polyline className="rpp-badge-arrow" points="13 8.8 18 15 13 21.2" strokeWidth="3" />
-                </g>
+              {/* Nov 21, 2026 (David): small line icons instead of arrow badges, so the
+                  screen isn't a run of garnet arrows; the arrows stay on the cards. */}
+              <svg className="rpp-hero-badge rpp-hero-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"
+                fill="none" stroke="#6b6158" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                {ICONS[p.to]}
               </svg>
               <span className="rpp-hero-point-text">
                 {head}
