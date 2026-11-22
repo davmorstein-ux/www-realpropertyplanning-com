@@ -5616,7 +5616,10 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
     text-align: center !important;
   }
 }
-@media (max-width: 400px) {
+/* Nov 22, 2026 (David, iPhone): at 401-480px these were two columns, which
+   squeezed card titles into one word per line and split words mid-way
+   ("Disagree / ments"). Every phone now gets one column. */
+@media (max-width: 480px) {
   main [style*="grid-template-columns: repeat(3"],
   main [style*="grid-template-columns: repeat(4"],
   main [style*="grid-template-columns: repeat(5"] {
@@ -6890,4 +6893,19 @@ html body main .tile-white__face h3.rpp-sl-label.rpp-sl-label span {
 html body main .gold-cta.gold-cta.rpp-cta-afh { border-color: #0a5648 !important; color: #0a5648 !important; }
 @media (hover: hover) {
   html body main a:hover .gold-cta.gold-cta.rpp-cta-afh, html body main .group:hover .gold-cta.gold-cta.rpp-cta-afh { background: #0a5648 !important; color: #ffffff !important; }
+}
+
+/* Nov 22, 2026 (David, iPhone): in two-to-a-row phone tiles the Learn More
+   pill wrapped to "Learn / More". Keep short labels on one line by making the
+   pill a little smaller there. */
+@media (max-width: 767px) {
+  html body main .rpp-m2 .gold-cta.gold-cta.gold-cta,
+  html body main .rpp-m2 .article-resource-btn.article-resource-btn.article-resource-btn {
+    white-space: nowrap !important;
+    font-size: 15px !important;
+    gap: 6px !important;
+    padding: 6px 6px 6px 12px !important;
+    min-height: 44px !important;
+  }
+  html body main .rpp-m2 .gold-cta.gold-cta svg.rpp-arrow { width: 24px !important; height: 24px !important; }
 }
