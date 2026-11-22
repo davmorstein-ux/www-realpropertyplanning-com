@@ -799,11 +799,18 @@ html body main .rpp-funnel-grid a.rpp-jt-link.rpp-jt-link:focus-visible div.rpp-
    index.css and the same-day quiet one-liner. */
 html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link { font-size: 18px !important; font-weight: 400 !important; line-height: 1.4 !important; color: #78716c !important; }
 html body main p.rpp-myplan-link.rpp-myplan-link span.rpp-myplan-q.rpp-myplan-q { display: block; font-size: clamp(21px, 1.8vw, 25px) !important; font-weight: 500 !important; color: #44403c !important; margin-bottom: 6px; } /* darker and larger (Nov 21, 2026, David: hard to read) */
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet { display: inline-flex; align-items: center; gap: 12px; font-size: clamp(20px, 1.9vw, 26px) !important; font-weight: 700 !important; line-height: 1.3 !important; color: #272421 !important; text-decoration: none !important; }
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet span.rpp-myplan-words { font-size: inherit !important; font-weight: 700 !important; color: #272421 !important; text-decoration: underline !important; text-decoration-color: #9E1F3A !important; text-decoration-thickness: 2px !important; text-underline-offset: 7px !important; transition: text-decoration-thickness 0.15s ease; }
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet svg.rpp-myplan-arrow { color: #9E1F3A; width: 1.2em; height: 1.2em; vertical-align: middle !important; transition: transform 0.15s ease; }
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover span.rpp-myplan-words { text-decoration-thickness: 3px !important; text-decoration-color: #84182F !important; }
-html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover svg.rpp-myplan-arrow { transform: translateX(3px); color: #84182F; }
+/* Nov 22, 2026 (David): the red underline is gone; the link is a garnet outline pill,
+   the same look as the sitewide Learn More buttons, and fills garnet on hover. */
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet { display: inline-flex; align-items: center; gap: 12px; font-size: clamp(20px, 1.9vw, 26px) !important; font-weight: 700 !important; line-height: 1.3 !important; color: #8F1A2B !important; text-decoration: none !important; border: 2px solid #8F1A2B; border-radius: 999px; background: #ffffff; padding: 10px 14px 10px 26px; margin-top: 6px; transition: background-color 0.15s ease, color 0.15s ease; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet span.rpp-myplan-words { font-size: inherit !important; font-weight: 700 !important; color: inherit !important; text-decoration: none !important; }
+html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet svg.rpp-myplan-arrow { color: inherit; width: 1.2em; height: 1.2em; vertical-align: middle !important; transition: transform 0.15s ease; }
+@media (max-width: 480px) {
+  html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet.rpp-myplan-quiet { font-size: 18px !important; white-space: nowrap; gap: 8px; padding: 9px 10px 9px 18px; }
+}
+@media (hover: hover) {
+  html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover { background: #8F1A2B; color: #ffffff !important; }
+  html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover svg.rpp-myplan-arrow { transform: translateX(3px); }
+}
 html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:focus-visible { outline: 3px solid #9E1F3A; outline-offset: 4px; border-radius: 4px; }
 
 /* Plan link on a banner (Nov 21, 2026, David): stepping stones on the left, the
@@ -1489,8 +1496,8 @@ const RPPHomeV3 = () => {
               <AskBox demo />
               {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
               <p className="rpp-myplan-link" style={{ ["--plan-bg" as string]: `url(${planLinkBanner})`, maxWidth: 860, margin: "22px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
-                {/* Two lines with a garnet underline and ring arrow (Nov 21, 2026,
-                    David's mock-up): the one-line grey version didn't read as a link. */}
+                {/* Two lines: the question, then a garnet outline pill (Nov 22, 2026, David
+                    chose B; the underline was removed). */}
                 <span className="rpp-myplan-q">Not sure where to start?</span>
                 <Link to="/my-plan" className="rpp-myplan-quiet">
                   <span className="rpp-myplan-words">Get a free step-by-step plan</span>
