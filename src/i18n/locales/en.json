@@ -282,11 +282,11 @@
     "categories": {
       "resources": {
         "title": "AFH Resources",
-        "description": "Licensing, training, building requirements, costs, regulations, and more."
+        "description": "Licensing, training, building rules and costs."
       },
       "listings": {
         "title": "AFH Listings",
-        "description": "Adult Family Homes currently available for sale throughout Washington State."
+        "description": "Adult family homes for sale in Washington."
       },
       "management": {
         "title": "Management Companies",
@@ -298,11 +298,11 @@
       },
       "calculators": {
         "title": "AFH Calculators",
-        "description": "Property score, ROI calculator, valuation estimator, and occupancy & financing calculator for Adult Family Home buyers, sellers, and investors."
+        "description": "Score, return, value and financing."
       },
       "professionals": {
         "title": "AFH Professionals",
-        "description": "People who work with adult family homes, each one met with personally: a real estate broker, a bookkeeper, and more to come."
+        "description": "People who work with AFHs, each met in person."
       }
     },
     "marketplace": {

@@ -666,14 +666,16 @@ html body main a.rpp-afh-lane-tile.rpp-afh-lane-tile:focus-visible { outline: 3p
   @media (max-width: 900px) {
     .rpp-afh-dest-card { flex-basis: calc((100% - 24px) / 2); }
   }
-  /* Phones: two covers per row (owner, Oct 5, 2026: smaller tiles to save
-     space; the fifth centres on its own row). Was one 420px cover per row. */
+  /* Phones (Nov 22, 2026, David): one card per row, a small cover on the
+     left and the title and one short line beside it. Two covers per row
+     (Oct 5) squeezed the text into a column two or three words wide. */
   @media (max-width: 639px) {
-    .rpp-afh-dest-grid { gap: 12px; }
-    .rpp-afh-dest-card.rpp-afh-dest-card { flex: 0 1 calc((100% - 12px) / 2); width: auto !important; max-width: none; }
-    .rpp-afh-dest-body { padding: 10px 10px 12px; }
-    .rpp-afh-dest-card h3 { font-size: 18px !important; line-height: 1.2 !important; margin: 0 0 4px !important; }
-    .rpp-afh-dest-card p { font-size: 18px !important; line-height: 1.4 !important; }
+    .rpp-afh-dest-grid.rpp-afh-dest-grid { flex-direction: column; gap: 10px; }
+    .rpp-afh-dest-card.rpp-afh-dest-card { flex: none !important; display: flex !important; flex-direction: row !important; align-items: center !important; width: 100% !important; max-width: none; }
+    .rpp-afh-dest-card.rpp-afh-dest-card img { width: 88px !important; flex: 0 0 88px !important; height: auto !important; aspect-ratio: 3 / 4; }
+    .rpp-afh-dest-body.rpp-afh-dest-body { padding: 10px 14px !important; flex: 1; min-width: 0; }
+    .rpp-afh-dest-card h3 { font-size: 19px !important; line-height: 1.2 !important; margin: 0 0 2px !important; }
+    .rpp-afh-dest-card p { font-size: 17px !important; line-height: 1.35 !important; }
   }
 `;
 
