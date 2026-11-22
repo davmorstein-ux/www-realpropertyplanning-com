@@ -645,6 +645,14 @@ html body main#main-content.rpp-home-one-font div.rpp-door-hero p.rpp-door-sloga
 html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { margin-top: 12px !important; text-wrap: pretty; }
 @media (min-width: 901px) {
   html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line { min-width: max(100%, 24.5em); } /* two lines on laptops (Nov 21, 2026, David) */
+}
+/* Headline as wide as the sentence (Nov 21, 2026, David: "cleaner"): from 1180px
+   the headline is larger and the sentence sits exactly under it on two lines, so
+   "continued.", the rule and the sentence share one edge. Below 1180px the
+   sentence keeps its own width (the 24.5em rule above). */
+@media (min-width: 1180px) {
+  html body main div.rpp-door-hero p.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan.rpp-door-slogan { font-size: clamp(54px, 6.9vw, 104px) !important; }
+  html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line.rpp-door-line.rpp-door-line { font-size: clamp(16px, 1.38vw, 21px) !important; min-width: 100%; text-wrap: wrap; }
   html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner.rpp-door-inner { column-gap: clamp(28px, 2.6vw, 40px); }
   html body main div.rpp-door-hero img.rpp-door-img.rpp-door-img.rpp-door-img.rpp-door-img { height: clamp(230px, min(24vw, 39vh), 390px) !important; }
 }
