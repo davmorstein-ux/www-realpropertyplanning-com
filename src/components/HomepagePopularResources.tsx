@@ -311,7 +311,8 @@ const HomepagePopularResources = () => {
       @media (hover: hover) { .rpp-pr-tile:hover img.rpp-pr-photo-img.rpp-pr-photo-img { transform: scale(1.03); } }
       .rpp-pr-tile span.rpp-pr-body.rpp-pr-body { align-items: flex-start !important; text-align: left !important; padding: 14px 16px 50px !important; box-sizing: border-box; }
       html body main a.rpp-pr-tile span.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation.rpp-pr-situation { text-align: left !important; font-size: clamp(19px, 1.6vw, 22px) !important; }
-      html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow { background: transparent !important; color: var(--pr-c) !important; box-shadow: none !important; }
+      html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow { background: transparent !important; color: #8F1A2B !important; box-shadow: none !important; } /* garnet on all four (Nov 21, 2026, David), matching the starting cards */
+      html body main a.rpp-pr-tile:hover span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow, html body main a.rpp-pr-tile:focus-visible span.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow.rpp-pr-arrow { color: #84182F !important; }
       html body main a.rpp-pr-tile span.rpp-pr-arrow.rpp-pr-arrow svg circle { stroke: currentColor !important; }
       @media (max-width: 639px) {
         html body main a.rpp-pr-tile.rpp-pr-tile.rpp-pr-tile { flex-direction: row !important; align-items: stretch !important; padding: 0 !important; gap: 0 !important; min-height: 104px; }
