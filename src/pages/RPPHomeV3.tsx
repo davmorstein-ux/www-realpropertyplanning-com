@@ -85,6 +85,7 @@ import { CARE_CALCULATORS } from "@/lib/careCalculators";
 import RppArrow from "@/components/RppArrow";
 import { setFetchPriority } from "@/lib/imgPriority";
 import sloganCommaDot from "@/assets/home/slogan-comma-dot.webp";
+import planLinkBanner from "@/assets/home/plan-link-banner.webp";
 import sloganCommaDotDark from "@/assets/home/slogan-comma-dot-dark.webp";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
 import calcPhotoCare480 from "@/assets/home/calc-photo-care-480.webp";
@@ -801,6 +802,17 @@ html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-q
 html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:hover svg.rpp-myplan-arrow { transform: translateX(3px); color: #84182F; }
 html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-quiet:focus-visible { outline: 3px solid #9E1F3A; outline-offset: 4px; border-radius: 4px; }
 
+/* Plan link on a banner (Nov 21, 2026, David): stepping stones on the left, the
+   house on the right, the middle faded to ivory for the text. Laptops and
+   tablets only; phones keep the plain link (too narrow for the picture). */
+@media (min-width: 640px) {
+  html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link {
+    max-width: 1120px !important; margin: 26px auto 0 !important; padding: 40px 20px 46px !important;
+    border-radius: 16px; border: 1px solid #e2dbcf;
+    background: #faf8f4 var(--plan-bg) center / cover no-repeat;
+  }
+}
+
 /* ---- POPULAR GUIDES: lighter than the four cards ----
    Photos back to square (Nov 21, 2026, David): the 16:9 crop cut the tops
    and bottoms off the square still-lifes and "looks like a mistake". */
@@ -1470,7 +1482,7 @@ const RPPHomeV3 = () => {
             <div style={{ margin: "clamp(40px, 4vw, 56px) 0 4.5rem" }}>
               <AskBox />
               {/* My Real Property Plan (Oct 18, 2026): the guided alternative to asking. */}
-              <p className="rpp-myplan-link" style={{ maxWidth: 860, margin: "22px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
+              <p className="rpp-myplan-link" style={{ ["--plan-bg" as string]: `url(${planLinkBanner})`, maxWidth: 860, margin: "22px auto 0", textAlign: "center", fontFamily: "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif" }}>
                 {/* Two lines with a garnet underline and ring arrow (Nov 21, 2026,
                     David's mock-up): the one-line grey version didn't read as a link. */}
                 <span className="rpp-myplan-q">Not sure where to start?</span>
