@@ -46,12 +46,12 @@ const loadData = () => {
 };
 
 const EXAMPLES = [
-  /* Short prompts only (Nov 21, 2026, David): the long power-of-attorney
-     example pulled attention away from the four starting cards. */
-  "How long does probate take?",
+  /* Nov 21, 2026: briefly swapped for two short prompts, then restored the same
+     day (David: the original questions typing out were more effective). */
+  "Can I sell my mother's house with power of attorney if she has dementia?",
   /* Family-side examples only (Oct 18, 2026): AFH Club passes its own. The AFH
      licence-fee example that sat here belonged to AFH Club, not the family homepage. */
-  "Should I fix up an inherited house before selling?",
+  "Should I fix up an inherited house before selling it?",
   /* Two examples, not three (Nov 13, 2026, David, after the first-time-visitor
      audit: the box was too tall on phones). The third, "How long does probate
      take in Washington?", repeated the text shown inside the empty box. */
@@ -72,7 +72,7 @@ interface Props {
   bare?: boolean;
 }
 
-export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "Type your question", bare = false }: Props) {
+export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", contactReason = "site-question", examples = EXAMPLES, placeholder = "How long does probate take?", bare = false }: Props) {
   const id = useId();
   const [q, setQ] = useState("");
   const [asked, setAsked] = useState("");
