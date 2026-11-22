@@ -808,7 +808,8 @@ html body main p.rpp-myplan-link.rpp-myplan-link a.rpp-myplan-quiet.rpp-myplan-q
 @media (min-width: 640px) {
   html body main p.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link.rpp-myplan-link {
     max-width: 1120px !important; margin: 26px auto 0 !important; padding: 40px 20px 46px !important;
-    border-radius: 16px; border: 1px solid #e2dbcf;
+    /* No border (Nov 21, 2026, David): the picture's edges fade into the page. */
+    border: 0 !important;
     background: #faf8f4 var(--plan-bg) center / cover no-repeat;
   }
 }
