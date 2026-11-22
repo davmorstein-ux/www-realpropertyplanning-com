@@ -733,6 +733,10 @@ html body main div.rpp-door-hero h1#rpp-hero-heading.rpp-door-line.rpp-door-line
   }
 }
 
+/* Garnet ring arrows on the four starting cards (Nov 21, 2026, David chose the
+   ring over a filled garnet button, which looked too heavy under the door). */
+html body main .rpp-funnel-grid .rpp-jt-arrow svg.rpp-arrow.rpp-arrow { color: #8F1A2B !important; }
+
 /* ---- FOUR STARTING CARDS ---- */
 @media (min-width: 901px) {
   /* Wider column on laptops. The old "71vw + 8px" cap kept the tiles clear
