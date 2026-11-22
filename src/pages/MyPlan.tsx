@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import logo640 from "@/assets/perf/rpp-logo-v30-640.webp";
+import planStepsBg from "@/assets/plan/plan-steps-bg.webp";
+import planStepsBgPhone from "@/assets/plan/plan-steps-bg-phone.webp";
 import { trackPlannerCompleted, trackPlannerStarted } from "@/lib/siteTracking";
 import { revealInView, revealById, isPhoneWidth } from "@/lib/revealScroll";
 import {
@@ -46,6 +48,13 @@ const MAGENTA = "#a10149";
 const INK = "#1c1917";
 const CREAM = "#faf8f4";
 const FONT = "'DM Sans', 'DM Sans Fallback', system-ui, sans-serif";
+
+const PLAN_STEPS = [
+  { t: "Assess", icon: <><path d="M9 4h6v3H9z" /><rect x="5" y="5.5" width="14" height="15.5" rx="2" /><path d="M8.5 11l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3M15 11.5h1.5M15 16.5h1.5" /></> },
+  { t: "Explore options", icon: <><path d="M12 3v18" /><path d="M12 5h6l2 2-2 2h-6z" /><path d="M12 11H6l-2 2 2 2h6" /></> },
+  { t: "Make a plan", icon: <><path d="M6 19c3 0 3-6 6-6s3-6 6-6" strokeDasharray="2.2 2.2" /><circle cx="6" cy="19" r="1.8" /><path d="M18 3.5a2.8 2.8 0 0 1 2.8 2.8c0 2.1-2.8 4.7-2.8 4.7s-2.8-2.6-2.8-4.7A2.8 2.8 0 0 1 18 3.5z" /></> },
+  { t: "Move forward", icon: <><path d="M4 11.5 12 5l8 6.5" /><path d="M6.5 10v9.5h11V10" /><path d="M10.5 19.5v-5h3v5" /></> },
+];
 
 const PAGE_CSS = `
   .mp { font-family: ${FONT}; color: ${INK}; }
@@ -131,6 +140,23 @@ const PAGE_CSS = `
     .mp-hero p.mp-kicker, .mp-hero p.mp-phone { display: none !important; }
     .mp-rule { margin: 0; }
   }
+  /* Plan steps over the stepping-stones image (Nov 21, 2026, David chose "D"). */
+  .mp-hero.mp-hero { background: ${CREAM} url(${planStepsBg}) right 40% / cover no-repeat; }
+  .mp-steps { list-style: none; display: flex; margin: 26px 0 0; padding: 0; max-width: 820px; }
+  .mp-steps li { flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; text-align: center; }
+  .mp-steps li + li::before { content: ""; position: absolute; top: 31px; right: calc(50% + 34px); width: calc(100% - 68px); border-top: 1.5px dashed #b9ad9b; }
+  .mp-st-ic { width: 62px; height: 62px; border-radius: 50%; background: #fff; border: 1.5px solid #d8cfc1; display: flex; align-items: center; justify-content: center; }
+  main.mp span.mp-st-n.mp-st-n { font: 700 13px 'DM Sans', system-ui, sans-serif !important; color: #8F1A2B !important; letter-spacing: .08em; margin-top: 10px; }
+  main.mp span.mp-st-t.mp-st-t { font: 700 17px 'DM Sans', system-ui, sans-serif !important; color: #272421 !important; margin-top: 2px; }
+  @media (max-width: 699px) {
+    .mp-hero.mp-hero { background: ${CREAM} url(${planStepsBgPhone}) center bottom / cover no-repeat; }
+    .mp-steps { margin-top: 16px; }
+    .mp-steps li + li::before { display: none; }
+    .mp-st-ic { width: 50px; height: 50px; }
+    main.mp span.mp-st-n.mp-st-n { margin-top: 6px; }
+    main.mp span.mp-st-t.mp-st-t { font-size: 14px !important; line-height: 1.2; }
+  }
+  @media (max-width: 699px) and (max-height: 620px) { .mp-steps { display: none; } }
   @media print {
     header, footer, nav, .mp-noprint, .rpp-news { display: none !important; }
     .mp-print-only { display: block; }
@@ -363,6 +389,19 @@ const MyPlan = () => {
               Answer a few questions and get a step-by-step plan for your situation, with the Washington guides and tools for each
               step. Print it, or save the link and come back to it.
             </p>
+            {/* Nov 21, 2026 (David): the four steps of the plan, over his misty
+                stepping-stones image (CSS .mp-steps / .mp-hero background). */}
+            <ol className="mp-steps" aria-label="How the plan works">
+              {PLAN_STEPS.map((st, i) => (
+                <li key={st.t}>
+                  <span className="mp-st-ic" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#8F1A2B" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{st.icon}</svg>
+                  </span>
+                  <span className="mp-st-n">{i + 1}</span>
+                  <span className="mp-st-t">{st.t}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
 
