@@ -90,7 +90,7 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
   const examplesRef = useRef<HTMLDivElement>(null);
   // Nov 13, 2026: the button is no longer greyed out while the box is empty (on a
   // phone it read as broken). Pressing it with nothing typed moves the cursor into the box.
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
   const [typed, setTyped] = useState<number | null>(null);
   const PAUSE = 10; // characters' worth of pause between questions
   const offsets = examples.reduce<number[]>((acc, x, i) => { acc.push(i === 0 ? 0 : acc[i - 1] + examples[i - 1].length + PAUSE); return acc; }, []);
@@ -209,21 +209,42 @@ export default function AskBox({ title = "Ask a question", accent = "#1B3A6B", c
           run(q);
         }}
       >
+        {/* Demo mode: a two-line box (Nov 21, 2026, David), so the longer example
+            questions wrap instead of running off the edge. Enter still submits. */}
+        {demo ? (
+        <textarea
+            className="rpp-ask-input"
+            ref={inputRef}
+            rows={2}
+            enterKeyHint="search"
+            onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); formRef.current?.requestSubmit(); } }}
+            maxLength={200}
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            onFocus={() => {
+              loadData().catch(() => {});
+              if (demo) { demoStop.current = true; setDemoPh(""); }
+            }}
+            placeholder={demo && demoPh !== null ? demoPh : placeholder}
+            aria-label="Your question"
+          />
+        ) : (
         <input
-          className="rpp-ask-input"
-          ref={inputRef}
-          type="text"
-          enterKeyHint="search"
-          maxLength={200}
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          onFocus={() => {
-            loadData().catch(() => {});
-            if (demo) { demoStop.current = true; setDemoPh(""); }
-          }}
-          placeholder={demo && demoPh !== null ? demoPh : placeholder}
-          aria-label="Your question"
-        />
+            className="rpp-ask-input"
+            ref={inputRef}
+            type="text"
+            enterKeyHint="search"
+            maxLength={200}
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            onFocus={() => {
+              loadData().catch(() => {});
+              if (demo) { demoStop.current = true; setDemoPh(""); }
+            }}
+            placeholder={demo && demoPh !== null ? demoPh : placeholder}
+            aria-label="Your question"
+          />
+        )}
         <button className="rpp-ask-send" type="submit" disabled={busy}>
           {busy ? "Looking…" : "Get answer"}
         </button>
@@ -313,12 +334,15 @@ const CSS = `
 .rpp-ask.rpp-ask-bare { border: 0; padding: 0; background: transparent; }
 .rpp-ask h2.rpp-ask-h.rpp-ask-h { font-size: clamp(24px, 3vw, 30px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #14283a !important; margin: 0 0 6px !important; text-align: left; }
 .rpp-ask p.rpp-ask-sub.rpp-ask-sub { font-size: 20px !important; line-height: 1.5 !important; color: #2b2825 !important; margin: 0 0 14px !important; }
+.rpp-ask textarea.rpp-ask-input.rpp-ask-input.rpp-ask-input { display: block; resize: none; font-family: inherit; line-height: 1.4; height: auto; min-height: 0; }
+.rpp-ask .rpp-ask-form:has(textarea) button.rpp-ask-send { align-self: stretch; }
+@media (max-width: 520px) { .rpp-ask textarea.rpp-ask-input.rpp-ask-input.rpp-ask-input { font-size: 16px; line-height: 1.35; padding: 9px 12px; height: calc(4.05em + 22px) !important; } }
 .rpp-ask .rpp-ask-headrow { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; row-gap: 2px; margin: 0 0 14px; }
 .rpp-ask .rpp-ask-headrow h2.rpp-ask-h.rpp-ask-h, .rpp-ask .rpp-ask-headrow p.rpp-ask-sub.rpp-ask-sub { margin: 0 !important; }
 .rpp-ask .rpp-ask-headrow p.rpp-ask-sub.rpp-ask-sub { font-size: 18px !important; color: #57534e !important; }
 .rpp-ask .rpp-ask-form { display: flex; gap: 10px; flex-wrap: wrap; }
-.rpp-ask input.rpp-ask-input { flex: 1 1 320px; min-width: 0; min-height: 52px; font-size: 18px; padding: 10px 16px; border: 2px solid #b9b2a6; border-radius: 10px; color: #1c1917; background: #fff; box-sizing: border-box; }
-.rpp-ask input.rpp-ask-input:focus { outline: 3px solid color-mix(in srgb, var(--ask) 35%, transparent); border-color: var(--ask); }
+.rpp-ask input.rpp-ask-input, .rpp-ask textarea.rpp-ask-input.rpp-ask-input { flex: 1 1 320px; min-width: 0; min-height: 52px; font-size: 18px; padding: 10px 16px; border: 2px solid #b9b2a6; border-radius: 10px; color: #1c1917; background: #fff; box-sizing: border-box; }
+.rpp-ask input.rpp-ask-input:focus, .rpp-ask textarea.rpp-ask-input:focus { outline: 3px solid color-mix(in srgb, var(--ask) 35%, transparent); border-color: var(--ask); }
 .rpp-ask button.rpp-ask-send { min-height: 52px; padding: 10px 24px; font-size: 18px; font-weight: 700; color: #fff; background: var(--ask); border: 0; border-radius: 10px; cursor: pointer; }
 .rpp-ask button.rpp-ask-send:disabled { opacity: 0.55; cursor: default; }
 @media (max-width: 520px) { .rpp-ask button.rpp-ask-send { width: 100%; } .rpp-ask.rpp-ask { padding: 18px 16px; } }
