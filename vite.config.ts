@@ -150,8 +150,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate, Estate & Senior Transition Guidance in Washington State | Real Property Planning",
     description:
       "A free educational hub for Washington State (WA) families: plain-language guides and calculators for probate, inherited property, adult family homes, and senior moves, plus a path to the right licensed professional. Call (206) 900-3015.",
-    /* Nov 21, 2026: matches the homepage h1 (hero.doorLine in en.json). */
-    h1: "Free guides and tools for Washington families navigating aging, housing decisions, and probate.",
+    /* Nov 23, 2026 (David): matches the homepage h1 (hero.doorLine in en.json). */
+    h1: "Real Property Planning is where families find answers on estate planning, probate and senior housing moves in Washington State.",
     /* Must match the image RPPHomeV3 actually renders. This still pointed at
        the retired /hero-v2.webp after the 2026 artwork swap, so every page
        load preloaded 243 KB of an image the homepage no longer displays —
