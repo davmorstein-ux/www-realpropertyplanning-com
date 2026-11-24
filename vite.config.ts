@@ -3028,6 +3028,46 @@ const writeRouteHtml = async (distDir: string, route: string, routeHtml: string)
 };
 
 
+/**
+ * Homepage only: inline the CSS the page actually uses, load the rest later
+ * (Nov 23, 2026). PageSpeed (mobile) showed a white screen until 2.6 s: the
+ * whole ~41 KB stylesheet had to download before anything was painted
+ * ("Render-blocking requests", est. 350 ms). Beasties copies into <head> every
+ * rule that matches an element in the prerendered page, and turns the
+ * stylesheet link into a preload that becomes a stylesheet once it arrives
+ * (noscript fallback included), so the finished page looks exactly as before.
+ *
+ *   - reduceInlineStyles: false. The page's own inline <style> blocks (fonts in
+ *     index.html, component CSS) are left exactly as written.
+ *   - fonts: false. Fonts are already declared and preloaded in index.html.
+ *   - Other pages are untouched: they are written from the unmodified shell.
+ *   - If Beasties is missing or fails, the page is written as before and the
+ *     build carries on; the warning shows in the build log.
+ * To undo, write preloadHomepageHero(rootHtml) without this call.
+ */
+const inlineHomepageCriticalCss = async (distDir: string, html: string) => {
+  try {
+    const { default: Beasties } = await import("beasties");
+    const beasties = new Beasties({
+      path: distDir,
+      publicPath: "/",
+      preload: "swap",
+      noscriptFallback: true,
+      pruneSource: false,
+      reduceInlineStyles: false,
+      fonts: false,
+      keyframes: "critical",
+      logLevel: "warn",
+    });
+    const out = await beasties.process(html);
+    console.log(`route-metadata-prerender: homepage critical CSS inlined (${html.length} -> ${out.length} bytes of HTML)`);
+    return out;
+  } catch (err) {
+    console.warn("route-metadata-prerender: homepage critical CSS skipped:", err instanceof Error ? err.message : err);
+    return html;
+  }
+};
+
 /** The site's public MCP endpoint (Supabase edge function "mcp"), from supabase/config.toml. */
 const MCP_PUBLIC_URL = (() => {
   try {
@@ -3170,7 +3210,7 @@ const routeMetadataPlugin = {
     const rootHtml = injectRouteAwareShell(
       applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true, ssr: rendered.get("/") })
     );
-    await writeFile(baseHtmlPath, preloadHomepageHero(rootHtml), "utf8");
+    await writeFile(baseHtmlPath, await inlineHomepageCriticalCss(distDir, preloadHomepageHero(rootHtml)), "utf8");
 
     /* 404.html (Nov 2, 2026). Cloudflare serves it, with status 404, for any
        address that has no file (wrangler.jsonc not_found_handling "404-page").
