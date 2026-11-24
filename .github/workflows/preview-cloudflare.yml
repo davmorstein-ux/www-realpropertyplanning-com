@@ -1,0 +1,63 @@
+# Test versions on Cloudflare (Nov 23, 2026).
+#
+# Any push to a branch named preview/<something> builds the site exactly as
+# the live deploy does, then uploads it to Cloudflare as a NEW VERSION THAT IS
+# NOT DEPLOYED: the live site keeps serving the current version. Cloudflare
+# gives the uploaded version its own test address, which this workflow writes
+# into the run's summary page on GitHub (Actions tab > the run > Summary), as:
+#
+#   https://<something>-realpropertyplanning.<account>.workers.dev
+#
+# Use it to look at a change on a phone and run PageSpeed on it before it is
+# merged into main. Merging into main is what publishes it (deploy-cloudflare.yml).
+#
+# Cloudflare must have preview URLs turned on for the Worker (dashboard:
+# Workers & Pages > realpropertyplanning > Settings > Domains & Routes >
+# Preview URLs). If they are off, the upload still succeeds but the address
+# does not open.
+name: Preview on Cloudflare
+
+on:
+  push:
+    branches: ["preview/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Same install as the live deploy: public registry, no lockfile (the
+      # committed lockfile points at Lovable's private mirror).
+      - name: Install
+        run: npm install --no-package-lock --no-audit --no-fund --registry https://registry.npmjs.org
+      - name: Build (vite build + prerender)
+        run: npm run build
+      - name: Upload test version (not deployed)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "Cloudflare secrets not set; build checked, upload skipped."
+            exit 0
+          fi
+          # Alias from the branch name: preview/Blank Screen -> blank-screen
+          alias=$(echo "${GITHUB_REF_NAME#preview/}" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9-]+/-/g; s/^-+|-+$//g' | cut -c1-40)
+          npx --yes wrangler@4 versions upload --preview-alias "$alias" \
+            --message "Preview of $GITHUB_REF_NAME ($GITHUB_SHA)" 2>&1 | tee upload.log
+          {
+            echo "## Test version of \`$GITHUB_REF_NAME\`"
+            echo
+            echo "Not live. The real site is unchanged until this branch is merged into main."
+            echo
+            grep -Eo 'https://[A-Za-z0-9.-]+\.workers\.dev' upload.log | sort -u | sed 's/^/- /'
+          } >> "$GITHUB_STEP_SUMMARY"
