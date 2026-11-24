@@ -84,9 +84,10 @@ import AboutTheHub from "@/components/AboutTheHub";
 import { CARE_CALCULATORS } from "@/lib/careCalculators";
 import RppArrow from "@/components/RppArrow";
 import { setFetchPriority } from "@/lib/imgPriority";
-import sloganCommaDot from "@/assets/home/slogan-comma-dot.webp";
+// Kept for a possible return of the "Life, continued." logotype (Nov 24, 2026).
+// import sloganCommaDot from "@/assets/home/slogan-comma-dot.webp";
 import planLinkBanner from "@/assets/home/plan-link-banner.webp";
-import sloganCommaDotDark from "@/assets/home/slogan-comma-dot-dark.webp";
+// import sloganCommaDotDark from "@/assets/home/slogan-comma-dot-dark.webp";
 import calcPhotoCare from "@/assets/home/calc-photo-care.webp";
 import calcPhotoCare480 from "@/assets/home/calc-photo-care-480.webp";
 import calcPhotoCare800 from "@/assets/home/calc-photo-care-800.webp";
@@ -611,6 +612,49 @@ html body main section#rpp-start-here.rpp-start-here, html body main section#rpp
    HERO_WIDE_CSS and the funnel styles above. To undo, delete this block and
    the tile order / hero sentence / cost list changes in the JSX.
    No backticks in this block. */
+/* NEW HERO TEXT (Nov 24, 2026, David): eyebrow, headline, subheadline.
+   Rendered after PRESENTATION_CSS so it wins. Grid areas reuse the hero's
+   "slogan" (eyebrow + headline) and "line" (subheadline) slots. */
+const NEW_HERO_CSS = `
+html body main div.rpp-door-hero div.rpp-door-copy.rpp-door-copy { grid-area: slogan; align-self: end; min-width: 0; }
+html body main#main-content div.rpp-door-hero p.rpp-door-eyebrow.rpp-door-eyebrow {
+  margin: 0 0 14px !important; padding: 0 !important;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+  font-size: 15px !important; font-weight: 700 !important; line-height: 1.3 !important;
+  letter-spacing: 0.14em !important; color: #8F1A2B !important; text-align: left !important;
+}
+html body main#main-content.rpp-home-one-font div.rpp-door-hero h1#rpp-hero-heading.rpp-door-headline.rpp-door-headline {
+  margin: 0 !important; padding: 0 0 14px !important; border-bottom: 1px solid #a89a86;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+  font-size: clamp(32px, 3.2vw, 50px) !important; font-weight: 800 !important;
+  line-height: 1.12 !important; letter-spacing: -0.015em !important; color: #1c1917 !important;
+  max-width: 15.5em; text-align: left !important; text-wrap: balance;
+}
+html body main#main-content div.rpp-door-hero p.rpp-door-sub.rpp-door-sub {
+  grid-area: line; align-self: start; margin: 16px 0 0 !important; padding: 0 !important;
+  width: 0; min-width: 100%;
+  font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important;
+  font-size: clamp(18px, 1.5vw, 22px) !important; font-weight: 500 !important;
+  line-height: 1.45 !important; color: #2f2b27 !important; text-align: left !important; text-wrap: pretty;
+}
+@media (max-width: 900px) {
+  html body main div.rpp-door-hero div.rpp-door-inner.rpp-door-inner.rpp-door-inner.rpp-door-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "slogan slogan" "line door";
+    align-items: center;
+  }
+  html body main div.rpp-door-hero div.rpp-door-copy.rpp-door-copy { align-self: start; }
+  html body main#main-content div.rpp-door-hero p.rpp-door-eyebrow.rpp-door-eyebrow { font-size: 13px !important; margin-bottom: 8px !important; letter-spacing: 0.1em !important; }
+  html body main#main-content.rpp-home-one-font div.rpp-door-hero h1#rpp-hero-heading.rpp-door-headline.rpp-door-headline {
+    font-size: clamp(26px, 7.4vw, 34px) !important; max-width: none; padding-bottom: 10px !important;
+  }
+  html body main#main-content div.rpp-door-hero p.rpp-door-sub.rpp-door-sub {
+    align-self: center; width: auto; min-width: 0; margin-top: 12px !important; font-size: 18px !important; line-height: 1.4 !important;
+  }
+}
+`;
+
 const PRESENTATION_CSS = `
 /* ---- HERO ---- */
 /* Headline: no shadow, about 10% smaller on laptops (was clamp(44px, 5.4vw, 80px)). */
@@ -898,10 +942,9 @@ const tileMeta = [
 
 
 const RPPHomeV3 = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   /* English headline breaks into three lines on laptops (Oct 29, 2026, David);
      other languages keep their two translated lines. */
-  const head3 = (i18n.resolvedLanguage || i18n.language || "en").startsWith("en");
 
   /* Every value on this tile derives from CARE_CALCULATORS — the same list the
      calculator hub and the switcher strip read. The list shown here used to be
@@ -929,36 +972,16 @@ const RPPHomeV3 = () => {
             reads it to add the LCP preload links. Styles: DOOR_HERO_CSS. */}
         <style dangerouslySetInnerHTML={{ __html: DOOR_HERO_CSS }} />
         <DoorHero alt={t("hero.doorAlt")}>
-            <p className="rpp-door-slogan">
-              {/* Nov 21, 2026 (David): "Life, continued." (stacked) replaced "Know what's
-                  next", which replaced "Your next chapter" (that one only fitted the
-                  senior). Also the T-shirt slogan. "continued." keeps the garnet fade
-                  with the door. rpp-door-start is its own line (PRESENTATION_CSS). */}
-              {t("hero.sloganStart") === "Life," && t("hero.sloganAccent") === "continued." ? (
-                <>
-                  {/* Nov 21, 2026 (David's design): the comma after "Life" flows down and
-                      becomes the dot on the "i" of "continued" (his exact shape, shortened
-                      tail, straightened, black-to-garnet blend). The "i" is a dotless i;
-                      the words are drawn for sighted visitors and the real text below is
-                      what search engines and screen readers get. Sizes and offsets are
-                      in em, measured from his approved mock-up, so it scales at every
-                      width. Styles: .rpp-dm-* in PRESENTATION_CSS. */}
-                  <span className="rpp-dm-sr">Life, continued.</span>
-                  <span className="rpp-dm-l1" aria-hidden="true">Life</span>
-                  <span className="rpp-dm-l2" aria-hidden="true"><span className="rpp-door-accent">cont{"\u0131"}nued.</span></span>
-                  {/* Nov 21, 2026: David's redrawn mark, head and dot identical; dot kept the same size and position. */}
-                  <img className="rpp-dm-mark" src={sloganCommaDot} alt="" aria-hidden="true" width={132} height={294} />
-                  <img className="rpp-dm-mark rpp-dm-mark-dark" src={sloganCommaDotDark} alt="" aria-hidden="true" width={132} height={294} />
-                </>
-              ) : (
-                <><span className="rpp-door-start">{t("hero.sloganStart")}</span> <span className="rpp-door-accent">{t("hero.sloganAccent")}</span>{t("hero.sloganAccent2") ? ` ${t("hero.sloganAccent2")}` : ""}</>
-              )}
-            </p>
-            <h1 id="rpp-hero-heading" className="rpp-door-line">
-              {/* Nov 21, 2026 (David): one plain sentence replaced the lead line and
-                  the three bold topics. Other languages keep their translated lines. */}
-              {head3 ? t("hero.doorLine") : `${t("hero.taglineLine1")} ${t("hero.taglineLine2")}`}
-            </h1>
+            {/* Nov 24, 2026 (David): eyebrow, headline and subheadline replaced the
+                "Life, continued." logotype and the "Real Property Planning is where
+                families find answers..." sentence. The logotype artwork and its CSS
+                (.rpp-dm-*, slogan-comma-dot*.webp) are kept in case David wants it back.
+                Styles: NEW_HERO_CSS, the last style block on the page. */}
+            <div className="rpp-door-copy">
+              <p className="rpp-door-eyebrow">{t("hero.eyebrow")}</p>
+              <h1 id="rpp-hero-heading" className="rpp-door-headline">{t("hero.headline")}</h1>
+            </div>
+            <p className="rpp-door-sub">{t("hero.subheadline")}</p>
         </DoorHero>
 
         {/* ── Three short points under the artwork (Oct 21, 2026, David chose
@@ -1584,6 +1607,7 @@ const RPPHomeV3 = () => {
         </section>
         {/* Last in <main> so it wins ties with the earlier blocks. */}
         <style dangerouslySetInnerHTML={{ __html: PRESENTATION_CSS }} />
+        <style dangerouslySetInnerHTML={{ __html: NEW_HERO_CSS }} />
         {/* <HomepageTestimonials /> — hidden until real testimonials are collected */}
         {/* AFH Club strip, lowered here Nov 20, 2026 (David). */}
         <HomepageAFHStrip />
