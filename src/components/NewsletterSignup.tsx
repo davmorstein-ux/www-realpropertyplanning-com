@@ -362,7 +362,9 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride, lis
           color: #1c1917 !important;
           margin: 12px 0 0 !important;
         }
-        .rpp-news-fine.rpp-news-fine a { color: var(--rpp-news-accent) !important; }
+        /* Underlined, not colour alone (Nov 23, 2026): PageSpeed flagged this
+           link under "Links rely on color to be distinguishable". */
+        .rpp-news-fine.rpp-news-fine a { color: var(--rpp-news-accent) !important; text-decoration: underline !important; text-underline-offset: 3px; }
         /* Error text is not carried by colour alone — it is announced via
            role=alert and tied to the input with aria-describedby, so it
            survives both colour blindness and screen readers. */
