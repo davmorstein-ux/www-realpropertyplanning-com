@@ -10,7 +10,8 @@ import { useEffect, useLayoutEffect, useState, type ReactNode } from "react";
  *   - 15 frames David made in ChatGPT; every frame was recoloured to the
  *     homepage door garnet (#8E091C) and given the same garden (taken from the
  *     last frame) so only the door moves. Files: src/assets/hero/door-open/,
- *     door-NN-sm.webp (195x320) and door-NN-lg.webp (463x760).
+ *     door-NN-sm.webp (195x320), door-NN-md.webp (300x492) and
+ *     door-NN-lg.webp (463x760).
  *   - The page first shows frame 0 (closed, ~9 KB, preloaded by vite.config's
  *     preloadHomepageHero). The other frames load after; if they are not all
  *     ready within 3 seconds, the door simply shows open, without animating.
@@ -29,8 +30,16 @@ const SMALL = pick(
 const LARGE = pick(
   import.meta.glob("/src/assets/hero/door-open/door-*-lg.webp", { eager: true, query: "?url&no-inline", import: "default" }) as Record<string, string>,
 );
+/* Medium frames (Nov 23, 2026). PageSpeed (desktop) showed every visitor at the
+   laptop size, and iPhones (3x screens), downloading all 15 large frames
+   (~374 KB) for a door shown about 200px wide. door-NN-md.webp (300x492,
+   ~186 KB for all 15) now sits between the two; very sharp large screens still
+   take the large frames. A new frame set needs all three sizes. */
+const MEDIUM = pick(
+  import.meta.glob("/src/assets/hero/door-open/door-*-md.webp", { eager: true, query: "?url&no-inline", import: "default" }) as Record<string, string>,
+);
 const LAST = LARGE.length - 1;
-const srcSetFor = (i: number) => `${SMALL[i]} 195w, ${LARGE[i]} 463w`;
+const srcSetFor = (i: number) => `${SMALL[i]} 195w, ${MEDIUM[i]} 300w, ${LARGE[i]} 463w`;
 const SIZES = "(min-width: 901px) 232px, 92px";
 const PLAYED_KEY = "rpp-door-opened";
 /** Pause on the closed door, then frame times that slow as the door settles. */
